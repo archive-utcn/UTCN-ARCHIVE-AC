@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1511506080 source:c:\users\student\desktop\cp6\l1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Matrix.h"
+
+1511506298 source:c:\users\student\desktop\cp6\l1\matrix.c
+	"matrix.h"
+
+1511505634 c:\users\student\desktop\cp6\l1\matrix.h
+	<stdlib.h>
+
+1511506082 source:d:\utcn\an i\computer programming\cp6\l1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Matrix.h"
+
+1511505636 d:\utcn\an i\computer programming\cp6\l1\matrix.h
+	<stdlib.h>
+

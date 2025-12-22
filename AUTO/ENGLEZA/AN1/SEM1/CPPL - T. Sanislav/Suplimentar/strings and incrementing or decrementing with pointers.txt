@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+
+    int array[5]={1,2,7};
+    int *array_ptr=&array; //initially array_ptr is array [0] -> 1
+    int value = 0;
+
+    printf("%d", array);
+    value = *++array_ptr; // value becomes 2 - which is array[1]
+    printf("%d\n", value);
+
+    printf("%d\n", ++*array_ptr); //we will simply print ++2 which is 3. is now array [1] changed to 3 instead of 2?
+    printf("%d\n", array[2]);    //the value from array[1] changed from 2 to 3
+    printf("%d\n", *array_ptr); //let s see what s this after incrementing the val of arr ptr
+                                //the value from array[1] changed from 2 to 3
+
+    return 0;
+
+
+}

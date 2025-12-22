@@ -1,0 +1,18 @@
+Sest.Collections.Classes
+
+	Georg Cantor: a set is any collection of definite and distinguishable objects of our intuition or of our intelect to be conceived as a whole.
+	The objects of a set are called elements or members.
+	If M deontes a given set of objects and x is one of these objects we say that x is an element of the set M (x belongs to M), and we write x € M (“x in M”) otherwise we write x € M (“x not in M”).
+	The notion of membership, denoted by the symbol “€”, is a relation between objects and sets, we must be able to decide withouth any doubt wheter an object belongs to the set or not.
+	!!!Either x in M or x not in M, but not both.
+	The set whose members are x1,x2,...,xn will be written {x1,x2,....,xn}.
+	In particular, {x} is called the unit set. It consists of one member, namely x.
+	A special set in set theory is the emptyset, also called the void set, which contains no elements. Notation: 
+
+	The inclusion relation: a set A is a subset of a set B if each member of A is also a member of B:
+        A  B “A is included in B/A subset equal B”
+EX: 1 € {1} TRUE       void € {void} TRUE      void subeq {void} TRUE   1 subseq {1} FALSE void € void F
+	M-set and p a predicate defined on M (definim o functie). The totality of all elements x belonging to M for which the sentence p(x) is true represents a set denoted by: {x|x € M ^ p(x)}.	
+	The object defined by the simbol {x|p(x)}, withouth any reference to a set M are also called classes. 
+	A set whose elements are themselves is also calles a collection, family or system.
+

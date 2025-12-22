@@ -1,0 +1,42 @@
+#include<stdio.h>
+#define MAX(a, b) ((a<b)? b : a)
+#define PRINT(something) printf("\n%d\n", something)
+
+#ifndef YEARS
+    #define YEARS 40
+#endif // YEARS
+int main()
+{
+
+    int a = 0, b = 0;
+    scanf("%d%d", &a, &b);
+
+    PRINT(MAX(a,b));
+    PRINT(a+b);
+
+    #undef YEARS
+    #ifdef YEARS
+        printf("%d", YEARS);
+    #endif // YEARS
+    #ifndef YEARS
+        printf("NOTHING");
+    #endif // YEARS
+
+    #define ABC 4
+
+    #ifdef ABC
+        PRINT(ABC);
+    #endif // ABC
+
+    #undef ABC
+    #define ABC 5
+
+    #ifndef ABC
+        printf("ABC not defined");
+    #elif ABC==4
+        printf("ABC is equal to %d", ABC);
+    #else
+    printf("is defined but not equal to 4");
+    #endif // ABC
+    return 0;
+}

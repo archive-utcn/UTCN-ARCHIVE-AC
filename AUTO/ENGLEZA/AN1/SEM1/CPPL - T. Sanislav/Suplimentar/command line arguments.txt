@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+int main (int argc, char *argv[]) {
+
+    int val1 = 0;
+    float val2 = 0.0f;
+
+    sscanf(argv[2], "%d", &val1);
+    sscanf(argv[5], "%f", &val2);
+
+    printf("1st item is %s 3rd elem is %s 4th elem is %s\n", argv[1], argv[3], argv[4]);
+    printf("2nd and 5th elem are %s %s\n", argv[2], argv[5]);
+    printf("pls work show me argv 2 and 5: %d %.2f\n", val1, val2);
+    printf("%d",argc);
+
+   return(0);
+}

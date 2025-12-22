@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//read elements no., allocate memory to a ptr, read the ellemt of the array using ptr, sum them, free pointer
+int main(){
+
+    int number = 0, sum = 0, i = 0;
+    int *ptr = NULL;
+
+    scanf("%d", &number);
+    ptr = (int*)calloc(number,sizeof(int)); // ptr = (int*)calloc(number, sizeof(int)) - the same, but ptr is initialized with 0
+   // printf("%d\n", *ptr); if i put calloc this returns 0
+    if (ptr == NULL) exit(0);
+    for (i = 0; i < number; i++) {
+        scanf("%d", ptr+i); //i dont have to put ampersent & here since i have a pointer that already stores an address - > where the values will be sent
+        sum+= *(ptr+i);
+            }
+    printf("%d", sum);
+    free(ptr);
+    printf("%d", *ptr);
+    return 0;
+}

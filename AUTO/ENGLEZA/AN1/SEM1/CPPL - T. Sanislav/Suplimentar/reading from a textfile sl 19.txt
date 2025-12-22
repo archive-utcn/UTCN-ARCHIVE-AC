@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+//comented part doesnt work yet
+int main () {
+    FILE *fp;
+    int i = 0;
+    char *char_ptr = (char*) malloc(10);
+    char str1[10], str2[10], str3[10], str4[10];
+
+    fp = fopen("file.txt", "w+");
+    fputs("test of a function scanf/n",fp);
+    rewind(fp); //reposition file positioning pointer at the beginning of the file
+  //  fscanf(fp, "%s %s %s %s", char_ptr, char_ptr+1, char_ptr+2, char_ptr+3);
+    fscanf(fp, "%s %s %s %s", str1, str2, str3, str4);
+    fclose(fp);
+  /*  printf("%s \n", char_ptr);
+    printf("%s \n", char_ptr+1);
+    printf("%s \n", char_ptr+2);
+    printf("%s \n", char_ptr+3);
+*/
+
+    printf("%s\n", str1);
+    printf("%s\n", str2);
+    printf("%s\n", str3);
+    printf("%s\n", str4);
+    free(char_ptr);
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define SIZE 3
+void show_array (int n, const double *array) {
+int i = 0;
+for (i=0; i < n; i++) printf("%.2f ", array[i]); //equiv to *(array+i)
+putchar('\n');
+}
+
+void multiply_array (int n, double *array, double mult) {
+int i = 0;
+for (i=0; i < n; i++) *(array + i) *= mult;
+
+for (i=0; i < n; i++) printf("%.2f\n ", array[i]);
+}
+
+int main(){
+
+  double dip[SIZE] = {20.0, 30.25, 17.75};
+  show_array(SIZE, dip);
+  multiply_array(SIZE, dip, 2.5);
+  show_array(SIZE, dip);
+
+    return 0;
+
+
+}

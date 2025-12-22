@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+
+int main()
+{
+	int n = 0;
+	unsigned int rez;
+	scanf("%d",&rez);
+	scanf("%d",&n);
+	printf("%d", rez|(1<<(n-1))); //we perform bitwise OR between our number and 1 shifted n-1 times
+
+	return 0;
+}

@@ -1,0 +1,21 @@
+Among all rectangular parallelepipeds having the given volume 1, find the parallelpeped with the least area.
+We find the minimum of the function f(x,y,x)=xy+xz+yz with the constraint xyz=1,x,y,z>0.
+The problem is reduced to examining the Lagrange function L(x,y,z)=f(x,y,z)+lambd(xyz-1) for an ordinary extrema.
+The system of critical points
+{parL/parx=0,parL/pary=0,parL/parz=0,xyz-1=0
+{y+z+lamdyz=0,x+z+lambdxz=0,x+y+lamdxy=0,xyz=1
+{xy+xz+lamdxyz=0,xy+zy+lamdxyz=0,xz+yz+lamdxyz=0,xyz=1
+Lambd=-2
+Z(x-y)=0  x=y=z=1
+The stationary point is (1,1,1)
+L(x,y,z)=xy+xz+yz-2(xyz-1)
+D^2L(x,yz)=(dx*par/parx+dy*par/pary+dz*par/parz)^2*L(x,y,z)
+D^2L/dx^2=0,d^l/dy^2=0,d^L/dz^2=0
+Par^2L/parxpary=1+lamdz,par^2L/parxparz=1+lamdy,par^2L/paryparz=1+lambdx
+At the critical point we obtain
+D^2L(1,1,1)=par^L/parx^2(1,1,1)dx^2+par^L/pary^2(1,1,1)dy^2+par^L/parz^2(1,1,1)dz^2+2(par^2L/parxpary(1,1,1)dxdy+par^L/parxparz(1,1,1)dxdz+par^2L/paryparz(1,1,1)dydz)
+D^2L(1,1,1)=-2(dxdt+dxdz+dydz)
+Xyz=1 then d(xyz)=0 then yzdx+xzdy+xydz=0
+For f(x,y,z)=(1,1,1) we get dx+dy+dz=0
+Then dx^2+dy^2+dz^2+2(dxdy+dydz+dxdz)=0
+D^L(1,1,1)= dx^2+dy^2+dz^2 is positive definite then (1,1,1) is a point of minimum and the smallest area is equal to 3.

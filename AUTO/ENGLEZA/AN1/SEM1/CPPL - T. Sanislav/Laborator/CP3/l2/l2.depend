@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1509116766 source:c:\users\student\desktop\geo&teo\lab3\l2\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,109 @@
+//program with a menu that allows u to perform different operations on strings.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int memcpi = 0;
+
+int main()
+{
+    int choice = 0;
+    char *string1, *string2, *string3;  //the following is kinda equivalent with string[10]
+
+    string1 = (char *)malloc(10 * sizeof(char));
+    string2 = (char *)malloc(10 * sizeof(char));
+    string3 = (char *)malloc(10 * sizeof(char));
+
+    printf("Enter the first string: \n");
+    printf("string1 = ");
+    gets(string1);
+
+    printf("Enter the second string: \n");
+    printf("string2 = ");
+    gets(string2);
+
+    printf("Enter the third string: \n");
+    printf("string3 = ");
+    gets(string3);
+
+
+    printf("Please enter your choice: \n");
+    printf("1 - for printing the length of each string\n");
+    printf("2 - for checking if the strings are the same\n");
+    printf("3 - strcpy function\n");
+    printf("4 - memcpy function\n");
+    printf("5 - strcat function\n");
+
+    scanf("%d", &choice);
+
+    switch(choice) {
+
+case 1 :
+    printf("Length of the string1: %d; \n", strlen(string1));
+    printf("Length of the string2: %d; \n", strlen(string2));
+    printf("Length of the string3: %d; \n", strlen(string3));
+
+    printf("Final values: \nstring1 - %s, \nstring2 - %s. \n", string1, string2);
+    break;
+
+case 2 : //exista strncmp care compara primii n biti de la doua stringuri
+    if (strcmp(string1,string2) == 0)
+        printf("string1 and string2 are the same\n");
+        else
+            printf("string1 and string2 are different\n");
+
+    if (strcmp(string3,string2) == 0)
+        printf("string2 and string 3 are the same\n");
+        else
+            printf("string2 and string3 are different\n");
+
+    if (strcmp(string1,string3) == 0)
+        printf("string1 and string3 are the same\n");
+        else
+            printf("string1 and string3 are different\n");
+    break;
+
+case 3 :
+    printf("Initial values: \nstring1 - %s, \nstring2 - %s. \n", string1, string2);
+
+    strcpy(string1, string2);
+
+    printf("Final values: \nstring1 - %s, \nstring2 - %s. \n", string1, string2);
+    printf("Practic, ce face strcpy e sa copieze pe string 2 in string 1, si in final ambele vor avea exact valoarea lui string 2");
+    break;
+
+case 4 :
+
+    printf("Initial values: \nstring1 - %s, \nstring2 - %s. \n", string1, string2);
+    printf("We will copy n bits from string2 to string1. Choose an n!\n");
+    scanf("%d", &memcpi);
+
+    memcpy(string1, string2, memcpi);
+
+    printf("Final values: \nstring1 - %s, \nstring2 - %s. \n", string1, string2);
+    break;
+
+case 5 :
+
+    printf("Initial values: \nstring1 - %s, \nstring2 - %s. \n", string1, string2);
+    printf("We will append string2 to string1. \n");
+
+    strcat(string1, string2);
+
+    printf("Final values: \nstring1 - %s, \nstring2 - %s. \n", string1, string2);
+    break;
+
+default:
+    printf("d\n");
+
+    }
+
+
+    free(string1);
+    free(string2);
+    free(string3);
+    printf("Finished without being dead.");
+
+    return 0;
+}

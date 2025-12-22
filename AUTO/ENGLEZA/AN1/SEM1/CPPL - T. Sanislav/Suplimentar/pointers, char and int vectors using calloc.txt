@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{   //parcurgerea elementelor unui vector int cu ajutorul unui pointer
+    //int vec[10] = {2,3,4}
+    int i;
+    int *vec;
+    int *ptr;
+    vec = (int *)calloc(10, sizeof(int));
+    ptr = vec;
+    scanf("%d %d %d", ptr, (ptr+1), (ptr+2));
+    getchar();
+    *vec = 5;
+    *(vec + 1) = 6;
+    *(vec + 2) = 7;
+    ptr = ptr + 1;
+    for (i = 0; i < 3; i++)
+    printf("%d ", *(ptr+i)); //*(ptr+i) vec[i] *(vec + i) ptr[i]
+    printf("\n");
+    //parcurgerea elementelor unui string cu ajutorul unui poiner
+    int j;
+    char *array = 'numeeee';
+    array = (char *)calloc(10, sizeof(char));
+    printf("Get array:\n");
+    gets(array);
+    for(j = 0; j < strlen(array); j++)
+    printf("%c\n", *(array+j));
+
+    return 0;
+}

@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct complex {
+    float re;
+    float img;
+};
+void read_complex (struct complex *number){
+    scanf("%f", &(number->re));
+    scanf("%f", &(number->img));
+}
+void add_complex(struct complex number1, struct complex number2, struct complex *sum) {
+    sum->re = number1.re + number2.re;
+    sum->img = number1.img + number2.img;
+    //printf("1. The sum of the real part is: %.2f\n2. The sum of the imaginary part is: %.2fi", (*sum).re, (*sum).img );
+}
+void display_complex(struct complex number) {
+    printf("1. The sum of the real part is: %.2f\n2. The sum of the imaginary part is: %.2fi", number.re, number.img );
+}
+int main () {
+    struct complex number1;
+    struct complex number2;
+    struct complex sum;
+    read_complex(&number1);
+    read_complex(&number2);
+    add_complex(number1, number2, &sum);
+    display_complex(sum);
+   return(0);
+}
+
+

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main () {
+
+    FILE *fPointer;
+    fPointer = fopen("bacon.txt", "w+");
+    fprintf(fPointer, "I love cheese\n");
+    fprintf(fPointer, "And I hate computer programming\n");
+    fprintf(fPointer, "And I hate computer programming");
+    fseek(fPointer,-21, SEEK_END);
+    fputs(" my life                       ", fPointer);
+    fclose(fPointer);
+
+}

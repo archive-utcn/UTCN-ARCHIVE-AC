@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main () {
+
+    FILE *fPointer;
+    char cher[30];
+    int ch;
+    int year = 0, c = 0; //year is printed in the file, c is used to read characters from the files
+    char *mess_ptr = (char *) malloc(30);
+    printf("Enter the current year:");
+    scanf("%d", &year);
+    printf("Enter a message: ");
+    scanf("%s", mess_ptr);
+    fPointer = fopen("bacon.txt", "w+");
+    if (fPointer == NULL) {
+        printf("Error!");
+        exit(1);
+    }
+    fprintf(fPointer, "I love cheese\n");
+    fprintf(fPointer, "the year is %d\nthe message is %s\n", year, mess_ptr);
+    fprintf(fPointer, "And I hate computer programming\n");
+    fprintf(fPointer, "And I hate computer programming");
+    fseek(fPointer,-21, SEEK_END);
+    fputs(" my life                      \n", fPointer);
+    for (ch = 33; ch <=100; ch++) fprintf(fPointer,"%d\n",ch);
+    fclose(fPointer);
+
+    fPointer = fopen("bacon.txt", "r");
+    if (fPointer == NULL) {
+        printf("Error!");
+        exit(1);
+    }
+
+
+    if (fgets(cher, 35, fPointer) != NULL)
+        printf("%s", cher);
+/*
+    do {
+        c = fgetc(fPointer);
+        if (feof(fPointer)) break;
+        printf("%c",c);
+    } while (1);
+*/
+    fclose(fPointer);
+
+
+    free(mess_ptr);
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct address {
+    char city[25];
+    char country[25];
+};
+struct student {
+    int student_id;
+    int student_age;
+    char student_name[25];
+    struct address student_address;
+};
+int main () {
+    struct student data;
+    struct student *stud_ptr = &data;
+    scanf("%d", &data.student_id);
+    scanf("%d", &data.student_age);
+    scanf("%s", data.student_name);
+    scanf("%s", data.student_address.city);
+    scanf("%s", data.student_address.country);
+ //   data.student_address.city="buch";
+ //data.student_address.country="romania";
+    printf("Structure data which comes from student has the following elements: \n\t%d \n\t%d \n\t%s \n\t%s \n\t%s", stud_ptr->student_id, stud_ptr->student_age, stud_ptr->student_name, stud_ptr->student_address.city, stud_ptr->student_address.country);
+
+
+   return(0);
+}

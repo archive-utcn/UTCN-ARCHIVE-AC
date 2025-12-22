@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct person {
+    int age;
+    float weight;
+    char name[30];
+};
+
+int main () {
+    struct person *person_ptr;
+    int i = 0, number = 0;
+
+    printf("Enter the number of persons you want to add in your structure: ");
+    scanf("%d", &number);
+
+    person_ptr = (struct person*) malloc(number * sizeof(struct person));
+
+    for (i=0; i<number; i++){
+        printf("Enter name, age and weight of each person %d out of %d, respectively.\n", i+1,  number);
+        scanf("%s%d%f", (person_ptr+i)->name, &(person_ptr+i)->age, &(person_ptr+i)->weight);
+    }
+    printf("Displaying information:\n");
+    for (i = 0; i < number; i++)
+            printf("Data for person %d is: \n\t1. name: %s\n\t2. age: %d\n\t3. weight: %.2f\n",i+1,(person_ptr+i)->name, (person_ptr+i)->age, (person_ptr+i)->weight );
+    free(person_ptr);
+    return(0);
+}

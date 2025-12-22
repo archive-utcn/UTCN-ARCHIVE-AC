@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    unsigned int a, result;
+    int n;
+    //choose a number
+    a = 10;
+    //i want to set the n'th bit
+    n = 3;
+    //so we want to set the 3rd bit of 1010 to get 1110 which is 14
+    //all we have to do: right shift 1 n-1 times and perfom bitwise or
+    //between shifted 1 and the number itself
+    result = (1<<(n-1)) | (a);
+    printf("result is %d", result);
+    return 0;
+}
+
+
+
+
+

@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct test {
+int number1;
+int number2;
+char code[3];
+};
+
+int main () {
+    FILE *fp;
+    struct test numbero;
+    int i = 0;
+
+    fp = fopen("program.bin", "rb");
+   // fp = fopen("program.bin", "wb");
+    for (i = 0; i < 6; i++) {
+       // number.number1 = i;
+       // number.number2 = 2 * i;
+       // scanf("%2s", number.code);
+        fread(&numbero, sizeof(struct test), 1, fp);
+        printf("number1: %d, number2: %d, code: %s\n",numbero.number1, numbero.number2, numbero.code);
+    }
+    fclose(fp);
+
+    return 0;
+}

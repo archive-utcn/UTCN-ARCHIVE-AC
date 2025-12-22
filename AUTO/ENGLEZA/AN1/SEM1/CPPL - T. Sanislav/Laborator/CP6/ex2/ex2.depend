@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1511509754 source:c:\users\student\desktop\cp6\ex2\elev.c
+	"elev.h"
+
+1511508420 c:\users\student\desktop\cp6\ex2\elev.h
+	<stdlib.h>
+
+1511509754 source:c:\users\student\desktop\cp6\ex2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"elev.h"
+
+1511509756 source:f:\geo&teo\cp6\ex2\elev.c
+	"elev.h"
+
+1511508422 f:\geo&teo\cp6\ex2\elev.h
+	<stdlib.h>
+
+1511509756 source:f:\geo&teo\cp6\ex2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"elev.h"
+

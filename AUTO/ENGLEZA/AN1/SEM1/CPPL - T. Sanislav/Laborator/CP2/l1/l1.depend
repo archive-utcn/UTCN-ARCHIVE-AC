@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1508510384 source:c:\users\student\desktop\cp2\l1\main.c
+	<stdio.h>
+	<limits.h>
+	<float.h>
+

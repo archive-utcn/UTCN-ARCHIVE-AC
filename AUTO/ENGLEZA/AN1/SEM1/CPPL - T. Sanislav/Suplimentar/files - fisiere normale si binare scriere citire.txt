@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+typedef struct {
+    char name[25];
+    int age;
+    float salary;
+}employees;
+
+int main () {
+   FILE *file_ptr;
+   FILE *file1_ptr;
+   FILE *file2_ptr;
+   FILE *filebin;
+   employees person1,person2;
+   employees *pers_ptr;
+   int i = 0, no = 0, var1=0;
+   float var2 = 0.0f;
+   char str1[10];
+
+
+   file_ptr = fopen("file.txt", "r");
+   if (file_ptr == NULL) {
+    printf("Error on file.txt !");
+   }
+   fclose(file_ptr);
+
+   file1_ptr = fopen("file1.txt", "r");
+   if (file1_ptr == NULL) {
+    printf("Error on file1.txt!\nYour file doesn't exist!\n");
+   }
+   fclose(file1_ptr);
+
+   file2_ptr = fopen("file2.txt", "w");
+   if (file2_ptr == NULL) {
+    printf("Error on file2.txt !");
+   }
+   fclose(file2_ptr);
+
+   printf("How many employees do you want to add to your files? ");
+   scanf("%d", &no);
+   pers_ptr = (employees*) malloc(no * sizeof(employees));
+
+   for (i = 0; i < no; i++) {
+        printf("Read the name, age and salary for each employee, respectively.\nEmployee %d:\n", i+1);
+        scanf("%s%d%f", (pers_ptr + i)->name, &(pers_ptr + i)->age, &(pers_ptr + i)->salary);
+   }
+
+   file_ptr = fopen("file.txt", "w");
+    for (i = 0; i < no; i++) {
+        fputs((pers_ptr+i)->name, file_ptr);
+        fprintf(file_ptr," %d %.2f ", (pers_ptr+i)->age, (pers_ptr+i)-> salary);
+        fprintf(file_ptr,"\n");
+    }
+    fclose(file_ptr);
+
+    file_ptr = fopen("file.txt", "r");
+    rewind(file_ptr);
+    fscanf(file_ptr,"%s %d %f",str1,&var1,&var2);
+    printf("str1: %s\nvar1: %d\nvar2: %.2f\n", str1,var1,var2);
+    fclose(file_ptr);
+    free(pers_ptr);
+    filebin = fopen("filebin.bin", "wb");
+    person1.age = 2;
+    scanf("%s %f",person1.name, &person1.salary);
+    fwrite(&person1, sizeof(person1), 1, filebin);
+    fread(&person2, sizeof(person2),1, filebin);
+   // printf("employee2: age - %d, name - %s, salary - %.2f", person2.age, person2.name, person2.salary); //-nu merge inca
+
+
+    return 0;
+}

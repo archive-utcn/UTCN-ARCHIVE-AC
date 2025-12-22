@@ -1,0 +1,10 @@
+1 a. Definia pt interior si pentru adhernt points
+B. Abel's lemma for power series
+2. O topologie t={R, G| G intersectat cu {0 1} ii multimea vida. Si stiai ca g ii inclusa în R
+Si trebuia sa aflam F, int ( ), dar{5 cu bara deasupra} si {0}'
+3. Maclaurin pentru
+A. 1/1+x
+B. G (x)= 1/2x ori log (1+×/1-x)
+C. G derivat de (2k) in punctul 0
+D. Natura unei sume
+Era (1/2) la puterea n^b, stiind ca b> 0

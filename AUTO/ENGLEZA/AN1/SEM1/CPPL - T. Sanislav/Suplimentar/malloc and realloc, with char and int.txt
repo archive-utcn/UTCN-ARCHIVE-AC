@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+//INSTEAD OF char IT WAS int , BUT I CHANGED TO SEE WHAT S HAPPENING
+//therefore, my pointer - returns an int, the address. but i m passing a char ( 1 byte)
+//read elements no., allocate memory to a ptr, read the ellemt of the array using ptr, sum them, free pointer
+int main(){
+    int i = 0, size = 0, new_size;
+    char *ptr = NULL;
+
+    scanf("%d", &size);
+    ptr = (char*)malloc(size*sizeof(char));
+    for (i = 0; i < size; i ++) //printf("%d ", ptr + i);  //addresses of the firstlly allocated memory
+    scanf("%s", ptr+i);
+    for (i = 0; i < size; i ++) printf("%c ", *(ptr+i)); //if i put d instead of c my code will return the ascii values
+    printf("\n");
+
+    scanf("%d", &new_size);
+    ptr = (int*)realloc(ptr, new_size*sizeof(char));
+    for (i = 0; i < new_size; i ++) printf("%d ", ptr + i); //addresses of the secondly alocated memory
+
+    free(ptr);
+
+    return 0;
+}

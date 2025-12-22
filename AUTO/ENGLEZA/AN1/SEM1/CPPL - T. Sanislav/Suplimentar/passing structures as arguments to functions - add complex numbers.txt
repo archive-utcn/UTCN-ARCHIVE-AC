@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct person {
+    int age;
+    char name[30];
+};
+
+int main()
+{
+    struct person *ptr;
+    int i = 0, number = 0;
+    printf("Choose how many peeps u will add into the data base\n");
+    scanf("%d", &number);
+
+    ptr = (struct person*) malloc (number * sizeof(struct person));
+    if (ptr == NULL)
+    {
+        printf("nothing allocated, dead p");
+        getchar();
+        exit(0);
+    }
+
+    for (i = 0; i < number; i++)
+    {
+        printf("Get name and age for person %d\n", i+1);
+        scanf("%s", (ptr + i)->name);
+        scanf("%d", &(ptr + i)->age);
+
+    }
+
+    printf("Display info:\n");
+
+    for ( i = 0; i < number; i ++)
+        printf("Person%d: name - %s, age - %d.\n", i, (ptr+i)->name, (ptr+i)->age);
+
+    return 0;
+}
+
+
+
+
+

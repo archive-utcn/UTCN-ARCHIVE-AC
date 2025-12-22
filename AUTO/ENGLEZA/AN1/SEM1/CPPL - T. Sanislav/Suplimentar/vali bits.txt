@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+
+int main()
+{
+	unsigned int n;
+	scanf("%d", &n);
+
+	for (int i = 3; i >= 0; i--)   //i-ul reprezinta bit-ul pe care vrei sa il afisezi
+	{
+		unsigned int x = n & (1 << i);  // (1<<i) = 1 shift-at la dreapta de i ori
+		x = (x>>i);
+		printf("%d", x);
+	}
+
+	return 0;
+}
