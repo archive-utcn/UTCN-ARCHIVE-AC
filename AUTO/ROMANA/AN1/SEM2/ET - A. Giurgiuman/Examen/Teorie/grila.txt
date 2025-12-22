@@ -1,0 +1,126 @@
+1.In sistemul trifazat simetric direct : -fazorii se succed spre dreapta;
+
+2.Intensitatea campului magnetic, densitatea de curent si inductanta electrica sunt legate intre ele prin : -legea circuitului magnetic;
+
+3.Care dintre urmatoarele legi nu reprezinta o lege de material a campului electromagnetic : -legea inductiei electromagnetice;
+
+4.Alegeti ecuatia ce descrie puterea deformanta : D = radical(S-patrat + P-patrat + Q-patrat);
+
+5.Tensiunea instantanee la bornele unei bobine ideale este : uL = L * di/dt;
+
+6.Forma integrala dezvoltata a legii inductiei electromagnetice este compusa din : -o tensiune electromotoare indusa prin transformare si o tensiune electromotoare indusa prin miscare; -o tensiune electromotoate indusa prin pulsatie si o tensiune electromotoare indusa prin rotatie;
+
+7.Un condensator electric este : -un dispozitiv format din doua conductoare omogene incarcate cu sarcini electrice egale si de semne opuse, numite armaturi, care contine in interior un dielectric neincarcat cu sarcina;
+
+8.Reluctanta sau rezistenta magnetica se defineste ca : -raportul dintre tensiunea magnetica si fluxul magnetic fascicular;
+
+9.Puterea aparenta in regim nesinusoidal : -se defineste ca si in regim nesinusoidal; -este egala cu produsul valorilor efective ale tensiunii si curentului;
+
+10.Raportul pozitiv dintre fluxul total printr-un circuit, produs de curentul acelui circuit si curentul care il produce se numeste :  -inductivitatea proprie a circuitului;
+
+11.Unitatea de masura a puterii deformante este: -VAd;
+
+12.Intensitatea campului magnetic calculata cu formula Biot – Savart – Laplace se defineste : -in vid; -in medii omogene si izotrope;
+
+13.Puterea activa reprezinta: -valoarea medie pe o perioada a puterii instantanee (in regim periodic); -produsul valorilor efective ale tensiunii si curentului multiplicat cu cosinusul unghiului de defazaj;
+
+14.Relatia radical[R-patrat + (omegaL - 1/omegaC)-patrat] reprezinta : -impedanta unui circuit RLC serie;
+
+15.Intr-un circuit alimentat cu tensiune nesinusoidala: -bobina atenueaza deformarea curentului;
+
+16.Care dintre urmatoarele afirmatii sunt adevarate atunci cand un circuit se afla la rezonanta: -puterea reactiva absorbita (Q) pe la bornele de alimentare este nula; -reactanta circuitului serie are valoarea 0; -defazajul intre curentul in circuit si tensiunea la bornele circuitului este 0; -susceptanta circuitului paralel are valoarea 0;
+
+17.In aplicarea teoremei lui Thevenin trebuie cunoscute (calculate) : -tensiunea de mers in gol; 
+
+18.Valoarea efectiva a unei unde nesinusoidale este: -U = radical[1/T integrala_de_la_0_la_T(u-patrat(t))dt]; -U = radical(U0-patrat + U1-patrat + U2-patrat +...);
+
+19.Relatia i = integrala_pe_S_de_gama(dD-barat/dt) * dA-barat reprezinta: -curentul de deplasare propriu-zis;
+
+20.Pentru cuadripoli, relatia A=D reprezinta: conditia de simetrie;
+
+21.Pt. cuadtripoli, relatia AD-BC=1 reprezinta: conditia de reciprocitate;
+
+22.Care dintre expresiile urmatoare este impedanta caracteristica a unui cuadripol simetric: -Zc = +-radical(B/C);
+
+23.Functia para contine in dezvoltare: -componenta continua si armonice in cos;
+
+24.Metoda potentialelor nodurilor: -admitanta proprie a unui nod este data de suma admitantelor laturilor legate la nod;
+
+25.Intr-un circuit electric alimentat cu tensiune nesinusoidala: -condensatorul inrautateste forma de unda a curentului;
+
+26.Puterea instantanee: -se masoara in Wati;
+
+27.Derivarii marimii sinusoidale ii corespunde in complex: -inmultirea imaginii complexe cu jomega;
+
+28.Care din urmatoarele expresii reprezinta teoremele comutatiei, in cazul circuitelor ce functioneaza in regim tranzistoriu : -> iL(0_)=iL(0+); -> uC(0_)=uC(0+);
+
+29.gama = alfa + jbeta reprezinta constanta complexa de propagare a cuadripolului: -alfa se numeste constanta de atenuare; -daca alfa<0 semnalul este amplificat la iesire;
+
+30.Fazorul UL = jomegaL * I este: -defazat inaintea lui I cu pi/2;
+
+31.Care dintre urmatoarele ecuatii este corecta: -> Y = G - jB;
+
+32.Ecuatiile U1 = AU2 + BI2, I1 = CU2 + DI2 : -sunt ecuatiile fundamentale ale cuadripolilor;
+
+33.Cuadripolul simetric este caracterizat prin: -doua constante independente;
+
+34.Pt. un circuit paralel se considera origine de faza: -tensiunea;
+
+35.Fie un circuit RL serie, initial alimentat cu o sursa de tensiune continua. Circuitul se cupleaza la sursa la momentul t=0. Care este expresia de regim tranzistoriu a curentului din circuit : -> i = E/R * ( 1 - e-la_puterea(-t/tau));
+
+36.Care dintre urmatoarele expresii reprezinta constanta de timp a unui circuit RC serie ce functioneaza in regim tranzistoriu :  -> t = RC;
+
+37.Constantele fundamentale ale cuadripolului determinate la incercarea de mers in gol in secundar sunt: -A,C,D;
+
+38.Suprafetele echipotentiale sunt: -suprafetele care au in orice punct acelasi potential electric;
+
+39.Teorema lui Gauss: -stabileste relatia dintre fluxul intensitatii campului electric in vid, sarcina electrica totala localizata in interiorul suprafetei si permitivitatea absoluta a vidului;
+
+40.Fortele magnetice se definesc la: -fluxuri magnetice si curenti constanti in circuite;
+
+
+41.Puterea activa se masoara in : -W;
+
+42.Derivarea unei marimi sinusoidale in raport cu timpul are ca rezultat :  -marime defazata inainte cu pi/2;
+
+43.Valoarea medie pe o perioada a unei marimi sinusoidale este : -zero;
+
+44.Conexiunea serie a unor impedante poate fi utilizata ca : -divizor de tensiune;
+
+45.Integrarea unei marimi sinusoidale in raport cu timpul are ca rezultat : -o marime sinusoidala defazata in urma cu pi/2; -valoarea efectiva de omega ori mai mica;
+
+46.In cazul unui circuit electric de tip serie se ia ca marime originala de faza :  -curentul;
+
+47.Tensiunea instantanee la bornele condensatorului ideal este : -> Uc= 1/C * integrala(i)dt;
+
+48.Inductivitatea echivalenta poate fi : -numai pozitiva;
+
+49.Relatia 1/omegaC = omegaL : -conditia de rezonanta pt. ambele circuite;
+
+50.Functia impara contine in dezvoltare : -numar armonice in sin;
+
+51.Imaginea complexa a cantitatii i(t) = 2sin(2pi50t +60) este: L = 2/radical(2) * e-puterea(pi/3);
+
+52.Transfer de putere activa : -este maxim cand curentii sunt in faza; -are loc in circuite cuplate inductiv;
+
+53.Pentru realizarea conditiei de adaptare a sarcinii la generator se utilizeaza: -impedantele imaginii; -impedanta caracteristica;
+
+54.Condensatorul real : -defazajul intre curent si tensiune este mai mic de 90-grade;
+
+55.Amplitudinea armonicelor unui semnal fata de modul amplitudinilor complexe spectrale este : -dubla;
+
+56.Impedanta complexa are rolul : -modulul egal cu impedanta circuitului; -imaginea agala cu reactanta circuitului;
+
+57.Expresia instantanee a imaginii complexe I = -2j este: i(t) = 2radical(2)sin(omegat - pi/2);
+
+58.Pierderile in dielectricul condensatoarelor sunt determinate de : -permitivitatea vascoasa;
+
+59.In cazul rezonantei de tip paralel : pot aparea supracurenti;
+
+60.Teorema lui Vaschy : -se aplica lautilor ce se intalnesc intr-un nod;
+
+61.In cazul rezonantei serie : -valoarea curentului este dictata numai de rezistenta din circuit; -curentul este maxim;
+
+62.In cazul conexiunii in triunghi : Il = raducal(3) If;
+
+63.In cazul liniilor electrice lungi : -ecuatia de ordinul intai indica variatiile tensiunii si curentii in functie de distanta; - curentul scade in lungul liniei in timp ce valoarea tensiunii creste;

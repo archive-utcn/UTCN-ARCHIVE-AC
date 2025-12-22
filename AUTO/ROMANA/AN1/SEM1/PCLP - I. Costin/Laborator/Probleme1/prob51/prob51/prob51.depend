@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1294104405 source:c:\users\don knuth\desktop\colocviu\prob51\prob51\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1351546740 source:c:\users\timea\desktop\tema3\pb4\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1351795610 source:d:\faculta\pc\tema4\pb4\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,44 @@
+z=pow(x,y) -> z = x la puterea y (#include<math.h>)
+
+M_PI -> pi=3,14.. (#include<math.h>)
+
+Calcularea sinusului unui unghi:
+	 rad=M_PI/180*grade; (conversia gradelor in radiani)
+    	 printf("sin(%d)=%f\n", grade, sin(rad));
+(analog pentru cosinus, tangenta si cotangenta)
+
+Operatorul conditional: ?: (operator ternar)
+   expresia conditionala: expr1 ? expr2 : expr3
+   ? daca expr1 este nenula (echivalent cu adevarata), atunci valoarea si tipul expresiei 
+conditionale este cea a lui expr2; altfel este cea a lui expr3
+Ex. c = a>b?a:b; - c va lua ca valoare maximul dintre a si b.
+
+i=(int)sqrt(n); -> i primeste partea intreaga a lui radical din n (#include<math.h>)
+
+Cel mai mare patrat perfect mai mic ca n
+i=(int)sqrt(n);
+printf("%d ", i*i);
+
+Cel mai mic patrat perfect mai mare ca n
+i=((int)sqrt(n))+1;
+printf("%d ", i*i);
+
+#define GRADMAX 20 <=> int const gradmax=20 (definirea unei constante)
+
+int *n => scanf("%d", n)
+
+FISIERE:
+
+FILE *pf1, *pf2;
+char nume_fisier[50]="fisier1.txt", nume_fis[50]="fisier2.txt";
+
+pf1=fopen(nume_fisier,"r"); //creaza un fisier din care se poate citi (fisierul trebuie creat)
+pf2=fopen(nume_fis,"w"); //creaza un fisier in care se poate scrie
+
+if(pf1==NULL) //verifica existenta fisierului
+printf("eroare la deschidere");
+
+fscanf(pf1,"%d", &a); //citirea din fisier
+
+fprintf(pf2, "%d", c); //afisare in fisier (se creaza automat)
+

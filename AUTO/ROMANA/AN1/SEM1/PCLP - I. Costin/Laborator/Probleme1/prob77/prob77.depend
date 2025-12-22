@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1293044544 source:d:\c projects\prob77\main.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+

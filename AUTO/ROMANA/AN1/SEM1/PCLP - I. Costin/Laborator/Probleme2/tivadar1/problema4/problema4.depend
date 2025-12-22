@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1350929124 source:c:\users\timea\desktop\tivadar\problema4\main.c
+	<stdio.h>
+	<stdlib.h>
+

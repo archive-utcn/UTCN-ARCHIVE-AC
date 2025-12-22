@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1293927348 source:d:\ralu-poli\code\pb\32\main.c
+	<stdio.h>
+	<stdlib.h>
+	<process.h>
+

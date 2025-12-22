@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1356706118 source:d:\faculta\c\programare_modulara_tema3\programe.c
+	"programe.h"
+
+1356705556 d:\faculta\c\programare_modulara_tema3\programe.h
+
+1356706103 source:d:\faculta\c\programare_modulara_tema3\main.c
+	<stdio.h>
+	"programe.h"
+
+1356711630 source:d:\faculta\c\programare modulara\programare_modulara_tema3\main.c
+	<stdio.h>
+	"programe.h"
+
+1356711396 d:\faculta\c\programare modulara\programare_modulara_tema3\programe.h
+
+1356711396 source:d:\faculta\c\programare modulara\programare_modulara_tema3\programe.c
+	"programe.h"
+

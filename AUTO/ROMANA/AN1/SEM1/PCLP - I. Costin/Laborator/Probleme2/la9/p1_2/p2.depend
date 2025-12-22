@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1354038437 source:d:\faculta\c\p2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1354571913 source:d:\faculta\c\la9\p2\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1380831278 source:d:\utcn\pc\pc\ex1.c
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<math.h>
+

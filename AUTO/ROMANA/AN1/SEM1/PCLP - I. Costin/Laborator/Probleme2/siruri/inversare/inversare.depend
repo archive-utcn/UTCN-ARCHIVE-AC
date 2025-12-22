@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1353066173 source:d:\faculta\c\inversare\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1293107107 source:c:\users\oana\desktop\pr67\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1293107108 source:d:\facultate\pc\rez\pr67-functie ackerman\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1292959501 source:c:\users\oana\desktop\pr74\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+

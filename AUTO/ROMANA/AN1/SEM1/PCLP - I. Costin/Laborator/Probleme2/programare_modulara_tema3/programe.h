@@ -1,0 +1,10 @@
+int ex1(int n,int s);
+int ex2(int n);
+int ex3(int n);
+int ex4(int n);
+int ex5(int x);
+int ex6();
+int ex7(int n);
+int ex8(int n);
+int ex9(int n);
+int ex10(int n);

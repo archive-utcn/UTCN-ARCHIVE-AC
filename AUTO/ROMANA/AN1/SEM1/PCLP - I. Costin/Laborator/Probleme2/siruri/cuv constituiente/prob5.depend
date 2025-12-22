@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1354219200 source:d:\faculta\c\prob5\main.c
+	<stdio.h>
+	<stdlib.h>
+

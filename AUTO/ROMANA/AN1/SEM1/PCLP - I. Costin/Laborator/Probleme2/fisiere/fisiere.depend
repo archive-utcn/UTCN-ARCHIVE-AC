@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1357909208 source:f:\fisiere\main.c
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<sys\stat.h>
+	<fcntl.h>
+
+1357912209 source:c:\documents and settings\student.d1-7\desktop\fisiere\main.c
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+	<sys\stat.h>
+	<fcntl.h>
+

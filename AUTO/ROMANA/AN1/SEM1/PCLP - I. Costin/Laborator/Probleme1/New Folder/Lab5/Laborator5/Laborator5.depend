@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1288782980 source:z:\new folder\lab5\laborator5\main.c
+	"Z:\New Folder\Lab5\Lab5\L5Ex1_1.c"
+	"Z:\New Folder\Lab5\Lab5\L5Ex1_2.c"
+	"Z:\New Folder\Lab5\Lab5\L5Ex1_3.c"
+	"Z:\New Folder\Lab5\Lab5\L5Ex1_4.c"
+
+1288779974 z:\new folder\lab5\lab5\l5ex1_1.c
+	<stdio.h>
+	<conio.h>
+
+1288780006 z:\new folder\lab5\lab5\l5ex1_2.c
+
+1288780064 z:\new folder\lab5\lab5\l5ex1_3.c
+	<math.h>
+
+1288782568 z:\new folder\lab5\lab5\l5ex1_4.c
+	<stdio.h>
+	<conio.h>
+

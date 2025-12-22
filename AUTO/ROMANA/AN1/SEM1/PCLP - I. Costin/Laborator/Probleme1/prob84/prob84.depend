@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1293670219 source:d:\c projects\prob84\main.c
+	<stdio.h>
+	<conio.h>
+	<io.h>
+	<fcntl.h>
+	<sys\stat.h>
+	<process.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1292958686 source:c:\users\oana\desktop\kk\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+

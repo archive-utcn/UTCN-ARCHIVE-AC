@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1293046076 source:d:\c projects\prob80\main.c
+	<conio.h>
+	<stdlib.h>
+	<stdio.h>
+

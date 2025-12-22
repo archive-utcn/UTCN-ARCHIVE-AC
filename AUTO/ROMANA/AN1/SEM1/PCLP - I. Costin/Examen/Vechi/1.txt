@@ -1,0 +1,10 @@
+creati cu notepad(sau alt editor) un fisier text date.txt care sa contina pe fiecare linie cate doua valori reale(minim 5 linii). realizati o alpicatie modulara care creaza doua tablouri a si b , alocate dinamic, de lungime egala cu numarul de linii din fiser, cu urmatorul continut: al i-lea element din a contine valoarea functiei f pentru prima val de pe linia i din fisierul"date.txt", iar al i-lea element din b contine val functiei g pentru a doua val de pe linia i din fisier. sa se creeze din aplicatie un al doilea fisier, rezultate.txt, care contin linii de text cu urmatoare structura: c v1 v2, unde c este un caracter, iar v1 si v2 sunt doua valori reale, astfel:pentru fiecare linie din date.txt, fisierul rezultate.txt va contine doua linii: una in care caracterul este f, v1 este prima valoare de pe linia din date.txt, iar v2 este val elementului corespunzator din a, iar pentru a doua linie caracterul g, v1 este a doua val de pe linia din date.txt, iar v2 este val elementului coresp din b.
+in final, afisati continutul fisierului rezultate.txt astefel incat pentru fiecare linie din fisier, afisati o linie de forma c(v1)=v2, unde c este primulo caracter al liniei, iar v1 si v2 sunt cele doua valori relale de pe linie
+
+f(x)= 3xpatrat +2 daca x<-3
+      sin(x) daca -3<=x<=3
+      xla a treia -5x-4 daca x>3
+
+g(x)=3x-1 daca x<-2
+     log(x+3) daca -2<=x<10
+     (x-5)la patrat -7 daca x>=10

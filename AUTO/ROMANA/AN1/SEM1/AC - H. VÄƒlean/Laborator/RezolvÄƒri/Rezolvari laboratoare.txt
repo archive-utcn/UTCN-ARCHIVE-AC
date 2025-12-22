@@ -1,0 +1,369 @@
+LAB 3
+1) Sa se adauge în sistem un cont pentru utilizatorul student ¸stiind ca:
+- nume utilizator: student
+- shell: /bin/bash
+- parola: student123
+- nume real: Student anul 1
+- loca¸tie birou: sala 309
+- numar telefon birou: 0264401200
+2) Sa se caute ¸si sa se afi¸seze toate fi¸sierele cu extensia ’.conf ’ din directorul ’/etc’
+fara a cauta în subdirectoarele acestuia.
+3) S?a se afi¸seze data ¸si ora sistemului în urm?atorul format:
+ZZ.LL.AAAA ora:minut:secunda
+1.	Adduser
+2.	Find /etc –name ‘*.conf’ –maxdepth 1 
+3.	date +%d.%m.%Y\ %X
+
+LAB 4
+1) S?a se creeze în directorul /tmp un fi¸sier care s?a con¸tin?a toate liniile care încep cu un spa¸tiu urmat de cuvântul BIOS din output-ul comenzii dmesg. S?a se determine m?arimea fi¸sierului rezultat cu ajutorul comenzii find.									2) S?a se creeze în directorul /root un subdirector denumit dmesg. În subdirectorul dmesg s?a se creeze un alt subdirector denumit bios. S?a se mute fi¸sierul creat la exerci¸tiul 1 în subdirectorul bios. S?a se creeze o copie a fi¸sierului creat la exercitiul 1 în subdirectorul dmesg. S?a se mute subdirectorul dmesg în directorul /tmp.						3) S?a se seteze urm?atoarele drepturi pentru fi¸sierul creat la execi¸tiul 1:			a) -rwxr-xr-x d) -r-x- -x- -x										b) -rw-rw-rw- e) -r- -r- - r- -										c) -rwxrwxr- - f) -rw-r- -r- -
+1.	cd /tmp
+touch fisier
+ls –al fisier
+dmesg|grep  BIOS>fisier
+cat>fisier
+find –size 1K
+2.	cd /root
+mkdir dmesg
+cd /root/dmesg
+mkdir bios
+cd/bios
+cd /root/dmesg/bios
+cd /tmp
+mv fisier /root/dmesg/bios
+cd /root/dmesg/bios
+find
+cp fisier /root/dmesg
+find
+cd /root
+mv dmesg /tmp
+cd /tmp
+find
+
+3.	a) chmod 755 fisier
+    ls –al fisier
+b) chmod 666 fisier
+    ls –al fisier 
+c) chmod 774 fisier
+    ls –al fisier								
+d) chmod 511 fisier
+    ls –al fisier
+e) chmod 444 fisier
+    ls –al fisier
+f) chmod 644 fisier
+    ls –al fisier
+
+LAB 5
+1.	     cat>pb1.sh 
+#!/bin/bash
+a=$1
+b=$2
+c=$3
+d=$4
+echo –n “a=”
+read a
+echo –n “b=”
+read b
+echo –n “c=”
+read c
+echo –n “d=”
+read d
+let “suma=$a+$b+$c+$d”
+let “produs=$a*$b*$c*$d”
+echo “suma nr este: $suma”
+echo “produs nr este: $produs”
+  chmod +x pb1.sh
+ls –al pb1.sh  
+./pb1.sh
+
+2.	cat>pb2.sh
+#!/bin/bash
+Function suma {
+a=$1
+b=$2
+c=&3
+let “suma=$a+$b+$c”
+echo “suma este: $suma”
+}
+function produs {
+a=$1
+b=$2
+c=$3
+let “produs=$a*$b*$c”
+echo “produsul este :$produs”
+}
+echo –n  “a=”;
+read a
+echo –n “b=”
+read b
+echo –n “c=”
+read c
+suma $a $b $c
+produs $a $b $c
+3.	#!/bin/bash
+function produs {
+nr1=$1
+nr2=$2
+c=$(($nr1*nr2))
+echo “produsul este: $c”
+}
+echo –n “a=”
+read a
+echo –n “b=”
+read b
+produs $a $b
+LAB 6
+1.	cat>pb1.sh                                                                                                                 #!/bin/bash
+lista=$@
+suma=0
+for i in $lista
+do
+let “suma=suma+i”
+done
+echo “suma nr este: $suma”
+	chmod +x pb1.sh
+	./pb1.sh (‘aici scrii numerele pt care se apeleaza functia’);
+2.	cat>pb2.sh
+#!/bin/bash
+lista=$@
+max=$1
+min=$1
+for i in $lista
+ do 
+	if [ $i –gt $max ]
+	  then
+		let “max=$i”
+	fi
+	if [ $i –lt $min ]
+	  then
+		let “min=$i”
+	fi
+ done
+		echo “maximul este: $max”
+		echo “minimul este: $min”
+		   chmod +x pb2.sh
+		  ./pb2.sh (‘scri numerele pt care apeleazi programul’)
+
+3.	cat>pb3.sh
+#!/bin/bash
+ti=$(date +%s)
+i=0
+while [ $i –le 200000 ]
+ do
+	let “i=i+1”
+ done
+tf=$((date +%s)
+var=$(($tf -$ti))
+echo $var
+	chmod +x pb3.sh
+	./pb3.sh
+4.	cat>pb4.sh
+#!/bin/bash
+echo –n “a=”
+read a
+echo –n “c=”
+read c
+echo –n “b=”
+read b
+case $c in
+	+)
+	  s=$(($a+$b))
+	 echo “=$s”;;
+	-)
+	 s=$(($a-$b))
+	 echo “=$s”;;
+	*)
+	 s=$(($a*$b))
+	 echo “=$s”;;
+esac
+	chmod +x pb4.sh
+	./pb4.sh
+
+LAB 8
+
+1.	cat>pb1.sh
+#!/bin/bash
+echo –n “dati ip: “
+read ip
+echo –n “dati netmask: “
+read netmask
+ifconfig eth0 $ip netmask $netmask up
+chmod +x pb1.sh
+./pb1.sh
+ 
+2.	route add default gw 193.168.0.1 dev eth0
+3.	adduser 1
+adduser 2
+‘le scri in console diferite’
+login adduser 1 -> mesg y ->write adduser 1
+login adduser 2 -> mesg y ->write adduser 2
+
+LAB 10
+1.cat>pb1.c
+#include<stdio.h>
+#include<math.h>
+int main () {
+int a,b ;
+float media;
+printf(“a=”,a);Scanf(“%d”,&a);
+printf(“b=”,b);Scanf(“%d”,&b);
+media=sqrt(a*b);
+printf(“media geometrica este:%f”,media);
+return 0;
+}
+gcc –o test pb1.c –lm
+./test
+2.cat>pb2.c
+#include<Stdio.h>
+#include<math.h>
+Int main () {
+Double unghi,sinus,cosinus;
+float tg,ctg;
+Printf(“unghiul este:”);
+Scanf(“%lf”,&unghi);
+sinus=sin((unghi*3.14)/180);
+cosinus=cos((unghi*3.14)/180);
+tg=sinus/cosinus;
+ctg=cosinus/sinus;
+Printf(“tangenta=%f”,tg);
+Printf(“cotangenta=%f”,ctg);
+Return 0;
+}
+Gcc –o test pb2.c –lm
+3.cat>main.c									#include<stdio.h>								#include<math.h>
+Int main () {
+Int a,b;
+Printf(“primul nr este:”);
+Scanf(“%d”,&a);
+Printf(“al doilea nr este:);
+Scanf(“%d”,&b);
+Printf(“%f”,sqrt(produs(a,b));
+Printf(“%d”,suma(a,b)/2);
+Return 0;
+}
+Cat>functii.c
+Int suma(int a,int b){
+Int s;
+S=a+b;
+Return s;
+}
+Int produs(int a ;int b){
+Int p;
+P=a*b;
+Return p;
+}
+Gcc –c main.c functii.c
+Gcc –o test.o functii.o –lm
+./test
+		                                 LAB 11
+1.cat>pb1.c
+#include<stdio.h>
+#include<conio.h>
+Int main () {
+Int a,b,c,delta;
+Float x1,x2,r;
+Printf(“a=”);scanf(“%d”,&a);
+Printf(“b=”);scanf(“%d”,&b);
+Printf(“c=”);scanf(“%d”,&c);
+Delta=(b*b)-4*a*c;
+If (d==0){
+X1=x2=-b/(2*a);
+Printf(“%lf”,x1);
+}
+Else {
+If (d>0)
+r=sqrt(d);
+x1=(-b-r)/(2*a);
+x2=(-b+r)/(2*a);
+}
+Printf(“%lf si %lf”,x1,x2);
+Else {
+R=sqrt(-d);
+X1=(-b-1)/(2*a);
+X2=(-b+1)/(2*a);
+Printf(“%lf*i si %lf*i”,x1,x2);
+}
+Return 0;
+}
+Cat>pb1
+OBJS=pb1.o
+Cc=gcc
+CFLAGS –c –wall
+LFLAGS= -ln –wall
+Pb1.o: pb1.c
+	$(cc) $(CFLAGS) pb1.c
+Pb1:$(OBJS)
+	$(cc) $(LFLAGS) $(OBJS) –o pb1
+Clean:
+Rm –rf*.o pb1
+Make pb1
+2.cat>main.c
+#include<stdio.h>
+Double combinari(int n,int k);
+Double factorial(int n);
+Int main () {
+Int n,k;
+Double c;
+Printf(“n=”);scanf(“%d”,&n);
+Printf(“k=”);scanf(“%d”,&k);
+C=combinari(n,k);
+Printf(“%lf”,c);
+Return 0;
+}
+Cat>functii.c
+Double factorial(int n){
+Int ,p=1;
+For (i=1;k=n;i++);
+P=p*i;
+Return p;
+}
+Cat>pb2
+OBJS=main.o functii.o
+Cc= gcc
+CFLAGS= -c –wall
+LFLAGS= -lm –wall
+Pb2.o:main.c
+	$(cc) $(LFLAGS) main.c
+Pb2.o: functii.c
+	$(cc) $(CFLAGS) functii.c
+Pb2: $ (OBJS)
+$ (cc) $(LFLAGS) $(OBJS) –o pb2
+Clean:
+	Rm –rf*.o pb2
+Make pb2
+./pb2
+3.cat>pb3.c
+#include<stdio.h>
+Int main (){
+Int n,i,j,a[10],[10],d;
+n=3;
+for(i=1;i<=n,i++)
+for(j=1;j<n;j++){
+printf(“a[%d][%d]=”,i,j);
+scanf(“%d”,&a[i][j]);
+}
+D=a[1][1]*a[2][2]*a[3][3]+a[2][1]*a[3][2]*a[1][2]+a[3][1]*a[1][2]+a[2][3]-..
+Printf(“\n%d”,d);
+Return 0;
+Cat>pb3
+OBJS=pb3.o
+Cc= gcc
+CFLAGS= -lm –wall
+LFLAGS= -c –wall
+Pb3.o= pb3.c
+	$(cc) $(CFLAGS)  pb3.c
+Pb3: $(OBJS)
+$(cc) $(LFLAGS) $(OBJS) –o pb3
+
+Clean: ->>>rm –rf*.o pb3
+
+
+
+
+
+
+
+
+
+
+
+

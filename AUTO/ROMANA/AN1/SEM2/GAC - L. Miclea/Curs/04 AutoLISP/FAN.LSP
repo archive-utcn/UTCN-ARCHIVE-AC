@@ -1,0 +1,21 @@
+(defun c:fan ( / r a n index b1 b2 c d )
+  (setq r 0 )
+  (repeat 9
+    (setq a (ssget "X" '(( 0 . "circle" ))))
+    (setq n (sslength a ))
+    (princ n)
+    (setq index 0)
+    (repeat n
+      (setq b1 (entget (ssname a index )))
+      (setq index (+ 1 index ))
+      (setq c (assoc 40 b1 ))
+      (setq d (cons (car c ) r ))
+      (setq b2 (subst d c b1 ))
+      (entmod b2 )
+      (getint)
+      (entmod b1 )
+      
+    )
+    (setq r (+ 10 r))
+  )
+ ) 

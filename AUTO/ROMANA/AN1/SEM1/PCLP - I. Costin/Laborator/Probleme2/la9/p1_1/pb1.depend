@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1354037205 source:d:\faculta\c\tema7\pb1\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1354037345 source:d:\faculta\c\pb1\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1354037345 source:d:\faculta\c\la9\pb1\main.c
+	<stdio.h>
+	<stdlib.h>
+

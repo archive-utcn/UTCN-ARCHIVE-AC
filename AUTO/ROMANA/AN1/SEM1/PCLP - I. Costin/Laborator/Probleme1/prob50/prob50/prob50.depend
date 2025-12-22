@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1294095369 source:c:\users\don knuth\desktop\colocviu\prob50\prob50\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

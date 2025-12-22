@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1350039355 source:d:\faculta\pc\c\literemari.c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+

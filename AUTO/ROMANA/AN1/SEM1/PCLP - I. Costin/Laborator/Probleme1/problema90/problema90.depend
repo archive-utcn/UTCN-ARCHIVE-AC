@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1293559524 source:d:\pc\problema90\main.c
+	<stdio.h>
+	<conio.h>
+	<io.h>
+	<fcntl.h>
+	<sys\stat.h>
+	<process.h>
+	<stdlib.h>
+
