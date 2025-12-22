@@ -1,0 +1,257 @@
+ColocviuTinte
+  unique(0,L,L).
+  unique(N,L,R):- C is mod(N,10), not(member(C,L)), !, Nnou is div(N,10), append([C],L,L1), unique(Nnou,L1,R). 
+  unique(N,L,R):- Nnou is N div 10 , unique(Nnou,L,R).
+  uni(N,R):-unique(N,[],R).
+
+ Suma la nivelul k
+  sum_k([],_,0).
+  sum_k([H|T],K,R):- not(atomic(H)),!, K1 is K-1, sum_k(H,K1,R1),sum_k(T,K,R2), R is R1+R2.
+  sum_k([H|T],K,R):- K=1,!, sum_k(T,K,R1), R is R1+H.
+  sum_k([_|T],K,R):- sum_k(T,K,R).
+ 
+ Inlocuirea unei cifre in lista imbricata 
+ r_a(_,_,[],[]).
+ r_a(X,Y,[H|T],R) :-not(atomic(H)),!,r_a(X,Y,H,R1), r_a(X,Y,T,R2), append([R1],R2,R).
+ r_a(X,Y,[H|T],[Y|R]):- X=H,!,r_a(H,Y,T,R).
+ r_a(X,Y,[H|T],[H|R]):- r_a(X,Y,T,R).
+ 
+Lab2.
+ Cel mai mare divizor comun
+  cmmdc1(X,X,X). % parametrul 3 îi rezultatul la cmmdc
+  cmmdc1(X,Y,Z) :- X>Y, Diff is X-Y, cmmdc1(Diff,Y,Z).
+  cmmdc1(X,Y,Z) :- X<Y, Diff is Y-X, cmmdc1(X,Diff,Z).  
+  
+ Factorial
+ 
+ Backwards
+ fact(1,1).
+ fact(X,R):- Xnou is X-1, fact(Xnou,Rnou), R is Rnou*X. 
+ 
+ Forward
+ fact2(0,Acc,F) :- F = Acc.
+ fact2(N,Acc,F) :- N > 0, N1 is N-1, Acc1 is Acc*N, fact2(N1,Acc1,F).
+ fact2(N,F) :- fact2(N,1,F). % acumulatorul este inițializat cu 1
+ 
+ Cel mai mic multiplu comun
+  cmmmc(A,B,R):- P is A*B, cmmdc1(A,B,X), R is P/X.
+  
+ Putere backwards
+   putere(_,0,1).
+   putere(0,_,0).
+   putere(N,P,R):- P1 is P-1, putere(N,P1,R1), R is R1 * N. 
+   
+ Putere Forward 
+   putF(_,0,Acc,R):- R=Acc.
+   putF(N,P,Acc,R):- P1 is P-1, Acc1 is Acc*N, putF(N,P1,Acc1,R).
+   putere(N,P,R):- putF(N,P,1,R). 
+   
+  Fibonacci
+   fib(0,0).
+   fib(1,1).
+   fib(N,R):- N>1, N1 is N-1, N2 is N-2, fib(N1,R1), fib(N2,R2), R is R1+R2.
+
+  Laturile triunghiului
+   triangle(A,B,C):- Rezab is A+B, Rezbc is B+C, Rezac is A+C,
+                     Rezab>C, Rezbc>A, Rezac>B.   
+					 
+					 
+  Ecuatia					
+   solve(A,B,C,X) :-  Delta is B*B-4*A*C, solution(Delta, A,B,X).
+   solution(0, A,B,X):- X is -B/ (2*A).
+   solution(Delta, A,B,X):- Delta>0, X is (-B-sqrt(Delta))/(2*A).
+   solution(Delta, A,B,X):- Delta>0, X is (-B+sqrt(Delta))/(2*A).
+   
+Lab3
+
+  Member
+   member(H,[H|_]).
+   member(X,[H|T]):- X\=H, member(X,T).  
+   
+  Append   
+   append1([],L2,L2).
+   append1([H|T],L2,[H|R]):-append1(T,L2,R).  
+   
+  Sterge toate aparitiile lui X in lista
+    delAll(_,[],[]).
+    delAll(H,[H|T],R):-del(H,T,R).
+    delAll(X,[H|T],[H|R]):- X\=H, delAll(X,T,R).  
+	
+  append pe trei liste
+     append3(L1,L2,L3,R):- append(L1,L2,R1), append(R1,L3,R). 
+
+  Adauga un element la inceputul listei
+    addF(X,L,[X|L]).  
+	
+  Suma elementelor dintr-o lista
+   sum([],0).
+   sum([H|T],R):- sum(T,R1), R is R1+H. 
+   
+  Separarea in par si impar
+   sep([],[],[]).
+   sep([H|T],[H|E],O):- R is H mod 2, R=0, sep(T,E,O).
+   sep([H|T],E,[H|O]):- R is H mod 2, R=1, sep(T,E,O).  
+  
+  Sterge duplicate ramanand cu ultimul
+    r_d([],[]).
+    r_d([H|T],R):- member(H,T), r_d(T,R).
+    r_d([H|T],[H|R]):- not(member(H,T)), r_d(T,R).
+	
+  Sterge duplicate ramanand cu prima
+	 r_d([],L,L).
+     r_d([H|T],L,R):-not(member(H,L)), append([H],L,L1), r_d(T,L1,R).
+     r_d([H|T],L,R):-member(H,L), r_d(T,L,R).  
+     r(L,R):-r_d(L,[],R).
+	 
+  Inlocuieste primul argument cu al doilea
+    replace_all(_,_,[],[]).
+    replace_all(X,Y,[X|T],[Y|R]):-replace_all(X,Y,T,R).
+    replace_all(X,Y,[H|T],[H|R]):- X\=H, replace_all(X,Y,T,R).
+
+  Sterge al k-lea element din lista 
+    drop_k([_|T],1,T).
+    drop_k([H|T],K,[H|R]):- K1 is K-1, drop_k(T,K1,R).  
+	
+  Sterge toate elementele de pe pozitii divizibile cu k-lea
+    drop_k([],_,_,[]).
+    drop_k([H|T],Acc,K,[H|R]):- Acc1 is Acc+1, Rest is Acc1 mod K, Rest\=0, drop_k(T,Acc1,K,R).
+    drop_k([_|T],Acc,K,R):- Acc1 is Acc+1, Rest is Acc1 mod K, Rest=0, drop_k(T,Acc1,K,R). 
+    drop(L,K,R):- drop_k(L,0,K,R).  
+	
+Lab4
+ Reuniunea a doua multimi
+  union([], L, L).
+  union([H|T], L2, R) :- member(H, L2), !, union(T, L2, R).
+  union([H|T], L2, [H|R]) :- union(T, L2, R).	
+  
+ Intersectia a doua multimi 
+  inter([], _, []).
+  inter([H|T], L2, [H|R]) :- member(H, L2), not(member(H,T)),!, inter(T, L2, R).
+  inter([_|T], L2, R) :- inter(T,L2,R). 
+ 
+ Diferenta a doua liste 
+  diff([], _, []).
+  diff([H|T], L2, [H|R]) :- not(member(H, L2)),!, diff(T, L2, R).
+  diff([_|T], L2, R) :- diff(T,L2,R). 
+  
+ Stergerea elem min din lista
+   min1([H|T], M) :- min1(T, M), M<H, !.
+   min1([H|_], H).
+   del_min([],_,[]). 
+   del_min([H|T],L,R):- min1(L,M), H=M,!,del_min(T,L,R). 
+   del_min([H|T],L,[H|R]):-del_min(T,L,R). 
+   del(L,R):-del_min(L,L,R). 
+   
+ Stergere elem max din lista 
+   max1([H|T], M) :- max1(T, M), M>H, !.
+   max1([H|_], H).
+   del_max([],_,[]). 
+   del_max([H|T],L,R):- max1(L,M), H=M,!,del_max(T,L,R). 
+   del_max([H|T],L,[H|R]):-del_max(T,L,R). 
+   del(L,R):-del_max(L,L,R). 
+   
+  Inverseaza lista dupa al k-lea elem 
+   reverse_k(L,0,R):-reverse(L,L1),R=L1.
+   reverse_k([H|T],K,R):-K1 is K-1, reverse_k(T,K1,R1), append([H],R1,R).
+  
+  Afiseaza cifra si repetitia ei consecutiva
+   rle([],X,A,[[X,A]]).
+   rle([H|T],H,A,R):- A1 is A+1 ,!, rle(T,H,A1,R).
+   rle([H|T],X,A,R):- H\=X , rle(T,H,1,R1), append([[X,A]],R1,R).
+   rle_encode([H|T],R):- rle([H|T],H,0,R). 
+   
+  Lab5 
+   Selectie prin sortare(Se adauga to nr mai mic).
+    min1([H|T], M) :- min1(T, M), M<H, !.
+    min1([H|_], H).  
+    del(_,[],[]).
+    del(H,[H|T],T):-!.
+    del(X,[H|T],[H|R]):- X\=H, del(X,T,R). 
+    sel_sort([], []).
+    sel_sort(L, [M|R]):- min1(L, M), del(M, L, L1),sel_sort(L1, R).
+	
+   Ordoneaza litere crescator
+    min([H|T], M) :- min(T, M), M<H, !.
+    min([H|_], H). 
+   delete(H,[H|T],T):- !.
+   delete(X,[H|T],[H|R]):-delete(X,T,R).
+   delete(_,[],[]).
+   sel_sort(L, [M|R]):- min(L, M), delete(M, L, L1), sel_sort(L1, R).
+   sel_sort([], []).
+   %converteste din char in ASCII
+   convert([],[]).
+   convert([H|T],[X|R]):- char_code(H,X), convert(T,R).
+   %converteste din ASCII in char  
+   convertI([],[]).
+   convertI([H|T],[X|R]):- char_code(X,H), convertI(T,R).
+   % se aplica transformarea in ASCII, se aplica o sortare (din lab), se converteste iar in char.
+   sort_chars([],[]).
+   sort_chars(L,R):-convert(L,Rez), sel_sort(Rez,Rez2), convertI(Rez2,R).   
+       
+ Lab6	   
+   Calculeaza adancimea listei 
+    max(N1,N2,N1):-N1>=N2,!.   
+    max(_,N2,N2). 
+    depth([],1).
+    depth([H|T],R):- atomic(H), !, depth(T,R).
+    depth([H|T],R):- depth(H,R1), depth(T,R2), R3 is R1+1, max(R3,R2,R).
+	
+  Aplatizarea listei 
+   flatten([],[]).
+   flatten([H|T],[H|R]):- atomic(H), !, flatten(T,R).
+   flatten([H|T],R):- flatten(H,L1), flatten(T,L2), append(L1,L2,R). 
+
+ Numara toti atomii din liste imbricate
+  count_atomic([],0).
+  count_atomic([H|T],R):- atomic(H), !, count_atomic(T,R1), R is R1+1.
+  count_atomic([H|T],R):- count_atomic(H,R1), count_atomic(T,R2), R is R1+R2.
+  
+ Suma tuturor atomilor
+  sum_atomic([],0).
+  sum_atomic([H|T],R):- atomic(H), !, sum_atomic(T,R1), R is R1+H.
+  sum_atomic([H|T],R):- sum_atomic(H,R1), sum_atomic(T,R2), R is R1+R2.  
+
+Lab7   
+ Declarare arbore
+  tree1(t(6, t(4,t(2,nil,nil),t(5,nil,nil)), t(9,t(7,nil,nil),nil))). 
+  
+ Inorder
+  inorder(t(K,L,R),List):- inorder(L,LL), inorder(R,RL),
+                         append(LL, [K|RL], List).
+  inorder(nil,[]).
+  
+ Preorder
+  preorder(t(K,L,R),List):- preorder(L,LL), preorder(R,RL),
+                         append([K|LL], RL, List).
+  preorder(nil,[]).	
+
+ Postorder
+  postorder(t(K,L,R),List):- postorder(L,LL), postorder(R,RL),
+                         append(LL, RL, L1), append(L1,[K],List).
+  postorder(nil,[]). 
+  
+  
+ Cautarea unei chei 
+ search_key(Key, t(Key, _, _)).
+ search_key(Key, t(K, L, _)):-Key<K, !, search_key(Key, L).
+ search_key(Key, t(_, _, R)):-search_key(Key, R). 
+ 
+ Inaltime  
+	max(N1,N2,N1):-N1>=N2,!.   
+	max(_,N2,N2).
+	height(nil,0).
+	height(t(_,L,R),H):-height(L,H1),
+						height(R,H2),
+						max(H1,H2, H3),
+						H is H3+1.
+						
+  Numara frunzele
+   frunza(nil,[]).
+   frunza(t(K,nil,nil),[K]):-!.
+   frunza(t(_,L,R),Rez):-frunza(L,R1), frunza(R,R2), append(R1,R2,Rez).  
+                     
+  Noduri de la aceeasi adancime
+   depth(nil,_,[]).
+   depth(t(K,L,R),D, [K|Rez]):- D=0,!, D1 is D-1,depth(L,D1,R1), depth(R,D1,R2), append(R1,R2,Rez).
+   depth(t(_,L,R),D, Rez):-D1 is D-1,depth(L,D1,R1), depth(R,D1,R2), append(R1,R2,Rez).
+ 

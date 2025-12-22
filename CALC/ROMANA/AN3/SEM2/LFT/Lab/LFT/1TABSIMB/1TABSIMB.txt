@@ -1,0 +1,538 @@
+
+
+
+
+
+
+
+
+
+
+
+
+					CUPRINS
+
+
+
+
+
+
+	1. Tabele de simboluri ............................ 2
+
+
+	2. Analizor lexical 'C' ........................... 10
+
+
+	3. Instrumentul LEX ............................... 20
+
+
+	4. Automate ....................................... 28
+
+
+	5. Analiza descendent recursiva ................... 46
+
+
+	6. Interpretor PL0 ................................ 57
+
+
+	7. Instrumentul YACC .............................. 74
+
+
+	8. Limbaj evoluant ................................ 90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				Lucrarea nr. 1
+
+                       TABELE DE SIMBOLURI
+	
+
+	1. Scopul lucrarii 
+
+	- prezentarea posibilitatilor de organizare a unei tabele de simboluri si 
+a unor implementari posibile ale tabelelor de dispersie. 
+
+
+	2. Notiuni teoretice
+     
+	Caracteristicile comune oricarei organizari permit construirea unui obiect 
+"tabela de simboluri" .
+     Tabelele de simboluri contin informatii necesare in timpul compilarii 
+programelor.Informatiile sint organizate sub forma de perechi (simbol, atribute) 
+unde simbol poate fi orice identificator, variabila, constanta, functie, etc. 
+delimitata in procesul de analiza lexicala si sintactica, iar 
+atribute este un grup de caracteristici specifice simbolului (tip, valoare etc.)
+     Tabela de simboluri trebuie sa suporte :
+          -introducere rapida de noi simboluri
+          -regasire rapida a informatiei asociate simbolurilor
+     Functie de modul de organizare a perechilor mai sus mentionate deosebim 
+tabele de simpoluri organizate sub forma de
+     a) liste sau masive ordonate sau neordonate
+     b) arbori
+     c) tabele de dispersie deschise sau inchise
+     
+Indiferent de modul de organizare o tabela de simboluri poate fi privita ca un 
+obiect caracterizat prin urmatoarele interfete (mesaje):
+     install(simbol,atribute) - instalare element in TS
+     assign(simbol,atrib,val) - modificare valoare atribut pentru un anumit 
+element
+     retrieve_valoare(simbol,atribut) - regasire valoare atribut
+     delete(simbol) - stergere intrare din TS
+     
+     Organizarea structurilor pentru cazurile a si b este ineficienta (ca 
+viteza de acces).
+
+	Tabele de dispersie deschise
+     -sint caracterizate prin posibilitatea inlantuirii perechilor de aceeasi 
+valoare a functiei hashing la nivelul unei intrari. Implementarea este 
+modularizata astfel:
+     Intrarile folosite se gasesc in fisierul tabcuv.h
+     Organizarea TS e descrisa in fisierul def1.h
+     Functiile de interfatare cu obiectul se gasesc in fisierul open_disp.cpp
+     Exemplul de lucru cu TS il gasim in fisierul main1.c
+	Obs. Pentru simplitate implementarea foloseste un singur atribut : 
+valoare.
+
+	Tabele de dispersie inchise
+     -in cazul coliziunii perechile nu se inlantuiesc ci se incearca o noua 
+determinare a unei intrari libere in TS. 
+     Intrarile folosite se gasesc in fisierul tabcuv.h
+     Organizarea TS e descrisa in fisierul def2.h
+     Functiile de interfatare cu obiectul se gasesc in fisierul clos_disp.cpp
+     Exemplul de lucru cu TS il gasim in fisierul main2.c
+
+
+	3. Desfasurarea lucrarii
+
+	1. Se va analiza modul de insertie a identificatorilor intr-o tabela de 
+dispersie deschisa
+	2. Se va analiza modul de insertie a identificatorilor intr-o tabela de 
+dispersie inchisa.
+	3. Se va implementa si testa functia de stergere din tabela de dispersie 
+inchisa.
+	4. Se va efectua un studiu comparativ al celor doua metode de organizare a 
+tabelelor de dispersie.
+
+
+	4. Intrebari si dezvoltari
+
+	1. Sa se scrie un program capabil de aceleasi performante cu cele 
+prezentate, folosind obiectul biblioteca BORLANDC HashTable.
+	2. Sa se implementeze pastrind maniera obiectuala si tabelele de simboluri 
+organizate sub forma de masive, liste, arbori.
+	3. Sa se introduca pentru programele prezentate o subrutina pentru 
+calcularea timpului intre inceputul si sfirsitul executiei programului in cele 
+doua variante (deschisa si inchisa ). Sa se compare rezultatele.
+
+
+
+	5. Programe
+
+FISIERUL: tabcuv.h
+
+typedef struct{
+	 char *nume;
+	 int val;
+	 }cuvint;
+cuvint	 tabcuv[]={
+	"int",1,	  	"char",2,		"float",3,    	
+      "double",4,		"struct",5,   	"long",6,   
+	"unsigned",7,    "union",8,		"short",9,  
+	"auto",10,	      "extern",11,	"static",12,
+	"register",13,	"goto",14,		"return",15,
+	"if",16,		"while",17,		"else",18,
+	"switch",19,	"case",20,		"break",21,
+	"continue",22,	"do",23,		"default",24,
+	"for",25,		"sizeof",26,	"typedef",27,
+	"",0,		};	
+
+
+FISIERUL: def1.h
+// Declaratiile pentru obiectul tabela de dispersie deschisa
+
+enum Boolean {false,true};
+
+typedef struct _intrare{
+	char *nume;
+	int atribut;    // de obicei referinta la o structura de atribute
+	struct _intrare *urm; // permite inlantuirea intrarilor de aceeasi 		
+		     // valoare
+	}INTRARE;
+
+class hash { //clasa tabela de dispersie
+private:
+	int D ; //dimensiunea tabelei
+	INTRARE *tabela_dispersie[11]; // tabela de simboluri
+	// functii membru
+	// cautare intrare in tabela de simboluri
+	INTRARE *caut(char *);
+	// functia de hashing
+	int calcul_hash(char *);
+	//creare spatiu memorie heap
+	char * makesir(char *);
+public:
+	// constructor
+	hash(void);
+	// instalare simbol in tabela
+	INTRARE *install(char *, int);
+	// modificare atribute intrare
+	INTRARE *assign_val(char *,int);
+	//regasire informatie (valoare atribut)
+	int retrieve_val(char *);
+	// stergere intrare din tabela de simboluri
+	void del(char *);
+	// tiparire tabela de simboluri
+	void print_tab_disp(void);};
+
+
+FISIERUL: open_dis.cpp
+// contine definitiile functiilor obiectului hash
+
+#include "def1.h"
+#include <iostream.h>
+#include <string.h>
+#include <alloc.h>
+
+//constructor
+hash::hash()
+{ D = 11;
+ for(int i=0;i<D;i++)
+	tabela_dispersie[i]=NULL;
+}
+// definitiile functiilor membru ale clasei hash
+
+int hash::calcul_hash(char *s)
+{ register int h;
+  for(h=0;*s != '\0'; )
+	h += *s++;
+  return h%D;
+}
+
+char * hash::makesir(char *s)  //alocator memorie
+{ char *p;
+  return strcpy(p=(char *)malloc(strlen(s)+1),s) ;
+}
+
+INTRARE * hash::caut(char *s)
+{INTRARE *p;
+ for(p=tabela_dispersie[calcul_hash(s)]; p != NULL ; p=p->urm)
+	if(!strcmp(s,p->nume))
+		return p;
+ return NULL;
+ }
+
+INTRARE * hash::install(char *nume,int atribut)
+{ INTRARE *p;
+  int indice;
+  if((p=caut(nume)) == NULL){
+	p=new INTRARE;
+	p->nume=makesir(nume);
+	p->atribut=atribut;
+	p->urm=tabela_dispersie[indice=calcul_hash(p->nume)];
+	tabela_dispersie[indice]=p;
+	}
+  else{
+	cerr << "Atentie, acest simbol este deja instalat";
+	return p;
+	}
+  }
+
+INTRARE * hash::assign_val(char *nume,int val)
+{ INTRARE *p;
+  if((p=caut(nume)) == NULL){
+	cerr << "Eroare, identificator inexistent" << "\n" ;
+	return NULL;
+	}
+  p->atribut=val;
+  return p;
+}
+
+int  hash::retrieve_val(char *nume)
+{ INTRARE *p;
+  if((p=caut(nume)) == NULL){
+	cerr << "Eroare, identificator inexistent" ;
+	return NULL;
+	}
+  return p->atribut;
+}
+
+void hash::del( char* nume)
+{ INTRARE *p,*cap,*ant;
+  int indice;
+  cap=tabela_dispersie[indice=calcul_hash(nume)];
+  if((p=(INTRARE *)caut(nume)) == NULL){
+	cerr <<"Eroare, identificator inexistent" ;
+	return;
+	}
+  ant=cap->urm;
+  if(cap == p)
+	if(ant == NULL){
+		delete p;tabela_dispersie[indice]=NULL;
+		return;
+		}
+	else{
+		delete p;tabela_dispersie[indice]=ant;
+		return;
+		}
+  ant=cap;
+  while(ant->urm != p)
+		ant=ant->urm;
+  ant->urm=p->urm;
+  delete p;
+  return;
+}
+
+void hash::print_tab_disp(void)
+{INTRARE *p;
+ for(int i=0 ; i<D ; i++)
+	if(tabela_dispersie[i])
+		for(p=tabela_dispersie[i];p;p=p->urm)
+		    cout << i << '\t' << p->nume << '\t' << p->atribut << '\n';}
+
+
+FISIERUL: main1.cpp
+
+#include <iostream.h>
+#include "def1.h"
+#include "tabcuv.h"
+
+main()
+{
+  hash hashtable;
+  for(int i=0;i<27;i++)
+	hashtable.install(tabcuv[i].nume,tabcuv[i].val);
+  hashtable.assign_val("auto",100);
+  hashtable.install("auto",10); // EROARE - id. deja instalat
+  hashtable.del("else");
+  hashtable.del("int");
+  hashtable.del("unsigned");
+  hashtable.del("case");
+  hashtable.del("case"); // EROARE - id. inexistent
+  hashtable.print_tab_disp();
+  cout << " Atributul ident. auto are valoarea " << 
+hashtable.retrieve_val("auto") << '\n';
+  cout << " Atributul ident. while are valoarea " << 
+hashtable.retrieve_val("while") << '\n';
+}
+
+
+FISIERUL: def2.h
+enum Boolean {false,true};
+typedef struct _intrare{
+	char *nume;
+	int atribut; // de obicei referinta la o structura de atribute
+	}INTRARE;
+class hash { //clasa tabela de dispersie
+private:
+	int D ; //dimensiunea tabelei
+	int LIMITA_INCERCARI;
+	INTRARE tabela_dispersie[71]; // tabela de simboluri
+	// member functions
+	// cautare intrare in tabela de simboluri
+	int caut(char *);
+	// functia de hashing
+	int calcul_hash(char *);
+	// creare spatiu memorie heap
+	char * makesir(char *);
+	// functii pentru modificare valoare intrare in tabela de 
+	// dispersie
+	int aux(int,int);
+	int modif_incr(int);
+
+public:
+	// constructori
+	hash(void);
+	hash(int);
+	// instalare simbol in tabela
+	int install(char *, int);
+
+	// modificare atribute intrare
+	int assign_val(char *,int);
+	//regasire informatie (valoare atribut)
+	int retrieve_val(char *);
+	// tiparire tabela de simboluri
+	void print_tab_disp(void);
+};
+
+
+FISIERUL: clos_dis.cpp 
+#include "def2.h"
+#include <iostream.h>
+#include <string.h>
+#include <alloc.h>
+#include <process.h>
+
+
+//constructori
+
+hash::hash()
+{ D = 51;
+ LIMITA_INCERCARI = D/2;
+ for(int i=0;i<D;i++)
+	tabela_dispersie[i].nume=NULL;
+}
+
+hash::hash(int param)
+{ D = param;
+  LIMITA_INCERCARI = D/2;
+  if(D > 71){
+	cerr << "Dimensiune prea mare pentru tabela\n";
+	exit(1);
+	}
+ for(int i=0;i<D;i++)
+	tabela_dispersie[i].nume=NULL;
+}
+
+
+// definitiile functiilor membru ale clasei hash
+
+int hash::calcul_hash(char *s)
+{ register int h=0;
+  h+=(*s&017)+(*(s+1)*017);
+  h+=strlen(s)*16;
+  h=(h&0177777); // e un numar cuprins intre 0 si 255
+  return h%D;
+}
+
+
+char * hash::makesir(char *s)
+{ char *p;
+  return strcpy(p=(char *)malloc(strlen(s)+1),s) ;
+}
+
+int hash::aux(int h,int incr) { return h+incr;}
+
+int hash::modif_incr(int incr){ return incr*incr;}
+
+
+int hash::caut(char *s)
+{register incr,h,nr_incercari=0;
+ for(incr=1,h=calcul_hash(s); ; )
+     if(!strcmp(tabela_dispersie[h].nume,s))
+	return h;
+     else{ // coliziune
+	h=aux(h,incr);
+	incr=modif_incr(incr);
+	nr_incercari++;
+	while(h > D) h-=D;
+	if(nr_incercari > LIMITA_INCERCARI)
+		return (-1);
+	}
+ }
+
+int hash::install(char *nume,int atribut)
+{
+ register incr,semaphor,h;
+ int nr_incercari=0;
+ for(incr=1,semaphor=0,h=calcul_hash(nume); !semaphor ; )
+      if(tabela_dispersie[h].nume == NULL){
+	semaphor=1;
+	tabela_dispersie[h].nume = makesir(nume);
+	tabela_dispersie[h].atribut=atribut;
+	}
+      else if( ! (semaphor= !strcmp(tabela_dispersie[h].nume,nume))){
+	/* coliziune */
+	h=aux(h,incr);
+	incr=modif_incr(incr);
+	nr_incercari++;
+	while(h > D) h-=D;
+	if(nr_incercari > LIMITA_INCERCARI){
+		cerr << "Nu mai pot insera in tabela de dispersie\n";
+		return (-1);
+		}
+	}
+  return nr_incercari;   // PLUS
+ }
+
+int hash::assign_val(char *nume,int val)
+{ int p;
+  if((p=caut(nume)) == -1){
+	cerr << "Eroare, identificator inexistent\n" ;
+	return NULL;
+	}
+  tabela_dispersie[p].atribut=val;
+  return p;
+}
+
+
+int hash::retrieve_val(char *nume)
+{ int p;
+  if((p=caut(nume)) == -1){
+	cerr << "Eroare, identificator inexistent\n" ;
+	return NULL;
+	}
+  return tabela_dispersie[p].atribut;
+}
+
+
+void hash::print_tab_disp(void)
+{
+ for(int i=0 ; i<D ; i++)
+	if(tabela_dispersie[i].nume)
+	    cout << i << '\t' << tabela_dispersie[i].nume << '\t' << 
+tabela_dispersie[i].atribut << '\n';
+}
+
+
+FISIERUL: main2.cpp 
+#include <iostream.h>
+#include "def2.h"
+#include "tabcuv.h"
+
+main()
+{
+  int nr_coliziuni = 0; // pentru compararea numarului total de 
+//  coliziuni ce apar la instalarea aceluiasi set de identificatori
+// in doua tabele de dimensiuni diferite
+   hash hashtable;
+  for(int i=0;i<27;i++)
+	nr_coliziuni+=hashtable.install(tabcuv[i].nume, 					
+			tabcuv[i].val);
+  hashtable.print_tab_disp();
+  hashtable.assign_val("auto",100);
+  hashtable.assign_val("else",100);
+  hashtable.print_tab_disp();
+  cout << " Atributul ident. auto are valoarea " << 
+hashtable.retrieve_val("auto") << '\n';
+  cout << " Atributul ident. while are valoarea " << 
+hashtable.retrieve_val("while") << '\n';
+  cout << "Numarul de coliziuni este: " << nr_coliziuni << '\n' ;
+  cin >> nr_coliziuni;
+  nr_coliziuni = 0;
+  hash hashtable2(31);
+
+  for(i=0;i<27;i++)
+	nr_coliziuni+=hashtable2.install(tabcuv[i].nume, 					
+			tabcuv[i].val);
+  hashtable2.assign_val("auto",100);
+  hashtable2.assign_val("else",100);
+  hashtable2.print_tab_disp();
+  cout << " Atributul ident. auto are valoarea " << 
+hashtable2.retrieve_val("auto") << '\n';
+  cout << " Atributul ident. while are valoarea " << 
+hashtable2.retrieve_val("while") << '\n';
+  cout << "Numarul de coliziuni este: " << nr_coliziuni << '\n' ;
+}

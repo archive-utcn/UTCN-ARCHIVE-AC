@@ -1,0 +1,82 @@
+WEBSITES: LABORATOR:
+http://cs-gw.utcluj.ro/%7Eemil/Lab_LFT.tar.gz
+
+-The Lex & Yacc Page
+http://dinosaur.compilertools.net/
+
+
+RULARI-COMPILARI-LEX-YACC
+
+Comenzi TERMINAL FLEX/LEX
+flex const.l
+gcc lex.yy.c -ll
+./a.out
+---
+Problema 1: float0.l 
+flex float0.l
+gcc lex.yy.c -ll
+./a.out
+
+Valori incluse: 
+ab7.3c--5.4.3+d++5-
+Rezultat:
+abFLOATc-FLOATFLOAT+d+FLOAT-
+---
+Explicatii
+Comanda flex sau lex !
+- rezulta fisierul lex.yy.c
+- rezulta fisierul a.out executabil
+./a.out <in.txt >out.txt
+
+-o NumeExecutabil
+-o const.exe
+rezulta fisierul const.exe
+gcc -o const.exe lex.yy.c -ll 
+<in.txt fisiere date intrare 
+>out.txt generare fisier rezultate
+./const.exe
+./const.exe <in.txt >out.txt
+
+===
+Compilare doar fisiere YACC 
+comanda yacc sau bison !
+rezulta fisierele y.tab.c si y.tab.h
+
+bison fis.y
+  sau comanda
+yacc fis.y
+gcc y.tab.c -ly
+./a.out
+./a.out <in.txt >out.txt
+==========
+Compilare in ordinea: LEX si pe urma YACC
+lex fis1.l
+yacc fis2.y
+gcc y.tab.c
+./a.out
+
+In acest caz: NU se includ in fisierul .lex !
+#include " y.tab.h ";
+extern int yylval;
+
+Aceste 2 linii se includ daca se face prima data compilarea YACC si pe urma LEX!
+==========
+lex fis.l
+yacc fis.y
+gcc y.tab.c -ly -lfl -o fis.exe
+./fis.exe <in.txt> rez.txt
+
+----- in fisierul yacc +EXCEPTIILE
+%{
+void yyerror(char *);
+%}
+
+void yyerror(char *s) {
+fprintf(stderr, "%s\n", s);
+}
+=========
+
+Lex, Yacc libraries: ll, ly
+"cannot find -ly is the message you get when the linker cannot find the library"; similar -ll
+https://stackoverflow.com/questions/1754336/why-does-my-flex-yacc-compiler-not-compile-correctly-on-another-linux-machine
+===============

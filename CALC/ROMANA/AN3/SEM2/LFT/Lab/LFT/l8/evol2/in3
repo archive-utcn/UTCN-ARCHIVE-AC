@@ -1,0 +1,2 @@
+aux=5
+if(aux==5) print"\n\n\t\t\tAUX==5\n\n" else print aux

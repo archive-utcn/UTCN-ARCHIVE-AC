@@ -1,0 +1,25 @@
+threshold1 
+
+poza originala o convertim din colorata in gray (grayscale)
+facem closingu pe imagine
+facem thresholdu adaptiv cu binary si otsu 
+
+
+testCanny
+
+facem GaussianBlur (pt ca are nevoie Canny de el)
+dupa aplicam Canny (ca sa ne dea muchiile din imaginea sursa)
+dupa aplicam negativul (pentru ca functia de extragere de contururi din open CV, extrage albul de pe conturul negru)
+facem dilatare pentru a evidentia conturul 
+findCounturs ne da array-ul de contururi (separa contururile intre ele)
+
+parcurgem contururile si verificam cu approxPolyDP daca conturul respectiv este dreptunghi
+
+contoursOUT ==5  (daca e grosimea mai mica decat 5 pixeli sa nu-l ia in considerare)
+
+selectRectangular , din imaginea originala, extragem placuta cu ajutorul conturului gasit anterior
+
+
+
+closing -> threshold -> gaussian -> canny -> negativ -> dilatare -> contur -> crop 
+

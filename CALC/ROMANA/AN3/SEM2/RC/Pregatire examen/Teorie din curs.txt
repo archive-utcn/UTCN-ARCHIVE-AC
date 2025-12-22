@@ -1,0 +1,203 @@
+Curs 1 : 
+
+- Andrew Tanenbaum - Retele de Calculatoare (pdf online)
+- IANA - asigneaza IP-uri, DNS-uri 
+- tele = la distanta 
+- broadcast = transmite la toata lumea 
+- router - realizeaza conectarea intre retele 
+- topologiile stea sunt cele mai utilizate 
+- un switch este un bridge cu foarte multe porturi 
+
+
+Curs 2 :  
+-peer-to-peer (Thor network) 
+-Symmetric (p2p) ,  Asymmetric (client/server)
+-Incapsulare - in transport header se pun diferite informatii : sursa, destinatar, detectori de eroare
+-ack poate fi folosit pentru a confirma primirea unor ID uri de pachete
+-error correction codes (sunt costisitoare) 
+-http port 80,  https  port 443 
+-ip ul privat are relevanta doar in cadrul retelei noastre ( e ca o variabila locala)
+-unicast : adresare 1 la 1 ,  broadcast : 1 la toti ,  multicast : 1 la multi 
+-la OSI , fiecare layer e independent de celalt layer  (se folosesc interfete)
+- Physical layer - cabluri; Data link layer - bridge, communication; Network layer - router, adresare globala, cum trimit pachetele sa fac rutare; Transport layer - transfer de date punct la punct, accesare de servicii, adresare (porturi: 80, 443, 53,63); Session layer  - pt fiecare proces in parte se verifica sesiunea  (ack, vezi ca trimit date, mai esti conectat?,  pot sa primesc date); Presentation layer -  prezinta formatul datelor (in ce limbaj, criptate, compresate); Application Layer - cum definesc interfete catre aplicatii, ce protocoale folosesc (http) ;
+-TCP/IP s-a inplementat practic (OSI doar teoretic)
+- pentru examen! :  ISO/OSI, TCP/IP, incapsulare, reasamblare, fragmentare 
+
+Curs 3 :
+- TCP : reliable, orientat pe conexiune (se produce o negociere a canalului de comunicatie), este un nivel de incredere, 
+- UDP: unreliable, nu face conexiune doar trimite date, 
+- DNS : face translatarea dintre numele site-ului si adresa ip ; este o baza de date distribuita la nivel global;
+-exista 13 root name servers in lume ; puncte de redirectionare spre unde vreau sa ajung
+- traseu:  local name server -> root name server -> authoritative name server
+- load balancing cu mai multe DNS - uri 
+- DNS-ul este distribuit 
+-  Root name server -> Top Level Domain (TLD)  ;     ac.utcluj.ro  (ac este subdomeniu)
+- interogare server DNS : recursiv (intreb dns, el intreaba mai departe, mai departe, pana la root)
+		        -iterativ, dns imi raspunde mie, si eu intreb mai departe
+-alias - alt nume, dar acelasi IP    (CNAME)
+- SMTP - doar text , foloseste TCP , transmisie asincrona , trimite ASCI, ca raspuns primesc coduri, reliable in general, 
+- MIME - imbunatatire SMTP ce aduce si imagini, audio  , ASCII ecoding, base64 encoding ? 
+- Arhitectura email : 
+1.Message User Agent (formateaza mesajul ca sa poata fi accesat de message handling system) ex: Opera, Outlook
+2. Message submission agent (cum trebuie sa fie mesajul, respecta anumite standarde?) 
+3. Message transfer agent (server intermediar care sa transmita)
+4. Mail delivery agent (serverul destinatie, trimite mailul in inbox)
+5. Message store ( a ajuns in inbox)   protocoale specifice : POP (stergea de pe server), IMAP (pastreaza o copie a mesajului pe server) 
+6. Message user agent (citirea mesajului din browser)
+- TCP port 25 = mail 
+
+Curs 4 : 
+- WWW este client/server 
+- paginile web sunt scrie in Markup Language   (folosit frecvent HTML)
+-http foloseste tcp , client/server, 
+- cache, cookies,  salveaza local date pe care le foloseste ulterior, nu mai e necesar request la server
+-  proxy ajuta la securitate prin filtrari, clientii sunt ascunsi, se pot folosi diferite versiuni de HTTP
+- gateway poate face trecerea dintre http in ftp 
+-webserver trimite meta files (detalii despre transmisie) si streaming server trimite datele propriu-zise
+- SIP (Session Initiation Protocol)  intermediar in establishing a connection , afla IP uri intre 2 useri 
+
+Curs 5:
+-incapsulare = grupare dupa un protocol, si adaugam informatii de control in headere
+- UDP - este de tip best-effort  
+- prin multiplexare si porturi, merg mai multe servicii in paralel 
+- TCP - este orientat pe conexiune, reliable (dar IP este unreliable), se folosesc buffere, segmentare
+-  Socket = ip address + port number 
+- la TCP nu se foloseste broadcast sau multicast 
+-  in flag se poate marca un pachet ca fiind urgent 
+- TCP este o legatura logica 
+- Source port - 2^16 porturi disponibile , destination port - 2^16 porturi disponibile 
+- Ack number = seq number + 1   ( ii zice care pachet il poate primi)
+- data offset - unde incep datele 
+- flag - URG (urgent),  ACK(stabilire conexiune), PUSH (nu astepta sa se umple bufferu), RST - inchidere brusca de conexiune,  SYN - acolo incep o conexiue,  FIN - inchidere conexiune dar asteapta ack
+- Window - cate segmente pot sa trimit pana sa primesc ack 
+- checksum - verifica integritatea datelor (aduna toti bitii dar cu ceva formula smechera)
+- default nu se tine cont de Urgent Pointer
+- pentru conexiune se face trio handshake, 
+- TCP face congestion control , si tot timpu isi calculeaza delay urile  si face o medie a lor, iar cand se depaseste aceasta medie incepe o congestie 
+- Windows management : se rezolva prin Slow Start (ack la 1 segment, apoi ack la 2 seg, apoi la 3)
+- UDP - less overhead (nu prea are header), real-time, nu scapa de duplicate
+----------------------------------------------
+- Switchu muta pachetele prin intermediul adreselor MAC (un switch este un bridge cu multe ports)
+- routeru conecteaza 2 retele separate
+- rutarea este mentinerea tabelelor de rutare ( va stii tot timpul ce retele are direct conectate si la ce retele poate sa ajunga prin alt router)
+- fragmentarea se realizeaza pe parcurs
+- Destinatia face reasamblarea
+- IP este de tip best-effort
+
+Curs 6 :
+- Time to Live - nr de routere prin care poate trece un pachet (sau cat timp), ca sa evitam ciclurile infinite in care un pachet se pierde prin retea 
+- IHL = cat de lung este header-ul 
+- Type of service - asigura diferite prioritati in functie de necesitate
+- protocol = ce fel de informatie este incapsulata in pachet si ce fel de date (TCP, UDP, Quic)
+- IP-ul este utilizat pentru a transmite pachetele de date 
+- la IPv6 traffic Class & Flow label  este QoS , Hop Limit = TTL,  Payload Length= lungime pachet
+- IPv6 nu mai are broadcast, ci face multicast la toata lumea 
+- Fe80 - este o adresa de ip Link Local Unicast ; FFFF - adresa de multicast ; ::1 loopback 
+-  la Ipv6 fragmentarea se face doar la sursa, pe parcurs nu se mai face.  cauta cel mai mic MTU pe cale si apoi face fragmentarea la inceput 
+-  ipv4 si ipv6 nu sunt compatibile 
+- tehnologii folosite pentru a folosi si v4 si v6 : dual stack routers, stie ambele protocoale 
+- tunneling - transforma din v4 in v6 pentru o anumita portiune, apoi se transforma inapoi 
+- NAT - transforma din v4 in v6 inainte de destinatie  (sau invers) 
+- Stop & Wait - sursa va trimite un frame catre destinatie, daca destinatia doreste sa continue comunicatia, trimite inapoi un ack, apoi sursa poate trimite pachetul urmator ; 
+- Sliding Window =  daca pot trimite un nr de n frame-uri, apoi se asteapta ack pentru n+1 frame-uri
+	             =  n poate sa varieze, daca e mai liber poate fi un n mai mare, sau daca e congestie 		n-ul poate deveni mai mic
+-error detection - prin adaugare de biti suplimentari sau prin bit de paritate  sau CRC 
+-error control - o cerere de retransmisie,    uneori N alteori selectiv , coduri corectoare de erori
+- HDLC - primary & secondary (master slave ) asta e pentru unbalanced
+             - la balanced, avem o varianta combinata, peer-to-peer (e atat client cat si server)
+
+Curs 7 :
+-la nivelul 2 se comunica cu adrese fizice (MAC) 
+-in LAN se utilizeaza topologie Stea si Stea extinsa 
+- Mediun access control - centralized control (elimina coliziunile fiindca master spune tot timpul cine trebuie sa transmita)
+-CSMA - daca BUS-ul este idle, atunci transmit eu. dar se poate sa avem coliziune fiindca 2 statii sa faca acelasi lucru deodata, si atunci nu o sa primeasca ack, se transmite un semnal catre toata lumea sa nu mai transmita o perioada si apoi se reia algoritmul. atunci trebuie retransmitere 
+-  pe Wireless nu se poate face collision detection !!!
+-  pentru CSMA/CA (collision avoidance) se foloseste RTS (request to send) & CLS (clear to send)
+-Token Ring (statia care are token-ul poate transmite) si se tot propaga token de la unu la altu (e lenta dar nu exista coliziuni - bune in mediul industrial)
+-FDDI - retea de tip token ring dar pe fibra optica ; foloseste 2 inele, primary ring si back-up ring ; 
+DAC face managementul fibre optice si a comunicatiei si se leaga la el end devices (SAS) ; DAS (mai multe servere care comunica intre ele) 
+- Hub trimite la toate device-urile conectate la el, switch trimite doar la adresa MAC corespunzatoare
+- 100BaseTX (tx - cupru ) ,   100BaseFX(FX - fibra optica)
+- 10/100 Ethernet cadru minim de 512 bit  ;   la Gigabit Ethernet lungimea minima e 4096 bit
+
+Curs 8 :
+- switchu face forwarding (si unele porturi le blocheaza) 
+- switchu trimite un pachet la fiecare 2 secunde (BPDU) , spune cine este root, costu catre root, cine a trimis pachetu
+- Switch-ul root este cel care are BID (bridge id) cel mai mic 
+-  Daca costul este acelasi pe fiecare ruta, alegerea traseului se face dupa BID cel cel mai mic
+- daca costul nu este egal, se alege costul cel mai mic ; viteza mai mare -> cost mai mic 
+- OFDM - impart banda de frecvente in subfrecvente si fiecare sursa de semnal o pun pe alta frecventa; nu este foarte sensibila la zgomote
+- OFDM combinat cu QAM - cadran cu 4 zone, pe un singur tact trimitem 4 biti cu ajutorul faza si amplitudine 
+-MIMO - mai multe legaturi prin mai multe antene 
+
+Curs 9 : 
+- la WiFi pe 2.4 GHz doar canalele 1,6,11 nu sunt overlapping 
+- 802.11n functiona pe 20 si 40 MHz 
+- 802.11ac are 80 si 160 MHz
+- WiFi 6 nu are viteza mult mai mare decat WiFi 5 dar permite mult mai multe conexiuni simultane
+- roaming - mutarea dintr-o celula in alta celula 
+- AP-urile discuta intre ele cand faci roaming, si transfera datele asociate clientului respectiv 
+- Router Wireless =  Router + AP 
+-  Lightweight AP , nu se fac configurarile individual, ci un controller face configurarea si da push la toate dispozitivele 
+- twisted ca sa mai taie din interferente 
+- UTP nu are protectie, FTP peste cele 8 fire se duce o izolare, STP = FTP + o izolatie separata pe fiecare pereche de fire (reduce foarte mult zgomotele dar adauga greutate)
+- Tx (1,2)  ,   Rx (3,6) pentru standard A,  la stanndard B se inverseaza
+- cablul pe distante scurte se numeste patch-cord
+-Pentru fibra optica single mode este bun pe distante lungi dar este mai scump (mai putine pierderi)
+- jonctiunea este o conexiune punct la punct intre 2 fibre
+
+Curs 10: 
+- cablarea intre cladiri sau pe etaje = cablare verticala (backbone)
+- switchurile stau in sala speciala (telecommunication closet) si spre sali merg cabluri la prize
+- 1 Hz = repetari / secunda 
+- data rate =  number of bits per second 
+- Manchester - se introduce o tranzitie la mijloc de interval 
+-  Nyquist -  daca avem un semnal de 4kHz trebuie sa facem sampling la 8 kHz, minim dublu fata de valoarea maxima a semnalului
+- dB e un raport de puteri logaritmat (Pin / Pout) sau (Vin / Vout)
+
+Curs 11:
+- full duplex - daca transmitem si control si date 
+- half duplex - daca transmitem doar date 
+- baseband, tot bandwitdthu asignat unui singur canal (de obicei la trans digitale) ; broadband - bw este divizat in mai multe canale independente (de obicei utilizat pentru transmisii analog)
+- Nyquist - esantionam la dublul frecventei maxime;   v = 2 * H * log2 N  ; H - banda de frecventa; N - numarul de nivele folosite pentru codarea datelor; 
+- Shannon   v = H * log2 (1+ S/N)  ;  S/N  - signal to noise ratio ; more realistic than Nyquist
+- FDM - am mai multe semnale analogice si din gama de frecvente disponibila, o impart in mai multe canale (f1, f2,f3...) si pe fiecare frecventa in parte putem pune alta sursa ; functioneaza in mod paralel
+           - daca bandwith total > bandiwth per canal atunci trebuie sa modulam fiecare semnal pe alta frecventa; se utilizeaza frecvente de garda, un spatiu liber intre frecvente ca sa nu existe overlapping ;
+          - se pierde mult bandwith din cauza frecventelor de garda; 
+          - avantajul este ca se trimit toate deodata
+-TDM - semnal digital, toate frecventa o folosim pentru o singura sursa; doar ca impartim in intervale de timp ca sa putem transmite mai multe canale ; (se foloseste Round Robin sau prioritati)
+          - utilizam toata gama de frecvente dar timpul este limitat
+          - este sincron; 
+          - mai multe semnale merg pe aceeasi cale insa sunt decalate in timp
+          - intervalele de timp sunt pre-asignate ; daca sursa nu are ceva de transmis se pierde timp;
+          - se folosesc foarte multe buffere; avem biti de control 
+-WDM - crestere de viteza foarte mare pe fibra optica; 
+            - trimitem mai multe semnale optice pe aceeasi fibra dar cu un lambda diferit; avem nevoie de un multiplexor si demultiplexor optic. 
+- cablurile coaxiale sunt foarte bine ecranate si permit un bandwith mare 
+- porturile ne ajuta ca sa multiplexam conexiunile client / server; comunicare paralela pentru mai multe servicii 
+- Transmisie Asincrona vs Sincrona : 
+- Asincron : trebuie sa avem biti de start si de stop; bit de paritate pentru error checking
+- Sincron :  sunt mai complexe dar sunt mai folosite in partea de comunicatii; avem biti pentru diferite flaguri si pentru control
+---------------------------
+Switching techniques:
+- Circuit switching - schimbarea circuitelor fizice sau virtuale printr-o alta ruta; are 3 faze : establish, transmission si disconnection;  tabela de rutare este fixa si initala -> rapida dar nu e adaptabila . 
+-Message switching - store & forward ( el calculeaza calea optima) ; mesaje foarte lungi ; 
+-Packet switching - stabilim o limita pentru mesaje (MTU),  se retransmit foarte usor pachetele fata de mesaje ; foloseste circuite virtuale (cai predefinite, prioritati);  daca se folosesc datagrame, trebuie doar sa stim next hop in functie de traficul la momentul actual, reteaua fiind complet dinamica.
+
+
+Curs12 :
+- la retelele virtuale nu trebuie sa se faca rutare (fiindca se rezerva o anumita cale)
+-la datagram trebuie doar sa stim next hop 
+- la circuite virtuale avem nevoie de un protocol pentru rezervre de cai, se trimita un pachet, se rezerva o cale de la sursa la destinatie si se face la fel pentru toate sursele si destinatiile de la inceput
+-la pachete sunt algoritmi clasici de rutare 
+Strategii de rutare :
+- rutare fixa (statica) - intre src si dest se calculeaza shortest path cu o ruta statica; se schimba doar manual in caz ca a cazut un anumit nod;  
+-rutare flooding - trimitem de la sursa la destinatie fara sa avem nicio informatie; facem broadcast, pe toate interfetele trimitem o copie a pachetului (care este numerotata ca sa eliminam duplicatele care ajung la destinatie) ; se incearca toate rutele posibile deci si pe cost minim. 
+-rutare random - selectam urmatorul nod pe baza unei probabilitati de a ajunge la destinatie; daca nu avem nicio informatie se poate face Round Robin; 
+- rutare adaptiva - tinem cont de starea retelei (latime de banda, congestie, mentenanta) ; daca o cale esueaza, este gata calculat urmatorul shortest path 
+-ISP are in fiecare oras un point of presence (POP) 
+- CPE - modemul din casa (se conecteaza la POP)
+- Local loop - infrastructura pe care o are ISP de la POP la adresa clientului 
+-Modem = modulator , demodulator 
+-
+

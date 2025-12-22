@@ -1,0 +1,45 @@
+1. 
+ip 171.12.0.0 
+mask 255.255.0.0
+
+4 biti de host, 
+
+a. clasa B 
+b. new mask : 255.255.255.240  (11110000)
+c. 2 ^ 12 = 4096 
+d. 2 ^ 4 - 2 = 14 
+------------------------------------------------
+2.
+
+Server : 
+- IP : 171.12.0.0
+- NM : 255.255.255.240
+- Gateway: R0 fa0/1
+                    		subnet	      host 
+4 biti de host => 171.12. 000000000000      0001     sn1 pentru server  171.12.0.1
+	            171.12. 000000000000      0010     fa0/1 R0  (gateway server) 171.12.0.2
+	
+	            171.12.000000000001       0001    sn2 pentru 171.12.0.17
+	            
+
+
+
+
+
+---------------------------------------------
+3. 
+- ping ipv6 address 
+- tracert ipv6 address
+
+4.
+-configure terminal
+-interface fastEthernet0/2
+-interface vlan 4
+-no shutdown
+-exit 
+
+5.  cablurile drepte sunt pentru a conecta dispozitive diferite (ex: router cu pc)
+
+6. d. 
+
+7.

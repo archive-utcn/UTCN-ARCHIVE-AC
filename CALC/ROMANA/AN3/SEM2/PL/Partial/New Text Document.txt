@@ -1,0 +1,277 @@
+man(john).
+woman(jane).
+
+parent(john, jim).
+parent(john, scott).
+parent(john, anne).
+
+parent(jane, jim).
+parent(jane, scott).
+parent(jane, anne).
+
+father(X,Y) :- man(X), parent(X,Y).
+mother(X,Y) :- woman(X), parent(X,Y).
+
+parent(tom, john).
+
+grandparent(X,Y) :- parent(X,Z), parent(Z,Y).
+
+sibling(X,Y) :- parent(Z,X), parent(Z,Y), \+(X==Y).
+
+parent(jim, jim_jr).
+
+ancestor(X,Y) :- parent(X,Y).
+ancestor(X,Y) :- parent(X,Z), ancestor(Z,Y).
+
+
+%	tom
+%	 |
+%	john		jane
+%	 |\		 /|
+%	 |  \	       /  |		(john si jane sunt
+%	 |    \      /	  |		 parintii celor 3
+%	jim	scott	anne		jim, scott, anne)
+%	 |
+%	jim_jr
+
+
+
+% Suma a 2 numere
+% Produsul a 2 numere
+% Factorialul inapoi a unui numar
+% Factorialul inainte a unui numar
+% Ridicarea la putere a unui numar la alt numar (2**3 = 2 la a3a)
+% Al n-lea element al sirului lui Fibbonacci
+% Al (m,n)-lea element din functia lui Ackerman
+
+% Suma a 2 numere
+sum(A,B,S) :- S is A+B.
+
+% Produsul a 2 numere
+produs(A,B,P) :- P is A*B.
+
+% Factorialul inapoi a unui numar
+factinapoi(0,1) :- !.
+factinapoi(N,R) :- N1 is N-1, factinapoi(N1,R1), R is R1*N.
+
+% Factorialul inainte a unui numar
+factinainte(0,P,P) :- !.
+factinainte(N,P,R) :- N1 is N-1, P1 is P*N, factinainte(N1,P1,R).
+
+% Ridicarea la putere a unui numar la alt numar (2**3 = 2 la a3a)
+putere(A,0,1) :- !.
+putere(A,B,R) :- B1 is B-1, putere(A,B1,R1), R is R1*A.
+
+% Al n-lea element al sirului lui Fibbonacci
+fibo(0,0) :- !.
+fibo(1,1) :- !.
+fibo(N,R) :- N1 is N-1, N2 is N-2, fibo(N1, R1), fibo(N2, R2), R is R1+R2.
+
+% Al (m,n)-lea element din functia lui Ackerman
+acker(0,N,R) :- R is N+1.
+acker(M,0,R) :- M>0, M1 is M-1, acker(M1,1,R).
+acker(M,N,R) :- M>0, N>0, N1 is N-1, M1 is M-1, acker(M,N1,R1), acker(M1,R1,R). 
+
+
+
+% reuniunea a 2 multimi
+% intersectia a 2 multimi
+% diferenta a 2 multimi
+% suma elementelor dintr-o lista
+% lungimea listei
+% inversare lista
+% determinarea numerelor pare => lista
+
+% reuniunea a 2 multimi
+union([],X,X):-!.
+union([X|R],Y,Z):-member(X,Y), union(R,Y,Z),!.
+union([X|R],Y,[X|Z]):-union(R,Y,Z).
+
+% intersectia a 2 multimi
+intersect([],X,[]):-!.
+intersect([X|R],Y,[X|T]):-member(X,Y), intersect(R,Y,T), !.
+intersect([X|R],Y,L):-intersect(R,Y,L).
+
+% diferenta a 2 multimi
+dif([],X,[]).
+dif([H|T],X,D):-member(H,X),dif(T,X,D),!.
+dif([H|T],X,[H|D]):-dif(T,X,D).
+
+% suma elementelor dintr-o lista
+sumal([],0).
+sumal([P|Rest],S) :- sumal(Rest,S1), S is S1+P.
+
+% lungimea listei
+lungl([],0).
+lungl([_|Rest],N) :- lungl(Rest,N1),N is N1+1.
+
+% inversare lista
+inv(L,Linv) :- inv1(L,[],Linv).
+inv1([],L,L).
+inv1([X|Rest],Temp,L) :- inv1(Rest,[X|Temp],L).
+
+% determinarea numerelor pare => lista
+nrpare([],[]).
+nrpare([X|Rest],[X|R1]):-X1 is X mod 2, X1=0,nrpare(Rest,R1),!.
+nrpare([X|Rest],L1):-nrpare(Rest,L1).
+
+
+
+
+%Ultimul element al unei liste
+% 2 liste sunt identice
+%verifica daca lungimea unei liste este un element dintr-o lista.
+% ia primele K elemente dintr-o lista, si le pune in alta lista.
+%MergeSort
+
+%Ultimul element al unei liste
+ultim_el([H|T],R) :- ultim_el(T,R).
+ultim_el([H],H).
+
+% 2 liste sunt identice
+list_eq([H1|T1],[H2|T2]) :- H1=:=H2 , list_eq(T1|T2).
+list_eq([],[]).
+
+%verifica daca lungimea unei liste este un element dintr-o lista.
+lungl([],0).
+lungl([H|T],R) :- lungl(T,R1), R is R1+1.
+exist (L) :- lungl(L,R1), member(L,R1).
+
+% ia primele K elemente dintr-o lista, si le pune in alta lista.
+takek(_,0,[]).
+takek([],_,[]).
+takek([H|T],k,[H|R]):- takek(T,k1,R), K is K1+1.
+
+%MergeSort
+mergesort([],[]).    /* covers special case */
+mergesort([A],[A]).
+mergesort([A,B|R],S) :-  
+   split([A,B|R],L1,L2),
+   mergesort(L1,S1),
+   mergesort(L2,S2),
+   merge(S1,S2,S).
+split([],[],[]).
+split([A],[A],[]).
+split([A,B|R],[A|Ra],[B|Rb]) :-  split(R,Ra,Rb).
+merge(A,[],A).
+merge([],B,B).
+merge([A|Ra],[B|Rb],[A|M]) :-  A =< B, merge(Ra,[B|Rb],M).
+merge([A|Ra],[B|Rb],[B|M]) :-  A > B,  merge([A|Ra],Rb,M).
+
+
+
+
+
+% ultimul element al listei = my_last(X,[a,b,c,d]). => X=d
+% penultimul element al listei = last_but_one(X,[1,2,3,4,5]). => X=4
+% Gaseste al K-lea element al listei = element_at(X,[a,b,c,d,e],3). => X=c
+% Numarul de elemente al unei liste = my_length([1,2,[3,a],b],N). => N=4
+% Verifica inversul unei listei = my_reverse([1,2,3],[3,2,1]). => yes
+% Elimina aparitile consecutive ale unui element = compress([a,a,b,a,a,d,e,e,e],X). => X=[a,b,a,d,e]
+% Pune elementele duplicate in subliste separate = pack([a,a,b,a,a,d,e,e,e],X). = > X = [[a,a],[b],[a,a],[d],[e,e,e]] 
+% Pune numarul de aparitii al elementelor duplicate in subliste = encode_mod([a,a,a,b,c,c],X).  => X = [[3,a],b,[2,c]]
+% Dubleaza elementele unei liste = dupli([a,b,b,c,],X). => X = [a,a,b,b,b,b,c,c]
+% Imparte o lista in 2 (lungimea primei liste este data) = split([a,b,c,d,e],2,L1,L2). => 
+L1 = [a,b],
+L2 = [c,d,e]
+% Roteste o lista =  rotate([a,b,c,d,e],2,X).  => X = [c,d,e,a,b]
+% Remove the K'th element from a list =  remove_at(X,[a,b,c,d],2,R). 
+R = [a,c,d],
+X = b ? 
+% Insereaza un element intr-o lista = insert_at(alfa,[a,b,c,d],2,L). => L = [a,alfa,b,c,d]
+% Creaza un interval a carui capete sunt date =  range(4,9,L).
+ => L = [4,5,6,7,8,9]
+% 
+
+
+
+
+% ultimul element al listei = my_last(X,[a,b,c,d]). => X=d
+my_last(X,[X]).
+   % my_last(X,L) :- X is the last element of the list L
+
+my_last(X,[_|L]) :- my_last(X,L).
+
+
+% penultimul element al listei = last_but_one(X,[1,2,3,4,5]). => X=4
+last_but_one(X,[X,_]).   % last_but_one(X,L) :- X is the last but one element of the list L
+last_but_one(X,[_,Y|Ys]) :- last_but_one(X,[Y|Ys]).
+
+% Gaseste al K-lea element al listei = element_at(X,[a,b,c,d,e],3). => X=c
+element_at(X,[X|_],1).   % element_at(X,L,K) :- X is the K'th element of the list L
+element_at(X,[_|L],K) :- K > 1, K1 is K - 1, element_at(X,L,K1).
+
+% Numarul de elemente al unei liste = my_length([1,2,[3,a],b],N). => N=4
+my_length([],0).   %my_length(L,N) :- the list L contains N elements
+my_length([_|L],N) :- my_length(L,N1), N is N1 + 1.
+
+% Verifica inversul unei listei = my_reverse([1,2,3],[3,2,1]). => yes
+my_reverse(L1,L2) :- my_rev(L1,L2,[]). % my_reverse(L1,L2) :- L2 is the list obtained from L1 by reversing the order of the elements.
+my_rev([],L2,L2) :- !.
+my_rev([X|Xs],L2,Acc) :- my_rev(Xs,L2,[X|Acc]).
+
+% Elimina aparitile consecutive ale unui element = compress([a,a,b,a,a,d,e,e,e],X). => X=[a,b,a,d,e]
+compress([],[]).
+compress([X],[X]).
+compress([X,X|Xs],Zs) :- compress([X|Xs],Zs).
+compress([X,Y|Ys],[X|Zs]) :- X \= Y, compress([Y|Ys],Zs).
+
+% Pune elementele duplicate in subliste separate = pack([a,a,b,a,a,d,e,e,e],X). = > X = [[a,a],[b],[a,a],[d],[e,e,e]] 
+pack([],[]).
+pack([X|Xs],[Z|Zs]) :- transfer(X,Xs,Ys,Z), pack(Ys,Zs).
+transfer(X,[],[],[X]).
+transfer(X,[Y|Ys],[Y|Ys],[X]) :- X \= Y.
+transfer(X,[X|Xs],Ys,[X|Zs]) :- transfer(X,Xs,Ys,Zs).
+
+% Pune numarul de aparitii al elementelor duplicate in subliste = encode_mod([a,a,a,b,c,c],X).  => X = [[3,a],b,[2,c]]
+encode_mod(L1,L2) :- encode(L1,L), strip(L,L2).
+encode(L1,L2) :- pack(L1,L), transform(L,L2).
+strip([],[]).
+strip([[1,X]|Ys],[X|Zs]) :- strip(Ys,Zs).
+strip([[N,X]|Ys],[[N,X]|Zs]) :- N > 1, strip(Ys,Zs).
+pack([],[]).
+pack([X|Xs],[Z|Zs]) :- transfer(X,Xs,Ys,Z), pack(Ys,Zs).
+transform([],[]).
+transform([[X|Xs]|Ys],[[N,X]|Zs]) :- length([X|Xs],N), transform(Ys,Zs).
+transfer(X,[],[],[X]).
+transfer(X,[Y|Ys],[Y|Ys],[X]) :- X \= Y.
+transfer(X,[X|Xs],Ys,[X|Zs]) :- transfer(X,Xs,Ys,Zs).
+
+% Dubleaza elementele unei liste = dupli([a,b,b,c,],X). => X = [a,a,b,b,b,b,c,c]
+dupli([],[]).
+dupli([X|Xs],[X,X|Ys]) :- dupli(Xs,Ys).
+
+% Imparte o lista in 2 (lungimea primei liste este data) = split([a,b,c,d,e],2,L1,L2). => 
+L1 = [a,b],
+L2 = [c,d,e]
+split(L,0,[],L).
+split([X|Xs],N,[X|Ys],Zs) :- N > 0, N1 is N - 1, split(Xs,N1,Ys,Zs).
+
+% Roteste o lista =  rotate([a,b,c,d,e],2,X).  => X = [c,d,e,a,b]
+rotate(L1,N,L2) :- N >= 0, 
+   length(L1,NL1), N1 is N mod NL1, rotate_left(L1,N1,L2).
+rotate(L1,N,L2) :- N < 0,
+   length(L1,NL1), N1 is NL1 + (N mod NL1), rotate_left(L1,N1,L2).
+rotate_left(L,0,L).
+rotate_left(L1,N,L2) :- N > 0, split(L1,N,S1,S2), append(S2,S1,L2).
+split(L,0,[],L).
+split([X|Xs],N,[X|Ys],Zs) :- N > 0, N1 is N - 1, split(Xs,N1,Ys,Zs).
+
+% Remove the K'th element from a list =  remove_at(X,[a,b,c,d],2,R). 
+R = [a,c,d],
+X = b ? 
+remove_at(X,[X|Xs],1,Xs).
+remove_at(X,[Y|Xs],K,[Y|Ys]) :- K > 1, 
+   K1 is K - 1, remove_at(X,Xs,K1,Ys).
+
+% Insereaza un element intr-o lista = insert_at(alfa,[a,b,c,d],2,L). => L = [a,alfa,b,c,d]
+insert_at(X,L,K,R) :- remove_at(X,R,K,L).
+remove_at(X,[X|Xs],1,Xs).
+remove_at(X,[Y|Xs],K,[Y|Ys]) :- K > 1, 
+   K1 is K - 1, remove_at(X,Xs,K1,Ys).
+
+% Creaza un interval a carui capete sunt date =  range(4,9,L).
+ => L = [4,5,6,7,8,9]
+range(I,I,[I]).
+range(I,K,[I|L]) :- I < K, I1 is I + 1, range(I1,K,L).
+

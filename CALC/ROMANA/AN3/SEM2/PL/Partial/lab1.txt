@@ -1,0 +1,35 @@
+man(john).
+woman(jane).
+
+parent(john, jim).
+parent(john, scott).
+parent(john, anne).
+
+parent(jane, jim).
+parent(jane, scott).
+parent(jane, anne).
+
+father(X,Y) :- man(X), parent(X,Y).
+mother(X,Y) :- woman(X), parent(X,Y).
+
+parent(tom, john).
+
+grandparent(X,Y) :- parent(X,Z), parent(Z,Y).
+
+sibling(X,Y) :- parent(Z,X), parent(Z,Y), \+(X==Y).
+
+parent(jim, jim_jr).
+
+ancestor(X,Y) :- parent(X,Y).
+ancestor(X,Y) :- parent(X,Z), ancestor(Z,Y).
+
+
+%	tom
+%	 |
+%	john		jane
+%	 |\		 /|
+%	 |  \	       /  |		(john si jane sunt
+%	 |    \      /	  |		 parintii celor 3
+%	jim	scott	anne		jim, scott, anne)
+%	 |
+%	jim_jr

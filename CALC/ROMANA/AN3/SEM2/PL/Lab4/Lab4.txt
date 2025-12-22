@@ -1,0 +1,23 @@
+%1
+append([],L,L).
+append([H|T],L,[H|R]):-append(T,L,R).
+
+append3(L1, L2, L3, Res):- append(L2, L3, Res1), append(L1, Res1, Res).
+
+%2
+add_first(X,L,[X|L]).
+
+%3
+
+sum([],0).
+sum([H|T], S):- sum(T,PR), S is H+PR.
+
+
+sum1([],Acc,Acc).
+sum1([H|T],Acc, S):- NewAcc is H+Acc, sum1(T,NewAcc, S).
+
+%4
+
+separate_parity([],[],[]).
+separate_parity([H|T],[H|Evens],Odd):-separate_parity(T,Evens,Odd), 0 is H mod 2.
+separate_parity([H|T],Evens,[H|Odd]):-separate_parity(T,Evens,Odd), 1 is H mod 2.

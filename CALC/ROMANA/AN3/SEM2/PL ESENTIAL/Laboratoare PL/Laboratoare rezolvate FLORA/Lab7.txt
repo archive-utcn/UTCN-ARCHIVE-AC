@@ -1,0 +1,135 @@
+
+
+tree1(t(6, t(4,t(2,nil,nil),t(5,nil,nil)), t(9,t(7,nil,nil),nil))).
+tree2(t(8, t(5, nil, t(7, nil, nil)), t(9, nil, t(11, nil, nil)))).
+
+inorder(t(K,L,R), List):-inorder(L,LL), inorder(R,LR),
+ append(LL, [K|LR], List).
+inorder(nil, []).
+
+% cheie, subarbore stâng și subarbore drept
+preorder(t(K,L,R), List):-preorder(L,LL), preorder(R, LR),
+append([K|LL], LR, List).
+preorder(nil, []).
+
+% subarbore stâng, subarbore drept și apoi cheia
+postorder(t(K,L,R), List):-postorder(L,LL), postorder(R, LR),
+append(LL, LR,R1), append(R1, [K], List).
+postorder(nil, []).
+
+
+pretty_print(nil, _).
+pretty_print(t(K,L,R), D) :- D1 is D+1,
+    pretty_print(L, D1),
+    print_key(K, D),
+    pretty_print(R, D1).
+
+% predicat care afișează cheia K la D tab-uri față de marginea din
+%stânga și inserează o linie nouă
+print_key(K, D) :- D>0, !,
+    D1 is D-1,
+    write('___'),
+    print_key(K, D1).
+print_key(K, _) :- write(K),
+    nl.
+% write('\n') îi echivalent cu predicatul nl
+ 
+search_key(Key, t(Key, _, _)):-!.
+search_key(Key, t(K, L, _)):-Key<K, !, search_key(Key, L).
+search_key(Key, t(_, _, R)):-search_key(Key, R).
+
+insert_key(Key, nil, t(Key, nil, nil)). % inserează cheia în arbore
+insert_key(Key, t(Key, L, R), t(Key, L, R)):-!. % cheia există deja
+insert_key(Key, t(K,L,R), t(K,NL,R)):- Key<K,!,insert_key(Key,L,NL).
+insert_key(Key, t(K,L,R), t(K,L,NR)):- insert_key(Key, R, NR).
+
+
+tree3(t(6, t(4, t(2, nil, nil, nil), nil, t(7, nil, nil, nil)), t(5, nil, nil, nil), t(9, t(3, nil, nil, nil), nil, nil))).
+
+
+inorderternar(t(K,L,M,R), List) :- inorderternar(L,LL), 
+    inorderternar(M,LM),
+    inorderternar(R,LR),
+    append(LL, [K|LM], L1),
+    append(L1, LR, List).
+inorderternar(nil, []).
+
+
+preorderternar(t(K,L,M,R), List):-preorderternar(L, LL), 
+    preorderternar(M, LM),
+    preorderternar(R, LR),
+	append([K|LL], LM, R1),
+    append(R1,LR,List).
+preorderternar(nil, []).
+
+
+postorderternar(t(K,L,M,R), List):-postorderternar(L, LL), 
+    postorderternar(M, LM), 
+    postorderternar(R, LR),
+	append(LL, LM, R1), 
+    append(R1, LR, R2),
+    append(R2, [K], List).
+postorderternar(nil, []).
+
+
+
+max(A,B,A):-A>B,!.
+max(_,B,B).
+
+height(nil, 0).
+height(t(_, L, R), H):-height(L, H1),
+    height(R, H2),
+    max(H1, H2, H3),
+    H is H3+1.
+
+%ternarLength
+heightT(nil, 0).
+heightT(t(_, L, M, R), H):-heightT(L, H1),
+    heightT(M, H2),
+    heightT(R, H3),
+    max(H1, H2, Ht),
+    max(Ht, H3, Htt),
+    H is Htt+1.
+
+
+delete_key1(Key, t(Key, L, nil), L):-!.
+delete_key1(Key, t(Key, nil, R), R):-!.
+
+delete_key1(Key, t(Key, L, R), t(Pred,L,NR)):-!,get_succ(R,NR,Pred).
+
+delete_key1(Key, t(K,L,R), t(K,NL,R)):-Key<K,!,delete_key1(Key,L,NL).
+delete_key1(Key, t(K,L,R), t(K,L,NR)):-delete_key1(Key,R,NR).
+
+% caută nodul succesor
+get_succ(t(Pred, nil, R), R, Pred):-!.
+get_succ(t(Key, L, R), t(Key, NL, R), Pred):-get_succ(L, NL, Pred).
+
+collect(nil, []).
+collect(t(Key,nil,nil),Key).
+collect(t(_, L, nil), Rez) :- collect(L,Rez).
+collect(t(_, nil, R), Rez) :- collect(R,Rez).
+collect(t(_,L,R),[Key1,Key2|[]]) :- collect(L,Key1),
+    collect(R,Key2).
+
+diametru(nil,0).
+diametru(t(_, L, R), M) :- diametru(L,DL),
+    diametru(R,DR),
+    height(L,LL),
+    height(R,LR),
+    D is LL + LR + 1,
+    max(DR,DL,Max),
+    max(D,Max,M).
+	
+	
+	
+%transformarea utilizand rec. lin. intr-o lista sau ABC degenerat ordonat/-a:
+
+tree1(t(6, t(4,t(2,nil,nil),t(5,nil,nil)), t(9,t(7,nil,nil),nil))).
+
+tr(t(K, t(K1, LL, LR), R), Rez) :- tr(t(K1, LL, t(K, LR, R)),Rez).
+tr(t(K, nil, R), [K|Rez]) :- tr(R, Rez).
+tr(nil,[]).
+
+tr_t(t(K, t(K1, LL, LR), R), T) :- tr_t(t(K1, LL, t(K, LR, R)),T).
+tr_t(t(K, nil, R), t(K, nil, NR)) :- tr_t(R, NR).
+tr_t(nil,nil).

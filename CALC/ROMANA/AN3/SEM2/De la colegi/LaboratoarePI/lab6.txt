@@ -1,0 +1,106 @@
+Am implementat primele2 probleme din laborator si le-am testat pentru imaginea cu triunghiul.
+
+Mat contur(Mat src, Mat dst, Point2i first, Point2i second, int dir, std::vector<int>& chaincodes) 
+{
+	int di[8] = { 0, -1, -1, -1, 0, 1, 1, 1 };
+	int dj[8] = { 1, 1, 0, -1, -1, -1, 0, 1 };
+
+	int height = src.rows;
+	int	width = src.cols;
+	Point2i current = second;
+	Point2i previous;
+	Mat inter = dst.clone();
+	int notdir = dir;
+	int c = 0;
+	int i = 0;
+	while (!(current.x == second.x && current.y == second.y && previous.x == first.x && previous.y == first.y)) 
+	{
+		c = notdir % 2;
+		if (c==1) 
+		{
+			notdir = (notdir + 6) % 8;
+		}
+		else if (c == 0)
+		{
+			notdir = (notdir + 7) % 8;
+		}
+		for ( i = 0; i < 8; i++ ) 
+		{
+			notdir = (notdir + 1) % 8;
+			if (src.at<uchar>(current.x + di[notdir], current.y + dj[notdir]) == 0)
+			{
+				inter.at<uchar>(current.x + di[notdir], current.y + dj[notdir]) = 0;
+				previous = current;
+				current = { current.x + di[notdir], current.y + dj[notdir] };
+				chaincodes.push_back(notdir);
+				break;
+			}
+		}
+	}
+	return inter;
+}
+
+void drawComputeCodes() {
+
+	int di[8] = { 0, -1, -1, -1, 0, 1, 1, 1 };
+	int dj[8] = { 1, 1, 0, -1, -1, -1, 0, 1 };
+
+	char fname[MAX_PATH];
+	openFileDlg(fname);
+	Mat src = imread(fname, IMREAD_GRAYSCALE);
+	int height = src.rows, width = src.cols;
+	Mat dst(height, width, CV_8UC1, Scalar(255));
+	std::vector<int> chaincodes, chainderivatives;
+	chainderivatives.push_back(1);
+
+	int dir = 5;
+	int dim = 0;
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	int d = 0;
+	
+	Point2i first;
+	Point2i second;
+	
+	
+	for (i = 0; i < height; i++) 
+	{
+		for ( j = 0; j < width; j++) 
+		{
+			if (src.at<uchar>(i, j) == 0) {
+				dst.at<uchar>(i, j) = 0;
+				first = { i, j };
+				for (k = 0; k <= 7; k++) {
+
+					if (src.at<uchar>(i + di[(k + dir) % 8], j + dj[(k + dir) % 8]) == 0) {
+						dst.at<uchar>(i + di[(k + dir) % 8], j + dj[(k + dir) % 8]) = 0;
+						second = { i + di[(k + dir) % 8], j + dj[(k + dir) % 8] };
+						dir = (k + dir) % 8;
+						chaincodes.push_back(dir);
+						dst = contur(src, dst, first, second, dir, chaincodes);
+						i = height + 1;
+						j = width + 1;
+						k = 8;
+					}
+				}
+			}
+		}
+	}
+	dim = chaincodes.size();
+	for ( i = 1; i < dim - 1; i++) 
+	{
+		d = chaincodes[i] - chaincodes[i - 1];
+		if (d < 0) {
+			d = d + 8;
+		}
+		printf(" %d ", d);
+		chainderivatives.push_back(d);
+	}
+	printf("\n");
+	for ( i = 0; i < dim; i++) {
+		printf(" %d ", chaincodes[i]);
+	}
+	imshow("Contour obiect", dst);
+	waitKey();
+}

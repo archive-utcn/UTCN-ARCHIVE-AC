@@ -1,0 +1,35 @@
+
+
+
+
+%intersectie
+%[1,2,3,4,5]	[3,4,5,6,7]      [3,4,5]  
+%	L1				L2				R
+% [1|2,3,4,5]     L2    member(H,L2) daca il gaseste pune-l in R
+
+inters([],L,[]).
+inters([H|T],L2,[H|R]):- member(H,L2), !, inters(T,L2,R).
+inters([H|T],L2,R):- inters(T,L2,R).
+  
+
+
+%diferenta
+%[1,2,3,4,5]	[3,4,5,6,7]      [3,4,5]  
+%	L1				L2				R
+% [1|2,3,4,5]     L2    member(H,L2) daca nu il gaseste pune-l in R
+
+diff([],L,[]).
+diff([H|T],L2,[H|R]):- not(member(H,L2)), !, diff(T,L2,R).
+diff([H|T],L2,R):- diff(T,L2,R).
+
+
+
+%delete minim 
+%del_min[5,6,4,3,1,8]  
+
+min([],ACC,MIN):- MIN=ACC.
+min([H|T],ACC,MIN):-ACC < MIN, !, ACC is H, min(T,ACC,MIN).
+min([H|T],ACC,MIN):-min(T,ACC,MIN).
+
+
+

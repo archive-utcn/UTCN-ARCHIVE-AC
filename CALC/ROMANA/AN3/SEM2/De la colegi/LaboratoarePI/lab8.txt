@@ -1,0 +1,266 @@
+Am implementat problemele 1,2,4 si din problema 3 doar partea de corectie gamma.
+
+
+//ex1
+void histC() 
+{
+	char fname[MAX_PATH];
+	openFileDlg(fname);
+	Mat src = imread(fname, IMREAD_GRAYSCALE);
+	int height = src.rows;
+	int width = src.cols;
+	int m = width * height;
+	float intensity = 0;
+	float dev = 0;
+	int i = 0;
+	int j = 0;
+
+	int h[256] = { 0 };
+
+	for ( i = 0; i < height; i++)
+	{
+		for ( j = 0; j < width; j++)
+		{
+			h[src.at<uchar>(i, j)]=h[src.at<uchar>(i,j)]+1;
+		}
+	}
+
+	imshow("image", src);
+
+	for ( i = 0; i < 256; i++) 
+	{
+
+		intensity = intensity + (i * h[i]);
+	}
+
+	intensity = intensity / (height * width);
+
+	for (i = 0; i < 256; i++) 
+	{
+		dev = dev + ((i - intensity) * (i - intensity) * h[i])/ m;
+	}
+	dev = sqrt(dev);
+
+	printf("%f \n %f", intensity, dev);
+	showHistogram(fname, h, 255, 200);
+	waitKey();
+	
+}
+
+
+
+//ex2
+void histBin() {
+	char fname[MAX_PATH];
+	openFileDlg(fname);
+	Mat src = imread(fname, IMREAD_GRAYSCALE);
+	int height = src.rows;
+	int width = src.cols;
+	Mat b = Mat(height, width, CV_8UC1);
+	int m = width * height;
+	int minim = 255;
+	int maxm = 0;
+	int h[256] = { 0 };
+	int i = 0;
+	int j = 0;
+	float err = 0.1f;
+	float x1 = 0;
+	float x2 = 0;
+	float thresh = 0;
+	float thresh2 = 0;
+	int n1 = 0, n2 = 0;
+	for ( i = 0; i < height; i++)
+	{
+		for ( j = 0; j < width; j++)
+		{
+			h[src.at<uchar>(i, j)] = h[src.at<uchar>(i, j)] + 1;
+		}
+	}
+	for ( i = 0; i < 255; i++)
+	{
+		if (h[i] != 0 && i < minim) {
+			minim = i;
+		}
+		else if (h[i] != 0 && i > maxm) 
+		{
+			maxm = i;
+		}
+	}
+
+	thresh = (minim + maxm) / 2;
+	
+	while (abs(thresh - thresh2) > err) {
+		x1 = 0;
+		x2 = 0;
+		n1 = 0;
+		n2 = 0;
+		i = minim;
+		while ( i <= maxm) {
+			if (i <= thresh) {
+				x1 += i * h[i];
+				n1 += h[i];
+			}
+			else {
+				x2 += i * h[i];
+				n2 += h[i];
+			}
+			i++;
+		}
+		x1 = x1 / n1;
+		x2 = x2 / n2;
+		thresh2 = thresh;
+		thresh = (x1 + x2) / 2;
+	}
+	printf("%d\n", (int)thresh);
+	
+	for ( i = 0; i < height; i++)
+	{
+		for ( j = 0; j < width; j++)
+		{
+			if (src.at<uchar>(i, j) < thresh) {
+				b.at<uchar>(i, j) = 0;
+			}
+			else b.at<uchar>(i, j) = 255;
+		}
+	}
+	imshow("original", src);
+	showHistogram(fname, h, 255, 200);
+
+	imshow("threshold", b);
+	waitKey();
+}
+
+
+//ex3 gamma
+void gamma() {
+	char fname[MAX_PATH];
+	openFileDlg(fname);
+	Mat src = imread(fname, IMREAD_GRAYSCALE);
+	int height = src.rows;
+	int width = src.cols;
+	Mat dst(height, width, CV_8UC1);
+	int m = width * height;
+	int minim = 255;
+	int maxim = 0;
+	int i = 0;
+	int j = 0;
+	int h[256] = { 0 };
+	int g[256] = { 0 };
+	int newI[256] = { 0 };
+	int aux = 0;
+	float gamma;
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			h[src.at<uchar>(i, j)]++;
+		}
+	}
+	
+
+	for (int i = 0; i < 255; i++)
+	{
+		if (h[i] != 0 && i < minim) {
+			minim = i;
+		}else if (h[i] != 0 && i > maxim) {
+			maxim = i;
+		}
+	}
+	
+	printf("\ngamma:");
+	scanf("%f", &gamma);
+	
+	for ( i = 0; i < 256; i++)
+	{ 
+		newI[i] = 255 * pow((float)i / 255, gamma);
+		newI[i] = min(255, max(0, newI[i]));
+		g[newI[i]] = g[newI[i]] + h[i];
+	}
+	
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			dst.at<uchar>(i, j) = newI[src.at<uchar>(i, j)];
+		}
+	}
+	imshow("initial", src);
+	imshow("gamma", dst);
+	waitKey();
+}
+
+
+
+//ex4
+float* computeP(Mat& src, int nr) {
+	int height = src.rows;
+	int width = src.cols;
+	float* p = new float[nr]();
+	int m = height * width;
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			p[src.at<uchar>(i, j) * nr / 256]++;
+		}
+	}
+	for ( i = 0; i < nr; i++) {
+		p[i] /= m;
+	}
+	return p;
+}
+
+void histogramE() {
+	char fname[MAX_PATH];
+	openFileDlg(fname);
+	Mat src = imread(fname, IMREAD_GRAYSCALE);
+	int height = src.rows;
+	int width = src.cols;
+	Mat dst(height, width, CV_8UC1);
+	int i = 0;
+	int j = 0;
+	int m = width * height;
+	int minim = 255;
+	int maxim = 0;
+	int h[256] = { 0 };
+	float* p = computeP(src, 256);
+	float c[256] = { 0 };
+	int g[256] = { 0 };
+	c[0] = p[0];
+	int newI[256] = { 0 };
+
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			h[src.at<uchar>(i, j)]++;
+		}
+	}
+	
+
+	for (i = 1; i < 256; i++)
+	{
+		c[i] = c[i - 1] + p[i];
+		c[i] = min(c[i], 1.0f);
+	}
+	
+	for (i = 0; i < 256; i++)
+	{
+		newI[i] = 255 * c[i];
+		g[newI[i]] += h[i];
+	}
+	
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			dst.at<uchar>(i, j) = newI[src.at<uchar>(i, j)];
+		}
+	}
+	imshow("initial", src);
+	showHistogram(fname, g, 255, 200);
+	imshow("hist", dst);
+	waitKey();
+}

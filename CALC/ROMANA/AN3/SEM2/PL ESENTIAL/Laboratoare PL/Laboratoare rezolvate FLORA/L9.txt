@@ -1,0 +1,23 @@
+dltocl(LS, LE, []) :- LS==LE,!.
+dltocl([H|LS], LE, [H|R]) :- dltocl(LS, LE, R).
+
+dltoic(LS, LE, _) :- LS==LE,!.
+dltoic([H|LS], LE, [H|R]) :- dltoic(LS, LE, R).
+
+ictodl(T, L, L) :- var(T), !.
+ictodl([H|T], [H|R], L) :- ictodl(T,R,L).
+
+append([H|T],L,[H|R]) :- append(T,L,R).
+append([],L,L).
+
+all_descomp(L,R, R1) :- append(L1,L2,L),
+    write(L1),nl,write(L2),nl,
+    R1 = [[L1|L2]|R],
+    fail.
+
+flat_dl([H|T], LS, LE) :- atomic(H),!,
+    flat_dl(T,LLS,LLE),
+    LS = [H|LLS], LE=LLE.
+flat_dl([H|T], LS, LE) :- flat_dl(H,LLS,LLE),
+    flat_dl(T,LLLS,LLLE),
+    LS=[LLS|LLLS],LLE=[LLLE|LE].

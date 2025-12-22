@@ -1,0 +1,69 @@
+1. Ce fel de cablu se foloseste pt a conecta: comp - comp, comp - hub, comp - switch, comp - router, hub - switch, switch - switch, router - router, hub - hub
+2. 2 comenzi pt a testa conectivitatea cu ipu ... xxx.xxx.xxx.xxx
+3. din modul user exec, cum se creaza un vlan pe un switch, si cum se afiseaza vlanurile existente
+4. comanda pt a afista neighbour cache si route cache pt ipv6
+5. subnetare - 192.168.33.0 - ce clasa are ipu dat, care e netmasku pt subnets, nb created subnets, nb hosts on each subnet
+6. ?? nu mai tin minte.
+
+
+Subiectul 7:
+    1. Color schema pentru cablul tip A
+    2. Problema din labul 6 cu min length of frame pt 10 Mbps CSMA/CD UTP cu 2 repeaters
+    3. comanda din user exec pentru a configura line console 0 cu password = CN
+    4. subnetare. Ai IP 192.168.2.0 si 25 hosts. Sa divizezi in cat mai multe subnets si sa zici (IP class of address, subnet mask, nb subnets created, nb hosts on each subnet)
+    5. comanda wingoz pt display interface configs, neighbor cache, route cache pt IPv6
+    6. comanda LINUX pt info about interface cards
+
+
+Subiectul 4:
+1. comanda arp
+2. problema de la fibra optica
+3. comanda nslookup
+4. setare prioritate la un switch; comanda pt afisarea informatiilor
+legate de spanning tree.
+5. standardul B mufare
+6. comanda linux pt informatiile legate de interfata eth0.
+
+Subiectul 6:
+1. problema cu fibra optica
+2. comanda nslookup
+3. standardul A mufare
+4. seteaza ip, netmask in linux
+5.  setare prioritate la un port
+6. comenzi pt verificarea conectivitatii
+
+
+De exemplu asta:
+1. Cablu cross-over ce ii ? + standardu A de mufare
+2.O problema cu Token ring si THT cat poate transfera intr-un timp t.
+3. Comenzi de verificare a conectivitatii pe windows
+4. Schimba prioritatea unui port (cisco)
+5. Comenzi ipv6 pentru listarea interfetelor, neighbour chache, route
+cache
+6. Commanda linux de a adauga o ruta spre un default gateway
+
+1. what is cross-over cable ? RJ-45 connections A or B
+2. 2 comenzi/metode a verifica conexiunea la un LAN
+3. problema 3.3.2 din laboratorul 6
+4. din modul USER EXEC prezentati secventa de comenzi pentru a seta o prioritate data unui port
+5. care este comanda pentru a vedea arp-ul cu cache
+6. Cum adaugi in linux un default gateway dat.
+
+
+
+
+1. A 10Mbps CSMA/CD network is considered. The network is UTP cabled and the maximum number of repeaters between any two computers placed in the same collision domain is 4. Knowing that the signal propagation speed through the cable is 200m/us and the delay time introduced by one repeater is 1us compute the minimum length of a frame in this network. The frame length is always an integer number of bytes.
+2. Linux command for setting interface eth0 with given IP and submask.
+3. Windows commands to set and release the IP address through DHCP.
+4. The ping commands sequence when troubleshooting network connectivity.
+5. Command sequence from USER EXEC to assign a given port to a VLAN.
+6. Command sequence from USER EXEC to set the priority of a switch. Command for showing Spanning-Tree Protocol.
+
+Rand II:
+
+1. Problema cu tabelul de calculare a bugetului (din lab-ul 2)
+2. Linux command for setting the default gateway.
+3. Present two ways of testing connectivity of ipv6 in Windows.
+4. What is the Windows command that allows us to view the ARP headers.
+5. Command sequence from USER EXEC to change the port priority given the interface and the priority number.
+6. Command sequence from USER EXEC  - create a new VLAN given the name and number. Command for showing VLAN.

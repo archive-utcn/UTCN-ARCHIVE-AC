@@ -1,0 +1,75 @@
+P(Alarm=True) 
+
+
+ 
+
+P(a) = P (a /\ true) (Logica)= 
+
+P (a /\ (m \/ -m)) (Logica) =
+
+P ((a /\ m) \/ (a /\ -m)) (Logica) 
+
+P (a /\ m) + P (a /\ -m) – (Axioma A3 combinat cu prob ev DISJ)
+
+P(a | m ) * P(m) + P (a | m) * P (m) (regula produsului) = 
+
+ 0.9 * 0.2 + 0.3 * (1 – 0.2)
+
+ 0.18 + 0.24
+
+ = 0.42 
+
+
+ 
+
+
+ 
+
+
+ 
+
+Metal (adica arma) val True, False (-m)
+
+Alarma val True, False 
+
+
+ 
+
+
+ 
+
+
+ 
+
+P (m | a) = P (m /\ a) / P (a) 
+
+
+ 
+
+P (m | a) = P (a | m) * P (m) / P (a) 
+
+ = 0.9 * 0.2 / 0.42 
+
+ = 0.42857
+
+
+ 
+
+
+ 
+
+ 
+
+P (m | -a) = 1 – P(m | a) P(a /\ m) / P(a ) = (P(a) – P (m/\a)) / P(a)
+
+P(a|m) + P(-a|m) = 1 
+
+
+ 
+
+
+ 
+
+P (m | -a) = P (-a | m) * P (m) / P (-a) 
+
+ = 0.1 * 0.2 / (1-0.42) = 0.034

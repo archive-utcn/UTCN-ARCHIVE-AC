@@ -1,0 +1,35 @@
+% Suma a 2 numere
+% Produsul a 2 numere
+% Factorialul inapoi a unui numar
+% Factorialul inainte a unui numar
+% Ridicarea la putere a unui numar la alt numar (2**3 = 2 la a3a)
+% Al n-lea element al sirului lui Fibbonacci
+% Al (m,n)-lea element din functia lui Ackerman
+
+% Suma a 2 numere
+sum(A,B,S) :- S is A+B.
+
+% Produsul a 2 numere
+produs(A,B,P) :- P is A*B.
+
+% Factorialul inapoi a unui numar
+factinapoi(0,1) :- !.
+factinapoi(N,R) :- N1 is N-1, factinapoi(N1,R1), R is R1*N.
+
+% Factorialul inainte a unui numar
+factinainte(0,P,P) :- !.
+factinainte(N,P,R) :- N1 is N-1, P1 is P*N, factinainte(N1,P1,R).
+
+% Ridicarea la putere a unui numar la alt numar (2**3 = 2 la a3a)
+putere(A,0,1) :- !.
+putere(A,B,R) :- B1 is B-1, putere(A,B1,R1), R is R1*A.
+
+% Al n-lea element al sirului lui Fibbonacci
+fibo(0,0) :- !.
+fibo(1,1) :- !.
+fibo(N,R) :- N1 is N-1, N2 is N-2, fibo(N1, R1), fibo(N2, R2), R is R1+R2.
+
+% Al (m,n)-lea element din functia lui Ackerman
+acker(0,N,R) :- R is N+1.
+acker(M,0,R) :- M>0, M1 is M-1, acker(M1,1,R).
+acker(M,N,R) :- M>0, N>0, N1 is N-1, M1 is M-1, acker(M,N1,R1), acker(M1,R1,R). 

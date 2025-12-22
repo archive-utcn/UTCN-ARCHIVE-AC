@@ -1,0 +1,56 @@
+
+[  0]constpush
+[  1]=====>{NUMAR} 5.000000
+[  2]varpush
+[  3]=====>{NEDEF} aux
+[  4]assign
+[  5]print
+[  6]STOP
+[  7]STOP
+[  8]STOP
+[  9]STOP
+[ 10]STOP
+[ 11]STOP
+[ 12]STOP
+
+Doriti executie [d/n]?
+	5
+[  0]constpush
+[  1]=====>{NUMAR} 5.000000
+[  2]varpush
+[  3]=====>{VAR} aux ==5.000000
+[  4]assign
+[  5]print
+[  6]ifcod
+[  7]--------------->  [ 17]
+[  8]--------------->  [ 20]
+[  9]--------------->  [ 25]
+[ 10]varpush
+[ 11]=====>{VAR} aux ==5.000000
+[ 12]eval
+[ 13]constpush
+[ 14]=====>{NUMAR} 5.000000
+[ 15]eq
+[ 16]STOP
+[ 17]prstr
+[ 18]=====>{STRING} "\n\n\t\t\tAUX==5\n\n"
+[ 19]STOP
+		Apasati o tasta pentru continuare!
+
+[ 20]varpush
+[ 21]=====>{VAR} aux ==5.000000
+[ 22]eval
+[ 23]prexpr
+[ 24]STOP
+[ 25]STOP
+[ 26]STOP
+[ 27]STOP
+[ 28]STOP
+[ 29]STOP
+[ 30]STOP
+
+Doriti executie [d/n]?
+	5
+
+			AUX==5
+

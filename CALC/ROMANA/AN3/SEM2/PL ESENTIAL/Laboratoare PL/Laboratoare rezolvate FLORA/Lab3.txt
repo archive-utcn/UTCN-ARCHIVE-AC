@@ -1,0 +1,47 @@
+sum([],0).
+sum([H|T],R) :- sum(T,A), R is A + H.
+
+summ([H|T],R) :- summ([H|T],0,R).
+summ([],A,R) :- R=A.
+summ([H|T],A,R) :- AA is A + H,summ(T,AA,R).
+
+add_first(X,L,[X|L]).
+
+member(X,[X|_]).
+member(X,[_|T]) :- member(X,T).
+
+notmember(_,[]).
+notmember(X,[H|T]) :- X \= H,
+    notmember(X,T).
+
+remove_duplicates([H|T],R) :- member(H,T),
+    remove_duplicates(T,R).
+remove_duplicates([H|T],[H|R]) :- notmember(H,T),
+    remove_duplicates(T,R).
+remove_duplicates([],[]).
+
+%remove_duplicates([H|T],R) :- member(H,T),
+%    remove_duplicates(T,R).
+%remove_duplicates([H|T],[H|R]) :- notmember(H,T),
+%    remove_duplicates(T,R).
+%remove_duplicates([],[]).
+
+find_duplicates1([H|T],[H|R]) :- find_duplicates1(T,R),
+    member(H,T).
+find_duplicates1([H|T],R) :- find_duplicates1(T,R),
+    notmember(H,T).
+find_duplicates1([],[]).
+
+replace(X,[H|T],Y,[Y|R]) :- X = H, 
+    replace(X,T,Y,R).
+replace(X,[H|T],Y,[H|R]) :- X \= H, 
+    replace(X,T,Y,R).
+replace(_,[],_,[]).
+
+separate_parity([H|T], [H|E], O) :- X is H mod 2,
+    X = 0,
+    separate_parity(T, E, O).
+separate_parity([H|T], E, [H|O]) :- X is H mod 2,
+    X = 1,
+    separate_parity(T, E, O).
+separate_parity([], [], []).

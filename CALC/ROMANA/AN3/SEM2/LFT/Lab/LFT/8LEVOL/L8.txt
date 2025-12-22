@@ -1,0 +1,1426 @@
+
+
+
+				Lucrarea nr. 8
+
+			 	LIMBAJ EVOLUANT
+
+
+	1. Scopul lucrarii
+
+	- dezvoltarea in 2 etape a unei versiuni de complexitate 
+reala a unui pachet de programe de analiza sintactica cu generare 
+de cod intermediar ce poate fi executat de un interpretor   
+
+	2. Notiuni teoretice
+
+	Pachetul de programe cuprinde:
+	- "evolN.h" , N=1,2 - definirile/declaratiile comune mai 
+multor fisiere (scrise astfel o singura data si sint incluse apoi 
+acolo unde sint necesare)
+	- "init.c" - codul pentru initializarea tabelei de simboluri 
+(implementata ca lista inlantuita), prin introducerea constantelor 
+matematice si a functiilor predefinite 
+	- "simbol.c" - functiile de lucru cu tabela de simboluri 
+(instalarea si cautarea unui simbol, instalarea si cautarea unui 
+sir de caractere)
+	- "math.c" - codul functiilor matematice corespunzatoare 
+functiilor predefinite ale limbajului acceptat de analizor
+	- "evolN.y" , N=1,2 - specificatia YACC necesara pentru 
+generarea analizorului sintactic ce va prelucra fisierele de 
+intrare si va genera codul intermediar. Rezultatul derivarii, e 
+colectat intr-un tablou unidimensional si poate fi executat de 
+catre o functie proiectata in acest scop 
+	- "cod.c" - functiile ce efectueaza actiunile de executat la 
+interpretarea instructiunilor codului intermediar. Functia 
+interpretor, utilizeaza o stiva pentru manipularea operanzilor si 
+rezultatelor, si executa fiecare instructiune de cod intermediar 
+(instructiune care e de fapt un pointer la o functie asociata), 
+prin apelul functiei respective.
+   EXEMPLE LA VARIANTA 1 :
+	2.1.1. Fie intrarea: 		x= 10			'\n'
+						y= -10		'\n'
+						a= sin( x+y )	'\n'
+	,pentru care se genereaza codul:
+[  0] constpush				[ 16] varpush
+[  1] =======>10.000000 {NUMAR}	[ 17] =======>y ==0.000000 
+{NEDEF}
+[  2] varpush				[ 18] eval
+[  3] =======>x ==0.000000 {NEDEF}	[ 19] add
+[  4] assign				[ 20] predf
+[  5] print					[ 21] =======>sin {PREDEF}
+[  6] constpush				[ 22] varpush
+[  7] =======>10.000000 {NUMAR}	[ 23] =======>0.000000 {NEDEF}
+[  8] negate				[ 24] assign
+[  9] varpush				[ 25] print
+[ 10] =======>y ==0.000000 {NEDEF}	[ 26] STOP
+[ 11] assign				[ 27] STOP
+[ 12] print					[ 28] STOP
+[ 13] varpush				[ 29] STOP
+[ 14] =======>x ==0.000000 {NEDEF}	[ 30] STOP
+[ 15] eval					[ 31] STOP  [ 32] STOP  .....
+Doriti executie [d/n]? d
+	10
+	-10
+	0
+
+	, ca rezultat al derivarii:
+
+	 1. lista	:
+	 2. expr	: NUMAR			[ 0- 1]
+	 3. asgn	: VAR '=' expr		[ 2- 4]
+	 4. lista	: lista asgn '\n'		[ 5- 6]
+	 5. expr	: NUMAR			[ 6- 7]
+	 6. expr	: '-' expr			[    8]
+	 7. asgn	: VAR '=' expr		[ 9-11]
+	 8. lista	: lista asgn '\n'		[12-13]
+	 9. expr	: VAR				[13-15]
+	10. expr	: VAR				[16-18]
+	11. expr	: expr '+' expr		[   19]
+	12. expr	: PREDEF '(' expr ')'	[20-21]
+	13. asgn	: VAR '=' expr		[22-24]
+	14. lista	: lista asgn '\n'		[25-26]
+
+
+
+	2.1.2. Pentru intrarea:
+
+		a = 5			'\n'
+		while(a<=10) { 	'\n'
+			print a	'\n'
+			a=a+1		'\n'
+		}			'\n'	
+		a			'\n'
+
+	, se genereaza codul :
+	
+[  0] constpush				[ 20] varpush
+[  1] =======>5.000000 {NUMAR}	[ 21] =======>a ==0.000000 {NEDEF}
+[  2] varpush				[ 22] eval
+[  3] =======>a ==0.000000 {NEDEF}	[ 23] constpush
+[  4] assign				[ 24] =======>1.000000 {NUMAR}
+[  5] print					[ 25] add
+[  6] whilecod				[ 26] varpush
+[  7] ------->[ 16]			[ 27] =======>a ==0.000000 {NEDEF}
+[  8] ------->[ 32]			[ 28] assign
+[  9] varpush				[ 29] pop
+[ 10] =======>a ==0.000000 {NEDEF}	[ 30] STOP
+[ 11] eval					[ 31] STOP
+[ 12] constpush				[ 32] varpush
+[ 13] =======>10.000000 {NUMAR}	[ 33] =======>a ==0.000000 
+{NEDEF}
+[ 14] le					[ 34] eval
+[ 15] STOP					[ 35] print
+[ 16] varpush				[ 36] STOP
+[ 17] =======>a ==0.000000 {NEDEF}	[ 37] STOP
+[ 18] eval					[ 38] STOP  [ 39] STOP  [ 40] STOP
+[ 19] prexpr				[ 41] STOP  [ 42] STOP  ......
+
+Doriti executie [d/n]? d
+	5
+5
+6
+7
+8
+9
+10
+	11
+
+	, in urma derivarii:
+
+ 	 1. lista		:
+	 2. expr		: NUMAR			[ 0- 1]
+	 3. asgn		: VAR '=' expr		[ 2- 4]
+	 4. lista		: lista asgn '\n'		[ 5- 6]
+ 	 5. while		: WHILE			[ 6- 8]
+ 	 6. expr		: VAR				[ 9-11]
+ 	 7. expr		: NUMAR			[12-13]
+ 	 8. expr		: expr LE expr		[   14]
+ 	 9. cond		: '(' expr ')'		[   15]
+	10. listainstr	:
+	11. expr		: VAR				[16-18]
+	12. instr		: PRINT expr		[   19]
+	13. listainstr	: listainstr instr
+	14. listainstr	: listainstr '\n'
+	15. expr		: VAR				[20-22]
+	16. expr		: NUMAR			[23-24]
+	17. expr		: expr '+' expr		[   25]
+	18. asgn		: VAR '=' expr		[26-27]
+	19. expr		: asgn
+	20. instr		: expr			[   29]
+	21. listainstr	: listainstr instr
+	22. listainstr	: listainstr '\n'
+	23. instr		: '{' listainstr '}'	[   30]
+	24. end		: 				[   31]
+	25. instr		: while cond instr end	[ 7- 8]
+	26. lista		: lista instr '\n'	[   32]
+	27. expr		: VAR				[32-34]
+	28. lista		: lista expr '\n'		[35-36]
+
+
+   EXEMPLE LA VARIANTA 2 :
+	2.2.1. Pentru intrarea:
+
+   aux=5								'\n'
+   if(aux==5) print "\n\t\tAUX==5\n" else print aux	'\n'
+
+		, se genereaza codul :
+
+[  0] constpush			 	[ 17] prstr
+[  1] =======>{NUMAR} 5.000000 	[ 18] =======>{STRING} 
+"\n\t\tAUX==5\n" 
+[  2] varpush 				[ 19] STOP		
+[  3] =======>{NEDEF} aux 		[ 20] varpush
+[  4] assign				[ 21] =======>{NEDEF} aux 
+[  5] print					[ 22] eval
+[  6] ifcod					[ 23] prexpr
+[  7] ----------> [ 17]			[ 24] STOP
+[  8] ----------> [ 20]			[ 25] STOP
+[  9] ----------> [ 25]			[ 26] STOP
+[ 10] varpush				[ 27] STOP
+[ 11] =======>{NEDEF} aux 		[ 28] STOP
+[ 12] eval					[ 29] STOP
+[ 13] constpush				[ 30] STOP
+[ 14] =======>{NUMAR} 5.000000	
+[ 15] eq
+[ 16] STOP
+Doriti executie [d/n]? d
+	5
+		AUX==5
+
+
+				, in urma derivarii:
+	 1. lista	:
+	 2. expr	: NUMAR					[ 0- 1]
+	 3. asgn	: VAR '=' expr				[ 2- 4]
+	 4. lista	: lista asgn '\n'				[ 5- 6]
+	 5. if	: IF						[ 6- 9]
+	 6. expr	: VAR						[10-12]
+	 7. expr	: NUMAR					[13-14]
+	 8. expr	: expr EQ expr				[   15]
+	 9. cond	: '(' expr ')'				[   16]
+	10. prlista	: STRING					[17-18]
+	11. instr	: PRINT prlista
+	12. end	:						[   19]
+	13. expr	: VAR						[20-22]
+	14. prlista	: expr					[   23]
+	15. instr	: PRINT prlista
+	16. end	:						[   24]
+	17. instr	: if cond instr end ELSE instr end	[ 7- 9]
+	18. lista	: lista instr '\n'			[   25]
+			 
+	2.2.2. In momentul compilarii, o functie/procedura e 
+introdusa in tabela de simboluri de catre functia define(), care 
+ii salveaza adresa de start ("progbase"-ul curent) si actualizeaza 
+"progbase" pentru a referi inceputul codului executabil (dupa 
+codul functiilor si procedurilor) deoarece "progbase" reprezinta 
+adresa de lansare a programului/codului principal.
+	In momentul in care o functie/procedura e apelata, 
+argumentele au valorile deja calculate si depuse pe stiva de 
+executie, in ordinea inversa scrierii. Codul pentru call() e urmat 
+de un pointer in tabela de simboluri (intrarea pentru 
+functia/procedura apelata), si de numarul de argumente. Functia 
+call() creaza o structura de control ("frame") ce contine: 
+intrarea in tabela simboluri pentru procedura/functia apelata, 
+adresa de revenire, adresa la care se gasesc argumentele (pe stiva 
+de executie) si numarul de argumente. Dupa aceste operatii 
+preliminare se executa codul functiei sau procedurii respective.
+	Revenirea se poate face cu funcret() sau procret(). Functia 
+ret() elimina argumentele de pe stiva, sterge structura de control 
+("frame"), seteaza contorul program la adresa de reluare si 
+seteaza revenire=1. Exista mai multe functii ale interpretorului 
+care trebuie sa tina cont de o eventuala revenire (RETURN) dintr-o 
+functie/procedura. Aceasta corelare se realizeaza (inelegant dar 
+eficace) prin indicatorul revenire. Functiile ifcod(), whilecod() 
+si executa() se termina fortat daca revenire are valoarea 1, 
+pentru a nu actualiza contorul program cu adresa de continuare ce 
+urmeaza instructiunii WHILE, IF sau urmatoarei instructiuni din 
+secventa, si pentru a impune schimbarea fluentei controlului. 
+Functia call() seteaza indicatorul revenire la 0.    
+	De exemplu, pentru comanda cu parametri:	evol2 in41 in42
+,unde fisierul in41 contine:
+		func suma() { return $1+$2 } 			'\n'
+		'\n'						
+		proc media() {					'\n'
+			print "\tmedia(",$1,",",$2,") = "	'\n'
+			a=suma($1,$2)/2				'\n'
+			print a,"\n"				'\n'
+			return }					'\n'
+,iar fisierul in42 contine:
+		print "\tIntroduceti primul numar:"		'\n'
+		read(x)						'\n'
+		print "\n\tIntroduceti al doilea numar:"	'\n'
+		read(y)						'\n'
+		print "\n\n"					'\n'
+		media(x,y)						'\n'
+
+
+	, se genereaza codul:
+
+{begin of FUNCTION} -> suma		[ 33] varpush
+[  0] arg					[ 34] =======>{NEDEF} a
+[  1] *****>{ARG} $1			[ 35] eval
+[  2] arg					[ 36] prexpr
+[  3] *****>{ARG} $2			[ 37] prstr
+[  4] add					[ 38] =======>{STRING} "\n"
+[  5] funcret				[ 39] procret
+[  6] procret				[ 40] procret
+{begin of PROCEDURE} -> media		[ 41] prstr
+[  7] prstr					[ 42] =======>{STRING} 
+"\tIntroduceti..."
+[  8] =======>{STRING} "\tmedia("	[ 43] varread
+[  9] arg					[ 44] =======>{NEDEF} x
+[ 10] *****>{ARG} $1			[ 45] prstr
+[ 11] prexpr				[ 46] =======>{STRING} "\n\tIntrod 
+....."
+[ 12] prstr					[ 47] varread
+[ 13] =======>{STRING} ","		[ 48] =======>{NEDEF} y
+[ 14] arg					[ 49] prstr
+[ 15] *****>{ARG} $2			[ 50] =======>{STRING} "\n\n"
+[ 16] prexpr				[ 51] varpush
+[ 17] prstr					[ 52] =======>{NEDEF} x
+[ 18] =======>{STRING} ") = "		[ 53] eval
+[ 19] arg					[ 54] varpush
+[ 20] *****>{ARG} $1			[ 55] =======>{NEDEF} y
+[ 21] arg					[ 56] eval
+[ 22] *****>{ARG} $2			[ 57] call
+[ 23] call					[ 58] =======>{PROCEDURE} media -
+>[7]
+[ 24] =======>{FUNCTION} suma ->[0]	[ 59] *****>{NR_de_ARG} ==2
+[ 25] *****>{NR_de_ARG} ==2		[ 60] STOP
+[ 26] constpush				[ 61] STOP
+[ 27] =======>{NUMAR} 2.000000	[ 62] STOP
+[ 28] div					[ 63] STOP
+[ 29] varpush				[ 64] STOP
+[ 30] =======>{NEDEF} a			[ 65] STOP
+[ 31] assign				[ 66] STOP
+[ 32] pop
+
+Doriti executie [d/n]? d
+	Introduceti primul numar: 9
+	Introduceti al doilea numar: 10
+
+	media(9,10) = 9.5
+
+
+		, ca rezultat al derivarii:
+
+
+	 1. lista		:
+	 2. numeproc	: VAR
+	 3. listainstr	:
+	 4. expr		: ARG					[ 0- 1]
+	 5. expr		: ARG					[ 2- 3]
+	 6. expr		: expr '+' expr			[    4]
+	 7. instr		: RETURN expr			[    5]
+	 8. listainstr	: listainstr instr
+	 9. instr		: '{' listainstr '}'
+	10. defn		: FUNC numeproc '(' ')' instr [    6]
+	11. lista		: lista defn '\n'
+	12. lista		: lista '\n'
+	13. numeproc	: VAR
+	14. listainstr	:
+	15. listainstr	: listainstr '\n'
+	16. prlista		: STRING				[ 7- 8]
+	17. expr		: ARG					[ 9-10]
+	18. prlista		: prlista ',' expr		[   11]
+	19. prlista		: prlista ',' STRING		[12-13]
+	20. expr		: ARG					[14-15]
+	21. prlista		: prlista ',' expr		[   16]
+	22. prlista		: prlista ',' STRING		[17-18]
+	23. instr		: PRINT prlista
+	24. listainstr	: listainstr instr
+	25. listainstr	: listainstr '\n'
+	26. begin		:
+	27. expr		: ARG					[19-20]
+	28. listarg		: expr
+	29. expr		: ARG					[21-22]
+	30. listarg		: listarg ',' expr
+	31. expr	: FUNCTION begin '(' listarg ')'	[23-25]
+	32. expr		: NUMAR				[26-27]
+	33. expr		: expr '/' expr			[   28]
+	34. asgn		: VAR '=' expr			[29-31]
+	35. expr		: asgn
+	36. instr		: expr				[   32]
+	37. listainstr	: listainstr instr
+	38. listainstr	: listainstr '\n'
+	39. expr		: VAR					[33-35]
+	40. prlista		: expr				[   36]
+	41. prlista		: prlista ',' STRING		[37-38]
+	42. instr		: PRINT prlista
+	43. listainstr	: listainstr instr
+	44. listainstr	: listainstr '\n'
+	45. instr		: RETURN				[   39]
+	46. listainstr	: listainstr instr
+	47. instr		: '{' listainstr '}'
+	48. defn		: PROC numeproc '(' ')' instr	[   40]
+	49. lista		: lista defn '\n'	
+	50. prlista		: STRING				[41-42]
+	51. instr		: PRINT prlista
+	52. lista		: lista instr '\n'		[   43]
+	53. instr		: READ '(' VAR ')'		[43-44]
+	54. lista		: lista instr '\n'		[   45]
+	55. prlista		: STRING				[45-46]
+	56. instr		: PRINT prlista
+	57. lista		: lista instr '\n'		[   47]
+	58. instr		: READ '(' VAR ')'		[47-48]
+	59. lista		: lista instr '\n'		[   49]
+	60. prlista		: STRING				[49-50]
+	61. instr		: PRINT prlista
+	62. lista		: lista instr '\n'		[   51]
+	63. begin		:
+	64. expr		: VAR					[51-53]
+	65. listarg		: expr
+	66. expr		: VAR					[54-56]
+	67. listarg		: listarg ',' expr
+	68. instr	: PROCEDURE begin '(' listarg ')'	[57-59]
+	69. lista	: lista instr '\n'			[   60]
+
+	De remarcat ca in limbajul prezentat, toate valorile sint 
+numerice, toate variabilele, cu exceptia parametrilor, sint 
+globale, iar parametrii se noteaza cu $1, $2, ... $k.
+
+
+	3. Desfasurarea lucrarii
+
+	3.1. Se vor analiza programele pe baza exemplelor prezentate.
+
+	3.2. Se va analiza codul generat si se va scrie derivarea 
+corespunzatoare pentru intrarea:
+
+	proc cub() { 							'\n'
+	   m=$1*$1*$1							'\n'
+ 	   return 								'\n'
+	} 	  '\n'
+	  	  '\n'
+	{ print "\n\t\texemplu\n\n\tx:" read(x) }			'\n'
+	cub(x)  print "\n\t\t\t",x,"^3 = ",m,"\n"  		'\n' 
+
+
+	4. Intrebari si dezvoltari
+
+	4.1. Sa se scrie specificatiile LEX pentru generarea unor 
+analizoare lexicale echivalente celor utilizate in lucrare.
+
+	4.2. Sa se implementeze o versiune in care tabela de 
+simboluri sa fie o tabela de dispersie.
+
+	4.3. Sa se propuna si sa se testeze alte exemple, si sa se 
+puna in discutie eventuale imbunatatiri.
+
+
+	5. Programe 
+
+FISIERUL: evol1.h
+typedef struct Simbol { /* intrare in tabela de simboluri */
+	char *nume;
+	short tip; /*VAR, PREDEF ,NEDEF */
+	union { double val;       /* daca e VAR */
+		  double (*ptr)();  /* daca e PREDEF */
+	}u;
+	struct Simbol *urm;      /* simbolul urmator */
+} Simbol;
+Simbol *instal(), *caut();
+
+typedef union Data {  /* stiva de executie a interpretorului */
+	double val;     /* o valoare ,sau */
+	Simbol *simb;   /* un pointer in tabela de simboluri */
+} Data;
+extern Data pop();
+
+typedef void (*Inst)();  /* tipul instr. masinii e pointer */
+                         /* la o functie ce returneaza int */
+typedef struct Predef {	char *nume;
+				double (* func)();	
+} Predef;
+extern Inst prog[],*progp,*cod();
+extern void eval(),add(),sub(),mul(),div(),negate(),power();
+extern void assign(),predf(),varpush(),constpush(),print(),STOP();
+extern void executa(),execerror();
+extern void prexpr(),gt(),lt(),eq(),ge(),le(),ne(),and(),or(),not();
+extern void ifcod(),whilecod();
+extern NPROG;
+
+FISIERUL: init.c
+#include "evol1.h"
+#include "ytab.h"
+#include <math.h>
+extern double Log(), Log10(), Exp(), Sqrt(), integer();
+static struct { char *nume;      /* constante */
+		    double cval;
+} constante[]= {	"PI",    3.14159265358979323846,
+			"E",     2.71828182845904523536,
+			"GAMMA", 0.57721566490153286060,    /* Euler */
+			"DEG",   57.29577951308232087680,   /* grad/radian */
+			"PHI",   1.61803398874989484820,    /* numarul de aur */
+			0, 0	};
+extern struct Predef predef[];
+static struct {	char *nume;		/* cuvinte cheie */
+			int cval;
+} cuvcheie[]={"if",IF,	"else", ELSE, "while",WHILE, "print",PRINT, 0,0,};
+
+void init()  /*instaleaza const. si functiile predef. in tab. de simb.*/
+{	int i;	Simbol *s;
+	for (i=0;constante[i].nume;i++)
+		instal(constante[i].nume,VAR,constante[i].cval);
+	for(i=0;predef[i].nume;i++) {
+		s=instal(predef[i].nume,PREDEF,0.0);
+		s->u.ptr=predef[i].func;
+     }
+     for(i=0;cuvcheie[i].nume;i++)
+		instal(cuvcheie[i].nume,cuvcheie[i].cval,0.0);	
+}	
+
+FISIERUL: simbol.c
+#include "evol1.h"
+#include "ytab.h"
+
+static Simbol *simblist=0; /* tabela de simboluri e o lista */
+
+Simbol *caut(s) char *s;    /* cauta in tabela de simboluri */
+{	Simbol *sp;
+	for(sp=simblist;sp!=(Simbol *) 0;sp=sp->urm)
+		if(strcmp(sp->nume,s)==0)  return sp;
+	return (Simbol *) 0;  /* nu l-a gasit */
+}
+
+Simbol *instal(s,t,d)  /* instaleaza pe s in tabela de simboluri */
+char *s; int t; double d;
+{	Simbol *sp;		char *emalloc();
+	sp=(Simbol *) emalloc(sizeof(Simbol));
+	sp->nume=emalloc(strlen(s)+1);   /* +1 ptr. '\0' */
+	strcpy(sp->nume,s);
+	sp->tip=t;	sp->u.val=d;
+	sp->urm=simblist;  /* inserare in capul listei */
+	simblist=sp;
+	return sp;
+}
+
+char *emalloc(n) unsigned n; /* verifica revenirea din malloc */
+{	char *p, *malloc();
+	p=malloc(n);
+	if(p==0) 	execerror("Depasire de memorie",(char *) 0);
+	return p; 
+}
+
+FISIERUL: math.c
+#include <math.h>
+#include <errno.h>
+extern int errno;
+double errcheck();
+double Log(x)	double x;
+{ return errcheck(log(x),"log"); }
+double Log10(x)	double x;
+{ return errcheck(log10(x),"log10"); }
+double Exp(x)	double x;
+{ return errcheck(exp(x),"exp"); }
+double Sqrt(x)	double x;
+{ return errcheck(sqrt(x),"sqrt"); }
+double Pow(x,y)	double x,y;
+{ return errcheck(pow(x,y),"ridicare la putere"); }
+double integer(x)	double x;
+{ return (double)(long) x; }
+
+double errcheck(d,s) double d; char *s;  /* testeaza rezultatele */
+{	void execerror();
+	if(errno==EDOM) {	errno=0; execerror(s,"argument incorect");
+	} 
+	else if (errno==ERANGE) { errno=0; execerror(s,"rezultat cu depasire");
+	}
+	return d;  
+}
+
+FISIERUL: evol1.y
+%{
+#include "evol1.h"
+#define cod2(c1,c2)        cod(c1);cod(c2)
+#define cod3(c1,c2,c3)     cod(c1);cod(c2);cod(c3)
+%}
+
+%union {             /* tipul stivei Yacc este */
+	Simbol *simb;  /* pointer in tabela de simboluri */
+	Inst   *inst;  /* sau, instructiune masina */
+} 
+
+%token <simb> NUMAR PRINT VAR PREDEF NEDEF WHILE IF ELSE
+%type <inst> instr asgn expr listainstr cond while if end
+%right '='
+%left OR
+%left AND
+%left GT GE LT LE EQ NE
+%left '+' '-'    
+%left '*' '/'  
+%left MINUSUNAR NOT  
+%right '^'   
+%%
+
+lista	: /*vida*/
+	| lista '\n'
+	| lista asgn '\n'   {cod2(print,STOP); return 1;}
+	| lista instr '\n'   {cod(STOP); return 1;}
+	| lista expr '\n'   {cod2(print,STOP); return 1;}
+	| lista error '\n'  {yyerrok;}
+	;
+
+asgn	: VAR '=' expr     {$$=$3; cod3(varpush,(Inst)$1,assign);}
+	;
+instr	: expr          {cod(pop);}
+	| PRINT expr    {cod(prexpr);$$=$2;}
+	| while cond instr end { ($1)[1]=(Inst)$3;  /* corpul buclei */
+					 ($1)[2]=(Inst)$4;} /* end */
+	| if cond instr end {               /* if fara else */
+		($1)[1]=(Inst)$3;  /* partea then */
+		($1)[2]=(Inst)$4;}
+	| if cond instr end ELSE instr end { /* if cu else */
+		($1)[1]=(Inst)$3;  /* then */
+		($1)[2]=(Inst)$6;  /* else */
+		($1)[3]=(Inst)$7;} /* end */
+	| '{' listainstr '}' {cod(STOP);$$=$2;}
+	;
+cond	: '(' expr ')'  		{cod(STOP);$$=$2;}
+	| '(' expr ')' '\n' 	{cod(STOP);$$=$2;}
+	;
+while	: WHILE         {$$=cod3(whilecod,STOP,STOP);}
+	;
+if	: IF  {$$=cod(ifcod);cod3(STOP,STOP,STOP);}
+	;
+end	: /* vida */  {cod(STOP);$$=progp;}
+	;
+listainstr	: /* vida */  {$$=progp;}
+		| listainstr '\n'
+		| listainstr instr
+		;
+expr	: NUMAR           {cod2(constpush,(Inst)$1);}    
+	| VAR           {cod3(varpush,(Inst)$1,eval);}
+	| asgn
+	| PREDEF '(' expr ')' 	{cod2(predf,(Inst)$1); }
+	| '(' expr ')'		{ $$=$2; } 
+	| expr '+' expr             {cod(add);}
+	| expr '-' expr             {cod(sub);}
+	| expr '*' expr             {cod(mul);}
+	| expr '/' expr             {cod(div);}
+	| expr '^' expr             {cod(power);}
+	| '-' expr %prec MINUSUNAR  {cod(negate);}    
+	| expr GT expr              {cod(gt);}
+	| expr GE expr              {cod(ge);}
+	| expr LT expr              {cod(lt);}
+	| expr LE expr              {cod(le);}
+	| expr EQ expr              {cod(eq);}
+	| expr NE expr              {cod(ne);}
+	| expr AND expr             {cod(and);}
+	| expr OR expr              {cod(or);}
+	| NOT expr                  {$$=$2; cod(not);}
+	;     
+%%
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <math.h>
+
+extern double Log(),Log10(),Exp(),Sqrt(),integer();
+char *cmd;       /* pentru mesaje de eroare */
+int nrlinie = 0;
+
+#include <signal.h>
+#include <setjmp.h>
+jmp_buf begin;
+
+static struct {	char *nume;
+			void (*func)();
+} instructiuni[]={ "pop", pop,	"eval",eval,	"add",  add,
+"sub",  sub,	"mul",  mul,	"div",  div,	"negate",negate,
+"power",power,	"assign",assign,	"predf",predf,	"varpush",varpush,
+"constpush",constpush,			"print",print,	"STOP",STOP,
+"prexpr",prexpr,	"gt",gt,	"lt",lt,	"eq",eq,	"ge",ge,	
+	"le",le,		"ne",ne,	"and",and,	"or",or,	"not",not,	
+	"ifcod",ifcod,	"whilecod",whilecod,	0,0	};
+
+Predef predef[]={	"sin",sin,	"cos",cos,	"atan",atan,
+"log",Log, /* isi verifica argumentele */	
+"log10",Log10,	"exp",Exp,	"sqrt",Sqrt,       /* idem */
+"int",integer,	"abs",fabs,	0,0	};
+
+main(argc,argv) char *argv[]; int argc;
+{	void fpecatch(),init(),initcod(), afisare(); 
+	cmd=argv[0];	init();	setjmp(begin);	char c;
+	signal(SIGFPE,fpecatch);
+	for(initcod(); yyparse(); ) { 	
+		afisare(prog);
+		printf("\nDoriti executie [d/n]?");	c=getchar();
+		putchar('\n');
+		if(c=='D' || c=='d') executa(prog);
+		progp--; /*elimin STOP-urile dintre instructiuni/linii
+	}
+	return 0;	
+}
+
+void afisare(prog) Inst *prog;
+{	void afis();	Inst *p;	int contor;
+	for(p=prog,contor=0; contor<7; p++) {
+		if((p-prog)%20==0 &&(p!=prog)) {
+			printf("\n\t\tApasati o tasta pentru continuare !\n");
+			getchar();
+		}
+		printf("\n[%3d] ",p-prog);
+		if (*p==STOP) contor++; /* afisarea se opreste cind se     */
+		else contor=0; 		/* intilnesc 7 STOP-uri consecutive*/ 
+		afis(*p);
+	}
+	putchar('\n');
+}
+
+void afis(inst) Inst inst;
+{  int i;
+   for(i=0;instructiuni[i].nume;i++) 
+	if(inst==instructiuni[i].func) {
+		printf("%s",instructiuni[i].nume); /* instructiune interna*/
+		return;
+	}
+   if(((Simbol *)(inst))->tip==VAR) {
+	printf("=======>%s ==",((Simbol *)(inst))->nume);
+	printf("%lf {VAR}",((Simbol *)(inst))->u.val);
+	return;
+   }
+   for(i=0;predef[i].nume;i++) 
+	if( ( (double (*)()) ( ((Simbol *)(inst))->u.ptr) )==predef[i].func) {
+   		printf("=======>%s {PREDEF}",predef[i].nume);
+   		return;
+	}
+   if(( ( ((Inst *)(inst))-prog )<200)&&( ( ((Inst *)(inst))-prog )>0) ) {
+	printf("------->[%3d]",((Inst *)(inst))-prog);
+	return;	/* referinta la o locatie de cod intern */
+   }
+   printf("=======>%lf",((Simbol *)(inst))->u.val);
+   switch(((Simbol *)(inst))->tip) {
+	case NUMAR:	printf(" {NUMAR}");
+			break;
+	case NEDEF:	printf(" {NEDEF}");
+			break;
+	default:	printf(" {NECUNOSCUT}");
+   }
+   return;
+}
+
+void execerror(s,t)        /* eroare de executie */
+char *s,*t;
+{	void avert();  
+	avert(s,t);	
+	longjmp(begin,0);	
+}
+
+void fpecatch()            /* eroare aritmetica */
+{	void execerror();	execerror("eroare aritmetica",(char *) 0);  }
+
+yylex()
+{	int c;
+	while ((c=getchar()) == ' ' || c=='\t') ;
+	if (c == EOF) return 0;
+	if (c == '.' || isdigit(c)) { /* un numar */
+		double d;
+		ungetc(c,stdin);
+		scanf("%lf" , &d);
+		yylval.simb=instal("",NUMAR,d);
+		return NUMAR;
+	}
+	if (isalpha(c)) {	Simbol *s;	char sbuf[100],*p=sbuf;
+		do { *p++=c; } while ((c=getchar())!=EOF && isalnum(c));
+		ungetc(c,stdin);
+		*p='\0';
+		if ((s=caut(sbuf))==NULL) s=instal(sbuf,NEDEF,0.0);
+		yylval.simb=s;
+		return s->tip==NEDEF ? VAR : s->tip;
+	}
+	switch(c) {
+	case '>':    return urmator('=',GE,GT);
+	case '<':    return urmator('=',LE,LT);
+	case '=':    return urmator('=',EQ,'=');
+	case '!':    return urmator('=',NE,NOT);
+	case '|':    return urmator('|',OR,'|');
+	case '&':    return urmator('&',AND,'&');
+	case '\n':   nrlinie++; return '\n';
+	default:     return c;
+	}
+}
+
+urmator(asteptat,da,nu)
+{	int c=getchar();
+	if(c==asteptat) return da;
+	ungetc(c,stdin);
+	return nu; }
+
+void yyerror(s)  /* Implicit s="Eroare de sintaxa" */
+	char *s;
+{	void avert();	
+	avert(s , (char *) 0); 
+}
+
+void avert(s , t)    /* afiseaza mesajele de eroare */
+	char *s, *t;
+{	fprintf(stderr,"%s  %s",cmd,s);
+	if(t)	fprintf(stderr," %s",t);
+	fprintf(stderr," ->linia nr. %d\n",nrlinie); 
+}
+
+
+FISIERUL: cod.c
+#include "evol1.h"
+#include "ytab.h"
+#define NSTIVA 256
+#define NPROG 200
+
+static Data stiva[NSTIVA];  /* stiva de executie a interpretorului */
+static Data *stivap;        /* urmatoarea pozitie libera pe stiva  */
+
+Inst prog[NPROG];	/* tabloul cu instr. pentru interpretor   */
+      		/* aici se genereaza codul program care */
+      		/* va fi executat cu ajutorul stivei */
+Inst *progp;      /* urmatoarea pozitie libera in 'prog' */
+Inst *pc;         /* contor program */
+
+void STOP(){}
+
+void initcod()           /* initializare pentru executie */
+{	int i;	stivap=stiva;
+	for(i=0; i<NPROG; i++)	prog[i]=STOP;
+	progp=prog; 
+}
+
+void executa(p)   /* executa programul din tabloul 'prog' */
+	Inst *p;
+{	for (pc=p; *pc!=STOP; )	(*(*pc++))();	}
+
+void push(d)      /* pune arg. pe stiva de executie */
+	Data d;
+{	if(stivap>=&stiva[NSTIVA])
+           execerror("depasire capacit. stiva de exec.",(char *) 0);
+	*stivap++=d;
+}
+
+Data pop()      /* ia valoarea din virful stivei si o ret. */
+{	if(stivap<=stiva)
+		execerror("stiva de executie vida",(char *)0);
+	return *--stivap; 	}
+
+Inst *cod(f)       /* adauga la codul generat       */
+	Inst f;     /* o instructiune sau un operand */
+{	Inst *oprogp=progp;
+	if(progp>=&prog[NPROG])
+		execerror("program prea mare",(char *)0);
+	*progp++=f;
+	return oprogp;	
+}
+
+void constpush()  /* pune pe stiva de executie o constanta */
+    			/* aflata pe urmatoarea pozitie in 'prog' */
+{	Data d;  
+	d.val=((Symbol *)*pc++)->u.val;	
+	push(d);	
+}
+
+void varpush()    /* pune pe stiva de executie o variabila   */
+     			/* adica un pointer in tabela de simboluri */ 
+{	Data d;  d.simb=(Simbol *)(*pc++);	push(d);	}
+
+void eval()         /* evalueaza variabila din virful stivei */
+{	Data d;
+	d=pop();
+	if(d.simb->tip==NEDEF) execerror("variabila nedefinita",d.simb->nume);
+	d.val=d.simb->u.val;
+	push(d);	
+}
+
+void assign()  /* asigneaza elem. din virful stivei urm. element */
+{	Data d1,d2;
+	d1=pop();	d2=pop();
+	if(d1.simb->tip!=VAR && d1.simb->tip!=NEDEF)
+		execerror("asignare imposibila",d1.simb->nume);
+	d1.simb->u.val=d2.val;  d1.simb->tip=VAR;
+	push(d2);	
+}
+
+void print()       /* afiseaza virful stivei */
+{	Data d;	d=pop();	printf("\t%.8g\n",d.val);	}
+
+void predf()       /* evalueaza o functie predefinita */
+{	Data d; 	d=pop();	
+	d.val=( *(double (*)()) ( ((Simbol *)(*pc)) ->u.ptr) ) (d.val);
+	pc++;
+	push(d);	
+}
+
+void negate()
+{	Data d;   d=pop();   	d.val=-d.val;   push(d);	}
+
+void power()
+{	Data d1,d2;	   
+	extern double Pow();	
+	d2=pop();   d1=pop();
+	d1.val=Pow(d1.val,d2.val);
+	push(d1);	
+}
+
+void div()
+{	Data d1,d2;	d2=pop();
+	if(d2.val==0.0)	execerror("impartire cu zero",(char *)0);
+	d1=pop();	
+	d1.val /= d2.val;	  
+	push(d1);	
+}
+
+void mul()
+{	Data d1,d2;  d2=pop();  d1=pop();  
+	d1.val *= d2.val;  push(d1); 
+}
+
+void add()     /* aduna cele 2 elemente din virful stivei */
+               /* lasind rez. in virful stivei            */
+{	Data d1,d2;  d2=pop();  d1=pop();  
+	d1.val+=d2.val;  push(d1); 
+}
+
+void sub()
+{	Data d1,d2;  d2=pop();  d1=pop();  
+	d1.val -= d2.val;  push(d1); 
+}
+
+void gt()
+{	Data d1,d2;  d2=pop();  d1=pop();
+	d1.val=(double)(d1.val>d2.val);	
+	push(d1); 
+}
+
+void lt()	........
+....................
+void ne()	........
+
+void and()
+{	Data d1,d2;		d2=pop();	d1=pop();
+	d1.val=(double)(d1.val!=0.0 && d2.val!=0.0);
+	push(d1);	
+}
+
+void or()	.......
+void not()	.......
+
+void prexpr()
+{	Data d;  d=pop();  
+	printf("%.8g\n",d.val); 
+}
+
+void whilecod()
+{	Data d;  
+	Inst *savepc=pc;
+	executa(savepc+2);     /* conditia */
+	d=pop();
+	while(d.val) {	
+		executa(*((Inst **)(savepc)));  /* corpul */
+		executa(savepc+2);
+		d=pop();
+      }
+	pc=*((Inst **)(savepc+1));    /* ultima instructiune */
+}
+
+void ifcod()
+{	Data d;	
+	void afis();
+	Inst *savepc=pc;  /* portiunea then */
+	executa(savepc+3);  /* conditie */
+	d=pop();
+	if(d.val) executa(*((Inst **)(savepc))); 
+	else if (**((Inst **)(savepc+1))!=STOP)        /* else */
+			executa(*((Inst **)(savepc+1))); 
+	pc=*((Inst **)(savepc+2));
+}
+
+
+FISIERUL: evol2.h
+typedef struct Simbol { /* intrare in tabela de simboluri */
+	char *nume;
+	short tip; /*VAR, PREDEF ,NEDEF */
+	union {	double val;       /* daca e VAR */
+			double (*ptr)();  /* daca e PREDEF */
+			Inst defn;        /* FUNCTION, PROCEDURE */
+			char *str;        /* STRING */			
+	}u;
+	struct Simbol *urm;       /* simbolul urmator */
+} Simbol;
+Simbol *instal(), *caut(), *inststr(), *cautstr();
+
+... cod identic cu cel din versiunea anterioara ...
+
+extern Inst *progbase;
+extern void varread(),prstr(),call(),arg(),argassign();
+extern void funcret(),procret(),ret(),define();
+
+
+FISIERUL: init.c
+
+#include "evol2.h"
+... cod identic cu cel din versiunea anterioara ...
+} cuvcheie[]={"proc", PROC,  "func", FUNC,  "return", RETURN,  "read", READ, 
+... cod identic cu cel din versiunea anterioara ...
+
+
+FISIERUL: simbol.c
+#include <stdio.h>
+#include "evol2.h"
+#include "ytab.h"
+... cod identic cu cel din versiunea anterioara ...
+
+Simbol *cautstr(s)    /* cauta un STRING in tabela de simboluri */
+char *s;
+{	Simbol *sp;
+	for(sp=simblist; sp!=(Simbol *) 0; sp=sp->urm)
+		if((sp->tip==STRING) && (strcmp(sp->u.str,s)==0)) return sp;
+	return (Simbol *) 0;	
+}
+
+Simbol *inststr(s)        /* instaleaza un STRING in tabela de simboluri */
+char *s;
+{	Simbol *sp;	
+	char *emalloc();
+	sp=(Simbol *) emalloc(sizeof(Simbol));
+	sp->tip=STRING;	
+	sp->u.str=emalloc(strlen(s)+1);
+	strcpy(sp->u.str,s);
+	sp->urm=simblist;
+	simblist=sp;
+	return sp;	
+}
+
+
+FISIERUL: math.c
+
+... cod identic cu cel din versiunea anterioara ...
+
+
+FISIERUL: evol2.y
+%{
+#include "evol2.h"
+#define cod2(c1,c2)        cod(c1);cod(c2)
+#define cod3(c1,c2,c3)     cod(c1);cod(c2);cod(c3)
+%}
+%union {               /* tipul stivei Yacc */
+		Simbol* simb;  /* pointer in tabela de simboluri */
+		Inst*   inst;  /* instructiune masina */
+		int narg;      /* numar de argumente */
+} 
+%token <simb> NUMAR STRING PRINT VAR PREDEF NEDEF WHILE IF
+%token <simb> ELSE FUNCTION PROCEDURE RETURN FUNC PROC READ
+%token <narg> ARG
+%type <inst> instr asgn expr listainstr cond while
+%type <inst> if begin end prlista
+%type <simb> numeproc
+%type <narg> listarg
+%right '='
+%left OR
+%left AND
+%left GT GE LT LE EQ NE
+%left '+' '-'    
+%left '*' '/'  
+%left MINUSUNAR NOT  
+%right '^'   
+%%
+lista	: ... cod identic cu cel din versiunea anterioara ...
+	| lista defn '\n'	
+	;
+asgn	: VAR '=' expr     {cod3(varpush,(Inst)$1,assign);   $$=$3;}
+	| ARG '=' expr {defnonly("$");  cod2(argassign,(Inst)$1),$$=$3;}
+	;
+instr	: expr          	{cod(pop);}
+	| RETURN 		{defnonly("return");cod(procret);}
+	| RETURN expr 	{defnonly("return");$$=$2;cod(funcret);}
+	| PROCEDURE begin '(' listarg ')' {$$=$2; cod3(call,(Inst)$1,(Inst)$4);} 
+	| READ '(' VAR ')' {$$=cod2(varread,(Inst)$3);}
+	| PRINT prlista {$$=$2;}
+	... cod identic cu cel din versiunea anterioara ...
+	;
+cond	: ...
+while	: ...
+if	: ...
+end	: ...
+listainstr	: ...
+begin	: /* vida */  {$$=progp;}
+	;
+expr	: NUMAR    		{$$=cod2(constpush,(Inst)$1);}    
+	| VAR           	{$$=cod3(varpush,(Inst)$1,eval);}
+	| ARG 		{defnonly("$");	$$=cod2(arg,(Inst)$1);}
+	| FUNCTION begin '(' listarg ')' 
+				{$$=$2; cod3(call,(Inst)$1,(Inst)$4);}
+	| asgn
+	...cod identic cu cel din versiunea anterioara ...
+	;     
+prlista	: expr{cod(prexpr);}
+		| STRING {$$=cod2(prstr,(Inst)$1);}
+		| prlista ',' expr {cod(prexpr);}
+		| prlista ',' STRING {cod2(prstr,(Inst)$3);}
+		;
+defn	: FUNC numeproc 		{$2->tip=FUNCTION;indef=1;}
+  	  '(' ')' instr  		{cod(procret);define($2);indef=0;}
+	| PROC numeproc 		{$2->tip=PROCEDURE;indef=1;}
+  	  '(' ')' instr  		{cod(procret); define($2); indef=0;}
+	;
+numeproc	: VAR
+		| FUNCTION
+		| PROCEDURE
+		;
+listarg 	: /* vida */ {$$=0;}
+		| expr {$$=1;}
+		| listarg ',' expr {$$=$1+1;}
+		;
+%%
+...cod identic cu cel din versiunea anterioara ...
+jmp_buf begin;
+int indef;
+char *infile;   /* numele fisierului de intrare */
+FILE *fin;      /* pointer la fis. de intrare */
+FILE *inst;     /* ptr la fis ce contine codul ultimei instr */
+char **gargv;   /* lista globala de argumente */
+int gargc;
+static struct {	char *nume;
+			void (*func)();
+} instructiuni[]= { ...cod identic cu cel din versiunea anterioara ...
+	"varread",varread,	"argassign",argassign,
+	"arg",arg,			"procret",procret,
+	"funcret",funcret,	"ret",ret,
+	"call",call,		"define",define,
+	"prstr",prstr,		0,0	
+};
+Predef predef[]={ ...cod identic cu cel din versiunea anterioara... };
+
+main(argc,argv) char *argv[];int argc;
+{	void fpecatch(),init(),initcod(),afisare(),run(); int i;
+	if((inst=fopen("istorie.txt","w")) == NULL) {
+   	  fprintf(stderr,"\nEroare la deschiderea fisierului: istorie.txt\n");
+   	  exit();
+	}
+	if(argc==1) { /* lista de argumente e vida */
+   		static char *stdinonly[]={"stdin"};
+   		gargv=stdinonly;	gargc=1;
+	} 
+	else { gargv=argv+1;	gargc=argc-1; }
+	init(); initcod();
+	while(moreinput())  	run();
+	fclose(inst);	
+	return 0;	
+}
+
+moreinput()
+{	if(gargc-- <=0)	return 0;
+	if(fin && fin !=stdin)	fclose(fin);
+	infile=*gargv++;	nrlinie=1;
+	if(strcmp(infile,"-") == 0) {	fin=stdin;	infile=0; } 
+	else if ((fin=fopen(infile,"r"))==NULL) {
+	   fprintf(stderr,"%s: deschiderea %s este imposibila\n",cmd,infile);
+	   return moreinput();
+	} 
+	return 1;	
+}
+
+void run()  /* executie pina la primul STOP */
+{	void fpecatch(),initcod(),afisare();
+	setjmp(begin);	signal(SIGFPE,fpecatch);
+	for ( ; yyparse(); ) {
+		char c;	afisare(prog,inst);
+		fprintf(inst,"\n\n===================================\n");
+		if(fflush(inst)==EOF)
+  	   	   fprintf(stderr,"%s : Eroare fflush :istorie.txt\n",cmd);
+		afisare(prog,stdout);
+		printf("\nDoriti executie [d/n]?");	c=getc(stdin);
+		putchar('\n');
+		if(c=='D' || c=='d') executa(progbase);
+		progp--; /*elimin STOP-urile dintre instructiuni/linii */
+}	}
+
+void proc_fnc(p,file)	Inst *p;	FILE *file;
+{	Simbol *sp;
+	for(sp=simblist; sp!=(Simbol *) 0; sp=sp->urm) { 
+  	   if((sp->tip == PROCEDURE) && ((Inst *)sp->u.defn == p))
+	   	fprintf(file,"\n{begin of PROCEDURE} -> %s",sp->nume);
+  	   if((sp->tip == FUNCTION) &&  ((Inst *)sp->u.defn == p))
+		fprintf(file,"\n{begin of FUNCTION}  -> %s",sp->nume);
+	}
+}
+
+void afisare(prog,file)	Inst *prog;  FILE *file;
+{	void afis(),proc_fnc();	Inst *p;	int contor;
+	for(p=prog,contor=0; contor<7; p++) {
+		if((p-prog)%20==0 &&(p!=prog) && (file ==stdout)) {
+			printf("\n\t\tApasati o tasta pentru continuare!\n");
+			getc(stdin);
+		}
+		proc_fnc(p,file);
+		fprintf(file,"\n[%3d] ",p-prog);
+		if(*p==STOP) contor++;
+		else contor=0;
+		afis(*p,p,file);
+	} 
+	putc('\n',file);	
+}
+
+void afis(inst,pi,file) Inst inst,*pi;  FILE *file;
+{	int i;	void arata();
+	for(i=0;instructiuni[i].nume;i++)
+		if(inst==instructiuni[i].func){
+			fprintf(file,"%s",instructiuni[i].nume);
+			return;
+		}
+	switch(((Simbol *)(inst))->tip) {
+	  case VAR: fprintf(file,"=======>{VAR} %s ==",
+						((Simbol *)(inst))->nume);
+  			fprintf(file,"%lf",((Simbol *)(inst))->u.val);
+  			return;
+	  case FUNCTION: fprintf(file,"=======>{FUNCTION} %s ->[%d]",
+					((Simbol *)(inst))->nume,
+					(Inst *)((Simbol *)(inst))->u.defn-prog);
+       			return;
+	  case PROCEDURE: fprintf(file,"=======>{PROCEDURE} %s ->[%d]",
+					((Simbol *)(inst))->nume,
+					(Inst *)((Simbol *)(inst))->u.defn-prog);
+        			return;
+	  case NUMAR: fprintf(file,"=======>{NUMAR} %lf",
+							((Simbol *)(inst))->u.val);
+    			  return;
+	  case STRING:arata(((Simbol *)(inst))->u.str,file);
+			  return;
+	  case NEDEF: fprintf(file,"=======>{NEDEF} %s"
+						,((Simbol *)(inst))->nume);
+			  return;
+	}
+	for(i=0;predef[i].nume;i++)
+   		if(((double (*)()) (((Simbol *)(inst))->u.ptr))==predef[i].func){
+			fprintf(file,"=======>{PREDF} %s",predef[i].nume);
+			return;
+   		}
+	if((( ((Inst *)(inst)) -prog)<200)&&(( ((Inst *)(inst)) -prog)>0) ){
+		fprintf(file,"----------> [%3d]",(Inst *)(inst)-prog);
+		return;
+	}
+	if(*(pi-1)==arg || *(pi-1)==argassign)
+		fprintf(file,"*****>{ARG} $%d",((int)(inst)));
+	else if(*(pi-2)==call)
+		fprintf(file,"*****>{NR_de_ARG} ==%d",((int)(inst)));
+	else  fprintf(file,">>>>> { ??? }");
+	return;
+}
+
+void arata(c,file)    /* afisare sir cu caractere speciale */
+char *c;  FILE *file;
+{	char *strchr();
+	static char transtab[]="\bb\ff\nn\rr\tt";
+	fprintf(file,"=======>{STRING} "); putc('"',file);
+	for(;*c!='\0';c++)
+		if(strchr(transtab,*c)&&!(isalpha(*c))) {
+			putc('\\',file);
+			putc(strchr(transtab,*c)[1],file);
+		} 
+		else putc(*c,file);
+	putc('"',file);
+}
+
+void execerror(s,t)        /* eroare de executie */
+	char *s,*t;
+{	void avert();
+	avert(s,t);
+	fseek(fin,0L,2);  /* abandonare fisier */
+	longjmp(begin,0);  
+}
+
+void fpecatch() ...cod identic cu cel din versiunea anterioara ...
+
+int c; 	/* var. globala ptr. a fi utilizata si in avert() */
+yylex()
+{	while ((c=getc(fin)) == ' ' || c=='\t');
+	if (c == EOF) return 0;
+	if (c == '.' || isdigit(c)) { /* un numar */
+		double d;
+		ungetc(c,stdin);
+		fscanf(fin,"%lf" , &d);
+		yylval.simb=instal("",NUMAR,d);
+		return NUMAR;
+      }
+	if (isalpha(c)) {	Simbol *s;	char sbuf[100],*p=sbuf;
+		do {  if (p>=sbuf+sizeof(sbuf)-1)	{
+				*p='\0';
+				execerror("nume prea lung",sbuf);
+   		      }*p++=c;
+		} while ((c=getc(fin))!=EOF && isalnum(c));
+		ungetc(c,fin);
+		*p='\0';
+		if ((s=caut(sbuf))==NULL) s=instal(sbuf,NEDEF,0.0);
+		yylval.simb=s;
+		return s->tip==NEDEF ? VAR : s->tip;
+      }
+	if (c=='$') {  /* argument ? */
+   		int n=0;
+   		while (isdigit(c=getc(fin)))	n=10*n+c-'0';
+   		ungetc(c,fin);
+   		if (n==0) execerror("aparitie suspecta a lui $...",(char *)0);
+   		yylval.narg=n;	return ARG;
+      }
+	if (c == '"') {  /* sir */
+		char sbuf[100],*p,*emalloc();	Simbol *s;
+		for (p=sbuf;(c=getc(fin))!='"';p++) {
+  			if(c=='\n' || c==EOF)	execerror("lipsa ghilimele","");
+  			if(p>=sbuf+sizeof(sbuf)-1) { *p='\0';
+							execerror("sir prea lung",sbuf);
+  			}
+  			*p=backslash(c);
+	      }
+		*p=0;
+		if((s=cautstr(sbuf))==0)	s=inststr(sbuf);
+		yylval.simb=s;	return STRING;
+      }
+	switch(c) {	...cod identic cu cel din versiunea anterioara ...
+	}
+}
+
+backslash(c) int c;	/* interpreteaza \ (back-slash) */
+{	char *strchr();	static char transtab[]="b\bf\fn\nr\rt\t";
+	if (c!='\\') return c;
+	c=getc(fin);
+	if (islower(c) && strchr(transtab,c)) return strchr(transtab,c)[1];
+	return c;	}
+
+urmator(asteptat,da,nu)
+{	int c=getc(fin);
+	if(c==asteptat) return da;
+	ungetc(c,fin);	return nu; 		}
+
+void defnonly(s) 	char *s;  /* definitie ilegala */
+{	if (!indef)	execerror(s,"in afara unei definitii "); }
+
+void yyerror(s) ...cod identic cu cel din versiunea anterioara... 
+
+void avert(s , t) char *s, *t;  /* afiseaza mesajele de eroare */
+{	fprintf(stderr,"%s  %s",cmd,s);
+	if(t)	fprintf(stderr," %s",t);
+	if(infile)	fprintf(stderr," in %s",infile);
+	fprintf(stderr," ->linia nr. %d\n",nrlinie);
+	while(c!='\n' && c!=EOF) c=getc(fin); /* ignora sfirsitul de linie */
+	if (c=='\n') nrlinie++;		
+}
+
+
+FISIERUL: cod.c
+#include <stdio.h>
+#include "evol2.h"
+...cod identic cu cel din versiunea anterioara ...
+Inst *pc;			 /* contorul program     */
+INST *progbase=prog;     /* inceputul pe program */
+int revenire;            /* are val. 1 daca a fost vazut RETURN */
+typedef struct Cadru {   /* stiva pt. proceduri si functii */
+	Simbol *sp;      /* intrare in tabela de simboluri */
+	Inst *retpc;     /* adresa de revenire */
+	Data *argn;      /* al n-lea argument de pe stiva */
+	int nrarg;       /* numar de argumente */
+} Cadru;
+#define NCADRE 100
+Cadru cadre[NCADRE];
+Cadru *fp;            /* pointer in stiva de apeluri */
+ 
+void STOP(){}
+
+void initcod()           /* initializare pentru executie */
+{	int i;	stivap=stiva;
+	for(i=progbase-prog;i<NPROG;i++)	prog[i]=STOP;
+	progp=progbase;	fp=cadre;	revenire=0;			
+}
+
+void executa(p) Inst *p; /* executa un program aflat in masina 'prog' */
+{	for (pc=p;*pc!=STOP && !revenire;)	(*(*pc++))(); }
+
+...cod identic cu cel din versiunea anterioara ...        
+
+void prstr()    /* tipareste un sir */
+{	printf("%s",((Simbol *)(*pc++))->u.str); }
+
+void whilecod()
+{	Data d;	Inst *savepc=pc;
+	executa(savepc+2);     /* conditia */
+	d=pop();
+	while(d.val) { executa(*((Inst **)(savepc)));  /* corpul */
+			   if(revenire) break;
+			   executa(savepc+2);              /* conditia */
+			   d=pop();
+	}
+	if (!revenire) pc=*((Inst **)(savepc+1)); /* urm. instructiune */
+}
+
+void ifcod()
+{	Data d;
+	Inst *savepc=pc;  /* portiunea then */
+	executa(savepc+3);  /* conditie */
+	d=pop();
+	if(d.val) { executa(*((Inst **)(savepc))); }
+	else if (**((Inst **)(savepc+1))!=STOP) {    /* else ? */
+		executa(*((Inst **)(savepc+1)));  
+	}
+	if(!revenire)
+  		if (**((Inst **)(savepc+1))!=STOP)  /* else ? */
+  				pc=*((Inst **)(savepc+2));
+  		else	pc=*((Inst **)(savepc+1));
+}
+
+void define(sp)      /* instaleaza functie si procedura */
+Simbol *sp;
+{	sp->u.defn=(Inst)progbase;    /* inceputul codului */
+	progbase=progp; 	
+}
+
+void call()      /* apel de functie */
+{	Simbol *sp=(Simbol *) pc[0]; /* tabela de simb. pt. functie */
+	if(fp++>=&cadre[NCADRE-1])
+		execerror(sp->nume,"prea multe apeluri imbricate");
+	fp->sp=sp;	fp->nrarg=(int)pc[1];	fp->retpc=pc+2;	
+	fp->argn=stivap-1; /* urmatorul argument */
+	executa(sp->u.defn);	revenire=0;	}
+
+void ret()    /* portiunea comuna ptr. reveniri */
+{	int i;
+	for(i=0;i<fp->nrarg;i++)	pop();
+	pc=(Inst *)fp->retpc;
+	--fp;
+	revenire=1;	}
+
+void funcret()     /* revenire dintr-o functie */
+{	Data d;
+	if(fp->sp->tip == PROCEDURE)
+		execerror(fp->sp->nume,"(proc) returneaza o valoare");
+	d=pop();	ret();	push(d); 
+}
+
+void procret()     /* revenirea dintr-o procedura */
+{	if (fp->sp->tip == FUNCTION)
+		execerror(fp->sp->nume,"(func) nu returneaza nici o valoare");
+	ret(); 
+}
+
+double *getarg()     /* pointer la argument */
+{	int nrarg=(int)*pc++;
+	if(nrarg > fp->nrarg) execerror(fp->sp->nume,"insuficiente argumente");
+	return &fp->argn[nrarg - fp->nrarg].val; 
+}
+
+void arg()                /* aranjeaza un argument pe stiva */
+{	Data d;	d.val=*getarg();		push(d); }
+
+void argassign()       /* aranjeaza vf.-ul stivei in argument */ 
+{	Data d;	d=pop();	push(d);	*getarg()=d.val; }
+
+void varread()         /* citeste intr-o variabila */
+{	Data d;	extern FILE *fin;	   Simbol *var=(Simbol *) *pc++;
+Bucla:switch(fscanf(fin,"%lf",&var->u.val)) {
+	case EOF:	if (moreinput())	goto Bucla;
+			d.val=var->u.val=0.0;	break;
+	case 0  :	execerror("valoare ne-numerica",var->nume);
+			break;
+	default :	d.val=1.0;	break;
+	}
+	var->tip=VAR;	
+	push(d);	
+}
+ 
+
+ 
+ 

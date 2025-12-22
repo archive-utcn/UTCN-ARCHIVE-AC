@@ -1,0 +1,48 @@
+
+
+1. Ce fel de cablu se foloseste pt a conecta: comp - comp - crossover, comp - hub - straight, comp - switch - straight, comp - router - crossover, hub - switch - crossover, switch - switch - crossover, router - router - crossover, hub - hub - crossover
+2. 2 comenzi pt a testa conectivitatea cu ipu ... ping, tracert
+3. din modul user exec, cum se creaza un vlan pe un switch, si cum se afiseaza vlanurile existente  - se intra in configurarea globala, apoi "vlan vlan_number", 
+apoi "name nume_vlan", apoi end, apoi cu "show vlan" se afiseaza vlanurile existente
+4. comanda pt a afista neighbour cache si route cache pt ipv6 - ipv6 nc, ipv6vc
+
+??????
+
+5. subnetare - 192.168.33.0 - ce clasa are ipu dat, care e netmasku pt subnets, nb created subnets, nb hosts on each subnet
+2. Problema din labul 6 cu min length of frame pt 10 Mbps CSMA/CD UTP cu 2 repeaters
+4. subnetare. Ai IP 192.168.2.0 si 25 hosts. Sa divizezi in cat mai multe subnets si sa zici (IP class of address, subnet mask, nb subnets created, nb hosts on each subnet)
+
+
+Subiectul 7:
+    1. Color schema pentru cablul tip A av, v, ao, al, aal, o, am, m
+    2. mai sus
+    3. comanda din user exec pentru a configura line console 0 cu password = CN - enable, configure terminal, line console 0, password CN, login, exit
+    4. mai sus
+    5. comanda wingoz pt display interface configs, neighbor cache, route cache pt IPv6: ipv6 if, ipv6 nc, ipv6 rc
+    6. comanda LINUX pt info about interface cards - ifconfig [interface]
+
+
+Subiectul 4:
+1. comanda arp - 
+2. problema de la fibra optica
+3. comanda nslookup - interogheaza serverul DNS si returneaza numele domeniului si adresele
+4. setare prioritate la un switch; comanda pt afisarea informatiilor legate de spanning tree.- enable, configure terminal, apoi cu "spanning-tree vlan numar_vlan priority numar_priority", iar la 2 avem "show spanning-tree" daca e enable la spanning-tree
+5. standardul B mufare - ao, o, av, al, aal, v, am, m
+6. comanda linux pt informatiile legate de interfata eth0. - ifconfig eth0
+
+Subiectul 6:
+1. problema cu fibra optica
+2. comanda nslookup - interogheaza serverul DNS si returneaza numele domeniului si adresele
+3. standardul A mufare - av, v, ao, al, aal, o, am, m
+4. seteaza ip, netmask in linux - ifconfig eth0 xxx.xx.x.x netmask 255.255.255.0 up    sau    :/sbin/ifconfig – a interface_name <IPaddress> netmask <netmaskaddress> 
+5.  setare prioritate la un port -  enable, configure terminal, interface fastethernet numar_interfata  apoi cu "spanning-tree vlan numar_vlan port-priority numar_port-priority",
+6. comenzi pt verificarea conectivitatii - ping, tracert
+
+De exemplu asta:
+1. Cablu cross-over ce ii ? + standardu A de mufare - A-B sau B-A, A = av, v, ao, al, aal, o, am, m
+2.O problema cu Token ring si THT cat poate transfera intr-un timp t.
+3. Comenzi de verificare a conectivitatii pe windows
+4. Schimba prioritatea unui port (cisco)
+5. Comenzi ipv6 pentru listarea interfetelor, neighbour chache, route
+cache
+6. Commanda linux de a adauga o ruta spre un default gateway - /sbin/route add default gw <gateway_addr>

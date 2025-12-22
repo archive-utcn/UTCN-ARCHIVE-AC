@@ -1,0 +1,392 @@
+
+{begin of FUNCTION} -> suma
+[  0]arg
+[  1]*****>{ARG} $1
+[  2]arg
+[  3]*****>{ARG} $2
+[  4]add
+[  5]funcret
+[  6]procret
+{begin of PROCEDURE} -> media
+[  7]prstr
+[  8]=====>{STRING} "media("
+[  9]arg
+[ 10]*****>{ARG} $1
+[ 11]prexpr
+[ 12]prstr
+[ 13]=====>{STRING} ","
+[ 14]arg
+[ 15]*****>{ARG} $2
+[ 16]prexpr
+[ 17]prstr
+[ 18]=====>{STRING} ") = "
+[ 19]arg
+		Apasati o tasta pentru continuare!
+
+[ 20]*****>{ARG} $1
+[ 21]arg
+[ 22]*****>{ARG} $2
+[ 23]call
+[ 24]=====>{FUNCTION} suma ----->[0]
+[ 25]*****>{NR_de_ARG} ==2
+[ 26]constpush
+[ 27]=====>{NUMAR} 2.000000
+[ 28]div
+[ 29]varpush
+[ 30]=====>{NEDEF} a
+[ 31]assign
+[ 32]pop
+[ 33]varpush
+[ 34]=====>{NEDEF} a
+[ 35]eval
+[ 36]prexpr
+[ 37]prstr
+[ 38]=====>{STRING} "\n"
+[ 39]procret
+		Apasati o tasta pentru continuare!
+
+[ 40]prstr
+[ 41]=====>{STRING} "Introduceti primul numar:"
+[ 42]STOP
+[ 43]STOP
+[ 44]STOP
+[ 45]STOP
+[ 46]STOP
+[ 47]STOP
+[ 48]STOP
+
+Doriti executie [d/n]?
+
+{begin of FUNCTION} -> suma
+[  0]arg
+[  1]*****>{ARG} $1
+[  2]arg
+[  3]*****>{ARG} $2
+[  4]add
+[  5]funcret
+[  6]procret
+{begin of PROCEDURE} -> media
+[  7]prstr
+[  8]=====>{STRING} "media("
+[  9]arg
+[ 10]*****>{ARG} $1
+[ 11]prexpr
+[ 12]prstr
+[ 13]=====>{STRING} ","
+[ 14]arg
+[ 15]*****>{ARG} $2
+[ 16]prexpr
+[ 17]prstr
+[ 18]=====>{STRING} ") = "
+[ 19]arg
+		Apasati o tasta pentru continuare!
+
+[ 20]*****>{ARG} $1
+[ 21]arg
+[ 22]*****>{ARG} $2
+[ 23]call
+[ 24]=====>{FUNCTION} suma ----->[0]
+[ 25]*****>{NR_de_ARG} ==2
+[ 26]constpush
+[ 27]=====>{NUMAR} 2.000000
+[ 28]div
+[ 29]varpush
+[ 30]=====>{NEDEF} a
+[ 31]assign
+[ 32]pop
+[ 33]varpush
+[ 34]=====>{NEDEF} a
+[ 35]eval
+[ 36]prexpr
+[ 37]prstr
+[ 38]=====>{STRING} "\n"
+[ 39]procret
+		Apasati o tasta pentru continuare!
+
+[ 40]prstr
+[ 41]=====>{STRING} "Introduceti primul numar:"
+[ 42]varread
+[ 43]=====>{NEDEF} x
+[ 44]STOP
+[ 45]STOP
+[ 46]STOP
+[ 47]STOP
+[ 48]STOP
+[ 49]STOP
+[ 50]STOP
+
+Doriti executie [d/n]?
+
+{begin of FUNCTION} -> suma
+[  0]arg
+[  1]*****>{ARG} $1
+[  2]arg
+[  3]*****>{ARG} $2
+[  4]add
+[  5]funcret
+[  6]procret
+{begin of PROCEDURE} -> media
+[  7]prstr
+[  8]=====>{STRING} "media("
+[  9]arg
+[ 10]*****>{ARG} $1
+[ 11]prexpr
+[ 12]prstr
+[ 13]=====>{STRING} ","
+[ 14]arg
+[ 15]*****>{ARG} $2
+[ 16]prexpr
+[ 17]prstr
+[ 18]=====>{STRING} ") = "
+[ 19]arg
+		Apasati o tasta pentru continuare!
+
+[ 20]*****>{ARG} $1
+[ 21]arg
+[ 22]*****>{ARG} $2
+[ 23]call
+[ 24]=====>{FUNCTION} suma ----->[0]
+[ 25]*****>{NR_de_ARG} ==2
+[ 26]constpush
+[ 27]=====>{NUMAR} 2.000000
+[ 28]div
+[ 29]varpush
+[ 30]=====>{NEDEF} a
+[ 31]assign
+[ 32]pop
+[ 33]varpush
+[ 34]=====>{NEDEF} a
+[ 35]eval
+[ 36]prexpr
+[ 37]prstr
+[ 38]=====>{STRING} "\n"
+[ 39]procret
+		Apasati o tasta pentru continuare!
+
+[ 40]prstr
+[ 41]=====>{STRING} "Introduceti primul numar:"
+[ 42]varread
+[ 43]=====>{NEDEF} x
+[ 44]prstr
+[ 45]=====>{STRING} "\n\nIntroduceti al doilea numar:"
+[ 46]STOP
+[ 47]STOP
+[ 48]STOP
+[ 49]STOP
+[ 50]STOP
+[ 51]STOP
+[ 52]STOP
+
+Doriti executie [d/n]?
+
+{begin of FUNCTION} -> suma
+[  0]arg
+[  1]*****>{ARG} $1
+[  2]arg
+[  3]*****>{ARG} $2
+[  4]add
+[  5]funcret
+[  6]procret
+{begin of PROCEDURE} -> media
+[  7]prstr
+[  8]=====>{STRING} "media("
+[  9]arg
+[ 10]*****>{ARG} $1
+[ 11]prexpr
+[ 12]prstr
+[ 13]=====>{STRING} ","
+[ 14]arg
+[ 15]*****>{ARG} $2
+[ 16]prexpr
+[ 17]prstr
+[ 18]=====>{STRING} ") = "
+[ 19]arg
+		Apasati o tasta pentru continuare!
+
+[ 20]*****>{ARG} $1
+[ 21]arg
+[ 22]*****>{ARG} $2
+[ 23]call
+[ 24]=====>{FUNCTION} suma ----->[0]
+[ 25]*****>{NR_de_ARG} ==2
+[ 26]constpush
+[ 27]=====>{NUMAR} 2.000000
+[ 28]div
+[ 29]varpush
+[ 30]=====>{NEDEF} a
+[ 31]assign
+[ 32]pop
+[ 33]varpush
+[ 34]=====>{NEDEF} a
+[ 35]eval
+[ 36]prexpr
+[ 37]prstr
+[ 38]=====>{STRING} "\n"
+[ 39]procret
+		Apasati o tasta pentru continuare!
+
+[ 40]prstr
+[ 41]=====>{STRING} "Introduceti primul numar:"
+[ 42]varread
+[ 43]=====>{NEDEF} x
+[ 44]prstr
+[ 45]=====>{STRING} "\n\nIntroduceti al doilea numar:"
+[ 46]varread
+[ 47]=====>{NEDEF} y
+[ 48]STOP
+[ 49]STOP
+[ 50]STOP
+[ 51]STOP
+[ 52]STOP
+[ 53]STOP
+[ 54]STOP
+
+Doriti executie [d/n]?
+
+{begin of FUNCTION} -> suma
+[  0]arg
+[  1]*****>{ARG} $1
+[  2]arg
+[  3]*****>{ARG} $2
+[  4]add
+[  5]funcret
+[  6]procret
+{begin of PROCEDURE} -> media
+[  7]prstr
+[  8]=====>{STRING} "media("
+[  9]arg
+[ 10]*****>{ARG} $1
+[ 11]prexpr
+[ 12]prstr
+[ 13]=====>{STRING} ","
+[ 14]arg
+[ 15]*****>{ARG} $2
+[ 16]prexpr
+[ 17]prstr
+[ 18]=====>{STRING} ") = "
+[ 19]arg
+		Apasati o tasta pentru continuare!
+
+[ 20]*****>{ARG} $1
+[ 21]arg
+[ 22]*****>{ARG} $2
+[ 23]call
+[ 24]=====>{FUNCTION} suma ----->[0]
+[ 25]*****>{NR_de_ARG} ==2
+[ 26]constpush
+[ 27]=====>{NUMAR} 2.000000
+[ 28]div
+[ 29]varpush
+[ 30]=====>{NEDEF} a
+[ 31]assign
+[ 32]pop
+[ 33]varpush
+[ 34]=====>{NEDEF} a
+[ 35]eval
+[ 36]prexpr
+[ 37]prstr
+[ 38]=====>{STRING} "\n"
+[ 39]procret
+		Apasati o tasta pentru continuare!
+
+[ 40]prstr
+[ 41]=====>{STRING} "Introduceti primul numar:"
+[ 42]varread
+[ 43]=====>{NEDEF} x
+[ 44]prstr
+[ 45]=====>{STRING} "\n\nIntroduceti al doilea numar:"
+[ 46]varread
+[ 47]=====>{NEDEF} y
+[ 48]prstr
+[ 49]=====>{STRING} "\n\n"
+[ 50]STOP
+[ 51]STOP
+[ 52]STOP
+[ 53]STOP
+[ 54]STOP
+[ 55]STOP
+[ 56]STOP
+
+Doriti executie [d/n]?
+
+{begin of FUNCTION} -> suma
+[  0]arg
+[  1]*****>{ARG} $1
+[  2]arg
+[  3]*****>{ARG} $2
+[  4]add
+[  5]funcret
+[  6]procret
+{begin of PROCEDURE} -> media
+[  7]prstr
+[  8]=====>{STRING} "media("
+[  9]arg
+[ 10]*****>{ARG} $1
+[ 11]prexpr
+[ 12]prstr
+[ 13]=====>{STRING} ","
+[ 14]arg
+[ 15]*****>{ARG} $2
+[ 16]prexpr
+[ 17]prstr
+[ 18]=====>{STRING} ") = "
+[ 19]arg
+		Apasati o tasta pentru continuare!
+
+[ 20]*****>{ARG} $1
+[ 21]arg
+[ 22]*****>{ARG} $2
+[ 23]call
+[ 24]=====>{FUNCTION} suma ----->[0]
+[ 25]*****>{NR_de_ARG} ==2
+[ 26]constpush
+[ 27]=====>{NUMAR} 2.000000
+[ 28]div
+[ 29]varpush
+[ 30]=====>{NEDEF} a
+[ 31]assign
+[ 32]pop
+[ 33]varpush
+[ 34]=====>{NEDEF} a
+[ 35]eval
+[ 36]prexpr
+[ 37]prstr
+[ 38]=====>{STRING} "\n"
+[ 39]procret
+		Apasati o tasta pentru continuare!
+
+[ 40]prstr
+[ 41]=====>{STRING} "Introduceti primul numar:"
+[ 42]varread
+[ 43]=====>{NEDEF} x
+[ 44]prstr
+[ 45]=====>{STRING} "\n\nIntroduceti al doilea numar:"
+[ 46]varread
+[ 47]=====>{NEDEF} y
+[ 48]prstr
+[ 49]=====>{STRING} "\n\n"
+[ 50]varpush
+[ 51]=====>{NEDEF} x
+[ 52]eval
+[ 53]varpush
+[ 54]=====>{NEDEF} y
+[ 55]eval
+[ 56]call
+[ 57]=====>{PROCEDURE} media ----->[7]
+[ 58]*****>{NR_de_ARG} ==2
+[ 59]STOP
+		Apasati o tasta pentru continuare!
+
+[ 60]STOP
+[ 61]STOP
+[ 62]STOP
+[ 63]STOP
+[ 64]STOP
+[ 65]STOP
+
+Doriti executie [d/n]?
+Introduceti primul numar:
+
+Introduceti al doilea numar:
+
+media(9,10) = 9.5

@@ -1,0 +1,20 @@
+a = a.
+ a = b.
+ 1 = 2.
+ ‘ana’ = ‘Ana’.
+ X = 1, Y = X.
+ X = 3, Y = 2, X = Y.
+ X = 3, X = Y, Y = 2.
+ X = ana.
+ X = ana, Y = ‘ana’, X = Y.
+ a(b,c) = a(X,Y).
+ a(X,c(d,X)) = a(2,c(d,Y)).
+ a(X,Y) = a(b(c,Y),Z).
+ tree(left, root, Right) = tree(left, root, tree(a, b, tree(c, d, e))).
+ k(s(g),t(k)) = k(X,t(Y)).
+ father(X) = X.
+ loves(X,X) = loves(marsellus,mia).
+ [1, 2, 3] = [a, b, c].
+ [1, 2, 3] = [A, B, C].
+ [abc, 1, f(x) | L2] = [abc|T].
+ [abc, 1, f(x) | L2] = [abc, 1, f(x)].

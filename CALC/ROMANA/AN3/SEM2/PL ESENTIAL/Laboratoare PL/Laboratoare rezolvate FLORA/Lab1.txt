@@ -1,0 +1,132 @@
+woman(ana).
+woman(sara).
+woman(ema).
+woman(maria).
+woman(dorina).
+woman(irina).
+woman(carmen).
+man(andrei).
+man(george).
+man(alex).
+man(mihai).
+man(sergiu).
+man(marius).
+parent(maria, ana).
+parent(george, ana).
+parent(maria, andrei).
+parent(george, andrei).
+parent(carmen, sara).
+parent(alex, sara).
+parent(carmen, ema).
+parent(alex, ema).
+parent(mihai, george).
+parent(irina, george).
+parent(mihai, carmen).
+parent(irina, carmen).
+parent(marius, maria).
+parent(dorina, maria).
+parent(sergiu,mihai).
+
+mother(X,Y) :- woman(X),
+	parent(X,Y).
+father(X,Y) :- man(X),
+	parent(X,Y).
+sibling(X,Y) :- parent(Z,X),
+	parent(Z,Y), X\=Y.
+sister(X,Y) :- sibling(X,Y),
+	woman(X).
+brother(X,Y) :- sibling(X,Y),
+	man(X).
+aunt(X,Y) :- sister(X,Z),
+	parent(Z,Y).
+uncle(X,Y) :- brother(X,Z),
+	parent(Z,Y).
+grandmother(X,Y) :-parent(X,Z),
+	parent(Z,Y),
+	woman(X).
+grandfather(X,Y) :- parent(X,Z),
+	parent(Z,Y),
+	man(X).
+ancestor(X,Y) :- parent(X,Y).
+ancestor(X,Y) :- parent(X,Z),
+	ancestor(Z,Y).
+	
+	
+	
+	
+var(Term).
+1true
+nonvar(Term).
+false
+number(Term).
+false
+atom(Term).
+false
+atomic(Term).
+false
+number(5).
+1true
+atomic(2).
+1true
+atom(2).
+false
+atom(paf).
+1true
+nonvar(paf).
+1true
+nonvar(X).
+false
+a=a.
+1true
+a=b.
+false
+1=2.
+false
+'ana'='Ana'.
+false
+'ana'='ana'.
+1true
+X = 1, Y = X.
+X = Y, Y = 1
+X = 3, Y = 2, X = Y.
+false
+X = 3, X = Y, Y = 2.
+false
+X='ana'.
+X = ana
+X = ana, Y = ‘ana’, X = Y.
+Cannot run query due to a syntax error (check query window)
+X = ana, Y =  'ana’,  X   =   Y.
+Cannot run query due to a syntax error (check query window)
+X = ana, Y =  'ana', X = Y.
+X = Y, Y = ana
+a(b,c) = a(X,Y).
+X = b,
+Y = c
+a(X,c(d,X)) = a(2,c(d,Y)).
+X = Y, Y = 2
+a(X,Y) = a(b(c,Y),Z).
+X = b(c, Z),
+Y = Z
+tree(left, root, Right) = tree(left, root, tree(a, b, tree(c, d, e))).
+Right = tree(a, b, tree(c, d, e))
+k(s(g),t(k)) = k(X,t(Y)).
+X = s(g),
+Y = k
+father(X) = X.
+X = father(X)
+loves(X,X) = loves(marsellus,mia).
+false
+loves(X,Y) = loves(marsellus,mia).
+X = marsellus,
+Y = mia
+loves(X,X) = loves(mia,mia).
+X = mia
+[1, 2, 3] = [A, B, C].
+A = 1,
+B = 2,
+C = 3
+[1, 2, 3] = [a,b,c].
+false
+[abc, 1, f(x) | L2] = [abc|T].
+T = [1, f(x)|L2]

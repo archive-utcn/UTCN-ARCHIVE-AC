@@ -1,0 +1,70 @@
+Care este rolul porturilor la nivelul transport ? 
+
+Porturile permit rularea mai multor aplicatii prin multiplexare, ce dau senzatia de flux continuu. Pentru fiecare aplicatie, se aloca un port si asftel se realizeaza conexiuni unice intre client si server prin intermediul ip-ului si portului care formeaza un socket. Daca am avea doar IP am putea folosi doar secvential serviciile, astfel porturile avand rol de paralelizare. 
+
+
+
+Prezentati 2 diferente dintre tehnicile FHSS si DSSS:
+
+Frequency hopping este o metoda foarte simpatica, deoarece fragmenteaza partea de date in mai multe bucati, si o transmite in timp la o anumita frecventa. Avantajul este ca nu tine blocata o anumita frecventa si personajul malitios  nu poate sa receptioneze datele daca nu stie secventa pseudo-aleatoare dupa care se fac hopurile.
+
+DSSS spre deosebire, incearca sa umple toata latimea de banda cu semnalul respectiv. Se alege un sir random de date pe care il cunoaste si emitatorul si receptorul, si se face XOR intre date si sirul respectiv. 
+
+FHSS - e mai usor de implementat si rezista mai bine la zgomot, dar are o viteza mai mica
+DSSS - e mai greu de implementat, e mai sensibil la zgomot, insa are o viteza mai mare 
+
+Care este rolul campului TTL din cadrul antetului IPv4 
+
+Time To Live se refera la numarul de hopuri prin care poate trece un pachet (sau cat timp), astfel incat sa se evite ciclurile infinite in in care un pachet se pierde prin retea. La fiecare trecere printr-un hop, valoarea TTL se decrementeaza cu 1 , iar cand aceasta ajunge la 0 , pachetul este eliminat. Protocolul ICMP trimite inapoi la sursa un pachet prin care il anunta ca TTL a expirat. 
+
+
+Care este diferenta dintre transmisia sincrona si asincrona ? 
+
+In cadrul transmisie asincrone, trebuie sa avem un bit de start, ca sa anuntam receptorul ca incepem sa transmitem, apoi se transmit datele efective si eventual un bit de paritate pentru detectia erorilor, iar apoi la final 1-2 biti de stop. Deci sincronizarea se face pe baza bitilor de start si stop. 
+
+Transmisiile sincrone sunt mai complexe, dar totusi sunt mai folosite decat cele asincrone. Se folosesc blocuri de bits de date, iar pe langa mai avem nevoie doar de biti de control si de flag. Sincronizarea se face pe baza tactului de ceas. 
+
+Intre cele doua, transmisiile asincrone sunt mai putin costisitoare, insa uneori se poate sa transmitem mult mai multi biti decat cu o transmisie sincrona. 
+
+Care sunt principalele elemente ce definesc un sistem bazat pe cablarea structurata? 
+-main distribution facility - cladirea in care vine internetul de la ISP, routerul principal, firewall, servere
+- intermediate cross connect - cladiri secundare  (cablare de tip backbone, single mode pe distante lungi)
+- telecommunication closet - camera de retelistica de la un anumit etaj unde se afla echipamentele ce conecteaza fiecare sala la internet (aici se foloseste multi-mode fiind pe o distanta mai scurta)
+- echipamentele de retea nu se tin in sala, fiindca poate veni personajul malitios (studentul) si inverseaza cablurile din switch. 
+
+Care e diferenta dintre adresele IPv4 private si cele publice ?
+
+Adresele private au relevanta doar in cadrul retelei noastre personale (se aseamana cu o variabila locala), spre deosebire de ip-ul public care este un identificator unic la nivel global si cu ajutorul caruia putem comunica in afara retelei noastre. De exemplu : CNP-ul este asemenea unui ip public, fiind recunoscut international, pe cand numarul matricol din carnetul de student are relevanta doar in cadrul universitatii, precum un ip privat. 
+
+Prezentati doua aspecte noi aduse de GigabitEthernet comparativ cu versiunile de Ethernet anterioare. 
+
+-Fata de Ethernet 10/100 Mbps unde un cadru minim era de 512 biti, la Gigabit Ethernet s-a marit valoarea la 4096 biti (daca ceea ce transmitem nu are atat, facem padding). 
+-Viteze de transmisie mult mai mari, de 1000 Mbps comparativ cu 100 Mbps 
+
+
+Enumerati diferentele dintre retelele bazate pe comutarea de circuite si cele bazate pe comutarea de mesaje 
+
+La comutarea bazata pe circuite  trebuie facute legaturi fizice (sau virtuale) pentru a modifica traseul de comunicare. Are 3 faze : establish, transfer, disconnection. Cand se incheie comunicarea, calea respectiva se sterge din tabela de rutare. Comutarea este rapida deoarece este o tabela fixa initiala cu rute predefinite, insa nu este adaptabil. Aceasta metoda se aseamana centralelor telefonice de acum mult timp.
+
+La comutarea bazata pe mesaje, se adauga control si adresare si se merge pe principiul de store & forward. Nu exista cai predefinite, ci switchul isi calculeaza calea optima pe baza unui cost. S-au introdus prioritati pentru mesaje, insa dezavantajul era ca mesajele erau prea lungi fiind costisitor de retransmis sau corectat erori .
+
+Care este rolul tehnicilor de control al fluxului in retelele de calculatoare si unde se pot aplica?
+
+-aceasta tehnica permite router-ului sa limiteze rata de transmisie a pachetelor pe care o primeste, prin timpul de transmisie, timpul de propagare si bitul de acknowledge, pentru a evita supraincarcarea receptorului
+-exemple de flow control: Stop and wait (trimite ack dupa fiecare frame), sliding window (adaptabil pe baza parametrilor enumerati mai sus)
+-se pot aplica la nivelul 2, Data Link dar si la nivelul de transport ( TCP care are in header campul window pentru flow control)
+
+
+Prezentati pricipalele caracteristici ale sistemului intermediar HTTP de tip gateway. 
+
+Gateway-ul este un sistem intermediar specific serverului ce filtreaza datele. Daca serverul foloseste un protocol non-HTTP, gateway-ul preia informatia transmisa de client si o "traduce" pentru server. La fel si invers, daca serverul trimite spre client, gateway-ul impacheteaza informatia in http.  
+
+
+Prezentati principalele caracteristici ale sistemului intermediar HTTP de tip tunel 
+
+
+Prin intermediul tunelului, clientul si serverul se asigura de o securitate mai buna, acesta facand filtrari, criptari, autentificari, modificari de IP (precum VPN). Ceea ce se intampla in tunel nu este cunoscut nici de catre client nici de server, astfel conexiunea nu mai este de tip end-to-end, clientul fiind "ascuns". 
+
+
+
+

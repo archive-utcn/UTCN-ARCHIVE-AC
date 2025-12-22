@@ -1,0 +1,98 @@
+Comenzi in ordinea LEX & YACC:
+- compilare fisier lex:  lex *.l  ===> lex.yy.c
+- compilare fisier yacc:  yacc *.y  ===> y.tab.c
+- compilam fisierul C:	gcc y.tab.c ===> a.out	
+- comanda finala: ./a.out <input.in >output.txt
+
+--- Legatura Lex&Yacc=in fisierul yacc: #include "lex.yy.c"
+===========================
+Comenzi in ordinea YACC & LEX
+
+- compilare: yacc *.y		===> y.tab.c 
+
+- compilare: lex *.l		===> lex.yy.c
+- compilare: gcc lex.yy.c	===> a.out
+- comanda finala: ./a.out <input.in >output.txt
+
+--- Legatura Yacc & Lex=in fisierul LEX: #include "y.tab.c"
+===========================
+Comenzi in ordinea YACC & LEX: cu y.tab.h (sa poata fi accesate tokens definitions si din alte surse decat y.tab.c)
+
+- compilare: yacc *.y -d  ===> y.tab.c si (optiunea -d) y.tab.h
+- compilare:  lex *.l  	  		===> lex.yy.c
+- compilare:: gcc lex.yy.c y.tab.c	===> a.out
+- comanda finala: ./a.out <input.in >output.txt
+
+--- Legatura Yacc & Lex=in fisierul LEX: #include "y.tab.h"
+===========================
+SUMAR pag-1-5: YACC-TEORIE.pdf
+
+Token-ii sunt organizati pe baza regulilor gramaticale; cand o regula este potrivita, este invocata actiunea corespunzatoare.
+
+- Actiunile in C returneaza valori; utilizeaza valorile altor actiuni.
+
+- Analizorul lexical citeste fluxul de intrare + recunoaste token-ii si ii comunica analizorului sintactic.
+- Simbol Terminal=Token=structura recunoscuta de analizorul lexical (LEX)
+- Simbol non-terminal=structura recunoscuta de analizorul sintactic (YACC)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+---pagina 5
+- Numarul de token implicit pt.literal caracter=valoarea numerica a caracterului in setul de caractere local. (ASCII)
+- Celorlalte nume:asociaza nr. token incepind cu 257. 
+- Pentru a asigna nr.unui token: prima aparitie a numelui de token/literal in declaratii poate fi urmata de un intreg nenegativ (=nr. token nume/literal)
+- nr.token distincte.
+- Marcatorul de sfirsit ("end_marker"-ul)=nr.token 0 (zero) / negativ; nu poate fi redefinit.
+- LEX trebuie sa fie pregatit sa returneze 0 sau nr. negativ la sfarsitul intrarii.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+-pagina 2-- reguli scrise cu SAU | si un singur ; final
+A : B C D ;
+A : E F ;
+A : G ;
+pot fi scrise si ca:
+A : B C D
+  | E F
+  | G
+  ;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+--pagina 3
+-- Daca simbol non-terminal recunoaste vid
+empty :
+  ;
+Nume token-i: %token in declaratii
+% token nume1 nume2 nume3 ... 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+2.3. Actiuni YACC
+- LEX poate returna valori pt. token-i.
+XXX : YYY ZZZ { printf ("a message\n");}
+
+- YACC: '$' returneaza o valoare: actiunea seteaza pseudo-variabila $$ la acea valoare.
+- pseudo-variabile:$1, $2,..., refera valori returnate de componentele din DREAPTA regulii curente, de la stanga la dreapta.
+Ex.
+A : B C D ;  $2 valoarea returnata de C; $3 pt. D.
+expr : '(' expr ')'	{ $$=$2;}
+- Implicit, valoarea regulii=valoarea primului element $1.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--pagina 4: Variabile globale similar cu LEX intre %{ si %}
+%{ int var1 = 0; %}
+- Analizorul YACC foloseste numai identificatori ce incep cu 'yy', utilizatorii trebuie sa foloseasca alte denumiri.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2.4. Analiza lexicala (LEX)
+-se furnizeaza un analizor lexical (ex. LEX) care citeste fluxul de intrare si comunica token-ii (cu valori, daca se doreste) analizorului sintactic (YACC)
+- Analizorul lexical=Functia yylex() ce returneaza intregi: numarul terminalului ("token-number") cu tipul de token citit.
+- Daca este o valoare asociata cu token-ul trebuie atribuita variabilei EXTERNE yylval.
+- LEX+YACC trebuie sa se "inteleaga" asupra nr.token sa  comunice corect.
+- #define din C permite LEX sa returneze simbolic aceste numere.
+Ex: - token DIGIT a fost definit in YACC- in LEX scriem:
+{ extern int yylval; int c=getchar(); 
+switch(c){case '0':case'1' .........
+case'9' :yylval=c-'0';
+return(DIGIT);}
+}
+- Returneaza: cod token DIGIT + valoarea numerica.
+- Daca codul pt. LEX e in sect."programe" a fisierului YACC, DIGIT va fi definit ca numarul de token asociat cu token-ul DIGIT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2.5. Modul de lucru al analizorului sintactic (YACC)
+- Analizorul generat de YACC=automat finit cu stiva.
+- Analizorul citeste+memoreaza simbolul de intrare urmator= token "look-ahead"
+- Starea curenta=varful stivei. 
+- Starilor automatului le sunt atribuite etichete (intregi mici sau "short int").
+- Initial masina e in starea 0 (zero), stiva contine starea 0 si nici un token "look-ahead" nu a fost citit.

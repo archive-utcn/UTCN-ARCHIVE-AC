@@ -1,0 +1,39 @@
+UTP 
+
+Category        Data Rate         Length               Application
+Cat1                 1 mbps            100m              old telephone
+Cat2                 4 mbps            100m              token ring networks
+Cat3                10 mpbs           100m              token ring & 10BASE-T Ethernet
+Cat4                16 mbps           100m              token ring networks
+Cat5                100mbps          100m              ethernet, fast ethernet, token ring
+Cat5e              1gbps               100m               ethernet, fast ethernet, gigabit ethernet
+Cat6                10gbps             100m               gigabit ethernet, 10G Ethernet(55m)
+Cat6a              10gbps             100m               gigabit ethernet, 10G Ethernet(55m)
+Cat7                10gbps             100m               gigabit ethernet, 10G Ethernet(100m)
+Cat7a              40gbps             50m                 teleradiology, 10G Ethernet(100 gbps -15m)
+
+STP has the same categories, but STP prevents interference better than UTP, it is more expensive and difficult to install. In addition, the metallic shielding must be grounded at both ends. 
+If it is improperly grounded, the shield acts like an antenna and picks up unwanted signals. Because of its cost and difficulty with termination, STP is rarely used in Ethernet networks. STP is primarily used in Europe. Supports the same or higher speed than UTP.
+
+
+OSI Model 
+
+-consists of 7 layers : Application, Presentation, Session, Transport, Network, Data Link,Physical
+
+Application: user interaction, network services, protocols (eg. HTTP), provide a set of services
+Presentation: syntax processing, converting data from one format to another (encryption)
+Session: construction, direction and conclusion of connections (establishing connection)
+Transport: transmission of data across network connections (how much, how fast, where) TCP/UDP
+Network: routing the data, examine the data to conclude if it reached destination; IP address
+Data Link: most complex; divided into MAC & LLC; sets up links across the physical network, checks for transsmision errors, and packages the bits, 
+Physical : electrical / physical layer (cables, power plugs, transceiver, repeater); 
+
+
+
+
+
+
+
+
+
+

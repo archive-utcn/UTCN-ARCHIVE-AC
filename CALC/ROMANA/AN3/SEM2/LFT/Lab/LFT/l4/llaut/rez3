@@ -1,0 +1,96 @@
+
+Simbolul de start este : E
+
+Productiile gramaticii sint: 
+E -> T
+E -> E+T
+T -> F
+T -> T*F
+F -> i
+F -> (E)
+
+Setul neterminalelor este: 
+F , T , E , 
+
+Setul terminalelor este: 
+) , ( , i , * , + , 
+
+Starea de start stiva este : E
+Starea initiala a automatului este : q
+Setul starilor finale este : q
+Setul starilor automatului este : q
+
+Setul terminalelor automatului este: 
+) , ( , i , * , + , 
+
+Regulile automatului sint : 
+Eq -> Tq
+Eq -> T+Eq
+Tq -> Fq
+Tq -> F*Tq
+Fq -> iq
+Fq -> )E(q
+)q) -> q
+(q( -> q
+iqi -> q
+*q* -> q
++q+ -> q
+
+Setul simbolurilor stiva este : 
+E , T , F , + , * , i , ( , ) , 
+Introduceti sirul de intrare : 
+     T              q   i+i*i             E -> T
+     F              q   i+i*i             T -> F
+     i              q   i+i*i             F -> i
+                    q   +i*i              Acceptare lexem
+                                          Eroare
+                                          Eroare
+     )E(            q   i+i*i             F -> (E)
+                                          Eroare
+                                          Eroare
+     F*T            q   i+i*i             T -> T*F
+     F*F            q   i+i*i             T -> F
+     F*i            q   i+i*i             F -> i
+     F*             q   +i*i              Acceptare lexem
+                                          Eroare
+                                          Eroare
+     F*)E(          q   i+i*i             F -> (E)
+                                          Eroare
+                                          Eroare
+     F*F*T          q   i+i*i             T -> T*F
+     F*F*F          q   i+i*i             T -> F
+     F*F*i          q   i+i*i             F -> i
+     F*F*           q   +i*i              Acceptare lexem
+                                          Eroare
+                                          Eroare
+     F*F*)E(        q   i+i*i             F -> (E)
+                                          Eroare
+                                          Eroare
+     F*F*F*T        q   i+i*i             T -> T*F
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+     T+E            q   i+i*i             E -> E+T
+     T+T            q   i+i*i             E -> T
+     T+F            q   i+i*i             T -> F
+     T+i            q   i+i*i             F -> i
+     T+             q   +i*i              Acceptare lexem
+     T              q   i*i               Acceptare lexem
+     F              q   i*i               T -> F
+     i              q   i*i               F -> i
+                    q   *i                Acceptare lexem
+                                          Eroare
+                                          Eroare
+     )E(            q   i*i               F -> (E)
+                                          Eroare
+                                          Eroare
+     F*T            q   i*i               T -> T*F
+     F*F            q   i*i               T -> F
+     F*i            q   i*i               F -> i
+     F*             q   *i                Acceptare lexem
+     F              q   i                 Acceptare lexem
+     i              q   i                 F -> i
+                    q                     Acceptare lexem
+Expresie recunoscuta
+Introduceti sirul de intrare : 

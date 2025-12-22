@@ -1,0 +1,1053 @@
+
+				       Lucrarea nr. 4
+
+				         AUTOMATE
+
+     1. Scopul lucrarii:
+
+     - prezentarea echivalentelor gramatici regulate - automate finite 
+nedeterministe , expresii regulate - automate finite deterministe, gramatici 
+independente de context - automate push-down (top-down si bottom-up).
+
+     2. Notiuni teoretice
+
+     2.1 Gramatici regulate si automate finite nedeterministe
+
+     Pentru fiecare gramatica regulata G, exista un automat finit A astfel incit 
+L(A) = L(G).     
+     Plecind de la o gramatica regulata G=(T,N,P,Z) automatul finit echivalent 
+este A=(T,N U{f},R,Z,F), f ? F, unde R este construit in conformitate cu 
+urmatorul algoritm.
+     1. Daca X->t (X?N,t?T) este o productie din P, atunci Xt->f va fi o 
+productie din R.
+     2. Daca X->tY (X,Y?N,t?T) este o productie din P, atunci Xt->Y  va fi o 
+productie din R.
+     3. Setul starilor finale F = {f} U { X | X->? ? P}.
+     Implementarea cuprinde urmatoarele module:
+     gs.h - contine definitiile structurilor pentru productiile gramaticii, 
+setul multimilor terminale si neterminale, si declaratiile de tip "extern" 
+pentru interfatarea modulelor.
+     sintg.cpp - contine definitiile functiilor de incarcare in memorie a 
+productiilor unei gramatici descrise intr-un fisier argument.
+     termter.cpp - contine definitiile functiilor pentru construirea multimilor 
+de terminale si neterminale ale gramaticii alaturi de un set de functii de 
+manevra pentru manipularea seturilor.
+     regnedet.cpp - contine functiile pentru determinarea automatului din 
+gramatica.
+     automat.cpp - contine functiile pentru reprezentarea automatului sub forma 
+tabelara.
+     main.cpp - programul principal.
+     Plecind de la gramatica urmatoare: (C este simbolul de start)
+C
+C -> n    C -> nF   C -> .I
+F -> .I   F -> ES
+I -> n    I -> nX
+X -> ES
+S -> n    S -> +U   S -> -U
+U -> n
+programul determina setul neterminalelor {U , S , X , I , F ,C}
+si terminalelor {- , + , E , . , n} , construind apoi automatul cu starea de 
+start  C, setul terminalelor automatului {- , + , E , . , n}, setul starilor {f 
+, U , S , X , I , F , C } ,setul regulilor 
+
+Cn -> f Cn -> F C. -> I
+F. -> I FE -> S
+In -> f In -> X
+XE -> S 
+Sn -> f S+ -> U S- -> U
+Un -> f 
+si setul starilor finale : {f}.
+Programul furnizeaza si urmatoarea reprezentare a automatului:
+     -      +      E      .      n      
+f    0      0      0      0      0      
+U    0      0      0      0      {f}    
+S    {U}    {U}    0      0      {f}    
+X    0      0      {S}    0      0      
+I    0      0      0      0      {X,f}  
+F    0      0      {S}    {I}    0      
+C    0      0      0      {I}    {F,f}  
+
+     2.2 Expresii regulate si automate finite deterministe
+
+    Pentru fiecare expresie regulata R ce descrie un set de siruri S cu elemente 
+din T exista un automat finit determinist A=(T,Q,P,q0,F) astfel incit L(A)=S.
+     Construirea automatului se face in conformitate cu algoritmul lui G. Berry 
+. Mai intii transformam expresia regulata R in expresia R' inlocuind elementele 
+din T ce apar in R prin simboluri distincte ( aparitii multiple ale aceluiasi 
+element primesc simboluri distincte ).Ex: Daca R = (ab|b)*ba , atunci R'= 
+(a1b2|b3)b4a5#.Starile automatului corespund subseturilor setului de simboluri.De 
+exemplu automatul echivalent expresiei regulate R este:
+               b
+            ------------- ------------
+           |     ------->| b(ab|b)*ba |
+           v    | a       ------------      
+Start     -----------           b           ---------------
+-------->| (ab|b)*ba |<-------------------|| b(ab|ba)*ba|1 ||
+          -----------                       ---------------
+               |                                    ^
+               |    b     -------------      a      |
+                -------->| (ab|b)*ba|a |------------
+                          -------------
+                           |        ^
+                           |   a    |
+                            ---------
+     Constructia unui automat determinist A pornind de la o expresie regulata 
+marcata R' se face in conformitate cu urmatorul algoritm:
+     1. A are o stare de start si cite o stare pentru fiecare simbol marcat ai a 
+lui R'
+     2. Construim o tranzitie din starea start in starea pentru ai daca si numai 
+daca ai?first(R').
+     3. Construim o tranzitie din starea pentru bj in starea pentru ai daca si 
+numai daca ai?followR'#(bj).
+     4. Starea ai este o stare acceptata <=> # ? followR'#(ai).
+in care first(E) = {a|av?L(E)} , followE(a) = {b | uabv?L(E)} iar # reprezinta 
+marcatorul de sfirsit de sir.
+
+     Implementarea (fisierul reg.y) s-a facut in urmatoarele etape:
+     1. Construirea pe baza unei gramatici LR pentru expresii regulate descrisa 
+cu ajutorul utilitarului YACC a arborelui sintactic corespunzator expresiei 
+regulate date ca argument ( arborele este reprezentat prin masivele : 
+name,left,right,parent)
+Astfel pentru expresia (ab|b)*ba obtinem:
+        0  1  2  3  4  5  6  7  8  9 10
+name    0  a  b  &  b  |  *  b  &  a  &
+left    0  0  0  1  0  3  5  0  6  0  8
+right   0  0  0  2  0  4  0  0  7  0  9
+parent  0  3  3  5  5  6  8  8 10 10 11
+     2. Folosind functiile cfoll,cfollow,cfirst se determina seturile first si 
+follow pentru fiecare element al expresiei:
+        0  1  2  3  4  5  6  7  8  9 10
+follow  0  0  2  0  2  0  0  6  0  8  0
+sets    1  2  3  1  4  7  1  9  1 11
+#
+        a{11}
+    &
+            b{9}
+        &
+            *
+                    b{1,4,7}
+                |
+                        b{1,4,7}
+                    &
+                        a{2}
+     3. Functia cgotofn construieste automatul:
+      a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s
+ 0 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 1 0  2  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 2 0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 3 0  4  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+ 4 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+     4. Pe baza tabelei automatului se recunosc toate aparitiile expresiei 
+regulate in sirul dat ca al doilea argument.Daca acesta este abba se vor 
+recunoaste aparitiile:ABBA,aBBA,abBA.
+
+     2.3 Gramatici independente de context(GIC) si automate stiva (push-down)
+
+    Pentru orice GIC G, exista un automat push-down A astfel incit L(A)=L(G).
+     
+     2.3.1 Analiza descendenta
+      Pentru orice GIC G=(T,N.P,Z) ,automatul stiva echivalent este A = 
+(T,{q},R,q,{q},V,Z),cu V=TUN si R = {tqt -> q | t?T} U {Bq -> bn ... b1q | B -> 
+b1...bn?P, n>=0,B?N,bi?V}.Acest automat accepta siruri din L(G) construind o 
+derivare cea mai din stinga a acestora.
+     Modulele principale contin:
+     gs.h - definirea structurilor pentru memorarea productiilor, seturilor de 
+simboluri si functiile de interfatare
+     sintg.cpp,termter.cpp - vezi 2.1.
+     lldet.cpp - functiile pentru determinarea automatului
+     automat.cpp - functiile pentru derivarea prin backtracking a unei intrari 
+oarecare(automatul e nedeterminist):
+     Pentru gramatica :
+E
+E -> T      E -> E+T
+T -> F      T -> T*F
+F -> i      F -> (E)           obtinem automatul:
+Starea de start stiva este : E
+Starea initiala a automatului este : q
+Setul starilor finale este : q
+Setul starilor automatului este : q
+Setul terminalelor automatului este: ) , ( , i , * , + 
+Regulile automatului sint : 
+Eq -> Tq Eq -> T+Eq
+Tq -> Fq Tq -> F*Tq
+Fq -> iq Fq -> )E(q
+)q) -> q (q( -> q iqi -> q *q* -> q +q+ -> q
+Setul simbolurilor stiva este : 
+E , T , F , + , * , i , ( , ) , 
+
+     2.3.2 Analiza ascendenta
+      Pentru orice GIC G=(T,N,P,Z) ,automatul stiva echivalent este A = 
+(T,{q},R,q,{q},V,?),cu V=TUN si R = {qt -> tq | t?T} U {x1...xnq -> Xq | X -> 
+x1...xn?P, n>=0,X?N,xi?V} U {Zq -> q} .
+Acest automat accepta siruri din L(G) construind inapoi o derivare cea mai din 
+dreapta a sirurilor.
+     Modulele principale contin:
+     gs.h,sintg.cpp,termter.cpp - vezi 2.1.
+     lrdet.cpp - functiile pentru determinarea automatului
+     automat.cpp - functiile pentru derivarea prin backtracking a unei intrari 
+oarecare ( automatul e nedeterminist ) :
+     Pentru gramatica de la 2.3.1 obtinem automatul:
+Starea de start stiva este : ? 
+Starea initiala a automatului este : q
+Setul starilor finale este : q
+Setul starilor automatului este : q
+Setul terminalelor automatului este: ) , ( , i , * , + 
+Regulile automatului sint : 
+Eq -> q
+Tq -> Eq   E+Tq -> Eq
+Fq -> Tq   T*Fq -> Tq
+iq -> Fq   (E)q -> Fq
+q) -> )q   q( -> (q   qi -> iq   q* -> *q   q+ -> +q
+Setul simbolurilor stiva este : E , T , F , + , * , i , ( , )  
+
+     3. Desfasurarea lucrarii
+
+     1. Se vor studia automatele nedeterministe echivalente mai multor gramatici 
+regulate.
+     2. Se vor studia automatele deterministe echivalente mai multor expresii 
+regulate identificind seturile PRIM si FOLLOW pentru fiecare simbol in parte.
+     3. Se vor trasa functiile cfoll,cfollow,cfirst din fisierul reg.y si se va 
+explica modul de functionare.
+     4. Se va studia modul de lucru top-down al unui automat stiva relevind 
+derivarile cele mai din stinga pe diferite exemple.
+     5. Se va studia modul de lucru bottom-up al unui automat stiva relevind 
+derivarile cele mai din dreapta pe diferite exemple.
+
+     4. Intrebari si dezvoltari
+
+     1. Sa se implementeze functia de acceptare pentru un automat finit 
+nedeterminist.
+     2. Sa se implementeze algoritmul de constructie al unui automat finit 
+determinist echivalent unei gramatici regulate.
+     3. Sa se dezvolte programul reg.y astfel incit sa fie recunoscute si alte 
+facilitati tipice expresiilor regulate ( intervalele [l1-l2], senzitivitatea 
+(^,$),etc. ).
+     4.  Sa se specifice care este diferenta intre automatele bottom-up si 
+top-down?
+     5. Sa se modifice functiile de acceptare din fisierele automat.cpp 
+corespunzatoare celor doua tipuri de automate stiva, astfel incit intr-o 
+structura de acumulare sa se adune calea corespunzatoare derivarilor celei mai 
+din stinga si respectiv celei mai din dreapta.
+
+     5. Programe
+
+      GRAMATICI REGULATE = AUTOMATE FINITE NEDETERMINISTE     
+
+FISIERUL: gs.h
+#include <stdio.h>
+typedef enum{False,True} bool;
+
+// Definitia structurii ce contine regulile gramaticii
+typedef struct _prod{
+	char *car;
+	char *cdr;
+	struct _prod *urm;
+	}prod;
+
+// Definitia structurii seturilor simbolurilor terminale si neterminale
+typedef struct _set{
+	char *simbol;
+	struct _set *urm;
+	}set;
+// Date comune
+ extern set *automat[128][128];
+// Alocator de memorie
+extern char * makesir(char *);
+// Interfata pentru crearea structurii ce contine regulile gramaticii
+extern char* getsymb(FILE *);
+extern char*  umplestruct(FILE *,prod *);
+extern void  tipstruct(prod *);
+// Interfata pentru construirea seturilor de terminale si neterminale
+extern set* determin_set_neterminale(prod *);
+extern set* determin_set_terminale(prod *,set *);
+extern void tiparire_set(set *);
+extern set* introdu_simbol_set(char*, set*);
+extern void print_set(set *);
+// Interfata pentru construirea automatului
+char *determinare_stare_start(char *);
+set *determinare_set_terminale_automat(set *);
+set *determinare_stari_automat(set *);
+prod *determinare_reguli_automat(prod *);
+set *determinare_set_stari_finale(prod *);
+// Interfata pentru construirea tabelei automatului
+extern void tabel_automat(set *,prod *);
+extern void print_automat(set *,set *);
+
+FISIERUL: sintg.cpp
+
+#include <stdio.h>
+#include <string.h>
+#include <alloc.h>
+#include "gs.h"
+
+// Alocator de memorie pentru siruri
+char *makesir(char *s)
+{ char *p;
+  return strcpy(p=(char *)malloc(strlen(s)+1),s);
+}
+
+// Extrage dintr-un fisier componentele regulilor gramaticii
+char * getsymb(FILE *f)
+{ char c=' ';
+  char id[20];
+  char *sir;
+  int k=0;
+  while( c == ' ' || c == '\t' || c == '\n') c=getc(f);
+  if(c != EOF){
+	while(c != ' ' && c != '\t' && c != '\n'){
+		id[k++]=c;
+		c=getc(f);
+		}
+	id[k++]='\0';
+	sir = makesir(id);
+	return sir;
+	}
+  else return NULL;
+  }
+
+char *  umplestruct(FILE *f,prod *pu)
+{
+  prod *q;
+  char *sir;
+  char * start = makesir(getsymb(f));
+  while((sir = getsymb(f)) != NULL){
+	pu->car=makesir(sir);
+	(void)getsymb(f); //extragere ->
+	sir = getsymb(f);
+	pu->cdr=makesir(sir);	
+	pu->urm=new prod;
+	q=pu;	pu=pu->urm;
+	}
+  q->urm=NULL; delete pu;
+  return start;
+  }
+
+void  tipstruct(prod *q)
+{
+   while(q != NULL){
+	printf("%s -> ",q->car);
+	printf("%s\n",q->cdr);
+	q=q->urm;
+	}
+ }
+
+FISIERUL: termter.cpp
+#include "gs.h"
+#include <string.h>
+
+set* introdu_simbol_set(char *simb,set *s)
+bool is_member(char *simb,set *s)
+void tiparire_set(set *s)
+void print_set(set *s)
+
+set* determin_set_neterminale(prod *p)
+{ set *neterm = NULL;
+  for(prod *q = p; q != NULL ; q = q->urm)
+      neterm = introdu_simbol_set(q->car,neterm);
+  return neterm;
+}
+
+set * determin_set_terminale(prod *p,set *neterm)
+{ set *term = NULL;
+  for(prod *q = p;q != NULL ; q = q->urm)
+	for(char *c = q->cdr; *c != '\0' ; c++){
+		char termin[2];
+		strncpy(termin,c,1);
+		termin[1]='\0';
+		if(! is_member(termin,neterm))
+		term = introdu_simbol_set(termin,term);
+		}
+  return term;
+}
+
+FISIERUL: regnedet.cpp
+#include "gs.h"
+#include <string.h>
+
+char *determinare_stare_start(char *s)
+{ return s;}
+set *determinare_set_terminale_automat(set *term)
+{ return term;}
+set *determinare_stari_automat(set *neterm)
+{ return introdu_simbol_set("f",neterm);}
+
+prod *determinare_reguli_automat(prod *productii)
+{
+ prod *reguli,*pr,*q;
+ reguli=pr= new prod;
+ while( productii != NULL){
+     if( strlen(productii->cdr) == 1){ 
+                               //   X -> t cu X=nonterminal
+       		             //  t=terminal
+  	if(strcmp(productii->cdr,"$")){
+                     // productia nu e vida
+		char sir[5];
+		strcpy(sir,productii->car);
+                	strcat(sir,productii->cdr);
+		pr->car = makesir(sir);strcpy(sir,"f");
+		pr->cdr = makesir(sir);pr->urm = new prod;
+		q = pr;pr = pr->urm;
+		}
+  	}
+     else {   // X -> tY cu X,Y = nonterminal
+   	  // t = terminal
+	char sir[5];
+	strcpy(sir,productii->car);
+            strncat(sir,productii->cdr,1);
+	pr->car = makesir(sir);
+            pr->cdr = makesir(productii->cdr+1);
+	pr->urm = new prod;q = pr;pr = pr->urm;
+	}
+   productii = productii -> urm;
+   }
+  q->urm = NULL;
+  return reguli;
+  }
+
+set *determinare_set_stari_finale(prod *productii)
+{ set *s = NULL;
+  s = introdu_simbol_set("f",s);
+  for( ; productii != NULL ; productii = productii->urm)
+	if(!strcmp(productii->cdr,"$"))
+	       s = introdu_simbol_set(productii->car,s);
+  return s;
+ }
+
+FISIERUL: automat.cpp    
+#include "gs.h"
+#include <string.h>
+#include <stdio.h>
+void tabel_automat(set *stari,prod *reguli)
+{
+ for(set *s =stari ; s != NULL ; s = s->urm)
+      for( prod *r = reguli; r != NULL ; r=r->urm){
+	char c[2];
+	strncpy(c,r->car,1);
+	c[1]='\0';
+	if( !strcmp(c,s->simbol)){
+		automat[*c][*(r->car+1)]=
+		introdu_simbol_set(r->cdr,automat[*c][*(r->car+1)]);
+}     }	}
+void print_automat(set *term,set *stari);
+
+      EXPRESII REGULATE = AUTOMATE FINITE DETERMINISTE        
+
+FISIERUL: reg.y 
+/* Expresii regulate
+	c		orice caracter nespecial
+	r*		zero sau mai multe aparitii a expresiei r
+	r1r2		r1 urmat de r2
+	r1|r2		r1 sau r2
+	(r)		expresia regulata r poate fi incuibarita
+*/
+
+/* Precedenta operatori */
+
+%term CHAR OR CAT STAR
+%left OR
+%left CHAR
+%left CAT
+%left STAR
+
+%{
+#include <stdio.h>
+#include <process.h>
+#include <ctype.h>
+
+#define TRUE 1
+#define FALSE 0
+#define NOTFOUND -1
+
+char *ind = "                                        ";
+char t[3]={'|', '&', '*'};
+
+#define MAXLIN 350
+#define MAXSET 400
+#define NCHARS 128
+#define NSTATES 128
+#define FINAL -1
+#define NIL 0
+#define ITMPSTAT for(count=0,i=1; i<=line; i++) tmpstat[i] = FALSE
+
+typedef int STATE;
+
+char gotofn[NSTATES][NCHARS], out[NSTATES];
+STATE state[NSTATES], nstates;
+
+int name[MAXLIN],left[MAXLIN],right[MAXLIN],parent[MAXLIN],follow[MAXLIN];
+
+int line=1,sets[MAXSET],nextset;
+
+char *input,*cmd;
+
+int count,tmpstat[MAXLIN], dflag;
+
+/* Declaratii functii */
+
+void cfollow(int);
+void include(int*,int);
+void execute(char *);
+void prstr(char*,char*,char*);
+void prautom(void);
+void prtrarr(void);
+void prfoll(void);
+void prstates(void);
+
+%}
+
+%%
+
+s	:	r	={ unary(FINAL, $1); line--;}
+	;
+
+r	:	CHAR		={ $$ = enter($1); }
+	|	r OR r          ={ $$ = node(OR,$1,$3);}
+	|	r r %prec CAT   ={ $$ = node(CAT,$1,$2);}
+	|	r STAR		={ $$ = unary(STAR,$1);}
+	|       '(' r ')'       ={ $$ = $2; }
+	|	error
+	;
+%%
+
+void yyerror(s)    char *s;
+{ fprintf(stderr, "%s: %s\n",cmd,s);
+  exit(1);
+}
+void overflo()
+{ fprintf(stderr,"%s: expresie regulata este prea mare",cmd);
+  exit(1);
+}
+
+yylex(void)
+{  register char c;
+   switch(c = *input++){
+	case '|' : return OR;
+	case '*' : return STAR;
+	case '(' :
+	case ')' : return c;
+	case '\0': return 0;
+	default  : yylval= c; return CHAR;
+	}
+}
+
+enter(x)
+{ if(line >= MAXLIN)
+	overflo();
+  name[line]=x; left[line]=right[line]=NIL;
+  return line++;
+}
+
+node(x,l,r)
+{ if(line >= MAXLIN)
+	overflo();
+  name[line]=x; left[line]=l; right[line]=r;
+  parent[l]=parent[r]=line;
+  return line++;
+}
+
+unary(x,l)
+{ if(line >= MAXLIN)
+	overflo();
+  name[line]=x; left[line]=l; right[line]=NIL;
+  parent[l]=line;
+  return line++;
+}
+
+void cfoll(v)
+{  register i;
+   if(left[v] == NIL) { /* atom */
+	ITMPSTAT;
+	cfollow(v);
+	include(follow,v);
+	}
+   else{
+	cfoll(left[v]);
+	if(right[v] != NIL)
+		cfoll(right[v]);
+	}
+}
+
+void cfollow(v)
+{  int p;
+   if (v == line)
+	return;
+   p=parent[v];
+   switch(name[p]){
+	case STAR: cfirst(v); cfollow(p); return;
+	case OR :  cfollow(p); return;
+	case CAT : if (v == left[p]) { /* fiul sting */
+			if(cfirst(right[p]))
+				cfollow(p);
+			}
+		   else
+			cfollow(p);
+		   return;
+	case FINAL : if (!tmpstat[line]){
+				tmpstat[line]=TRUE;
+				count++;
+				}
+     	return;
+	}
+}
+
+int cfirst(v)
+{ /* TRUE - EMPTY  incluse; FALSE - EMPTY neincluse */
+  register b;
+  if(left[v] == NIL){ /* atom */
+	if(!tmpstat[v]){
+		tmpstat[v]=TRUE;count++;
+		}
+	return FALSE;
+	}
+  else if(right[v] == NIL) { /* unary : STAR */
+	cfirst(left[v]);
+	return TRUE;
+	}
+  else if(name[v] == CAT){
+	return cfirst(left[v]) && cfirst(right[v]);
+	}
+  else{  /* OR */
+	b = cfirst(right[v]);
+	return cfirst(left[v]) || b;
+	}
+}
+
+void include(int *array,int n)
+{ register i,j,set;
+  for(i=0;i<nextset;i+=sets[i]+1){
+	if(sets[i] == count){
+		for(j=0,set=i+1; j < count; j++)
+			if(!tmpstat[sets[set++]])
+				goto next;
+		array[n] = i;
+		return;
+		}
+	next: ;
+  }
+  if(nextset+count > MAXSET)
+	overflo();
+  array[n] = nextset;  sets[nextset++] = count;
+  for(i=0;i<=line;i++)
+	if(tmpstat[i])
+		sets[nextset++] = i;
+}
+
+void cgotofn()
+{  register c,i,k;
+   STATE n,s;
+   char symbol[NCHARS];
+   int set,curnode,num;
+   int number,newnode;
+   STATE x;
+   ITMPSTAT;
+   include(state,0);
+   if(cfirst(line-1)){
+	tmpstat[line]=TRUE;
+	count++; out[1]=TRUE;
+	}
+   include(state,nstates=1);
+   if(dflag)
+	prstates();
+   for(n=s=1;s<=n;s++){
+	/* extragere caractere asteptate in s (in symbol[]) */
+	for(i=0;i<NCHARS;i++)
+		symbol[i]=FALSE;
+	num=sets[state[s]];
+	for(i=0,set=state[s]+1;i<num;i++,set++){
+		curnode = sets[set];
+		if((c = name[curnode]) >= 0){
+			if(c < NCHARS)
+				symbol[c] = TRUE;
+			else
+				printf("combinatie ciudata\n");
+		}
+	}
+
+	/* gotofn[s][0..NCHAR-1] */
+	for(c=0;c<NCHARS;c++)
+		if(symbol[c]){
+			/* nextstate(s,c) */
+			ITMPSTAT;
+			for(i=0,set=state[s]+1;i<num;i++,set++){
+				curnode=sets[set];
+				if(name[curnode] == c){
+					number=sets[follow[curnode]];
+					newnode=follow[curnode]+1;
+					for(k=0;k<number;k++,newnode++)
+						if(!tmpstat[sets[newnode]]){
+							tmpstat[sets[newnode]] = TRUE;
+							count++;
+							}
+					}
+			} /* end nextstate */
+
+		if((x=getstate(n)) != NOTFOUND)
+			gotofn[s][c] = x;
+		else{
+			if(n >= NSTATES)
+				overflo();
+			include(state,nstates = ++n);
+			if(dflag)	prstates();
+			if(tmpstat[line])
+				out[n]=TRUE;
+			gotofn[s][c]=n;
+			}
+		}
+	}
+}
+
+STATE getstate(n)
+{  register i,j,set;
+   for(i=0;i <= n; i++){
+	if(sets[state[i]] == count){
+		for(set = state[i]+1, j=0; j < count; j++)
+			if(!tmpstat[sets[set++]])
+				goto next;
+			return i;
+			}
+		next: ;
+		}
+	return NOTFOUND;
+}
+
+void main(int argc, char *argv[])
+{ int ac;
+  char **av,*w;
+  ac=argc; av=argv;
+  while(ac-- > 0 )
+	printf(" %s",*av++);
+  putchar('\n');
+  cmd=argv[0];
+  while(--argc > 0 && (++argv)[0][0] == '-'){
+	w=argv[0]+1;
+	while(*w)
+		switch(*w++){
+			case 'd' : dflag++; continue;
+			default : goto ext;
+			}
+	}
+  if(argc < 2){
+ext:	fprintf(stderr, "Usage: %s [-d] xreg string\n",cmd);
+	exit(1);
+	}
+  input = *argv++;
+  yyparse();
+  if(dflag){
+	prtrarr();printf("\n\n\n");getch();
+	}
+  cfoll(line-1);
+  if(dflag){
+	prfoll();printf("\n\n\n");getch();
+	}
+  cgotofn();
+  if(dflag){
+	prautom();printf("\n\n\n");getch();
+	}
+  execute(*argv);
+  exit(0);
+}
+
+void execute(char *str)
+{  register char *q, *s, *mem;
+   register stat;
+   mem=str;
+   while(*str){
+	s=q=str;
+	stat=1;
+	while(*q){
+		if(!(stat = gotofn[stat][*q++&0177]))
+			break;
+		if(out[stat])
+			s=q;
+		}
+	if(s > str || out[1])
+		prstr(str,s,mem);
+	str++;
+	}
+}
+// functii de tiparire
+void prstr(char *p,char *q,char *start);
+void prtree(i,n);
+void prautom();
+void prtrarr(), prfoll(), prstates();
+
+
+                  GIC = AUTOMATE STIVA TOP-DOWN               
+
+FISIERUL: lldet.cpp 
+#include "gs.h"
+#include <string.h>
+
+char *determinare_simbol_stiva_start(char *s)
+{ return s;}
+
+char *determinare_stare_initiala_automat(void)
+{ return makesir("q");}
+
+char *determinare_set_stari_finale(void)
+{ return makesir("q");}
+
+char *determinare_stari_automat(void)
+{ return makesir("q");}
+
+set *determinare_set_terminale_automat(set *term)
+{ return term;}
+
+prod *determinare_reguli_automat(prod *productii,set *term)
+{prod *reguli,*pr,*q;
+ reguli=pr= new prod;
+ while( productii != NULL){
+		char sir[5];
+		strcpy(sir,productii->car);
+		strcat(sir,"q");
+		pr->car = makesir(sir);
+		strcpy(sir,strrev(productii->cdr));
+		strcat(sir,"q");
+		pr->cdr = makesir(sir);
+		pr->urm = new prod;
+		pr = pr->urm;
+		productii = productii->urm;
+		}
+  while( term != NULL){
+		char sir[5];
+		strcpy(sir,term->simbol);
+		strcat(sir,"q");
+		strcat(sir,term->simbol);
+		pr->car=makesir(sir);
+		pr->cdr = makesir("q");
+		pr->urm = new prod;
+		q = pr;
+		pr = pr->urm;
+		term = term->urm;
+		}
+  q->urm = NULL;
+  return reguli;
+  }
+
+set *determinare_set_simboluri_stiva_automat(set *term,set *neterm)
+{ set *s = NULL;
+  for( ; term != NULL ; term = term->urm)
+		s = introdu_simbol_set(term->simbol,s);
+  for( ; neterm != NULL ; neterm = neterm->urm)
+		s = introdu_simbol_set(neterm->simbol,s);
+  return s;
+}
+
+FISIERUL: automat.cpp
+
+#include "gs.h"
+#include <string.h>
+#include <stdio.h>
+#include <conio.h>
+
+void tiparire_situatie(char *stivanoua,char *input,prod *reguli)
+{
+ printf("\n     %-15sq   %-15s",stivanoua,input);
+ char sir[15];
+ strncpy(sir,reguli->car,1);
+ sir[1]='\0';
+ strcat(sir, " -> ");
+ strcat(sir,strrev(reguli->cdr)+1);
+ strrev(reguli->cdr);
+ printf("   %s",sir);
+ getch();
+ }
+
+bool acceptare(char *stiva,char *stare,char *input,prod *reg,set *term)
+{
+ prod* reguli = reg;
+ if( !strcmp(stiva,"") && !strcmp(input,""))
+	return True;
+ if( ( !strcmp(stiva,"") && strcmp(input,"") ) ||
+     ( strcmp(stiva,"") && !strcmp(input,"") ))
+	return False;
+ if ( strlen(stiva) > strlen(input))
+	return False;
+ char sir[15];
+ strncpy(sir,strrev(stiva),1);
+ strrev(stiva);
+ sir[1]='\0';
+ if( ! is_member(sir,term)){ // este un neterminal
+	strcat(sir,"q");
+	while( reguli != NULL){
+		if( !strcmp(reguli->car,sir)){
+			//am identificat o regula aplicabila
+			char sir1[15];
+			strncpy(sir1,stiva,strlen(stiva)-1);
+			sir1[strlen(stiva)-1]='\0';
+			strncat(sir1,reguli->cdr,strlen(reguli->cdr)-1);
+			char *stivanoua=makesir(sir1);
+			char *inputnou=makesir(input);
+			tiparire_situatie(stivanoua,inputnou,reguli);
+			if ( acceptare(stivanoua,stare,inputnou,reg,term))
+				return True;
+			printf("\n                                          Eroare");
+			}
+		reguli = reguli->urm;
+		}
+	return False;
+	}
+ // este terminal
+ strcat(sir,"q");
+ strncat(sir,input,1);
+ while( reguli != NULL){
+	if( !strcmp(reguli->car,sir)){
+		//am identificat o regula aplicabila
+		char sir1[15];
+		strncpy(sir1,stiva,strlen(stiva)-1);
+		sir1[strlen(stiva)-1]='\0';
+		char *stivanoua=makesir(sir1);
+		char *inputnou=makesir(input+1);
+		printf("\n     %-15sq   %-15s",stivanoua,inputnou);
+		printf("   Acceptare lexem");
+		if(acceptare(stivanoua,stare,inputnou,reg,term))
+			return True;
+		printf("\n                                        Eroare");
+		}
+	reguli = reguli->urm;
+	}
+ return False;
+ }
+
+                GIC =  AUTOMATE STIVA BOTTOM-UP                
+
+FISIERUL: lrdet.cpp
+#include "gs.h"
+#include <string.h>
+char *determinare_simbol_stiva_start()
+{ return makesir("");}
+
+char *determinare_stare_initiala_automat(void)
+{ return makesir("q");}
+
+char *determinare_set_stari_finale(void)
+{ return makesir("q");}
+
+char *determinare_stari_automat(void)
+{ return makesir("q");}
+
+set *determinare_set_terminale_automat(set *term)
+{ return term;}
+
+prod *determinare_reguli_automat(prod *productii,set *term,char *start)
+{
+ prod *reguli,*pr,*q;
+ reguli=pr= new prod;
+ // Adaugare regula Zq -> q
+ char sir[10];
+ strcpy(sir,start);
+ strcat(sir,"q");
+ pr->car = makesir(sir);
+ pr->cdr = makesir("q");
+ pr->urm = new prod;
+ pr = pr->urm;
+ // Adaugare reguli X1...Xnq -> Xq  daca    X -> X1...Xn apartine gramaticii
+ while( productii != NULL){
+		strcpy(sir,productii->cdr);
+		strcat(sir,"q");
+		pr->car = makesir(sir);
+		strcpy(sir,productii->car);
+		strcat(sir,"q");
+		pr->cdr = makesir(sir);
+		pr->urm = new prod;
+		pr = pr->urm;
+		productii = productii->urm;
+		}
+ // Adaugare productii qt -> tq daca t e simbol terminal
+  while( term != NULL){
+		strcpy(sir,"q");
+		strcat(sir,term->simbol);
+		pr->car=makesir(sir);
+		pr->cdr = makesir(strrev(sir));
+		pr->urm = new prod;
+		q = pr;
+		pr = pr->urm;
+		term = term->urm;
+		}
+  q->urm = NULL;
+  return reguli;
+  }
+
+set *determinare_set_simboluri_stiva_automat(set *term,set *neterm)
+{ set *s = NULL;
+  for( ; term != NULL ; term = term->urm)
+		s = introdu_simbol_set(term->simbol,s);
+  for( ; neterm != NULL ; neterm = neterm->urm)
+		s = introdu_simbol_set(neterm->simbol,s);
+  return s;
+}
+
+FISIERUL: automat.cpp
+
+#include "gs.h"
+#include <string.h>
+#include <stdio.h>
+#include <conio.h>
+
+void tiparire_situatie(char *stivanoua,char *input,prod *reguli)
+{printf("\n     %-15sq   %-15s",stivanoua,input);
+ char sir[15]; strncpy(sir,reguli->car,1);
+ sir[1]='\0';  strcat(sir, " -> ");
+ strcat(sir,strrev(reguli->cdr)+1);
+ strrev(reguli->cdr);
+ printf("   %s",sir);
+ getch(); }
+
+bool acceptare(char *stiva,char *stare,char *input,prod *reg,set *term)
+{prod* reguli = reg;
+ if( !strcmp(stiva,"") && !strcmp(input,""))
+	return True;
+ char sir[15];
+ while( reguli != NULL){
+	strcpy(sir,stiva);
+	strcat(sir,"q");
+	if( !strcmp(reguli->car,sir+strlen(sir)-strlen(reguli->car))){
+		//am identificat o regula aplicabila
+		if( !strcmp(reguli->car,"Eq") && strcmp(input,"")){
+			reguli = reguli->urm;
+			continue;
+			}
+		char sir1[15];
+		if(strlen(sir) > strlen(reguli->car)){
+			strncpy(sir1,sir,strlen(sir)-strlen(reguli->car));
+			sir1[strlen(stiva)-strlen(reguli->car)+1]='\0';
+			}
+		else	strcpy(sir1,"");
+		strncat(sir1,reguli->cdr,strlen(reguli->cdr)-1);
+		char *stivanoua=makesir(sir1);
+		char *inputnou=makesir(input);
+		printf("\n     %-15sq   %-15s",stivanoua,inputnou);
+		printf("   Reducere");
+		getch();
+		if(acceptare(stivanoua,stare,inputnou,reg,term)) return True;
+		printf("\n                                          Eroare");
+		}
+	reguli = reguli->urm;
+	}
+ strcpy(sir,"q");
+ strncat(sir,input,1);
+ reguli = reg;
+  while( reguli != NULL){
+	if( !strcmp(reguli->car,sir)){
+		//am identificat o regula aplicabila
+		char sir1[15];
+		strcpy(sir1,stiva);
+		strncat(sir1,input,1);
+		char *stivanoua=makesir(sir1);
+		char *inputnou=makesir(input+1);
+		printf("\n     %-15sq   %-15s",stivanoua,inputnou);
+		printf("   Deplasare");
+		getch();
+		if(acceptare(stivanoua,stare,inputnou,reg,term)) return True;
+		printf("\n                                          Eroare");
+		}
+	reguli = reguli->urm;
+	}
+ return False;  }
+ 
+
+ 
+ 
+
+
+

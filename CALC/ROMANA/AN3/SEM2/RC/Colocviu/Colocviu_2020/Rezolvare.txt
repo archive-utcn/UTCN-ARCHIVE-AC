@@ -1,0 +1,21 @@
+1,2. 
+
+a. cele 2 pc-uri sunt in subretele diferite, si nu avem un router prin care sa comunice 
+configure terminal
+interface fa0/4 
+switchport mode access
+switchport access vlan 2
+
+configure terminal
+interface fa0/3 
+switchport mode access
+switchport access vlan 3
+
+b. prioritatea mai mica va deveni root bridge, switch 4. 
+
+c. EtherChannel, e mai rapid, mai putin costisitor decat fastEthernet
+
+
+3.seteaza o ruta statica spre destinatie (2002.acad.4) prin gateway 2002.acad.3.2
+
+4.

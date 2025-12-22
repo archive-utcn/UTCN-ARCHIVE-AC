@@ -1,0 +1,203 @@
+Am implementat cei doi algoritmii:
+1. traversarea in latime
+2. doua treceri cu clase de echivalenta
+si i-am testat pentru imaginea "letters".
+
+void traversareLatime() {
+
+	char fname[MAX_PATH];
+	if (!openFileDlg(fname))
+		return;
+
+	int label = 0;
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	
+
+	Mat_<uchar> img = imread(fname, IMREAD_GRAYSCALE);
+	Mat labels(img.rows, img.cols, CV_32SC1, Scalar(0));
+	Mat dst(img.rows, img.cols, CV_8UC3);
+
+	int height = img.rows;
+	int width = img.cols;
+
+	for ( i = 0; i < height ; i++)
+	{
+		for ( j = 0; j < width ; j++)
+		{
+			if (img.at<uchar>(i, j) == 0 && labels.at<int>(i, j) == 0)
+			{
+				label++;
+				std::queue<Point> Q;
+				labels.at<int>(i, j) = label;
+				Q.push(Point(j, i));
+
+				while (!Q.empty())
+				{
+					Point q = Q.front();
+					Q.pop();
+					int di[8] = { -1, 0, 1, 0, -1, -1, 1, 1 };
+					int dj[8] = { 0, -1, 0, 1, 1, -1, 1, -1 };
+
+					for ( k = 0; k < 8; k++)
+					{
+						if (isInside(img, q.y + dj[k], q.x + di[k]) == true)
+						{
+							if (img.at<uchar>(q.y + dj[k], q.x + di[k]) == 0 && labels.at<int>(q.y + dj[k], q.x + di[k]) == 0)
+							{
+								labels.at<int>(q.y + dj[k], q.x + di[k]) = label;
+								Q.push(Point(q.x + di[k], q.y + dj[k]));
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	std::vector<Vec3b> colors;
+	std::default_random_engine eng;
+	std::uniform_int_distribution<int> d(0, 255);
+	for (i = 0; i <= label; i++)
+	{
+		colors.push_back(Vec3b(d(eng), d(eng), d(eng)));
+	}
+
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			if (labels.at<int>(i, j) != 0)
+				dst.at<Vec3b>(i, j) = colors[labels.at<int>(i, j)];
+		}
+	}
+
+
+	imshow("before", img);
+	imshow("after", dst);
+	waitKey(0);
+}
+
+
+void douaTreceri()
+{
+	    char fname[MAX_PATH];
+		if (!openFileDlg(fname))
+			return;
+		
+		Mat_<uchar>img = imread(fname, IMREAD_GRAYSCALE);
+		Mat dst = Mat(img.rows, img.cols, CV_8UC3);
+		Mat labels = Mat::zeros(img.rows, img.cols, CV_32SC1);
+		std::vector<std::vector<int>> edges = std::vector<std::vector<int>>(500);
+		int label = 0;
+		int i = 0;
+		int j = 0;
+		int d = 0;
+		int x = 0;
+		int y = 0;
+		int newLabel = 0;
+		int height = img.rows;
+		int width = img.cols;
+		int di[] = { -1, -1, -1, 0, 0, 1, 1, 1 };
+		int dj[] = { -1, 0, 1, -1, 1, -1, 0, 1 };
+		
+
+		for (i = 0; i < height - 1; i++)
+		{
+			for (j = 0; j < width - 1; j++)
+			{
+				if ((0 == img.at<uchar>(i, j)) && (0 == labels.at<int>(i, j)))
+				{
+					std::vector<int> L;
+
+					for ( d = 0; d < 8; d++)
+					{
+						if (labels.at<int>(i + di[d], j + dj[d]) > 0)
+						{
+							L.push_back(labels.at<int>(i + di[d], j + dj[d]));
+						}
+					}
+
+					if ( L.size()==0)
+					{
+						label++;
+						labels.at<int>(i, j) = label;
+					}
+					else
+					{
+						 x = *min_element(L.begin(), L.end());
+						labels.at<int>(i, j) = x;
+
+						for (int y : L)
+						{
+							if (y != x)
+							{
+								edges[x].push_back(y);
+								edges[y].push_back(x);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		
+		std::vector<int> newLabels(label + 1);
+
+		for ( i = 1; i <= label; i++)
+		{
+			if (newLabels[i]==0)
+			{
+				newLabel++;
+				std::queue <int> q;
+				newLabels[i] = newLabel;
+				q.push(i);
+
+				while (!q.empty())
+				{
+					int x = q.front();
+					q.pop();
+
+					for (int y : edges[x])
+					{
+						if (0 == newLabels[y])
+						{
+							newLabels[y] = newLabel;
+							q.push(y);
+						}
+					}
+				}
+			}
+		}
+
+		for ( i = 0; i < height; i++)
+		{
+			for ( j = 0; j < width; j++)
+			{
+				labels.at<int>(i, j) = newLabels[labels.at<int>(i, j)];
+			}
+		}
+
+		std::vector<Vec3b> colors;
+		std::default_random_engine eng;
+		std::uniform_int_distribution<int> distrib(0, 255);
+		for ( i = 0; i <= label; i++)
+		{
+			colors.push_back(Vec3b(distrib(eng), distrib(eng), distrib(eng)));
+		}
+
+		for ( i = 0; i < height; i++)
+		{
+			for ( j = 0; j < width; j++)
+			{
+				if (labels.at<int>(i, j) != 0)
+					dst.at<Vec3b>(i, j) = colors[labels.at<int>(i, j)];
+			}
+		}
+
+		imshow("before", img);
+		imshow("after", dst);
+		waitKey(0);
+	
+}

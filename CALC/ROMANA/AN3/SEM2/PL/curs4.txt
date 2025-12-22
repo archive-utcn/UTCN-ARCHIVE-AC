@@ -1,0 +1,11 @@
+Suma elementelor unei liste :
+
+sum([],0).
+sum([H|T],R):- sum(T,R1), R is R1 + H.
+
+sum1([],Acc,Acc).
+sum1([H|T],Acc, S):- NewAcc is H+Acc, sum1(T,NewAcc, S).
+
+
+suma2([],R,R).
+suma2([X|L], R, Acc) :- Acc1 is Acc+X, suma2(L,R,Acc1).

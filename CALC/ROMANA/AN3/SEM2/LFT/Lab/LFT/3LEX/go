@@ -1,0 +1,21 @@
+#!/bin/bash
+
+GCC=gcc
+LIBRARY=lfl
+LEX_GENERATOR=flex
+LEX_SOURCE=lex.yy.c
+
+NAME=`echo $* | cut -d. -f1`
+TEST=input
+
+if [ $# -ne 1 ]
+then 
+  echo "utilizare: go nume_fisier.l"
+  exit 1;
+fi
+
+$LEX_GENERATOR $1
+$GCC -o $NAME.exe $LEX_SOURCE -$LIBRARY
+rm $LEX_SOURCE
+$NAME.exe < $TEST | less
+  

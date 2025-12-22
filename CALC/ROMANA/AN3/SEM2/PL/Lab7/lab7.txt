@@ -1,0 +1,35 @@
+
+
+
+
+
+flatten([],[]).
+flatten([H|T], [H|R]):- atomic(H), !, flatten(T,R).
+flatten([H|T], R):- flatten(H,R1), flatten(T,R2), append(R1,R2,R).
+
+
+heads([],[],_).
+heads([H|T],[H|R],1):- atomic(H), !, heads(T,R,0).
+heads([H|T],R,0):- atomic(H), !, heads(T,R,0).
+heads([H|T],R,_):- heads(H,R1,1), heads(T,R2,0), append(R1,R2,R).
+heads_pretty(L,R):- heads(L, R, 1).
+
+
+
+
+
+%%pb1
+count_atomic([],0).
+count_atomic([H|T],R):-atomic(H), !, count_atomic(T,NR), R is NR+1.
+count_atomic([_|T],R):-count_atomic(T,R).
+
+%%pb2
+sum_atomic([], 0).
+sum_atomic([H|T], Acc):-atomic(H), number(H),!, sum_atomic(T,NewAcc), Acc is NewAcc + H.
+sum_atomic([_|T], Acc):- sum_atomic(T, Acc).
+
+
+%%pb3
+member1(H,[H|_]):-!.
+member1(X,[H|_]):-member1(X,H), !.
+member1(X,[_|T]):-member1(X,T).

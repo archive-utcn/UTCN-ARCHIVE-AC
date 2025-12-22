@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>A1</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7414.0, 5171.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>A2</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7542.0, 5174.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>M</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7510.0, 5067.0)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>A1</FOR>
+	<GIVEN>M</GIVEN>
+	<TABLE>0.9 0.1 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>A2</FOR>
+	<GIVEN>M</GIVEN>
+	<TABLE>0.9 0.1 0.3 0.7</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>M</FOR>
+	<TABLE>0.2 0.8</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>

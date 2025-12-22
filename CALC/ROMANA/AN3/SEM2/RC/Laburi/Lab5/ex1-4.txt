@@ -1,0 +1,73 @@
+Ex.1
+
+Ip Address
+	172	              16             104	     99
+              10101100              10000       01101000       01100011
+Network Mask
+              11111111	      11111111      11111111       11100000
+-------------------------------------------------------------------------------------------------AND
+Network Address
+            172	           16                  104                    96                 5biti de host      !!! corectat
+           10101100              10000000     01101000         01100000          
+Network broadcast address
+            172                          16                   104                     127                  30 de hosturi
+			                         am facut bitii de host "1"
+
+Ipv4  198.133.219.250  /24 
+Network address :   198.133.219.0              8 biti de host
+Broadcast address: 198.133.219.255          62 de hosturi
+
+Ipv4 10.1.113.75  /19         113 = 01110001
+Mask:	                     ....              11100000  00000000    
+			      01100000  = 96
+Network address: 10.1.96.0          13 biti de host
+Broadcast address: 10.1. 127 .255
+
+Ex.2 
+A number of 62 subnets    -> 6 bits
+Host IP Address: 172.16.0.0 
+Original Subnet Mask 255.255.0.0
+
+
+new SM : 255.255.252.0          10bits for host => 1022 hosts/subnet
+Ip subnets:  172.16.0.0
+	       network bits           subnet         host
+	10101100  00010000  111111    0000000000      Network address SN1
+	10101100  00010000  000000    1111111111      Broadcast address SN1
+
+
+A maximum number of 29 hosts/subnet  -> 5 bits for host, 3bits for subnet    4bits !!!
+Host IP Address: 192.168.200.0 
+Original Subnet Mask 255.255.255.0
+
+new SM: 255.255.255.224
+Ip subnets: 192.168.200.0  
+                               n   e   t  w  o  r  k               sub   host
+	11000000  10101000  11001000  000  00000   Network address SN1
+	11000000  10101000  11001000  000  11111   Broadcast address SN1
+
+
+A number of 250 subnets -> 8 bits (256 subnets)
+Host IP Address: 10.0.0.0
+Original Subnet Mask 255.0.0.0
+
+new SM: 255.255.0.0		16 bits for host => 65.534 hosts/subnet
+Ip subnets: 10.0.0.0
+                  network      subnet                h o s t
+	00001010  00000000  00000000  00000000  Network address SN1
+	00001010  00000000  11111111  11111111  Broadcast address SN1 
+	
+ 
+Exercitiu B (packet tracer)
+
+A number of 2 subnets -> 1 bit 
+Host IP Address: 172.16.0.0
+Original Subnet Mask 255.255.0.0
+
+new SM: 255.255.128.0             sub                host
+	11111111  11111111  1   0000000  00000000        15 bits for host -> 32766 hosts/subnet
+Ip subnets: 10101100  00010000  0  0000000  00000000	N.A. SN1  172.16.0.0
+	   10101100  00010000  1  0000000  00000000      N.A  SN2   172.16.128.0
+	      		
+    	
+

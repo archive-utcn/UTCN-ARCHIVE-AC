@@ -1,0 +1,122 @@
+IP address: 197.21.3.0
+
+IP ADDR : 11000101.00010101.00000011.00000000
+MASK    : 11111111.11111111.11111111.00000000 (CLASA C)
+
+13 hosturi => 4 biti de host ( 2 ^ 4 = 16)
+
+NEW MASK : 11111111.11111111.11111111.11110000 ( ultimii 4 biti sunt pt host )
+         = 255.255.255.240
+
+nr max hosturi din fiecare subretea : 2 ^ 4 - 2 = 14
+
+nr subretele creat : 2 ^ 4 = 16
+
+adr retea a primei subretele : 197.21.3.0 / 28
+adr broadcast a primel subretele : 197.21.3.15 / 28
+
+sn2: 197.21.3.0001 0000 (network)
+     197.21.3.0001 0001= 197.21.3.17
+
+sn3: 197.21.3.0010 0001 = 197.21.3.33
+
+la gateway pun adr routerului din reteau in care mi calculatorul
+
+router0 int fa0/1 - prima subretea
+ip: 197.21.3.1
+NM: 255.255.255.240
+
+router0 int fa0/0 - doua subretea
+ip: 197.21.3.17
+NM: 255.255.255.240
+
+router1 int fa0/0 - a doua subretea
+ip: 197.21.3.18
+NM: 255.255.255.240
+
+router0 int fa0/1 - a treia subretea
+ip: 197.21.3.33
+NM: 255.255.255.240
+
+server0 - prima subretea
+ip:197.21.3.2
+nm:255.255.255.240
+gateway: 197.21.3.1
+
+pc0 - prima subretea
+ip:197.21.3.3
+nm:255.255.255.240
+gateway: 197.21.3.1
+
+pc1 - a treia subretea
+ip:197.21.3.34
+nm:255.255.255.240
+gateway: 197.21.3.33
+
+
+b) pe R0 
+enable 
+conf t
+interface fa0/1 197.21.3.1 255.255.255.240
+no sh
+exit
+
+IP ROUTE 197.21.3.32 255.255.255.240 197.21.3.18
+
+pe r1
+interface fa0/1 197.21.3.18 255.255.255.240 
+no sh
+exit
+
+ip route 197.21.3.0 255.255.255.240 197.21.3.17
+destination mask pe unde intru 
+
+a)
+
+configure terminal
+interface fa0/4 
+switchport mode access
+switchport access vlan 55
+
+configure terminal
+interface fa0/3 
+switchport mode access
+switchport access vlan 66
+
+exista conectivitate deoarce calculatoarele sunt in acelasi vlan
+
+
+b)
+
+configure terminal
+spanning-tree vlan 66 root
+
+c)
+
+P01 contine toate interfetele disponibile intre sw3 si sw4 => daca dezactivam fa0/5
+nu va afecta conexiune => conexiunea ramane stabila
+
+
+
+
+
+SUBNETARI
+
+IP ADDR: 173.44.0.0 / 16 => CLASA B => MASK : 255.255.0.0
+
+51 HOSTS/ SUBNET => 2 ^ 6 = 64 
+FOLOSIM 6 BITI PENTRU HOST => RAMAN 10 BITI PENTRU SUBNET
+
+NEW MASK : 11111111.11111111.11111111.11000000 = 255.255.255.192
+
+NR MAX HOSTURI DIN FIECARE SUBRETEA = 2 ^ 6 - 2 = 62
+NR SUBRETELE = 2 ^ 10 = 1024
+
+adr retea din prima subretea: 173.44.0.0
+adr broadcast din prima subretea: 173.44.0.63 
+
+adr retea din sn2: 173.44. 0000000001 000000
+adr broadcast din sn2: 173.44. 0000000001 111111
+
+
+

@@ -1,0 +1,64 @@
+
+perm_sort(L,R):-perm(L, R), is_ordered(R), !.
+
+perm(L, [H|R]):-append(A, [H|T], L), append(A, T, L1), perm(L1, R).
+perm([], []).
+
+is_ordered([H1, H2|T]):-H1 =< H2, is_ordered([H2|T]).
+is_ordered([_]). % daca ii doar un element ii deja ordonata
+
+%permutarea2
+
+perm2([], []).
+perm2(L, [H|P]):- delete1(H,L,L1), perm2(L1,P).
+
+
+%Pentru sortare lista cu numere
+delete1(X, [X|T], T).
+delete1(X, [H|T], [H|R]) :- delete1(X, T, R).
+%delete(_, [], []).
+
+
+min([H|T], M) :- min(T, M), M<H, !.
+min([H|_], H).
+
+sel_sort(L, [M|R]):- min(L, M), delete(M, L, L1), sel_sort(L1, R).
+sel_sort([], []).
+
+max([H|T], M) :- max(T,M), M>H, !.
+max([H|_], H).
+
+sel_sort2(L, [M|R]):- max(L, M), delete(M, L, L1), sel_sort2(L1, R).
+sel_sort2([], []).
+
+
+%sort_chars([e, t, a, v, f], L).
+%L = [a, e, f, t, v] ;
+
+min2([H|T], M) :- min2(T, M), char_code(M,R1), char_code(H,R2), R1<R2, !.
+min2([H|_], H).
+
+
+sel_sortC(L, [M|R]):- min2(L, M), delete(M, L, L1), sel_sortC(L1, R).
+sel_sortC([], []).
+
+
+%%Sortare liste dupa lungime
+length1([], 0).
+length1([H|T], Len) :- length1(T, Lcoada), Len is 1+Lcoada.
+
+min3([H|T], M) :- min3(T, M), length(M,R1), length(H,R2), R1<R2, !.
+min3([H|_], H).
+
+
+sel_sortL(L, [M|R]):- min3(L, M), delete(M, L, L1), sel_sortL(L1, R).
+sel_sortL([], []).
+
+
+
+
+
+
+
+
+

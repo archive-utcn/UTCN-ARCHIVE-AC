@@ -1,0 +1,237 @@
+float H[] = { 1,2,1,
+			2,4,2,
+			1,2,1 };
+
+Mat_<float> Gaussianx(3, 3, H);
+
+float  vecSobelx[] = { -1.0f, 0.0f, 1.0f,
+					  -2.0f, 0.0f, 2.0f,
+					  -1.0f, 0.0f, 1.0f };
+
+float  vecSobely[] = { 1.0f, 2.0f, 1.0f,
+						0.0f, 0.0f, 0.0f,
+					   -1.0f, -2.0f, -1.0f };
+
+int neighbourx[8] = { 1, 1, 0, -1, -1, -1, 0, 1 };
+int neighboury[8] = { 0, -1, -1, -1, 0, 1, 1, 1 };
+
+
+Mat_<float> Sobelx(3, 3, vecSobelx), Sobely(3, 3, vecSobely);
+
+
+Mat_<float> convolve(Mat_<float> srcf, Mat_<float> kernel) 
+{
+	Mat_<float> dstf(srcf.rows, srcf.cols);
+	int i = 0;
+	int v = 0;
+	int uk = 0;
+	int j = 0;
+	int vk = 0;
+	float sum = 0;
+	for (i = 0; i < srcf.rows; i++) 
+	{
+		for (j = 0; j < srcf.cols; j++)
+		{
+			sum = 0;
+			for (v = 0; v < kernel.rows; v++) 
+			{
+				for (v = 0; v < kernel.cols; v++) 
+				{
+					 uk = i - kernel.rows / 2 + v;
+					 vk = j - kernel.cols / 2 + v;
+					 if (uk > 0 && uk < srcf.rows - 1 && vk > 0 && vk < srcf.cols - 1) {
+
+						 sum = sum + srcf(uk, vk) * kernel(v, v);
+					 }
+				}
+			}
+			dstf(i, j) = sum;
+		}
+	}
+
+	return dstf;
+}
+
+
+float f_mag(float x, float y) 
+{
+	float z = sqrt(pow(x, 2) + pow(y, 2));
+	return z;
+}
+
+int f_dir(float x, float y) 
+{
+	float aux = atan2(y, x);
+	if (aux < 0) {
+		aux = aux + 2 * PI;
+	}
+	int rez = (int)(floor(aux / (2 * PI) * 4 + 0.5f)) % 4;
+	return rez;
+}
+
+
+int edgeDet() {
+
+	int i = 0;
+	int j = 0;
+
+	Mat_<uchar> img = imread("Images/saturn.bmp", IMREAD_GRAYSCALE);
+	Mat_<float> destX = convolve(img, Sobelx);
+	Mat_<float> destY = convolve(img, Sobely);
+	Mat_<int> direction(img.rows, img.cols);
+	Mat_<int> magnitude(img.rows, img.cols);
+	Mat_<uchar>magNORM(img.rows, img.cols);
+	Mat final = magNORM.clone();
+
+	float max = 0;
+	int newi = 0, newj = 0;
+	int newi2 = 0, newj2 = 0;
+	int sum = 0;
+	int threshold = 0;
+	int currentPixelValue = 0;
+	int NoEdgePixels = 0;
+	int NoNonEdge = 0;
+
+	float p = 0.1;
+	float thresholdHigh = 0;
+	float kk = 0;
+	float thresholdLow = 0;
+	int histogram[256] = { 0 };
+
+	for (i = 0; i < 3; i++)
+	{
+		for ( j = 0; j < 3; j++)
+		{
+			Sobelx(i, j) *= Gaussianx(i, j);
+			Sobely(i, j) *= Gaussianx(i, j);
+		}
+	}
+
+	
+	for (i = 0; i < img.rows; i++) 
+	{
+		for (j = 0; j < img.cols; j++) 
+		{
+			magnitude(i, j) = f_mag(destX(i, j), destY(i, j));
+			direction(i, j) = f_dir(destX(i, j), destY(i, j));
+		}
+	}
+
+
+	normalize(magnitude, magNORM, 0, 255, NORM_MINMAX, CV_8UC1);
+
+	for (i = 1; i < img.rows - 1; i++) 
+	{
+		for (j = 1; j < img.cols - 1; j++)
+		{
+			 newi = i + neighboury[(int)direction(i, j)];
+			 newj = j + neighbourx[(int)direction(i, j)];
+			 newi2 = i + neighboury[(int)direction(i, j) + 4];
+			 newj2 = j + neighbourx[(int)direction(i, j) + 4];
+
+			if (magNORM(i, j) < magNORM(newi, newj) || (magNORM(i, j) < magNORM(newi2, newj2)))
+				magNORM(i, j) = 0;
+		}
+	}
+
+	imshow("magNorm", magNORM);
+	waitKey(0);
+
+	for (i = 1; i < img.rows - 1; i++)
+	{
+		for (j = 1; j < img.cols - 1; j++)
+		{
+			histogram[magNORM(i, j)]++;
+		}
+	}
+
+	NoEdgePixels = p * ((img.rows - 2) * (img.cols - 2) - histogram[0]);
+	NoNonEdge = (1 - p) * ((img.rows - 2) * (img.cols - 2) - histogram[0]);
+
+	for (i = 1; i < 256; i++)
+	{
+		sum = sum + histogram[i];
+		if (sum > NoNonEdge)
+		{
+			threshold = i;
+			break;
+		}
+	}
+
+	thresholdHigh = (float)threshold;
+    kk = 0.4;
+	thresholdLow = kk * threshold;
+
+	for (i = 0; i < img.rows; i++)
+	{
+		for (j = 0; j < img.cols; j++)
+		{
+			if (magNORM(i, j) > thresholdHigh)
+			{
+				magNORM(i, j) = 255;
+			}
+			else if (magNORM(i, j) > thresholdLow)
+			{
+				magNORM(i, j) = 127;
+			}
+			else
+			{
+				magNORM(i, j) = 0;
+			}
+
+		}
+	}
+
+	imshow("magNorm2", magNORM);
+	waitKey(0);
+
+	final = magNORM.clone();
+
+	for (i = 1; i < img.rows - 1; i++)
+	{
+		for (j = 1; j < img.cols - 1; j++)
+		{
+			uchar currentPixelValue = final.at<uchar>(i, j);
+			if (currentPixelValue == 255)
+			{
+				queue<Point2i> Q;
+				Q.push(Point2i(j, i));
+
+				while (!Q.empty())
+				{
+					Point2i p = Q.front();
+					Q.pop();
+
+					int m;
+					for (m = 0; m < 8; m++)
+					{
+						int NewRow = p.y + neighbourx[m];
+						int NewCol = p.x + neighboury[m];
+						if (final.at<uchar>(NewRow, NewCol) == 128)
+						{
+							Q.push(Point2i(NewCol, NewRow));
+							final.at<uchar>(NewRow, NewCol) = 255;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	for (i = 1; i < img.rows - 1; i++)
+	{
+		for (j = 1; j < img.cols - 1; j++)
+		{
+			currentPixelValue = final.at<uchar>(i, j);
+
+			if (currentPixelValue == 127)
+				final.at<uchar>(i, j) = 0;
+		}
+	}
+
+	imshow("Initial", img);
+	imshow("Final", final);
+	waitKey(0);
+
+	return 0;
+}

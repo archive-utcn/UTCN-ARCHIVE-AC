@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Alarm</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7351.0, 5283.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Burglary</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7206.0, 5198.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Earthquake</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7512.0, 5199.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>JohnCalls</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7208.0, 5412.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>MaryCalls</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7507.0, 5416.0)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Alarm</FOR>
+	<GIVEN>Burglary</GIVEN>
+	<GIVEN>Earthquake</GIVEN>
+	<TABLE>0.95 0.05 0.29 0.71 0.94 0.06 0.001 0.999</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Burglary</FOR>
+	<TABLE>0.001 0.999</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Earthquake</FOR>
+	<TABLE>0.002 0.998</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>JohnCalls</FOR>
+	<GIVEN>Alarm</GIVEN>
+	<TABLE>0.9 0.1 0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>MaryCalls</FOR>
+	<GIVEN>Alarm</GIVEN>
+	<TABLE>0.7 0.3 0.01 0.99</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>

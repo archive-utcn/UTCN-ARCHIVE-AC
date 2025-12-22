@@ -1,0 +1,112 @@
+% ultimul element al listei = my_last(X,[a,b,c,d]). => X=d
+% penultimul element al listei = last_but_one(X,[1,2,3,4,5]). => X=4
+% Gaseste al K-lea element al listei = element_at(X,[a,b,c,d,e],3). => X=c
+% Numarul de elemente al unei liste = my_length([1,2,[3,a],b],N). => N=4
+% Verifica inversul unei listei = my_reverse([1,2,3],[3,2,1]). => yes
+% Elimina aparitile consecutive ale unui element = compress([a,a,b,a,a,d,e,e,e],X). => X=[a,b,a,d,e]
+% Pune elementele duplicate in subliste separate = pack([a,a,b,a,a,d,e,e,e],X). = > X = [[a,a],[b],[a,a],[d],[e,e,e]] 
+% Pune numarul de aparitii al elementelor duplicate in subliste = encode_mod([a,a,a,b,c,c],X).  => X = [[3,a],b,[2,c]]
+% Dubleaza elementele unei liste = dupli([a,b,b,c,],X). => X = [a,a,b,b,b,b,c,c]
+% Imparte o lista in 2 (lungimea primei liste este data) = split([a,b,c,d,e],2,L1,L2). => 
+L1 = [a,b],
+L2 = [c,d,e]
+% Roteste o lista =  rotate([a,b,c,d,e],2,X).  => X = [c,d,e,a,b]
+% Remove the K'th element from a list =  remove_at(X,[a,b,c,d],2,R). 
+R = [a,c,d],
+X = b ? 
+% Insereaza un element intr-o lista = insert_at(alfa,[a,b,c,d],2,L). => L = [a,alfa,b,c,d]
+% Creaza un interval a carui capete sunt date =  range(4,9,L).
+ => L = [4,5,6,7,8,9]
+% 
+
+
+
+
+% ultimul element al listei = my_last(X,[a,b,c,d]). => X=d
+my_last(X,[X]).
+   % my_last(X,L) :- X is the last element of the list L
+
+my_last(X,[_|L]) :- my_last(X,L).
+
+
+% penultimul element al listei = last_but_one(X,[1,2,3,4,5]). => X=4
+last_but_one(X,[X,_]).   % last_but_one(X,L) :- X is the last but one element of the list L
+last_but_one(X,[_,Y|Ys]) :- last_but_one(X,[Y|Ys]).
+
+% Gaseste al K-lea element al listei = element_at(X,[a,b,c,d,e],3). => X=c
+element_at(X,[X|_],1).   % element_at(X,L,K) :- X is the K'th element of the list L
+element_at(X,[_|L],K) :- K > 1, K1 is K - 1, element_at(X,L,K1).
+
+% Numarul de elemente al unei liste = my_length([1,2,[3,a],b],N). => N=4
+my_length([],0).   %my_length(L,N) :- the list L contains N elements
+my_length([_|L],N) :- my_length(L,N1), N is N1 + 1.
+
+% Verifica inversul unei listei = my_reverse([1,2,3],[3,2,1]). => yes
+my_reverse(L1,L2) :- my_rev(L1,L2,[]). % my_reverse(L1,L2) :- L2 is the list obtained from L1 by reversing the order of the elements.
+my_rev([],L2,L2) :- !.
+my_rev([X|Xs],L2,Acc) :- my_rev(Xs,L2,[X|Acc]).
+
+% Elimina aparitile consecutive ale unui element = compress([a,a,b,a,a,d,e,e,e],X). => X=[a,b,a,d,e]
+compress([],[]).
+compress([X],[X]).
+compress([X,X|Xs],Zs) :- compress([X|Xs],Zs).
+compress([X,Y|Ys],[X|Zs]) :- X \= Y, compress([Y|Ys],Zs).
+
+% Pune elementele duplicate in subliste separate = pack([a,a,b,a,a,d,e,e,e],X). = > X = [[a,a],[b],[a,a],[d],[e,e,e]] 
+pack([],[]).
+pack([X|Xs],[Z|Zs]) :- transfer(X,Xs,Ys,Z), pack(Ys,Zs).
+transfer(X,[],[],[X]).
+transfer(X,[Y|Ys],[Y|Ys],[X]) :- X \= Y.
+transfer(X,[X|Xs],Ys,[X|Zs]) :- transfer(X,Xs,Ys,Zs).
+
+% Pune numarul de aparitii al elementelor duplicate in subliste = encode_mod([a,a,a,b,c,c],X).  => X = [[3,a],b,[2,c]]
+encode_mod(L1,L2) :- encode(L1,L), strip(L,L2).
+encode(L1,L2) :- pack(L1,L), transform(L,L2).
+strip([],[]).
+strip([[1,X]|Ys],[X|Zs]) :- strip(Ys,Zs).
+strip([[N,X]|Ys],[[N,X]|Zs]) :- N > 1, strip(Ys,Zs).
+pack([],[]).
+pack([X|Xs],[Z|Zs]) :- transfer(X,Xs,Ys,Z), pack(Ys,Zs).
+transform([],[]).
+transform([[X|Xs]|Ys],[[N,X]|Zs]) :- length([X|Xs],N), transform(Ys,Zs).
+transfer(X,[],[],[X]).
+transfer(X,[Y|Ys],[Y|Ys],[X]) :- X \= Y.
+transfer(X,[X|Xs],Ys,[X|Zs]) :- transfer(X,Xs,Ys,Zs).
+
+% Dubleaza elementele unei liste = dupli([a,b,b,c,],X). => X = [a,a,b,b,b,b,c,c]
+dupli([],[]).
+dupli([X|Xs],[X,X|Ys]) :- dupli(Xs,Ys).
+
+% Imparte o lista in 2 (lungimea primei liste este data) = split([a,b,c,d,e],2,L1,L2). => 
+L1 = [a,b],
+L2 = [c,d,e]
+split(L,0,[],L).
+split([X|Xs],N,[X|Ys],Zs) :- N > 0, N1 is N - 1, split(Xs,N1,Ys,Zs).
+
+% Roteste o lista =  rotate([a,b,c,d,e],2,X).  => X = [c,d,e,a,b]
+rotate(L1,N,L2) :- N >= 0, 
+   length(L1,NL1), N1 is N mod NL1, rotate_left(L1,N1,L2).
+rotate(L1,N,L2) :- N < 0,
+   length(L1,NL1), N1 is NL1 + (N mod NL1), rotate_left(L1,N1,L2).
+rotate_left(L,0,L).
+rotate_left(L1,N,L2) :- N > 0, split(L1,N,S1,S2), append(S2,S1,L2).
+split(L,0,[],L).
+split([X|Xs],N,[X|Ys],Zs) :- N > 0, N1 is N - 1, split(Xs,N1,Ys,Zs).
+
+% Remove the K'th element from a list =  remove_at(X,[a,b,c,d],2,R). 
+R = [a,c,d],
+X = b ? 
+remove_at(X,[X|Xs],1,Xs).
+remove_at(X,[Y|Xs],K,[Y|Ys]) :- K > 1, 
+   K1 is K - 1, remove_at(X,Xs,K1,Ys).
+
+% Insereaza un element intr-o lista = insert_at(alfa,[a,b,c,d],2,L). => L = [a,alfa,b,c,d]
+insert_at(X,L,K,R) :- remove_at(X,R,K,L).
+remove_at(X,[X|Xs],1,Xs).
+remove_at(X,[Y|Xs],K,[Y|Ys]) :- K > 1, 
+   K1 is K - 1, remove_at(X,Xs,K1,Ys).
+
+% Creaza un interval a carui capete sunt date =  range(4,9,L).
+ => L = [4,5,6,7,8,9]
+range(I,I,[I]).
+range(I,K,[I|L]) :- I < K, I1 is I + 1, range(I1,K,L).

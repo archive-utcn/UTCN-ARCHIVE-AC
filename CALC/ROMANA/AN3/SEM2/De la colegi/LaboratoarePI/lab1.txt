@@ -1,0 +1,220 @@
+Momentan din primul laborator am implementat tot, cu exceptia ultimului exercitiu, 
+cel cu inversa
+
+Am adaugat si implemntarea ultimei probleme, dar nu am reusit sa fac vizibil rezultatul pe ecran.
+
+
+
+void factor_aditiv()
+{
+	char fname[MAX_PATH];
+	int i = 0;
+	int j = 0;
+	int factorValue = 60;
+	
+	while (openFileDlg(fname))
+	{
+		Mat_<uchar> src = imread(fname);
+		Mat_<uchar> dst(src.rows, src.cols);
+		
+		int height = src.rows;
+		int width = src.cols;
+		
+		for (i = 0; i < height; i++)
+		{
+			for (j = 0; j < width; j++)
+			{
+				if (src(i, j) + factorValue < 0) 
+				{
+					dst(i, j) = 0;
+				}
+				else if (src(i, j) + factorValue > 255)
+				{
+					dst(i, j) = 255;
+				}
+				else
+				{
+					dst(i, j) = src(i, j) + factorValue;
+				}
+			}
+		}
+
+		imshow("intiala", src);
+		imshow("modificata", dst);
+		imwrite("imag1.bmp", dst);
+		waitKey();
+		
+	}
+
+	
+	
+}
+
+
+void factor_multiplicativ()
+{
+	char fname[MAX_PATH];
+	int i = 0;
+	int j = 0;
+	int factorValue = 3;
+
+	while (openFileDlg(fname))
+	{
+		Mat_<uchar> src = imread(fname);
+		Mat_<uchar> dst(src.rows, src.cols);
+
+		int height = src.rows;
+		int width = src.cols;
+
+
+		for (i = 0; i < height; i++)
+		{
+			for (j = 0; j < width; j++)
+			{
+				if (src(i, j) * factorValue < 0)
+				{
+					dst(i, j) = 0;
+				}
+				else if (src(i, j) * factorValue > 255)
+				{
+					dst(i, j) = 255;
+				}
+				else
+				{
+					dst(i, j) = src(i, j) * factorValue;
+				}
+			}
+		}
+
+		
+
+		imshow("intiala", src);
+		imshow("modificata", dst);
+
+		imwrite("imag2.bmp", dst);
+		
+		waitKey();
+
+	}
+
+	
+
+}
+
+void culori() {
+	Mat_<Vec3b> img(256, 256);
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	int dim = 256;
+	int jum = 256 / 2;
+	for ( i = 0; i < dim; i++) 
+	{
+
+		for ( j = 0; j < dim; j++) 
+		{
+
+			if (i < jum && j < jum)
+			{
+				if (j < jum) 
+				{
+					for ( k =0; k<3; k++)
+					img(i, j)[k] = 255;
+					
+				}
+			}
+
+			else if (i >= jum && j < jum)
+			{   
+				img(i, j)[0] = 0;
+				img(i, j)[1] = 255;
+				img(i, j)[2] = 0;
+			}
+
+			else if (i < jum && j >= jum) 
+			{
+				for (k = 0; k < 2; k++)
+					img(i, j)[k] = 0;
+				img(i, j)[2] = 255;
+				
+			}
+
+			else if (i >= jum && j >= jum) {
+				img(i, j)[0] = 0;
+				for (k = 1; k < 3; k++)
+					img(i, j)[k] = 255;
+				
+			}
+
+		}
+
+	}
+	imshow("imagine", img);
+	waitKey(0);
+}
+
+void inversa() 
+{
+	Mat_<float> A(3, 3);
+	Mat_<float> transpusa(3, 3);
+	Mat_<float> inv(3, 3);
+	float det = 0;
+	int i = 0;
+	int j = 0;
+
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			A(i, j) = 4 - j;
+		}
+	}
+
+	det = A(0, 0) * A(1, 1) * A(2, 2) +
+		A(1, 0) * A(2, 1) * A(0, 2) +
+		A(0, 1) * A(1, 2) * A(2, 0) -
+		A(0, 2) * A(1, 1) * A(2, 0) -
+		A(0, 1) * A(1, 0) * A(2, 2) -
+		A(1, 2) * A(2, 1) * A(0, 0);
+
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			transpusa(i, j) = A(j, i);
+
+		}
+	}
+
+	inv(0, 0) = A(1, 1) * A(2, 2) - A(1, 2) * A(2, 1);
+	inv(0, 2) = A(0, 1) * A(1, 2) - A(1, 1) * A(0, 2);
+	inv(1, 1) = A(0, 0) * A(2, 2) - A(0, 2) * A(2, 0);
+	inv(2, 0) = A(1, 0) * A(2, 1) - A(2, 0) * A(1, 1);
+	inv(2, 2) = A(1, 1) * A(0, 0) - A(1, 0) * A(0, 1);
+
+	inv(0, 1) = (-1) * (A(0, 1) * A(2, 2) - A(2, 1) * A(0, 2));
+	inv(1, 0) = (-1) * (A(1, 0) * A(2, 2) - A(1, 2) * A(2, 0));
+	inv(1, 2) = (-1) * (A(0, 0) * A(1, 2) - A(1, 0) * A(0, 2));
+	inv(2, 1) = (-1) * (A(0, 0) * A(2, 1) - A(0, 1) * A(2, 0));
+
+	for (i = 0; i < 3; i++) {
+
+		for (j = 0; j < 3; j++)
+		{
+			inv(i, j) = inv(i, j) / det;
+		}
+	}
+
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			std::cout << inv(i, j);
+		}
+
+		std::cout << "\n";
+	}
+
+		  
+
+}

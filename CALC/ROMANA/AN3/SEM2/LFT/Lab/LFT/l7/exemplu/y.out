@@ -1,0 +1,400 @@
+i:\bin\YACC.EXE -ov evol.c -D ytab.h evol.y 
+
+Rules:
+    (0)  $accept:  list $end
+    (1)  list:    
+    (2)  list:     list '\n'
+    (3)  list:     list asgn '\n'
+    (4)  list:     list expr '\n'
+    (5)  list:     list error '\n'
+    (6)  asgn:     VAR '=' expr
+    (7)  expr:     NUMAR
+    (8)  expr:     VAR
+    (9)  expr:     asgn
+   (10)  expr:     PREDEF '(' expr ')'
+   (11)  expr:     expr '+' expr
+   (12)  expr:     expr '-' expr
+   (13)  expr:     expr '*' expr
+   (14)  expr:     expr '/' expr
+   (15)  expr:     expr '^' expr
+   (16)  expr:     '(' expr ')'
+   (17)  expr:     '-' expr
+
+State 0
+         $accept: .list $end
+    (1)  list:    .
+
+	.         reduce (1)
+
+	list    goto 1
+
+State 1
+         $accept:  list.$end
+         list:     list.'\n'
+         list:     list.asgn '\n'
+         list:     list.expr '\n'
+         list:     list.error '\n'
+
+	$end      accept
+	error     shift 7
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'\n'      shift 10
+	'('       shift 3
+	.         error
+
+	expr    goto 8
+	asgn    goto 9
+
+State 2
+         expr:     '-'.expr
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 11
+	asgn    goto 12
+
+State 3
+         expr:     '('.expr ')'
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 13
+	asgn    goto 12
+
+State 4
+         expr:     PREDEF.'(' expr ')'
+
+	'('       shift 14
+	.         error
+
+
+State 5
+    (7)  expr:     NUMAR.
+
+	.         reduce (7)
+
+State 6
+         asgn:     VAR.'=' expr
+    (8)  expr:     VAR.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+
+	'='       shift 15
+	.         reduce (8)
+
+
+State 7
+         list:     list error.'\n'
+
+	'\n'      shift 16
+	.         error
+
+
+State 8
+         list:     list expr.'\n'
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+
+	'+'       shift 21
+	'-'       shift 20
+	'*'       shift 19
+	'/'       shift 18
+	'^'       shift 17
+	'\n'      shift 22
+	.         error
+
+
+State 9
+         list:     list asgn.'\n'
+    (9)  expr:     asgn.	[ '+' '-' '*' '/' '^' '\n' ]
+
+  Shift/reduce conflict (23,9) on '\n'
+	'\n'      shift 23
+	.         reduce (9)
+
+
+State 10
+    (2)  list:     list '\n'.
+
+	.         reduce (2)
+
+State 11
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+   (17)  expr:     '-' expr.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+
+	'^'       shift 17
+	.         reduce (17)
+
+
+State 12
+    (9)  expr:     asgn.
+
+	.         reduce (9)
+
+State 13
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+         expr:     '(' expr.')'
+
+	'+'       shift 21
+	'-'       shift 20
+	'*'       shift 19
+	'/'       shift 18
+	'^'       shift 17
+	')'       shift 24
+	.         error
+
+
+State 14
+         expr:     PREDEF '('.expr ')'
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 25
+	asgn    goto 12
+
+State 15
+         asgn:     VAR '='.expr
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	asgn    goto 12
+	expr    goto 26
+
+State 16
+    (5)  list:     list error '\n'.
+
+	.         reduce (5)
+
+State 17
+         expr:     expr '^'.expr
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 27
+	asgn    goto 12
+
+State 18
+         expr:     expr '/'.expr
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 28
+	asgn    goto 12
+
+State 19
+         expr:     expr '*'.expr
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 29
+	asgn    goto 12
+
+State 20
+         expr:     expr '-'.expr
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 30
+	asgn    goto 12
+
+State 21
+         expr:     expr '+'.expr
+
+	NUMAR     shift 5
+	VAR       shift 6
+	PREDEF    shift 4
+	'-'       shift 2
+	'('       shift 3
+	.         error
+
+	expr    goto 31
+	asgn    goto 12
+
+State 22
+    (4)  list:     list expr '\n'.
+
+	.         reduce (4)
+
+State 23
+    (3)  list:     list asgn '\n'.
+
+	.         reduce (3)
+
+State 24
+   (16)  expr:     '(' expr ')'.
+
+	.         reduce (16)
+
+State 25
+         expr:     PREDEF '(' expr.')'
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+
+	'+'       shift 21
+	'-'       shift 20
+	'*'       shift 19
+	'/'       shift 18
+	'^'       shift 17
+	')'       shift 32
+	.         error
+
+
+State 26
+    (6)  asgn:     VAR '=' expr.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+
+	'+'       shift 21
+	'-'       shift 20
+	'*'       shift 19
+	'/'       shift 18
+	'^'       shift 17
+	.         reduce (6)
+
+
+State 27
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+   (15)  expr:     expr '^' expr.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+
+	'^'       shift 17
+	.         reduce (15)
+
+
+State 28
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+   (14)  expr:     expr '/' expr.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+         expr:     expr.'^' expr
+
+	'^'       shift 17
+	.         reduce (14)
+
+
+State 29
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+   (13)  expr:     expr '*' expr.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+
+	'^'       shift 17
+	.         reduce (13)
+
+
+State 30
+         expr:     expr.'+' expr
+         expr:     expr.'-' expr
+   (12)  expr:     expr '-' expr.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+
+	'*'       shift 19
+	'/'       shift 18
+	'^'       shift 17
+	.         reduce (12)
+
+
+State 31
+         expr:     expr.'+' expr
+   (11)  expr:     expr '+' expr.	[ '+' '-' '*' '/' '^' '\n' ')' ]
+         expr:     expr.'-' expr
+         expr:     expr.'*' expr
+         expr:     expr.'/' expr
+         expr:     expr.'^' expr
+
+	'*'       shift 19
+	'/'       shift 18
+	'^'       shift 17
+	.         reduce (11)
+
+
+State 32
+   (10)  expr:     PREDEF '(' expr ')'.
+
+	.         reduce (10)
+
+Conflicts:
+	State  Token      Action
+	    9  '\n'       shift 23
+	    9  '\n'       reduce (9)
+
+
+18 rules, 16 tokens, 4 variables, 33 states
+Memory:  max = 8K
+States: 4 wasted, 98 resets
+Items:  214, 0 kernel, (6,0) per state, maxival=64 (4 w/s)
+Lalr:  9 calls, 136 recurs, (0 trans, 1107 epred)
+Actions:  87 entries, gotos: 24 entries
+Exceptions: 1 states, 4 entries
+List merging: 29%, Simple state elim: 8%
+Error default elim: 6%
+Optimizer: in 234, out 156
+Size of tables:  382 bytes
+3 seconds, final mem = 5K
+1 shift/reduce conflict 

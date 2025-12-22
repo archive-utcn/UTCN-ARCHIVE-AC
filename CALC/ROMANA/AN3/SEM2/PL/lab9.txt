@@ -1,0 +1,63 @@
+tree1(t(7, t(5, t(3,_,_), t(6,_,_)), t(11,_,_))).
+tree2(t(7, t(5, t(3,nil,nil), t(6,nil,nil)), t(11,nil,nil))).
+
+append_il(L1, L2):- var(L1), L1 = L2, !.	%cand ajungem la o variabila, o unificam cu lista L2.
+append_il([_|T], L1) :- append_il(T, L1).	%parcurgem prima lista pe tail pana dam de variabila.
+
+
+insert_il(X, [X|L]):- var(L),!.		%am modificat clauza de oprire de la predicatul din lab pentru a insera mereu, chiar daca avem elementul respectiv in lista.
+insert_il(X, [_|T]):- insert_il(X, T).	%parcurgere lista pana la variabila
+
+reverse_il(L,_):- var(L), !.		%am ajuns la o variabila si ne oprim
+reverse_il([H|T],R):- reverse_il(T,R), insert_il(H,R).	%parcurgem prima lista pana dam de o variabila apoi la revenire din apel, inseram head-ul la sfarsitul rezultatului.
+
+
+il_to_cl(L):- var(L), !, L=[].	%cand ajungem la variabila, initializam acea variabila cu []
+il_to_cl([_|T]):- il_to_cl(T).	%parcurgem pe tail pana dam de o variabila
+
+
+cl_to_il([],_):- !.			%cand ajungem la [] cu prima lista, punem variabila _ in rezultat
+cl_to_il([H|T],[H|R]):- cl_to_il(T,R).	%adaugam elementele din L1 in L2 pana ce ajungem la o variabila
+
+preorder_it(T,_):- var(T),!.	%cand dam de variabila punem _ in lista rezultat
+preorder_it(t(K,L,R), List):- insert_il(K,List), preorder_it(L,List), preorder_it(R, List). % adaugam key-ul curent la sfarsitul listei apoi apelam recursiv pe L si R.
+
+
+max(X,Y,X):- X>Y,!.				
+max(_,Y,Y).
+
+height(T, 0):- var(T), !.		%height-ul din laboratorul trecut, doar modificata conditia de oprire
+height(t(_, L, R), H):-height(L, H1), 
+					 height(R, H2),
+					 max(H1, H2, H3), 
+					 H is H3+1.
+
+
+
+it_to_ct(T):- var(T), !, T=nil.		%cand ajungem la o variabila, setam variabila respectiva la nil.
+it_to_ct(t(_,L,R)):- it_to_ct(L), it_to_ct(R).	%parcurgem te L si R pana ce dam de variabila.
+
+
+ct_to_it(nil, _):- !.	%cand dam de o frunza (ajungem la nil) in tree-ul rezultat punem variabila
+ct_to_it(t(K,L,R), t(K,LR,RR)):- ct_to_it(L,LR), ct_to_it(R,RR).	%construim arborele rezultat din elementele primului arbore.
+
+
+flatten_il(L,_):- var(L),!.		%conditie de stop cand ajungem la o variabila
+flatten_il([H|T], R):- atomic(H), !, insert_il(H,R), flatten_il(T,R).	%daca elementul din head este atomic, adaugam acel element in lista rezultat si parcurgem restul elementelor din tail.
+flatten_il([H|T], R):- flatten_il(H,R), flatten_il(T,R).	%altfel parcurgem lista atat pe head cat si pe tail.
+
+
+diameter_it(T, 0):- var(T),!.	%diameter-ul din laboratorul precedent, doar modificata conditia de oprire
+diameter_it(t(_,L,R), Diameter):-diameter_it(L,LL), diameter_it(R,LR), 
+							max(LL, LR, Diameter1),
+							height(L,HL),
+							height(R,HR),
+							H is HL+HR+1,
+							max(Diameter1,H,Diameter).
+
+subl_il(_,L):- var(L),!,false.			%cand ajungem la o variabila in lista 2 ne oprim si returnam false.
+subl_il(L1,L2):- check_sub(L1,L2),!.	%altfel daca primele L1 elemente din L2 sunt egale cu cele din L1, ne oprim si returnam true.
+subl_il(L1,[_|T]):- subl_il(L1,T).		%altfel tot taiem elemente din L2 pana ce una din conditiile de mai sus sunt indeplinite.
+
+check_sub(L,_):- var(L),!.		%daca ajungem cu L1 la sfarsit, inseamna ca L1 exista in L2, ne oprim si returnam true.
+check_sub([H|T1],[H|T2]) :-check_sub(T1,T2).	%avem true cat timp head-ul din L1 e egal cu head-ul din L2, parcurgem recursiv pe tail-urile ambelor liste.

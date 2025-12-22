@@ -1,0 +1,39 @@
+%Ultimul element al unei liste
+% 2 liste sunt identice
+%verifica daca lungimea unei liste este un element dintr-o lista.
+% ia primele K elemente dintr-o lista, si le pune in alta lista.
+%MergeSort
+
+%Ultimul element al unei liste
+ultim_el([H|T],R) :- ultim_el(T,R).
+ultim_el([H],H).
+
+% 2 liste sunt identice
+list_eq([H1|T1],[H2|T2]) :- H1=:=H2 , list_eq(T1|T2).
+list_eq([],[]).
+
+%verifica daca lungimea unei liste este un element dintr-o lista.
+lungl([],0).
+lungl([H|T],R) :- lungl(T,R1), R is R1+1.
+exist (L) :- lungl(L,R1), member(L,R1).
+
+% ia primele K elemente dintr-o lista, si le pune in alta lista.
+takek(_,0,[]).
+takek([],_,[]).
+takek([H|T],k,[H|R]):- takek(T,k1,R), K is K1+1.
+
+%MergeSort
+mergesort([],[]).    /* covers special case */
+mergesort([A],[A]).
+mergesort([A,B|R],S) :-  
+   split([A,B|R],L1,L2),
+   mergesort(L1,S1),
+   mergesort(L2,S2),
+   merge(S1,S2,S).
+split([],[],[]).
+split([A],[A],[]).
+split([A,B|R],[A|Ra],[B|Rb]) :-  split(R,Ra,Rb).
+merge(A,[],A).
+merge([],B,B).
+merge([A|Ra],[B|Rb],[A|M]) :-  A =< B, merge(Ra,[B|Rb],M).
+merge([A|Ra],[B|Rb],[B|M]) :-  A > B,  merge([A|Ra],Rb,M).

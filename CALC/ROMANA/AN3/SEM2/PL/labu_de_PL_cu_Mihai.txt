@@ -1,0 +1,84 @@
+constante - litere mici, variabile - litera mare sau incepe cu _
+
+:- daca 
+, si 
+; sau 
+
+recursivitate inapoi : pe o lista, facem suma elementelor fara primul element, si la final o sa obtinem rezultatul, deci e recursivitate inapoi 
+
+recursivitate inainte : obtinem rezultatul calculandu-l pe parcurs, avem un acumulator si avem in el ce am caculat pana la momentu respectiv 
+
+la backwards recursive, trebuie unificat rezultatul dupa apel 
+la forward recursive, trebuie definite componentele apelului inainte 
+
+
+
+
+
+
+
+
+
+%%Sa se construiasca o lista care contine doar ultima cifra a numarului si 0
+%%in locul fiecarei litere. 
+
+%%transform([12,a,40,566,c,e,2], R) -> R = p[2,0,0,6,0,0,2]
+
+%%parcurgere lista backward
+
+% NR = 1,  transform([2,3,b,54], R), NR = 2, transform(3,b,54),R , NR = 4, transform([],[]).
+% R1 = [4|[]], R = [4|[]],  R1 =[0|4], R=[0|4],  , R = [1,2,3,0,4]  
+
+transform([],[]).
+transform([H|T], R1):-number(H), prima_cifra(H,NR), transform(T,R), R1 = [NR|R].
+transform([H|T], R1):- not(number(H)), transform(T,R), R1 = [0|R].
+
+
+%%parcurgere lista forward
+transform1([],Acc,R):- reverse(Acc,R1), R = R1.
+transform1([H|T], Acc, R):- NewAcc=[H|Acc], transform1(T,NewAcc,R).
+
+
+
+%%parcurgere lista forward (afisare inversa numere)
+transform2([],Acc,R):- R = Acc.
+transform2([H|T], Acc, R):- number(H),!, NR is H mod 10, NewAcc=[NR|Acc], transform2(T,NewAcc,R).
+transform2([H|T], Acc, R):- NewAcc = [0|Acc], transform2(T, NewAcc, R).
+
+%%parcurgere lista forward (afisare inversa numere)
+transform3(L,R):- transform3(L,[],R).
+transform3(END,Acc,R):- var(END),!, R = Acc. 
+transform3([H|T], Acc, R):- number(H),!, NR is H mod 10, NewAcc=[NR|Acc], transform3(T,NewAcc,R).
+transform3([H|T], Acc, R):- NewAcc = [0|Acc], transform3(T, NewAcc, R).
+
+
+prima_cifra(NR,R):- NR < 10,!, R = NR.
+prima_cifra(NR, R):-!,NR1 is NR div 10, prima_cifra(NR1, R).
+
+unique_digits(NR, R):-unique_digits(NR, [], R).
+unique_digits(0, Acc, R):- R = Acc, !.
+unique_digits(NR, Acc, R):- NR1 is NR mod 10, not(member(NR1, Acc)),!, NewAcc=[NR1|Acc], NR2 is NR div 10, unique_digits(NR2,NewAcc,R).
+unique_digits(NR, Acc, R):- NR2 is NR div 10, unique_digits(NR2, Acc, R).
+
+
+add_first(X,L,R):- R = [X|L].
+
+append primeste ca argumente 2 liste   
+
+
+get_evens([],[]).
+get_evens([H|T], Evens):- get_evens(T, Evens2), 0 is H mod 2,!, Evens = [H|Evens2].
+get_evens([H|T], Evens):- get_evens(T, Evens2), Evens = Evens2.
+
+
+
+%suma tuturor elementelor dintr-o lista 
+
+sum([],0).
+sum([H|T], S):- sum(T,PR), S is H+PR.       
+
+
+sum1([],Acc,Acc).
+sum1([H|T],Acc, S):- NewAcc is H+Acc, sum1(T,NewAcc, S).
+
+

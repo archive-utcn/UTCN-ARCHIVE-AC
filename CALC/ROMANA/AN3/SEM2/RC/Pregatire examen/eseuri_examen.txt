@@ -1,0 +1,19 @@
+Simetric - aici avem comunicatie de tip peer to peer, adica rolurile se schimba intre client si server, cei doi fiind egali
+
+
+Asimetrica - comunicatie de tip client/server,  clientul doar face request spre server, iar acesta ii furnizeaza servicii ( se aseamana cu master-slave) 
+
+
+
+DNS -ul face translatarea dintre numele site-ului (www.utcluj.ro) si adresa ip a acestuia (care se mai poate si schimba uneori). DNS-ul are o baza de date distribuita la nivel global. Serverele de DNS sunt la nivel de ISP, organizatii sau companii mari (de ex. 8.8.8.8 Google). Este distribuit in foarte multe locatii pentru o latenta mica, mentenanta. 
+
+
+
+TCP : reliable, orientat pe conexiune (se produce o negociere a canalului de comunicatie , 3-way-handshake), are flow control, este un flux continuu (stream of bytes)  mai incetut din cauza procesarii, 
+
+UDP : unreliable, nu se face o conexiune in prealabil ci doar transmite, nu are flow control, se trimit datagrame pe rand deci nu este un flux continuu,  totusi este mai rapid fiindca nu face multa procesare
+
+
+
+ICMP - incapsuleaza mesajele de erori si de control . Ping-ul de exemplu este un ICMP de tip reply si request. 
+          - alte exemple : anunta ca TTL a expirat, anunta un router ca s-a modificat o ruta, cand se face ping raspunde cu destination host unreachable

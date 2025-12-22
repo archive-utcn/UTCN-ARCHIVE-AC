@@ -1,0 +1,74 @@
+mean ii miu 
+std ii deviatia standard 
+
+
+
+intervalul medianei = (max-std, mean-std)
+
+bins la histograma = este un interval in care urmarim cate valori avem 
+
+
+X se poate mapa in Xmax - X /   Xmax - Xmin , sau la cate sigma te afli fata de mediana
+
+
+split_train_test  ( 0.2 - 20% valori pentru testare, 80% pentru antrenare, in end_to_end_machine)
+
+
+cand impartim in train si test trebuie sa ne asiguram ca avem aceleasi proportii
+de ex : 60% urban in total, trebuie sa avem 60% urban si in train ca sa fie ok rezultatele
+
+bedroom_per_room  cu -  ,  mai putine bedroom , median_hose_value creste (indirect prop)
+total rooms cu + ,  mai multe camere, median_house_value creste   (direct proportionat)
+
+
+drop (facem drop la ceea ce vrem sa calculam)
+
+imputer =  completarea datelor care sunt null prin diferite strategii (ex: median)
+
+OneHotEncoding - asignam 0 si 1 ca sa vedem prezenta / absenta 
+
+sklearn necesita valori numerice;   0 si 1 ca sa nu introducem relatii de ordine  
+
+pipeline - construieste un flux de procesari (de fiecare data cand se ruleaza programu face asta)
+	- ca sa nu trebuiasca sa faci de mana acest pas , el scoate un model mai bun prin ajustari
+
+metrici de comparare a rezultatelor cu ceea ce stim deja (mean_squared_error)
+
+
+eroare 0 - inseamna ca e overfitting , ca sa evitam avem nevoie de cross_validation
+
+
+cross_validation -  
+
+DecisionTreeRegressor este cam slab 
+RandomForestRegressor este ceva mai ok 
+
+evaluare scor - ex. svm_rmse = np.sqrt(svm_mse)
+svm_mse aici e scoru    (rmse - root mean squared error)
+
+final_rmse - rezultatul final 
+
+
+procesam datelee, le codificam, incercam diferite modele ( regresie lineara, decision tree, randomForest, suport vector masini ), cu ajutorul metodei de cross_validation am verificat care dintre modele este cel mai potrivit (nici underfit, nici overfit)
+
+cu crossValidation am evitat overfit, folosind gridSearch am gasit combinatia optima de parametri, si apoi am antrenat modelu cu aceasta combinatie de hiperparametrii  si s-a evaluat modelul folosind metrica root mean squared error
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

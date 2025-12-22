@@ -1,0 +1,35 @@
+% 6. Lista completa in lista diferenta
+cl_dl([],Last,Last):-!.
+cl_dl([H|T],[H|First],Last):-cl_dl(T,First,Last).
+		 % Apel: cl_dl([1,2,3,4],F,L).
+	
+% 8. Lista diferenta in lista completa
+dl_cl([],L,[]):-!.
+dl_cl([X|T],L,[X|R]):- dl_cl(T,L,R).
+		 % Apel: dl_cl([1,2,3|L],L,R).
+
+===============================================
+	
+% 7. Lista completa in lista incompleta
+cl_il([],_):-!.
+cl_il([H|T],[H|R]):-cl_il(T,R).
+		 % Apel: cl_il([1,2,3],R).
+		 
+
+% 9. Lista incompleta in lista completa
+il_cl(T,[]):-var(T),!.
+il_cl([X|T],[X|R]):- il_cl(T,R).
+		 % Apel: il_cl([1,2,3|_],R).
+
+=============================================
+
+		 
+% 10. Lista incompleta in lista diferenta
+il_dl(T,L,L):-var(T),!.
+il_dl([X|T],[X|F],L):- il_dl(T,F,L).
+		 % Apel: il_dl([1,2,3|_],F,L).
+
+% 11. Lista diferenta in lista incompleta
+dl_il([],L,_):-!.
+dl_il([X|T],L,[X|R]):- dl_il(T,L,R).
+		 % Apel: dl_il([1,2,3|L],L,R).

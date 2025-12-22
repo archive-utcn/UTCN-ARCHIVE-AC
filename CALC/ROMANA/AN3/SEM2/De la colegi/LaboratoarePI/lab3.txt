@@ -1,0 +1,210 @@
+
+Am implemntat problemele 1-5
+Pt problema 3 am apelat showHistogram in problema de punctul 1 si 4
+
+
+
+void hist()
+{
+	char fname[MAX_PATH];
+	int h[256];
+	int i = 0;
+	int j = 0;
+
+	while (openFileDlg(fname))
+	{
+		Mat_<uchar> img = imread(fname, IMREAD_GRAYSCALE);
+		int rows = img.rows;
+		int cols = img.cols;
+		uchar v;
+
+		for (i = 0; i < 256; i++)
+		{
+			h[i] = 0;
+		}
+
+		for (i = 0; i < rows; i++)
+		{
+			for (j = 0; j < cols; j++)
+			{
+				v = img.at<uchar>(i, j);
+				h[v]++;
+			}
+		}
+
+		imshow("imagine", img);
+		showHistogram("histogram", h, 255, 200);
+		waitKey(0);
+	}
+
+}
+
+void FDP()
+{
+
+	char fname[MAX_PATH];
+	int h[256];
+	int fdp[256];
+	int i = 0;
+	int j = 0;
+	uchar v;
+
+	while (openFileDlg(fname))
+	{
+		Mat_<uchar> img = imread(fname, IMREAD_GRAYSCALE);
+		int rows = img.rows;
+		int cols = img.cols;
+		int dim = rows * cols;
+
+		for (i = 0; i < 256; i++)
+		{
+			h[i] = 0;
+		}
+
+		for (i = 0; i < rows; i++)
+		{
+			for (j = 0; j < cols; j++)
+			{
+				v = img.at<uchar>(i, j);
+				h[v]++;
+			}
+		}
+
+		for (int i = 0; i < 256; i++) 
+		{
+			fdp[i] = (float)h[i] / dim;
+			std::cout << h[i] << " ";
+		}
+
+	}
+
+}
+
+void histNrRedAcc(int acc)
+{
+	char fname[MAX_PATH];
+	int* h = new int[acc];
+	int i = 0;
+	int j = 0;
+	uchar v;
+
+	while (openFileDlg(fname))
+	{
+		Mat_<uchar> img = imread(fname, IMREAD_GRAYSCALE);
+		int rows = img.rows;
+		int cols = img.cols;
+		int size = 255 / acc;
+
+		for (i = 0; i < acc; i++)
+		{
+			h[i] = 0;
+		}
+
+		for (i = 0; i < rows; i++)
+		{
+			for (j = 0; j < cols; j++)
+			{
+				v = img.at<uchar>(i, j);
+				h[v/size]++;
+			}
+		}
+
+		imshow("imagine", img);
+		showHistogram("histogram", h, acc,200);
+		waitKey(0);
+	}
+}
+
+
+
+void praguriMultiple() {
+
+	char fname[MAX_PATH];
+	std::vector<int> vf;
+
+	int* h = new int[256];
+	float* fdp = new float[256];
+	int* fdp2 = new int[256];
+
+	int m = 256;
+	int WH = 5;
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	int width = 2 * WH + 1;
+	float TH = 0.0003f;
+	float v = 0.00f;
+	float sum = 0.0f;
+	bool ok = true;
+	
+	vf.push_back(0);
+
+	while (openFileDlg(fname))
+	{
+		Mat img = imread(fname, IMREAD_GRAYSCALE);
+		int rows = img.rows;
+		int cols = img.cols;
+
+		for (i = 0; i < 256; i++)
+		{
+			h[i] = 0;
+		}
+
+		for (i = 0; i < rows; i++)
+		{
+			for (j = 0; j < cols; j++)
+			{
+				uchar v1 = img.at<uchar>(i, j);
+				h[v1]++;
+			}
+		}
+
+		for (int i = 0; i < 256; i++)
+		{
+			fdp[i] = (float)h[i] / rows * cols;
+			//std::cout << h[i] << " ";
+		}
+
+		showHistogram("pas1+2", h, 255, 200);
+	
+		for ( k = WH; k < 255 - WH; k++) 
+		{
+			
+			
+			for (int i = k - WH; i <= k + WH; i++) 
+			{
+				sum += fdp[i];
+				if ((i != k) && (fdp[i] > fdp[k]))
+				{
+					ok = false;
+				}
+			}
+
+			 v = sum / (float)(2 * WH + 1);
+
+			if ((fdp[k] > v + TH) && ok)
+			{
+				vf.push_back(k);
+			}
+		}
+
+		vf.push_back(255);
+
+		for ( i = 0; i < 256; i++) 
+		{
+			fdp2[i] = 0;
+		}
+
+		int peaksLength = vf.size();
+
+		for ( i = 0; i < peaksLength; i++) 
+		{
+			fdp2[vf[i]] = h[vf[i]];
+			printf(" %d ", fdp2[vf[i]]);
+		}
+
+		showHistogram("Histograma imaginii cuantizate", fdp2, 256, 256);
+		imshow("image", img);
+		waitKey(0);
+	}
+}

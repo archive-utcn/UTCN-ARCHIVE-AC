@@ -1,0 +1,122 @@
+void prstr(char *p,char *q,char *start)
+{  char s[200];
+   char *start1,*p1,*q1;
+   printf("\n");
+   strcpy(s,start);
+   start1=s;p1=start1+(p-start);q1=start1+(q-start);
+   while(start1 < p1)
+	putchar(*start1++);
+   while(p1 < q1)
+	putchar(toupper(*p1++));
+   while(*q1)
+	putchar(*q1++);
+}
+
+
+void prtree(i,n)
+{  int j,k,m;
+   if(n){
+	prtree(i+4,right[n]);
+	if(name[n] < NCHARS) { /* char */
+		printf("%s%c",ind+40-i,name[n] == FINAL ? '#' : name[n]);
+		if(name[n] == FINAL)
+			putchar('\n');
+		else{
+			j=follow[n];
+			m=k=sets[j++];
+			putchar('{');
+			while(k-- > 0){
+				if(m-k > 1)
+					putchar(',');
+				printf("%d",sets[j++]);
+				}
+			printf("}\n");
+		}
+	}
+	else  /* OR CAT STAR */
+		printf("%s%c\n",ind+40-i,t[name[n]-OR]);
+	prtree(i+4,left[n]);
+	}
+}
+
+void prautom()
+{ register i,j;
+  prstates();
+  printf("    ");
+  for(i = 'a'; i < 't' ; i++)
+	printf("  %c",i);
+  putchar('\n');
+  for(j=0;j<=nstates;j++){
+	printf("%2d %d",j,out[j]);
+	for(i='a'; i< 't'; i++)
+		printf(" %2d",gotofn[j][i]);
+	putchar('\n');
+	}
+}
+
+
+
+
+
+
+Švoid prtrarr()
+{ register i;
+  printf("      ");
+  for(i=0;i<line;i++)
+	printf(" %2d",i);
+  printf("\nname  ");
+  for(i=0;i<line;i++)
+	if(name[i] < NCHARS) /* CHAR */
+		printf("  %c",name[i] == FINAL ? '#' : name[i]);
+	else  /* OR CAT STAR */
+		printf("  %c",t[name[i]-OR]);
+  printf("\nleft  ");
+  for(i=0;i<line;i++)
+	printf(" %2d",left[i]);
+  printf("\nright ");
+  for(i=0;i<line;i++)
+	printf(" %2d",right[i]);
+  printf("\nparent");
+  for(i=0;i<line;i++)
+	printf(" %2d",parent[i]);
+  putchar('\n');
+}
+
+void prfoll()
+{  register i,j;
+   j=line>nextset ? line : nextset;
+   printf("      ");
+   for(i=0;i<j;i++)
+	printf(" %2d",i);
+  printf("\ntmpsta");
+  for(i=0;i<line;i++)
+	printf(" %2d",tmpstat[i]);
+  printf("\nfollow");
+  for(i=0;i<line;i++)
+	printf(" %2d",follow[i]);
+  printf("\nsets  ");
+  for(i=0;i<nextset;i++)
+	printf(" %2d",sets[i]);
+  putchar('\n');
+  prtree(0,line);
+}
+
+void prstates()
+{  register i,j;
+   j=nstates>nextset ? nstates : nextset-1;
+   printf("\n      ");
+   for(i=0;i<j;i++)
+	printf(" %2d",i);
+  printf("\ntmpsta");
+  for(i=0;i<line;i++)
+	printf(" %2d",tmpstat[i]);
+  printf("\nstate ");
+  for(i=0;i<nstates;i++)
+	printf(" %2d",state[i]);
+  printf("\nsets  ");
+  for(i=0;i<nextset;i++)
+	printf(" %2d",sets[i]);
+  putchar('\n');
+  getch();
+}
+

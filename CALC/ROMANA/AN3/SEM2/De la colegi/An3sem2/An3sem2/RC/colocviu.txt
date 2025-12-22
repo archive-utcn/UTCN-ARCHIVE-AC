@@ -1,0 +1,94 @@
+197.21.3.0/24
+13 hosturi
+2^4=16=> 4 biti de host=> in masca ultimii 4 biti vor fi 0 iar restul vor fi 1
+IP:                    11000101 00010101 00000011 00000000
+masca originala:      11111111 11111111 11111111 00000000( clasa C)
+masca noua:            11111111 11111111 11111111 11110000
+deci noua masca este  255.255.255.240
+
+numarul de subneturi:   2^4 = 16 (noua masca  /28 acum ,inainte era /24)
+nr maxim hosturi: 2^4-2 = 14
+adresa de retea a primei subretele:
+11000101 00010101 00000011 00000000 
+192.21.3. 0
+adresa de broadcast a primei retele 
+11000101 00010101 00000011 00001111
+192.21.3.15
+                           00010000
+                           00100001
+
+
+b) pentru radacina se alege switch-ul cu prioritatea cea mai mica deci in cazul nostru Switch4
+a)
+Configure terminal
+ VLAN 22
+Name Armina
+Interface fa0/4
+Switchport mode access
+Switchport access vlan 22
+End
+
+Configure terminal
+ VLAN 33
+Name Armina2
+Interface fa0/3
+Switchport mode access
+Switchport access vlan 33
+End
+intre PC3 si Pc4 nu exista conectivitate pentru ca au subretele diferite
+server0
+ip:            192.21.3.2
+NM:         255.255.255.240
+Gateway  192.21.3.1
+
+router0 interf fa0/1
+ip:  192.21.3.1
+nm:255.255.255.240
+
+router0 interf fa0/0
+ip:  192.21.3.16
+nm:255.255.255.240
+
+router1 interf fa0/0
+ip:  192.21.3.17
+nm:255.255.255.240
+
+router1 interf fa0/1
+ip:  192.21.3.33
+nm:255.255.255.240
+
+PC1:        ip:               ip:  192.21.3.34
+                NM:           255.255.255.240
+                Gateway:   192.21.3.33
+
+PC0:        ip:               ip:  ip:  192.21.3.35
+                NM:           255.255.255.240
+                Gateway:   192.21.3.33
+de la router0 la pc1 si pc0
+ip route 192.21.3.0 255.255.0.0 192.21.3.17
+de la router1 la server0
+ip route 192.21.3.0 255.255.0.0 192.21.3.1
+
+
+
+
+
+b) pentru radacina se alege switch-ul cu prioritatea cea mai mica deci in cazul nostru Switch4
+a)
+Configure terminal
+ VLAN 22
+Name Armina
+Interface fa0/4
+Switchport mode access
+Switchport access vlan 22
+End
+
+Configure terminal
+ VLAN 33
+Name Armina2
+Interface fa0/3
+Switchport mode access
+Switchport access vlan 33
+End
+intre PC3 si Pc4 nu exista conectivitate pentru ca au subretele diferite
+c)mai mic pentru ca se aduna vitezele de pe fire si cu cat viteza e mai mare cu atat costul devine mai mic

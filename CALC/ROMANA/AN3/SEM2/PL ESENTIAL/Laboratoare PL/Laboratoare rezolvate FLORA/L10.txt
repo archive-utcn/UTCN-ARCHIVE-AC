@@ -1,0 +1,146 @@
+
+:-dynamic neighbor/2.
+:-dynamic edge/2.
+:-dynamic node/1.
+
+neighbor(a,[b,d]).
+neighbor(b,[a,c,d]).
+neighbor(c,[b,d]).
+neighbor(d,[a,b,c]).
+neighbor(e,[]).
+
+node(a).
+node(b).
+node(c).
+node(d).
+node(e).
+node(f).
+node(g).
+edge(a,d).
+edge(d,a).
+edge(b,f). 
+edge(f,b).
+edge(g,b).
+edge(f,g).
+edge(c,e).
+edge(e,c).
+edge(c,g).
+edge(g,c).
+edge(b,e).
+edge(e,f).
+
+n_to_e :- retract(neighbor(N,L)),!,
+    proces(N,L),
+    n_to_e.
+n_to_e.
+proces(N,[H|T]) :- assertz(edge(N,H)),
+    proces(N,T).
+proces(N,[]) :- assertz(node(N)).
+
+
+e_to_n :- retract(node(X)),!,
+    assertz(neighbor(X,[])),
+    e_to_n.
+e_to_n :- retract(edge(X,Y)),!,
+    retract(neighbor(X,L)),!,
+    assertz(neighbor(X,[Y|L])),
+    e_to_n.
+e_to_n.
+
+path(X,Y,Path):-path(X,Y,[X],Path).
+path(X,Y,PPath, FPath):-edge(X,Z),
+	not(member(Z, PPath)),
+	path(Z, Y, [Z|PPath], FPath).
+path(X,X,PPath, PPath).
+
+
+cycle(X, F) :- edge(X,Z),
+    path(Z,X,P),
+    length(P,P1),
+    P1>2,
+    append(P,[X],F).
+
+:- dynamic nod_vizitat/1.
+% d_search(Source, Path)
+d_search(X,_):-df_search(X,_). % parcurgerea nodurilor
+d_search(_,L):-!, collect_reverse([],L). % colectarea rezultatelor
+df_search(X,L):-
+	asserta(nod_vizitat(X)),
+	edge(X,Y),
+	not(nod_vizitat(Y)),
+	df_search(Y,L).
+
+
+dls(X,L,_) :- dfs(X,L,_).
+dls(_,_,R) :- !, collect_reverse([],R).
+
+dfs(X,L,R) :- L>0,
+    L1 is L-1,
+    asserta(nod_vizitat(X)),
+	edge(X,Y),
+	not(nod_vizitat(Y)),!,
+	dfs(Y,L1,R).
+
+
+% colectarea se face în ordine inversa
+collect_reverse(L,P):-
+	retract(nod_vizitat(X)), !,
+	collect_reverse([X|L],P).
+collect_reverse(L,L).
+
+
+
+:- dynamic state/1.
+
+state([n,n,n,n]).
+state([n,n,n,s]).
+state([n,n,s,n]).
+state([n,s,n,n]).
+state([s,n,n,n]).
+state([s,s,n,n]).
+state([n,s,s,n]).
+state([n,n,s,s]).
+state([s,n,s,n]).
+state([s,n,n,s]).
+state([n,s,n,s]).
+state([n,s,s,s]).
+state([s,s,s,n]).
+state([s,n,s,s]).
+state([s,s,n,s]).
+state([s,s,s,s]).
+
+opp(n,s).
+opp(s,n).
+
+
+verify([F,L,C,_]) :- L = C,!,%sa nu dea tru clauza urmatoare
+    F = L.
+verify([F,_,C,V]) :- C = V,!,
+    F = C.
+verify(_).
+
+transition(R) :- transition([n,n,n,n],[],R).
+transition([s,s,s,s],R,[[s,s,s,s]|R]).
+transition(S1,Part,R) :- find_next(S1,S2),
+    not( member(S2,Part) ),
+    transition(S2,[S1|Part],R).
+
+
+trans([F1,L1,C1,V1|[]],[F2,L2,C2,V2|[]]):- opp(F1,F2), %fermierul intotdeauna e in barca
+    C2 = C1,V1 = V2,F1 = L1,
+    opp(L1,L2).
+
+trans([F1,L1,C1,V1|[]],[F2,L2,C2,V2|[]]):- opp(F1,F2), %fermierul intotdeauna e in barca
+    C2 = C1,L1 = L2,F1 = V1,
+    opp(V1,V2).
+
+trans([F1,L1,C1,V1|[]],[F2,L2,C2,V2|[]]):- opp(F1,F2), %fermierul intotdeauna e in barca
+    L2 = L1,V1 = V2,F1 = C1,
+    opp(C1,C2).
+
+trans([F1,L1,C1,V1|[]],[F2,L2,C2,V2|[]]):- opp(F1,F2),
+    C2 = C1, V1 = V2, L1 = L2.
+
+find_next(S1,S2) :- state(S1),state(S2),
+    trans(S1,S2),
+    verify(S2).

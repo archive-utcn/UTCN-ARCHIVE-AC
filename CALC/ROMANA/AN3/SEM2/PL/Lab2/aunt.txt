@@ -1,0 +1,52 @@
+[trace]  ?- aunt(carmen,X).
+   Call: (10) aunt(carmen, _15068) ? creep
+   Call: (11) sister(carmen, _15500) ? creep
+   Call: (12) sibling(carmen, _15544) ? creep
+   Call: (13) parent(_15586, carmen) ? creep
+   Exit: (13) parent(mihai, carmen) ? creep
+   Call: (13) parent(mihai, _15676) ? creep
+   Exit: (13) parent(mihai, george) ? creep
+   Call: (13) carmen\=george ? creep
+   Exit: (13) carmen\=george ? creep
+   Exit: (12) sibling(carmen, george) ? creep
+   Call: (12) woman(carmen) ? creep
+   Exit: (12) woman(carmen) ? creep
+   Exit: (11) sister(carmen, george) ? creep
+   Call: (11) parent(george, _15068) ? creep
+   Exit: (11) parent(george, ana) ? creep
+   Exit: (10) aunt(carmen, ana) ? creep
+X = ana ;
+   Redo: (11) parent(george, _15068) ? creep
+   Exit: (11) parent(george, andrei) ? creep
+   Exit: (10) aunt(carmen, andrei) ? creep
+X = andrei ;
+   Redo: (13) parent(mihai, _17944) ? creep
+   Exit: (13) parent(mihai, carmen) ? creep
+   Call: (13) carmen\=carmen ? creep
+   Fail: (13) carmen\=carmen ? creep
+   Redo: (13) parent(_18118, carmen) ? creep
+   Exit: (13) parent(irina, carmen) ? creep
+   Call: (13) parent(irina, _18208) ? creep
+   Exit: (13) parent(irina, george) ? creep
+   Call: (13) carmen\=george ? creep
+   Exit: (13) carmen\=george ? creep
+   Exit: (12) sibling(carmen, george) ? creep
+   Call: (12) woman(carmen) ? creep
+   Exit: (12) woman(carmen) ? creep
+   Exit: (11) sister(carmen, george) ? creep
+   Call: (11) parent(george, _15068) ? creep
+   Exit: (11) parent(george, ana) ? creep
+   Exit: (10) aunt(carmen, ana) ? creep
+X = ana ;
+   Redo: (11) parent(george, _15068) ? creep
+   Exit: (11) parent(george, andrei) ? creep
+   Exit: (10) aunt(carmen, andrei) ? creep
+X = andrei ;
+   Redo: (13) parent(irina, _20476) ? creep
+   Exit: (13) parent(irina, carmen) ? creep
+   Call: (13) carmen\=carmen ? creep
+   Fail: (13) carmen\=carmen ? creep
+   Fail: (12) sibling(carmen, _20652) ? creep
+   Fail: (11) sister(carmen, _20696) ? creep
+   Fail: (10) aunt(carmen, _15068) ? creep
+false.

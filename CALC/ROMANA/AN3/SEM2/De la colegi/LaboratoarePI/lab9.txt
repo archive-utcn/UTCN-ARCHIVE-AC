@@ -1,0 +1,353 @@
+Mat createKernel(char* type, int w) 
+{ 
+
+	Mat kernel(w, w, CV_32FC1);
+	int size = w * w;
+	int i = 0;
+	int j = 0;
+	if (strcmp(type, "MEAN") == 0)
+	{
+		for (i = 0; i < w; i++) 
+		{
+			for (j = 0; j < w; j++) 
+			{
+				kernel.at<float>(i, j) = 1.0;
+			}
+		}
+		return kernel;
+	}
+	if (strcmp(type, "GAUSSIAN") == 0) {
+		kernel.at<float>(0, 0) = 1;
+		kernel.at<float>(0, 1) = 2;
+		kernel.at<float>(0, 2) = 1;
+		kernel.at<float>(1, 0) = 2;
+		kernel.at<float>(1, 1) = 4;
+		kernel.at<float>(1, 2) = 2;
+		kernel.at<float>(2, 0) = 1;
+		kernel.at<float>(2, 1) = 2;
+		kernel.at<float>(2, 2) = 1;
+		return kernel;
+	}
+	if (strcmp(type, "LAPLACE") == 0) {
+		kernel.at<float>(0, 0) = 0;
+		kernel.at<float>(0, 1) = -1;
+		kernel.at<float>(0, 2) = 0;
+		kernel.at<float>(1, 0) = -1;
+		kernel.at<float>(1, 1) = 4;
+		kernel.at<float>(1, 2) = -1;
+		kernel.at<float>(2, 0) = 0;
+		kernel.at<float>(2, 1) = -1;
+		kernel.at<float>(2, 2) = 0;
+		return kernel;
+	}
+	if (strcmp(type, "HIGH") == 0) {
+		kernel.at<float>(0, 0) = 0;
+		kernel.at<float>(0, 1) = -1;
+		kernel.at<float>(0, 2) = 0;
+		kernel.at<float>(1, 0) = -1;
+		kernel.at<float>(1, 1) = 5;
+		kernel.at<float>(1, 2) = -1;
+		kernel.at<float>(2, 0) = 0;
+		kernel.at<float>(2, 1) = -1;
+		kernel.at<float>(2, 2) = 0;
+		return kernel;
+	}
+
+	return kernel;
+}
+
+bool inBounds(int i, int j, Mat img) {
+	if (i < 0 || i >= img.rows)
+		return false;
+	if (j < 0 || j >= img.cols)
+		return false;
+	return true;
+}
+
+Mat imFilter(Mat img, Mat kernel) 
+{ 
+
+	Mat dst(img.rows, img.cols, CV_8UC1);
+
+	int height = img.rows;
+	int width = img.cols;
+	int kernelRows = kernel.rows;
+	int kernelCols = kernel.cols;
+	float sumNegKernel = 0;
+	float sumPosKernel = 0;
+	float sum = 0;
+	float a = 0.0;
+	float b = 0.0;
+	int i = 0;
+	int j = 0;
+	int ii = 0;
+	int jj = 0;
+	int ipixel = 0;
+	int jpixel = 0;
+	for (i = 0; i < kernelRows; i++)
+	{
+		for (j = 0; j < kernelCols; j++)
+		{
+			if (kernel.at<float>(i, j) < 0) {
+				sumNegKernel += kernel.at<float>(i, j);
+			}
+			if (kernel.at<float>(i, j) > 0) {
+				sumPosKernel += kernel.at<float>(i, j);
+			}
+		}
+	}
+
+	a = 255.0 * sumNegKernel;
+	b = 255.0 * sumPosKernel;
+
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++) 
+		{
+			sum = 0;
+			for (ii = 0; ii < kernelRows; ii++) 
+			{
+				for (jj = 0; jj < kernelCols; jj++) 
+				{
+					 ipixel = i + ii - kernelRows / 2;
+					 jpixel = j + jj - kernelCols / 2;
+					if (inBounds(ipixel, jpixel, img)) {
+						sum = sum + kernel.at<float>(ii, jj) * img.at<uchar>(ipixel, jpixel);
+					}
+				}
+			}
+			sum = ((sum - a) / (b - a)) * 255.0;
+			if (sum > 255.0) {
+				dst.at<uchar>(i, j) = 255;
+			}
+			else {
+				if (sum < 0)
+					dst.at<uchar>(i, j) = 0;
+				else
+					dst.at<uchar>(i, j) = sum;
+			}
+
+
+		}
+	}
+	return dst;
+}
+
+Mat imFilter2(Mat img, Mat kernel) 
+{ 
+
+	Mat dst(img.rows, img.cols, CV_32FC1);
+
+	int height = img.rows;
+	int width = img.cols;
+	int i = 0;
+	int j = 0;
+	int ii = 0;
+	int jj = 0;
+	int ipixel = 0;
+	int jpixel = 0;
+	int kernelRows = kernel.rows;
+	int kernelCols = kernel.cols;
+
+	float sum = 0;
+
+	for (i = 0; i < height; i++) 
+	{
+		for (j = 0; j < width; j++) 
+		{
+			 sum = 0;
+			for (ii = 0; ii < kernelRows; ii++) 
+			{
+				for (jj = 0; jj < kernelCols; jj++) 
+				{
+						ipixel = i + ii - kernelRows / 2;
+					    jpixel = j + jj - kernelCols / 2;
+					if (inBounds(ipixel, jpixel, img)) {
+						sum=sum+ kernel.at<float>(ii, jj) * img.at<float>(ipixel, jpixel);
+
+					}
+				}
+			}
+			dst.at<float>(i, j) = sum;
+		}
+	}
+	return dst;
+}
+
+void imFilterWrapper() 
+{ 
+	char fname[MAX_PATH];
+
+	while (openFileDlg(fname))
+	{
+		Mat src = imread(fname, IMREAD_GRAYSCALE);
+		Mat kernel = createKernel("MEAN", 3);
+
+		Mat result = imFilter(src, kernel);
+
+		imshow("input image", src);
+		imshow("Filtered Image", result);
+		waitKey();
+	}
+}
+
+void centeringTransform(Mat img) {
+	int height = img.rows;
+	int width = img.cols;
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++) 
+		{
+			img.at<float>(i, j) = ((i + j) & 1) ? -img.at<float>(i, j) : img.at<float>(i, j);
+		}
+	}
+}
+
+
+Mat lowPassFourier(Mat mag, float r) 
+{ 
+	Mat dst(mag.rows, mag.cols, CV_32FC1);
+	int height = mag.rows;
+	int width = mag.cols;
+	int i = 0;
+	int j = 0;
+	float rez = 0.0;
+	float r2 = 0;
+	for (i = 0; i < height; i++) 
+	{
+		for (j = 0; j < width; j++) 
+		{
+			rez = (height / 2.0 - i) * (height / 2.0 - i) + (width / 2.0 - j) * (width / 2.0 - j);
+			r2 = r * r;
+			if (rez <= r2) {
+				dst.at<float>(i, j) = mag.at<float>(i, j);
+			}
+			else {
+				dst.at<float>(i, j) = 0;
+			}
+		}
+	}
+	return dst;
+}
+
+Mat highPassFourier(Mat mag, float r) 
+{ 
+	Mat dst(mag.rows, mag.cols, CV_32FC1);
+	int height = mag.rows;
+	int width = mag.cols;
+	int i = 0;
+	int j = 0;
+	float rez = 0.0;
+	float r2 = 0;
+	for (i = 0; i < height; i++) 
+	{
+		for (j = 0; j < width; j++) 
+		{
+			 rez = (height / 2.0 - i) * (height / 2.0 - i) + (width / 2.0 - j) * (width / 2.0 - j);
+			 r2 = r * r;
+			if (rez > r2) {
+				dst.at<float>(i, j) = mag.at<float>(i, j);
+			}
+			else {
+				dst.at<float>(i, j) = 0;
+			}
+		}
+	}
+	return dst;
+}
+
+Mat gaussianHighFourier(Mat mag) 
+{ 
+	Mat dst(mag.rows, mag.cols, CV_32FC1);
+	int height = mag.rows;
+	int width = mag.cols;
+	float A2 = 400;
+	int i = 0;
+	int j = 0;
+	float rez = 0.0;
+	for (i = 0; i < height; i++) 
+	{
+		for (j = 0; j < width; j++) 
+		{
+			rez = (height / 2.0 - i) * (height / 2.0 - i) + (width / 2.0 - j) * (width / 2.0 - j);
+			dst.at<float>(i, j) = mag.at<float>(i, j) * (1 - exp(-rez / A2));
+		}
+	}
+	return dst;
+}
+
+Mat gaussianLowFourier(Mat mag) 
+{ 
+
+	Mat dst(mag.rows, mag.cols, CV_32FC1);
+	int height = mag.rows;
+	int width = mag.cols;
+	float A2 = 400;
+	int i = 0;
+	int j = 0;
+	float rez = 0.0;
+	for (i = 0; i < height; i++) 
+	{
+		for (j = 0; j < width; j++)
+		{
+			rez = (height / 2.0 - i) * (height / 2.0 - i) + (width / 2.0 - j) * (width / 2.0 - j);
+			dst.at<float>(i, j) = mag.at<float>(i, j) * (exp(-rez / A2));
+		}
+	}
+	return dst;
+}
+
+
+
+Mat fraquencyProcess(Mat src) {
+	Mat srcf;
+	Mat dst(src.rows, src.cols, CV_8UC1);
+
+	src.convertTo(srcf, CV_32FC1);
+	centeringTransform(srcf);
+
+	//perform forward transform with complex image output
+	Mat fourier;
+	dft(srcf, fourier, DFT_COMPLEX_OUTPUT);
+
+	//split into real and imaginary channels
+	Mat channels[] = { Mat::zeros(src.size(), CV_32F), Mat::zeros(src.size(), CV_32F) };
+	split(fourier, channels);
+
+	//calculate magnitude and phase in floating point images mag and phi 
+	Mat mag, phi;
+	magnitude(channels[0], channels[1], mag);
+	phase(channels[0], channels[1], phi);
+
+	mag += Scalar::all(1);
+	log(mag, mag); //avoid log(0)
+	normalize(mag, mag, 0, 255, NORM_MINMAX, CV_8UC1);
+	normalize(phi, phi, 0, 255, NORM_MINMAX, CV_8UC1);
+
+
+	mag = lowPassFourier(mag, 15);
+	imshow("Fourier low pass", mag);
+
+
+	/*mag = highPassFourier(mag, 15);
+	imshow("Fourier high pass", mag);*/
+
+	/*mag = gaussianLowFourier(mag);
+	imshow("Fourier low pass", mag);*/
+
+	/*mag = gaussianHighFourier(mag);
+	imshow("Fourier high pass", mag);*/
+
+	
+	//perform inverse transform and put results in dstf 
+	Mat dstf;
+	merge(channels, 2, fourier);
+	dft(fourier, dstf, DFT_INVERSE | DFT_REAL_OUTPUT | DFT_SCALE);
+
+	//inverse centering transformation 
+	centeringTransform(dstf);
+
+	normalize(dstf, dst, 0, 255, NORM_MINMAX, CV_8UC1);
+
+	return dst;
+}

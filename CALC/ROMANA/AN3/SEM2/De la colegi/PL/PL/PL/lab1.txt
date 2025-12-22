@@ -1,0 +1,59 @@
+ex1
+
+a- constanta
+b-constanta
+c-variabila
+d-variabila
+e-constanta
+f-constanta
+g-lista
+h-lista
+i-lista
+
+
+
+
+
+ex2
+
+var- returneaza true daca Term este o variabila, false in caz contrar
+nonvar - returneaza true daca Term nu este o variabila, false in caz contrar
+number - returneaza true daca Tern este legat la un numar, false in caz contrar
+atom - returneaza True daca Term este o constanta, false in caz contrar
+atomic - returneaza True daca Term este o constanta sau int , false in caz contrar
+
+ex3
+a-true
+b-false
+c-false
+d-false
+e- X=Y, Y=1
+f-false
+g-false
+h-X=ana
+i- X=Y, Y=ana
+j- X=b
+   Y=c
+k- X=Y, Y=2.
+l- X=b(c,Z),
+   Y=Z.
+m-Right = tree(a, b, tree(c, d, e)).
+n- X=s(g),
+   Y=k.
+o- X=father(X).
+p- X=mersellus,
+   Y=mia
+q-false
+r- A=1,
+   B=2,
+   C=3.
+s-T=[1,f(x)|L2].
+t- L2=[]
+
+ex 4.4
+a)  X= sara;
+    X=ema.
+b)  X=gorge,
+    Y=ana.
+
+c) true.

@@ -1,0 +1,46 @@
+% X^N = X * [ X^(N-1)]
+
+%backward
+pow1(_,0,1).
+pow1(X,N,R):- N>1, N_1 is N_1, pow1(X,N_1, XN_1), R is X * XN_1    
+
+
+
+solve(A,B,C,X):-
+	Delta is B*B - 4 * A * C,
+	X is (sqrt(Delta) - B) / (2 *A).
+
+
+fibN = FibN_1 + FibN_2
+
+fib1(0, 0).
+fib1(1,1).
+fib1(N, F_N):-
+	N_1 is N-1,
+	N_2 is N-2, 
+	fib(N_1, FN_1), fib(N_2, FN_2), FN is FN_1 + FN_2.
+
+fib2(N, F_N):- fib2(N, _, F_N).
+fib2(1, 0, 1).  
+%fib2(2, 1, 1).  asta e fib de 2 
+fib2(N, FN_1, F_N):-
+	N_1 is N-1,
+	fib(N_1, FN_2  , FN_1), F_N is FN_2 + FN_1.
+
+sum([],0).
+sum([H|T], S):- sum(T, PS), PS is H + PS.
+
+sum1([],Acc,Acc).
+sum1([H|T], Acc, S):- NewAcc is H + NewAcc, 
+		   sum1(T, NewAcc, S).
+
+member1(H, [H|T]).
+member1(X, [_|T]):- member1(X, T).
+
+all_members([H], List2):- member1(H,List2).
+all_members([H|T], List2):- member1(H,List2), all_members(T, List2).
+
+%%
+triangle(A,B,C):- X is A+B, Y is A+C, Z is B+C, X > C, Y > B, Z > A, A>0,B>0,C>0.
+
+

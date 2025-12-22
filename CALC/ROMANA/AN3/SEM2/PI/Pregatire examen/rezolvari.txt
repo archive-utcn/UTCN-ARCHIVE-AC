@@ -1,0 +1,156 @@
+A U B = daca gasim un pixel negru (0) ori in A ori in B, il salvam intr-o matrice Reuniune 
+
+A ^ B (intersectie) = daca gasim pixeli care sunt negri(0) in ambele imagini, ii punem intr-o matrice Intersectie
+
+Reuniune - Intersectie = daca un pixel e negru in Reuniune si alb(255) in Intersectie, il punem in rezultatul final
+
+
+
+
+2. Problema cvasi-blabla
+
+Filtram imaginea cu Sobel. Avem doua matrici rezultate, Gx si Gy. 
+Calculam matricea de module (dupa formula 11.6) si matricea de directii (11.7)
+Parcurgem matricea de module si pastram doar valorile peste 255/2 
+Parcurgem matricea de directii si pastram doar valorile din directia cvasi-orizontala sau verticala cu tolentara de +P/10, adica intervalele urmatoare :
+a. 0 +- P/10
+b. 4pi/8  +- P/10 
+c. pi +- P/10
+d. -4pi +- P/10
+Punem intr-o matrice rezultat doar valorile din matricea de module care satisfac conditiile de la punctele 3 si 4.
+Afisam matricea rezultata 
+
+
+
+3. Problema cu imagine grayscale (height = width)
+
+
+
+Problema cu cruci 
+
+diferentiere dreptunghi de cruce :
+
+facem bounding box si vedem daca obiectul umple complet bounding boxul
+
+parcurgem contururile obiectelor, le etichetam, si verificam pentru care obiect se schimba directia doar de 4 ori, iar acela este dreptunghi 
+
+apoi pentru calcul centru cruci : 
+  
+
+parcurgem conturul crucilor si retinem punctele in care coteste dupa cum ar trebui sa fie o cruce 
+
+sau 
+
+mijlocul laturii de sus + mijlocul laturii din stanga = centrul crucii 
+
+sau 
+
+eroziune cu un element structural cu 4 vecini pana cand ramanem cu un singur punct / o cruce si acela e centrul 
+
+
+
+4. Poza cu fundal Polus
+
+smoothing, filtru gaussian (ca sa eliminam zgomotul), binarizare adaptiva (cerul o sa fie alb)-> facem cateva dilatari pentru a umplu golu-> detectam muchiile cu Canny  ori parcurgem imaginea pe coloana de sus pana jos si marcam primul punct de culoare diferita decat cerul si astfel avem o linie de contur dupa care separam cerul de restul imaginii 
+
+Sau 
+
+Aplicam filtru laplace, ca sa evidentiem muchiile -> parcurgem imaginea pe coloana de sus pana jos si marcam primul punct de culoare diferita decat cerul (o diferenta mare intre intensitati) si astfel avem o linie de contur dupa care separam cerul de restul imaginii 
+
+
+----------------Teorie--------
+Daca ii degradat doar de pepper , aplicam filtrul de maxim  sau o deschidere pentru a filtra obiectele mici
+
+Daca avem doar zgomot de tip salt, facem o inchidere (umplem golurile)
+-------------------------------------------------------
+5. Problema cu litere
+
+pentru detectia literelor
+facem codurile inlantuite pentru fiecare litera, facem un sablon si verificam de cate ori regasim sablonul in imagine
+
+etichetam obiectele, le coloram distinctiv, si pentru fiecare obiect in parte parcurgem conturul si facem vectorul de coduri inlantuite in functie de directiile din labu 6, dupa ce avem vectorul de directii inlantuite putem elimina duplicatele, dupa o sa avem 7 vectori distincti pentru fiecare litera care se afla in imagine, si de fiecare data cand gasim un nou obiect, il suprapunem peste fiecare vector in parte si vedem unde se clasifica si atunci incrementam un contor pentru litera respectiva. 
+
+
+Pentru I -  6-0-2-4 
+Pentru E - 6-0-2-4-2-0-2-4-2-0-2-4
+Pentru N - 6-0-2-7-0-2-4-6-3-4
+pentru T - 6-0-6-0-2-0-2-4
+pentru F - 6-0-2-0-2-4-2-0-2-4
+pentru L - 6-0-2-4-2-4
+pentru H - 6-0-2-0-6-0-2-4-6-4-2-4
+
+
+
+
+
+6. Pentru problema cu sageti :
+
+parcurgem imaginea pe prima linie pana gasim primul obiect, etichetam toate obiectele 
+
+	x
+a	b	c                 verificam vecinii pe diagonala si sub punct,
+
+sau cu coduri inlantuite verificam prima si ultima directie 
+
+
+pentru problema cu ochii copiilor : 
+
+
+Parcurgeri de matrice : 
+
+for (i=0;i<n;i++){
+ for(j=0;j<n;j++){
+   if (conditie ce vrei tu) {
+       a[i][j] = ce vrea profu }
+  else{
+       a[i][j] = a[i][j]; }
+}}
+
+-diagonala principala :  i = j 
+- deasupra diagonalei principale : i < j 
+- sub diagonala principala : i > j 
+
+
+-diagonala secundara : i+j = n-1
+-deasupra diagonalei secundare : i+j < n-1
+-sub diagonala secundara :   i+j > n-1
+
+
+-zona nordica :  i < j  &&  i+j < n-1
+-zona vestica :   i > j  && i+j < n-1
+-zona sudica :    i > j  && i+j > n-1
+-zona estica :     i < j  && i+j > n-1
+
+parcurgere din centru spre exterior :
+
+- conditie :  i = j  && i+j = n-1
+
+
+
+Problema xor matrice A si B : 
+
+for(int i=0;i<A.rows;i++){
+for(int j=0;j<A.cols;A++{
+if(A.at<uchar>(i,j) == 0 || B.at<uchar>(i,j) == 0)  C.at<uchar>(i,j) = 0
+(la inceput, intiem C-ul cu pixeli de fundal)
+Mat C(A.rows, A.cols, .... (uchar), Scalar(255));
+if(A.at<uchar>(i,j) == 0 && B.at<uchar>(i,j) == 0)  D.at<uchar>(i,j) = 0
+if (C.at<uchar>(i,j) == 0 && D.at<uchar>(i,j) == 255)  E.at<uchar>(i,j) = C.at<uchar>(i,j)
+
+
+
+Problema cu hexagoane si stelute 
+
+facem bounding box, si vedem in ce masura umple bounding boxul si astfel stabilim un threshold, iar daca valoarea e peste threshold atunci este hexagon iar daca nu este stea.
+etichetam toate obiectele si apoi parcurgem pentru fiecare obiect etichetat cu BFS 
+facem raportul arie / bounding box , daca e peste threshold incrementam un contor pentru hexagon iar daca nu incrementam pentru stea 
+
+
+
+
+
+
+
+
+
+

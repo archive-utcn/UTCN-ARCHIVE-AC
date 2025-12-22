@@ -1,0 +1,150 @@
+Mat rankFilter(Mat img, int w, int type) {
+
+	int height = img.rows;
+	int width = img.cols;
+	Mat dst(height, width, CV_8UC1);
+
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++) {
+			std::vector<uchar> neighb;
+			for (int ii = 0; ii < w; ii++) {
+				for (int jj = 0; jj < w; jj++) {
+					int ipixel = i + ii - w / 2;
+
+					int jpixel = j + jj - w / 2;
+					if (inBounds(ipixel, jpixel, img)) {
+						neighb.push_back(img.at<uchar>(ipixel, jpixel));
+					}
+				}
+			}
+			std::sort(neighb.begin(), neighb.end());
+			if (type == 0)
+				dst.at<uchar>(i, j) = neighb.at(0);
+			if (type == 1)
+				dst.at<uchar>(i, j) = neighb.at(neighb.size() / 2);
+			if (type == 2)
+				dst.at<uchar>(i, j) = neighb.at(neighb.size() - 1);
+		}
+		printf("%d \n", i);
+	}
+
+	return dst;
+}
+
+void rankFilterWrapper(int type) {
+	char fname[MAX_PATH];
+
+	while (openFileDlg(fname))
+	{
+		Mat src = imread(fname, IMREAD_GRAYSCALE);
+
+		Mat result = rankFilter(src, 3, type);
+
+		imshow("input image", src);
+		imshow("Rank Filtered Image", result);
+		waitKey();
+	}
+}
+
+Mat createGaussian2DKernel(int w) {
+	Mat dst(w, w, CV_32FC1);
+	int i = 0;
+	int j = 0;
+	float sigmaSqr = (w / 6.0) * (w / 6.0);
+	float sum = 0;
+	float ex = 0;
+	for (i = 0; i < w; i++) 
+	{
+		for (j = 0; j < w; j++) 
+		{
+			ex = -(((i - w / 2) * (i - w / 2) + (j - w / 2) * (j - w / 2)) / (2.0 * sigmaSqr));
+			dst.at<float>(i, j) = (1.0 / (2.0 * PI * sigmaSqr)) * exp(ex);
+			sum = sum + dst.at<float>(i, j);
+		}
+	}
+	printf("SUM: %f", sum);
+	return dst;
+}
+
+Mat Gaussian2D(Mat img, int w) {
+
+	Mat gaussianKernel = createGaussian2DKernel(w);
+	return imFilter(img, gaussianKernel);
+}
+
+Mat createGaussian1DXKernel(int w) 
+{
+	Mat dst(1, w, CV_32FC1);
+	int i = 0;
+	float sigmaSqr = (w / 6.0) * (w / 6.0);
+	float sum = 0;
+	float ex = 0;
+	for (i = 0; i < w; i++) 
+	{
+		ex = -(((i - w / 2) * (i - w / 2)) / (2.0 * sigmaSqr));
+		dst.at<float>(0, i) = (1.0 / (sqrt(2.0) * sqrt(PI) * (w / 6.0))) * exp(ex);
+		sum = sum + dst.at<float>(0, i);
+	}
+	printf("SUM X KERNEL: %f \n", sum);
+	return dst;
+}
+
+Mat createGaussian1DYKernel(int w) 
+{
+	Mat dst(w, 1, CV_32FC1);
+	int i = 0;
+	float sum = 0;
+	float sigmaSqr = (w / 6.0) * (w / 6.0);
+	float ex = 0;
+	for (i = 0; i < w; i++)
+	{
+		ex = -(((i - w / 2) * (i - w / 2)) / (2.0 * sigmaSqr));
+		dst.at<float>(i, 0) = (1.0 / (sqrt(2.0) * sqrt(PI) * (w / 6.0))) * exp(ex);
+		sum = sum + dst.at<float>(i, 0);
+	}
+	printf("SUM Y KERNEL: %f \n", sum);
+	return dst;
+}
+
+Mat Gaussian1D(Mat img, int w) {
+	Mat kernelX = createGaussian1DXKernel(w);
+	Mat srcf;
+	img.convertTo(srcf, CV_32FC1);
+	Mat result1 = imFilter2(srcf, kernelX);
+	Mat kernelY = createGaussian1DYKernel(w);
+	Mat result2 = imFilter(result1, kernelY);
+	result2.convertTo(result2, CV_8UC1);
+	return result2;
+}
+
+void Gaussian1DWrapper() {
+	char fname[MAX_PATH];
+
+	while (openFileDlg(fname))
+	{
+		Mat src = imread(fname, IMREAD_GRAYSCALE);
+
+		Mat result = Gaussian1D(src, 7);
+
+		imshow("input image", src);
+		imshow("Gaussian1D Image", result);
+		waitKey();
+	}
+}
+
+void Gaussian2DWrapper() {
+	char fname[MAX_PATH];
+
+	while (openFileDlg(fname))
+	{
+		Mat src = imread(fname, IMREAD_GRAYSCALE);
+
+		Mat result = Gaussian2D(src, 7);
+		Mat result2 = Gaussian1D(src, 7);
+
+		imshow("input image", src);
+		imshow("Gaussian2D Image", result);
+		imshow("Gaussian1D Image", result2);
+		waitKey();
+	}
+}

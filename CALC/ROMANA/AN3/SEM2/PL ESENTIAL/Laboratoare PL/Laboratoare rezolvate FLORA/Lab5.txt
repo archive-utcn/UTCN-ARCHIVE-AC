@@ -1,0 +1,43 @@
+
+delete(X,[X,T],T). % :- delete(X,T,L). 
+delete(X,[_|T],L) :- delete(X,T,L). 
+delete(_,[],[]).
+
+len([],0).
+len([_|T],L) :- len(T,Lc), L is Lc + 1.
+
+sort_len(L, [M|R]):- min_list(L, M),
+                    delete(L, M, L1),
+                    sort_len(L1, R).
+sort_len([], []):- !.
+
+min_list([H|T], M) :- min_list(T, M),
+                   len(M, R1),
+                   len(H, R2),
+                    R1<R2, !.
+min_list([H|_], H).
+
+
+append3([H|T], L1, L2, [H|R]) :- append3(T,L1,L2,R).
+append3([], [H|T], L, [H|R]) :- append3([], T, L, R).
+append3([],[],L,L).
+
+append([H|T],L,[H|R]):- append(T,L,R).
+append([],L,L).
+
+is_sublist(SL,L) :- append3(_,SL,_,L).
+
+is_sublist2(SL,L) :- append(PL,_,L),
+    append(_,SL,PL).
+
+is_sublist3([H|T],[H|L]) :- is_sublist3(T,L),!.
+is_sublist3(SL,T) :- is_sublist3(SL,T).
+is_sublist3([],_).
+
+
+bubble_sort(L,R):-one_pass(L,R1,F), nonvar(F), !, bubble_sort(R1,R).
+bubble_sort(L,L).
+one_pass([H1,H2|T], [H2|R], F):- char_code(H1,H11),char_code(H2,H22),
+    H11>H22, !, F=1, one_pass([H1|T],R,F).
+one_pass([H1|T], [H1|R], F):-one_pass(T, R, F).
+one_pass([], [] ,_).

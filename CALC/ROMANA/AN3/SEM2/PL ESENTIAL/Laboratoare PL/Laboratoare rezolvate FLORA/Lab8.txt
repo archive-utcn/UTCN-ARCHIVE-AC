@@ -1,0 +1,118 @@
+delete_il(_, L, L):-var(L), !. % am ajuns la finalul listei
+delete_il(X, [X|T], T):-!. % ?tergem prima apari?ie ?i ne oprim
+delete_il(X, [H|T], [H|R]):-delete_il(X, T, R).
+
+insert_il(X, L):-var(L), !, L=[X|_].
+insert_il(X, [X|_]):-!. % elementul exista deja
+insert_il(X, [_|T]):- insert_il(X, T).
+
+append_il([T], L, R) :- var(T), !,append_il([],L,R).
+append_il([H|T], L, [H|R]) :- append_il(T,L,R).
+append_il([],L,L).
+
+append([H|T], L, [H|R]) :- append(T,L,R).
+append([],L,L).
+
+reverse([H|T],R) :- reverse(T,R1),
+    append(R1,[H],R).
+reverse([],[]).
+
+reverse_il([T],_) :- var(T), !.
+reverse_il([H|T],R) :- reverse(T,R1),
+    append_il(R1,[H],R).
+reverse_il([],_).
+
+
+transform1([H|T],[H|R]) :- transform1(T,R).
+transform1([],_).
+
+transform2([],L) :- var(L), !.
+transform2([H|R],[H|T]) :- transform2(R,T).
+
+
+tree1(t(6, t(4,t(2,nil,nil),t(5,nil,nil)), t(9,t(7,nil,nil),nil))).
+tree2(t(6, t(4,t(2,_,_),t(5,_,_)), t(9,t(7,_,_),_))).
+max(A,B,R) :- A>B, !, R=A.
+max(_,B,B).
+
+height(nil,0).% :- var(T),!.
+height(t(_,L,R),H) :- height(L,LL),
+    height(R,LR),
+    max(LL,LR,M),
+    H is M + 1.
+
+height_it([T],0) :- var(T),!.
+height_it(t(_,L,R),H) :- height_it(L,LL),
+    height_it(R,LR),
+    max(LL,LR,M),
+    H is M + 1.
+
+diameter_it([T],0) :- var(T), !.
+diameter_it(t(_,L,R), M) :- diameter_it(L, DL),
+    diameter_it(R, DR),
+    height_it(L,LL),
+    height_it(R,RL),
+    D is LL+RL+1,
+    max(DR,DL,Max),
+    max(Max,D,M).
+
+%flatten([T],_) :- var(T), !.
+flatten([],[]).
+flatten([H|T], [H|R]):- atomic(H), !, flatten(T,R).
+flatten([H|T], R):- flatten(H,R1),
+    transform1(R1,R11),
+    flatten(T,R2),
+    transform1(R2,R22),
+    append_il(R11,R22,R).
+
+%height(nil, 0).
+%height(t(_, L, R), H):-height(L, H1),
+% height(R, H2),
+% max(H1, H2, H3),
+% H is H3+1.
+
+
+insert_it(Key, t(Key, _, _)):-!.
+insert_it(Key, t(K, L, _)):-Key<K, !, insert_it(Key, L).
+insert_it(Key, t(_, _, R)):-insert_it(Key, R).
+
+insert_key(Key, nil, t(Key, nil, nil)). % insereaza cheia în arbore
+insert_key(Key, t(Key, L, R), t(Key, L, R)):-!. % cheia exista deja
+insert_key(Key, t(K,L,R), t(K,NL,R)):- Key<K,!,insert_key(Key,L,NL).
+insert_key(Key, t(K,L,R), t(K,L,NR)):- insert_key(Key, R, NR).
+
+preorder(t(K,L,R), List):-preorder(L,LL),
+    preorder(R, LR),
+	append([K|LL], LR, List).
+	preorder(nil, []).
+
+transform_tree1(T,R) :- preorder(T,PL),
+    create_tree(PL,R).
+
+create_tree([H|T],R) :- insert_it(H, T),
+    create_tree(T, R).
+
+
+append([H|T],L,[H|R]):- append(T,L,R).
+append([],L,L).
+
+heads([],[],_).
+heads([H|T],[H|R],1):- atomic(H), !, heads(T,R,0).
+heads([H|T],R,0):- atomic(H), !, heads(T,R,0).
+heads([H|T],R,_):- heads(H,R1,1), heads(T,R2,0), append(R1,R2,R).
+heads_pretty(L,R):- heads(L, R, 1).
+
+lasts([],[]).
+lasts([H|[]], [H]) :- atomic(H),!.
+lasts([H|T], R) :- atomic(H), !, lasts(T,R).
+lasts([H|T], R) :- lasts(H,H1),lasts(T,T1),
+    append(H1,T1,R).
+
+append_il([T], L, R) :- var(T), !,append_il([],L,R).
+append_il([H|T], L, [H|R]) :- append_il(T,L,R).
+append_il([],L,L).
+
+flatten_il([T],_) :- var(T),!.
+flatten_il([H|T], [H|R]) :- atomic(H), !, flatten_il(T,R).
+flatten_il([H|T], R) :- flatten_il(H,H1),
+    flatten_il(T,T1), append_il(H1,T1,R).

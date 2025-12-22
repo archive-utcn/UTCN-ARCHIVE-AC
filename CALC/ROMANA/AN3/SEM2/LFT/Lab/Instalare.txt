@@ -1,0 +1,31 @@
+Install FLEX +YACC(Bison)
+
+sudo apt-get upgrade
+sudo apt-get install flex
+sudo apt-get update
+sudo apt-get install bison
+
+==============
+WINDOWS: Installing Chocolatey comenzi Linux
+
+https://chocolatey.org/install
+https://chocolatey.org/packages/winflexbison
+https://chocolatey.org/packages/winflexbison3
+
+==============
+
+Alte variante
+
+http://programmerts.blogspot.com/2014/05/flex-bison-step-by-step-compile-on.html
+https://samskalicky.wordpress.com/2014/01/25/tutorial-setting-up-flex-bison-on-windows/
+ 
+
+Solving VM
+https://osdn.net/projects/sfnet_winflexbison/releases/
+https://sourceforge.net/projects/winflexbison/  
+http://gnuwin32.sourceforge.net/packages/flex.htm
+http://gnuwin32.sourceforge.net/packages/bison.htm
+https://techapple.net/2014/07/flex-windows-lex-and-yacc-flex-and-bison-installer-for-windows-xp788-1/
+https://github.com/lexxmark/winflexbison
+Build requirements-Visual Studio 2015 or newer
+
