@@ -1,0 +1,10 @@
+Primele doua sunt reprezentarile polinoamelor initiale:
+
+Coeficientii polinomului rezultat:
+-5*X^0	3*X^3	2*X^4	9*X^6	
+Coeficientii polinomului rezultat:
+-1*X^0	1*X^3	1*X^4	1*X^6	
+Coeficientii polinomului rezultat:
+-6*X^0	4*X^3	3*X^4	10*X^6	
+Coeficientii polinomului rezultat:
+-4*X^0	2*X^3	1*X^4	8*X^6	
