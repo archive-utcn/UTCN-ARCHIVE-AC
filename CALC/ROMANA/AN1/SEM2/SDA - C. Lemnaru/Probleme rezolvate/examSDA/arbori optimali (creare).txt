@@ -1,0 +1,15 @@
+TIP_NOD *constr_arbore_optimal(int i, int j)
+{
+int n;
+TIP_NOD *p;
+if(i==j) p=0;
+else {
+n=sizeof (TIP_NOD);
+p=(TIP_NOD*)malloc(n);
+p->stg=constr_arbore_optimal(i, r[i][j]-1);
+p->stg=constr_arbore_optimal[r[i][j]];
+p->dr=constr_arbore_optimal(r[i][j], j);
+}
+return p;
+}
+

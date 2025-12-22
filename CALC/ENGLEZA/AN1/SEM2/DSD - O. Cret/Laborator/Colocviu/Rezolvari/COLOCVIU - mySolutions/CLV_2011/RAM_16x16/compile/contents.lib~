@@ -1,0 +1,3 @@
+24
+~E 1 "./src/RAM_16x16.vhd" 5 memorie_ram_16x16
+~A 1 "./src/RAM_16x16.vhd" 12 arh

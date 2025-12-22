@@ -1,0 +1,57 @@
+subiecte MD - examen 	  Message List  
+
+1.se dadea un sir de grade si ne cerea sa desenam graful.
+2.sa dat un arbore. ne cerea sa spunem dc e tare conex sau nu si sa
+justificam.
+3.se dadea un arbore.sa facem parcurgerea in adancime a lui.
+4.Teorema lui BERGE (sub de teorie, dem. si alea alea...)
+5.ce este un arbore de acoperire?
+6.se da o urna care contine 4 bile albe si 5 bile negre.din urna se
+extrag doua bile.kre e probabilitatea k cele doua bile sa fie albe?
+7.se dadea o urna.10 bile albe, 5 bile galbene si 10 bile negre..se
+extrage o bila idn urna.se cere kre e probabilitatea k bila extrasa sa
+fie galbena, dc stim k bila extrasa nu e neagra..
+8..tot o prob cu probabilitati..asta no stin minte
+9..ceva cu variabile aleatoare (nu mai stiu...)
+
+Subiect 2 examen Matematici discrete 	  Message List  
+
+1. Sa se deseneze graful ale carui grade sunt 2,2,3,4,4,5
+2. Se da un graf orientat (desenat pe subiect) sa se explice de ce
+este tare conex (pt ca din orice vf se poate ajunge in oricare altul)
+3. Se da un graf desenat pe subiect, sa se parcurga in largime,
+etichetand varfurile.
+4. Sa se scrie algoritmul lui PRIM pentru arbore ecomomic. Demonstratie
+5. Ce este un graf hamiltonian? (graf ce contine un ciclu hamiltonian,
+(care contine toate vf grafului))
+5. Se da o urna cu 10 bile albe si 4 negre. probabilitatea ca extragand
+3 bile, sa fie toate 3 albe.
+6. Se da o urna cu 8 bile albe, 10 negre si 8 rosii. daca se extrag 2
+bile, si nici una nu este rosie, probabilitatea sa fie amandoua albe.
+7. Se dau 2 urne, una cu 7 bile albe, 4 negre si una cu 5 albe si 3
+negre. daca scoatem una din prima urma si o punem in a doua, si pe
+urma din a 2 a 4 bile, media variabilei aleatoare x, unde x
+probabiltatea ca bilele sa fie albe (aici nu sunt sigur ca a sunat
+chiar asa, dar in mare asta e :) )
+8. Ce este o variabila aleatoare?
+si cred ca mai era ceva.. dar cam atata imi amintesc acum.. oricum
+succes! :P
+
+subiect 3 MD 	  Message List  
+Reply | Forward 		Message #7 of 134 < Prev | Next >
+1. sa se constr un garf cu sirul gradelor 1,2,2,3,4,4
+2. se da un graf orientat. este sau nu tare conex si de ce?
+3. se dau niste varfuri cu niste ponderi. sa se codifice varfurile
+folosind metoda huffman.. (ii mai mult de desenat)
+4. un gra conex admite arbore de acoperire+demonstartzie
+5. ce este un graf euleriaan-doar definitzie
+6. o urna cu bile (nustiucate)albe si (nustiucate)negre. se extrag 2
+care e probabilitatea ca ambele sa fie negre.
+7. o urna cu bile (cateva) albe (cateva) negre si (cateva) rosii. Se
+extrage o bila . care e prob ca sa fie neagra stiind ca nu este rosie.
+8. 2 urne . tot asa bile albe si negre. se extrage din prima o bila se
+pune in a doua. si dupa aceea din a doua se exrag 4 bile. x nr bilelor
+albe extrase la final. M(x)=?
+9. care e probabilitatea intersectziei a doua multzimi in caz
+general.(cand multzimile sunt independente nu este caz general)
+

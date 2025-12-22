@@ -1,0 +1,151 @@
+[Project]
+Current config=compile
+VCS=0
+modified=0
+version=1
+Current Flow=Multivendor
+
+[Configurations]
+Generic=Xilinx_Fibonacci
+compile=Xilinx_Fibonacci
+
+[c:CFG_ROC_V]
+timing/top_routed.sdf=, Minimal, No
+
+[ea:fib-fib_arch]
+timing/top_routed.sdf=, Minimal, No
+
+[sdf.c.functional_cfg]
+SdfNoWarn=0
+IVG=0
+0=src\timing\top_routed.sdf| /UUT, Average, No
+
+[sdf.c.timing_cfg]
+SdfNoWarn=0
+IVG=0
+0=src\timing\top_routed.sdf| /UUT, Average, No
+
+[Library]
+Xilinx_Fibonacci=.\Xilinx_Fibonacci.LIB
+Xilinx_Fibonacci_timing=.\Xilinx_Fibonacci_timing\Xilinx_Fibonacci_timing.lib
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FAMILY=
+SYNTH_TOOL=<none>
+FLOWTOOLS=ONLY_IMPL
+IMPL_TOOL=<none>
+FUNC_LIB=Xilinx_Fibonacci
+TIM_LIB=Xilinx_Fibonacci_timing
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+CSYNTH_TOOL=<none>
+Celoxica=0
+UseCeloxica=0
+RUN_MODE_SYNTH=0
+REFRESH_FLOW=1
+IMPL_STATUS=NONE
+
+[$LibMap$]
+Active_lib=VIRTEX2
+xilinxun=VIRTEX2
+Xilinx_Fibonacci=.
+UnlinkedDesignLibrary=VIRTEX2
+DESIGNS=VIRTEX2
+
+[SYNTHESIS]
+FAMILY=
+CeloxicaPath=
+DEVICE=
+SPEED=
+OBSOLETE_ALIASES=1
+TOPLEVEL=TOP
+FORCE_GSR=1
+INSERT_IO_PADS=1
+DISABLED_RESET=1
+FORCE_RESET_PIN=1
+CLOCK_FREQ=0
+OBTAIN_MAX_FREQUENCY=0
+FANOUT_LIMIT=100
+SYNTHESIS.USE_DEF_FANOUT=1
+SYMBOLIC_FSM=0
+FSM_ENCODE=onehot
+RESOURCE_SHARING=0
+RESULT_FORMAT=EDIF
+ADD_SYS_LIB=0
+CONSTRAINT_PATH=
+PROPERTY_PATH=
+SIMOUTFORM=1
+AUTO_CLOSE_GUI=0
+OVERRIDE_EXISTING_PROJECT=1
+Verilog2001=0
+Retiming=0
+Pipeline=0
+JOB_DESCRIPTION=SynthesisJob1
+SERVERFARM_INCLUDE_INPUT_FILES=*.*
+SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:implement\*.*
+LAST_RUN=1087392859
+OUTPUT_NETLIST=synthesis\TOP.edf
+OUTPUT_SIMUL_NETLIST=synthesis\TOP.vhm
+
+[IMPLEMENTATION]
+FAMILY=
+DEVICE=
+SPEED=
+NETLIST=synthesis\TOP.edf
+SYNPLIFY_NCF=c:/my_designs/Samples_63/Xilinx_Fibonacci/synthesis/TOP/TOP.ncf
+LAST_RUN=1087396944
+OUTPUT_NETLIST=IMPLEMENT\TIME_SIM.VHD
+OUTPUT_SDF=IMPLEMENT\TIME_SIM.SDF
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[ORDER]
+Synchronize=0
+
+[SIM.POST]
+TOPLEVEL=TOP
+
+[SIM.TIME]
+SDF_PATH=IMPLEMENT\TIME_SIM.SDF
+TOPLEVEL=TOP
+
+[Files.Data]
+.\src\Readme.txt=Text File
+.\src\Testbench.vhd=VHDL Test Bench
+.\src\functional\Fib.vhd=VHDL Source Code
+.\src\functional\top.vhd=VHDL Source Code
+.\src\functional\functional_cfg.vhd=VHDL Test Bench
+.\src\timing\timing_cfg.vhd=VHDL Test Bench
+.\src\timing\top_routed.vhd=VHDL SOURCE CODE
+.\src\timing\top_routed.sdf=SDF FILE
+.\src\macro\Functional.do=Macro
+.\src\macro\Timing.do=Macro
+
+[Groups]
+functional=1
+timing=1
+macro=1
+
+[Files]
+/Readme.txt=-1
+/Testbench.vhd=-1
+functional/Fib.vhd=-1
+functional/top.vhd=-1
+functional/functional_cfg.vhd=-1
+timing/top_routed.vhd=-1
+timing/timing_cfg.vhd=-1
+timing/top_routed.sdf=-1
+macro/Functional.do=-1
+macro/Timing.do=-1
+

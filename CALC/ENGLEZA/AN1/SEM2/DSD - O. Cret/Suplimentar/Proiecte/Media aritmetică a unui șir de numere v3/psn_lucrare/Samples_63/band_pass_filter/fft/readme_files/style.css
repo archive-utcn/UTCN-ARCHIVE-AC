@@ -1,0 +1,79 @@
+BODY
+{
+background-image: url("../readme_files/default.png");
+color: #000000;
+text-align: justify;
+}
+
+.F
+{
+font-family: Verdana, Arial, Helvetica;
+font-size: 12px;
+vertical-align: top;
+}
+
+H2
+{
+font-family: Verdana, Arial, Helvetica;
+font-size: 24px;
+font-weight: bold;
+}
+
+H3
+{
+font-family: Verdana, Arial, Helvetica;
+font-size: 14px;
+font-weight: bold;
+}
+
+H4
+{
+font-family: Verdana, Arial, Helvetica;
+font-size: 16px;
+font-weight: bold;
+}
+
+P
+{
+font-family: Verdana, Arial, Helvetica;
+font-size: 12px;
+vertical-align: top;
+}
+
+IMG
+{
+border-color: #A0A0A0;
+border-style: solid;
+border-width: 0px;
+}
+
+TABLE
+{
+border-style: solid;
+border-width: 2px;
+border-color: #000000;
+border-collapse: collapse;
+text-align: center;
+vertical-align: center;
+width: 350px;
+}
+
+TD
+{
+border-style: solid;
+border-width: 1px;
+padding-left: 8px;
+padding-right: 8px;
+font-size: 12px;
+}
+
+LI
+{
+font-family: Verdana, Arial, Helvetica;
+font-size: 12px;
+}
+
+.centr
+{
+text-align: center;
+}

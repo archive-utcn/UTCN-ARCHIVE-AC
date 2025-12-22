@@ -1,0 +1,47 @@
+#include <stdio.h>
+ #include <conio.h>
+ #include <stdlib.h>
+ #define nmax 10
+ /* Varianta recursivã a problemei damelor */
+ int n; /*dimensiunea (ordinul) tablei de ºah */
+ int nr_solutie;
+ int x[nmax];
+ int FI(int k)
+ {
+   /*testeazã condiþiile de continuare */
+   int p;
+   for(p=1;p<=k-1;p++)
+         if((x[k]==x[p]) | (abs(k-p) == abs(x[k]-x[p]))) return 0;
+   return 1;
+ }
+ void back_recursiv(int k)
+ {
+  int i,j,p;
+  for(j=1;j<=n;j++)
+    {
+     x[k]=j;
+     if(FI(k)==1)
+	if(k<n) back_recursiv(k+1);
+	else {
+	           /*tipãrirea soluþiei */
+	            nr_solutie++;
+	             printf("\nSOLUTIA nr.%d\n",nr_solutie);
+	             for(i=1;i<=n;i++)
+		    {
+		         for(p=1;p<=n;p++)
+		               if(x[i]==p) printf("1");
+		               else printf("0");
+		           printf("\n");
+		      };
+		    getch();
+	        }
+      }
+  }
+ void main(void)
+ {
+      printf("\nOrdinul tablei de sah n=");
+      scanf("%d",&n);
+      nr_solutie=0;
+       back_recursiv(1);
+       printf("\nSFARSIT\n");
+  }

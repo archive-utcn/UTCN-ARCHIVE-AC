@@ -1,0 +1,7 @@
+49
+~E 1 "./src/Count_2bit.vhd" 6 count_2bit
+~A 1 "./src/Count_2bit.vhd" 12 arh_count
+~E 1 "./src/Clock.vhd" 1 clock
+~A 1 "./src/Clock.vhd" 5 clk_clk
+~E 1 "./src/Numarator_8biti.vhd" 6 counter
+~A 1 "./src/Numarator_8biti.vhd" 10 count_str

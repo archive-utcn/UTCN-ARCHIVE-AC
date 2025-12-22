@@ -1,0 +1,439 @@
+acom -reorder $DSN/src/num_Zec.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Compile Architecture "arh" of Entity "num_zec"
+# Error: COMP96_0015: num_Zec.vhd : (24, 4): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Error: COMP96_0077: num_Zec.vhd : (15, 28): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0077: num_Zec.vhd : (18, 28): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0077: num_Zec.vhd : (19, 32): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0071: num_Zec.vhd : (20, 12): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: num_Zec.vhd : (20, 11): Undefined type of expression.
+# Error: COMP96_0098: num_Zec.vhd : (20, 11): Boolean type expected.
+# Error: COMP96_0077: num_Zec.vhd : (21, 11): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0071: num_Zec.vhd : (21, 11): Operator "+" is not defined for such operands.
+# Error: COMP96_0104: num_Zec.vhd : (21, 11): Undefined type of expression.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Error: COMP96_0117: num_Zec.vhd : (15, 17): Array type for "intQ" is not constrained.
+# Error: COMP96_0118: num_Zec.vhd : (15, 36): Keyword "others" is not allowed in unconstrained array aggregate.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  num_zec arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2417 kB (elbread=1070 elab2=299 kernel=1048 sdf=0)
+# 5:15 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num_zec (arh)
+run 100 ns
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+# KERNEL: stopped at delta: 0 at time 0 ps.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 50 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 100 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 150 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 200 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 250 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 300 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 350 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 400 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 450 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 500 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at delta: 0 at time 550 ns.
+# Stopped at breakpoint in file D:\designshdl\CRET\num_zec/src/num_Zec.vhd at line 25.
+run 100 ns
+# KERNEL: stopped at time: 650 ns
+run 100 ns
+# KERNEL: stopped at time: 750 ns
+run 100 ns
+# KERNEL: stopped at time: 850 ns
+run 100 ns
+# KERNEL: stopped at time: 950 ns
+run 100 ns
+# KERNEL: stopped at time: 1050 ns
+run 100 ns
+# KERNEL: stopped at time: 1150 ns
+run 100 ns
+# KERNEL: stopped at time: 1250 ns
+run 100 ns
+# KERNEL: stopped at time: 1350 ns
+run 100 ns
+# KERNEL: stopped at time: 1450 ns
+run 100 ns
+# KERNEL: stopped at time: 1550 ns
+run 100 ns
+# KERNEL: stopped at time: 1650 ns
+run 100 ns
+# KERNEL: stopped at time: 1750 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  num_zec arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2417 kB (elbread=1070 elab2=299 kernel=1048 sdf=0)
+# 5:17 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num_zec (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 5:19 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num_zec (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  num_zec arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 5:20 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num_zec (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  num_zec arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 5:21 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num_zec (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_Zec.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd
+# Compile Entity "num_zec"
+# Entity `num_zec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num_zec"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  num_zec arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 5:21 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num_zec (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+# Simulation has been stopped
+# Design: Design "num_modulo" has been set as active.

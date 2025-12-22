@@ -1,0 +1,1 @@
+-w -s "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\library.cfg"  -j "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\projlib.cfg"  -d "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\compile"   -work UL  -O3 -e 100 -2002 "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\compile\UL.vhd"

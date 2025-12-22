@@ -1,0 +1,9 @@
+entity SEMI_SUMATOR	is
+	port (A,B: in BIT;
+	COUT,S:out BIT);
+end SEMI_SUMATOR;
+architecture descriete_semi_sumator of SEMI_SUMATOR is	   
+begin
+	S<=A xor B;
+	COUT<=A and B;
+end  descriete_semi_sumator;

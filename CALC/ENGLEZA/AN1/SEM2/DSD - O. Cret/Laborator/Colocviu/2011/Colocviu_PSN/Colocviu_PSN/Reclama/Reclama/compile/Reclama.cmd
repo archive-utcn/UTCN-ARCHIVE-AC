@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\Reclama\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\Reclama\compile"   -work Reclama  -dbg -e 100 -2002 "c:\\My_Designs\\Colocviu_PSN\\Reclama\\src\\Reclama avon.vhd" 

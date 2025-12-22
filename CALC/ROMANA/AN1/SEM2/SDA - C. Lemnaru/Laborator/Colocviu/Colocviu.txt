@@ -1,0 +1,5 @@
+﻿1) Generarea tuturor cuvintelor posibile cu ajutorul unor silabe citite de la tastatură/din fișier. De citit cel puțin 3 silabe; 
+
+2) De construit un graf care să conțină în noduri cuvintele formate la exercițiul 1-un nod să fie adiacent cu un alt nod doar dacă acesta este prefixul sau/și doar dacă este mai scurt cu exact o silabă decât el; 
+
+3) Calcularea distanței de la un nod dat dintr-un graf la toate celelalte noduri (cu ajutorul parcurgerii corespunzătoare)

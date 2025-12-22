@@ -1,0 +1,7 @@
+acom -dbg "$DSN/src/functional/averager.vhd"
+acom -dbg "$DSN/src/timing/asa_b.vhd"
+acom -dbg "$DSN/src/timing/asa_c.vhd"
+acom -dbg "$DSN/src/timing/asa_a.vhd"
+acom -dbg "$DSN/src/timing/averager.vhd"
+acom -dbg "$DSN/src/functional/aver_tb.vhd"
+acom -dbg "$DSN/src/timing/post_tb.vhd"

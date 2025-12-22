@@ -1,0 +1,29 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 9 1 2 sel
+$SC 1 5
+I 3 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 26 3 4 a
+$SC 10-22/4
+$ENDTIME 100000
+$WAVES 1 5 +5-22/4
+=0 T 0
+$VALUES
+V 1
+0
+$END
+$BUS IN +5 3 4 a
+$SC 10-22/4
+$BUS IN 44 3 4 b
+$SC 28-40/4
+$BUS IN 61 3 4 c
+$SC 45-57/4
+$BUS IN 78 3 4 d
+$SC 62-74/4
+$BUS IN +5 1 2 sel
+$SC 1 5
+$BUS OUT 96 3 4 y
+$SC 80-92/4
+$ENDWAVE

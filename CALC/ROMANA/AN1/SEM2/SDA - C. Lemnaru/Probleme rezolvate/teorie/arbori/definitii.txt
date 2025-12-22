@@ -1,0 +1,19 @@
+arbore AVL- arbore in care echilibrul este stabilit daca inaltimea subarborelui stang difera prin cel
+	    mult 1 fata de cel drept
+
+arbore binar de cautare optimal-Se numeºte arbore optimal, un arbore binar de cãutare care pentru anumite
+				 valori pi, qi date realizeazã un cost minim.
+
+arbore binar total exhilibrat - arbore in care numarul de noduri din arborele stg difera prin cel mult
+				1 fata de numarul de noduri din arborele drept
+
+cautare binara - Algoritmul de cãutare binarã este un algoritm de cãutare folosit pentru a gãsi un 
+		 element într-o listã ordonatã (tablou unidimensional/vector). Algoritmul func?ioneazã
+		 pe baza tehnicii divide et impera. Valoarea cãutatã este comparatã cu cea a 
+		 elementului din mijlocul listei
+
+arbore de acoperire de cost minim-arbrore care contine toate nodurile unui graf conex oarecare,insa nu
+				  contine toate muchiile,ci doar acelea de cost minim,astfel incat sa nu
+				  se formeze ciclu.
+
+

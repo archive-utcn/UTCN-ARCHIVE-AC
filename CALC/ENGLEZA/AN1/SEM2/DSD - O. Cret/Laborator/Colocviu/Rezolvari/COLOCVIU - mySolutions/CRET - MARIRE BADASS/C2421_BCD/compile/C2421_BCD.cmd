@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\C2421_BCD\projlib.cfg"  -d "D:\designshdl\CRET\C2421_BCD\compile\"  -work C2421_BCD -dbg -e 100 "D:\designshdl\CRET\C2421_BCD\src\C2421_BCD.vhd" 

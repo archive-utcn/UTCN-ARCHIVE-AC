@@ -1,0 +1,37 @@
+ TIP_NOD *constructie(int nr_noduri)
+  {
+    TIP_NOD *p;
+   int n_stg,n_dr;
+   int inf,n;
+   n=sizeof(TIP_NOD);
+   if(nr_noduri==0) return 0;
+   else {
+             n_stg=nr_noduri/2; 
+/*nr_noduri din subarborele stang */
+             n_dr=nr_noduri-n_stg-1;
+/*nr.noduri din subarborele drept */
+             p=(TIP_NOD *)malloc(n);
+             printf("\nIntroduceti informatia din nod in preordine ");
+             scanf("%d",&(p->nr));
+             p->stg=constructie(n_stg);
+             p->dr=constructie(n_dr);
+      }
+     return p;
+   }
+
+     void main(void)
+     {
+       int nr_total_noduri;
+       printf("\nNumarul total de noduri =");
+       scanf("%d",&nr_total_noduri);\
+        rad=constructie(nr_total_noduri);
+        printf("\nVIZITAREA IN PREORDINE\n");
+        preordine(rad,0);
+        getch();
+        printf("\nVIZITAREA IN INORDINE\n");
+        inordine(rad,0);
+        getch();
+        printf("VIZITAREA IN POSTORDINE\n");
+        postordine(rad,0);
+        getch();
+    }

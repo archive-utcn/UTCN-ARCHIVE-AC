@@ -1,0 +1,148 @@
+acom -reorder $DSN/src/fifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Error: COMP96_0015: fifo.vhd : (10, 32): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (10, 34): Keyword "end" expected.
+# Error: COMP96_0015: fifo.vhd : (10, 34): ';' expected.
+# Error: COMP96_0016: fifo.vhd : (10, 41): Design unit declaration expected.
+# Compile Entity "fifo"
+# Error: COMP96_0019: fifo.vhd : (11, 16): Keyword "is" expected.
+# Error: COMP96_0019: fifo.vhd : (11, 16): Keyword "end" expected.
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0031: fifo.vhd : (16, 40): Simple expression expected.
+# Error: COMP96_0031: fifo.vhd : (17, 58): Simple expression expected.
+# Error: COMP96_0015: fifo.vhd : (34, 5): ';' expected.
+# Error: COMP96_0015: fifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (41, 8): Keyword "end" expected.
+# Compile failure 11 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/fifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Error: COMP96_0078: fifo.vhd : (7, 27): Unknown identifier "instd_logic".
+# Error: COMP96_0064: fifo.vhd : (7, 27): Unknown type.
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0031: fifo.vhd : (16, 40): Simple expression expected.
+# Error: COMP96_0031: fifo.vhd : (17, 58): Simple expression expected.
+# Error: COMP96_0015: fifo.vhd : (34, 5): ';' expected.
+# Error: COMP96_0015: fifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (41, 8): Keyword "end" expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/fifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0031: fifo.vhd : (16, 40): Simple expression expected.
+# Error: COMP96_0031: fifo.vhd : (17, 58): Simple expression expected.
+# Error: COMP96_0015: fifo.vhd : (34, 5): ';' expected.
+# Error: COMP96_0015: fifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (41, 8): Keyword "end" expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/fifo.vhd
+# Compile...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Entity `fifo' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0015: fifo.vhd : (34, 5): ';' expected.
+# Error: COMP96_0015: fifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (41, 8): Keyword "end" expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/fifo.vhd
+# Compile...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Entity `fifo' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0015: fifo.vhd : (34, 5): ';' expected.
+# Error: COMP96_0015: fifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (41, 8): Keyword "end" expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/fifo.vhd
+# Compile...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Entity `fifo' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0015: fifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (41, 8): Keyword "end" expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/fifo.vhd
+# Compile...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Entity `fifo' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0019: fifo.vhd : (49, 8): Keyword "if" expected.
+# Error: COMP96_0015: fifo.vhd : (49, 8): ';' expected.
+# Error: COMP96_0019: fifo.vhd : (50, 8): Keyword "process" expected.
+# Error: COMP96_0019: fifo.vhd : (52, 4): Keyword "end" expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/fifo.vhd
+# Compile...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Entity `fifo' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "fifo"
+# Error: COMP96_0284: fifo.vhd : (39, 7): Direction of the discrete range must be the same as that of the prefix of the slice name.
+# Error: COMP96_0284: fifo.vhd : (39, 23): Direction of the discrete range must be the same as that of the prefix of the slice name.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/fifo.vhd
+# Compile...
+# File: D:\designshdl\CRET\fifo\src\fifo.vhd
+# Compile Entity "fifo"
+# Entity `fifo' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "fifo"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  fifo arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 7:57 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: fifo (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+# Simulation has been stopped
+# Design: Design "lifo" has been set as active.

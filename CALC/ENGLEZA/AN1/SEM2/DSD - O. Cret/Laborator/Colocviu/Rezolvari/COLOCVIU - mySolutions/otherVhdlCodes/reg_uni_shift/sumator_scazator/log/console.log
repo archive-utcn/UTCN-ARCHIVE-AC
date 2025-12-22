@@ -1,0 +1,57 @@
+acom -reorder $DSN/src/sum_Scz.vhd
+# Compile with File Reorder...
+# File: d:\designshdl\reg_uni_shift\sumator_scazator\src\sum_Scz.vhd
+# Compile Entity "sumator_scazator"
+# Compile Architecture "comportamental" of Entity "sumator_scazator"
+# Top-Level unit detected
+# Entity  =>   sumator_scazator
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom $DSN/src/sum_Scz.vhd
+# Compile...
+# File: d:\designshdl\reg_uni_shift\sumator_scazator\src\sum_Scz.vhd
+# Compile Entity "sumator_scazator"
+# Entity `sumator_scazator' has been skipped - no difference detected.
+# Compile Architecture "comportamental" of Entity "sumator_scazator"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  sumator_scazator comportamental
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 12:05 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: sumator_scazator (comportamental)
+run 100 ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  TOP instance,  Process: line__24.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  TOP instance,  Process: line__24.
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped

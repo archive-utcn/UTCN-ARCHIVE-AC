@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available." 
+MESSAGE "File: c:\My_Designs\Scazator_3_digit_4_biti\scazator\src\scazator_3digit.vhd" 
+MESSAGE "Compile Entity "scazator_3digit"" 
+MESSAGE "Compile Architecture "arh_scazator3digit" of Entity "scazator_3digit"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]" 

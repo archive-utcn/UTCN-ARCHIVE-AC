@@ -1,0 +1,5 @@
+MESSAGE "File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Reclama\src\Reclama avon.vhd" 
+MESSAGE "Compile Entity "Reclama"" 
+MESSAGE "Entity `Reclama' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ARH_Reclama" of Entity "Reclama"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

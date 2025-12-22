@@ -1,0 +1,33 @@
+Active-HDL 9.1.2354.4209  2012-05-23 18:48:39
+
+Elaboration top modules:
+Architecture                  Attempting1(Filter)
+
+
+-------------------------------------------------------------------------------------------------------
+Entity           | Architecture | Library      | Info | Compiler Version         | Compilation Options
+-------------------------------------------------------------------------------------------------------
+Filter           | Attempting1  | averagevalue |      | 9.1.2354.4209  (Windows) | -O3
+FrequencyDivider | flash        | averagevalue |      | 9.1.2354.4209  (Windows) | -O3
+DataGenerator    | attempting2  | averagevalue |      | 9.1.2354.4209  (Windows) | -O3
+AnodDevider      | flash        | averagevalue |      | 9.1.2354.4209  (Windows) | -O3
+ShiftRegister    | sregister    | averagevalue |      | 9.1.2354.4209  (Windows) | -O3
+-------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------
+VHDL Package                    | Library      | Info | Compiler Version         | Compilation Options
+-------------------------------------------------------------------------------------------------------
+standard                        | std          |      |                          | <unavailable>
+TEXTIO                          | std          |      | 9.1.2354.4209  (Windows) |  -2008
+std_logic_1164                  | ieee         |      | 9.1.2354.4209  (Windows) |  -2008
+std_logic_arith                 | ieee         |      | 9.1.2354.4209  (Windows) | 
+STD_LOGIC_UNSIGNED              | ieee         |      | 9.1.2354.4209  (Windows) | 
+-------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------
+Library                         | Comment
+-------------------------------------------------------------------------------------------------------
+averagevalue                    | None
+ieee                            | Standard IEEE packages library
+std                             | Standard VHDL library
+-------------------------------------------------------------------------------------------------------

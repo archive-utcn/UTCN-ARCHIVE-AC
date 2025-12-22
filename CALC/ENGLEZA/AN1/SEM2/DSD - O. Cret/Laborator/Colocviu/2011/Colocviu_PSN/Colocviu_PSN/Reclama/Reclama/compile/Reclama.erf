@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Reclama\src\Reclama avon.vhd" 
+MESSAGE "Compile Entity "Reclama"" 
+MESSAGE "Compile Architecture "ARH_Reclama" of Entity "Reclama"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

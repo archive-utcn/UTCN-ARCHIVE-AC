@@ -1,0 +1,7 @@
+24
+~E 0 "./src/scazator_4biti.vhd" 5 scazator4biti
+~A 1 "./src/scazator_4biti.vhd" 12 arh_scazator4biti
+~E 0 "./src/scazator_complet.vhd" 5 scazator
+~A 1 "./src/scazator_complet.vhd" 10 arh_scazator
+~E 0 "./src/scazator_3digit.vhd" 5 scazator_3digit
+~A 1 "./src/scazator_3digit.vhd" 12 arh_scazator3digit

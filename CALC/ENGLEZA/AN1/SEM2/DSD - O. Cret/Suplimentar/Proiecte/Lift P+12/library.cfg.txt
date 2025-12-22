@@ -1,0 +1,2 @@
+$include = "$VSIMSALIBRARYCFG"
+liftp = ".\liftp\liftp.lib" 1396631031296

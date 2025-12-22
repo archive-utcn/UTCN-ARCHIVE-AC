@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <conio.h>
+#include <alloc.h>
+typedef struct tip_nod{
+int nr.;	/*informaþie */
+struct tip_nod *stg,*dr;
+} TIP_NOD;
+TIP_NOD *rad;
+void preordine(TIP_NOD *p, int nivel)
+{
+int i;
+if (p!=0){
+for(i=0;i<=nivel;i++) printf("  ");
+printf("%2d\n",p->nr);
+preordine(p->stg,nivel+1);
+preordine(p->dr,nivel+1);
+}
+}
+void inordine(TIP_NOD *p, int nivel)
+{
+int i;
+if (p!=0){
+inordine(p->stg,nivel+1);
+for(i=0;i<=nivel;i++) printf("  ");
+printf("%2d\n",p->nr);
+inordine(p->dr,nivel+1);
+}
+}
+void postordine(TIP_NOD *p, int nivel)
+{
+int i;
+if (p!=0){
+postordine(p->stg,nivel+1);
+postordine(p->dr,nivel+1);
+for(i=0;i<=nivel;i++) printf("  ");
+printf("%2d\n",p->nr);
+}
+}
+TIP_NOD *constructie()
+{
+TIP_NOD *p;
+int inf,n;
+n=sizeof(TIP_NOD);
+printf("\nIntroduceti Inf.din nod inf=");
+scanf("%d",&inf);
+if(inf==0) return 0;
+else {
+p=(TIP_NOD *)malloc(n);
+p->nr=inf;
+p->stg=constructie();
+p->dr=constructie();
+}
+return p;
+}
+
+void main(void)
+{
+rad=constructie();
+printf("\nVIZITAREA IN PREORDINE\n");
+preordine(rad,0);
+getch();
+printf("\nVIZITAREA IN INORDINE\n");
+inordine(rad,0);
+getch();
+printf("VIZITAREA IN POSTORDINE\n");
+postordine(rad,0);
+getch();
+}

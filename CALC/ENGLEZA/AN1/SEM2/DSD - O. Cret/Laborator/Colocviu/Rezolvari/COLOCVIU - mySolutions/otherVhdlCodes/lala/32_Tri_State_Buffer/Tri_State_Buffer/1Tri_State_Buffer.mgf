@@ -1,0 +1,235 @@
+I 000042 55 1327          1495489823596 a
+(_unit VHDL (buf 0 4 (a 0 10 ))
+  (_version v33)
+  (_time 1495489823595 2017.05.23 00:50:23)
+  (_source (\./src/buffer.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495489753835)
+    (_use )
+  )
+  (_object
+    (_type (_internal ~std_logic_vector{7~downto~0}~12 0 5 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_port (_internal x ~std_logic_vector{7~downto~0}~12 0 5 (_entity (_in ))))
+    (_port (_internal t ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in ))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~122 0 7 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_port (_internal y ~std_logic_vector{7~downto~0}~122 0 7 (_entity (_out ))))
+    (_process
+      (line__12(_architecture 0 0 12 (_process (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_static
+    (4 4 4 4 4 4 4 4 )
+  )
+  (_model . a 1 -1
+  )
+)
+V 000042 55 1327          1495489829996 a
+(_unit VHDL (buf 0 4 (a 0 10 ))
+  (_version v33)
+  (_time 1495489829995 2017.05.23 00:50:29)
+  (_source (\./src/buffer.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495489753835)
+    (_use )
+  )
+  (_object
+    (_type (_internal ~std_logic_vector{7~downto~0}~12 0 5 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_port (_internal x ~std_logic_vector{7~downto~0}~12 0 5 (_entity (_in ))))
+    (_port (_internal t ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in ))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~122 0 7 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_port (_internal y ~std_logic_vector{7~downto~0}~122 0 7 (_entity (_out ))))
+    (_process
+      (line__12(_architecture 0 0 12 (_process (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_static
+    (4 4 4 4 4 4 4 4 )
+  )
+  (_model . a 1 -1
+  )
+)
+I 000042 55 2264          1495490416079 a
+(_unit VHDL (tb 0 6 (a 0 9 ))
+  (_version v33)
+  (_time 1495490416079 2017.05.23 01:00:16)
+  (_source (\./src/tb.vhd\))
+  (_use (std(standard))(ieee(std_logic_arith))(ieee(std_logic_unsigned))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495490416011)
+    (_use )
+  )
+  (_component
+    (buf
+      (_object
+        (_port (_internal x ~std_logic_vector{7~downto~0}~13 0 11 (_entity (_in ))))
+        (_port (_internal t ~extieee.std_logic_1164.std_logic 0 12 (_entity (_in ))))
+        (_port (_internal y ~std_logic_vector{7~downto~0}~132 0 13 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UUT 0 20 (_component buf )
+    (_port
+      ((x)(x))
+      ((t)(t))
+      ((y)(y))
+    )
+    (_use (_entity . buf)
+    )
+  )
+  (_object
+    (_type (_internal ~std_logic_vector{7~downto~0}~13 0 11 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~132 0 13 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~134 0 16 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_signal (_internal x ~std_logic_vector{7~downto~0}~134 0 16 (_architecture (_uni ))))
+    (_signal (_internal y ~std_logic_vector{7~downto~0}~134 0 16 (_architecture (_uni ))))
+    (_signal (_internal t ~extieee.std_logic_1164.std_logic 0 17 (_architecture (_uni ))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~136 0 22 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_variable (_internal aux ~std_logic_vector{7~downto~0}~136 0 22 (_process 0 (_string \"00000000"\))))
+    (_process
+      (line__21(_architecture 0 0 21 (_process (_wait_for)(_target(1)(2))(_read(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_static
+    (3 3 3 3 3 3 3 3 )
+    (3 3 3 3 3 3 3 3 )
+  )
+  (_model . a 1 -1
+  )
+)
+I 000042 55 2312          1495490526433 a
+(_unit VHDL (tb 0 6 (a 0 9 ))
+  (_version v33)
+  (_time 1495490526433 2017.05.23 01:02:06)
+  (_source (\./src/tb.vhd\))
+  (_use (std(standard))(ieee(std_logic_arith))(ieee(std_logic_unsigned))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495490416011)
+    (_use )
+  )
+  (_component
+    (buf
+      (_object
+        (_port (_internal x ~std_logic_vector{7~downto~0}~13 0 11 (_entity (_in ))))
+        (_port (_internal t ~extieee.std_logic_1164.std_logic 0 12 (_entity (_in ))))
+        (_port (_internal y ~std_logic_vector{7~downto~0}~132 0 13 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UUT 0 20 (_component buf )
+    (_port
+      ((x)(x))
+      ((t)(t))
+      ((y)(y))
+    )
+    (_use (_entity . buf)
+    )
+  )
+  (_object
+    (_type (_internal ~std_logic_vector{7~downto~0}~13 0 11 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~132 0 13 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~134 0 16 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_signal (_internal x ~std_logic_vector{7~downto~0}~134 0 16 (_architecture (_uni ))))
+    (_signal (_internal y ~std_logic_vector{7~downto~0}~134 0 16 (_architecture (_uni ))))
+    (_signal (_internal t ~extieee.std_logic_1164.std_logic 0 17 (_architecture (_uni ))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~136 0 22 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_variable (_internal aux ~std_logic_vector{7~downto~0}~136 0 22 (_process 0 (_string \"00000000"\))))
+    (_process
+      (line__21(_architecture 0 0 21 (_process (_wait_for)(_target(1)(2))(_read(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_static
+    (3 3 3 3 3 3 3 3 )
+    (2 2 2 2 2 2 2 2 )
+    (2 2 2 2 2 2 2 2 )
+    (3 3 3 3 3 3 3 3 )
+  )
+  (_model . a 1 -1
+  )
+)
+V 000042 55 2315          1495490626558 a
+(_unit VHDL (tb 0 6 (a 0 9 ))
+  (_version v33)
+  (_time 1495490626557 2017.05.23 01:03:46)
+  (_source (\./src/tb.vhd\))
+  (_use (std(standard))(ieee(std_logic_arith))(ieee(std_logic_unsigned))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495490416011)
+    (_use )
+  )
+  (_component
+    (buf
+      (_object
+        (_port (_internal x ~std_logic_vector{7~downto~0}~13 0 11 (_entity (_in ))))
+        (_port (_internal t ~extieee.std_logic_1164.std_logic 0 12 (_entity (_in ))))
+        (_port (_internal y ~std_logic_vector{7~downto~0}~132 0 13 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UUT 0 20 (_component buf )
+    (_port
+      ((x)(x))
+      ((t)(t))
+      ((y)(y))
+    )
+    (_use (_entity . buf)
+    )
+  )
+  (_object
+    (_type (_internal ~std_logic_vector{7~downto~0}~13 0 11 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~132 0 13 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~134 0 16 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_signal (_internal x ~std_logic_vector{7~downto~0}~134 0 16 (_architecture (_uni ))))
+    (_signal (_internal y ~std_logic_vector{7~downto~0}~134 0 16 (_architecture (_uni ))))
+    (_signal (_internal t ~extieee.std_logic_1164.std_logic 0 17 (_architecture (_uni ))))
+    (_type (_internal ~std_logic_vector{7~downto~0}~136 0 22 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 7)(i 0))))))
+    (_variable (_internal aux ~std_logic_vector{7~downto~0}~136 0 22 (_process 0 (_string \"00000000"\))))
+    (_process
+      (line__21(_architecture 0 0 21 (_process (_wait_for)(_target(0)(2))(_read(0)(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_static
+    (3 3 3 3 3 3 3 3 )
+    (2 2 2 2 2 2 2 2 )
+    (2 2 2 2 2 2 2 2 )
+    (3 3 3 3 3 3 3 3 )
+  )
+  (_model . a 1 -1
+  )
+)

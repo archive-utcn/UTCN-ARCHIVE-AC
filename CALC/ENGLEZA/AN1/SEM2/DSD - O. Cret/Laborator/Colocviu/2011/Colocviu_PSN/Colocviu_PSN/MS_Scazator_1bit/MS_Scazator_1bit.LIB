@@ -1,0 +1,33 @@
+timestamp=1305287423949
+
+[ms]
+A/ms_arh=A/MS_Arh 21|./src/MS_Scazator_1bit.vhd|24|1*2523
+B/ms_arh=3*1488
+I=0*1179
+I/ms_arh=I/MS_Arh 0*1631
+M=11|0|v147|1305287423814|./src/MS_Scazator_1bit.vhd|0*1007*0xfbf038891a515d0d8447f51b53c0ef7416f796bd|0*1103*0x7bd7e13dc0415552f89596087806a8cf
+M/ms_arh=M/MS_Arh 21|0|v147|1305287423824|./src/MS_Scazator_1bit.vhd|0*1210*0x3b79f45ca885ed4c8d821ac03b70afc46c5803f1|0*1545*0x7bd7e13dc0415552f89596087806a8cf
+R=./src/MS_Scazator_1bit.vhd|20
+
+[scazator_1bit]
+A/arh_scazator=A/ARH_Scazator 21|./src/MS_Scazator_1bit.vhd|8|1*1682
+B/arh_scazator=3*0
+I=0*432
+I/arh_scazator=I/ARH_Scazator 0*905
+M=11|0|v147|1305286985042|./src/MS_Scazator_1bit.vhd|0*165*0xce3b5151d90eeaeb5623fa6ac793056fec200def|0*345*0x7bd7e13dc0415552f89596087806a8cf
+M/arh_scazator=M/ARH_Scazator 21|0|v147|1305287423813|./src/MS_Scazator_1bit.vhd|0*474*0xc72515d95d55b98044cfea54cc920cda230f0a29|0*802*0x7bd7e13dc0415552f89596087806a8cf
+R=./src/MS_Scazator_1bit.vhd|1
+
+[~A]
+ModifyID=22
+Version=73
+
+[~MFT]
+0=13|0MS_Scazator_1bit.mgf|1631|0
+1=5|1MS_Scazator_1bit.mgf|2523|1682
+3=1|3MS_Scazator_1bit.mgf|1488|0
+
+[~U]
+ms=MS 11|0*960|
+scazator_1bit=Scazator_1bit 11|0*0|
+

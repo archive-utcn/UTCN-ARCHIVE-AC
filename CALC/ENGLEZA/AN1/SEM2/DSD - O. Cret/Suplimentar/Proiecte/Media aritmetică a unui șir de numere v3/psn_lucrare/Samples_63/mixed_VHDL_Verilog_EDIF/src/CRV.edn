@@ -1,0 +1,396 @@
+( edif CRV
+    (edifVersion 2 0 0)
+    (edifLevel 0)
+    (keywordMap  
+        (keywordLevel 0)
+    )
+    (status  
+        (written  
+            (timestamp 2002 5 24 9 21 16)
+            (author "Aldec")
+            (program "Aldec_EDIF_generator" 
+                (version "1.10")
+            )
+        )
+    )
+    (library work 
+        (edifLevel 0)
+        (technology  
+            (numberDefinition )
+        )
+        (cell AND2 
+            (cellType generic)
+            (view net 
+                (viewType netlist)
+                (interface  
+                    (port I0 
+                        (direction INPUT)
+                    )
+                    (port I1 
+                        (direction INPUT)
+                    )
+                    (port O 
+                        (direction OUTPUT)
+                    )
+                )
+            )
+        )
+        (cell AND3 
+            (cellType generic)
+            (view net 
+                (viewType netlist)
+                (interface  
+                    (port I0 
+                        (direction INPUT)
+                    )
+                    (port I1 
+                        (direction INPUT)
+                    )
+                    (port I2 
+                        (direction INPUT)
+                    )
+                    (port O 
+                        (direction OUTPUT)
+                    )
+                )
+            )
+        )
+        (cell AND4 
+            (cellType generic)
+            (view net 
+                (viewType netlist)
+                (interface  
+                    (port I0 
+                        (direction INPUT)
+                    )
+                    (port I1 
+                        (direction INPUT)
+                    )
+                    (port I2 
+                        (direction INPUT)
+                    )
+                    (port I3 
+                        (direction INPUT)
+                    )
+                    (port O 
+                        (direction OUTPUT)
+                    )
+                )
+            )
+        )
+        (cell c2or 
+            (cellType generic)
+            (view net 
+                (viewType netlist)
+                (interface  
+                    (port CM 
+                        (direction INPUT)
+                    )
+                    (port CP 
+                        (direction INPUT)
+                    )
+                    (port NQ 
+                        (direction OUTPUT)
+                    )
+                    (port Q 
+                        (direction OUTPUT)
+                    )
+                    (port RESET 
+                        (direction INPUT)
+                    )
+                )
+            )
+        )
+        (cell CRV 
+            (cellType generic)
+            (view net 
+                (viewType netlist)
+                (interface  
+                    (port CDN 
+                        (direction INPUT)
+                    )
+                    (port CUP 
+                        (direction INPUT)
+                    )
+                    (port  
+                        (array ( rename Q_3_0_ "Q[3:0]" ) 4)
+                        (direction OUTPUT)
+                    )
+                    (port RESET 
+                        (direction INPUT)
+                    )
+                )
+                (contents  
+                    (instance H1 
+                        (viewRef net 
+                            (cellRef c2or)
+                        )
+                    )
+                    (instance U2 
+                        (viewRef net 
+                            (cellRef AND2)
+                        )
+                    )
+                    (instance U4 
+                        (viewRef net 
+                            (cellRef AND3)
+                        )
+                    )
+                    (instance U6 
+                        (viewRef net 
+                            (cellRef AND4)
+                        )
+                    )
+                    (instance U1 
+                        (viewRef net 
+                            (cellRef AND2)
+                        )
+                    )
+                    (instance U3 
+                        (viewRef net 
+                            (cellRef AND3)
+                        )
+                    )
+                    (instance U5 
+                        (viewRef net 
+                            (cellRef AND4)
+                        )
+                    )
+                    (instance H2 
+                        (viewRef net 
+                            (cellRef c2or)
+                        )
+                    )
+                    (instance H3 
+                        (viewRef net 
+                            (cellRef c2or)
+                        )
+                    )
+                    (instance H4 
+                        (viewRef net 
+                            (cellRef c2or)
+                        )
+                    )
+                    (net RESET 
+                        (joined  
+                            (portRef RESET 
+                                (instanceRef H1)
+                            )
+                            (portRef RESET 
+                                (instanceRef H2)
+                            )
+                            (portRef RESET 
+                                (instanceRef H3)
+                            )
+                            (portRef RESET 
+                                (instanceRef H4)
+                            )
+                            (portRef RESET)
+                        )
+                    )
+                    (net CUP 
+                        (joined  
+                            (portRef CP 
+                                (instanceRef H1)
+                            )
+                            (portRef I1 
+                                (instanceRef U1)
+                            )
+                            (portRef I2 
+                                (instanceRef U3)
+                            )
+                            (portRef I3 
+                                (instanceRef U5)
+                            )
+                            (portRef CUP)
+                        )
+                    )
+                    (net NET72 
+                        (joined  
+                            (portRef I3 
+                                (instanceRef U6)
+                            )
+                            (portRef NQ 
+                                (instanceRef H3)
+                            )
+                        )
+                    )
+                    (net NET64 
+                        (joined  
+                            (portRef NQ 
+                                (instanceRef H1)
+                            )
+                            (portRef I1 
+                                (instanceRef U2)
+                            )
+                            (portRef I1 
+                                (instanceRef U4)
+                            )
+                            (portRef I1 
+                                (instanceRef U6)
+                            )
+                        )
+                    )
+                    (net NET73 
+                        (joined  
+                            (portRef O 
+                                (instanceRef U5)
+                            )
+                            (portRef CP 
+                                (instanceRef H4)
+                            )
+                        )
+                    )
+                    (net NET74 
+                        (joined  
+                            (portRef O 
+                                (instanceRef U6)
+                            )
+                            (portRef CM 
+                                (instanceRef H4)
+                            )
+                        )
+                    )
+                    (net NET65 
+                        (joined  
+                            (portRef O 
+                                (instanceRef U1)
+                            )
+                            (portRef CP 
+                                (instanceRef H2)
+                            )
+                        )
+                    )
+                    (net NET66 
+                        (joined  
+                            (portRef O 
+                                (instanceRef U2)
+                            )
+                            (portRef CM 
+                                (instanceRef H2)
+                            )
+                        )
+                    )
+                    (net NET67 
+                        (joined  
+                            (portRef O 
+                                (instanceRef U3)
+                            )
+                            (portRef CP 
+                                (instanceRef H3)
+                            )
+                        )
+                    )
+                    (net CDN 
+                        (joined  
+                            (portRef CM 
+                                (instanceRef H1)
+                            )
+                            (portRef I0 
+                                (instanceRef U2)
+                            )
+                            (portRef I0 
+                                (instanceRef U4)
+                            )
+                            (portRef I0 
+                                (instanceRef U6)
+                            )
+                            (portRef CDN)
+                        )
+                    )
+                    (net NET68 
+                        (joined  
+                            (portRef O 
+                                (instanceRef U4)
+                            )
+                            (portRef CM 
+                                (instanceRef H3)
+                            )
+                        )
+                    )
+                    (net NET69 
+                        (joined  
+                            (portRef I2 
+                                (instanceRef U4)
+                            )
+                            (portRef I2 
+                                (instanceRef U6)
+                            )
+                            (portRef NQ 
+                                (instanceRef H2)
+                            )
+                        )
+                    )
+                    (net ( rename Q_0_ "Q[0]" ) 
+                        (joined  
+                            (portRef Q 
+                                (instanceRef H1)
+                            )
+                            (portRef I0 
+                                (instanceRef U1)
+                            )
+                            (portRef I1 
+                                (instanceRef U3)
+                            )
+                            (portRef I2 
+                                (instanceRef U5)
+                            )
+                            (portRef  
+                                (member Q_3_0_ 3)
+                            )
+                        )
+                        (property  BUS_NAME ( string "Q[3:0]" )( owner "ALDEC" ) )
+                    )
+                    (net ( rename Q_1_ "Q[1]" ) 
+                        (joined  
+                            (portRef I0 
+                                (instanceRef U3)
+                            )
+                            (portRef I1 
+                                (instanceRef U5)
+                            )
+                            (portRef Q 
+                                (instanceRef H2)
+                            )
+                            (portRef  
+                                (member Q_3_0_ 2)
+                            )
+                        )
+                        (property  BUS_NAME ( string "Q[3:0]" )( owner "ALDEC" ) )
+                    )
+                    (net ( rename Q_2_ "Q[2]" ) 
+                        (joined  
+                            (portRef I0 
+                                (instanceRef U5)
+                            )
+                            (portRef Q 
+                                (instanceRef H3)
+                            )
+                            (portRef  
+                                (member Q_3_0_ 1)
+                            )
+                        )
+                        (property  BUS_NAME ( string "Q[3:0]" )( owner "ALDEC" ) )
+                    )
+                    (net ( rename Q_3_ "Q[3]" ) 
+                        (joined  
+                            (portRef Q 
+                                (instanceRef H4)
+                            )
+                            (portRef  
+                                (member Q_3_0_ 0)
+                            )
+                        )
+                        (property  BUS_NAME ( string "Q[3:0]" )( owner "ALDEC" ) )
+                    )
+                )
+            )
+        )
+    )
+    (design CRV 
+        (cellRef CRV 
+            (libraryRef work)
+        )
+    )
+)
+

@@ -1,0 +1,5 @@
+20
+~E 1 "./src/converter.vhd" 4 c2421_to_bcd
+~A 1 "./src/converter.vhd" 9 a
+~E 1 "./src/converter_tb.vhd" 4 tb_c2421_to_bcd
+~A 1 "./src/converter_tb.vhd" 7 arch

@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\DECODIFICATOR_BCD_BINAR\projlib.cfg"  -d "d:\designshdl\CLV_2008\DECODIFICATOR_BCD_BINAR\compile\"  -work DECODIFICATOR_BCD_BINAR -dbg -e 100 -o "d:\designshdl\CLV_2008\DECODIFICATOR_BCD_BINAR\src\DECODIFICATOR_BCD_BINAR.vhd" 

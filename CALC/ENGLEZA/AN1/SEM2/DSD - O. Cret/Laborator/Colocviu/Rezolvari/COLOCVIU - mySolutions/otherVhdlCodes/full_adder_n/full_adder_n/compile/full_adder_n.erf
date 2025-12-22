@@ -1,0 +1,6 @@
+MESSAGE "File: d:\designshdl\full_adder_n\full_adder_n\src\full_adder_n.vhd" 
+MESSAGE "Compile Entity "FA_N"" 
+MESSAGE "Compile Architecture "A" of Entity "FA_N"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   FA_N" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]" 

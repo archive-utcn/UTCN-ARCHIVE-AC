@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+sequence_detector=.\Sequence_Detector\Sequence_Detector.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+sequence_detector=1

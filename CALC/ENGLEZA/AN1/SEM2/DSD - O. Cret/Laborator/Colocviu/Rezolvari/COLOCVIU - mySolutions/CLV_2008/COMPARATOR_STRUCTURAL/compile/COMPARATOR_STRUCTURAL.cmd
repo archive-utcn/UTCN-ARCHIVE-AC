@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\COMPARATOR_STRUCTURAL\projlib.cfg"  -d "D:\designshdl\CLV_2008\COMPARATOR_STRUCTURAL\compile\"  -work COMPARATOR_STRUCTURAL -dbg -e 100 "D:\designshdl\CLV_2008\COMPARATOR_STRUCTURAL\src\COMPARATOR_STRUCTURAL.vhd" 

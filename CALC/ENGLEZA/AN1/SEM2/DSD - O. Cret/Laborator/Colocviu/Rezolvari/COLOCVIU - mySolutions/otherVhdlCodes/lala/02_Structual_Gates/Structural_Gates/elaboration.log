@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Thu May 25 15:09:12 2017
+
+
+--------------------------------------------
+Entity     | Architecture | Library       
+--------------------------------------------
+nxor_gate  | a            | Structural_Gates
+inverter   | a            | structural_gates
+and_gate   | a            | structural_gates
+or_gate    | a            | structural_gates
+--------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

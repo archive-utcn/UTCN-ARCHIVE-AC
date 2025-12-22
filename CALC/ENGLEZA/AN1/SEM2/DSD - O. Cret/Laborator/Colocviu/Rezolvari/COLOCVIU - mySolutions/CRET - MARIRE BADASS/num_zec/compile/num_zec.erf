@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\num_zec\src\num_Zec.vhd" 
+MESSAGE "Compile Entity "num_zec"" 
+MESSAGE "Entity `num_zec' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "num_zec"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

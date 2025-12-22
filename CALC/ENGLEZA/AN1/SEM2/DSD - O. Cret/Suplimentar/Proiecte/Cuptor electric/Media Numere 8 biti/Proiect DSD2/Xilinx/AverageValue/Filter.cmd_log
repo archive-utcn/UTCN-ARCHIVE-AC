@@ -1,0 +1,185 @@
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AverageValue.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf AverageValue.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 Filter.ngc Filter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 Filter.ngc Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "I:/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "I:/AverageValue/Xilinx/AverageValue/Filter.syr" 
+xst -intstyle ise -ifn "I:/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "I:/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 Filter.ngc Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+xst -intstyle ise -ifn "I:/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "I:/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 Filter.ngc Filter.ngd  
+xst -intstyle ise -ifn "I:/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "I:/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 Filter.ngc Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.xst" -ofn "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc filter.ucf -p xc3s1200e-fg320-4 "Filter.ngc" Filter.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Filter_map.ncd Filter.ngd Filter.pcf 
+par -w -intstyle ise -ol high -t 1 Filter_map.ncd Filter.ncd Filter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Filter.twx Filter.ncd -o Filter.twr Filter.pcf -ucf filter.ucf 
+bitgen -intstyle ise -f Filter.ut Filter.ncd 

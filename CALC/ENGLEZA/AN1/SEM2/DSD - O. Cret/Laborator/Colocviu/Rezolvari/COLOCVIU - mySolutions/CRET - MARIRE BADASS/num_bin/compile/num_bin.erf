@@ -1,0 +1,4 @@
+MESSAGE "File: D:\designshdl\CRET\num_bin\src\num_bin.vhd" 
+MESSAGE "Compile Entity "num_bin"" 
+MESSAGE "Compile Architecture "arh" of Entity "num_bin"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

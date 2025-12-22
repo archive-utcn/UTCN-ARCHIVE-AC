@@ -1,0 +1,109 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
+#include <string.h>
+
+#define MAXCUV 81
+
+typedef struct tip_nodAC
+{
+    int control;
+    char *cuvant;
+    struct tip_nodAC *st,*dr;
+}TIP_NOD;
+
+char *DuplicSir(char *s);
+TIP_NOD *AlocareNod();
+TIP_NOD *Inserare_ArboreCautare(TIP_NOD *p,char *w);
+void AfisareArbore_PreOrdine(TIP_NOD *p);
+void AfisareArbore_InOrdine(TIP_NOD *p);
+void AfisareArbore_PostOrdine(TIP_NOD *p);
+int Arbore_NumarNoduri(TIP_NOD *p);
+int Arbore_Adancime(TIP_NOD *p);
+TIP_NOD *Cautare_ArboreCautare(TIP_NOD *p,char *w);
+
+int main()
+{
+    int i,n;
+    char cuvant[MAXCUV];
+     TIP_NOD *radacina;
+     printf("n= ");
+     scanf("%i",&n);
+      radacina=NULL;
+       for(i=0;i<n;i++)
+        {
+            printf("Cuvant: ");
+            scanf("%s",cuvant);
+            radacina=Inserare_ArboreCautare(radacina,cuvant);
+        }
+     printf("\nAfisare PREordine\n");
+     AfisareArbore_PreOrdine(radacina);
+        printf("\nAfisare INordine\n");
+        AfisareArbore_InOrdine(radacina);
+     printf("\nAfisare POSTordine\n");
+     AfisareArbore_PostOrdine(radacina);
+
+      printf("%s\n",Cautare_ArboreCautare(radacina,"aaa")!= NULL ?"\nOK\n":"\nNot OK\n");
+      getch();
+}
+char* DuplicSir(char *s)
+{
+    char *p;
+     p=(char*)malloc(strlen(s)+1);
+     if(p!=NULL) strcpy(p,s);
+   return p;
+}
+
+TIP_NOD *AlocareNod()
+{
+    return (TIP_NOD *)malloc(sizeof(TIP_NOD));
+}
+
+TIP_NOD *Inserare_ArboreCautare(TIP_NOD *p,char *w)
+{
+    int conditie;
+     if(p==NULL)
+       {
+           p=AlocareNod();
+           p->cuvant=DuplicSir(w);
+           p->control=1;
+           p->st=p->dr=NULL;
+       }
+      else if((conditie=strcmp(w,p->cuvant))==0) p->control++;
+      else if(conditie <0) p->st=Inserare_ArboreCautare(p->st,w);
+      else p->dr=Inserare_ArboreCautare(p->dr,w);
+      return p;
+}
+
+void AfisareArbore_PreOrdine(TIP_NOD *p)
+{
+    if(p==NULL) return;
+    printf("%i %s\n",p->control,p->cuvant);
+    AfisareArbore_PreOrdine(p->st);
+    AfisareArbore_PreOrdine(p->dr);
+}
+
+void AfisareArbore_InOrdine(TIP_NOD *p)
+{
+    if(p==NULL) return;
+    AfisareArbore_InOrdine(p->st);
+    printf("%i %s\n",p->control,p->cuvant);
+    AfisareArbore_InOrdine(p->dr);
+}
+
+void AfisareArbore_PostOrdine(TIP_NOD *p)
+{
+    if(p==NULL) return;
+    AfisareArbore_PostOrdine(p->st);
+    AfisareArbore_PostOrdine(p->dr);
+    printf("%i %s\n",p->control,p->cuvant);
+}
+
+TIP_NOD *Cautare_ArboreCautare(TIP_NOD *p,char *w)
+{
+    int conditie;
+     if(p==NULL) return NULL;
+     if((conditie=strcmp(w,p->cuvant))==0) return p;
+     else if(conditie<0) return Cautare_ArboreCautare(p->st,w);
+     else return Cautare_ArboreCautare(p->dr,w);
+}

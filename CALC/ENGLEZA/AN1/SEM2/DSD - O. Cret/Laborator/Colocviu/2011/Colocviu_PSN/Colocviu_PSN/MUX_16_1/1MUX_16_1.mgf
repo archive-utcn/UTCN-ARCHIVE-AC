@@ -1,0 +1,56 @@
+V 000028 55 674 0 aritmetic
+(_unit VHDL (aritmetic 0 1 (aritmetic 0 6 ))
+	(_version v147)
+	(_time 1305057861813 2011.05.10 23:04:21)
+	(_source (\./src/MUX_16la1.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 9196c49f92c6cc869792d5cbc5)
+	(_entity
+		(_time 1305057861801)
+	)
+	(_object
+		(_subprogram
+			(_internal log 0 0 2 (_entity (_function )))
+			(_internal value 1 0 3 (_entity (_function (_range(_to 0 2147483647 )))))
+		)
+		(_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+		(_type (_external ~extSTD.STANDARD.BIT_VECTOR (std STANDARD BIT_VECTOR)))
+	)
+	(_model . aritmetic 2 -1
+	)
+)
+V 000044 55 1323          1305057861821 mux
+(_unit VHDL (mux 0 42 (mux 0 49 ))
+	(_version v147)
+	(_time 1305057861822 2011.05.10 23:04:21)
+	(_source (\./src/MUX_16la1.vhd\))
+	(_use (.(aritmetic))(std(standard)))
+	(_parameters dbg)
+	(_code 9196919f95c7cd87c49184cac8)
+	(_entity
+		(_time 1305057861819)
+	)
+	(_object
+		(_generic (_internal N ~extSTD.STANDARD.INTEGER 0 43 \8\ (_entity ((i 8)))))
+		(_type (_internal ~BIT_VECTOR{0~to~N-1}~12 0 44 (_array ~extSTD.STANDARD.BIT ((_to (i 0)(c 1))))))
+		(_port (_internal x ~BIT_VECTOR{0~to~N-1}~12 0 44 (_entity (_in ))))
+		(_type (_internal ~BIT_VECTOR{log{N}-1~downto~0}~12 0 45 (_array ~extSTD.STANDARD.BIT ((_downto (c 2 )(i 0))))))
+		(_port (_internal s ~BIT_VECTOR{log{N}-1~downto~0}~12 0 45 (_entity (_in ))))
+		(_port (_internal y ~extSTD.STANDARD.BIT 0 46 (_entity (_out ))))
+		(_variable (_internal temp ~extSTD.STANDARD.INTEGER 0 53 (_process 0 )))
+		(_process
+			(line__52(_architecture 0 0 52 (_process (_simple)(_target(2))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external log (. aritmetic 0))
+			(_external value (. aritmetic 1))
+		)
+		(_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+		(_type (_external ~extSTD.STANDARD.BIT_VECTOR (std STANDARD BIT_VECTOR)))
+	)
+	(_model . mux 3 -1
+	)
+)

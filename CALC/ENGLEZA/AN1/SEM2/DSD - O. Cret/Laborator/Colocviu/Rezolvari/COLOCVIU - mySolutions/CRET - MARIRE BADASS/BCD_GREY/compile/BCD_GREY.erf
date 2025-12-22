@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\BCD_GREY\src\BCD_GREY.vhd" 
+MESSAGE "Compile Entity "conv"" 
+MESSAGE "Entity `conv' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "conv"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

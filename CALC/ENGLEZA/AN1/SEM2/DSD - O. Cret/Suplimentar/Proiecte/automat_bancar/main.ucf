@@ -1,0 +1,38 @@
+NET "pin(0)" LOC="T9";
+NET "pin(1)" LOC="V9";
+NET "pin(2)" LOC="M8";
+NET "code(0)" LOC="N8";
+NET "code(1)" LOC="U8";
+NET "code(2)" LOC="V8";
+NET "code(3)" LOC="T5";
+
+NET "okpin" LOC="R11";
+NET "okcode" LOC="T11";
+
+NET "clock_hundreds" LOC="C4";
+NET "clock_zecimals" LOC="B8";
+NET "clock_end" LOC="D9";
+
+NET "ok" LOC="N11";
+NET "CLK" LOC = "V10";
+NET "options" LOC="T10";
+NET "in_want_receipt" LOC="A8";
+NET "out_want_receipt" LOC="U16";
+
+
+NET "actualization" LOC="C9";
+
+
+NET "a_to_g[6]" LOC = T17;
+NET "a_to_g[5]" LOC = T18;
+NET "a_to_g[4]" LOC = U17;
+NET "a_to_g[3]" LOC = U18;
+NET "a_to_g[2]" LOC = M14;
+NET "a_to_g[1]" LOC = N14;
+NET "a_to_g[0]" LOC = L14;
+NET "an[3]" LOC = N16;
+NET "an[2]" LOC = N15;
+NET "an[1]" LOC = P18;
+NET "an[0]" LOC = P17;
+
+

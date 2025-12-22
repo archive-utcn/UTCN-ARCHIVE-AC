@@ -1,0 +1,16 @@
+[Version]
+Version=6.3
+[Designs]
+fft=.\fft\fft.adf
+biquad_iir=.\biquad_iir\biquad_iir.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+fft=1
+biquad_iir=1
+[Settings]
+Active=biquad_iir

@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+Detector_secventa=Detector_secventa.adf
+[Settings]
+Active=Detector_secventa
+[Expand]
+detector_secventa=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

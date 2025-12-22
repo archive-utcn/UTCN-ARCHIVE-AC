@@ -1,0 +1,54 @@
+#include<stdio.h>
+#define max 5
+
+/*functia de generare a matricei de adiacenta a unui graf */
+void genmatradia(int adia[][max],int n)
+{
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        printf("introduceti unu daca exista o muchie de la %d la %d, altfel 0\n",i,j);
+        scanf("%d",&adia[i][j]);
+    }
+}
+
+/*functia ce viziteaza functia in adancime */
+void df(int x,int vizitat[],int adia[][max],int n)
+{
+    int j;
+    vizitat[x]=1;
+    //x+1 pt ca nodurile pt indicii pleaca de la 0
+    printf("%i",x+1);
+    for(j=0;j<n;j++)
+    if(adia[x][j]==1 && vizitat[j]==0)
+    df(j,vizitat,adia,n);
+}
+
+void main()
+{
+    int n,i,vizitat[max];
+    int adia[max][max]=
+    {
+        {0,1,1,0,0},
+        {0,0,1,1,1},
+        {0,0,0,1,0},
+        {0,0,0,0,1},
+        {1,0,0,0,0},
+
+
+
+
+
+    };
+    n=5;
+    //printf("nr max de noduri este= %d\n",max);
+    //scanf("%d",&n);
+    //genmatradia(adia,n);
+
+    for(i=0;i<n;i++)
+    vizitat[i]=0;
+    for(i=0;i<n;i++)
+    if(vizitat[i]==0)
+    df(i,vizitat,adia,n);
+    printf("\n");
+}

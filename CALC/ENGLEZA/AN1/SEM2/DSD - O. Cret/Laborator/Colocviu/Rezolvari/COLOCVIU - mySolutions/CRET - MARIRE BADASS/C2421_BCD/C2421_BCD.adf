@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=C2421_BCD
+
+[Library]
+C2421_BCD=.\C2421_BCD.lib
+
+[$LibMap$]
+C2421_BCD=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/C2421_BCD.vhd=-1
+
+[Files.Data]
+.\src\C2421_BCD.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\C2421_BCD\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\C2421_BCD\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\C2421_BCD\
+Extension5=dll

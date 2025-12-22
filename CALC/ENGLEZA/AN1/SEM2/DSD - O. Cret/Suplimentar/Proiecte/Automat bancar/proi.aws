@@ -1,0 +1,15 @@
+[Version]
+Version=6.3
+[Designs]
+noapte=.\noapte\noapte.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+proi=0
+noapte=1
+[Settings]
+Active=noapte

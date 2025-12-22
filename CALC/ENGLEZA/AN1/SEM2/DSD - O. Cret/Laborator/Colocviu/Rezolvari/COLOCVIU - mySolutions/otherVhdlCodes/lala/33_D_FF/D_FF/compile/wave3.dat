@@ -1,0 +1,9 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#3#bitc2 01"
+$IN 1 1 clk
+$IN 5 1 rst
+$IN 9 1 d
+$OUT +4 1 q
+$OUT +4 1 nq
+$ENDWAVE

@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+and_or_not=.\AND_OR_NOT\AND_OR_NOT.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+and_or_not=1

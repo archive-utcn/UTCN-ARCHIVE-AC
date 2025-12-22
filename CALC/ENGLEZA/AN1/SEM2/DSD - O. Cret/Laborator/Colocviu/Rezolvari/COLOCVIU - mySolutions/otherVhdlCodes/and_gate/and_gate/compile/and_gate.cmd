@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\and_gate\library.cfg"  -j "D:\designshdl\and_gate\and_gate\projlib.cfg"  -d "D:\designshdl\and_gate\and_gate\compile\"  -work and_gate -dbg -e 100 "D:\designshdl\and_gate\and_gate\src\and_gate.vhd" 

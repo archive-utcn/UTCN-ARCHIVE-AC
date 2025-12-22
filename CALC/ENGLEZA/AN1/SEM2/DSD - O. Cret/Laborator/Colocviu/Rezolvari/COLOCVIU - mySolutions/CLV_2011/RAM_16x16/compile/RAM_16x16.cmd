@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2011\library.cfg"  -j "D:\designshdl\CLV_2011\RAM_16x16\projlib.cfg"  -d "D:\designshdl\CLV_2011\RAM_16x16\compile\"  -work RAM_16x16 -dbg -e 100 "D:\designshdl\CLV_2011\RAM_16x16\src\RAM_16x16.vhd" 

@@ -1,0 +1,5 @@
+22
+~E 1 "./src/MS_Scazator_1bit.vhd" 20 ms
+~A 1 "./src/MS_Scazator_1bit.vhd" 24 ms_arh
+~E 1 "./src/MS_Scazator_1bit.vhd" 1 scazator_1bit
+~A 1 "./src/MS_Scazator_1bit.vhd" 8 arh_scazator

@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\JK_Sincron\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\JK_Sincron\compile"   -work jk_sincron  -dbg -e 100 -2002 "c:\\My_Designs\\Colocviu_PSN\\JK_Sincron\\src\\JK_SINC.vhd" 

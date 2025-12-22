@@ -1,0 +1,8 @@
+133
+~E 1 "./src/learning.vhd" 49 e1
+~A 1 "./src/learning.vhd" 64 arh2
+~A 1 "./src/learning.vhd" 53 arh1
+~E 1 "./src/learning.vhd" 4 and_gate
+~A 1 "./src/learning.vhd" 10 arh
+~E 1 "./src/learning.vhd" 4 or_gate
+~A 1 "./src/learning.vhd" 10 arh

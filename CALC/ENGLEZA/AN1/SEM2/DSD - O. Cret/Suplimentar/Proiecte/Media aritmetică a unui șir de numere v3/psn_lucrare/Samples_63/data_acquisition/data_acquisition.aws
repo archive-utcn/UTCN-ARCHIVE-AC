@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+data_acquisition=data_acquisition.adf
+[Settings]
+Active=data_acquisition
+[Expand]
+data_acquisition=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

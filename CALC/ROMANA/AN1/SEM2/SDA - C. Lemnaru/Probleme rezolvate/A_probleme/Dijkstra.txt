@@ -1,0 +1,89 @@
+//DIJKSTRA->gasirea cailor de cost minim între doua noduri precizate (graf orientat)
+#include <stdio.h>
+#include <stdlib.h>
+#define NMAX 4
+#define INFINIT 999
+//n->numarul vârfurilor
+//s->vector caracteristic
+//vectorul DISTANTE de n elemente al distantelor minime de la sursa la fiecare vârf
+//COST->matricea costurilor 
+void Dijkstra(int n, int sursa, int COST[][4],int DISTANTE[],int TATA[])
+{
+    int i,j,k,pas,s[NMAX];
+    for(i=0;i<n;i++)
+    {
+        s[i]=0;
+        DISTANTE[i]=COST[sursa][i];
+        if(DISTANTE[i]<INFINIT)
+          TATA[i]=sursa;
+        else
+          TATA[i]=0;
+    }
+     s[sursa]=1;
+     TATA[sursa]=0;
+     DISTANTE[sursa]=0;
+     for(pas=1;pas<n;pas++)
+     {
+        int min=INFINIT;
+        for(i=0;i<n;i++)
+        {
+            if((DISTANTE[i]<min)&&(s[i]==0))
+            {
+                min=DISTANTE[i];
+                k=i;
+            }
+        }
+        if(min==INFINIT)
+            return;
+        else
+        {
+        s[k]=1;
+        for(j=0;j<n;j++)
+            if((s[j]==0)&&(DISTANTE[k]+COST[k][j]<DISTANTE[j]))
+            {
+                DISTANTE[j]=DISTANTE[k]+COST[k][j];
+                TATA[j]=k;
+            }
+        }
+    }
+}
+
+void afisare_drum(int n,int sursa,int DISTANTE[],int TATA[])
+{
+    int k;
+    for(k=0;k<n;k++)
+    {
+        if((DISTANTE[k]!=INFINIT) && (k!=sursa))
+        {
+            int i=k;
+            do
+            {
+                i=TATA[i];
+            }while(i!=0);
+            printf("\n De la sursa <%d> - la nodul <%d>, distanta minima este: %d. ",sursa,k,DISTANTE[k]);
+        }
+       else  printf("\nNU exista drum de la %d la %d\n",sursa,k);
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int c[4][4] = {    {0,2,7,0},  //matricea costurilor
+                       {2,0,2,3},
+                       {7,2,0,1},
+                       {0,3,1,0}
+                    };
+    int n=4; int i;
+    int sursa=0;
+    int d[20];
+    int t[20];
+    for(i=0; i<n; i++)
+    {
+        d[i]=0;
+        t[i]=0;
+    }
+    Dijkstra(n,sursa,c,d,t);
+    afisare_drum(n,sursa,d,t);
+    return 0;
+}

@@ -1,0 +1,7 @@
+27
+~E 1 "./src/d_ff.vhd" 4 d_ff
+~A 1 "./src/d_ff.vhd" 9 a
+~E 1 "./src/d_ff.vhd" 4 d
+~A 1 "./src/d_ff.vhd" 9 a
+~E 1 "./src/tb.vhd" 4 tb
+~A 1 "./src/tb.vhd" 7 ar

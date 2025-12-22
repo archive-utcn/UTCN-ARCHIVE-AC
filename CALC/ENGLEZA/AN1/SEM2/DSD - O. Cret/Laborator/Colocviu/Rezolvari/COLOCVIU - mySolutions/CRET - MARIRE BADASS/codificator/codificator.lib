@@ -1,0 +1,13 @@
+timestamp=1498478419436
+
+[~A]
+./src/codificator.vhd~arhcodificator=0*0*540
+./src/codificator.vhd~codificator=0*616*860
+ModifyID=21
+Version=73
+
+[~MFT]
+0=0|0codificator.mgf|860|0
+
+[~U]
+

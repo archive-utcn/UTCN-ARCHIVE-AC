@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\decodificator_binar\projlib.cfg"  -d "D:\designshdl\CRET\decodificator_binar\compile\"  -work decodificator_binar -dbg -e 100 "D:\designshdl\CRET\decodificator_binar\src\decodificator_binar.vhd" 

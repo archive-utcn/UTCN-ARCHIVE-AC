@@ -1,0 +1,23 @@
+int stergere(tip_nod *prim,tip_nod *ultim,char key)
+{
+TIP_NOD *q, *q1;
+/* cãutare nod */
+q1=0; q=prim;
+while (q!=0)
+{
+if(q->cheie == key) break; /* s-a gãsit nodul */
+q1=q; q=q->urm;
+}
+if(q != 0)  { /* existã un nod de cheie “key” */
+if (q == prim) {
+prim=prim_>urm;
+elib_nod(q);
+/*eliberare spaþiu */
+if( prim==0) ultim=0;
+}
+else {
+q1->urm=q->urm;
+if(q==ultim)  ultim=q1;
+elib_nod(q);   /* eliberare spaþiu */
+}
+}

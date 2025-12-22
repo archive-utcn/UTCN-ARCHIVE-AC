@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+t_clk_process=.\T_CLK_Process\T_CLK_Process.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+t_clk_process=1

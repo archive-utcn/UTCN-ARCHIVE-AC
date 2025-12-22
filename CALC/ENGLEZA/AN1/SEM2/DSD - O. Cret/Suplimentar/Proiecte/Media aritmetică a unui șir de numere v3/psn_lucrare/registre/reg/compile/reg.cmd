@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\registre\library.cfg"  -j "c:\My_Designs\registre\reg\projlib.cfg"  -d "c:\My_Designs\registre\reg\compile\"  -work reg -dbg -e 100 -o "c:\My_Designs\registre\reg\src\r.vhd" 

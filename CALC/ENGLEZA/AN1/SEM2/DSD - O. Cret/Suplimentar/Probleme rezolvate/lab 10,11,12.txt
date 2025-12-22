@@ -1,0 +1,227 @@
+entity poartaSI is
+	port (a,b:in bit; y:out bit);
+end poartaSI;
+
+architecture flux of poartaSI is
+begin
+	y<= a and b;
+end architecture flux;
+
+entity modul_sim_si is
+end modul_sim_si;
+
+architecture simulare of modul_sim_si is
+signal a_in: bit;
+signal b_in: bit;
+signal y_out: bit;
+
+	component poartaSI is
+		port (a,b:in bit; y:out bit);
+	end component;
+begin
+UST: poartaSI port map(a=> a_in, b=> b_in,y=>y_out);
+a_in<= '0' after 0 ns, '1' after 40 ns;
+b_in<= '0' after 0 ns, '1' after 20 ns, '0' after 40 ns, '1' after 60 ns;
+end; 
+------------------------------------------------------------------------------------------------------------
+
+entity COMP_D is
+	port (CLK,D:in bit; Q,NQ:out bit);
+end;
+
+architecture flux of COMP_D is
+begin			
+	process(CLK)	
+	begin
+	if CLK='1' and CLK'event then
+		Q<=D;
+		NQ<=not D; 
+	end if;
+	end process;
+end;
+
+entity MS_BISTABIL_D is 
+end MS_BISTABIL_D; 
+
+architecture ARH_MS_BISTABIL_D of MS_BISTABIL_D is 
+ 
+component COMP_D is 
+        port (CLK,D:in bit; Q,NQ:out bit); 
+end component; 
+shared variable  END_SIM: BOOLEAN := FALSE; 
+signal CLK, D, Q, NQ: BIT; 
+ 
+constant PERIOADA_CLK: TIME := 20 ns; 
+
+begin 
+ 
+UST : COMP_D port map (CLK=>CLK, D=>D, Q=> Q, NQ=>NQ); 
+						   
+GENERATOR_TACT: process 
+                       begin 
+                       if not END_SIM then 
+                        CLK <= '0'; 
+                        wait for PERIOADA_CLK / 2; 
+                        CLK <= '1'; 
+                        wait for PERIOADA_CLK / 2; 
+                       else wait; 
+                       end if; 
+               end process GENERATOR_TACT; 
+STIMUL: process 
+begin 
+        D <= '1'; 
+        wait for 200 ns; 
+        D <= '0'; 
+        wait for 200 ns; 
+        END_SIM := TRUE;  
+        wait; 
+end process STIMUL; 
+end ARH_MS_BISTABIL_D ; 	
+
+
+----------------------------------------------------------------------------------------------
+
+entity DMUX is 
+         port (X: in BIT; 
+               S: in BIT_VECTOR (1 downto 0); 
+               Y: out BIT_VECTOR (3 downto 0)); 
+end DMUX; 
+architecture ARH_DMUX of DMUX is 
+begin 
+        Y <= ('0', '0', '0', X) when S = "00" else 
+               ('0', '0', X, '0') when S = "01" else 
+               ('0', X, '0', '0') when S = "10" else 
+               (X, '0', '0', '0') when S = "11"; 
+end ARH_DMUX; 
+entity MS_DMUX is 
+end MS_DMUX; 
+
+architecture ARH_MS_DMUX of MS_DMUX is 
+component DMUX is 
+         port (X: in BIT; 
+               S: in BIT_VECTOR (1 downto 0); 
+               Y: out BIT_VECTOR (3 downto 0)); 
+end component DMUX; 
+signal X: BIT; 
+signal S: BIT_VECTOR (1 downto 0); 
+signal Y: BIT_VECTOR (3 downto 0); 
+begin  
+UST : DMUX port map (X => X, S => S, Y => Y); 
+STIM: process 
+          begin 
+           X <= '1'; 
+           S <= "00"; 
+           wait for 40 ns; 
+           S <= "01"; 
+           wait for 40 ns; 
+           S <= "10"; 
+           wait for 40 ns; 
+           S <= "11"; 
+           wait for 40 ns; 
+           wait; 
+         end process STIM; 
+end ARH_MS_DMUX ; 
+
+
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity NUMARATOR_8 is 
+        port (CLK, RESET: in STD_LOGIC; 
+                CE: in STD_LOGIC;                       
+                LOAD: in STD_LOGIC;                       
+                DIR: in STD_LOGIC;                       
+                DIN: in INTEGER range 0 to 255;   
+                COUNT: inout INTEGER range 0 to 255
+                 ); 
+end entity NUMARATOR_8;
+
+
+architecture arh1 of NUMARATOR_8 is
+begin
+process(CLK)   
+begin
+	if rising_edge(CLK) and CE='1' then
+		if RESET='1' then
+			COUNT<= 0;
+		else 
+			if LOAD = '1' then
+				COUNT<=DIN;
+			else
+				if DIR='1' then
+					if COUNT=0 then
+						COUNT<=255;
+					else
+						COUNT<=COUNT-1;
+					end if;
+				else	 
+					if COUNT=255 then
+						COUNT<=0;
+					else
+					COUNT<=COUNT+1;
+					end if;
+				end if;	
+			end if;
+		end if;
+	end if;
+end process;
+end;
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity MS_NUMARATOR_8 is 
+end MS_NUMARATOR_8; 								 
+
+architecture ARH_MS_NUMARATOR_8 of MS_NUMARATOR_8 is  
+component NUMARATOR_8 is 
+        port (CLK, RESET: in STD_LOGIC; 
+                CE: in STD_LOGIC;                       
+                LOAD: in STD_LOGIC;                       
+                DIR: in STD_LOGIC;                       
+                DIN: in INTEGER range 0 to 255;   
+                COUNT: inout INTEGER range 0 to 255
+                 ); 
+end component NUMARATOR_8; 
+signal CLK, RESET, CE, LOAD, DIR: STD_LOGIC; 
+signal DIN: INTEGER range 0 to 255; 
+signal COUNT: INTEGER range 0 to 255; 
+begin  
+UST : NUMARATOR_8 port map (CLK=>CLK, RESET=>RESET,CE=>CE, LOAD=>LOAD, DIR=>DIR, DIN=>DIN, COUNT=>COUNT); 
+process (CLK) 
+  begin 
+        if CLK = 'U' then CLK <= '0'; 
+        else CLK <= not CLK after 15 ns; 
+        end if; 
+end process; 
+RESET <= '1','0' after 15 ns;           
+                                       
+DIN <= 250;                            
+STIM1: process 
+                begin 
+                 LOAD <= '0'; 
+                 wait for 5 us; 
+                 LOAD <= '1'; 
+                 wait for 100 ns; 
+                 LOAD <= '0'; 
+                 wait; 
+         end process STIM1; 
+STIM2: process 
+         begin 
+                   DIR <= '1'; 
+                   CE <= '1';   
+                   wait for 2 us; 
+                   DIR <= '0';  
+                   wait for 1 us; 
+                   CE <= '0';   
+                   DIR <= '1'; 
+                   wait for 1 us; 
+                   DIR <= '0';  
+                   wait; 
+          end process STIM2; 
+end ARH_MS_NUMARATOR_8; 

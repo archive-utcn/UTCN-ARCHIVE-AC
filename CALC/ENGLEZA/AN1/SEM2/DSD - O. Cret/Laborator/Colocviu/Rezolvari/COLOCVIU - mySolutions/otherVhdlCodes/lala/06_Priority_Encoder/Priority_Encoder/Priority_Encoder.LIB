@@ -1,0 +1,33 @@
+timestamp=1495286148657
+
+[encoder]
+A/a=A/A 21|./src/encoder.vhd|9|1*1138
+B/a=3*0
+H/a=0*4233
+R=./src/encoder.vhd|4
+V=0*5380
+
+[tb]
+A/arch=A/ARCH 21|./src/tb.vhd|9|1*2667
+B/arch=3*2053
+H/arch=0*6419
+R=./src/tb.vhd|6
+V=0*3878
+
+[~A]
+./src/encoder.vhd~AENCODER=0*4310*4771
+./src/encoder.vhd~ENCODER=0*3946*4168
+./src/tb.vhd~ARCHtb=0*8981*9586
+./src/tb.vhd~tb=0*3375*3565
+ModifyID=40
+Version=73
+
+[~MFT]
+0=51|0Priority_Encoder.mgf|9586|3375
+1=3|1Priority_Encoder.mgf|2667|1138
+3=1|3Priority_Encoder.mgf|2053|0
+
+[~U]
+encoder=11|0*4837|0*5003
+tb=11|0*3620|0*3667
+

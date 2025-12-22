@@ -1,0 +1,23 @@
+timestamp=1303165651718
+
+[test]
+A/behavioral=A/Behavioral 21|./src/segmente.vhd|14|1*1845
+B/behavioral=3*0
+H/behavioral=0*3349
+R=./src/segmente.vhd|6
+V=0*4791
+
+[~A]
+./src/segmente.vhd~Behavioraltest=0*3444*4099
+./src/segmente.vhd~test=0*2995*3286
+ModifyID=21
+Version=73
+
+[~MFT]
+0=23|0seg.mgf|4791|2995
+1=2|1seg.mgf|1845|1845
+3=0|3seg.mgf|0|0
+
+[~U]
+test=11|0*4172|0*4347
+

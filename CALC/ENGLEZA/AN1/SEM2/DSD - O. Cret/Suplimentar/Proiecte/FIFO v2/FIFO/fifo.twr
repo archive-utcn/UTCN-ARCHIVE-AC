@@ -1,0 +1,133 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf
+
+Design file:              fifo.ncd
+Physical constraint file: fifo.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+AN<0>       |         7.552(R)|      SLOW  |         3.875(R)|      FAST  |clk_BUFGP         |   0.000|
+AN<1>       |         7.585(R)|      SLOW  |         3.891(R)|      FAST  |clk_BUFGP         |   0.000|
+AN<2>       |         7.231(R)|      SLOW  |         3.666(R)|      FAST  |clk_BUFGP         |   0.000|
+AN<3>       |         7.466(R)|      SLOW  |         3.814(R)|      FAST  |clk_BUFGP         |   0.000|
+CAT<0>      |        10.146(R)|      SLOW  |         5.081(R)|      FAST  |clk_BUFGP         |   0.000|
+CAT<1>      |        10.078(R)|      SLOW  |         5.190(R)|      FAST  |clk_BUFGP         |   0.000|
+CAT<2>      |        10.257(R)|      SLOW  |         5.202(R)|      FAST  |clk_BUFGP         |   0.000|
+CAT<3>      |        10.425(R)|      SLOW  |         5.252(R)|      FAST  |clk_BUFGP         |   0.000|
+CAT<4>      |        10.229(R)|      SLOW  |         5.137(R)|      FAST  |clk_BUFGP         |   0.000|
+CAT<5>      |        10.306(R)|      SLOW  |         5.239(R)|      FAST  |clk_BUFGP         |   0.000|
+CAT<6>      |        10.401(R)|      SLOW  |         5.365(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.084|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+datain<0>      |CAT<0>         |    8.259|
+datain<0>      |CAT<1>         |    8.433|
+datain<0>      |CAT<2>         |    8.883|
+datain<0>      |CAT<3>         |    8.538|
+datain<0>      |CAT<4>         |    8.678|
+datain<0>      |CAT<5>         |    8.932|
+datain<0>      |CAT<6>         |    8.756|
+datain<1>      |CAT<0>         |    8.926|
+datain<1>      |CAT<1>         |    8.858|
+datain<1>      |CAT<2>         |    9.037|
+datain<1>      |CAT<3>         |    9.205|
+datain<1>      |CAT<4>         |    9.009|
+datain<1>      |CAT<5>         |    9.086|
+datain<1>      |CAT<6>         |    9.181|
+datain<2>      |CAT<0>         |    8.417|
+datain<2>      |CAT<1>         |    8.601|
+datain<2>      |CAT<2>         |    8.618|
+datain<2>      |CAT<3>         |    8.696|
+datain<2>      |CAT<4>         |    8.634|
+datain<2>      |CAT<5>         |    8.667|
+datain<2>      |CAT<6>         |    8.924|
+datain<3>      |CAT<0>         |    9.241|
+datain<3>      |CAT<1>         |    9.341|
+datain<3>      |CAT<2>         |    9.274|
+datain<3>      |CAT<3>         |    9.520|
+datain<3>      |CAT<4>         |    9.197|
+datain<3>      |CAT<5>         |    9.323|
+datain<3>      |CAT<6>         |    9.664|
+datain<4>      |CAT<0>         |    8.656|
+datain<4>      |CAT<1>         |    8.830|
+datain<4>      |CAT<2>         |    9.280|
+datain<4>      |CAT<3>         |    8.935|
+datain<4>      |CAT<4>         |    9.075|
+datain<4>      |CAT<5>         |    9.329|
+datain<4>      |CAT<6>         |    9.153|
+datain<5>      |CAT<0>         |    9.541|
+datain<5>      |CAT<1>         |    9.473|
+datain<5>      |CAT<2>         |    9.652|
+datain<5>      |CAT<3>         |    9.820|
+datain<5>      |CAT<4>         |    9.624|
+datain<5>      |CAT<5>         |    9.701|
+datain<5>      |CAT<6>         |    9.796|
+datain<6>      |CAT<0>         |    8.801|
+datain<6>      |CAT<1>         |    8.985|
+datain<6>      |CAT<2>         |    9.002|
+datain<6>      |CAT<3>         |    9.080|
+datain<6>      |CAT<4>         |    9.018|
+datain<6>      |CAT<5>         |    9.051|
+datain<6>      |CAT<6>         |    9.308|
+datain<7>      |CAT<0>         |    9.240|
+datain<7>      |CAT<1>         |    9.340|
+datain<7>      |CAT<2>         |    9.273|
+datain<7>      |CAT<3>         |    9.519|
+datain<7>      |CAT<4>         |    9.196|
+datain<7>      |CAT<5>         |    9.322|
+datain<7>      |CAT<6>         |    9.663|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 20 21:33:37 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 236 MB
+
+
+

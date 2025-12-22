@@ -1,0 +1,764 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf -ucf
+system.ucf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CONTROL<0>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    4.812(F)|      SLOW  |   -1.180(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    3.176(F)|      SLOW  |   -1.196(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    3.896(F)|      SLOW  |   -1.836(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    3.592(F)|      SLOW  |   -1.483(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    2.887(F)|      SLOW  |   -1.336(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    2.254(F)|      SLOW  |   -0.903(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    3.491(F)|      SLOW  |   -1.708(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    3.837(F)|      SLOW  |   -2.007(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CONTROL<1>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    5.274(F)|      SLOW  |   -1.197(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    3.922(F)|      SLOW  |   -1.797(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    4.642(F)|      SLOW  |   -2.437(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    3.627(F)|      SLOW  |   -1.500(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    2.922(F)|      SLOW  |   -1.353(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    2.289(F)|      SLOW  |   -0.920(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    3.526(F)|      SLOW  |   -1.725(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    3.872(F)|      SLOW  |   -2.024(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CONTROL<2>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    5.379(F)|      SLOW  |   -1.322(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    3.782(F)|      SLOW  |   -1.651(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    4.502(F)|      SLOW  |   -2.291(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    3.805(F)|      SLOW  |   -1.625(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    3.100(F)|      SLOW  |   -1.478(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    2.467(F)|      SLOW  |   -1.045(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    3.704(F)|      SLOW  |   -1.850(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    4.050(F)|      SLOW  |   -2.149(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CONTROL<3>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    4.526(F)|      SLOW  |   -1.352(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    3.329(F)|      SLOW  |   -1.448(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    4.049(F)|      SLOW  |   -2.088(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    4.618(F)|      SLOW  |   -2.204(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    3.019(F)|      SLOW  |   -1.508(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    2.386(F)|      SLOW  |   -1.075(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    3.623(F)|      SLOW  |   -1.880(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    3.969(F)|      SLOW  |   -2.179(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CONTROL<4>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    4.091(F)|      SLOW  |   -1.423(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    2.797(F)|      SLOW  |   -1.029(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    3.517(F)|      SLOW  |   -1.669(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    4.622(F)|      SLOW  |   -2.173(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    3.620(F)|      SLOW  |   -1.741(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    2.920(F)|      SLOW  |   -1.235(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    4.157(F)|      SLOW  |   -2.040(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    4.570(F)|      SLOW  |   -2.412(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CONTROL<5>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    4.502(F)|      SLOW  |   -1.730(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    3.305(F)|      SLOW  |   -1.386(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    4.025(F)|      SLOW  |   -2.026(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    4.829(F)|      SLOW  |   -2.305(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    3.786(F)|      SLOW  |   -1.886(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    3.308(F)|      SLOW  |   -1.530(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    4.545(F)|      SLOW  |   -2.335(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    4.736(F)|      SLOW  |   -2.557(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CONTROL<6>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    4.421(F)|      SLOW  |   -1.481(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    3.224(F)|      SLOW  |   -1.334(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    3.944(F)|      SLOW  |   -1.974(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    4.939(F)|      SLOW  |   -2.431(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    3.631(F)|      SLOW  |   -1.764(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    2.837(F)|      SLOW  |   -1.202(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    4.074(F)|      SLOW  |   -2.007(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    4.581(F)|      SLOW  |   -2.435(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CONTROL<7>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    4.615(F)|      SLOW  |   -1.590(F)|      FAST  |anim_1_enbl       |   0.000|
+            |    3.418(F)|      SLOW  |   -1.594(F)|      FAST  |anim_2_enbl       |   0.000|
+            |    4.138(F)|      SLOW  |   -2.234(F)|      FAST  |anim_3_enbl       |   0.000|
+            |    4.921(F)|      SLOW  |   -2.519(F)|      FAST  |anim_4_enbl       |   0.000|
+            |    3.500(F)|      SLOW  |   -1.746(F)|      FAST  |anim_5_enbl       |   0.000|
+            |    3.019(F)|      SLOW  |   -1.338(F)|      FAST  |anim_6_enbl       |   0.000|
+            |    4.256(F)|      SLOW  |   -2.143(F)|      FAST  |anim_7_enbl       |   0.000|
+            |    4.450(F)|      SLOW  |   -2.417(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock boardCLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    4.116(R)|      SLOW  |   -0.641(R)|      FAST  |boardCLK_BUFGP    |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CONTROL<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        13.066(F)|      SLOW  |         5.990(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.918(F)|      SLOW  |         7.518(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.343(F)|      SLOW  |         6.996(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.388(F)|      SLOW  |         6.981(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.732(F)|      SLOW  |         7.789(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.763(F)|      SLOW  |         7.396(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.057(F)|      SLOW  |         6.991(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.384(F)|      SLOW  |         7.080(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        12.746(F)|      SLOW  |         6.193(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.598(F)|      SLOW  |         7.568(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.023(F)|      SLOW  |         7.303(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.881(F)|      SLOW  |         6.973(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.412(F)|      SLOW  |         8.053(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.443(F)|      SLOW  |         7.461(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.737(F)|      SLOW  |         6.893(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.064(F)|      SLOW  |         7.113(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        12.699(F)|      SLOW  |         5.960(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.910(F)|      SLOW  |         7.163(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.921(F)|      SLOW  |         6.997(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.825(F)|      SLOW  |         6.872(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.384(F)|      SLOW  |         7.747(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.562(F)|      SLOW  |         7.456(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.467(F)|      SLOW  |         6.792(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.320(F)|      SLOW  |         6.807(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |        10.480(F)|      SLOW  |         6.137(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        11.493(F)|      SLOW  |         6.840(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        12.711(F)|      SLOW  |         5.572(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.922(F)|      SLOW  |         7.290(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.933(F)|      SLOW  |         7.065(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.837(F)|      SLOW  |         6.829(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.396(F)|      SLOW  |         7.858(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.574(F)|      SLOW  |         7.289(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.479(F)|      SLOW  |         6.749(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.332(F)|      SLOW  |         6.934(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        13.202(F)|      SLOW  |         5.682(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.054(F)|      SLOW  |         7.236(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.479(F)|      SLOW  |         6.714(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.441(F)|      SLOW  |         6.728(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.868(F)|      SLOW  |         7.507(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.899(F)|      SLOW  |         7.143(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.193(F)|      SLOW  |         6.953(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.520(F)|      SLOW  |         6.798(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.973(F)|      SLOW  |         5.918(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.184(F)|      SLOW  |         7.349(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.195(F)|      SLOW  |         7.183(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        13.099(F)|      SLOW  |         7.052(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.658(F)|      SLOW  |         7.933(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.836(F)|      SLOW  |         7.492(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.741(F)|      SLOW  |         6.972(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.594(F)|      SLOW  |         6.993(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CONTROL<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        13.026(F)|      SLOW  |         5.655(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.133(F)|      SLOW  |         6.947(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.558(F)|      SLOW  |         6.425(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.348(F)|      SLOW  |         6.967(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.692(F)|      SLOW  |         7.775(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.723(F)|      SLOW  |         7.382(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.017(F)|      SLOW  |         6.977(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.344(F)|      SLOW  |         7.066(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        12.706(F)|      SLOW  |         5.858(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        11.813(F)|      SLOW  |         6.997(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.238(F)|      SLOW  |         6.732(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.841(F)|      SLOW  |         6.959(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.372(F)|      SLOW  |         8.039(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.403(F)|      SLOW  |         7.447(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.697(F)|      SLOW  |         6.879(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.024(F)|      SLOW  |         7.099(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        12.659(F)|      SLOW  |         5.625(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.125(F)|      SLOW  |         6.592(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.136(F)|      SLOW  |         6.426(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.785(F)|      SLOW  |         6.858(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.344(F)|      SLOW  |         7.733(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.522(F)|      SLOW  |         7.442(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.427(F)|      SLOW  |         6.778(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.280(F)|      SLOW  |         6.793(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |        10.440(F)|      SLOW  |         6.123(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        11.453(F)|      SLOW  |         6.826(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        12.671(F)|      SLOW  |         5.237(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.137(F)|      SLOW  |         6.719(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.148(F)|      SLOW  |         6.494(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.797(F)|      SLOW  |         6.815(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.356(F)|      SLOW  |         7.844(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.534(F)|      SLOW  |         7.275(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.439(F)|      SLOW  |         6.735(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.292(F)|      SLOW  |         6.920(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        13.162(F)|      SLOW  |         5.347(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.269(F)|      SLOW  |         6.665(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.694(F)|      SLOW  |         6.143(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.401(F)|      SLOW  |         6.714(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.828(F)|      SLOW  |         7.493(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.859(F)|      SLOW  |         7.129(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.153(F)|      SLOW  |         6.939(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.480(F)|      SLOW  |         6.784(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.933(F)|      SLOW  |         5.583(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.399(F)|      SLOW  |         6.778(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.410(F)|      SLOW  |         6.612(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        13.059(F)|      SLOW  |         7.038(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.618(F)|      SLOW  |         7.919(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.796(F)|      SLOW  |         7.478(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.701(F)|      SLOW  |         6.958(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.554(F)|      SLOW  |         6.979(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CONTROL<2> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        12.840(F)|      SLOW  |         5.586(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.275(F)|      SLOW  |         7.089(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.700(F)|      SLOW  |         6.567(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.162(F)|      SLOW  |         6.847(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.506(F)|      SLOW  |         7.655(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.537(F)|      SLOW  |         7.262(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.831(F)|      SLOW  |         6.857(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.158(F)|      SLOW  |         6.946(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        12.520(F)|      SLOW  |         5.789(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        11.955(F)|      SLOW  |         7.139(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.380(F)|      SLOW  |         6.874(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.655(F)|      SLOW  |         6.839(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.186(F)|      SLOW  |         7.919(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.217(F)|      SLOW  |         7.327(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.511(F)|      SLOW  |         6.759(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.838(F)|      SLOW  |         6.979(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        12.473(F)|      SLOW  |         5.556(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.267(F)|      SLOW  |         6.734(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.278(F)|      SLOW  |         6.568(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.599(F)|      SLOW  |         6.738(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.158(F)|      SLOW  |         7.613(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.336(F)|      SLOW  |         7.322(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.241(F)|      SLOW  |         6.658(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.094(F)|      SLOW  |         6.673(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |        10.254(F)|      SLOW  |         6.003(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        11.267(F)|      SLOW  |         6.706(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        12.485(F)|      SLOW  |         5.168(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.279(F)|      SLOW  |         6.861(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.290(F)|      SLOW  |         6.636(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.611(F)|      SLOW  |         6.695(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.170(F)|      SLOW  |         7.724(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.348(F)|      SLOW  |         7.155(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.253(F)|      SLOW  |         6.615(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.106(F)|      SLOW  |         6.800(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        12.976(F)|      SLOW  |         5.278(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.411(F)|      SLOW  |         6.807(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.836(F)|      SLOW  |         6.285(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.215(F)|      SLOW  |         6.594(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.642(F)|      SLOW  |         7.373(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.673(F)|      SLOW  |         7.009(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.967(F)|      SLOW  |         6.819(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.294(F)|      SLOW  |         6.664(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.747(F)|      SLOW  |         5.514(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.541(F)|      SLOW  |         6.920(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.552(F)|      SLOW  |         6.754(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.873(F)|      SLOW  |         6.918(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.432(F)|      SLOW  |         7.799(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.610(F)|      SLOW  |         7.358(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.515(F)|      SLOW  |         6.838(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.368(F)|      SLOW  |         6.859(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CONTROL<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        12.927(F)|      SLOW  |         6.138(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.757(F)|      SLOW  |         7.280(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.182(F)|      SLOW  |         6.758(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.302(F)|      SLOW  |         6.299(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.593(F)|      SLOW  |         7.626(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.624(F)|      SLOW  |         7.233(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.918(F)|      SLOW  |         6.828(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.245(F)|      SLOW  |         6.917(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        12.607(F)|      SLOW  |         6.341(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.437(F)|      SLOW  |         7.330(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.862(F)|      SLOW  |         7.065(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        10.795(F)|      SLOW  |         6.291(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.273(F)|      SLOW  |         7.890(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.304(F)|      SLOW  |         7.298(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.598(F)|      SLOW  |         6.730(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.925(F)|      SLOW  |         6.950(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        12.560(F)|      SLOW  |         6.108(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.749(F)|      SLOW  |         6.925(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.760(F)|      SLOW  |         6.759(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.739(F)|      SLOW  |         6.190(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.245(F)|      SLOW  |         7.584(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.423(F)|      SLOW  |         7.293(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.328(F)|      SLOW  |         6.629(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.181(F)|      SLOW  |         6.644(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |         9.394(F)|      SLOW  |         5.455(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        11.354(F)|      SLOW  |         6.677(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        12.572(F)|      SLOW  |         5.720(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.761(F)|      SLOW  |         7.052(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.772(F)|      SLOW  |         6.827(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.751(F)|      SLOW  |         6.147(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.257(F)|      SLOW  |         7.695(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.435(F)|      SLOW  |         7.126(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.340(F)|      SLOW  |         6.586(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.193(F)|      SLOW  |         6.771(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        13.063(F)|      SLOW  |         5.830(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.893(F)|      SLOW  |         6.998(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.318(F)|      SLOW  |         6.476(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.355(F)|      SLOW  |         6.046(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.729(F)|      SLOW  |         7.344(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.760(F)|      SLOW  |         6.980(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.054(F)|      SLOW  |         6.790(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.381(F)|      SLOW  |         6.635(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.834(F)|      SLOW  |         6.066(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.023(F)|      SLOW  |         7.111(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.034(F)|      SLOW  |         6.945(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.013(F)|      SLOW  |         6.370(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.519(F)|      SLOW  |         7.770(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.697(F)|      SLOW  |         7.329(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.602(F)|      SLOW  |         6.809(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        12.455(F)|      SLOW  |         6.830(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CONTROL<4> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        12.713(F)|      SLOW  |         6.414(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.314(F)|      SLOW  |         7.681(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.739(F)|      SLOW  |         7.159(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.292(F)|      SLOW  |         6.333(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.952(F)|      SLOW  |         7.410(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.055(F)|      SLOW  |         7.085(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.349(F)|      SLOW  |         6.680(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.604(F)|      SLOW  |         6.701(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        12.393(F)|      SLOW  |         6.617(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.994(F)|      SLOW  |         7.731(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.419(F)|      SLOW  |         7.466(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        10.785(F)|      SLOW  |         6.325(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.632(F)|      SLOW  |         7.674(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.735(F)|      SLOW  |         7.150(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.029(F)|      SLOW  |         6.582(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.284(F)|      SLOW  |         6.734(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        12.346(F)|      SLOW  |         6.384(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.306(F)|      SLOW  |         7.326(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.317(F)|      SLOW  |         7.160(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.729(F)|      SLOW  |         6.224(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.604(F)|      SLOW  |         7.368(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.854(F)|      SLOW  |         7.145(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.759(F)|      SLOW  |         6.481(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.540(F)|      SLOW  |         6.428(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |         9.384(F)|      SLOW  |         5.489(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        10.785(F)|      SLOW  |         6.529(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        12.358(F)|      SLOW  |         5.996(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.318(F)|      SLOW  |         7.453(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.329(F)|      SLOW  |         7.228(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.741(F)|      SLOW  |         6.181(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.616(F)|      SLOW  |         7.479(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.866(F)|      SLOW  |         6.978(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.771(F)|      SLOW  |         6.438(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.552(F)|      SLOW  |         6.555(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        12.849(F)|      SLOW  |         6.106(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.450(F)|      SLOW  |         7.399(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.875(F)|      SLOW  |         6.877(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.345(F)|      SLOW  |         6.080(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.088(F)|      SLOW  |         7.128(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.191(F)|      SLOW  |         6.832(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.485(F)|      SLOW  |         6.642(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.740(F)|      SLOW  |         6.419(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.620(F)|      SLOW  |         6.342(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.580(F)|      SLOW  |         7.512(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.591(F)|      SLOW  |         7.346(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        12.003(F)|      SLOW  |         6.404(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.878(F)|      SLOW  |         7.554(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.128(F)|      SLOW  |         7.181(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.033(F)|      SLOW  |         6.661(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.814(F)|      SLOW  |         6.614(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CONTROL<5> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        12.177(F)|      SLOW  |         6.200(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.778(F)|      SLOW  |         7.342(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.203(F)|      SLOW  |         6.820(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.075(F)|      SLOW  |         6.205(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.779(F)|      SLOW  |         7.271(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.646(F)|      SLOW  |         6.804(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        10.940(F)|      SLOW  |         6.399(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.431(F)|      SLOW  |         6.562(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        11.857(F)|      SLOW  |         6.403(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.458(F)|      SLOW  |         7.392(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.883(F)|      SLOW  |         7.127(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        10.568(F)|      SLOW  |         6.197(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.459(F)|      SLOW  |         7.535(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.326(F)|      SLOW  |         6.869(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        10.620(F)|      SLOW  |         6.301(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.111(F)|      SLOW  |         6.595(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        11.810(F)|      SLOW  |         6.170(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.770(F)|      SLOW  |         6.987(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.781(F)|      SLOW  |         6.821(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.512(F)|      SLOW  |         6.096(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.431(F)|      SLOW  |         7.229(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.445(F)|      SLOW  |         6.864(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.350(F)|      SLOW  |         6.200(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.367(F)|      SLOW  |         6.289(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |         9.167(F)|      SLOW  |         5.361(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        10.376(F)|      SLOW  |         6.248(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        11.822(F)|      SLOW  |         5.782(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.782(F)|      SLOW  |         7.114(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.793(F)|      SLOW  |         6.889(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.524(F)|      SLOW  |         6.053(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.443(F)|      SLOW  |         7.340(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.457(F)|      SLOW  |         6.697(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.362(F)|      SLOW  |         6.157(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.379(F)|      SLOW  |         6.416(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        12.313(F)|      SLOW  |         5.892(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.914(F)|      SLOW  |         7.060(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.339(F)|      SLOW  |         6.538(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.128(F)|      SLOW  |         5.952(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.915(F)|      SLOW  |         6.989(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.782(F)|      SLOW  |         6.551(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.076(F)|      SLOW  |         6.361(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.567(F)|      SLOW  |         6.280(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.084(F)|      SLOW  |         6.128(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.044(F)|      SLOW  |         7.173(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.055(F)|      SLOW  |         7.007(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.786(F)|      SLOW  |         6.276(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.705(F)|      SLOW  |         7.415(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.719(F)|      SLOW  |         6.900(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.624(F)|      SLOW  |         6.380(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.641(F)|      SLOW  |         6.475(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CONTROL<6> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        12.448(F)|      SLOW  |         6.166(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.865(F)|      SLOW  |         7.390(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.290(F)|      SLOW  |         6.868(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        10.960(F)|      SLOW  |         6.085(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.943(F)|      SLOW  |         7.386(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.145(F)|      SLOW  |         7.113(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.439(F)|      SLOW  |         6.708(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.595(F)|      SLOW  |         6.677(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        12.128(F)|      SLOW  |         6.369(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.545(F)|      SLOW  |         7.440(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.970(F)|      SLOW  |         7.175(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        10.453(F)|      SLOW  |         6.077(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.623(F)|      SLOW  |         7.650(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.825(F)|      SLOW  |         7.178(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.119(F)|      SLOW  |         6.610(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.275(F)|      SLOW  |         6.710(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        12.081(F)|      SLOW  |         6.136(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.857(F)|      SLOW  |         7.035(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.868(F)|      SLOW  |         6.869(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.397(F)|      SLOW  |         5.976(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.595(F)|      SLOW  |         7.344(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.944(F)|      SLOW  |         7.173(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.849(F)|      SLOW  |         6.509(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.531(F)|      SLOW  |         6.404(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |         9.052(F)|      SLOW  |         5.241(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        10.875(F)|      SLOW  |         6.557(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        12.093(F)|      SLOW  |         5.748(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.869(F)|      SLOW  |         7.162(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.880(F)|      SLOW  |         6.937(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.409(F)|      SLOW  |         5.933(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.607(F)|      SLOW  |         7.455(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.956(F)|      SLOW  |         7.006(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.861(F)|      SLOW  |         6.466(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.543(F)|      SLOW  |         6.531(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        12.584(F)|      SLOW  |         5.858(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.001(F)|      SLOW  |         7.108(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.426(F)|      SLOW  |         6.586(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.013(F)|      SLOW  |         5.832(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.079(F)|      SLOW  |         7.104(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.281(F)|      SLOW  |         6.860(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.575(F)|      SLOW  |         6.670(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.731(F)|      SLOW  |         6.395(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.355(F)|      SLOW  |         6.094(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        13.131(F)|      SLOW  |         7.221(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.142(F)|      SLOW  |         7.055(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.671(F)|      SLOW  |         6.156(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.869(F)|      SLOW  |         7.530(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.218(F)|      SLOW  |         7.209(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        12.123(F)|      SLOW  |         6.689(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.805(F)|      SLOW  |         6.590(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CONTROL<7> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+DISPdata<0> |        12.393(F)|      SLOW  |         5.994(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.668(F)|      SLOW  |         7.136(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.093(F)|      SLOW  |         6.614(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        10.987(F)|      SLOW  |         5.994(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.091(F)|      SLOW  |         7.395(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.962(F)|      SLOW  |         6.976(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.256(F)|      SLOW  |         6.571(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.743(F)|      SLOW  |         6.686(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<1> |        12.073(F)|      SLOW  |         6.197(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.348(F)|      SLOW  |         7.186(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.773(F)|      SLOW  |         6.921(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        10.480(F)|      SLOW  |         5.986(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.771(F)|      SLOW  |         7.659(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.642(F)|      SLOW  |         7.041(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        10.936(F)|      SLOW  |         6.473(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.423(F)|      SLOW  |         6.719(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<2> |        12.026(F)|      SLOW  |         5.964(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.660(F)|      SLOW  |         6.781(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.671(F)|      SLOW  |         6.615(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.424(F)|      SLOW  |         5.885(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.743(F)|      SLOW  |         7.353(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.761(F)|      SLOW  |         7.036(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.666(F)|      SLOW  |         6.372(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.679(F)|      SLOW  |         6.413(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<3> |         9.079(F)|      SLOW  |         5.150(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        10.692(F)|      SLOW  |         6.420(F)|      FAST  |anim_6_enbl       |   0.000|
+DISPdata<4> |        12.038(F)|      SLOW  |         5.576(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.672(F)|      SLOW  |         6.908(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.683(F)|      SLOW  |         6.683(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.436(F)|      SLOW  |         5.842(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        12.755(F)|      SLOW  |         7.464(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        12.773(F)|      SLOW  |         6.869(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.678(F)|      SLOW  |         6.329(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.691(F)|      SLOW  |         6.540(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<5> |        12.529(F)|      SLOW  |         5.686(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.804(F)|      SLOW  |         6.854(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        12.229(F)|      SLOW  |         6.332(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.040(F)|      SLOW  |         5.741(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.227(F)|      SLOW  |         7.113(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.098(F)|      SLOW  |         6.723(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.392(F)|      SLOW  |         6.533(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.879(F)|      SLOW  |         6.404(F)|      FAST  |anim_8_enbl       |   0.000|
+DISPdata<6> |        12.300(F)|      SLOW  |         5.922(F)|      FAST  |anim_1_enbl       |   0.000|
+            |        12.934(F)|      SLOW  |         6.967(F)|      FAST  |anim_2_enbl       |   0.000|
+            |        11.945(F)|      SLOW  |         6.801(F)|      FAST  |anim_3_enbl       |   0.000|
+            |        11.698(F)|      SLOW  |         6.065(F)|      FAST  |anim_4_enbl       |   0.000|
+            |        13.017(F)|      SLOW  |         7.539(F)|      FAST  |anim_5_enbl       |   0.000|
+            |        13.035(F)|      SLOW  |         7.072(F)|      FAST  |anim_6_enbl       |   0.000|
+            |        11.940(F)|      SLOW  |         6.552(F)|      FAST  |anim_7_enbl       |   0.000|
+            |        11.953(F)|      SLOW  |         6.599(F)|      FAST  |anim_8_enbl       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CONTROL<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROL<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROL<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROL<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROL<4>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROL<5>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROL<6>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROL<7>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |         |         |    0.357|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock boardCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |    4.934|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+CONTROL<0>     |DISPdata<0>    |   11.722|
+CONTROL<0>     |DISPdata<1>    |   11.402|
+CONTROL<0>     |DISPdata<2>    |   11.825|
+CONTROL<0>     |DISPdata<3>    |    9.696|
+CONTROL<0>     |DISPdata<4>    |   11.837|
+CONTROL<0>     |DISPdata<5>    |   11.858|
+CONTROL<0>     |DISPdata<6>    |   12.099|
+CONTROL<1>     |DISPdata<0>    |   11.682|
+CONTROL<1>     |DISPdata<1>    |   11.362|
+CONTROL<1>     |DISPdata<2>    |   11.785|
+CONTROL<1>     |DISPdata<3>    |    9.656|
+CONTROL<1>     |DISPdata<4>    |   11.797|
+CONTROL<1>     |DISPdata<5>    |   11.818|
+CONTROL<1>     |DISPdata<6>    |   12.059|
+CONTROL<2>     |DISPdata<0>    |   11.496|
+CONTROL<2>     |DISPdata<1>    |   11.176|
+CONTROL<2>     |DISPdata<2>    |   11.599|
+CONTROL<2>     |DISPdata<3>    |    9.470|
+CONTROL<2>     |DISPdata<4>    |   11.611|
+CONTROL<2>     |DISPdata<5>    |   11.632|
+CONTROL<2>     |DISPdata<6>    |   11.873|
+CONTROL<3>     |DISPdata<0>    |   11.465|
+CONTROL<3>     |DISPdata<1>    |   11.145|
+CONTROL<3>     |DISPdata<2>    |   11.552|
+CONTROL<3>     |DISPdata<3>    |    8.610|
+CONTROL<3>     |DISPdata<4>    |   11.564|
+CONTROL<3>     |DISPdata<5>    |   11.601|
+CONTROL<3>     |DISPdata<6>    |   11.826|
+CONTROL<4>     |DISPdata<0>    |   11.251|
+CONTROL<4>     |DISPdata<1>    |   10.931|
+CONTROL<4>     |DISPdata<2>    |   11.040|
+CONTROL<4>     |DISPdata<3>    |    8.649|
+CONTROL<4>     |DISPdata<4>    |   11.052|
+CONTROL<4>     |DISPdata<5>    |   11.387|
+CONTROL<4>     |DISPdata<6>    |   11.314|
+CONTROL<5>     |DISPdata<0>    |   10.715|
+CONTROL<5>     |DISPdata<1>    |   10.395|
+CONTROL<5>     |DISPdata<2>    |   10.574|
+CONTROL<5>     |DISPdata<3>    |    8.383|
+CONTROL<5>     |DISPdata<4>    |   10.586|
+CONTROL<5>     |DISPdata<5>    |   10.851|
+CONTROL<5>     |DISPdata<6>    |   10.848|
+CONTROL<6>     |DISPdata<0>    |   10.986|
+CONTROL<6>     |DISPdata<1>    |   10.666|
+CONTROL<6>     |DISPdata<2>    |   11.073|
+CONTROL<6>     |DISPdata<3>    |    8.268|
+CONTROL<6>     |DISPdata<4>    |   11.085|
+CONTROL<6>     |DISPdata<5>    |   11.122|
+CONTROL<6>     |DISPdata<6>    |   11.347|
+CONTROL<7>     |DISPdata<0>    |   10.931|
+CONTROL<7>     |DISPdata<1>    |   10.611|
+CONTROL<7>     |DISPdata<2>    |   10.890|
+CONTROL<7>     |DISPdata<3>    |    8.295|
+CONTROL<7>     |DISPdata<4>    |   10.902|
+CONTROL<7>     |DISPdata<5>    |   11.067|
+CONTROL<7>     |DISPdata<6>    |   11.164|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Mar 18 10:34:32 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 222 MB
+
+
+

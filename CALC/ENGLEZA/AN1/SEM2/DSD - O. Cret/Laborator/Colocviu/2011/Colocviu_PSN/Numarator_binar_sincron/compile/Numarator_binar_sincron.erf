@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Numarator_binar_sincron\src\Count_SINC.vhd" 
+MESSAGE "Compile Entity "Counter"" 
+MESSAGE "Compile Architecture "ARH_Count" of Entity "Counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

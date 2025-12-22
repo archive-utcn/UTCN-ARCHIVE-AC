@@ -1,0 +1,1 @@
+-w -s "C:\Aldec\Active-HDL 9.1\vlib\library.cfg"  -j "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\projlib.cfg"  -d "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\compile"   -work sum_1bit  -O3 -e 100 -o -2002 "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\compile\sum_1bit.vhd"

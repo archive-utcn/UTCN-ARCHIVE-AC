@@ -1,0 +1,71 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity adder is
+  port(
+    A, B : in std_logic_vector(7 downto 0);
+    SUM : out std_logic_vector(8 downto 0));
+end adder;		
+
+architecture archi of adder is
+signal tmp: std_logic_vector(8 downto 0);		 
+  begin
+    tmp <= conv_std_logic_vector((conv_integer(A) + conv_integer(B)),9);
+    SUM <= tmp(8 downto 0);
+end archi; 	 
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity adder8 is
+  port(
+    A, B : in std_logic_vector(8 downto 0);
+    SUM : out std_logic_vector(9 downto 0));
+end adder8;		
+
+architecture archit of adder8 is
+signal tmp: std_logic_vector(9 downto 0);		 
+  begin
+    tmp <= conv_std_logic_vector((conv_integer(A) + conv_integer(B)),10);
+    SUM <= tmp(9 downto 0);
+end archit; 
+
+library ieee; 
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity sumator9 is
+	port (A,B,C,D:in std_logic_vector(7 downto 0);
+	      suma:out std_logic_vector(9 downto 0));
+end sumator9;
+
+architecture ar of sumator9 is	  
+signal media:std_logic_vector(7 downto 0);
+ component adder is
+  port(
+    A, B : in std_logic_vector(7 downto 0);
+    SUM : out std_logic_vector(8 downto 0));
+ end component;	  
+ component adder8 is
+  port(
+    A, B : in std_logic_vector(8 downto 0);
+    SUM : out std_logic_vector(9 downto 0));
+end component;		
+ signal sum1,sum2:std_logic_vector(8 downto 0);
+ signal sum3:std_logic_vector(9 downto 0);
+ begin
+ c1:adder port map(A,B,sum1);
+ c2:adder port map(C,D,sum2);	
+ c3:adder8 port map(sum1,sum2,sum3); 
+ media<=sum3(9 downto 2);
+ end ar;
+		  
+		  
+		  
+		  
+		  

@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\12_Behavioral_Comparator\library.cfg"  -j "c:\My_Designs\12_Behavioral_Comparator\Behavioral_Comparator\projlib.cfg"  -d "c:\My_Designs\12_Behavioral_Comparator\Behavioral_Comparator\compile\"  -work Behavioral_Comparator -dbg -e 100 "c:\My_Designs\12_Behavioral_Comparator\Behavioral_Comparator\src\comparator.vhd" 

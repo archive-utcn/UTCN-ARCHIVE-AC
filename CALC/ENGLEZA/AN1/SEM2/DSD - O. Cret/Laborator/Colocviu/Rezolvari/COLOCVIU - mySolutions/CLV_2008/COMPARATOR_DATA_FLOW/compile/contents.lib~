@@ -1,0 +1,7 @@
+39
+~E 1 "./src/COMPARATOR_DATA_FLOW.vhd" 4 comparator_comportamental
+~A 1 "./src/COMPARATOR_DATA_FLOW.vhd" 9 arh
+~E 1 "./src/COMPARATOR_DATA_FLOW.vhd" 31 comparator_behavioral
+~A 1 "./src/COMPARATOR_DATA_FLOW.vhd" 36 arh_comp_behavioral
+~E 1 "./src/COMPARATOR_DATA_FLOW.vhd" 6 comparator_data_flow
+~A 1 "./src/COMPARATOR_DATA_FLOW.vhd" 11 arh

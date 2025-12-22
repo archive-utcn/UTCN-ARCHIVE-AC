@@ -1,0 +1,13 @@
+//antet
+for(i=0;i<M;i++)
+  {
+ if(HT[i]!=0)
+{
+                printf(“\nInregistrãri avand codul de dispersie=%d\n”,i);
+p=HT[i];
+while(p!=0){
+afisare(p);
+p=p->urm;
+		}
+   }
+	

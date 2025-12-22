@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+Atmel_averager=Atmel_averager.adf
+[Settings]
+Active=Atmel_averager
+[Expand]
+atmel_averager=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

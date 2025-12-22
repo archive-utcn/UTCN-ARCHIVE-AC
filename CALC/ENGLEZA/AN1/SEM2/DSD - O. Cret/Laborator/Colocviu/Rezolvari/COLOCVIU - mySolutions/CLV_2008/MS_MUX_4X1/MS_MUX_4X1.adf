@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MS_MUX_4X1
+
+[Library]
+MS_MUX_4X1=.\MS_MUX_4X1.lib
+
+[$LibMap$]
+MS_MUX_4X1=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/MS_MUX_4X1.vhd=-1
+
+[Files.Data]
+.\src\MS_MUX_4X1.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\MS_MUX_4X1\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\MS_MUX_4X1\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\MS_MUX_4X1\
+Extension5=dll

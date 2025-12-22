@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1274169765 source:c:\oana\faculta\an1.sem2\sda\probleme lab\maximul functiei\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

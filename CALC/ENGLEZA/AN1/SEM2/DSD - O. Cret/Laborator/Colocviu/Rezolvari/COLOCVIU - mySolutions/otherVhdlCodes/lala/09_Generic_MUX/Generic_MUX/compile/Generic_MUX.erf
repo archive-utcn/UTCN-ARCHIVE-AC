@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\09_Generic_MUX\Generic_MUX\src\mux.vhd" 
+MESSAGE "Compile Entity "mux"" 
+MESSAGE "Entity `mux' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "A" of Entity "mux"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

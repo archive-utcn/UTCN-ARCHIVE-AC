@@ -1,0 +1,67 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#3#bitc2 01"
+$S 1 1 j
+$S 5 1 k
+$S 9 1 clk
+$S +4 1 rst
+$S +4 1 q
+$S +4 1 nq
+I 2 "e#7#booleans2 false true "
+$VARIABLE +4 2 end_sim
+$ENDTIME 200000
+$WAVES 9
+=0 T 0
+=1 D 0 1
+R 1 9 =2 D 20k 1
+$VALUES
+R 2 5 0 1
+V 1
+0
+$END
+$WAVES 1
+*0
+R 1 3 =3 D 40k 1
+$VALUES
+R 2 2 0 1
+$END
+$WAVES 17
+*0
+R 1 4 =4 D 40k 2
+$VALUES
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 5
+*0
+=5 D 80k 1
+$VALUES
+V 2
+0
+1
+$END
+$WAVES 21
+*0
+=6 D 80k 2
+R 1 2 *4
+$VALUES
+R 2 2 0 1
+$END
+$WAVES 13
+*0
+=7 D 160k 1
+$VALUES
+V 2
+0
+1
+$END
+$WAVES 25
+*0
+=8 T 200k
+$VALUES
+V 2
+false
+true
+$END
+$ENDWAVE

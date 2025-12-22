@@ -1,0 +1,1 @@
+-w -s "e:\PSN labs\banc_utcn\library.cfg"  -j "e:\PSN labs\banc_utcn\proiect\projlib.cfg"  -d "e:\PSN labs\banc_utcn\proiect\compile\"  -work proiect -dbg -e 100 "e:\PSN labs\banc_utcn\proiect\src\pwm_bcd.vhd" 

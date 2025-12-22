@@ -1,0 +1,2 @@
+$include = "D:\ACTIVE HDL\vlib\"
+numarator_LFSR = ".\numarator_LFSR\numarator_LFSR.lib" 1431450047383

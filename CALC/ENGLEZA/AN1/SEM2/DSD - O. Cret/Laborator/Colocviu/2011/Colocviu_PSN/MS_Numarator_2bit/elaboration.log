@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Thu May 25 12:44:16 2017
+
+
+----------------------------------------------------
+Entity          | Architecture   | Library        
+----------------------------------------------------
+ms_counter      | arh_ms_counter | MS_Numarator_2bit
+numarator_2bit  | arh_counter    | ms_numarator_2bit
+----------------------------------------------------
+
+---------------------------
+Package           | Library
+---------------------------
+standard          | std
+std_logic_1164    | ieee
+std_logic_arith   | ieee
+std_logic_signed  | ieee
+---------------------------

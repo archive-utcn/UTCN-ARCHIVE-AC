@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd" 
+MESSAGE "Compile Entity "RAM16x16"" 
+MESSAGE "Compile Architecture "ARH_COMP" of Entity "RAM16x16"" 
+MESSAGE "Top-level unit(s) detected:" 
+MESSAGE "Entity => RAM16x16" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

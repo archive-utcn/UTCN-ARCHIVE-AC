@@ -1,0 +1,136 @@
+acom -reorder $DSN/src/compartor_comp.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\comparator_comp\src\compartor_comp.vhd
+# Compile Entity "compp"
+# Error: COMP96_0078: compartor_comp.vhd : (7, 16): Unknown identifier "std_logic_vecotr".
+# Error: COMP96_0064: compartor_comp.vhd : (7, 16): Unknown type.
+# Compile Architecture "arh" of Entity "compp"
+# Error: COMP96_0019: compartor_comp.vhd : (13, 23): Keyword "when" expected.
+# Error: COMP96_0015: compartor_comp.vhd : (13, 23): ';' expected.
+# Error: COMP96_0019: compartor_comp.vhd : (13, 23): Keyword "end" expected.
+# Error: COMP96_0016: compartor_comp.vhd : (13, 25): Design unit declaration expected.
+# Error: COMP96_0019: compartor_comp.vhd : (16, 21): Keyword "of" expected.
+# Error: COMP96_0018: compartor_comp.vhd : (16, 21): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/compartor_comp.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\comparator_comp\src\compartor_comp.vhd
+# Compile Entity "compp"
+# Compile Architecture "arh" of Entity "compp"
+# Error: COMP96_0019: compartor_comp.vhd : (13, 23): Keyword "when" expected.
+# Error: COMP96_0015: compartor_comp.vhd : (13, 23): ';' expected.
+# Error: COMP96_0019: compartor_comp.vhd : (13, 23): Keyword "end" expected.
+# Error: COMP96_0016: compartor_comp.vhd : (13, 25): Design unit declaration expected.
+# Error: COMP96_0019: compartor_comp.vhd : (16, 21): Keyword "of" expected.
+# Error: COMP96_0018: compartor_comp.vhd : (16, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/compartor_comp.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_comp\src\compartor_comp.vhd
+# Compile Entity "compp"
+# Entity `compp' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "compp"
+# Error: COMP96_0031: compartor_comp.vhd : (15, 29): Simple expression expected.
+# Error: COMP96_0015: compartor_comp.vhd : (15, 63): ')' expected.
+# Error: COMP96_0049: compartor_comp.vhd : (15, 24): Syntax error in expression.
+# Error: COMP96_0031: compartor_comp.vhd : (15, 9): Simple expression expected.
+# Error: COMP96_0015: compartor_comp.vhd : (16, 1): ')' expected.
+# Error: COMP96_0019: compartor_comp.vhd : (16, 5): Keyword "when" expected.
+# Error: COMP96_0015: compartor_comp.vhd : (16, 5): ';' expected.
+# Error: COMP96_0019: compartor_comp.vhd : (16, 5): Keyword "end" expected.
+# Error: COMP96_0016: compartor_comp.vhd : (16, 18): Design unit declaration expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/compartor_comp.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_comp\src\compartor_comp.vhd
+# Compile Entity "compp"
+# Entity `compp' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "compp"
+# Error: COMP96_0049: compartor_comp.vhd : (15, 24): Syntax error in expression.
+# Error: COMP96_0031: compartor_comp.vhd : (15, 9): Simple expression expected.
+# Error: COMP96_0015: compartor_comp.vhd : (15, 64): ')' expected.
+# Error: COMP96_0019: compartor_comp.vhd : (16, 1): Keyword "when" expected.
+# Error: COMP96_0015: compartor_comp.vhd : (16, 1): ';' expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/compartor_comp.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_comp\src\compartor_comp.vhd
+# Compile Entity "compp"
+# Entity `compp' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "compp"
+# Error: COMP96_0078: compartor_comp.vhd : (13, 12): Unknown identifier "a1".
+# Error: COMP96_0078: compartor_comp.vhd : (13, 20): Unknown identifier "b1".
+# Error: COMP96_0078: compartor_comp.vhd : (13, 29): Unknown identifier "a1".
+# Error: COMP96_0078: compartor_comp.vhd : (13, 37): Unknown identifier "b1".
+# Error: COMP96_0078: compartor_comp.vhd : (13, 52): Unknown identifier "a0".
+# Error: COMP96_0078: compartor_comp.vhd : (13, 60): Unknown identifier "b0".
+# Error: COMP96_0133: compartor_comp.vhd : (13, 60): Cannot find object declaration.
+# Error: COMP96_0133: compartor_comp.vhd : (13, 12): Cannot find object declaration.
+# Error: COMP96_0104: compartor_comp.vhd : (13, 7): Undefined type of expression.
+# Error: COMP96_0077: compartor_comp.vhd : (13, 7): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0078: compartor_comp.vhd : (14, 9): Unknown identifier "a1".
+# Error: COMP96_0078: compartor_comp.vhd : (14, 17): Unknown identifier "b1".
+# Error: COMP96_0078: compartor_comp.vhd : (14, 27): Unknown identifier "a0".
+# Error: COMP96_0078: compartor_comp.vhd : (14, 35): Unknown identifier "b0".
+# Error: COMP96_0133: compartor_comp.vhd : (14, 35): Cannot find object declaration.
+# Error: COMP96_0133: compartor_comp.vhd : (14, 9): Cannot find object declaration.
+# Error: COMP96_0104: compartor_comp.vhd : (14, 7): Undefined type of expression.
+# Error: COMP96_0077: compartor_comp.vhd : (14, 7): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0078: compartor_comp.vhd : (15, 9): Unknown identifier "a1".
+# Error: COMP96_0078: compartor_comp.vhd : (15, 20): Unknown identifier "b1".
+# Error: COMP96_0078: compartor_comp.vhd : (15, 31): Unknown identifier "a1".
+# Error: COMP96_0078: compartor_comp.vhd : (15, 39): Unknown identifier "b1".
+# Error: COMP96_0078: compartor_comp.vhd : (15, 49): Unknown identifier "a0".
+# Error: COMP96_0078: compartor_comp.vhd : (15, 60): Unknown identifier "b0".
+# Error: COMP96_0133: compartor_comp.vhd : (15, 60): Cannot find object declaration.
+# Error: COMP96_0133: compartor_comp.vhd : (15, 9): Cannot find object declaration.
+# Error: COMP96_0104: compartor_comp.vhd : (15, 7): Undefined type of expression.
+# Error: COMP96_0077: compartor_comp.vhd : (15, 7): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Compile failure 28 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/compartor_comp.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_comp\src\compartor_comp.vhd
+# Compile Entity "compp"
+# Entity `compp' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "compp"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  compp arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2417 kB (elbread=1070 elab2=299 kernel=1048 sdf=0)
+# 1:49 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: compp (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: 2:03 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\rom\rom.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "rom" has been set as active.

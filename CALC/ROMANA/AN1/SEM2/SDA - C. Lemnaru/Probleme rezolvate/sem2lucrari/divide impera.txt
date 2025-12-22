@@ -1,0 +1,98 @@
+/*Program de sortare prin metoda divide et impera */
+#include <stdio.h>
+#include <conio.h>
+#define nmax 100
+int a[nmax]; /* vectorul de sortat */
+void afisare(int n)
+/* afisarea vectorului */
+{
+     int i;
+     printf("\n");
+     for(i=0;i<n;i++)
+         {
+          printf("%5d",a[i]);
+          if(((i+1) % 10)==0)printf("\n");
+        }
+      printf("\n");
+ }
+void comb(int inf,int med,int sup)
+{
+  int i,j,k,l;
+  int b[nmax];
+  i=inf;j=med+1;k=inf;
+  while((i<=med)&(j<=sup))
+     {
+           if(a[i]<=a[j]) {
+           b[k]=a[i];
+           i++;
+                }
+              else{
+                        b[k]=a[j];
+                        j++;
+                 }
+               k++;
+        }
+     for(l=i;l<=med;l++)
+   {
+     /* au ramas elemente in stanga */
+     b[k]=a[l];
+     k++;
+  }
+     for(l=j;l<=sup;l++)
+        {
+             /* au ramas elemente in dreapta */
+             b[k]=a[l];
+             k++;
+         }
+     /* secventa intre inf si sup este sortata */
+     for(l=inf;l<=sup;l++) a[l]=b[l];
+}
+void divide_impera(int inf,int sup)
+{
+     int med;
+     if(inf<sup) {
+           med=(inf+sup) / 2;
+           divide_impera(inf,med);
+           divide_impera(med+1,sup);
+           comb(inf,med,sup);
+               }
+ }
+ void cautare(int n,int b[10],int x, int *s,int *i)
+ {
+     int p,u,v;
+     p=1;
+     v=x;
+     u=n;
+     *s=0;
+     while ((p<=u)&&(*s==0))
+     {
+         *i=(p+u)/2;
+         if (v==b[i])
+         u=*i-1;
+         else p=*i-1;
+     }
+ }
+
+
+void main(void)
+{
+    int i,n,s,x;
+    printf("\nIntroduceti nr.elementelor n=");
+    scanf("%d",&n);
+  printf("\nIntroduceti elementele vectorului\n");
+  for(i=0;i<n;i++)
+   {
+         printf("a[%d]=",i);
+         scanf("%d",&a[i]);
+    }
+    printf("\nVECTORUL NESORTAT\n");
+    afisare(n);
+    divide_impera(0,n-1);
+     printf("\nVECTORUL SORTAT\n");
+    afisare(n);
+    printf("nodul cautat:");
+    scanf("%d",&x);
+    cautare(n,a,x,&s,&i);
+    printf("%d",s);
+    getch();
+   }

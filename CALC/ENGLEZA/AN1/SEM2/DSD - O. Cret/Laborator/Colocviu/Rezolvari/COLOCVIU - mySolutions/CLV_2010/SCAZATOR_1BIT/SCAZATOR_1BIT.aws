@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+SCAZATOR_1BIT=SCAZATOR_1BIT.adf
+[Settings]
+Active=SCAZATOR_1BIT
+[Expand]
+scazator_1bit=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

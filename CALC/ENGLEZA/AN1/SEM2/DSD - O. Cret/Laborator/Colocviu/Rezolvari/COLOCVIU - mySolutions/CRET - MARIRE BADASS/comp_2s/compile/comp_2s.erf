@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\comp_2s\src\comp_2s.vhd" 
+MESSAGE "Compile Entity "comp"" 
+MESSAGE "Entity `comp' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "comp"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

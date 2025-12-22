@@ -1,0 +1,11 @@
+49
+~E 1 "./src/NOT_GATE.vhd" 4 not_gate
+~A 1 "./src/NOT_GATE.vhd" 9 arh
+~E 1 "./src/AND_GATE.vhd" 4 and_gate
+~A 1 "./src/AND_GATE.vhd" 9 arh
+~E 1 "./src/SCAZATOR_1BIT.vhd" 4 scazator_1bit
+~A 1 "./src/SCAZATOR_1BIT.vhd" 9 arh_structurala
+~E 1 "./src/OR_GATE.vhd" 4 or_gate
+~A 1 "./src/OR_GATE.vhd" 9 arh
+~E 1 "./src/XOR_GATE.vhd" 4 xor_gate
+~A 1 "./src/XOR_GATE.vhd" 9 arh

@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Thu May 11 15:11:43 2017
+
+
+-------------------------------------------
+Entity        | Architecture | Library   
+-------------------------------------------
+ms_simulator  | arh          | full_adder_1
+full_adder_1  | arh          | full_adder_1
+half_adder    | arh          | full_adder_1
+or_gate       | arh          | full_adder_1
+-------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

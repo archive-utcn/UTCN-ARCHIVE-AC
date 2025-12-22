@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+int st[20],n,k,p;
+
+void init()
+{st[k]=0;}
+
+int succesor()
+{if (st[k]<n)
+{st[k]++;
+return 1;
+}
+else return 0;}
+
+int valid()
+{
+    int i;
+    for(i=1;i<k;i++)
+if(st[i]==st[k]) return 0;
+return 1;}
+
+int sol()
+{return (k==p);}
+
+void tipar()
+{
+    int i;
+    for(i=1;i<=p;i++) printf("%d",st[i]);
+printf("\n");
+}
+
+void bkt()
+{int as;k=1;
+init();
+while(k>0)
+{
+do {} while ((as=succesor()) && !valid());
+if (as)
+if (sol()) tipar();
+else {k++;init();}
+else k--;
+}
+}
+
+int main()
+{
+    int n,p;
+    printf("Dati n= "); scanf("%d",&n);
+printf("\n");
+printf("Dati p= "); scanf("%d",&p);
+bkt();
+return 0;
+}

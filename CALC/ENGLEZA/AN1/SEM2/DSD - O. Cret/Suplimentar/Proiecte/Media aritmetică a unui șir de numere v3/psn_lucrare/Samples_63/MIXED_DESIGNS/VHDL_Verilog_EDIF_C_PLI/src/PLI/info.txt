@@ -1,0 +1,10 @@
+PLI Wizard directory
+   C:\My_Designs\Samples_61\mixed_VHDL_Verilog_EDIF\src\PLI
+
+Generated files: 
+   runpli.do 
+   run_pli.bat 
+   build_pli.mak
+   pli.set
+   veriuser_aldec.c
+   oscil_c_pli.c

@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+signals_variables=.\signals_variables\signals_variables.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+signals_variables=1

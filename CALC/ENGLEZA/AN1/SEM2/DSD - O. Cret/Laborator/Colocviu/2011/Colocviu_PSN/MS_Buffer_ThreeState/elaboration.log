@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.375 Sun May 15 11:37:49 2011
+
+
+-----------------------------------------------------
+Entity         | Architecture  | Library           
+-----------------------------------------------------
+ms_buffer      | arh_ms_buffer | MS_Buffer_ThreeState
+buffer_3state  | arh_buff      | ms_buffer_threestate
+-----------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+textio          | std
+std_logic_1164  | ieee
+-------------------------

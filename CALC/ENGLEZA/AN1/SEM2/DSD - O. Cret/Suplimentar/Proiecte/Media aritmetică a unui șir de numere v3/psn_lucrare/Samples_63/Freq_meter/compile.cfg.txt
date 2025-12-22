@@ -1,0 +1,77 @@
+[View]
+entity=
+architecture=
+TopLevelType=
+[file:.\src\Readme.txt]
+File Time Hi=29603067
+File Time Lo=164145650
+Enabled=1
+[file:.\src\CNT1.vhd]
+File Time Hi=29603067
+File Time Lo=161489536
+[file:.\src\TestBench\golden.vec]
+File Time Hi=29603067
+File Time Lo=164926860
+Enabled=1
+[file:.\src\TestBench\stimulus.vec]
+File Time Hi=29603067
+File Time Lo=166958006
+Enabled=1
+[file:.\src\TestBench\runme.do]
+File Time Hi=29603067
+File Time Lo=165864312
+Enabled=1
+[file:.\src\TestBench\TestBenchPack.vhd]
+File Time Hi=29603067
+File Time Lo=167739216
+STATE=Compiled
+Enabled=1
+[file:.\src\and2.vhd]
+File Time Hi=29603067
+File Time Lo=161333294
+STATE=Compiled
+Enabled=1
+[file:.\src\cnt_4b.vhd]
+File Time Hi=29603067
+File Time Lo=161645778
+STATE=Compiled
+Enabled=1
+[file:.\src\hex2led.vhd]
+File Time Hi=29603067
+File Time Lo=163989408
+STATE=Compiled
+Enabled=1
+[file:.\src\TestBench\testbench.vhd]
+File Time Hi=29603067
+File Time Lo=167270490
+STATE=Compiled
+Enabled=1
+[file:.\src\testbench_cnt_bcd_conf.vhd]
+File Time Hi=29603067
+File Time Lo=164458134
+State=Compiled
+Enabled=1
+[file:.\src\CONTROL.asf]
+File Time Hi=29603067
+File Time Lo=162895714
+STATE=Compiled
+Enabled=1
+[file:.\src\CNT_BCD.bde]
+File Time Hi=29603067
+File Time Lo=-405543640
+STATE=Compiled
+Enabled=1
+[file:.\src\CNT_BCD2.bde]
+Syntax 87=1
+Skip Entity=1
+Netlist=1
+File Time Hi=29603067
+File Time Lo=-352577602
+STATE=Compiled
+Enabled=1
+LIB=
+[file:.\src\freq_top.bde]
+File Time Hi=29603067
+File Time Lo=-289455834
+STATE=Compiled
+Enabled=1

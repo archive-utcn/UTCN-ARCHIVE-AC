@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+Xilinx_Fibonacci=Xilinx_Fibonacci.adf
+[Settings]
+Active=Xilinx_Fibonacci
+[Browser]
+sort=order
+mode=none
+[Expand]
+xilinx_fibonacci=1
+[Order]
+order=1
+macro=

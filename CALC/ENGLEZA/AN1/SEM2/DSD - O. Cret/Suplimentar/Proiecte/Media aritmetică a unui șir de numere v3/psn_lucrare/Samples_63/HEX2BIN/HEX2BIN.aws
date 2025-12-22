@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+hex2bin=hex2bin.adf
+[Settings]
+Active=hex2bin
+[Browser]
+sort=order
+mode=none
+[Expand]
+hex2bin=1
+[Order]
+order=1
+macro=

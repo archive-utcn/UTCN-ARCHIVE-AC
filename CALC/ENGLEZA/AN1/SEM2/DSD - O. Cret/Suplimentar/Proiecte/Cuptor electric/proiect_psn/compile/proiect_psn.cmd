@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\proiect_psn\library.cfg"  -j "c:\My_Designs\proiect_psn\proiect_psn\projlib.cfg"  -d "c:\My_Designs\proiect_psn\proiect_psn\compile\"  -work proiect_psn -dbg -e 100 "c:\My_Designs\proiect_psn\proiect_psn\compile\proiect.vhd" 

@@ -1,0 +1,10 @@
+.\src\hex2led.vhd
+.\src\CONTROL.asf
+.\src\and2.vhd
+.\src\cnt_4b.vhd
+.\src\CNT_BCD.bde
+.\src\CNT_BCD2.bde
+.\src\freq_top.bde
+.\src\testbench_cnt_bcd_conf.vhd
+.\src\TestBench\TestBenchPack.vhd
+.\src\TestBench\testbench.vhd

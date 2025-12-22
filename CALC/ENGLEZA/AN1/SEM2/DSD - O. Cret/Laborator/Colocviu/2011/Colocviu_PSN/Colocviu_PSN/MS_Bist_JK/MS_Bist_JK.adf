@@ -1,0 +1,53 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MS_Bist_JK
+
+[Library]
+MS_Bist_JK=.\MS_Bist_JK.LIB
+
+[$LibMap$]
+MS_Bist_JK=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\MS_Bist_JK\
+Extension3=mak
+Name4=Memory
+Directory4=c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\MS_Bist_JK\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\MS_Bist_JK\
+Extension5=dll
+Name6=PDF
+Directory6=c:\My_Designs\Colocviu_PSN\MS_Bist_JK\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\My_Designs\Colocviu_PSN\MS_Bist_JK\
+Extension7=
+
+[Files]
+/MS_JK.vhd=-1
+
+[Files.Data]
+.\src\MS_JK.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=ms_jk|arh_ms_jk|0 
+ShowHide=ShowTopLevel
+Selected=

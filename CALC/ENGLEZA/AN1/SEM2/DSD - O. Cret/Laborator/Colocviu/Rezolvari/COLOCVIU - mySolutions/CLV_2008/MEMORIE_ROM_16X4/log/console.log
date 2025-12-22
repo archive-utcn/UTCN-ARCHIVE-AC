@@ -1,0 +1,10 @@
+acom -reorder $DSN/src/MEMORIE_ROM_16X4.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CLV_2008\MEMORIE_ROM_16X4\src\MEMORIE_ROM_16X4.vhd
+# Compile Entity "MEMORIE_ROM_16X4"
+# Compile Architecture "arh" of Entity "MEMORIE_ROM_16X4"
+# Top-Level unit detected
+# Entity  =>   MEMORIE_ROM_16X4
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

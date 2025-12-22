@@ -1,0 +1,178 @@
+acom -reorder $DSN/src/alu_8.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0015: alu_8.vhd : (22, 6): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (22, 6): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (22, 7): Keyword "case" expected.
+# Error: COMP96_0015: alu_8.vhd : (23, 9): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (23, 9): Keyword "end" expected.
+# Error: COMP96_0047: alu_8.vhd : (24, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (25, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (26, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (27, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0015: alu_8.vhd : (28, 7): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (28, 7): Keyword "end" expected.
+# Error: COMP96_0016: alu_8.vhd : (28, 9): Design unit declaration expected.
+# Error: COMP96_0019: alu_8.vhd : (62, 22): Keyword "of" expected.
+# Error: COMP96_0018: alu_8.vhd : (62, 22): Identifier expected.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/alu_8.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0015: alu_8.vhd : (22, 6): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (22, 6): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (22, 7): Keyword "case" expected.
+# Error: COMP96_0015: alu_8.vhd : (23, 9): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (23, 9): Keyword "end" expected.
+# Error: COMP96_0517: alu_8.vhd : (24, 10): Unknown syntax error.
+# Error: COMP96_0047: alu_8.vhd : (25, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (26, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (27, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0015: alu_8.vhd : (28, 7): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (28, 7): Keyword "end" expected.
+# Error: COMP96_0016: alu_8.vhd : (28, 9): Design unit declaration expected.
+# Error: COMP96_0019: alu_8.vhd : (62, 22): Keyword "of" expected.
+# Error: COMP96_0018: alu_8.vhd : (62, 22): Identifier expected.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/alu_8.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0015: alu_8.vhd : (23, 9): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (23, 9): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (23, 10): Keyword "case" expected.
+# Error: COMP96_0046: alu_8.vhd : (24, 10): Sequential statement expected.
+# Error: COMP96_0015: alu_8.vhd : (28, 7): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (28, 7): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (32, 4): Keyword "end" expected.
+# Error: COMP96_0016: alu_8.vhd : (32, 9): Design unit declaration expected.
+# Error: COMP96_0019: alu_8.vhd : (62, 22): Keyword "of" expected.
+# Error: COMP96_0018: alu_8.vhd : (62, 22): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/alu_8.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0015: alu_8.vhd : (28, 7): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (28, 7): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (28, 9): Keyword "case" expected.
+# Error: COMP96_0019: alu_8.vhd : (32, 4): Keyword "end" expected.
+# Error: COMP96_0015: alu_8.vhd : (34, 9): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (34, 9): Keyword "end" expected.
+# Error: COMP96_0016: alu_8.vhd : (34, 10): Design unit declaration expected.
+# Error: COMP96_0019: alu_8.vhd : (62, 22): Keyword "of" expected.
+# Error: COMP96_0018: alu_8.vhd : (62, 22): Identifier expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/alu_8.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0015: alu_8.vhd : (33, 6): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (33, 6): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (33, 7): Keyword "case" expected.
+# Error: COMP96_0015: alu_8.vhd : (34, 9): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (34, 9): Keyword "end" expected.
+# Error: COMP96_0047: alu_8.vhd : (35, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (36, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (37, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0047: alu_8.vhd : (38, 5): Concurrent statement or ':' expected.
+# Error: COMP96_0015: alu_8.vhd : (39, 7): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (39, 7): Keyword "end" expected.
+# Error: COMP96_0016: alu_8.vhd : (39, 9): Design unit declaration expected.
+# Error: COMP96_0019: alu_8.vhd : (62, 22): Keyword "of" expected.
+# Error: COMP96_0018: alu_8.vhd : (62, 22): Identifier expected.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/alu_8.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0015: alu_8.vhd : (39, 7): ';' expected.
+# Error: COMP96_0019: alu_8.vhd : (39, 7): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (39, 9): Keyword "case" expected.
+# Error: COMP96_0019: alu_8.vhd : (43, 4): Keyword "end" expected.
+# Error: COMP96_0019: alu_8.vhd : (47, 4): Keyword "end" expected.
+# Error: COMP96_0016: alu_8.vhd : (47, 9): Design unit declaration expected.
+# Error: COMP96_0019: alu_8.vhd : (62, 22): Keyword "of" expected.
+# Error: COMP96_0018: alu_8.vhd : (62, 22): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/alu_8.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0367: alu_8.vhd : (26, 22): Improper array length. Actual length is 9. Expected length is 8.
+# Error: COMP96_0367: alu_8.vhd : (37, 22): Improper array length. Actual length is 9. Expected length is 8.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/alu_8.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu_8\src\alu_8.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  alu arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2423 kB (elbread=1070 elab2=304 kernel=1049 sdf=0)
+# 3:23 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: alu (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: 3:29 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\d_ff\d_ff.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "d_ff" has been set as active.

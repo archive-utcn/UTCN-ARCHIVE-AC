@@ -1,0 +1,5 @@
+116
+~E 1 "./src/modul_simulare_d_ff.vhd" 6 d_ff
+~A 1 "./src/modul_simulare_d_ff.vhd" 11 arh
+~E 1 "./src/modul_simulare_d_ff.vhd" 30 ms_d_ff
+~A 1 "./src/modul_simulare_d_ff.vhd" 33 arh

@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2011\DETECT_SEQ_1100\src\DETECT_SEQ_1100.vhd" 
+MESSAGE "Compile Entity "detect"" 
+MESSAGE "Entity `detect' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "detect"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

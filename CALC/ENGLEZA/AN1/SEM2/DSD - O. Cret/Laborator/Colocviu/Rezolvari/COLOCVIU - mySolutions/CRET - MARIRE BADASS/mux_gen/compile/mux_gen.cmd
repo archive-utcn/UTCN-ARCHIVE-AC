@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\mux_gen\projlib.cfg"  -d "D:\designshdl\CRET\mux_gen\compile\"  -work mux_gen -dbg -e 100 "D:\designshdl\CRET\mux_gen\src\mux_gen.vhd" 

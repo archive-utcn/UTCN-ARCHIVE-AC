@@ -1,0 +1,11 @@
+292
+~E 1 "./src/COMPARATOR_STRUCTURAL.vhd" 61 comparator_structural
+~A 1 "./src/COMPARATOR_STRUCTURAL.vhd" 75 arh
+~E 1 "./src/COMPARATOR_STRUCTURAL.vhd" 22 and_gate
+~A 1 "./src/COMPARATOR_STRUCTURAL.vhd" 27 arh
+~E 1 "./src/COMPARATOR_STRUCTURAL.vhd" 39 or_gate
+~A 1 "./src/COMPARATOR_STRUCTURAL.vhd" 44 arh
+~E 1 "./src/COMPARATOR_STRUCTURAL.vhd" 5 not_gate
+~A 1 "./src/COMPARATOR_STRUCTURAL.vhd" 10 arh
+~E 1 "./src/COMPARATOR_STRUCTURAL.vhd" 56 xor_gate
+~A 1 "./src/COMPARATOR_STRUCTURAL.vhd" 61 arh

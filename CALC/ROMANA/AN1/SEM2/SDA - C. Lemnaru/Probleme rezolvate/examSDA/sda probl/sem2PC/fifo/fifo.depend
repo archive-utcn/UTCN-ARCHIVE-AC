@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305417856 source:d:\facultate\sda\fifo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

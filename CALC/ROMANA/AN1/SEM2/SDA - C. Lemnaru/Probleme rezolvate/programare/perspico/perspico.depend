@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1305793194 source:c:\users\anca\desktop\perspico\main.c
+	<stdio.h>
+	<stdlib.h>
+

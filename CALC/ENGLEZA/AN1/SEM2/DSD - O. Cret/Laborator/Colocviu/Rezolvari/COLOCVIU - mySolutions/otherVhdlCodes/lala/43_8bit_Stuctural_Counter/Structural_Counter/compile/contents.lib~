@@ -1,0 +1,5 @@
+156
+~E 1 "./src/counter_2.vhd" 5 counter_2
+~A 1 "./src/counter_2.vhd" 11 a
+~E 1 "./src/counter_8.vhd" 4 counter_8
+~A 1 "./src/counter_8.vhd" 10 a

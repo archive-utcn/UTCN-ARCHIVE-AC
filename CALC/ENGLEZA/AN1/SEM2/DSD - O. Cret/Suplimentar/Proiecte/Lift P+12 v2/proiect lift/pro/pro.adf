@@ -1,0 +1,68 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=pro
+
+[Library]
+pro=.\pro.lib
+
+[$LibMap$]
+pro=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/lift.vhd=-1
+/RAM.vhd=-1
+/poarta_si.vhd=-1
+/numarator1.vhd=-1
+/numarator 2.vhd=-1
+/unit_decizie.vhd=-1
+/poarta_nu.vhd=-1
+/numarator3.vhd=-1
+/numarator4.vhd=-1
+/divizor.vhd=-1
+/registru_depl.vhd=-1
+/mux16_1.vhd=-1
+/decod.vhd=-1
+/AFISOR.vhd=-1
+/Waveform Editor 15.awf=-1
+
+[Files.Data]
+.\src\lift.vhd=VHDL Source Code
+.\src\RAM.vhd=VHDL Source Code
+.\src\poarta_si.vhd=VHDL Source Code
+.\src\numarator1.vhd=VHDL Source Code
+.\src\numarator 2.vhd=VHDL Source Code
+.\src\unit_decizie.vhd=VHDL Source Code
+.\src\poarta_nu.vhd=VHDL Source Code
+.\src\numarator3.vhd=VHDL Source Code
+.\src\numarator4.vhd=VHDL Source Code
+.\src\divizor.vhd=VHDL Source Code
+.\src\registru_depl.vhd=VHDL Source Code
+.\src\mux16_1.vhd=VHDL Source Code
+.\src\decod.vhd=VHDL Source Code
+.\src\AFISOR.vhd=VHDL Source Code
+.\src\Waveform Editor 15.awf=Waveform File
+

@@ -1,0 +1,12 @@
+[~A]
+./biquad.v=0*0*1612
+./multa.v=0*2055*2332
+./multb.v=0*2774*3052
+ModifyID=20
+Version=73
+
+[~MFT]
+0=0|0biquad_iir.mgf|3052|0
+
+[~U]
+

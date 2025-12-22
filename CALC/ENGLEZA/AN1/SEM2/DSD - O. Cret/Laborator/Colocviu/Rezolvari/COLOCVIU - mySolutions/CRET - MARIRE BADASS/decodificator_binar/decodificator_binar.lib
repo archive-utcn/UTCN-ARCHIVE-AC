@@ -1,0 +1,13 @@
+timestamp=1498478419508
+
+[~A]
+./src/decodificator_binar.vhd~arhdec=0*0*892
+./src/decodificator_binar.vhd~dec=0*968*1200
+ModifyID=15
+Version=73
+
+[~MFT]
+0=0|0decodificator_binar.mgf|1200|0
+
+[~U]
+

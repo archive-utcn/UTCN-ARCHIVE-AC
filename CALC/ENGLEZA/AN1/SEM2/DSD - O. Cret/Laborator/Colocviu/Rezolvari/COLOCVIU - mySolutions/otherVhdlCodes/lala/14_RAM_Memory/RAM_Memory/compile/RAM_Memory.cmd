@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\14_RAM_Memory\library.cfg"  -j "c:\My_Designs\14_RAM_Memory\RAM_Memory\projlib.cfg"  -d "c:\My_Designs\14_RAM_Memory\RAM_Memory\compile\"  -work RAM_Memory -dbg -e 100 "c:\My_Designs\14_RAM_Memory\RAM_Memory\src\ram.vhd" 

@@ -1,0 +1,10 @@
+EN frequencydivider NULL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd" sub00/vhpl00 1336579206
+AR frequencydivider flash "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd" sub00/vhpl01 1336579207
+EN datagenerator NULL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" sub00/vhpl02 1336579208
+AR shiftregister sregister "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Register.vhd" sub00/vhpl07 1336579213
+AR filter attempting1 "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" sub00/vhpl09 1336579215
+AR anoddevider flash "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Anod.vhd" sub00/vhpl05 1336579211
+EN filter NULL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" sub00/vhpl08 1336579214
+EN anoddevider NULL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Anod.vhd" sub00/vhpl04 1336579210
+EN shiftregister NULL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Register.vhd" sub00/vhpl06 1336579212
+AR datagenerator attempting2 "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" sub00/vhpl03 1336579209

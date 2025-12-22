@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+behavioral_gates=.\Behavioral_Gates\Behavioral_Gates.adf
+[Browser]
+sort=order
+mode=asc
+[Order]
+order=1
+macro=
+[Expand]
+behavioral_gates=1

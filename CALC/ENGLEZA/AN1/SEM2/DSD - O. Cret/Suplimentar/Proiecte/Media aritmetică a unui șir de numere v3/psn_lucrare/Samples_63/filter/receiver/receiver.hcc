@@ -1,0 +1,146 @@
+/****************************************************************
+*                                                               *
+* Copyright (C) 1991-2003 Celoxica Ltd. All rights reserved.    *
+*                                                               *
+*****************************************************************
+*                                                               *
+* Project   :   DK                                              *
+* Date      :   19 DEC 2001                                     *
+* File      :   receiver.hcc                                    *
+* Author    :   Johan Ditmar (JD)                               *
+* Contributors:                                                 *
+*                                                               *
+* Description:                                                  *
+*     Receiver/filter example program.                          *
+*                                                               *
+* Date         Version  Author  Reason for change               *
+*                                                               *
+* 19 DEC 2001  1.00     JD      Created                         *
+* 25 FEB 2004  1.10     MD      Adapted for Active-HDL co-sim   *
+*                                                               *
+****************************************************************/
+
+unsigned 8 Bytes_out;
+unsigned 1 DataReady;
+int 36 P;
+
+#ifdef SIMULATE
+
+  set clock = external;
+
+  interface receiver (unsigned 1 clk, unsigned 1 rst, unsigned 1 Ack, unsigned 1 DataIn, unsigned 4 Vol)
+    receiver_inst (unsigned 8 DataOut = (unsigned)((P)<-12)\\4,unsigned 1 Rdy = DataReady)
+      with {extlib = "AldecHandelC.dll", extinst = "modelname=receiver_top; clock=clk"};
+
+  #define ResetPort receiver_inst
+  #define ClockPort receiver_inst
+  #define ReadData receiver_inst
+  #define Volume receiver_inst
+  #define WriteData receiver_inst
+  #define WriteData receiver_inst
+  #define ReadAck receiver_inst
+
+#else
+
+  interface port_in(unsigned 1 rst) ResetPort();
+  interface port_in(unsigned 1 clk) ClockPort();
+  interface port_in(unsigned 1 DataIn) ReadData();
+  interface port_in(unsigned 4 Vol) Volume() with {std_logic_vector = 1};
+
+  interface port_out() WriteData(unsigned 8 DataOut = (unsigned)(P<-12)\\4) with {std_logic_vector = 1};
+
+  /*
+   * Ports for handshaking
+   */
+  interface port_out() WriteRdy(unsigned 1 Rdy = DataReady);
+  interface port_in(unsigned 1 Ack) ReadAck();
+
+
+  set reset = internal ResetPort.rst;
+  set clock = internal ClockPort.clk;
+
+#endif
+
+/*
+ * Dual-ported memory for implementing the output FIFO.
+ */
+mpram BufferType
+{
+     wom <unsigned 8> Write[16];      // Write only port
+     rom <unsigned 8> Read[16];       // Read only port
+};
+
+mpram BufferType Fifo;
+
+void main(void)
+{
+	static unsigned 3 BitIndex = 6;
+	static unsigned 4 RdPtr = 0;
+	static unsigned 4 WrPtr = 0;
+	unsigned 8 Data;
+	unsigned 1 Error;
+
+	while(1)
+	{
+		par {
+			P = (int)(0 @ Volume.Vol) * (int)(0 @ Bytes_out);
+			Data = ReadData.DataIn @ (Data \\ 1);
+
+			BitIndex++;
+
+			if (BitIndex==7)
+			{
+				/*
+				 * We have received an 8-bits frame, store it in the FIFO.
+				 */
+				if (WrPtr+1 == RdPtr)
+				{
+					/*
+					 * The FIFO is full, generate an error
+					 */
+					Error = 1;
+				}
+				else
+				{
+					par {
+						Fifo.Write[WrPtr] = Data;
+						WrPtr++;
+					}
+				}
+			}
+			else
+			{
+				Error = 0;
+			}
+
+			if(WrPtr == RdPtr)
+			{
+				/*
+				 * The FIFO is empty, do nothing.
+				 */
+				DataReady = 0;
+			}
+			else if ( DataReady == 0 )
+			{
+				par {
+					Bytes_out = Fifo.Read[RdPtr];
+					DataReady = 1;
+				}
+			}
+			else
+			{
+				if ( ReadAck.Ack == 1 )
+				{
+					par{
+						RdPtr++;
+						DataReady = 0;
+					}
+				}
+				else
+				{
+				   	delay;
+				}
+			}
+		}
+	}
+}

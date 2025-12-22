@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\ram\src\ram.vhd" 
+MESSAGE "Compile Entity "ram"" 
+MESSAGE "Entity `ram' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "ram"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

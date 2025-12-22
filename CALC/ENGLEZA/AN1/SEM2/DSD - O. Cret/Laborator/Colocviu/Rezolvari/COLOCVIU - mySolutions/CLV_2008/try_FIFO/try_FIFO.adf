@@ -1,0 +1,49 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=try_FIFO
+
+[Library]
+try_FIFO=.\try_FIFO.lib
+
+[$LibMap$]
+try_FIFO=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/try_FIFO.vhd=-1
+
+[Files.Data]
+.\src\try_FIFO.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=fifo|arh|0 
+ShowHide=ShowTopLevel
+Selected=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\try_FIFO\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\try_FIFO\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\try_FIFO\
+Extension5=dll

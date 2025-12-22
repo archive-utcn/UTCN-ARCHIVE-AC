@@ -1,0 +1,60 @@
+$WAVE4
+$RESOLUTION 1000
+I 1 "e#10#std_ulogicc9 UX01ZWLH-"
+$IN 1 1 Clock
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$IN 3 2 Reset
+$IN +9 1 START
+I 3 "a#21#new_type_name(0 to 7)1 rict0 7 e#9#std_logicc9 UX01ZWLH-"
+$BUS VBUS 53 3 8 Setare_temp
+$IN 11 2 ST7 53 0
+$IN 10 2 ST6 53 1
+$IN 9 2 ST5 53 2
+$IN 8 2 ST4 53 3
+$IN 7 2 ST3 53 4
+$IN 6 2 ST2 53 5
+$IN 5 2 ST1 53 6
+$IN 4 2 ST0 53 7
+$BUS VBUS 55 3 8 Temp_preincalzire
+$INOUT 31 2 TPI7 55 0
+$INOUT 30 2 TPI6 55 1
+$INOUT 29 2 TPI5 55 2
+$INOUT 28 2 TPI4 55 3
+$INOUT 27 2 TPI3 55 4
+$INOUT 26 2 TPI2 55 5
+$INOUT 25 2 TPI1 55 6
+$INOUT 24 2 TPI0 55 7
+$OUT 13 1 Preincalzire
+$INOUT +9 1 Puteti_introd_alimente
+$IN 2 1 INTRODUCERE_ALIMENTE
+I 4 "a#21#new_type_name(0 to 4)1 rict0 4 e#9#std_logicc9 UX01ZWLH-"
+$BUS VBUS 54 4 5 Coacere
+$INOUT 19 2 C4 54 0
+$INOUT 18 2 C3 54 1
+$INOUT 17 2 C2 54 2
+$INOUT 16 2 C1 54 3
+$INOUT 15 2 C0 54 4
+$INOUT +5 1 Coacere
+$OUT 14 1 STINS_2
+I 5 "a#21#new_type_name(0 to 2)1 rict0 2 e#9#std_logicc9 UX01ZWLH-"
+$BUS VBUS 56 5 3 Siguranta
+$INOUT 34 2 sig2 56 0
+$INOUT 33 2 sig1 56 1
+$INOUT 32 2 sig0 56 2
+$INOUT 23 1 STINS_1
+P 0 1-20 +2-34 53-+3 CS "0"
+P 0 53-+3 Radix "10"
+P 0 53-+3 Shape "2"
+P 0 1 Stimulator "CLK:FRM:Override:100.000000;2;1;0;50;0:Clock:1:"
+P 0 4 Stimulator "KEY:KEY:Override:188/0,1:,:1:"
+P 0 7 Stimulator "KEY:KEY:Override:66/0,1:B:1:"
+P 0 9 Stimulator "KEY:KEY:Override:67/0,1:C:1:"
+P 0 2 Stimulator "KEY:KEY:Override:73/0,1:I:1:"
+P 0 5 Stimulator "KEY:KEY:Override:77/0,1:M:1:"
+P 0 6 Stimulator "KEY:KEY:Override:78/0,1:N:1:"
+P 0 3 Stimulator "KEY:KEY:Override:82/0,1:R:1:"
+P 0 +9 Stimulator "KEY:KEY:Override:83/0,1:S:1:"
+P 0 8 Stimulator "KEY:KEY:Override:86/0,1:V:1:"
+P 0 +2 Stimulator "KEY:KEY:Override:88/0,1:X:1:"
+P 0 +1 Stimulator "KEY:KEY:Override:90/0,1:Z:1:"
+$ENDWAVE

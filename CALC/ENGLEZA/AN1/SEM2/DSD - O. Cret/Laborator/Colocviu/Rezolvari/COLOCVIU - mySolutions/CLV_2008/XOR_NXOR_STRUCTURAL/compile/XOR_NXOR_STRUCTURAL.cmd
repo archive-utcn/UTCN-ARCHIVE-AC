@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\XOR_NXOR_STRUCTURAL\projlib.cfg"  -d "d:\designshdl\CLV_2008\XOR_NXOR_STRUCTURAL\compile\"  -work XOR_NXOR_STRUCTURAL -dbg -e 100 "d:\designshdl\CLV_2008\XOR_NXOR_STRUCTURAL\src\XOR_NXOR_STRUCTURAL.vhd" 

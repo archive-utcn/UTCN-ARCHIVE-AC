@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\NUMARATOR_MODULO\projlib.cfg"  -d "D:\designshdl\CLV_2008\NUMARATOR_MODULO\compile\"  -work NUMARATOR_MODULO -dbg -e 100 "D:\designshdl\CLV_2008\NUMARATOR_MODULO\src\NUMARATOR_MODULO.vhd" 

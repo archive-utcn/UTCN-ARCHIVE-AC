@@ -1,0 +1,40 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\Functional.do]
+File Time Hi=29604235
+File Time Lo=915241533
+[file:.\src\Readme.txt]
+File Time Hi=29604235
+File Time Lo=915710256
+[file:.\src\FREQUENCY_METER_TB.v]
+File Time Hi=29604235
+File Time Lo=915085292
+STATE=Compiled
+Enabled=1
+[file:.\src\CNT_10B.bde]
+File Time Hi=29604235
+File Time Lo=913522882
+STATE=Compiled
+Enabled=1
+[file:.\src\CONTROL.asf]
+File Time Hi=29604235
+File Time Lo=913991605
+STATE=Compiled
+Enabled=1
+[file:.\src\freq_m.bde]
+File Time Hi=29604235
+File Time Lo=914772810
+STATE=Compiled
+Enabled=1
+[file:.\src\Hex2led.v]
+File Time Hi=29604235
+File Time Lo=915397774
+STATE=Compiled
+Enabled=1
+[file:.\src\Bin2bcd.v]
+File Time Hi=29604235
+File Time Lo=913210400
+STATE=Compiled
+Enabled=1

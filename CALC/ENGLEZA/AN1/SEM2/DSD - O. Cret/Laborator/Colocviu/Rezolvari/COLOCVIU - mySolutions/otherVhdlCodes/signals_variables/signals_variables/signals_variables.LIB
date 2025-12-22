@@ -1,0 +1,27 @@
+timestamp=1493563886601
+
+[e1]
+A/arh1=A/ARH1 21|./src/signals_varialbes.vhd|8|1*0
+A/arh2=A/ARH2 21|./src/signals_varialbes.vhd|19|1*787
+B/arh1=3*0
+B/arh2=3*951
+H/arh1=0*262
+H/arh2=0*1229
+R=./src/signals_varialbes.vhd|4
+V=0*943
+
+[~A]
+./src/signals_varialbes.vhd~ARH1E1=0*345*559
+./src/signals_varialbes.vhd~ARH2E1=0*1312*1573
+./src/signals_varialbes.vhd~E1=0*0*192
+ModifyID=11
+Version=73
+
+[~MFT]
+0=10|0signals_variables.mgf|1573|0
+1=1|1signals_variables.mgf|787|0
+3=1|3signals_variables.mgf|951|0
+
+[~U]
+e1=E1 11|0*633|0*746
+

@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Comparator
+
+[Library]
+Comparator=.\Comparator.lib
+
+[$LibMap$]
+Comparator=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/comparator.vhd=-1
+/tb.vhd=-1
+
+[Files.Data]
+.\src\comparator.vhd=VHDL Source Code
+.\src\tb.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=tb|ar|0  
+ShowHide=ShowTopLevel
+Selected=

@@ -1,0 +1,125 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=VHDL_Verilog_EDIF_C_PLI
+
+[Library]
+VHDL_Verilog_EDIF_C_PLI=.\VHDL_Verilog_EDIF_C_PLI.lib
+
+[$LibMap$]
+VHDL_Verilog_EDIF_C_PLI=.
+Active_lib=VIRTEX
+xilinxun=VIRTEX
+UnlinkedDesignLibrary=VIRTEX
+DESIGNS=VIRTEX
+
+[settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+WireDelay=2
+NoTchkMsg=0
+NoTimingChecks=0
+HESPrepare=0
+StackMemorySize=32
+RetvalMemorySize=32
+RetriesNumber=3
+EnableCallbacks=0
+VitalAccel=1
+CBS=0
+CSYNTH_TOOL=<none>
+Celoxica=0
+UseCeloxica=0
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+SYNTH_STATUS=NONE
+IMPL_STATUS=NONE
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+FAMILY=
+DEVICE=
+SPEED=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\nosrc\projects50\MIXED_DESIGNS\VHDL_Verilog_EDIF_C_PLI\
+Extension3=mak
+Name4=Memory
+Directory4=c:\nosrc\projects50\MIXED_DESIGNS\VHDL_Verilog_EDIF_C_PLI\src
+Extension4=mem;mif;hex
+
+[sdf.ea.filter_functional_tb-tb_architecture]
+SdfNoWarn=0
+IVG=0
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[SYNTHESIS]
+CeloxicaPath=
+FAMILY=
+
+[ORDER]
+Synchronize=1
+
+[Groups]
+PLI=1
+Testbench=1
+C-Debug=1
+
+[Files]
+/and2.v=-1
+/and3.v=-1
+/and4.v=-1
+/c2or.vhd=-1
+/cb4ce.vhd=-1
+/oscil_c_pli.v=-1
+/pfdiv.vhd=-1
+/crv.bde=-1
+/filter.bde=-1
+/oscil_c_pli.dlm=-1
+/readme.txt=-1
+PLI/interface.h=-1
+PLI/oscil_c_pli.c=-1
+PLI/veriuser_aldec.c=-1
+Testbench/filter_tb.vhd=-1
+Testbench/run_functional.do=-1
+C-Debug/Initialize_c_code_debug.do=-1
+C-Debug/Gdb_command_usage.do=-1
+
+[Files.Data]
+.\src\and2.v=Verilog Source Code
+.\src\and3.v=Verilog Source Code
+.\src\and4.v=Verilog Source Code
+.\src\c2or.vhd=VHDL Source Code
+.\src\cb4ce.vhd=VHDL Source Code
+.\src\oscil_c_pli.v=Verilog Source Code
+.\src\pfdiv.vhd=VHDL Source Code
+.\src\crv.bde=Block Diagram
+.\src\filter.bde=Block Diagram
+.\src\oscil_c_pli.dlm=C/C++ Configuration
+.\src\readme.txt=Text File
+.\src\PLI\interface.h=C++ Source Code
+.\src\PLI\oscil_c_pli.c=C++ Source Code
+.\src\PLI\veriuser_aldec.c=C++ Source Code
+.\src\Testbench\filter_tb.vhd=VHDL Source Code
+.\src\Testbench\run_functional.do=Macro
+.\src\C-Debug\Initialize_c_code_debug.do=Macro
+.\src\C-Debug\Gdb_command_usage.do=Macro
+

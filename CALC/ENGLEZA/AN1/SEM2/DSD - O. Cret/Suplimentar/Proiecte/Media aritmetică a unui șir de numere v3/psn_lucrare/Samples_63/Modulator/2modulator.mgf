@@ -1,0 +1,571 @@
+V 000047 40 2244 1024583954104 cosinegenerator
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #DESCRIPTION=""
+    #FUB="1"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1024583954"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (0,0,200,180)
+    FREEID 21
+  }
+  BODY
+  {
+    RECT 1,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      AREA (0,0,200,180)
+    }
+    PIN 13,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="CLK"
+        #NUMBER="3"
+        #SIDE="left"
+        #VHDL_TYPE="BIT"
+      }
+      COORD (0,80)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 14,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,68,54,92)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 13
+    }
+    PIN 18,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #INITIAL_VALUE="0.0"
+        #LABEL="Out"
+        #MODIFIED="1"
+        #NAME="COS1"
+        #NUMBER="4"
+        #SIDE="right"
+        #VHDL_TYPE="REAL"
+      }
+      COORD (200,100)
+      LINE 2,0,0
+      {
+        POINTS ((0,0),(-10,10),(-10,-10),(0,0))
+      }
+    }
+    TEXT 19,0,0
+    {
+      TEXT "$#NAME"
+      RECT (132,88,187,112)
+      ALIGN 6
+      MARGINS (1,1)
+      PARENT 18
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="CosEnable"
+        #NUMBER="1"
+        #SIDE="left"
+        #VHDL_TYPE="BIT"
+      }
+      COORD (0,160)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 4,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,148,110,172)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 3
+    }
+    PIN 8,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="CosFreq"
+        #NUMBER="2"
+        #SIDE="left"
+        #VHDL_TYPE="INTEGER"
+      }
+      COORD (0,120)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 9,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,108,91,132)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 8
+    }
+  }
+}
+V 000042 40 2723 1024583955073 multiplier
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #DESCRIPTION=""
+    #FUB="1"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1024583955"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (0,0,280,240)
+    FREEID 26
+  }
+  BODY
+  {
+    RECT 1,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      AREA (0,0,280,240)
+    }
+    PIN 13,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="IN2"
+        #NUMBER="3"
+        #SIDE="left"
+        #VHDL_TYPE="REAL"
+      }
+      COORD (0,140)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 14,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,128,46,152)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 13
+    }
+    PIN 18,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="IN1"
+        #NUMBER="4"
+        #SIDE="left"
+        #VHDL_TYPE="REAL"
+      }
+      COORD (0,60)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 19,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,48,46,72)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 18
+    }
+    PIN 23,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="clk"
+        #NUMBER="5"
+        #SIDE="bottom"
+        #VHDL_TYPE="BIT"
+      }
+      COORD (140,240)
+      LINE 2,0,0
+      {
+        POINTS ((-10,0),(10,0),(0,-10),(-10,0))
+      }
+    }
+    TEXT 24,0,0
+    {
+      TEXT "$#NAME"
+      RECT (128,187,152,227)
+      ALIGN 9
+      MARGINS (1,1)
+      PARENT 23
+      ORIENTATION 5
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #INITIAL_VALUE="0.0"
+        #LABEL="Out"
+        #MODIFIED="1"
+        #NAME="OUT1"
+        #NUMBER="1"
+        #SIDE="right"
+        #VHDL_TYPE="REAL"
+      }
+      COORD (280,120)
+      LINE 2,0,0
+      {
+        POINTS ((0,0),(-10,10),(-10,-10),(0,0))
+      }
+    }
+    TEXT 4,0,0
+    {
+      TEXT "$#NAME"
+      RECT (228,108,267,132)
+      ALIGN 6
+      MARGINS (1,1)
+      PARENT 3
+    }
+    PIN 8,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="IN3"
+        #NUMBER="2"
+        #SIDE="left"
+        #VHDL_TYPE="REAL"
+      }
+      COORD (0,200)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 9,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,188,46,212)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 8
+    }
+  }
+}
+V 000044 40 2244 1024583956026 sawgenerator
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #DESCRIPTION=""
+    #FUB="1"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1024583955"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (0,0,200,180)
+    FREEID 21
+  }
+  BODY
+  {
+    RECT 1,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      AREA (0,0,200,180)
+    }
+    PIN 13,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="CLK"
+        #NUMBER="3"
+        #SIDE="left"
+        #VHDL_TYPE="BIT"
+      }
+      COORD (0,80)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 14,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,68,54,92)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 13
+    }
+    PIN 18,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #INITIAL_VALUE="0.0"
+        #LABEL="Out"
+        #MODIFIED="1"
+        #NAME="SAW1"
+        #NUMBER="4"
+        #SIDE="right"
+        #VHDL_TYPE="REAL"
+      }
+      COORD (200,100)
+      LINE 2,0,0
+      {
+        POINTS ((0,0),(-10,10),(-10,-10),(0,0))
+      }
+    }
+    TEXT 19,0,0
+    {
+      TEXT "$#NAME"
+      RECT (129,88,187,112)
+      ALIGN 6
+      MARGINS (1,1)
+      PARENT 18
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="SawEnable"
+        #NUMBER="1"
+        #SIDE="left"
+        #VHDL_TYPE="BIT"
+      }
+      COORD (0,160)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 4,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,148,111,172)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 3
+    }
+    PIN 8,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="SawFreq"
+        #NUMBER="2"
+        #SIDE="left"
+        #VHDL_TYPE="INTEGER"
+      }
+      COORD (0,120)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 9,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,108,92,132)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 8
+    }
+  }
+}
+V 000045 40 2242 1024583956979 sinegenerator
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #DESCRIPTION=""
+    #FUB="1"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1024583956"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (0,0,200,180)
+    FREEID 20
+  }
+  BODY
+  {
+    RECT 1,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      AREA (0,0,200,180)
+    }
+    PIN 13,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="CLK"
+        #NUMBER="3"
+        #SIDE="left"
+        #VHDL_TYPE="BIT"
+      }
+      COORD (0,80)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 14,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,68,54,92)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 13
+    }
+    PIN 18,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #INITIAL_VALUE="0.0"
+        #LABEL="Out"
+        #MODIFIED="1"
+        #NAME="SIN1"
+        #NUMBER="4"
+        #SIDE="right"
+        #VHDL_TYPE="REAL"
+      }
+      COORD (200,80)
+      LINE 2,0,0
+      {
+        POINTS ((0,0),(-10,10),(-10,-10),(0,0))
+      }
+    }
+    TEXT 19,0,0
+    {
+      TEXT "$#NAME"
+      RECT (142,68,187,92)
+      ALIGN 6
+      MARGINS (1,1)
+      PARENT 18
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="SinEnable"
+        #NUMBER="1"
+        #SIDE="left"
+        #VHDL_TYPE="BIT"
+      }
+      COORD (0,160)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 4,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,148,102,172)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 3
+    }
+    PIN 8,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #LABEL="In"
+        #MODIFIED="1"
+        #NAME="SinFreq"
+        #NUMBER="2"
+        #SIDE="left"
+        #VHDL_TYPE="INTEGER"
+      }
+      COORD (0,120)
+      LINE 2,0,0
+      {
+        POINTS ((0,-10),(0,10),(10,0),(0,-10))
+      }
+    }
+    TEXT 9,0,0
+    {
+      TEXT "$#NAME"
+      RECT (14,108,83,132)
+      ALIGN 4
+      MARGINS (1,1)
+      PARENT 8
+    }
+  }
+}

@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\counter\library.cfg"  -j "d:\designshdl\counter\d_ff\projlib.cfg"  -d "d:\designshdl\counter\d_ff\compile\"  -work d_ff -dbg -e 100 "d:\designshdl\counter\d_ff\src\d_ff.vhd" 

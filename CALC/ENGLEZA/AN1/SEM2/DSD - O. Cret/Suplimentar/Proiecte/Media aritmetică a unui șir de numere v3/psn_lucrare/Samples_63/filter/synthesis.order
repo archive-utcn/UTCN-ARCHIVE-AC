@@ -1,0 +1,6 @@
+i<>.\src\sine_lookup_pkg.vhd
+i<>.\Celoxica\Vhdl\receiver_hcc.vhd
+i<>.\Celoxica\Vhdl\receiver_top.vhd
+i<>.\src\synchronizer.vhd
+i<>.\src\filter.vhd
+i<>.\src\top.bde

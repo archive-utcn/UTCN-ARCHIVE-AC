@@ -1,0 +1,206 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct nod
+{
+    int fr;
+    char nume[10];
+    struct nod *stg, *dr;
+} TIP_NOD;
+
+void inordine(TIP_NOD *p, int nivel)
+{
+    int i;
+    if (p!=0)
+    {
+        inordine(p->stg,nivel+1);
+        for (i=0; i<=nivel; i++) printf("__");
+        printf("%s\n",p->nume);
+        inordine(p->dr,nivel+1);
+    }
+}
+
+void inserare_nerecursiva (TIP_NOD **rad, char key[])
+{
+    TIP_NOD *p, *q;
+    int rez;
+    p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+    strcpy(p->nume,key);
+    p->fr=1;
+    p->stg=0;
+    p->dr=0;
+    if (*rad==0)
+    {
+        *rad=p;
+        return;
+    }
+    q=*rad;
+    for ( ; ; )
+    {
+        rez=strcmp(key,q->nume);
+        if (rez>0)
+        {
+
+            if (q->stg==0)                            /* inserare */
+            {
+                q->stg=p;
+                return;
+            }
+            else q=q->stg;
+        }
+        else if (rez<0)
+        {
+
+            if (q->dr==0)   /* inserare */
+            {
+                q->dr=p;
+                return;
+            }
+            else q=q->dr;
+        }
+        else
+        {
+            q->fr++; /* cheie dubla */
+            printf("\n%s este cheie dubla\n",q->nume); /* scriere mesaj */
+            free (p);
+            return;
+        }
+    }
+}
+
+
+TIP_NOD *stergere_nod(TIP_NOD *rad,char key[])
+{
+    TIP_NOD *p,*tata_p,*nod_inlocuire,*tata_nod_inlocuire;            /*nodul care il va inlocui pe p si tatal sau */
+    int directie,rez;
+    /*stg=1;dr=2*/
+    if (rad==0) return 0;                                 /*arborele este vid */
+    p=rad;
+    tata_p=0;
+    rez=strcmp(key,p->nume);
+    /* cautare nod cu cheia key */
+    while (rez!=0)
+    {
+        if (rez>0)
+        {
+            /*cautare in stanga */
+            tata_p=p;
+            p=p->stg;
+            directie=1;
+        }
+        else
+        {
+            /*cautare in dreapta */
+            tata_p=p;
+            p=p->dr;
+            directie=2;
+        }
+        if (p==0)
+        {
+            printf("\n NU EXISTA NOD CU CHEIA=%s\n",key);
+            return rad;
+        }
+        rez=strcmp(key,p->nume);
+    }
+
+
+    if (p->fr > 1)
+    {
+        p->fr=p->fr-1;
+        return rad;
+    }
+    else
+    {
+        /* s-a gasit nodul p de cheie key */
+        if (p->stg==0) nod_inlocuire=p->dr;                       /* nodul de sters p nu are fiu sting */
+        else if (p->dr==0) nod_inlocuire=p->stg;                        /*nodul de sters p  nu are fiu drept*/
+        else                                                    /* nodul de sters p are fiu stang si fiu drept */
+        {
+            tata_nod_inlocuire=p;
+            nod_inlocuire=p->dr;                                 /* se cauta in subarborele drept*/
+            while (nod_inlocuire->stg!=0)
+            {
+                tata_nod_inlocuire=nod_inlocuire;
+                nod_inlocuire=nod_inlocuire->stg;
+            }
+            if (tata_nod_inlocuire!=p)
+            {
+                tata_nod_inlocuire->stg=nod_inlocuire->dr;
+                nod_inlocuire->dr=p->dr;
+            }
+            nod_inlocuire->stg=p->stg;
+        }
+        //free(p);
+        printf("\nNodul de cheie=%s a fost sters! ",key);
+        if (tata_p==0)  return nod_inlocuire;                              /*s-a sters chiar radacina initiala */
+        else
+        {
+            if (directie==1) tata_p->stg=nod_inlocuire;
+            else tata_p->dr=nod_inlocuire;
+            return rad;
+        }
+    }
+}
+
+void verif(TIP_NOD *p, char cuv[])
+{
+    if (p!=0)
+    {
+        verif(p->stg,cuv);
+        strcat(cuv,p->nume);                     //  strcat(cuv,p->nume);
+        verif(p->dr,cuv);
+    }
+}
+
+void com(TIP_NOD *rad1, TIP_NOD *rad2, char x[], char y[])
+{
+    TIP_NOD *p, *q;
+    char a[100];
+    char b[100];
+    p=rad1;
+    q=rad2;
+    printf("\n\n..........\n\n");
+    p=stergere_nod(p,x);
+    p=stergere_nod(p,y);
+    printf("\n\n..........\n\n");
+    q=stergere_nod(q,y);
+    q=stergere_nod(q,x);
+    printf("\n\nStergere x -> y:\n\n");
+    inordine(p,0);
+    printf("\n\nStergere y -> x:\n\n");
+    inordine(q,0);
+    strcpy(a,"");
+    strcpy(b,"");
+    verif(p,a);
+    verif(q,b);
+    if (strcmp(a,b)==0) printf("\nStergerea este comutativa!\n");
+    else printf("\nStergerea NU este comutativa!\n");
+}
+
+void main()
+{
+    TIP_NOD *rad1, *rad2;
+    int i,n;
+    char cuv[10],x[10],y[10];
+    rad1=0;
+    rad2=0;
+    printf("Cate cuvinte vreti sa introduceti?\n");
+    scanf("%d",&n);
+    for (i=0; i<n; i++)
+    {
+        printf("\nIntroduceti cuvantul:");
+        scanf("%s",cuv);
+        inserare_nerecursiva(&rad1,cuv);
+        inserare_nerecursiva(&rad2,cuv);
+    }
+    printf("\nAfisare in inordine:\n");
+    inordine(rad1,0);
+    getch();
+    printf("\nIntroduceti x: ");
+    scanf("%s",x);
+    printf("\nIntroduceti y: ");
+    scanf("%s",y);
+    com(rad1,rad2,x,y);
+
+}

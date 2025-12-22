@@ -1,0 +1,320 @@
+/****************************************************************
+*                                                               *
+* IMPORTANT                                                     *
+* =========                                                     *
+* Copyright 1991-2003 Celoxica Ltd.                             *
+*                                                               *
+*                                                               *
+* This is Proprietary Source Code of Celoxica Ltd ("Celoxica"). *
+*                                                               *
+* The contents of this file may not be disclosed to third       *
+* parties without the consent of Celoxica. The source code may  *
+* only be used in accordance with an appropriate licence from   *
+* Celoxica.                                                     *
+*                                                               *
+* In particular, the source code for Celoxica's DK products     *
+* (including related service packs) and certain Celoxica        *
+* hardware libraries may not be read, accessed, adapted or used *
+* in any other way without a specific source code licence       *
+* covering the source code in question.                         *
+*                                                               *
+* If a licence document or agreement is not included with this  *
+* source code please contact Celoxica immediately for a copy of *
+* the applicable license agreement.                             *
+*                                                               *
+* This code is protected by English, U.S. and International     *
+* copyright laws.                                               *
+*                                                               *
+* The source code may be subject to export restrictions and     *
+* controls. Before exporting or re-exporting any part of the    *
+* source code (or anything deriving from the source code) the   *
+* licensee or user must ensure that all applicable licences and *
+* laws and regulations relating to export have been obtained or *
+* dealt with.                                                   *
+*                                                               *
+* Any results created using this source code are the            *
+* responsibility of the user and not Celoxica.                  *
+*                                                               *
+* All Intellectual Property and other rights reserved under the *
+* laws of England, the United States, and the International     *
+* Community.                                                    *
+*                                                               *
+* All trademarks acknowledged.                                  *
+*                                                               *
+*****************************************************************
+*                                                               *
+* CONTENTS                                                      *
+* ========                                                      *
+*                                                               *
+* Project   :   Handel-C                                        *
+* Date      :   12 JUN 1997                                     *
+* File      :   proc.hcc                                        *
+* Author    :   Matthew Aubury (MA)                             *
+* Contributors:                                                 *
+*       Sandra Gadanho (SG)                                     *
+*                                                               *
+* Description:                                                  *
+*    Handel-C example program demonstrating simple processor.   *
+*    To test open the workspace file 'Example5.hw'.             *
+*                                                               *
+* Date         Version  Author  Reason for change               *
+*                                                               *
+* 12 JUN 1997  1.00     MA      Created                         *
+* 28 FEB 2000  2.00     SG      Updated for version 3.0         *
+* 13 DEC 2001  3.00     JD      Updated for version 3.1         *
+*                                                               *
+*****************************************************************
+*                                                               *
+* For information on Celoxica products see www.celoxica.com.    *
+*                                                               *
+****************************************************************/
+
+/*
+ * Clock
+ */	 
+ #define SIMULATE
+#ifndef SIMULATE
+interface port_in(unsigned 1 rst) rst_in ();
+set reset = internal rst_in.rst;
+#endif
+set clock = external "clk";
+
+/*
+ * Processor input and output channels
+ */
+chan unsigned input;
+chan unsigned output;
+
+/*
+ * Parameterisation
+ */
+#define DW     8  /* Data width */
+#define RAM_AW  4  /* Width of RAM address bus (data) */
+#define ROM_AW  5  /* Width of ROM address bus (code) */
+#define OPCW    4  /* Op-code width */
+#define OPRW    5  /* Operand width */
+
+
+/*
+ * The opcodes
+ */
+#define END     0
+#define LOAD    1
+#define LOADI   2
+#define STORE   3
+#define ADD     4
+#define SUB     5
+#define JMP     6
+#define JMPNZ   7
+#define INPUT   8
+#define OUTPUT  9
+#define START   10
+#define REM     11
+#define MOV     12
+#define INT     13
+#define READ    14
+#define DEC		15
+/*
+ * The assembler macro
+ */
+#define _asm_(opc, opr) (opc + (opr << OPCW))
+
+/*
+ * ROM program data
+ */
+rom unsigned int program[] =
+{
+  _asm_(LOADI,	3),  /*load iterator */
+  _asm_(STORE,	0),  /*store iterator */
+  _asm_(INPUT,  0),  /* Read dividend from input */
+  _asm_(STORE,  1),  /* Store this            */
+  _asm_(INPUT,  0),  /* Read divisor from input */
+  _asm_(STORE,  2),  /* Store this            */
+  _asm_(MOV,	1),  /* Move from acc to b */
+  _asm_(LOAD,	1),  /* Load dividend to acc */
+  _asm_(START,  0),  /* start calculation     */
+  _asm_(READ,	0),  /* take results */
+  _asm_(OUTPUT, 0),  /* Output quotient     */
+  _asm_(MOV,	0),  /* Move remainder from b to acc*/
+  _asm_(OUTPUT, 0),  /* Output it          */
+  _asm_(LOAD,	0),	 /* load iterator */
+  _asm_(DEC, 	0),	 /* decrement it */
+  _asm_(JMPNZ,	1),	 /* test it */
+  _asm_(END,    0)   /*  wait      */
+};
+
+/*
+ * Prototypes
+ */
+macro proc processor(clr);
+
+/*
+ * Main program
+ */
+
+void main (void)
+{
+
+    unsigned value;
+	unsigned 1 clr;
+
+	#ifdef SIMULATE
+	//body for simulation
+
+    //chanout result;
+	chanin unsigned DW  input_values with {infile = "values.dat"};
+	chanout unsigned DW results with {outfile = "results.txt"};
+	unsigned DW temp;
+
+    par
+    { 
+        processor(clr);
+			
+		seq (i=0;i<3;i++) {	 
+			clr = 1;
+			clr = 0;
+			input_values ? temp;
+		   	input ! temp;
+			input_values ? temp;
+		   	input ! temp;
+		    output ? value;
+            results ! value;
+			output ? value;
+			results ! value;
+        }
+    }
+
+	
+	#else	
+	unsigned value_read;
+	//body for implementation
+	interface port_in(unsigned DW inp) data_in () with {std_logic_vector = 1};
+	interface port_out() data_out (unsigned DW outp = value) with {std_logic_vector = 1}; 
+	interface port_out() data_read_out (unsigned 1 data_read = value_read);
+	
+	par
+	{
+		value_read = 0;
+		processor(rst_in.rst);	
+		{
+			input ! data_in.inp;
+			value_read++;	
+			input ! data_in.inp;
+			value_read++;	
+		}
+		{
+			output ? value;
+			output ? value;
+        }
+
+	}
+	#endif
+}
+
+
+/*
+ * The processor
+ */
+macro  proc processor(clr)
+{
+    /*
+     * RAM for processor
+     */
+    ram unsigned int DW data[1 << RAM_AW];
+
+    /*
+     * Processor registers
+     */
+    unsigned int ROM_AW pc;         /* Program counter      */
+	unsigned int 1 go;
+    unsigned int (OPCW + OPRW) ir;  /* Instruction register */
+    unsigned int DW acc,b_int;      /* Accumulator          */
+
+    macro expr opcode  = (ir <- OPCW);
+    macro expr operand = (ir \\ OPCW);
+
+
+    interface div_rem(unsigned (DW/2) quot with {std_logic_vector = 1}, unsigned (DW/2) remain with {std_logic_vector = 1}, unsigned 1 done)
+               divider(
+			   unsigned 1 start=go,
+			   unsigned DW a=acc with {std_logic_vector = 1}, 
+			   unsigned DW b=b_int with {std_logic_vector = 1},
+			   unsigned 1 rst = clr,
+			   unsigned clk = __clock)
+               with {extlib="PluginAldec.dll", extinst="macro=avhdl -do runme_cosim.do;clock=clk:100"};
+
+    /*
+     * Macros to extract opcode and operand fields
+     */
+    
+    /*
+     * Processor loop
+     */
+    while (1)
+    {
+        /*
+         * Fetch
+         */
+	        par
+	        {
+	            ir = program[pc];
+				if (clr) 
+	            	pc = 0;
+				else 
+					if (opcode != END)
+						pc++;
+					else
+	        		   delay;
+			}
+	        /*
+	         * Decode and execute
+	         */
+	        switch (opcode)
+	        {
+	            case END   : 
+					delay;break;            
+	            case LOAD   : 
+					acc = data[operand <- RAM_AW]; break;            
+	            case LOADI  : 
+					acc = 0 @ operand; break;
+	            case STORE  : 
+					data[operand <- RAM_AW] = acc; break;           
+	            case ADD    : 
+					acc += data[operand <- RAM_AW]; break;
+				case DEC 	: 
+					acc--;break;
+				case START	: 
+						go = 1;
+						go = 0;break;
+				case READ :
+					delay;				 
+					par {
+						acc = 0 @ divider.quot;
+						b_int = 0 @ divider.remain;
+						};break;
+				case MOV	: 
+					if (operand)
+						b_int = acc;
+					else
+						acc = b_int;break;
+				case INT 	: 
+					acc = 0 @ divider.done;break;
+				case SUB    : 
+					acc -= data[operand <- RAM_AW]; break;        
+	            case JMP   : 
+					pc = operand <- ROM_AW; break;                 
+	            case JMPNZ : 
+					if (acc != 0) 
+						pc = operand <- ROM_AW; break;    
+	            case INPUT  : 
+					input  ? acc; break;                             
+	            case OUTPUT : 
+					output ! acc; break;
+	            default     : 
+					while(1) delay;    /* unknown opcode */
+	        }
+
+    }
+	
+}
+

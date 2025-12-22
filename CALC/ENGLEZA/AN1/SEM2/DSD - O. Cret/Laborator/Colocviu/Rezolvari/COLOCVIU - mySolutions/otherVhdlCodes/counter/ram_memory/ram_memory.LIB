@@ -1,0 +1,23 @@
+timestamp=1493505160786
+
+[memorie_ram]
+A/arhram=A/ArhRAM 21|./src/ram_memory.vhd|13|1*0
+B/arhram=3*0
+H/arhram=0*3344
+R=./src/ram_memory.vhd|5
+V=0*5706
+
+[~A]
+./src/ram_memory.vhd~ArhRAMMemorie_RAM=0*4341*4777
+./src/ram_memory.vhd~Memorie_RAM=0*2911*3272
+ModifyID=13
+Version=73
+
+[~MFT]
+0=17|0ram_memory.mgf|5706|2911
+1=0|1ram_memory.mgf|0|0
+3=0|3ram_memory.mgf|0|0
+
+[~U]
+memorie_ram=11|0*4855|0*5112
+

@@ -1,0 +1,914 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 1120
+I 1 "a#V10#[15:0]wire1 ricd15 0 e#V4#wirec4 01xz"
+I 2 "e#V4#wirec4 01xz"
+$BUS S 1 1 16 AB
+$SC 2-17
+I 3 "e#V3#regc4 01xz"
+$S +1 3 CLK
+$S +1 3 CLR
+I 4 "a#V9#[7:0]wire1 ricd7 0 e#V4#wirec4 01xz"
+$BUS S +1 4 8 DB
+$SC +1-+7
+I 5 "a#V8#[7:0]reg1 ricd7 0 e#V3#regc4 01xz"
+$BUS S +1 5 8 DI
+$SC +1-+7
+$S +1 3 EN
+$S +1 2 ERR
+I 6 "a#V7#integer1 ricd31 0 e#V3#regc4 01xz"
+$BUS S +1 6 32 f
+$SC +1-72
+$BUS S +1 6 32 f1
+$SC +1-+31
+I 7 "a#V9#[10:0]reg1 ricd10 0 e#V3#regc4 01xz"
+$BUS S +1 7 11 stc
+$SC +1-+10
+$S +1 2 WR
+P 0 1-118 CS "0"
+P 0 39 Color "0"
+P 0 20 +98 Color "12582976"
+P 0 19 +87 Color "32960"
+P 0 38 Color "4210943"
+P 0 29 Color "8405120"
+P 0 18 73 Color "8405184"
+P 0 1 40 Color "8421440"
+$WAVES 2
+=0 T 0
+=1 D 0 3
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 3
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 4
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 5
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 6
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 7
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 8
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 9
+*0
+*1
+=2 D 470 2
+=3 D 380 2
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+=4 D 250 2
+=5 D 220 2
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*4
+*5
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*4
+*5
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*4
+*5
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+=6 D 290 2
+=7 D 180 2
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*6
+*7
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*6
+*7
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*6
+*7
+=8 D 80 2
+*3
+$VALUES
+V 1
+x
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES +4
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*1
+=9 D 410 2
+*8
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*9
+*8
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+=10 D 450 2
+*8
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+*10
+*8
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES 39
+*0
+*1
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +79
+*0
+*1
+*10
+=11 D 20 2
+=12 D 60 2
+*11
+$VALUES
+V 1
+x
+R 2 2 1 0
+V 1
+1
+$END
+$WAVES 18
+*0
+R 1 110 =13 T 10
+*13
+$VALUES
+R 2 56 0 1
+$END
+$WAVES +1
+*0
+=14 D 0 1
+=15 T 40
+$VALUES
+V 3
+x
+1
+0
+$END
+$WAVES 30
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+=16 T 245
+=17 T 80
+=18 T 120
+*15
+*17
+*15
+=19 T 440
+$VALUES
+R 2 4 0 1
+$END
+$WAVES +1
+*0
+*16
+*17
+*18
+*15
+*17
+*15
+*19
+$VALUES
+R 2 4 1 0
+$END
+$WAVES +1
+*0
+=20 T 45
+=21 T 200
+*17
+*18
+*15
+*17
+*15
+*15
+*15
+=22 T 360
+$VALUES
+R 2 5 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*20
+*15
+=23 T 600
+*15
+$VALUES
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*20
+*21
+*17
+=24 T 720
+$VALUES
+R 2 2 1 0
+V 1
+1
+$END
+$WAVES +1
+*0
+*20
+*15
+*15
+*15
+R 1 6 *17
+*15
+*15
+=25 T 320
+$VALUES
+R 2 7 0 1
+$END
+$WAVES +1
+*0
+*20
+*22
+*17
+*17
+*17
+*22
+*15
+$VALUES
+R 2 4 1 0
+$END
+$WAVES +1
+*0
+*20
+R 2 26 =26 T 15 =27 T 25
+*26
+$VALUES
+R 2 27 0 1
+V 1
+0
+$END
+$WAVES +3
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+1
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+1
+$END
+$WAVES +2
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+1
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +1
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +2
+*0
+*14
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*14
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*14
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*14
+=28 T 680
+$VALUES
+V 3
+x
+0
+1
+$END
+$WAVES +1
+*0
+*14
+*22
+*25
+*25
+$VALUES
+V 1
+x
+R 2 2 0 1
+$END
+$WAVES +1
+*0
+*14
+*21
+R 1 4 =29 T 160
+*29
+$VALUES
+V 1
+x
+R 2 3 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*14
+*18
+R 1 12 *17
+$VALUES
+V 1
+x
+R 2 7 0 1
+$END
+$WAVES +1
+*0
+*14
+*17
+R 1 24 *15
+*15
+$VALUES
+V 1
+x
+R 2 13 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*14
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*14
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*14
+$VALUES
+V 2
+x
+0
+$END
+$ENDWAVE

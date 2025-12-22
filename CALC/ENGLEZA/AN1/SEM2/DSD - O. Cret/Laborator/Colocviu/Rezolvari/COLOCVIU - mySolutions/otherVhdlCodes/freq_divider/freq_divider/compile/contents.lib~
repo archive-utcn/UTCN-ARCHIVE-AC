@@ -1,0 +1,3 @@
+25
+~E 1 "./src/freq_divider.vhd" 5 clock_divider
+~A 1 "./src/freq_divider.vhd" 10 arh

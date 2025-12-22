@@ -1,0 +1,145 @@
+timestamp=1400664115501
+
+[bancomat]
+A/arh_bancomat=21|./src/unitate_Comanda.vhd|27|1*244137
+B/arh_bancomat=3*58507
+H/arh_bancomat=0*302471
+R=./src/unitate_Comanda.vhd|7
+V=0*324063
+
+[citire_pin]
+A/arh_citire_pin=21|./src/citire_pin.vhd|14|1*153629
+B/arh_citire_pin=3*50521
+H/arh_citire_pin=0*192228
+R=./src/citire_pin.vhd|4
+S/citire_pin=40|0|2*6429
+V=0*190643
+
+[citire_suma]
+A/arh_suma=A/ARH_SUMA 21|./src/CITIRE_SUMA.vhd|13|1*110781
+B/arh_suma=3*39946
+H/arh_suma=0*131522
+R=./src/CITIRE_SUMA.vhd|4
+S/citire_suma=40|0|2*8860
+V=0*112964
+
+[comp_mai_mic_sau_egal]
+A/arch_comp_mai_mic_sau_egal=A/ARCH_COMP_MAI_MIC_SAU_EGAL 21|./src/COMP_MAI_MIC_EGAL.vhd|12|1*113242
+B/arch_comp_mai_mic_sau_egal=3*41790
+H/arch_comp_mai_mic_sau_egal=0*132571
+R=./src/COMP_MAI_MIC_EGAL.vhd|5
+S/comp_mai_mic_sau_egal=40|0|2*11238
+V=0*133901
+
+[comparator_card_pin]
+A/arch_comp_egal=A/ARCH_COMP_EGAL 21|./src/comparator_card_pin.vhd|11|1*174978
+B/arch_comp_egal=3*53279
+H/arch_comp_egal=0*217035
+R=./src/comparator_card_pin.vhd|5
+V=0*11982
+
+[demux]
+A/arch_demux=A/ARCH_DEMUX 21|./src/demux.vhd|11|1*226692
+B/arch_demux=3*57630
+H/arch_demux=0*280803
+R=./src/demux.vhd|4
+S/demux=S/DEMUX 40|0|2*0
+V=0*239302
+
+[identificare_card]
+A/arch_iden_card=A/ARCH_IDEN_CARD 21|./src/identificare_card.vhd|11|1*57576
+B/arch_iden_card=3*19443
+H/arch_iden_card=0*76290
+R=./src/identificare_card.vhd|4
+S/identificare_card=40|0|2*13265
+V=0*2112
+
+[memorie_sold]
+A/arch_memorie_sold=A/ARCH_MEMORIE_SOLD 21|./src/memorie_ram_sold.vhd|13|1*71148
+B/arch_memorie_sold=3*26788
+H/arch_memorie_sold=0*85680
+R=./src/memorie_ram_sold.vhd|5
+S/memorie_sold=S/MEMORIE_SOLD 40|0|2*1969
+V=0*31556
+
+[numarator_pin]
+A/arch_numarator_pin=A/ARCH_NUMARATOR_PIN 21|./src/NUMARATOR_PIN.vhd|13|1*135220
+B/arch_numarator_pin=3*47363
+H/arch_numarator_pin=0*168148
+R=./src/NUMARATOR_PIN.vhd|6
+S/numarator_pin=S/NUMARATOR_PIN 40|0|2*4089
+V=0*139839
+
+[pin]
+A/arch_pin=A/ARCH_PIN 21|./src/memorie_rom_pin.vhd|10|1*64354
+B/arch_pin=3*25015
+H/arch_pin=0*81569
+R=./src/memorie_rom_pin.vhd|5
+V=0*21494
+
+[scazator]
+A/arch_scazator=A/ARCH_SCAZATOR 21|./src/SCAZATOR.vhd|13|1*114982
+B/arch_scazator=3*43064
+H/arch_scazator=0*135267
+R=./src/SCAZATOR.vhd|6
+S/scazator=40|0|2*15052
+V=0*136584
+
+[x7seg]
+A/arh_x7seg=21|./src/afisor.vhd|15|1*76992
+B/arh_x7seg=3*27816
+H/arh_x7seg=0*89347
+R=./src/afisor.vhd|5
+S/x7seg=40|0|2*17110
+V=0*37502
+
+[~A]
+./src/CITIRE_SUMA.vhd~ARH_SUMACITIRE_SUMA=0*131613*132054
+./src/CITIRE_SUMA.vhd~CITIRE_SUMA=0*111027*111400
+./src/COMP_MAI_MIC_EGAL.vhd~ARCH_COMP_MAI_MIC_SAU_EGALCOMP_MAI_MIC_SAU_EGAL=0*132698*133112
+./src/COMP_MAI_MIC_EGAL.vhd~COMP_MAI_MIC_SAU_EGAL=0*132135*132482
+./src/NUMARATOR_PIN.vhd~ARCH_NUMARATOR_PINNUMARATOR_PIN=0*168259*168747
+./src/NUMARATOR_PIN.vhd~NUMARATOR_PIN=0*137900*138277
+./src/SCAZATOR.vhd~ARCH_SCAZATORSCAZATOR=0*135368*135734
+./src/SCAZATOR.vhd~SCAZATOR=0*134839*135200
+./src/afisor.vhd~arh_x7segx7seg=0*91105*92488
+./src/afisor.vhd~x7seg=0*33062*33415
+./src/citire_pin.vhd~arh_citire_pincitire_pin=0*195479*196407
+./src/citire_pin.vhd~citire_pin=0*189383*189744
+./src/comparator_card_pin.vhd~ARCH_COMP_EGALCOMPARATOR_CARD_PIN=0*217138*217539
+./src/comparator_card_pin.vhd~COMPARATOR_CARD_PIN=0*10261*10608
+./src/demux.vhd~ARCH_DEMUXdemux=0*280898*281107
+./src/demux.vhd~demux=0*238185*238417
+./src/identificare_card.vhd~ARCH_IDEN_CARDidentificare_card=0*76393*77208
+./src/identificare_card.vhd~identificare_card=0*0*327
+./src/memorie_ram_sold.vhd~ARCH_MEMORIE_SOLDMEMORIE_SOLD=0*88051*89251
+./src/memorie_ram_sold.vhd~MEMORIE_SOLD=0*26582*26971
+./src/memorie_rom_pin.vhd~ARCH_PINPIN=0*83922*84996
+./src/memorie_rom_pin.vhd~PIN=0*17102*17370
+./src/memorie_rom_pin.vhd~arh_citire_pincitire_pin=0*16081*17012
+./src/memorie_rom_pin.vhd~citire_pin=0*3132*3497
+./src/unitate_Comanda.vhd~arh_bancomatbancomat=0*319260*322083
+./src/unitate_Comanda.vhd~bancomat=0*301616*302397
+ModifyID=328
+Version=73
+
+[~MFT]
+0=335|0proi.mgf|324063|254945
+1=69|1proi.mgf|244137|211227
+2=8|2proi.mgf|17110|0
+3=65|3proi.mgf|58507|36123
+
+[~U]
+bancomat=11|0*322169|0*322784
+citire_pin=11|0*189815|0*190099|0x3
+citire_suma=CITIRE_SUMA 11|0*112086|0*112364|0x3
+comp_mai_mic_sau_egal=COMP_MAI_MIC_SAU_EGAL 11|0*133227|0*133485|0x3
+comparator_card_pin=COMPARATOR_CARD_PIN 11|0*11304|0*11563
+demux=11|0*238853|0*239039|0x3
+identificare_card=11|0*1429|0*1689|0x3
+memorie_sold=MEMORIE_SOLD 11|0*30717|0*30993|0x3
+numarator_pin=NUMARATOR_PIN 11|0*139048|0*139302|0x3
+pin=PIN 11|0*20943|0*21115
+scazator=SCAZATOR 11|0*135814|0*136060|0x3
+x7seg=11|0*36689|0*36919|0x3
+

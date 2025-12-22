@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\lifo\src\lifo.vhd" 
+MESSAGE "Compile Entity "lifo"" 
+MESSAGE "Entity `lifo' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "lifo"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

@@ -1,0 +1,12 @@
+Scrieti cod C care insereaza frunzele unui arbore binar de cautare intr o lista dublu inlantuita
+ * A - Cititi un sir de numere intregi - 0.5
+ * B - Scrieti o functie care insereaza un element intr un arbore binar de cautare - 1.0
+ * C - Scrieti functie care parcurge arborele in inordine - 0.5
+ * D - Scrieti functia care afiseaza frunzele arborelui binar de cautare - 1.0
+ * E - Scrieti o functie care are ca parametru radacina unui arbore binar de cautare
+ * si returneaza o lista dublu inlantuira care contine frunzele arborelui binar de cautare - 2.0
+F - Scrieti o functie care afiseaza o lista dublu inlantuita incepand cu primul element - 1.0
+ * G - Scrieti o functie care afiseaza o lista dublu inlantuita incepand cu ultimul element - 1.0
+* H - Scrieti funtia main in care aplelati functiile de mai sus pentru a insera elementele
+ * unui sir intr un arbore binar de cautare si apoi inserati frunzele arborelui intr o lista
+ * afisati lista in ambele sensuri - 2.0

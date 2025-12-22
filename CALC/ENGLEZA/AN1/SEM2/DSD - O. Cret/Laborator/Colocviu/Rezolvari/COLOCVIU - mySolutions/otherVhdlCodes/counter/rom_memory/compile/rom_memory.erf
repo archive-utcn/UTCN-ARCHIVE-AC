@@ -1,0 +1,6 @@
+MESSAGE "File: d:\designshdl\counter\rom_memory\src\rom_memory.vhd" 
+MESSAGE "Compile Entity "Memorie_ROM"" 
+MESSAGE "Compile Architecture "ArhROM" of Entity "Memorie_ROM"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   Memorie_ROM" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

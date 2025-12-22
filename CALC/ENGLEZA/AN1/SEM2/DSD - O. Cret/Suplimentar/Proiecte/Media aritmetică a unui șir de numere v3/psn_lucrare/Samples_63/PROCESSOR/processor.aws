@@ -1,0 +1,14 @@
+[Version]
+Version=6.1
+[Designs]
+processor=processor.adf
+[Settings]
+Active=processor
+[Expand]
+processor=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

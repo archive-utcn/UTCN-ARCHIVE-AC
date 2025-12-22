@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+#define MAXVIRFURI 10
+#define MAXEDGES 20
+typedef enum{FALSE , TRUE} bool;
+
+int extrNVirfuri(int muchii[][3],int nmuchii)
+{
+    //intoarce nr de virfuri = maxvarfuri+1;
+    int nvirf=-1;
+    int j;
+
+    for(j=0;j<nmuchii;j++)
+    {
+        if(muchii[j][0]>nvirf)
+            nvirf=muchii[j][0];
+        if(muchii[j][1]>nvirf)
+            nvirf=muchii[j][1];
+    }
+    return ++nvirf; //nr de varfuri = maxvertex + 1;
+}
+
+bool estePrezent(int muchii[][3],int nmuchii,int v)
+{
+    int j;
+    for(j=0;j<nmuchii; j++)
+        if(muchii[j][2]<0&&(muchii[j][0]==v||muchii[j][1]==v))
+            return TRUE;
+    return FALSE;
+}
+
+void spanning(int muchii[][3],int nmuchii)
+{
+    int i,j;
+    int tv1,tv2,tcost;
+    int nmuchiiST=0;
+    int nvirf = extrNVirfuri(muchii,nmuchii);
+
+    for(i=0;i<nmuchii-1;++i)
+        for(j=i;j<nmuchii;++j)
+            if(muchii[i][2]>muchii[j][2])
+            {
+                tv1=muchii[i][0]; tv2=muchii[i][1]; tcost=muchii[i][2];
+                muchii[i][0]=muchii[j][0]=muchii[j][0]; muchii[i][1] = muchii[j][1]; muchii[i][2]=muchii[j][2];
+                muchii[j][0]=tv1; muchii[j][1]=tv2; muchii[j][2]=tcost;
+            }
+    for(j=0;j<nmuchii-1;++j)
+    {
+        int v1=muchii[j][0];
+        int v2=muchii[j][1];
+        if(estePrezent(muchii,nmuchii,v1)&&estePrezent(muchii,nmuchii,v2))
+            printf("rejectare : % i % i % i..\n", muchii[j][0],muchii[j][1],muchii[j][2]);
+        else{
+            muchii[j][2]=-muchii[j][2];
+            printf("%d %d %d.\n",muchii[j][0],muchii[j][1],-muchii[j][2]);
+            if(++nmuchiiST==nvirf-1)
+                return;
+        }
+    }
+    printf("nu exista un arbore de acoperire pt graf !\n");
+}
+int main()
+{
+    int muchii[][3] = {
+        {0,1,16},
+        {0,4,19},
+        {0,5,21},
+        {1,2,5},
+        {1,3,6},
+        {1,5,11},
+        {2,3,10},
+        {3,4,18},
+        {3,5,14},
+        {4,5,33}
+    };
+    int nmuchii=sizeof(nmuchii)/3/sizeof(int);
+    spanning(muchii,nmuchii);
+
+    return 0;
+}
+

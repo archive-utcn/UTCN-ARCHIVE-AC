@@ -1,0 +1,87 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=liftp
+
+[Library]
+liftp=.\liftp.lib
+
+[$LibMap$]
+liftp=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=0
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVhdlSets]
+CompileWithDebug=1
+
+[LocalVerilogSets]
+EnableDebug=1
+EnableSLP=0
+
+[SpecTracer]
+WindowVisible=0
+
+[Files]
+/lift.vhd=-1
+/reg4bit.vhd=-1
+/comp4bit.vhd=-1
+/demux4bit1_2.vhd=-1
+/decoder13.vhd=-1
+/inputreg13.vhd=-1
+/comp4bit2.vhd=-1
+/sau13.vhd=-1
+/reg1bit.vhd=-1
+/mux1bit2_1.vhd=-1
+/demux1bit1_2.vhd=-1
+/inv1b.vhd=-1
+/sau1b.vhd=-1
+/mux13b2_1.vhd=-1
+/pencoder13.vhd=-1
+/Waveform Editor 1.awf=-1
+
+[Files.Data]
+.\src\lift.vhd=VHDL Source Code
+.\src\reg4bit.vhd=VHDL Source Code
+.\src\comp4bit.vhd=VHDL Source Code
+.\src\demux4bit1_2.vhd=VHDL Source Code
+.\src\decoder13.vhd=VHDL Source Code
+.\src\inputreg13.vhd=VHDL Source Code
+.\src\comp4bit2.vhd=VHDL Source Code
+.\src\sau13.vhd=VHDL Source Code
+.\src\reg1bit.vhd=VHDL Source Code
+.\src\mux1bit2_1.vhd=VHDL Source Code
+.\src\demux1bit1_2.vhd=VHDL Source Code
+.\src\inv1b.vhd=VHDL Source Code
+.\src\sau1b.vhd=VHDL Source Code
+.\src\mux13b2_1.vhd=VHDL Source Code
+.\src\pencoder13.vhd=VHDL Source Code
+.\src\Waveform Editor 1.awf=Waveform File
+

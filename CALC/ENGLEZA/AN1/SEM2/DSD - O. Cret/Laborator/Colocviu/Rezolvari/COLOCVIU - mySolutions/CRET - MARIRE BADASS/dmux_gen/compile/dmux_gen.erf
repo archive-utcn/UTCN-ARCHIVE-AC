@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\dmux_gen\src\dmux_gen.vhd" 
+MESSAGE "Compile Entity "dmux"" 
+MESSAGE "Entity `dmux' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "dmux"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

@@ -1,0 +1,124 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+typedef struct nod
+{
+    int info;
+    struct nod *urm;
+}Nod;
+
+void adauga(Nod **prim,Nod **ultim,int nr)
+{
+    Nod *p;
+    p=(struct nod *)malloc(sizeof(struct nod));
+    if(*prim==0)
+      {
+        (*prim)=(*ultim)=p;
+        (*prim)->info=nr;
+      }
+     else
+      {
+        (*ultim)->urm=p;
+        (*ultim)=p;
+        (*ultim)->info=nr;
+      }
+     (*ultim)->urm=0;
+}
+
+void add(Nod **prim,Nod **ultim)
+{
+ int valoare,a; printf("\ndati cheia de cautat:");scanf("%d",&valoare);
+ Nod *p,*nou;
+ p=(*prim);
+  while (p!=0)
+	{
+	 if(p->info==valoare)
+		{
+		  if(p==(*ultim) && p->info==valoare)
+            {
+                printf("Info: ");
+                  scanf("%d",&a);
+                nou=(struct nod *)malloc(sizeof(struct nod));
+                (*ultim)=nou;
+                p->urm=(*ultim);
+                (*ultim)->urm=0;
+                nou->info=a;
+            }
+          else
+          {
+            printf("Info: ");
+            scanf("%d",&a);
+            nou=(struct nod *)malloc(sizeof(struct nod));
+			nou->urm=p->urm; //stabilirea legãturilor
+            p->urm=nou;
+			nou->info=a;
+          }
+        }
+        p=p->urm;
+
+	}
+}
+
+
+void afisare(Nod *prim)
+{
+    Nod *p=prim;
+
+    if(p==0) printf("Lista Vida");
+    else
+      {
+        while(p!=0)
+         {
+           printf("%d   ",p->info);
+           p=p->urm;
+         }
+      }
+}
+
+void sterg(Nod **prim,Nod **ultim)
+{
+    int key;
+    Nod *p,*q;
+     p=(*prim);
+     q=(*prim)->urm;
+     printf("Key: ");
+      scanf("%d",&key);
+     while(q!=0)
+       {
+           if((*prim)->info==key)    (*prim)=(*prim)->urm;
+           if (q->info==key)
+             {
+               if (q==(*ultim))
+                 {
+                     (*ultim)=p;
+                     (*ultim)->urm=0;
+                 }
+               else p->urm=q->urm;
+             }
+             p=q;
+             q=q->urm;
+
+       }
+       free(q);
+}
+
+int main()
+{
+    int nr,i,a=0;
+    Nod *prim=0,*ultim=0;
+    printf("Dimensiunea: ");
+    scanf("%d",&a);
+    for(i=0;i<a;i++)
+    {
+       printf("Info ");
+       scanf("%d",&nr);
+       adauga(&prim,&ultim,nr);
+    }
+    afisare(prim);
+      add(&prim,&ultim);
+     afisare(prim);
+      sterg(&prim,&ultim);
+     afisare(prim);
+   return 0;
+}

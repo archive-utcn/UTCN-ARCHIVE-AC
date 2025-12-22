@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\30_MUX_Testbench\library.cfg"  -j "c:\My_Designs\30_MUX_Testbench\MUX_Testbench\projlib.cfg"  -d "c:\My_Designs\30_MUX_Testbench\MUX_Testbench\compile\"  -work MUX_Testbench -dbg -e 100 "c:\My_Designs\30_MUX_Testbench\MUX_Testbench\src\tb.vhd" 

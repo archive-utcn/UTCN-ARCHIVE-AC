@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.375 Wed May 11 10:28:18 2011
+
+
+-----------------------------------------------
+Entity   | Architecture | Library            
+-----------------------------------------------
+sum_min  | arh_comp     | Sumator_Scazator_4bit
+-----------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+textio              | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

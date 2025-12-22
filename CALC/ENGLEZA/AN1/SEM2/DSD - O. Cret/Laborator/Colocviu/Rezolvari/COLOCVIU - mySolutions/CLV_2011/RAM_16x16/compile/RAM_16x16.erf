@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2011\RAM_16x16\src\RAM_16x16.vhd" 
+MESSAGE "Compile Entity "MEMORIE_RAM_16X16"" 
+MESSAGE "Entity `MEMORIE_RAM_16X16' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "MEMORIE_RAM_16X16"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

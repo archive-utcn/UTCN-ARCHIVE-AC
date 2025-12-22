@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd" 
+MESSAGE "Compile Entity "counter_2"" 
+MESSAGE "Entity `counter_2' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "counter_2"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

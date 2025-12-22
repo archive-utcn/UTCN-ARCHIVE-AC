@@ -1,0 +1,121 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[file:.\src\readme.txt]
+File Time Hi=29664766
+File Time Lo=1529079061
+Enabled=1
+[file:.\src\run_me_std.do]
+File Time Hi=29664766
+File Time Lo=1529391559
+Enabled=1
+[file:.\src\run_me_pli.do]
+File Time Hi=29664766
+File Time Lo=1529391559
+Enabled=1
+[file:.\src\uut_std.v]
+File Time Hi=29664766
+File Time Lo=1529704057
+STATE=Compiled
+Enabled=1
+[file:.\src\uut_pli.v]
+File Time Hi=29664766
+File Time Lo=1529704057
+STATE=Compiled
+Enabled=1
+[file:.\src\DAC_SC1.bde]
+File Time Hi=29664766
+File Time Lo=1528454065
+STATE=Warning
+Enabled=1
+[file:.\src\LRC.bde]
+File Time Hi=29664766
+File Time Lo=1528922812
+STATE=Compiled
+Enabled=1
+[file:.\src\ADRCNT.bde]
+File Time Hi=29664766
+File Time Lo=1527829069
+STATE=Warning
+Enabled=1
+[file:.\src\DATREG.v]
+File Time Hi=29664766
+File Time Lo=1528766563
+STATE=Compiled
+Enabled=1
+[file:.\src\SUB.v]
+File Time Hi=29664766
+File Time Lo=1529547808
+STATE=Compiled
+Enabled=1
+[file:.\src\REG4.v]
+File Time Hi=29664766
+File Time Lo=1529235310
+STATE=Compiled
+Enabled=1
+[file:.\src\COMP.v]
+File Time Hi=29664766
+File Time Lo=1528141567
+STATE=Compiled
+Enabled=1
+[file:.\src\DAT_CNT.v]
+File Time Hi=29664766
+File Time Lo=1528454065
+STATE=Compiled
+Enabled=1
+[file:.\src\INTELHEX.v]
+File Time Hi=29664766
+File Time Lo=1528766563
+STATE=Compiled
+Enabled=1
+[file:.\src\ASCIIDEC.v]
+File Time Hi=29664766
+File Time Lo=1527985318
+STATE=Compiled
+Enabled=1
+[file:.\src\CD4029.v]
+File Time Hi=29664766
+File Time Lo=1528141567
+STATE=Compiled
+Enabled=1
+[file:.\src\external\read_byte_ex.c]
+File Time Hi=29664766
+File Time Lo=1530797800
+Enabled=1
+State=Compiled
+[file:.\src\external\data1.hex]
+File Time Hi=29664766
+File Time Lo=1530329053
+Enabled=1
+[file:.\src\external\read_byte_ex.dll]
+File Time Lo=1531266547
+File Time Hi=29664766
+Enabled=1
+[file:.\src\external\read_byte_ex.dlm]
+File Time Lo=1531422796
+File Time Hi=29664766
+Enabled=1
+State=Compiled
+[file:.\src\C-Debug\Gdb_command_usage.do]
+File Time Lo=1530016555
+File Time Hi=29664766
+Enabled=1
+[file:.\src\C-Debug\Initialize_c_code_debug.do]
+File Time Lo=1530172804
+File Time Hi=29664766
+Enabled=1

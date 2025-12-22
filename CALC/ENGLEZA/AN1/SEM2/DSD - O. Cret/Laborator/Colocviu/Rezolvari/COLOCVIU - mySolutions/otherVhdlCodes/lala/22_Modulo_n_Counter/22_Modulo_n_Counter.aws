@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+modulo_n_counter=.\Modulo_n_Counter\Modulo_n_Counter.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+modulo_n_counter=1

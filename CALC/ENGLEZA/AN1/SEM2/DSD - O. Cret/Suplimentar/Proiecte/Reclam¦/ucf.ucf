@@ -1,0 +1,13 @@
+NET "anods(0)" LOC = N16 ;
+NET "anods(1)" LOC = N15 ;
+NET "anods(2)" LOC = P18 ;
+NET "anods(3)" LOC = P17 ;
+NET "display(0)" LOC=T17;
+NET "display(1)" LOC=T18;
+NET "display(2)" LOC=U17;
+NET "display(3)" LOC=U18;
+NET "display(4)" LOC=M14;
+NET "display(5)" LOC=N14;
+NET "display(6)" LOC=L14;
+NET "s(0)" LOC=T5;
+NET "s(1)" LOC=V8;

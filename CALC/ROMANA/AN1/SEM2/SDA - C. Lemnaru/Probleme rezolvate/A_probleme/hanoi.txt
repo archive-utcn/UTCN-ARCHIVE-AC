@@ -1,0 +1,11 @@
+void hanoi(char *tijaA,char *tijaC,char *tijaB,int n)
+{if (n>0){
+hanoi(tijaA,tijaB,tijaC,n-1);
+printf("muta %d de pe %s pe %s\n",n,tijaA,tijaC);
+hanoi(tijaB,tijaC,tijaA,n-1);}}
+int main()
+{int n;
+printf("n= ");
+scanf("%d",&n);
+hanoi("tija1","tija3","tija2",n);
+return 0;}

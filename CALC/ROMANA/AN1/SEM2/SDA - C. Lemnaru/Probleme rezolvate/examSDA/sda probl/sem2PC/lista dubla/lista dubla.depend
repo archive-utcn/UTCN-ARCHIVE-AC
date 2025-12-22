@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305892024 source:d:\facultate\sda\lista dubla\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\counter\library.cfg"  -j "d:\designshdl\counter\shift_register\projlib.cfg"  -d "d:\designshdl\counter\shift_register\compile\"  -work shift_register -dbg -e 100 "d:\designshdl\counter\shift_register\src\shift_register.vhd" 

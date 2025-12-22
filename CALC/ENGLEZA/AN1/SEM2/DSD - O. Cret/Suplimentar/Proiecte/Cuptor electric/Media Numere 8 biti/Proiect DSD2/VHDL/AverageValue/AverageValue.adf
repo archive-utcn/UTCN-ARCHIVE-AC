@@ -1,0 +1,58 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=averagevalue
+
+[Library]
+AverageValue=.\AverageValue.LIB
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+AverageValue=.
+Active_lib=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=filter|Attempting1|0 
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/FrequencyDivider.vhd=-1
+/Register.vhd=-1
+/Anod.vhd=-1
+/DaraGenerator.vhd=-1
+/Filter.vhd=-1
+
+[Files.Data]
+.\src\FrequencyDivider.vhd=VHDL Source Code
+.\src\Register.vhd=VHDL Source Code
+.\src\Anod.vhd=VHDL Source Code
+.\src\DaraGenerator.vhd=VHDL Source Code
+.\src\Filter.vhd=VHDL Source Code
+

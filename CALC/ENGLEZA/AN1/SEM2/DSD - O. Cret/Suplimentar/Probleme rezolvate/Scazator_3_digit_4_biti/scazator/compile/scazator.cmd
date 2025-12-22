@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Scazator_3_digit_4_biti\library.cfg"  -j "c:\My_Designs\Scazator_3_digit_4_biti\scazator\projlib.cfg"  -d "c:\My_Designs\Scazator_3_digit_4_biti\scazator\compile"   -work scazator  -O3 -e 100 -2002 "c:\My_Designs\Scazator_3_digit_4_biti\scazator\src\scazator_3digit.vhd"

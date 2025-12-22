@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Numarator_zecimal_sinc\src\Count_zecimal.vhd" 
+MESSAGE "Compile Entity "Counter"" 
+MESSAGE "Compile Architecture "ARH_Count" of Entity "Counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]" 

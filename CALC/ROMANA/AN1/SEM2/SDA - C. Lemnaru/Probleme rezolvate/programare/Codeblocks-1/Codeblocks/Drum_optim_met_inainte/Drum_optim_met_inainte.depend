@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1305275596 source:c:\codeblocks\drum_optim_met_inainte\main.c
+	<stdio.h>
+	<conio.h>
+

@@ -1,0 +1,5 @@
+MESSAGE "File: C:\Documents and Settings\lh\Desktop\proiectlift\liftp\src\reg4bit.vhd" 
+MESSAGE "Compile Entity "reg"" 
+MESSAGE "Entity `reg' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "reg"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

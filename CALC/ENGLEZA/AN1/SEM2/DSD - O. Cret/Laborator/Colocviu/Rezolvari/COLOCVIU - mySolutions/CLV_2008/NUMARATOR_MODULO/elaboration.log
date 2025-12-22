@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Mon May 22 21:54:44 2017
+
+
+------------------------------------------
+Entity   | Architecture | Library       
+------------------------------------------
+counter  | arh          | NUMARATOR_MODULO
+------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+math_real           | ieee
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

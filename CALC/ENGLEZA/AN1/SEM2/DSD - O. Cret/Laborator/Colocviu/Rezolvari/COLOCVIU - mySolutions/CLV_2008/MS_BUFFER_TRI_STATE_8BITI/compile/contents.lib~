@@ -1,0 +1,5 @@
+20
+~E 1 "./src/MS_BUFFER_TRI_STATE_8BITI.vhd" 4 buffer_tri_state_8_biti
+~A 1 "./src/MS_BUFFER_TRI_STATE_8BITI.vhd" 10 arh
+~E 1 "./src/MS_BUFFER_TRI_STATE_8BITI.vhd" 27 ms_buffer_tri_state_8_biti
+~A 1 "./src/MS_BUFFER_TRI_STATE_8BITI.vhd" 30 arh

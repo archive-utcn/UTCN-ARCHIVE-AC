@@ -1,0 +1,5 @@
+i<>.\src\inverter.vhd
+i<>.\src\and_gate.vhd
+i<>.\src\or_gate.vhd
+i<>.\src\nand_gate.vhd
+i<>.\src\nor_gate.vhd

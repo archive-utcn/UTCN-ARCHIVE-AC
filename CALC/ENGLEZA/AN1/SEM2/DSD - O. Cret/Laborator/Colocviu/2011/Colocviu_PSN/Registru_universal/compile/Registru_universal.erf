@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Registru_universal\src\Registru_universal.vhd" 
+MESSAGE "Compile Entity "Registru"" 
+MESSAGE "Compile Architecture "Registru_Comp" of Entity "Registru"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]" 

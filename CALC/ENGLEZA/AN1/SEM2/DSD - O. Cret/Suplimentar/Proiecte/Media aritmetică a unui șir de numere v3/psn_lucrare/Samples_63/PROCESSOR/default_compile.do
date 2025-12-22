@@ -1,0 +1,7 @@
+alog -dbg -l ovi_apex20ke "$DSN/src/cosim/processor_top_wrapper.v"
+comp "c:/My_Designs/Samples_62/PROCESSOR/processor.hp"
+alog -dbg -l ovi_apex20ke "$DSN/src/processor_top_tb.v"
+alog -dbg -l ovi_apex20ke "c:/My_Designs/Samples_62/PROCESSOR/celoxica/verilog/processor_top.v"
+alog -dbg -l ovi_apex20ke "c:/My_Designs/Samples_62/PROCESSOR/celoxica/verilog/proc_hcc.v"
+alog -work processor_post_synthesis -dbg -l ovi_apex20ke "c:/My_Designs/Samples_62/PROCESSOR/synthesis/processor_top.vm"
+alog -work processor_timing -dbg -l ovi_apex20ke "c:/My_Designs/Samples_62/PROCESSOR/implement/ver1/rev1/simulation/custom/processor_top.vo"

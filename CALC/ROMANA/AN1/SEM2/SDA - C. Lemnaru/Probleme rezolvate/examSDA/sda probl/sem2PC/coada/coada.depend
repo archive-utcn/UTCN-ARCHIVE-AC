@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305840541 source:d:\facultate\sda\coada\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

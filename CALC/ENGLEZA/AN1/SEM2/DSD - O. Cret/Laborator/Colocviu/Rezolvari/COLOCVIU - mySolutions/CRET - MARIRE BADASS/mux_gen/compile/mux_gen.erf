@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\mux_gen\src\mux_gen.vhd" 
+MESSAGE "Compile Entity "mux"" 
+MESSAGE "Entity `mux' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "mux"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

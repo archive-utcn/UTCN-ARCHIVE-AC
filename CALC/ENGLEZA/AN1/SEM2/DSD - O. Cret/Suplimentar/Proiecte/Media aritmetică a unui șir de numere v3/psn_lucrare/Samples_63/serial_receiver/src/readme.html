@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Serial Receiver sample design description</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META name="Author" content="Mariusz Dykierek">
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../readme_files/style.css">
+</HEAD>
+
+<BODY>
+
+<H2>Serial Receiver sample design
+</H2><P>The purpose of the Serial Receiver sample design is to present the very basic transaction level modeling methods in testbench development. An HDL design of simplified serial data receiver is stimulated by a transactional testbench via a so called transactor.
+
+<H3>Goal</H3>
+<P>The goal is to verify the operation of an RT level description of serial receiver. The unit under test receives data over the <I>tx</I> line with respect to the rising edge of the <I>clock</I> signal.
+
+<H3>Implementation</H3>
+
+<H4>The receiver</H4>
+<P>A synthesizable description of the serial receiver (rcv) is implemented in VHDL. It consists of a serial-in-parallel-out shift register collecting the data sent through the <I>tx</I> signal (rcv_reg), a synchronization circuit that detects that a valid byte has arrived (synchronizer) and a register that holds the last received byte (latched_val). The <I>latched_val</I> register contains piece of code, that prints the received character to the console window.
+
+<H4>The test wrapper</H4>
+<P>A testing module is described in SystemC. The wrapper provides an interface for connecting the instantiated test module and the transactor to the tested entity.
+
+<H4>The transactor</H4>
+<P>The transactor class provides two methods that translate function calls to certain activity of the <I>tx</I> and <I>reset</I> signals. The test can focus on certain actions i.e. function calls instead of toggling particular signals.<BR>
+<UL>
+	<LI><B>initialize()</B> method takes care of proper reset.
+	<LI><B>send_message(char *msg)</B> takes a null terminated string as an argument and sends consecutive characters over to the receiver.
+</UL>
+
+<H4>The test</H4>
+<P>The test module executes following scenario. First, the <I>initialize()</I> transactor method is called to reset receiver registers and the synchronizing circuit. After that, the <I>send_message("This is an example of SystemC Transaction Level testbench.")</I> function call is used to verify functionality of the receiver.<BR>
+
+<H4>Test environment</H4>
+<P>The test environment is assembled on a Block Diagram (test_env.bde). It instantiates and connects the test wrapper and the tested receiver. Functionally it implements the idea presented in Figure 1.<BR>
+<P CLASS="centr"><BR>
+<IMG SRC="../readme_files/diagram.gif" WIDTH="500" HEIGHT="158" BORDER="0" ALT="Test environment diagram"><BR>
+Figure 1. Test environment diagram
+
+<H3>Files in the design</H3>
+<DL>
+	<DT>Macro files:
+		<DD><I>runme.do</I> - A DO macro file that compiles HDL and C++ source files, adds the SystemC modules to the library, initializes and runs the simulation.
+		<DD><BR>
+	<DT>VHDL source files:
+		<DD><I>clk_gen.vhd</I> - Clocking signal generator.
+		<DD><I>rcv_reg.vhd</I> - Serial-in-parallel-out shift register.
+		<DD><I>synchronizer.vhd</I> - Synchronization circuit.
+		<DD><I>latched_val.vhd</I> - Received byte register.
+		<DD><BR>
+	<DT>Block Diagram Editor files:
+		<DD><I>rcv.bde</I> - Serial receiver diagram.
+		<DD><I>test_env.bde</I> - Test environment diagram.
+		<DD><BR>
+	<DT>C++ files:
+		<DD><I>transactor_args.h</I> - Header file that defines types used by transactor.
+		<DD><I>transactor_if.h</I> - Header file that defines transactor signal and task interface classes.
+		<DD><I>transactor.h</I> - Transactor header file.
+		<DD><I>transactor.cpp</I> - C++ file that implements transactor methods.
+		<DD><I>test.h</I> - Test header file.
+		<DD><I>test.cpp</I> - C++ file that implements test scenario.
+		<DD><I>testwrapper.h</I> - Header file that describes test wrapper module.
+		<DD><I>testwrapper.cpp</I> - C++ file including test wrapper header file.
+		<DD><BR>
+	<DT>C/C++ Configuration files
+		<DD><I>testwrapper.dlm</I> - A C/C++ configuration for C++ files necessary to build SystemC source files into a DLL.
+</UL>
+</BODY>
+</HTML>
+

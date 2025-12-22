@@ -1,0 +1,120 @@
+I 000044 55 1273          1493506521383 arh
+(_unit VHDL (clock_divider 0 5 (arh 0 10 ))
+  (_version v33)
+  (_time 1493506521384 2017.04.30 01:55:21)
+  (_source (\./src/freq_divider.vhd\))
+  (_use (std(standard))(ieee(numeric_std))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493506521333)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in ))))
+    (_port (_internal clock_out ~extieee.std_logic_1164.std_logic 0 7 (_entity (_out ))))
+    (_signal (_internal count ~extSTD.STANDARD.INTEGER 0 12 (_architecture (_uni ((i 1))))))
+    (_signal (_internal tmp ~extieee.std_logic_1164.std_logic 0 13 (_architecture (_uni ((i 2))))))
+    (_process
+      (line__17(_architecture 0 0 17 (_process (_simple)(_target(2)(3)(4))(_sensitivity(0)(1))(_read(3)(4)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1273          1493506967120 arh
+(_unit VHDL (clock_divider 0 5 (arh 0 10 ))
+  (_version v33)
+  (_time 1493506967119 2017.04.30 02:02:47)
+  (_source (\./src/freq_divider.vhd\))
+  (_use (std(standard))(ieee(numeric_std))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493506521333)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in ))))
+    (_port (_internal clock_out ~extieee.std_logic_1164.std_logic 0 7 (_entity (_out ))))
+    (_signal (_internal count ~extSTD.STANDARD.INTEGER 0 12 (_architecture (_uni ((i 1))))))
+    (_signal (_internal tmp ~extieee.std_logic_1164.std_logic 0 13 (_architecture (_uni ((i 2))))))
+    (_process
+      (line__17(_architecture 0 0 17 (_process (_simple)(_target(2)(3)(4))(_sensitivity(0)(1))(_read(3)(4)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1273          1493507026779 arh
+(_unit VHDL (clock_divider 0 5 (arh 0 10 ))
+  (_version v33)
+  (_time 1493507026778 2017.04.30 02:03:46)
+  (_source (\./src/freq_divider.vhd\))
+  (_use (std(standard))(ieee(numeric_std))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493506521333)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in ))))
+    (_port (_internal clock_out ~extieee.std_logic_1164.std_logic 0 7 (_entity (_out ))))
+    (_signal (_internal count ~extSTD.STANDARD.INTEGER 0 12 (_architecture (_uni ((i 1))))))
+    (_signal (_internal tmp ~extieee.std_logic_1164.std_logic 0 13 (_architecture (_uni ((i 2))))))
+    (_process
+      (line__16(_architecture 0 0 16 (_process (_simple)(_target(2)(3)(4))(_sensitivity(1)(0))(_read(3)(4)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+  )
+  (_model . arh 1 -1
+  )
+)
+V 000044 55 1273          1493507028170 arh
+(_unit VHDL (clock_divider 0 5 (arh 0 10 ))
+  (_version v33)
+  (_time 1493507028169 2017.04.30 02:03:48)
+  (_source (\./src/freq_divider.vhd\))
+  (_use (std(standard))(ieee(numeric_std))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493506521333)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 6 (_entity (_in ))))
+    (_port (_internal clock_out ~extieee.std_logic_1164.std_logic 0 7 (_entity (_out ))))
+    (_signal (_internal count ~extSTD.STANDARD.INTEGER 0 12 (_architecture (_uni ((i 1))))))
+    (_signal (_internal tmp ~extieee.std_logic_1164.std_logic 0 13 (_architecture (_uni ((i 2))))))
+    (_process
+      (line__16(_architecture 0 0 16 (_process (_simple)(_target(2)(3)(4))(_sensitivity(0)(1))(_read(3)(4)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+  )
+  (_model . arh 1 -1
+  )
+)

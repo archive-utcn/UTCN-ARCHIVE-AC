@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd" 
+MESSAGE "Compile Entity "JK_Sinc"" 
+MESSAGE "Compile Architecture "ARH_COMP" of Entity "JK_Sinc"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]" 

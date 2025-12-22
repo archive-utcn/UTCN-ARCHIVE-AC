@@ -1,0 +1,41 @@
+V 000042 55 1456          1495395580984 a
+(_unit VHDL (alu 0 4 (a 0 10 ))
+  (_version v33)
+  (_time 1495395580983 2017.05.21 22:39:40)
+  (_source (\./src/alu.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495395580894)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_type (_internal ~BIT_VECTOR{2~downto~0}~12 0 6 (_array ~extSTD.STANDARD.BIT ((_downto (i 2)(i 0))))))
+    (_port (_internal sel ~BIT_VECTOR{2~downto~0}~12 0 6 (_entity (_in ))))
+    (_port (_internal c ~extieee.std_logic_1164.std_logic 0 7 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_out ))))
+    (_process
+      (line__12(_architecture 0 0 12 (_process (_simple)(_target(4)(3))(_sensitivity(1)(0)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+    (_type (_external ~extSTD.STANDARD.BIT_VECTOR (std STANDARD BIT_VECTOR)))
+  )
+  (_static
+    (0 0 0 )
+    (0 0 1 )
+    (0 1 0 )
+    (0 1 1 )
+    (1 0 0 )
+    (1 0 1 )
+    (1 1 0 )
+  )
+  (_model . a 1 -1
+  )
+)

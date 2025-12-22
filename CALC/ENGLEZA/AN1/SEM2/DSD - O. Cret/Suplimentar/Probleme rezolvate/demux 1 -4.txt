@@ -1,0 +1,40 @@
+ entity dmux is
+	 port(x:in bit;
+	 s:in bit_vector(1 downto 0);
+	 y:out bit_vector(3 downto 0));
+ end dmux;
+ architecture arh_dmux of dmux is
+ begin
+ y<=('0','0','0',x)when s="00" else
+ ('0','0',x,'0')when s="01" else
+ ('0',x,'0','0')when s="10" else
+	 (x,'0','0','0')when s="11";
+ end arh_dmux;
+ entity ms_dmux is
+ end ms_dmux;
+ architecture arh_msdmux of ms_dmux is
+ component dmux is
+	 port(x:in bit;
+	 s:in bit_vector(1 downto 0);
+	 y:out bit_vector(3 downto 0));
+ end component dmux ;
+ signal x:bit;
+ signal s:bit_vector(1 downto 0);
+ signal y:bit_vector(3 downto 0);
+ begin
+	 ust:dmux port map(x=>x, s=>s, y=>y);
+	 stim: process
+	 begin
+		 x<='1';
+		 s<="00";
+		 wait for 40 ns;
+		 s<="01";
+		 wait for 40 ns;
+		 s<="10";
+		 wait for 40 ns;
+		 s<="11";
+		 wait for 40 ns;
+		 wait;
+	 end process stim;
+	 end arh_msdmux;
+ 

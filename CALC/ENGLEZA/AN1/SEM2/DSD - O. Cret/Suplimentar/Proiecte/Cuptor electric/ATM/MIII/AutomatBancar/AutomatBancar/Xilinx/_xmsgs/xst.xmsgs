@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/top_level</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/top_level.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/top_level.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/top_level/final</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/top_level.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/top_level.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/afisare</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/afis.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/afis.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/afisare/functionare</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/afis.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/afis.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/afisor_errPin</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/afisor_errpin.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/afisor_errpin.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/afisor_errPin/errPin</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/afisor_errpin.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/afisor_errpin.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/afisor_suma</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/afisor_suma.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/afisor_suma.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/afisor_suma/afis_suma</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/afisor_suma.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/afisor_suma.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/decod_mii</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/decodificator_mii.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/decodificator_mii.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/decod_mii/comp</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/decodificator_mii.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/decodificator_mii.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/decod</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/decodificator_sute.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/decodificator_sute.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/decod/comp</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/decodificator_sute.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/decodificator_sute.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/decod_zeci</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/decodificator_zeci.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/decodificator_zeci.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/decod_zeci/comp</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/decodificator_zeci.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/decodificator_zeci.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/div</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/div_frecv.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/div_frecv.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/div/comp</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/div_frecv.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/div_frecv.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/cod</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/mux4_1.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/mux4_1.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/cod/arh</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/mux4_1.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/mux4_1.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/mux_chit</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/mux_chit.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/mux_chit.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/mux_chit/mux_chit_arh</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/mux_chit.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/mux_chit.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_sute</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/num_sute.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/num_sute.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_sute/arht</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/num_sute.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/num_sute.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_adrese</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/numarator_adrese.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/numarator_adrese.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_adrese/ar</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/numarator_adrese.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/numarator_adrese.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_mii</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/numarator_mii.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/numarator_mii.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_mii/numarator_mii_arh</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/numarator_mii.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/numarator_mii.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_zeci</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/numarator_zeci.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/numarator_zeci.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/numarator_zeci/arh</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/numarator_zeci.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/numarator_zeci.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/poarta_sau</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/poarta_si.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/poarta_si.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/poarta_sau/poarta_sau_arh</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/poarta_si.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/poarta_si.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/poarta_si_retr</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/poarta_si_retr.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/poarta_si_retr.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/poarta_si_retr/poarta_si_retr_arh</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/poarta_si_retr.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/poarta_si_retr.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/ram_suma</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/ram_suma_2_0.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/ram_suma_2_0.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/ram_suma/comportamental</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/ram_suma_2_0.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/ram_suma_2_0.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/memrom</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/rom_id_pin.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/rom_id_pin.vhd</arg>
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3215" delta="unknown" >Unit <arg fmt="%s" index="1">work/memrom/comp_rom</arg> is now defined in a different file: was <arg fmt="%s" index="2">C:/Xilinx/1/rom_id_pin.vhd</arg>, now is <arg fmt="%s" index="3">C:/Xilinx/asdsadas/rom_id_pin.vhd</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/top_level.vhd</arg>&quot; line <arg fmt="%d" index="2">223</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">pinrom, confirmare, inscazr</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1304" delta="unknown" >Contents of register &lt;<arg fmt="%s" index="1">ensuma</arg>&gt; in unit &lt;<arg fmt="%s" index="2">top_level</arg>&gt; never changes during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/numarator_mii.vhd</arg>&quot; line <arg fmt="%d" index="2">16</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">Q</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/div_frecv.vhd</arg>&quot; line <arg fmt="%d" index="2">12</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">enable</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/decodificator_zeci.vhd</arg>&quot; line <arg fmt="%d" index="2">28</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/decodificator_sute.vhd</arg>&quot; line <arg fmt="%d" index="2">28</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/decodificator_mii.vhd</arg>&quot; line <arg fmt="%d" index="2">17</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/afis.vhd</arg>&quot; line <arg fmt="%d" index="2">35</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">enable</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1304" delta="unknown" >Contents of register &lt;<arg fmt="%s" index="1">catod</arg>&gt; in unit &lt;<arg fmt="%s" index="2">afisare</arg>&gt; never changes during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/afisor_errpin.vhd</arg>&quot; line <arg fmt="%d" index="2">30</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">enable</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/afisor_suma.vhd</arg>&quot; line <arg fmt="%d" index="2">34</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">enable</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/mux4_1.vhd</arg>&quot; line <arg fmt="%d" index="2">23</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/mux4_1.vhd</arg>&quot; line <arg fmt="%d" index="2">16</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">a, an1, b, an2, c, an3, d, an4</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/mux_chit.vhd</arg>&quot; line <arg fmt="%d" index="2">17</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">A, B</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">suma</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">catodcard</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">miiint</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">enafisCard</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">suteint</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">idrom</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">zecioutt</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">suteoutt</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">zeciint</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">ok_cardvar</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">anodcard</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">miioutt</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">2</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">S_mux</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">enafisSuma</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">suma_invalidavar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">enafis</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ok_tranzvar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">10</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">$mux0037</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/top_level.vhd</arg>&quot; line <arg fmt="%d" index="2">262</arg>: The result of a <arg fmt="%d" index="3">2</arg>x<arg fmt="%d" index="4">10</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">10</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx/asdsadas/top_level.vhd</arg>&quot; line <arg fmt="%d" index="2">265</arg>: The result of a <arg fmt="%d" index="3">4</arg>x<arg fmt="%d" index="4">7</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">10</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="1988" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">top_level</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mcompar__cmp_eq0000</arg>&gt;, &lt;<arg fmt="%s" index="3">Mcompar__cmp_ne0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_COMPARE_1</arg>&gt; and unit &lt;<arg fmt="%s" index="5">LPM_COMPARE_3</arg>&gt; are dual, second instance is removed
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">afis_errPin/Mtridata_catod_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top_level</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;afis_errPin/Mtridata_catod_2&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="unknown" >in unit <arg fmt="%s" index="1">top_level</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">afis_errPin/Mtridata_catod&lt;0&gt;</arg> and <arg fmt="%s" index="3">afis_errPin/Mtridata_catod&lt;2&gt;</arg> <arg fmt="%s" index="4">afis_errPin/Mtridata_catod&lt;2&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">afis_errPin/Mtridata_catod_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top_level</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;afis_errPin/Mtridata_anod_3&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="unknown" >in unit <arg fmt="%s" index="1">top_level</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">afis_errPin/Mtridata_catod&lt;3&gt;</arg> and <arg fmt="%s" index="3">afis_errPin/Mtridata_anod&lt;3&gt;</arg> <arg fmt="%s" index="4">afis_errPin/Mtridata_anod&lt;3&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">afis_errPin/Mtridata_catod_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top_level</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;afis_errPin/Mtridata_catod_6&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="unknown" >in unit <arg fmt="%s" index="1">top_level</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">afis_errPin/Mtridata_catod&lt;1&gt;</arg> and <arg fmt="%s" index="3">afis_errPin/Mtridata_catod&lt;6&gt;</arg> <arg fmt="%s" index="4">afis_errPin/Mtridata_catod&lt;6&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">afis_errPin/Mtridata_catod_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top_level</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;afis_errPin/Mtridata_anod_0&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="unknown" >in unit <arg fmt="%s" index="1">top_level</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">afis_errPin/Mtridata_catod&lt;5&gt;</arg> and <arg fmt="%s" index="3">afis_errPin/Mtridata_anod&lt;0&gt;</arg> <arg fmt="%s" index="4">afis_errPin/Mtridata_anod&lt;0&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">afis_errPin/Mtridata_catod_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top_level</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">afis_errPin/Mtridata_catod_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">top_level</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2146" delta="unknown" >In block &lt;<arg fmt="%s" index="1">top_level</arg>&gt;, <arg fmt="%s" index="2">Counter</arg> &lt;<arg fmt="%s" index="3">afis_errPin/clkdiv</arg>&gt; </msg>
+
+<msg type="warning" file="Xst" num="2042" delta="unknown" >Unit <arg fmt="%s" index="1">top_level</arg>: <arg fmt="%d" index="2">23</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="warning" file="Xst" num="2042" delta="unknown" >Unit <arg fmt="%s" index="1">afisare</arg>: <arg fmt="%d" index="2">4</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">S_mux_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top_level</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="unknown" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>

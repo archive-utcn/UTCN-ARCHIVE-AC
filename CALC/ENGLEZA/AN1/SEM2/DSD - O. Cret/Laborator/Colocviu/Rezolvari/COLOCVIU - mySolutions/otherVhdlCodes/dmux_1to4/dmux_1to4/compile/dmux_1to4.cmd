@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\dmux_1to4\library.cfg"  -j "D:\designshdl\dmux_1to4\dmux_1to4\projlib.cfg"  -d "D:\designshdl\dmux_1to4\dmux_1to4\compile\"  -work dmux_1to4 -dbg -e 100 "D:\designshdl\dmux_1to4\dmux_1to4\src\dmux_1to4.vhd" 

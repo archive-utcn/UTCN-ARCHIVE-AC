@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1274024242 source:d:\code_blocks\domi\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+

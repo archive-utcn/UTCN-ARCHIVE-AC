@@ -1,0 +1,5 @@
+MESSAGE "File: d:\designshdl\mux_2la1\mux_2la1\src\mux_2la1.vhd" 
+MESSAGE "Compile Entity "mux_2la1"" 
+MESSAGE "Entity `mux_2la1' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "mux_2la1"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]" 

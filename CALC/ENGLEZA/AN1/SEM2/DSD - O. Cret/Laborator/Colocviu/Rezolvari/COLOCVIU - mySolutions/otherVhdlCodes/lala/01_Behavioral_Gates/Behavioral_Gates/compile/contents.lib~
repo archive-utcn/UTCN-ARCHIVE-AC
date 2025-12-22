@@ -1,0 +1,11 @@
+191
+~E 1 "./src/inverter.vhd" 4 inverter
+~A 1 "./src/inverter.vhd" 9 a
+~E 1 "./src/and_gate.vhd" 4 and_gate
+~A 1 "./src/and_gate.vhd" 9 a
+~E 1 "./src/nor_gate.vhd" 4 nor_gate
+~A 1 "./src/nor_gate.vhd" 9 a
+~E 1 "./src/nand_gate.vhd" 4 nand_gate
+~A 1 "./src/nand_gate.vhd" 9 a
+~E 1 "./src/or_gate.vhd" 4 or_gate
+~A 1 "./src/or_gate.vhd" 9 a

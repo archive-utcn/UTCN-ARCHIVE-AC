@@ -1,0 +1,5 @@
+90
+~E 1 "./src/dmux_1to4.vhd" 4 dmux
+~A 1 "./src/dmux_1to4.vhd" 11 arh
+~E 1 "./src/dmux_1to4.vhd" 31 dmux_n
+~A 1 "./src/dmux_1to4.vhd" 38 arh

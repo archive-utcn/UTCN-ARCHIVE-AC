@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\COMPARATOR_COMPORTAMENTAL\projlib.cfg"  -d "d:\designshdl\CLV_2008\COMPARATOR_COMPORTAMENTAL\compile\"  -work COMPARATOR_COMPORTAMENTAL -dbg -e 100 "d:\designshdl\CLV_2008\COMPARATOR_COMPORTAMENTAL\src\COMPARATOR_COMPORTAMENTAL.vhd" 

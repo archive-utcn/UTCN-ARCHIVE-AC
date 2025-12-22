@@ -1,0 +1,210 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 8030000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$S 1 1 sysclk
+$S 2 1 rst
+I 2 "a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 3 2 8 datain
+$SC 4-+7
+$BUS S +1 2 8 dataout
+$SC +1-+7
+P 0 1-20 CS "0"
+P 0 12 Color "12582976"
+P 0 3 Color "32960"
+P 0 2 Color "8405184"
+P 0 1 Color "8421440"
+$WAVES 1
+=0 T 0
+=1 T 20k
+R 1 80 =2 T 100k
+$VALUES
+V 1
+U
+R 2 40 0 1
+V 1
+0
+$END
+$WAVES 2
+*0
+=3 D 0 1
+*1
+$VALUES
+V 3
+U
+0
+1
+$END
+$WAVES 4 5
+*0
+=4 D 100k 1
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 6
+*0
+*4
+=5 D 6400k 1
+$VALUES
+V 3
+U
+0
+1
+$END
+$WAVES 7
+*0
+*4
+R 1 2 =6 D 3200k 1
+$VALUES
+V 4
+U
+0
+1
+0
+$END
+$WAVES 8
+*0
+*4
+R 1 4 =7 D 1600k 1
+$VALUES
+V 1
+U
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 9
+*0
+*4
+R 1 9 =8 D 800k 1
+$VALUES
+V 1
+U
+R 2 5 0 1
+$END
+$WAVES +1
+*0
+*4
+R 1 19 =9 D 400k 1
+$VALUES
+V 1
+U
+R 2 10 0 1
+$END
+$WAVES +1
+*0
+*4
+R 1 39 =10 D 200k 1
+$VALUES
+V 1
+U
+R 2 20 0 1
+$END
+$WAVES +2 +2
+*0
+=11 D 0 2
+=12 D 1230 1
+=13 D 7525470 1
+=14 D 399460 1
+$VALUES
+V 5
+U
+X
+0
+1
+0
+$END
+$WAVES 14
+*0
+*11
+=15 D 1240 1
+=16 D 7525400 1
+=17 D 399450 1
+$VALUES
+V 5
+U
+X
+0
+1
+0
+$END
+$WAVES +2
+*0
+*11
+=18 D 6270 1
+=19 D 7525160 1
+=20 D 399760 1
+$VALUES
+V 5
+U
+X
+0
+1
+0
+$END
+$WAVES +1
+*0
+*11
+=21 D 2690 1
+=22 D 3125050 1
+=23 D 999790 1
+=24 D 600210 1
+=25 D 199790 1
+=26 D 1400210 1
+=27 D 1599790 1
+$VALUES
+V 2
+U
+X
+R 2 3 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*11
+=28 D 2510 1
+=29 D 2325370 1
+R 2 3 =30 D 799550 1 =31 D 800450 1
+*30
+$VALUES
+V 2
+U
+X
+R 2 4 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*11
+=32 D 3450 1
+=33 D 2125080 1
+=34 D 199840 1
+R 2 7 =35 D 400160 1 =36 D 399840 1
+$VALUES
+V 2
+U
+X
+R 2 8 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*11
+*21
+=37 D 2125050 1
+R 2 14 *25 =38 D 200210 1
+*25
+$VALUES
+V 2
+U
+X
+R 2 15 0 1
+V 1
+0
+$END
+$ENDWAVE

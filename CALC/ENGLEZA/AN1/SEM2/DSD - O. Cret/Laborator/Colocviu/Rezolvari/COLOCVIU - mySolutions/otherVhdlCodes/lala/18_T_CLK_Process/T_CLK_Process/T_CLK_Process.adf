@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=T_CLK_Process
+
+[Library]
+T_CLK_Process=.\T_CLK_Process.lib
+
+[$LibMap$]
+T_CLK_Process=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/t.vhd=-1
+
+[Files.Data]
+.\src\t.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=bist_t|comportamental|0   
+ShowHide=ShowTopLevel
+Selected=

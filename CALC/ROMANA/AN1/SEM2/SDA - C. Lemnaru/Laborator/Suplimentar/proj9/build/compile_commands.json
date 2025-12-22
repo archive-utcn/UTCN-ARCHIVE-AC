@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/proj9.dir/includes_C.rsp -g -Wall -o CMakeFiles/proj9.dir/main.c.obj -c C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/main.c",
+  "file": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/main.c",
+  "output": "CMakeFiles/proj9.dir/main.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build/proj9",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/vector.dir/includes_C.rsp -g -o CMakeFiles/vector.dir/vector/Vector.c.obj -c C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/vector/Vector.c",
+  "file": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/vector/Vector.c",
+  "output": "proj9/CMakeFiles/vector.dir/vector/Vector.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build/proj9",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/stack.dir/includes_C.rsp -g -o CMakeFiles/stack.dir/intStack/intStack.c.obj -c C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/intStack/intStack.c",
+  "file": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/intStack/intStack.c",
+  "output": "proj9/CMakeFiles/stack.dir/intStack/intStack.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build/proj9",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/queue.dir/includes_C.rsp -g -o CMakeFiles/queue.dir/intQueue/intQueue.c.obj -c C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/intQueue/intQueue.c",
+  "file": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/intQueue/intQueue.c",
+  "output": "proj9/CMakeFiles/queue.dir/intQueue/intQueue.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build/proj9",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/array.dir/includes_C.rsp -g -o CMakeFiles/array.dir/array/array_int.c.obj -c C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/array/array_int.c",
+  "file": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/array/array_int.c",
+  "output": "proj9/CMakeFiles/array.dir/array/array_int.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build/proj9",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/intGraph.dir/includes_C.rsp -g -o CMakeFiles/intGraph.dir/intGraph/intGraph.c.obj -c C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/intGraph/intGraph.c",
+  "file": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/lib/intGraph/intGraph.c",
+  "output": "proj9/CMakeFiles/intGraph.dir/intGraph/intGraph.c.obj"
+}
+]

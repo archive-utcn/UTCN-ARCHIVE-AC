@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=rotate_seq
+
+[Library]
+rotate_seq=.\rotate_seq.lib
+
+[$LibMap$]
+rotate_seq=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/rotate_seq.vhd=-1
+/shift_reg.vhd=-1
+
+[Files.Data]
+.\src\rotate_seq.vhd=VHDL Source Code
+.\src\shift_reg.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=shift_register|arh|0 
+ShowHide=ShowTopLevel
+Selected=

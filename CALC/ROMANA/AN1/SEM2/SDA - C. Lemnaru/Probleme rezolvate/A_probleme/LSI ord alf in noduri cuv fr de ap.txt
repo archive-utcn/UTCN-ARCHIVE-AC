@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Laborator 1
+//Problema 3.3 din indrumator
+
+//3.3. De la tastatura se citesc cuvinte. Sa se creeze o lista simplu înlantuita ordonata alfabetic, care contine în noduri cuvintele distincte
+//si frecventa lor de aparitie.
+//Se va afisa continutul listei în ordine alfabetica .
+
+typedef struct nod{
+                char c[20];
+                int i;
+                struct nod *urm;
+                } NOD;
+NOD *prim=NULL;
+
+void adaugare()
+{
+    NOD *q,*p;
+    int k=1;
+    q=prim;
+    char d[20]="";
+    printf("Introduceti un cuvant : ");gets(d);
+
+    //Verificam daca Lista este vida
+    if(prim==NULL)
+    {
+        p=(NOD*)malloc(sizeof(NOD));
+        strcpy(p->c,d);
+        p->i=1;
+        p->urm=NULL;
+        prim=p;
+    }
+
+    else
+    {
+        //Verificam Daca nu exista deja in lista
+        while(q&&k==1)
+            {
+             if(strcmp(q->c,d)==0)
+                {
+                    q->i++;k=0;
+                }
+             q=q->urm;
+            }
+
+        if(q==NULL&&k==1)
+        {
+            q=prim;
+            p=(NOD*)malloc(sizeof(NOD));
+            strcpy(p->c,d);
+            p->i=1;
+            p->urm=NULL;
+
+            if(strcmp(prim,d)==1) //Verificam daca d > prim->c si inseram inaintea lui prim
+            {
+                p->urm=prim;
+                prim=p;
+            }
+            else
+            {
+                while(q->urm&&strcmp(d,q->urm->c)!=-1) q=q->urm;//Verificam daca d > q->urm->c cautare poz + inserare inainte
+                p->urm=q->urm;
+                q->urm=p;
+            }
+        }
+    }
+
+}
+
+void afisare()
+{
+    NOD *q=prim;
+    while(q)
+        {
+            printf("\n%s apare de %d ori !",q->c,q->i);
+            q=q->urm;
+        }
+}
+
+int main()
+{
+char c='0';
+    while(c!='q')
+    {
+        printf("\n1-Adaugare  q-QUIT 2-Afisare  : \n");
+        c=getch();
+        switch(c)
+        {
+            case '1': { adaugare(); break; }
+            case '2': { afisare(); break; }
+        }
+     }
+}

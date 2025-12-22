@@ -1,0 +1,29 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 17 1 4 CERERE
+$SC 1-13/4
+$BUS IN 34 1 4 IEUD
+$SC 18-30/4
+$IN +5 2 UI
+$OUT +4 2 UD
+$IN +4 2 OK
+$IN +4 2 RESET
+$INOUT +4 2 SENZORI
+$BUS S 71 1 4 IEUD_O
+$SC 55-67/4
+$BUS S 88 1 4 OUT_NUM2
+$SC 72-84/4
+$BUS S +21 1 4 7 0 ""
+$SC 89-+12/4
+$BUS S +21 1 4 ETAJ
+$SC 106-+12/4
+$S +5 2 s1
+$S +4 2 s2
+$S +4 2 C
+$S +4 2 UP
+$S +4 2 CLK_NUM
+$S +4 2 7 0 "1"
+$S +4 2 7 0 "2"
+$ENDWAVE

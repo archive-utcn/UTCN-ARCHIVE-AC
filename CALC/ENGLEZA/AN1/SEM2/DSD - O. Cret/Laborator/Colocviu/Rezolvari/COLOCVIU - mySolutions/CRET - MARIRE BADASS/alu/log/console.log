@@ -1,0 +1,213 @@
+acom -reorder $DSN/src/aluu.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\alu\src\aluu.vhd
+# Compile Entity "alu"
+# Compile Architecture "a" of Entity "alu"
+# Top-Level unit detected
+# Entity  =>   alu
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  alu a
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2419 kB (elbread=1070 elab2=300 kernel=1049 sdf=0)
+# 2:38 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: alu (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom $DSN/src/aluu.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu\src\aluu.vhd
+# Compile Entity "alu"
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0019: aluu.vhd : (51, 15): Keyword "then" expected.
+# Error: COMP96_0019: aluu.vhd : (53, 7): Keyword "process" expected.
+# Error: COMP96_0015: aluu.vhd : (54, 7): ';' expected.
+# Error: COMP96_0016: aluu.vhd : (54, 14): Design unit declaration expected.
+# Error: COMP96_0019: aluu.vhd : (55, 23): Keyword "of" expected.
+# Error: COMP96_0018: aluu.vhd : (55, 23): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/aluu.vhd.
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/aluu.vhd.
+acom $DSN/src/aluu.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu\src\aluu.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Error: COMP96_0078: aluu.vhd : (30, 15): Unknown identifier "U".
+# Error: COMP96_0133: aluu.vhd : (30, 15): Cannot find object declaration.
+# Error: COMP96_0104: aluu.vhd : (30, 15): Undefined type of expression.
+# Error: COMP96_0077: aluu.vhd : (30, 15): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0078: aluu.vhd : (31, 10): Unknown identifier "U".
+# Error: COMP96_0133: aluu.vhd : (31, 10): Cannot find object declaration.
+# Error: COMP96_0104: aluu.vhd : (31, 10): Undefined type of expression.
+# Error: COMP96_0077: aluu.vhd : (31, 10): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/aluu.vhd.
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/aluu.vhd.
+acom $DSN/src/aluu.vhd
+# Compile...
+# File: D:\designshdl\CRET\alu\src\aluu.vhd
+# Compile Entity "alu"
+# Entity `alu' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "alu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/aluu.vhd.
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/aluu.vhd.
+# Clearing workspace libraries...
+# Library Manager: Library "c2421_bcd" contents cleared.
+# Library Manager: Library "bcd_grey" contents cleared.
+# Library Manager: Library "alu" contents cleared.
+# Library Manager: Library "comparator_comp" contents cleared.
+# Library Manager: Library "codificator" contents cleared.
+# Library Manager: Library "comparator_data_flow" contents cleared.
+# Library Manager: Library "decodificator_zec" contents cleared.
+# Library Manager: Library "decodificator_binar" contents cleared.
+# Library Manager: Library "excess3" contents cleared.
+# Library Manager: Library "dmux_gen" contents cleared.
+# Library Manager: Library "mux_gen" contents cleared.
+# Library Manager: Library "ram" contents cleared.
+# Library Manager: Library "porti" contents cleared.
+# Library Manager: Library "rom" contents cleared.
+# Library Manager: Library "xor_nxor" contents cleared.
+acom -reorder $DSN/src/aluu.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\alu\src\aluu.vhd
+# Compile Entity "alu"
+# Compile Architecture "arh" of Entity "alu"
+# Top-Level unit detected
+# Entity  =>   alu
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  alu arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 3:00 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: alu (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: 3:14 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\alu_8\alu_8.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "alu_8" has been set as active.

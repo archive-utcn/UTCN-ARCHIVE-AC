@@ -1,0 +1,23 @@
+timestamp=1305193589791
+
+[counter]
+A/arh_count=A/ARH_Count 21|./src/Count_SINC.vhd|12|1*1881
+B/arh_count=3*0
+I=0*2088
+I/arh_count=I/ARH_Count 0*3580
+M=11|0|v147|1305192834572|./src/Count_SINC.vhd|0*1726*0x5a7b1cc8cbba47c0ad9d1aadadb8b5b018b4f218|0*2013*0x7bd7e13dc0415552f89596087806a8cf
+M/arh_count=M/ARH_Count 21|0|v147|1305193589611|./src/Count_SINC.vhd|0*3070*0x4d15e63e8a71e26722aad53907a2bed132332990|0*3492*0x7bd7e13dc0415552f89596087806a8cf
+R=./src/Count_SINC.vhd|6
+
+[~A]
+ModifyID=20
+Version=73
+
+[~MFT]
+0=30|0Numarator_binar_sincron.mgf|3580|1300
+1=2|1Numarator_binar_sincron.mgf|1881|1881
+3=0|3Numarator_binar_sincron.mgf|0|0
+
+[~U]
+counter=11|0*1528|
+

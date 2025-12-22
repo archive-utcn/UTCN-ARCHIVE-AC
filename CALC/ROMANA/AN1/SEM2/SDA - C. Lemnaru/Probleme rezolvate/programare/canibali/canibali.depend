@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305231613 source:c:\users\anca\desktop\canibali\main.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+

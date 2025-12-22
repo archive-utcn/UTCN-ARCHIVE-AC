@@ -1,0 +1,32 @@
+[General]
+CurrentVersion=103
+[COMPILESTATUS|.\src\hexadec.bde]
+FileTimeLow=30479739
+Status=Compiled
+[CACHEDOC|Aldec.Project.Generic.7|.\hexadec\hexadec.adf|]
+Path=/hexadec
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Built-in symbols=1
+hexadec=0
+[CACHEDOC|Aldec.BDE.7|.\Comparator\src\Comparator.bde|]
+PROBEBAL=0
+[CACHEDOC|Aldec.BDE.7|.\dmux\src\dddmux.bde|]
+PROBEBAL=0
+[CACHEDOC|Aldec.BDE.7|.\hexa\src\hexa.bde|]
+PROBEBAL=0
+[CACHEDOC|Aldec.BDE.7|.\hexadecimal.bde|]
+PROBEBAL=0
+[COMPILESTATUS|.\compile\hexadec.vhd]
+FileTimeLow=30479950
+Status=Compiled
+[Gui config]
+RunFor=100 ns
+[OPENDOC|Aldec.BDE.7|.\Comparator\src\Comparator.bde|]
+SymbolsToolbox=0
+ZOOMOFSETS_PAGES=1,1,1,2,50,50,
+[OPENDOC|Aldec.BDE.7|.\hexa\src\hexa.bde|]
+SymbolsToolbox=0
+ZOOMOFSETS_PAGES=1,1,1,2,20,1277,
+[OPENDOC|Aldec.BDE.7|.\hexadec\src\hexadec.bde|]
+SymbolsToolbox=0
+ZOOMOFSETS_PAGES=1,1,1,8,-706,-23,

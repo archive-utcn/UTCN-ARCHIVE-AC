@@ -1,0 +1,9 @@
+.\src\fd16d.bde
+.\src\c4u.bde
+.\src\c4ud.bde
+.\src\fifod.bde
+.\src\rm16x32.bde
+.\src\rm16x16.bde
+.\src\fifo.bde
+.\src\TB_verilog\fifo_TB.v
+.\src\TB_vhd\fifo_TB.vhd

@@ -1,0 +1,14 @@
+intir	MACRO	timp
+	local		p1,p2		;p1 si p2 sunt etichete locale
+	push		dx			;salveaza registrii dx si cx
+	push		cx			;cx
+	mov		dx, timp		;încarca întârziere în dx
+p1:	mov		cx, 0FF00H		;încarca cx cu 0FF00H
+						;numara
+p2:	dec		cx			;întârzie decrementând cx
+	jnz		p2			;daca cx!=0 continua
+	dec		dx			;daca cx=0 decrementeaza dx
+	jnz		p1			;daca dx!=0 încarca cx din nou
+	pop		cx			;daca dx=0 refa cx
+	pop		dx			;si dx
+	ENDM					;sfârsit macrou

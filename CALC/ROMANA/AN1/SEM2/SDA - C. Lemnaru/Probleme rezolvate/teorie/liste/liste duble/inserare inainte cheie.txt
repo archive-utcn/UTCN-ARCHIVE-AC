@@ -1,0 +1,10 @@
+int inserare(tip_nod **prim,tip_nod **ultim,cjar *key)
+
+{
+//dupa cautare nod de cheie key
+p -> prec = q -> prec; p -> urm = q;
+if (q -> prec != 0) q -> prec -> urm = p;
+q -> prec = p;
+if (q == prim) prim = p;
+
+}

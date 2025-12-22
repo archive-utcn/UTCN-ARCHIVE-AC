@@ -1,0 +1,117 @@
+I 000053 55 788           1305286992190 ARH_Scazator
+(_unit VHDL (scazator_1bit 0 1 (arh_scazator 0 8 ))
+	(_version v147)
+	(_time 1305286992191 2011.05.13 14:43:12)
+	(_source (\./src/MS_Scazator_1bit.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 5c5c095f0c0b094b0c5b4d0709)
+	(_entity
+		(_time 1305286985042)
+	)
+	(_object
+		(_port (_internal A ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal B ~extSTD.STANDARD.BIT 0 3 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 4 (_entity (_out ))))
+		(_port (_internal Borrow ~extSTD.STANDARD.BIT 0 5 (_entity (_out ((i 0))))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(2)(3))(_sensitivity(0)(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_Scazator 1 -1
+	)
+)
+I 000053 55 788           1305287414233 ARH_Scazator
+(_unit VHDL (scazator_1bit 0 1 (arh_scazator 0 8 ))
+	(_version v147)
+	(_time 1305287414234 2011.05.13 14:50:14)
+	(_source (\./src/MS_Scazator_1bit.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code f9abaca9f3aeaceea9fee8a2ac)
+	(_entity
+		(_time 1305286985042)
+	)
+	(_object
+		(_port (_internal A ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal B ~extSTD.STANDARD.BIT 0 3 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 4 (_entity (_out ))))
+		(_port (_internal Borrow ~extSTD.STANDARD.BIT 0 5 (_entity (_out ((i 0))))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(2)(3))(_sensitivity(0)(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_Scazator 1 -1
+	)
+)
+V 000053 55 788           1305287423811 ARH_Scazator
+(_unit VHDL (scazator_1bit 0 1 (arh_scazator 0 8 ))
+	(_version v147)
+	(_time 1305287423812 2011.05.13 14:50:23)
+	(_source (\./src/MS_Scazator_1bit.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 64626264633331733463753f31)
+	(_entity
+		(_time 1305286985042)
+	)
+	(_object
+		(_port (_internal A ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal B ~extSTD.STANDARD.BIT 0 3 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 4 (_entity (_out ))))
+		(_port (_internal Borrow ~extSTD.STANDARD.BIT 0 5 (_entity (_out ((i 0))))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(2)(3))(_sensitivity(0)(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_Scazator 1 -1
+	)
+)
+V 000047 55 1376          1305287423825 MS_Arh
+(_unit VHDL (ms 0 20 (ms_arh 0 24 ))
+	(_version v147)
+	(_time 1305287423826 2011.05.13 14:50:23)
+	(_source (\./src/MS_Scazator_1bit.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 73742273732473647176372821)
+	(_entity
+		(_time 1305287423815)
+	)
+	(_component
+		(scazator_1bit
+			(_object
+				(_port (_internal A ~extSTD.STANDARD.BIT 0 27 (_entity (_in ))))
+				(_port (_internal B ~extSTD.STANDARD.BIT 0 28 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 29 (_entity (_out ))))
+				(_port (_internal Borrow ~extSTD.STANDARD.BIT 0 30 (_entity (_out ((i 0))))))
+			)
+		)
+	)
+	(_instantiation Scazator 0 36 (_component scazator_1bit )
+		(_port
+			((A)(A))
+			((B)(B))
+			((Q)(C))
+			((Borrow)(D))
+		)
+		(_use (_entity . scazator_1bit)
+		)
+	)
+	(_object
+		(_signal (_internal A ~extSTD.STANDARD.BIT 0 33 (_architecture (_uni ))))
+		(_signal (_internal B ~extSTD.STANDARD.BIT 0 33 (_architecture (_uni ))))
+		(_signal (_internal C ~extSTD.STANDARD.BIT 0 33 (_architecture (_uni ))))
+		(_signal (_internal D ~extSTD.STANDARD.BIT 0 33 (_architecture (_uni ))))
+		(_process
+			(line__37(_architecture 0 0 37 (_assignment (_simple)(_target(0)))))
+			(line__38(_architecture 1 0 38 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . MS_Arh 2 -1
+	)
+)

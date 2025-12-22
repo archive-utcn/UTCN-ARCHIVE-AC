@@ -1,0 +1,6 @@
+MESSAGE "File: D:\designshdl\CLV_2011\ROM_16x16\src\ROM_16x16.vhd" 
+MESSAGE "Compile Entity "MEMORIE_ROM_16X16"" 
+MESSAGE "Compile Architecture "arh" of Entity "MEMORIE_ROM_16x16"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   MEMORIE_ROM_16X16" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

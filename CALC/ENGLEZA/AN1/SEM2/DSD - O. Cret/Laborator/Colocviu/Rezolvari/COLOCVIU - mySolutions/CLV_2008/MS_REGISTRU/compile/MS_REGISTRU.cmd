@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\MS_REGISTRU\projlib.cfg"  -d "D:\designshdl\CLV_2008\MS_REGISTRU\compile\"  -work MS_REGISTRU -dbg -e 100 "D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd" 

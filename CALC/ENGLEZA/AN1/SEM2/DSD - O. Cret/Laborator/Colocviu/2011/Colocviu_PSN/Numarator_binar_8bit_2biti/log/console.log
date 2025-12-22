@@ -1,0 +1,442 @@
+acom -reorder $DSN/src/Numarator_8biti.vhd
+# Compile with File Reorder...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (25, 0): There is no default binding for component "Clock".(No entity named "Clock" was found).
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd" - globally process)
+# Compile failure 3 Errors 2 Warnings
+acom -reorder $DSN/src/Numarator_8biti.vhd
+# Compile with File Reorder...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (25, 0): There is no default binding for component "Clock".(No entity named "Clock" was found).
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Top-Level unit detected
+# Entity  =>   Counter
+# Compile success 0 Errors 2 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Component Ceas : Clock not bound.
+# ELBREAD: Warning: Component P1 : Count_2bit not bound.
+# ELBREAD: Warning: Component P2 : Count_2bit not bound.
+# ELBREAD: Warning: Component P3 : Count_2bit not bound.
+# ELBREAD: Warning: Component P4 : Count_2bit not bound.
+# ELBREAD: Elaboration time 0.0 [s].
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (25, 0): There is no default binding for component "Clock".(No entity named "Clock" was found).
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Compile success 0 Errors 2 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (25, 0): There is no default binding for component "Clock".(No entity named "Clock" was found).
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Compile success 0 Errors 2 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Clock.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd
+# Compile Entity "Clock"
+# Compile Architecture "CLK_CLK" of Entity "Clock"
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Compile failure 3 Errors 0 Warnings
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (25, 0): There is no default binding for component "Clock".(No entity named "Clock" was found).
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Compile success 0 Errors 2 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Clock.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd
+# Compile Entity "Clock"
+# Compile Architecture "CLK_CLK" of Entity "Clock"
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Compile failure 3 Errors 0 Warnings
+acom $DSN/src/Clock.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd
+# Compile Entity "Clock"
+# Compile Architecture "CLK_CLK" of Entity "Clock"
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd" - globally process)
+# Compile failure 3 Errors 0 Warnings
+acom $DSN/src/Clock.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd
+# Compile Entity "Clock"
+# Compile Architecture "CLK_CLK" of Entity "Clock"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Count_2bit.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Count_2bit.vhd
+# Compile Entity "Count_2bit"
+# Error: COMP96_0078: Count_2bit.vhd : (8, 10): Unknown identifier "std_logic_vector".
+# Error: COMP96_0064: Count_2bit.vhd : (8, 10): Unknown type.
+# Compile Architecture "ARH_Count" of Entity "Count_2bit"
+# Error: COMP96_0056: Count_2bit.vhd : (12, 1): Cannot find referenced entity declaration "Count_2bit".
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Warning: ELAB1_0026: Numarator_8biti.vhd : (26, 0): There is no default binding for component "Count_2bit".(No entity named "Count_2bit" was found).
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Count_2bit.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Count_2bit.vhd
+# Compile Entity "Count_2bit"
+# Compile Architecture "ARH_Count" of Entity "Count_2bit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+asim -advdataflow  counter count_str
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:18 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:18 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+acom $DSN/src/Clock.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd
+# Compile Entity "Clock"
+# Entity `Clock' has been skipped - no difference detected.
+# Compile Architecture "CLK_CLK" of Entity "Clock"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+run 100 ns
+# KERNEL: stopped at time: 1 us
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:19 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  counter count_str
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:19 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:19 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:19 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/Numarator_8biti.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd
+# Compile Entity "Counter"
+# Entity `Counter' has been skipped - no difference detected.
+# Compile Architecture "Count_STR" of Entity "Counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+asim -advdataflow  counter count_str
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom $DSN/src/Clock.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Clock.vhd
+# Compile Entity "Clock"
+# Entity `Clock' has been skipped - no difference detected.
+# Compile Architecture "CLK_CLK" of Entity "Clock"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:20 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:20 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (count_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# Simulation has been stopped
+# Design: Design "Detector_secventa" has been set as active.

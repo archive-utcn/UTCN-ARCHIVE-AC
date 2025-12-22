@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1274209161 source:d:\code_blocks\colocviu7\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<time.h>
+	<windows.h>
+

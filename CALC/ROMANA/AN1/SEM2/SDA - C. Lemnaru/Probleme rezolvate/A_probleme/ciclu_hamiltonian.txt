@@ -1,0 +1,119 @@
+#define NMAX 5
+
+void afisare(int n,int solutie[],int cost_minim)
+{
+    int i;
+    printf("Ciclul hamiltonian minim:\n");
+    for (i=0; i<=n; i++)
+    {
+        printf("-> %d ",solutie[i]);
+    }
+    printf("\nCostul minim: %d",cost_minim);
+}
+
+void transfer(int n, int a[], int b[])
+{
+    int i;
+    for (i=0; i<=n; i++)
+    {
+        b[i]=a[i];
+    }
+}
+
+int verif(int n,int k,int matr[][NMAX],int sol[])
+{
+    int i,t;
+    for (t=0; t<n; t++)
+    {
+        int j=0;
+        for (i=0; i<k; i++)
+        {
+            if (sol[i]==t)
+            {
+                j=1;
+            }
+        }
+        if (j==0) return t;
+    }
+    return -1;
+}
+
+int verif_ciclu(int n,int a[])
+{
+    int i,j,rez=0;
+    for (i=0; i<n-1; i++)
+    {
+        for (j=i+1; j<n; j++)
+        {
+            if (a[i]==a[j])
+            {
+                rez=1;
+            }
+        }
+    }
+    if ((rez==0)&&(a[0]==a[n])) return 1;
+    else return 0;
+}
+
+int suma(int n,int a[],int matrice[][NMAX])
+{
+    int i,s=0;
+    for (i=0; i<n; i++)
+    {
+        s=s+matrice[a[i]][a[i+1]];
+    }
+    return s;
+}
+
+void backtrack(int k,int n_c,int n,int matr[][NMAX],int sol[],int cicl_min[],int *cost_min)   //n_c = nod curent
+{
+    int j;
+    for (j=n_c; j<n; j++)
+    {
+        sol[k]=j;
+        if (k<=n)
+        {
+            int rez;
+            if ((k==n)&&(sol[0]==sol[n])&&(rez=verif_ciclu(n,sol)==1))
+            {
+                int x=suma(n,sol,matr);
+                if (x<(*cost_min))
+                {
+                    *cost_min=x;
+                    transfer(n,sol,cicl_min);
+                }
+            }
+            else if (k<n-1)
+            {
+                n_c=verif(n,k,matr,sol);
+                backtrack(k+1,n_c,n,matr,sol,cicl_min,cost_min);
+            }
+            else if (k==n-1)
+            {
+                n_c=sol[0];
+                backtrack(k+1,n_c,n,matr,sol,cicl_min,cost_min);
+            }
+        }
+    }
+}
+
+void main()
+{
+    int n=5;  //nr noduri
+    int matrice_de_costuri[NMAX][NMAX]= {{0,5,11,6,8},
+                                        {4,0,1,2,1},
+                                        {21,1,0,1,1},
+                                        {3,1,0,1},
+                                        {11,1,1,1,0}
+    };
+    int sol[6],ciclu_minim[6];
+    int i;
+    for (i=0; i<=n; i++)
+    {
+        sol[i]=0;
+    }
+    int cost_minim=999;
+    backtrack(0,0,n,matrice_de_costuri,sol,ciclu_minim,&cost_minim);
+    afisare(n,ciclu_minim,cost_minim);
+    getch();
+}

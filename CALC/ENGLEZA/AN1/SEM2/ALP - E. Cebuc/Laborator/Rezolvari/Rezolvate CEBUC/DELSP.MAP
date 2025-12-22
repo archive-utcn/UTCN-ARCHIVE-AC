@@ -1,0 +1,9 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 000AEH 000AFH DATA               DATA
+ 000B0H 002AFH 00200H STCK               STACK
+ 002B0H 002EAH 0003BH CODE               CODE
+
+Program entry point at 002B:0000
+

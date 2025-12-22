@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\CODIFICATOR_ZECIMAL_BCD\projlib.cfg"  -d "d:\designshdl\CLV_2008\CODIFICATOR_ZECIMAL_BCD\compile\"  -work CODIFICATOR_ZECIMAL_BCD -dbg -e 100 -o "d:\designshdl\CLV_2008\CODIFICATOR_ZECIMAL_BCD\src\CODIFICATOR_ZECIMAL_BCD.vhd" 

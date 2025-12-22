@@ -1,0 +1,65 @@
+void calcul(int nr,float *dr_med)
+	{
+	 /* determina structura arborelui */
+	 int c[nmax][nmax];/* costul  subarborilor optimali */
+	 int g[nmax][nmax]; /* greutatea arborilor */
+	 int i,j,k,m,l;
+	 int x,min;
+	 /* calculul matricei greutate */
+	 for(i=0;i<=nr;i++)
+		  {
+			 g[i][i]=q[i];
+			 for(j=i+1;j<=nr;j++)
+				  g[i][j]=g[i][j-1]+p[j]+q[j];
+		  }
+	  /* calculul matricei c */
+	  for(i=0;i<=nr;i++)
+		  c[i][i]=g[i][i];
+	  for(i=0;i<=nr-1;i++)
+		  {
+			 j=i+1;
+			 c[i][j]=c[i][i]+c[j][j]+g[i][j];
+			 r[i][j]=j;
+		  }
+	  /*calcul c[i][l+i] */
+	  for(l=2;l<=nr;l++)
+		 for(i=0;i<=nr-l;i++)
+			 {
+		                min=32000;
+		                for(k=i+1;k<=l+i;k++)
+		    	         {
+			            x=c[i][k-1]+c[k][l+i];
+			            if(x<min) {
+				                            min=x;
+				                            m=k;
+					         }
+			              }
+		                    c[i][l+i]=min+g[i][l+i];
+		                    r[i][l+i]=m;
+			      }
+		 printf("\nMATRICEA G\n");
+		 for(i=0;i<=nr;i++)
+			{ for(j=i;j<=nr;j++)
+			       printf("%d  ",g[i][j]);
+		               printf("\n");
+			}
+		 getch();
+		 printf("\nMATRICEA C\n");
+		 for(i=0;i<=nr;i++)
+			{ for(j=i;j<=nr;j++)
+			        printf("%d  ",c[i][j]);
+		               printf("\n");
+			}
+		 getch();
+	             printf("\nMATRICEA R\n");
+		 for(i=0;i<=nr;i++)
+			{ for(j=i;j<=nr;j++)
+		    	       printf("%d  ",r[i][j]);
+		               printf("\n");
+			}
+		 getch();
+		 printf("c[0][nr.]=%ld  g[0][nr.]=%ld\n",c[0][nr.],g[0][nr.]);
+		 getch();
+		 *dr_med=c[0][nr.]/(float)g[0][nr.];
+          }
+

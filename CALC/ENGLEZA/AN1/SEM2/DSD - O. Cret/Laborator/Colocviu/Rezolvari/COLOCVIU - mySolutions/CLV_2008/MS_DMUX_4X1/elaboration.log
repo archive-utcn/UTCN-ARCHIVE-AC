@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Mon May 22 20:34:35 2017
+
+
+----------------------------------------------------
+Entity                  | Architecture | Library  
+----------------------------------------------------
+ms_dmux_generic_1_la_4  | arh          | MS_DMUX_4X1
+dmux_generic_1_la_4     | arh          | ms_dmux_4x1
+----------------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

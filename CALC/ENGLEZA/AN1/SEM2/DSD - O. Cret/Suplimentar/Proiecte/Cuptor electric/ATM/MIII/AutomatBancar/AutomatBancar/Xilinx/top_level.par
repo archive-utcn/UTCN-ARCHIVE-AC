@@ -1,0 +1,254 @@
+Release 8.2i par I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+ADY-97853458340::  Fri May 23 04:52:37 2014
+
+par -w -intstyle ise -ol std -t 1 top_level_map.ncd top_level.ncd top_level.pcf
+
+
+Constraints file: top_level.pcf.
+Loading device for application Rf_Device from file '3s250e.nph' in environment C:\Xilinx.
+   "top_level" is an NCD, version 3.1, device xc3s250e, package tq144, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.23 2006-05-10".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          28 out of 108    25%
+
+   Number of External Input IOBs                 12
+
+      Number of External Input IBUFs             12
+        Number of LOCed External Input IBUFs     12 out of 12    100%
+
+
+   Number of External Output IOBs                16
+
+      Number of External Output IOBs             16
+        Number of LOCed External Output IOBs     16 out of 16    100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                  6 out of 24     25%
+   Number of MULT18X18SIOs             1 out of 12      8%
+   Number of Slices                  139 out of 2448    5%
+      Number of SLICEMs                5 out of 1224    1%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:989b89) REAL time: 2 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 2 secs 
+
+Phase 3.2
+......
+............
+
+
+Phase 3.2 (Checksum:991b4b) REAL time: 4 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 4 secs 
+
+Phase 5.8
+...............
+.....
+..........
+.......
+.......
+.......
+Phase 5.8 (Checksum:9d2f37) REAL time: 4 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 4 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 4 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 4 secs 
+
+Writing design to file top_level.ncd
+
+
+Total REAL time to Placer completion: 4 secs 
+Total CPU time to Placer completion: 4 secs 
+
+Starting Router
+
+Phase 1: 957 unrouted;       REAL time: 5 secs 
+
+Phase 2: 856 unrouted;       REAL time: 6 secs 
+
+Phase 3: 193 unrouted;       REAL time: 6 secs 
+
+Phase 4: 193 unrouted; (14267)      REAL time: 6 secs 
+
+Phase 5: 215 unrouted; (20)      REAL time: 6 secs 
+
+Phase 6: 0 unrouted; (344)      REAL time: 6 secs 
+
+Phase 7: 0 unrouted; (344)      REAL time: 6 secs 
+
+Phase 8: 0 unrouted; (344)      REAL time: 6 secs 
+
+Phase 9: 0 unrouted; (343)      REAL time: 6 secs 
+
+Phase 10: 0 unrouted; (343)      REAL time: 6 secs 
+
+Phase 11: 0 unrouted; (343)      REAL time: 6 secs 
+
+WARNING:Route:447 - CLK Net:confirmare_BUFGP may have excessive skew because 
+   11 NON-CLK pins failed to route using a CLK template.
+WARNING:Route:447 - CLK Net:ok_pin_OBUF may have excessive skew because 
+   7 NON-CLK pins failed to route using a CLK template.
+WARNING:Route:447 - CLK Net:clkdiv may have excessive skew because 
+   2 CLK pins failed to route using a CLK template.
+WARNING:Route:447 - CLK Net:afis/clkdiv<10> may have excessive skew because 
+   8 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:447 - CLK Net:afis_errPin/clkdiv<10> may have excessive skew because 
+   1 NON-CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 6 secs 
+Total CPU time to Router completion: 6 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|afis_errPin/clkdiv<1 |              |      |      |            |             |
+|                  0> | BUFGMUX_X2Y11| No   |   15 |  0.030     |  0.101      |
++---------------------+--------------+------+------+------------+-------------+
+|    confirmare_BUFGP | BUFGMUX_X1Y10| No   |   13 |  0.000     |  0.094      |
++---------------------+--------------+------+------+------------+-------------+
+|     suma_zeci_BUFGP |  BUFGMUX_X1Y1| No   |    2 |  0.000     |  0.093      |
++---------------------+--------------+------+------+------------+-------------+
+|      suma_mii_BUFGP |  BUFGMUX_X2Y1| No   |    1 |  0.000     |  0.098      |
++---------------------+--------------+------+------+------------+-------------+
+|     suma_sute_BUFGP |  BUFGMUX_X2Y0| No   |    2 |  0.000     |  0.104      |
++---------------------+--------------+------+------+------------+-------------+
+|         clock_BUFGP |  BUFGMUX_X1Y0| No   |   31 |  0.046     |  0.115      |
++---------------------+--------------+------+------+------------+-------------+
+|         ok_pin_OBUF |         Local|      |   16 |  0.273     |  2.040      |
++---------------------+--------------+------+------+------------+-------------+
+|              clkdiv |         Local|      |    2 |  1.091     |  1.393      |
++---------------------+--------------+------+------+------------+-------------+
+|     afis/clkdiv<10> |         Local|      |   11 |  1.901     |  2.793      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        0.964
+   The MAXIMUM PIN DELAY IS:                               4.062
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   2.953
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 5.00  d >= 5.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+         488         343          55           4           1           0
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic  | Absolute   |Number of
+                                            |            |            | Levels | Slack      |errors   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net afi | N/A        | 4.001ns    | 1      | N/A        | N/A     
+  s_errPin/clkdiv<10>                       |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net ok_ | N/A        | 2.359ns    | 1      | N/A        | N/A     
+  pin_OBUF                                  |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | N/A        | 3.180ns    | 1      | N/A        | N/A     
+  div                                       |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net afi | N/A        | 4.347ns    | 2      | N/A        | N/A     
+  s/clkdiv<10>                              |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sum | N/A        | 2.292ns    | 1      | N/A        | N/A     
+  a_zeci_BUFGP                              |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sum | N/A        | 2.175ns    | 1      | N/A        | N/A     
+  a_mii_BUFGP                               |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sum | N/A        | 2.488ns    | 1      | N/A        | N/A     
+  a_sute_BUFGP                              |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | N/A        | 6.005ns    | 4      | N/A        | N/A     
+  ck_BUFGP                                  |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 8 secs 
+Total CPU time to PAR completion: 7 secs 
+
+Peak Memory Usage:  152 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 5
+Number of info messages: 1
+
+Writing design to file top_level.ncd
+
+
+
+PAR done!

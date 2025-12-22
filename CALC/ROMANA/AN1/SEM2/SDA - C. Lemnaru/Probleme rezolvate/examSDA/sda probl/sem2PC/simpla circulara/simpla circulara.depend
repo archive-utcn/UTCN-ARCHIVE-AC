@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305420564 source:d:\facultate\sda\simpla circulara\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

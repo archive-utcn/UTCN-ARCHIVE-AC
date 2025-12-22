@@ -1,0 +1,50 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=COMPARATOR_STRUCTURAL
+
+[Library]
+COMPARATOR_STRUCTURAL=.\COMPARATOR_STRUCTURAL.lib
+
+[$LibMap$]
+COMPARATOR_STRUCTURAL=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\COMPARATOR_STRUCTURAL\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\COMPARATOR_STRUCTURAL\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\COMPARATOR_STRUCTURAL\
+Extension5=dll
+
+[Files]
+/COMPARATOR_STRUCTURAL.vhd=-1
+
+[Files.Data]
+.\src\COMPARATOR_STRUCTURAL.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=comparator_structural|arh|0  
+ShowHide=ShowTopLevel
+Selected=

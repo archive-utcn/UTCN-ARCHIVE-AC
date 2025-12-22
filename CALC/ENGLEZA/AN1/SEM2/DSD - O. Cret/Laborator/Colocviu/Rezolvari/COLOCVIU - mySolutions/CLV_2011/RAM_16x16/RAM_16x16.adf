@@ -1,0 +1,49 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=RAM_16x16
+
+[Library]
+RAM_16x16=.\RAM_16x16.lib
+
+[$LibMap$]
+RAM_16x16=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/RAM_16x16.vhd=-1
+
+[Files.Data]
+.\src\RAM_16x16.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=d:\designshdl\CLV_2011\RAM_16x16\
+Extension3=mak
+Name4=Memory
+Directory4=d:\designshdl\CLV_2011\RAM_16x16\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=d:\designshdl\CLV_2011\RAM_16x16\
+Extension5=dll
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=memorie_ram_16x16|arh|0  
+ShowHide=ShowTopLevel
+Selected=

@@ -1,0 +1,5 @@
+39
+~E 0 "./src/ADD3.vhd" 5 add3
+~A 1 "./src/ADD3.vhd" 10 arh_add3
+~E 0 "./src/Decodificator.vhd" 3 convertor
+~A 1 "./src/Decodificator.vhd" 8 arh_struc

@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\sumator_nbiti\projlib.cfg"  -d "D:\designshdl\CRET\sumator_nbiti\compile\"  -work sumator_nbiti -dbg -e 100 "D:\designshdl\CRET\sumator_nbiti\src\sumatornbiti.vhd" 

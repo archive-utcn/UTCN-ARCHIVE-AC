@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\05_Excess_to_BCD\library.cfg"  -j "c:\My_Designs\05_Excess_to_BCD\Excess_to_BCD\projlib.cfg"  -d "c:\My_Designs\05_Excess_to_BCD\Excess_to_BCD\compile\"  -work Excess_to_BCD -dbg -e 100 "c:\My_Designs\05_Excess_to_BCD\Excess_to_BCD\src\converter_TB.vhd" 

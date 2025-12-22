@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2010\SCAZATOR_1BIT\src\SCAZATOR_1BIT.vhd" 
+MESSAGE "Compile Entity "SCAZATOR_1BIT"" 
+MESSAGE "Entity `SCAZATOR_1BIT' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh_structurala" of Entity "SCAZATOR_1BIT"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

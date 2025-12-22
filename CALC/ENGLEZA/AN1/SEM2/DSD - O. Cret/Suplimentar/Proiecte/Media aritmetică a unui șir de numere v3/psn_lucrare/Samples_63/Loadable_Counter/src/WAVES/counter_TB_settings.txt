@@ -1,0 +1,42 @@
+[SETTINGS]
+UUT_entity%counter%
+UUT_architecture%counter_behav%
+WAVES_entity%counter_wb%
+WAVES_architecture%TB_ARCHITECTURE%
+MONITOR%YES%
+DSN_PATH%$DSN\src\WAVES%
+WAVES_STANDARD_PATH%$ALDEC\DAT\WAVES%
+OUTPUT_DIRECTORY%C:\My Designs\Loadable_Counter\src\WAVES%
+VECTORS_FILE%Functional.vec%
+TEST_PINS_FILE%counter_TB_pins.vhd%
+TB_FILE%counter_TB.vhd%
+DECLARATIONS_FILE%counter_TB_declaration.vhd%
+HEADER_FILE%counter_TB_header%
+MACRO_FILE%counter_TB_runtest.do%
+UUT_entity_FILE%counter.vhd%
+TIMING_CONFIGURATION%YES%
+CONFIGURATION_FILE%counter_TB_tim_cfg.vhd%
+END_SIMULATION_TIME%400. ns%
+
+[GENERICS]
+
+[PORTS]
+clk%in%std_logic%YES%NOCLK%
+reset%in%std_logic%YES%NOCLK%
+enable%in%std_logic%YES%NOCLK%
+load%in%std_logic%YES%NOCLK%
+d%in%std_logic_vector(3 downto 0)%YES%NOCLK%
+q%out%std_logic_vector(3 downto 0)%YES%NOCLK%
+
+[CLOCKS]
+
+[SDF]
+
+[INCLUDE]
+library ieee,synopsys;
+use ieee.std_logic_1164.all;
+use synopsys.std_logic_unsigned.all;
+
+[VHDL_FILES]
+$DSN\src\counter.vhd
+

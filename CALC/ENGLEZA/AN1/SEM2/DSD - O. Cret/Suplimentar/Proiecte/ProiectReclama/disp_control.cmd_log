@@ -1,0 +1,3 @@
+vhdtdtfi -lib work {VHDL Source/displaycontroller.vhd} -prj ProiectReclama -o disp_control.spl -module disp_control -template C:/Xilinx/14.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 disp_control.spl {D:/semestrul 2/final3/ProiectReclama/disp_control.sym} 
+vhdtdtfi -prj ProiectReclama -o "D:/semestrul 2/final3/ProiectReclama/disp_control.vhi" -module disp_control -template C:/Xilinx/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work "VHDL Source/displaycontroller.vhd" 

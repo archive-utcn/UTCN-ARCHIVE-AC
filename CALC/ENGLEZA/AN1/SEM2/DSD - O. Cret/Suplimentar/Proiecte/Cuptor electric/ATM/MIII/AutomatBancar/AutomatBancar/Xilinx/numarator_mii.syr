@@ -1,0 +1,368 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: numarator_mii.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "numarator_mii.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "numarator_mii"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-tq144
+
+---- Source Options
+Top Module Name                    : numarator_mii
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : numarator_mii.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/1/numarator_mii.vhd" in Library work.
+Entity <numarator_mii> compiled.
+Entity <numarator_mii> (Architecture <numarator_mii_arh>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <numarator_mii> in library <work> (architecture <numarator_mii_arh>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <numarator_mii> in library <work> (Architecture <numarator_mii_arh>).
+WARNING:Xst:819 - "C:/Xilinx/1/numarator_mii.vhd" line 16: The following signals are missing in the process sensitivity list:
+   CL.
+Entity <numarator_mii> analyzed. Unit <numarator_mii> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <numarator_mii>.
+    Related source file is "C:/Xilinx/1/numarator_mii.vhd".
+WARNING:Xst:647 - Input <CL> is never used.
+    Found 4-bit adder for signal <$addsub0000> created at line 23.
+    Found 4-bit register for signal <Mtridata_temp_var> created at line 26.
+    Found 4-bit tristate buffer for signal <temp_var>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Tristate(s).
+Unit <numarator_mii> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 1
+ 4-bit register                                        : 1
+# Tristates                                            : 1
+ 4-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s250e.nph' in environment C:\Xilinx.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2042 - Unit numarator_mii: 4 internal tristates are replaced by logic (pull-up yes): N4, N5, N6, N7.
+
+Optimizing unit <numarator_mii> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block numarator_mii, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : numarator_mii.ngr
+Top Level Output File Name         : numarator_mii
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 12
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 5
+#      MUXF5                       : 3
+# FlipFlops/Latches                : 4
+#      FDR                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 1
+#      OBUFT                       : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250etq144-4 
+
+ Number of Slices:                       4  out of   2448     0%  
+ Number of Slice Flip Flops:             4  out of   4896     0%  
+ Number of 4 input LUTs:                 8  out of   4896     0%  
+ Number of IOs:                          7
+ Number of bonded IOBs:                  6  out of    108     5%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.622ns (Maximum Frequency: 216.357MHz)
+   Minimum input arrival time before clock: 5.158ns
+   Maximum output required time after clock: 4.946ns
+   Maximum combinational path delay: 7.194ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.622ns (frequency: 216.357MHz)
+  Total number of paths / destination ports: 33 / 8
+-------------------------------------------------------------------------
+Delay:               4.622ns (Levels of Logic = 2)
+  Source:            Mtridata_temp_var_2 (FF)
+  Destination:       Mtridata_temp_var_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: Mtridata_temp_var_2 to Mtridata_temp_var_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.591   1.178  Mtridata_temp_var_2 (Mtridata_temp_var_2)
+     LUT4:I0->O            1   0.704   0.000  _cmp_eq00001 (N19)
+     MUXF5:I1->O           4   0.321   0.917  _cmp_eq0000_f5 (_cmp_eq0000)
+     FDR:R                     0.911          Mtridata_temp_var_0
+    ----------------------------------------
+    Total                      4.622ns (2.527ns logic, 2.095ns route)
+                                       (54.7% logic, 45.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 10 / 8
+-------------------------------------------------------------------------
+Offset:              5.158ns (Levels of Logic = 3)
+  Source:            enable (PAD)
+  Destination:       Mtridata_temp_var_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: enable to Mtridata_temp_var_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   1.087  enable_IBUF (enable_IBUF)
+     LUT4:I3->O            1   0.704   0.000  _cmp_eq00001 (N19)
+     MUXF5:I1->O           4   0.321   0.917  _cmp_eq0000_f5 (_cmp_eq0000)
+     FDR:R                     0.911          Mtridata_temp_var_0
+    ----------------------------------------
+    Total                      5.158ns (3.154ns logic, 2.004ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.946ns (Levels of Logic = 1)
+  Source:            Mtridata_temp_var_0 (FF)
+  Destination:       mii<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: Mtridata_temp_var_0 to mii<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.591   1.083  Mtridata_temp_var_0 (Mtridata_temp_var_0)
+     OBUFT:I->O                3.272          mii_0_OBUFT (mii<0>)
+    ----------------------------------------
+    Total                      4.946ns (3.863ns logic, 1.083ns route)
+                                       (78.1% logic, 21.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               7.194ns (Levels of Logic = 3)
+  Source:            enable (PAD)
+  Destination:       mii<3> (PAD)
+
+  Data Path: enable to mii<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   1.083  enable_IBUF (enable_IBUF)
+     INV:I->O              4   0.704   0.917  enable_inv1_INV_0 (enable_inv)
+     OBUFT:T->O                3.272          mii_1_OBUFT (mii<1>)
+    ----------------------------------------
+    Total                      7.194ns (5.194ns logic, 2.000ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+CPU : 6.44 / 6.59 s | Elapsed : 6.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 145608 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

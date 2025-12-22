@@ -1,0 +1,109 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(4 downto 0)1 ricd4 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 21 1 5 x
+$SC 1-17/4
+I 3 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 30 3 2 sel
+$SC 22 +4
+$INOUT +5 2 card_exista
+$INOUT +4 2 pin_corect
+$IN +4 2 but
+$IN +4 2 but1
+$IN +4 2 but2
+I 4 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS INOUT +68 4 16 SOLD_CLIENT
+$SC 51-+60/4
+$OUT +5 2 card_retinut
+$IN +4 2 s
+$BUS OUT +68 4 16 SUMA_RAMASA
+$SC 124-+60/4
+$S +5 2 Y0
+$S +4 2 Y1
+$S +4 2 enable
+$BUS S +68 4 16 SUMA_INTRODUSA
+$SC 201-+60/4
+$ENDTIME 100000
+$WAVES 17
+=0 T 0
+$VALUES
+V 1
+1
+$END
+$WAVES 1-13/4 +9 +4 39-+8/4 +73 +77
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES 31 +4 51-+60/4 +90-+60/4
+*0
+$VALUES
+V 1
+U
+$END
+$WAVES 116 +73 +4
+*0
+=1 D 0 1
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 124-+60/4
+*0
+=2 D 0 2
+$VALUES
+V 2
+U
+0
+$END
+$ENDTIME 200000
+$WAVES 39
+=3 D 100k 1
+$VALUES
+V 1
+1
+$END
+$WAVES 31
+=4 D 100k 2
+$VALUES
+V 1
+0
+$END
+$ENDTIME 300000
+$WAVES +8
+=5 D 200k 1
+$VALUES
+V 1
+0
+$END
+$ENDTIME 400000
+$WAVES +0
+=6 D 300k 1
+$VALUES
+V 1
+1
+$END
+$WAVES 31
+=7 D 300k 2
+$VALUES
+V 1
+1
+$END
+$WAVES +4
+=8 D 300k 3
+$VALUES
+V 1
+L
+$END
+$ENDTIME 500000
+$ENDTIME 600000
+$WAVES +8
+=9 D 500k 1
+$VALUES
+V 1
+1
+$END
+$ENDWAVE

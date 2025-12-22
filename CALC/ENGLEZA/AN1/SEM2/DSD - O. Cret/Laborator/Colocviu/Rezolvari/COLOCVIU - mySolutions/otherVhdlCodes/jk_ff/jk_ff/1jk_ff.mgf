@@ -1,0 +1,31 @@
+V 000044 55 1294          1493498541784 arh
+(_unit VHDL (jk_ff 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493498541784 2017.04.29 23:42:21)
+  (_source (\./src/jk_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493498528350)
+    (_use )
+  )
+  (_object
+    (_port (_internal j ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal k ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal s ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal r ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in )(_event))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_process (_simple)(_target(5)(6))(_sensitivity(4)(2)(3))(_read(0)(1)(5)(6)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)

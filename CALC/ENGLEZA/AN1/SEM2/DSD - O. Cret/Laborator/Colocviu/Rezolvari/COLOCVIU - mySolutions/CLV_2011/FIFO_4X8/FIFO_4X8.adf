@@ -1,0 +1,49 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=FIFO_4X8
+
+[Library]
+FIFO_4X8=.\FIFO_4X8.lib
+
+[$LibMap$]
+FIFO_4X8=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/FIFO_4X8.vhd=-1
+
+[Files.Data]
+.\src\FIFO_4X8.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=fifo_4x8|arh|0 
+ShowHide=ShowTopLevel
+Selected=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2011\FIFO_4X8\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2011\FIFO_4X8\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2011\FIFO_4X8\
+Extension5=dll

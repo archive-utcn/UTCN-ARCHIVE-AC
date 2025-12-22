@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\MUX_8_LA_1_GENERIC\projlib.cfg"  -d "d:\designshdl\CLV_2008\MUX_8_LA_1_GENERIC\compile\"  -work MUX_8_LA_1_GENERIC -dbg -e 100 "d:\designshdl\CLV_2008\MUX_8_LA_1_GENERIC\src\MUX_8_LA_1_GENERIC.vhd" 

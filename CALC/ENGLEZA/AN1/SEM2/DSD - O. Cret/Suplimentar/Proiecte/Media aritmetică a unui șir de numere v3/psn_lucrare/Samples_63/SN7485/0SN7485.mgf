@@ -1,0 +1,170 @@
+V 000037 11 116 1047634283301 e_and2
+E e_and2 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P out1 _out std_logic
+X e_and2
+V 000037 11 136 1047634283321 e_and3
+E e_and3 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P in3 _in std_logic
+P out1 _out std_logic
+X e_and3
+V 000037 11 156 1047634283350 e_and4
+E e_and4 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P in3 _in std_logic
+P in4 _in std_logic
+P out1 _out std_logic
+X e_and4
+V 000037 11 176 1047634283371 e_and5
+E e_and5 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P in3 _in std_logic
+P in4 _in std_logic
+P in5 _in std_logic
+P out1 _out std_logic
+X e_and5
+V 000037 11 116 1047634283531 e_nor2
+E e_nor2 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P out1 _out std_logic
+X e_nor2
+V 000037 11 136 1047634283560 e_nor3
+E e_nor3 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P in3 _in std_logic
+P out1 _out std_logic
+X e_nor3
+V 000036 11 96 1047634283270 e_not1
+E e_not1 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P out1 _out std_logic
+X e_not1
+V 000036 11 174 1047634283481 e_or5
+E e_or5 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P in3 _in std_logic
+P in4 _in std_logic
+P in5 _in std_logic
+P out1 _out std_logic
+X e_or5
+V 000035 11 232 1047634285363 fub0
+E Fub0 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P A0 _in std_logic
+P B0 _in std_logic
+P NET1299 _in std_logic
+P NET1320 _in std_logic
+P NET1327 _in std_logic
+P NET294 _out std_logic
+P NET536 _out std_logic
+P NET544 _out std_logic
+X Fub0
+V 000035 11 271 1047634285072 fub1
+E Fub1 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P K0 _in std_logic
+P L0 _in std_logic
+P M0 _in std_logic
+P NET1299 _in std_logic
+P NET1320 _in std_logic
+P NET1327 _in std_logic
+P NET294 _in std_logic
+P M _out std_logic
+P NET1089 _out std_logic
+P NET1095 _out std_logic
+X Fub1
+V 000035 11 209 1047634284782 fub2
+E Fub2 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P A1 _in std_logic
+P B1 _in std_logic
+P NET1320 _in std_logic
+P NET1327 _in std_logic
+P NET1299 _out std_logic
+P NET390 _out std_logic
+P NET398 _out std_logic
+X Fub2
+V 000035 11 185 1047634284491 fub3
+E Fub3 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P A2 _in std_logic
+P B2 _in std_logic
+P NET1327 _in std_logic
+P NET1320 _out std_logic
+P NET481 _out std_logic
+P NET489 _out std_logic
+X Fub3
+V 000035 11 161 1047634284211 fub4
+E Fub4 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P A3 _in std_logic
+P B3 _in std_logic
+P NET1327 _out std_logic
+P NET497 _out std_logic
+P NET505 _out std_logic
+X Fub4
+V 000035 11 320 1047634283911 fub5
+E Fub5 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P NET1089 _in std_logic
+P NET1095 _in std_logic
+P NET390 _in std_logic
+P NET398 _in std_logic
+P NET481 _in std_logic
+P NET489 _in std_logic
+P NET497 _in std_logic
+P NET505 _in std_logic
+P NET536 _in std_logic
+P NET544 _in std_logic
+P K _out std_logic
+P L _out std_logic
+X Fub5
+V 000041 11 328 1047634285653 sn7485_top
+E SN7485_TOP VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P A0 _in std_logic
+P A1 _in std_logic
+P A2 _in std_logic
+P A3 _in std_logic
+P B0 _in std_logic
+P B1 _in std_logic
+P B2 _in std_logic
+P B3 _in std_logic
+P K0 _in std_logic
+P L0 _in std_logic
+P M0 _in std_logic
+P K _out std_logic
+P L _out std_logic
+P M _out std_logic
+X SN7485_TOP

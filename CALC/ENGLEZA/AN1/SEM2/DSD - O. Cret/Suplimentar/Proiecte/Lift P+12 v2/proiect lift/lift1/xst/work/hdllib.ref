@@ -1,0 +1,26 @@
+EN poarta_nu NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_nu.vhd" sub00/vhpl14 1400864349
+EN registru NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/registru_depl.vhd" sub00/vhpl04 1400864339
+AR numarator_2 num2 "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator 2.vhd" sub00/vhpl17 1400864352
+EN poarta_si NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_si.vhd" sub00/vhpl10 1400864345
+AR registru reg "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/registru_depl.vhd" sub00/vhpl05 1400864340
+EN bcd7 NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/decod.vhd" sub00/vhpl00 1400864335
+EN afisor NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/AFISOR.vhd" sub00/vhpl22 1400864357
+AR poarta_si si "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_si.vhd" sub00/vhpl11 1400864346
+EN unit NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/unit_decizie.vhd" sub00/vhpl08 1400864343
+AR lift automat "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/lift.vhd" sub00/vhpl25 1400864360
+AR bcd7 decodif "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/decod.vhd" sub00/vhpl01 1400864336
+AR afisor afis "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/AFISOR.vhd" sub00/vhpl23 1400864358
+AR numarator1 num "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator1.vhd" sub00/vhpl13 1400864348
+AR numarator3 num3 "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator3.vhd" sub00/vhpl19 1400864354
+AR ram raam "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/RAM.vhd" sub00/vhpl07 1400864342
+AR unit comp "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/unit_decizie.vhd" sub00/vhpl09 1400864344
+EN lift NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/lift.vhd" sub00/vhpl24 1400864359
+AR numarator4 num4 "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator4.vhd" sub00/vhpl21 1400864356
+EN ram NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/RAM.vhd" sub00/vhpl06 1400864341
+AR poarta_nu nu "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_nu.vhd" sub00/vhpl15 1400864350
+AR mux16_1 mux "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/mux16_1.vhd" sub00/vhpl03 1400864338
+EN numarator_2 NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator 2.vhd" sub00/vhpl16 1400864351
+EN numarator1 NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator1.vhd" sub00/vhpl12 1400864347
+EN numarator3 NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator3.vhd" sub00/vhpl18 1400864353
+EN numarator4 NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator4.vhd" sub00/vhpl20 1400864355
+EN mux16_1 NULL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/mux16_1.vhd" sub00/vhpl02 1400864337

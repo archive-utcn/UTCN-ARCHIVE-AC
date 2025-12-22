@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1301512740 source:c:\codeblocks\arbori_consecutiv_frecventa\main.c
+	<stdio.h>
+	<stdlib.h>
+

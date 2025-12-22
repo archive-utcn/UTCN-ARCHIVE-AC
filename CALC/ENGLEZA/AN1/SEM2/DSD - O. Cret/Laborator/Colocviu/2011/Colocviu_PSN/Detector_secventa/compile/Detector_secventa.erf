@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Detector_secventa\src\Detector_secventa.vhd" 
+MESSAGE "Compile Entity "Detect"" 
+MESSAGE "Compile Architecture "ARH_Detector" of Entity "Detect"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  2.0 [s]" 

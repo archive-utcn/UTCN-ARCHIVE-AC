@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/afis.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/afisor_errcard.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/afisor_errpin.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/afisor_suma.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/decodificator_mii.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/decodificator_sute.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/decodificator_zeci.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/div_frecv.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/mux4_1.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/mux_chit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/num_sute.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/numarator_adrese.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/numarator_mii.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/numarator_zeci.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/poarta_si.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/poarta_si_chit.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/poarta_si_retr.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/ram_suma_2_0.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/rom_id_pin.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Facultate/Logic Design/SEM II/ATM/MIII/AutomatBancar/AutomatBancar/Xilinx/top_level.vhd&quot; into library work</arg>
+</msg>
+
+</messages>
+

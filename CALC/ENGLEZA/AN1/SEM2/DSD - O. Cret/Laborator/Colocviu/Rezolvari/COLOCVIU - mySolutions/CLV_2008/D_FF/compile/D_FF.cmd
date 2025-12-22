@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\D_FF\projlib.cfg"  -d "D:\designshdl\CLV_2008\D_FF\compile\"  -work D_FF -dbg -e 100 "D:\designshdl\CLV_2008\D_FF\src\D_FF.vhd" 

@@ -1,0 +1,42 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=pr
+
+[Library]
+pr=.\pr.lib
+
+[$LibMap$]
+pr=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/primu.vhd=-1
+/Waveform Editor 1.awf=-1
+
+[Files.Data]
+.\src\primu.vhd=VHDL Source Code
+.\src\Waveform Editor 1.awf=Waveform File
+

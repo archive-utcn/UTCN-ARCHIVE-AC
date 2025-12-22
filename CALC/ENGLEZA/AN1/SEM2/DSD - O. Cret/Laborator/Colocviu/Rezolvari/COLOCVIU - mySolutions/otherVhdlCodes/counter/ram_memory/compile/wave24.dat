@@ -1,0 +1,18 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 17 1 4 A_RAM
+$SC 1-13/4
+I 3 "e#3#bitc2 01"
+$IN +5 3 CS_RAM
+$IN +4 3 WE
+I 4 "a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 58 4 8 D_DATA
+$SC 26-54/4
+$BUS OUT 91 4 8 D_RAM
+$SC 59-87/4
+I 5 "a#6#MATRIX1 rict0 15 a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 604 5 16 M
+$SC 92-600/4
+$ENDWAVE

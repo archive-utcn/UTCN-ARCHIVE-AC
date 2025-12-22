@@ -1,0 +1,55 @@
+acom -O3 -work dp -2002  $dsn/src/dp.bde
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available.
+# File: .\dp.vhd
+# Compile Entity "dp"
+# Compile Architecture "dp" of Entity "dp"
+# Warning: ELAB1_0026: dp.bde(dp.vhd) : (68, 0): There is no default binding for component "demultiplexor". (No entity named "demultiplexor" was found).
+# Compile success 0 Errors 1 Warnings  Analysis time :  78.0 [ms]
+# Design: Design dp already active.
+# 
+# Design: Design "dp" has been set as active.
+acom -O3 -work dp -2002  $dsn/src/demultiplexor.bde
+# Compile...
+# DRC: Checking file 'C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\dp\src\demultiplexor.bde'.
+# DRC: demultiplexor.bde - 0 error(s), 0 warning(s)
+# DRC: DRC process completed in 1 second(s).
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\dp\compile\demultiplexor.vhd from C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\dp\src\demultiplexor.bde ...
+# Generation successful
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available.
+# File: .\demultiplexor.vhd
+# Compile Entity "demultiplexor"
+# Compile Architecture "demultiplexor" of Entity "demultiplexor"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -work dp -2002  $dsn/src/dp.bde
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available.
+# File: .\dp.vhd
+# Compile Entity "dp"
+# Compile Architecture "dp" of Entity "dp"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+# Design: Design dp already active.
+# 
+# Design: Design dp already active.
+# 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.3 [s].
+# add wave -noreg {/dp/s1}
+# add wave -noreg {/dp/s2}
+# add wave -noreg {/dp/s3}
+# add wave -noreg {/dp/x}
+# add wave -noreg {/dp/y0}
+# add wave -noreg {/dp/y1}
+# add wave -noreg {/dp/y2}
+# add wave -noreg {/dp/y3}
+# add wave -noreg {/dp/y4}
+# add wave -noreg {/dp/y5}
+# add wave -noreg {/dp/y6}
+# add wave -noreg {/dp/y7}
+# add wave -noreg {/dp/NET383}
+# add wave -noreg {/dp/NET392}
+# add wave -noreg {/dp/NET396}
+# add wave -noreg {/dp/NET404}
+# add wave -noreg {/dp/NET408}
+# add wave -noreg {/dp/NET429}

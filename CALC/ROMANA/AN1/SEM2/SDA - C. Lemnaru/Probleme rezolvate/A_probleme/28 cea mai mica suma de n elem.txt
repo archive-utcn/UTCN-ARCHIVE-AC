@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <conio.h>
+#define NMAX 5
+
+int verif_vector(int n,int k,int sol[],int matr[][NMAX])
+{
+    int i,j,v[NMAX];
+    for (i=0;i<n;i++) v[i]=0;
+    for (i=0; i<k; i++)    //liniile
+    {
+        for (j=0; j<n; j++)        //coloanele
+        {
+            if (matr[i][j]==sol[i])
+            {
+                if (v[j]==0) v[j]=1;
+                else return 0;
+            }
+        }
+    }
+    return 1;
+}
+
+int verif(int n,int k,int matr[][NMAX],int sol[])
+{
+    int i,j,v[NMAX];
+    for (i=0;i<n;i++) v[i]=0;
+    for (i=0; i<k; i++)    //liniile
+    {
+        for (j=0; j<n; j++)        //coloanele
+        {
+            if (matr[i][j]==sol[i])
+            {
+                v[j]=1;
+            }
+        }
+    }
+    for (i=0;i<n;i++)
+    {
+        if (v[i]==0)
+        return i;
+    }
+    return -1;
+}
+
+int suma_elem(int n,int sol[])
+{
+    int i,s=0;
+    for (i=0; i<n; i++)
+    {
+        s+=sol[i];
+    }
+    return s;
+}
+
+void transfer(int n, int a[],int b[])
+{
+    int i;
+    for (i=0; i<n; i++)
+    {
+        b[i]=a[i];
+    }
+}
+
+void backtrack(int k,int n,int matr[][NMAX],int sol[],int min[],int poz,int *suma)
+{
+    int j;
+    for (j=poz; j<n; j++)
+    {
+        sol[k]=matr[k][j];
+        if (k<=n-1)
+        {
+            if (k==n-1)
+            {
+                int v=verif_vector(n,k,sol,matr);
+                int s=suma_elem(n,sol);
+                if ((s<(*suma))&&(v==1))
+                {
+                    *suma=s;
+                    transfer(n,sol,min);
+                }
+            }
+            else
+            {
+                poz=verif(n,k+1,matr,sol);
+                backtrack(k+1,n,matr,sol,min,poz,suma);
+            }
+        }
+    }
+}
+
+void main()
+{
+    int n=5;
+    int matrice[NMAX][NMAX]= {{9,2,3,4,5},
+        {2,3,4,5,6},
+        {5,6,7,8,9},
+        {1,2,3,12,5},
+        {4,5,6,7,8}
+    };
+    int suma=999;
+    int sol[NMAX],min[NMAX];
+    int i;
+    for (i=0; i<n; i++)
+    {
+        sol[i]=0;
+    }
+    backtrack(0,n,matrice,sol,min,0,&suma);
+    for (i=0; i<n; i++)
+    {
+        printf("+%d",min[i]);
+    }
+    printf("\nSuma minima= %d",suma);
+    getch();
+}

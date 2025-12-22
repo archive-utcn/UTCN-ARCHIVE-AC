@@ -1,0 +1,64 @@
+library ieee;
+use ieee.std_logic_1164.all;  
+use ieee.std_logic_arith.all;  
+use ieee.std_logic_unsigned.all;  
+
+entity LED is
+	port(
+	clk,rst:in std_logic;
+	zled:out std_logic);	 
+end LED;
+
+architecture arh of LED is
+type state_type is (A,B,C,D,E,F);
+signal curr_state,next_state: state_type;  
+signal q : std_logic_vector(2 downto 0); 
+signal rstc : std_logic;
+begin
+	SLC:process(clk,rst)
+	begin
+		if (rst='1') then
+			curr_state<=A;			
+	elsif (clk'event) and (clk='1') then
+			curr_state <= next_state;
+		end if;
+		
+	end process SLC;  
+	
+    CLC:process(curr_state,q)
+	begin
+			case curr_state is
+				when A=>zled<='1';
+					if (q<5)then
+						next_state<=A;
+					else
+						next_state<=B; 
+					end if;
+				when B=> zled<='0'; 
+				when C=> zled<='1';
+				when D=> zled<='0';
+				when E=> zled<='1';
+				when F=> zled<='0';next_state<=A;
+			end	case;
+	end process CLC;   
+	
+	rstc <= '1' when curr_state=F else
+		    '0';
+	
+	counter:process(clk,rst,rstc)
+	variable intq:std_logic_vector (2 downto 0);
+begin
+	if rstc='1' or rst='1' then
+		intq:="000";
+	else
+		if(clk'event) and (clk='1')then
+			if curr_state=A then
+				intq:=intq+1;
+			end if;
+		end if;
+	end if;
+	q<=intq;--asignare de semnal
+end process counter;
+end arh;
+
+	

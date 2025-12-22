@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\MS_SUMATOR_COMPLET_1BIT\projlib.cfg"  -d "D:\designshdl\CLV_2008\MS_SUMATOR_COMPLET_1BIT\compile\"  -work MS_SUMATOR_COMPLET_1BIT -dbg -e 100 "D:\designshdl\CLV_2008\MS_SUMATOR_COMPLET_1BIT\src\MS_SUMATOR_COMPLET_1BIT.vhd" 

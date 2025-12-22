@@ -1,0 +1,77 @@
+V 000042 55 1000          1495493780329 a
+(_unit VHDL (t_ff 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495493780328 2017.05.23 01:56:20)
+  (_source (\./src/t_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495493780259)
+    (_use )
+  )
+  (_object
+    (_port (_internal t ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal clk ~extSTD.STANDARD.BIT 0 5 (_entity (_in )(_event))))
+    (_port (_internal rst ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal q ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_variable (_internal aux ~extSTD.STANDARD.BIT 0 12 (_process 0 )))
+    (_variable (_internal naux ~extSTD.STANDARD.BIT 0 12 (_process 0 )))
+    (_process
+      (line__11(_architecture 0 0 11 (_process (_simple)(_target(4)(3))(_sensitivity(2)(1))(_read(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+V 000042 55 1726          1495494015458 a
+(_unit VHDL (tb 0 4 (a 0 7 ))
+  (_version v33)
+  (_time 1495494015457 2017.05.23 02:00:15)
+  (_source (\./src/tb.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495493980566)
+    (_use )
+  )
+  (_component
+    (t_ff
+      (_object
+        (_port (_internal t ~extSTD.STANDARD.BIT 0 9 (_entity (_in ))))
+        (_port (_internal clk ~extSTD.STANDARD.BIT 0 9 (_entity (_in ))))
+        (_port (_internal rst ~extSTD.STANDARD.BIT 0 9 (_entity (_in ))))
+        (_port (_internal q ~extSTD.STANDARD.BIT 0 10 (_entity (_out ))))
+        (_port (_internal nq ~extSTD.STANDARD.BIT 0 10 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation uut 0 16 (_component t_ff )
+    (_port
+      ((t)(t))
+      ((clk)(clk))
+      ((rst)(rst))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . t_ff)
+    )
+  )
+  (_object
+    (_shared (_internal end_sim ~extSTD.STANDARD.BOOLEAN 0 13 (_architecture ((i 0)))))
+    (_signal (_internal t ~extSTD.STANDARD.BIT 0 14 (_architecture (_uni ))))
+    (_signal (_internal clk ~extSTD.STANDARD.BIT 0 14 (_architecture (_uni ))))
+    (_signal (_internal rst ~extSTD.STANDARD.BIT 0 14 (_architecture (_uni ))))
+    (_signal (_internal q ~extSTD.STANDARD.BIT 0 14 (_architecture (_uni ))))
+    (_signal (_internal nq ~extSTD.STANDARD.BIT 0 14 (_architecture (_uni ))))
+    (_process
+      (clk_gen(_architecture 0 0 17 (_process (_wait_for)(_target(1)))))
+      (stim(_architecture 1 0 27 (_process (_wait_for)(_target(0)(2)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+    (_type (_external ~extSTD.STANDARD.BOOLEAN (std STANDARD BOOLEAN)))
+  )
+  (_model . a 2 -1
+  )
+)

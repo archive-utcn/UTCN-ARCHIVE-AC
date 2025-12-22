@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\16_D_CLK_Process\D_CLK_Process\src\d_ff.vhd" 
+MESSAGE "Compile Entity "d"" 
+MESSAGE "Entity `d' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "d"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

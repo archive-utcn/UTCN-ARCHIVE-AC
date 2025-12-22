@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "vector.h": "c",
+        "array_int.h": "c",
+        "intgraph.h": "c",
+        "intqueue.h": "c"
+    }
+}

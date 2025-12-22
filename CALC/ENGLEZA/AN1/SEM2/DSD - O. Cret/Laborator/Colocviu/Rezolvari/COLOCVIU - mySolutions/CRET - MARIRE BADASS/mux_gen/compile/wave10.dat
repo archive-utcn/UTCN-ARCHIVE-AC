@@ -1,0 +1,12 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+$ENDTIME 100000
+I 1 "a#40#std_logic_vector((2**nr_sel-1) downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 33 1 8 x
+$SC 1-29/4
+I 3 "a#33#std_logic_vector(nr_sel downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 50 3 4 sel
+$SC 34-46/4
+$OUT +5 2 y
+$ENDWAVE

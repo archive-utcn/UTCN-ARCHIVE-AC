@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Sat Apr 29 18:49:35 2017
+
+
+-------------------------------------------
+Entity        | Architecture | Library   
+-------------------------------------------
+full_adder_1  | arh          | full_adder_1
+half_adder    | arh          | full_adder_1
+or_gate       | arh          | full_adder_1
+-------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

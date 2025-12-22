@@ -1,0 +1,23 @@
+timestamp=1495287619822
+
+[mux]
+A/a=A/A 21|./src/mux.vhd|12|1*1554
+B/a=3*0
+H/a=0*6910
+R=./src/mux.vhd|5
+V=0*4869
+
+[~A]
+./src/mux.vhd~Amux=0*6987*7140
+./src/mux.vhd~mux=0*3240*3572
+ModifyID=19
+Version=73
+
+[~MFT]
+0=23|0Generic_MUX.mgf|7140|3528
+1=2|1Generic_MUX.mgf|1554|1554
+3=0|3Generic_MUX.mgf|0|0
+
+[~U]
+mux=11|0*3917|0*4135
+

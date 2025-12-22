@@ -1,0 +1,75 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=hex2bin
+
+[Library]
+hex2bin=.\hex2bin.LIB
+
+[$LibMap$]
+hex2bin=.
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+FLOWTOOLS=ONLY_IMPL
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+UseCeloxica=0
+SYNTH_STATUS=NONE
+FAMILY=
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+
+[IMPLEMENTATION]
+UCF=
+FAMILY=
+
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+SortInfo=u
+
+[ORDER]
+autorefresh=0
+macro_path=
+macro_name=
+modified=1
+Synchronize=1
+
+[SYNTHESIS]
+FAMILY=
+
+[Files]
+/readme.txt=-1
+/adrcnt.v=-1
+/asciidec.v=-1
+/dat_cnt.v=-1
+/h2b.v=-1
+/ihx_fsm.v=-1
+/lrc.v=-1
+/reg.v=-1
+/uut.v=-1
+/run_me.do=-1
+
+[Files.Data]
+.\src\readme.txt=Text File
+.\src\adrcnt.v=Verilog Source Code
+.\src\asciidec.v=Verilog Source Code
+.\src\dat_cnt.v=Verilog Source Code
+.\src\h2b.v=Verilog Source Code
+.\src\ihx_fsm.v=Verilog Source Code
+.\src\lrc.v=Verilog Source Code
+.\src\reg.v=Verilog Source Code
+.\src\uut.v=Verilog Source Code
+.\src\run_me.do=Macro
+

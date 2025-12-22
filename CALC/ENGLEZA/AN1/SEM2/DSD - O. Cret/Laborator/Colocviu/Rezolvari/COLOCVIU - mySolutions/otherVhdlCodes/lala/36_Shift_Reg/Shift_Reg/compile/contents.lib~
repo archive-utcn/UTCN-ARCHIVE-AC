@@ -1,0 +1,5 @@
+26
+~E 1 "./src/shift_reg.vhd" 4 reg
+~A 1 "./src/shift_reg.vhd" 9 a
+~E 1 "./src/tb.vhd" 4 tb
+~A 1 "./src/tb.vhd" 7 a

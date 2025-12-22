@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\ROM_16X16\src\ROM_16X16.vhd" 
+MESSAGE "Compile Entity "ROM_16X16"" 
+MESSAGE "Compile Architecture "ROM_COMP" of Entity "ROM_16X16"" 
+MESSAGE "Top-level unit(s) detected:" 
+MESSAGE "Entity => ROM_16X16" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  1.0 [s]" 

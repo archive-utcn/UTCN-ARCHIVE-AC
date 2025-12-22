@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\MEMORIE_ROM_16X4\library.cfg"  -j "D:\designshdl\CLV_2008\MEMORIE_ROM_16X4\projlib.cfg"  -d "D:\designshdl\CLV_2008\MEMORIE_ROM_16X4\compile\"  -work MEMORIE_ROM_16X4 -dbg -e 100 -o "D:\designshdl\CLV_2008\MEMORIE_ROM_16X4\src\MEMORIE_ROM_16X4.vhd" 

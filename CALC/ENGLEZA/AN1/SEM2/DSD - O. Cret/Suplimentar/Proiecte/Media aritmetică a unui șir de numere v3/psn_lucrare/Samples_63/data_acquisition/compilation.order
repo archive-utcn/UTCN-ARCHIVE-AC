@@ -1,0 +1,6 @@
+.\src\clk_div.vhd
+.\src\clk_gen.vhd
+.\src\clocks.bde
+.\src\fifo.vhd
+.\src\test_environment.bde
+.\src\testbench\tester.dlm

@@ -1,0 +1,10 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 set
+$IN 5 1 reset
+$IN 9 1 t
+$OUT +4 1 q
+$OUT +4 1 nq
+$S +4 1 clock
+$ENDWAVE

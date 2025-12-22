@@ -1,0 +1,61 @@
+timestamp=1495270530737
+
+[and_gate]
+A/a=A/A 21|./src/and_gate.vhd|9|1*18131
+B/a=3*5940
+H/a=0*13117
+R=./src/and_gate.vhd|4
+V=0*1727
+
+[inverter]
+A/a=A/A 21|./src/inverter.vhd|9|1*17462
+B/a=3*5592
+H/a=0*12853
+R=./src/inverter.vhd|4
+V=0*3916
+
+[nxor_gate]
+A/a=A/A 21|./src/nxor_gate.vhd|9|1*19611
+H/a=0*13906
+R=./src/nxor_gate.vhd|4
+V=0*16210
+
+[or_gate]
+A/a=A/A 21|./src/or_gate.vhd|9|1*18872
+B/a=3*6360
+H/a=0*13385
+R=./src/or_gate.vhd|4
+V=0*2834
+
+[xor_gate]
+A/a=A/A 21|./src/xor_gate.vhd|9|1*15000
+H/a=0*10911
+R=./src/xor_gate.vhd|4
+V=0*604
+
+[~A]
+./src/and_gate.vhd~AAND_gate=0*13194*13317
+./src/and_gate.vhd~AND_gate=0*855*1040
+./src/inverter.vhd~AINVERTER=0*12930*13049
+./src/inverter.vhd~INVERTER=0*3083*3263
+./src/nxor_gate.vhd~ANXOR_gate=0*15274*15783
+./src/nxor_gate.vhd~NXOR_gate=0*13648*13837
+./src/or_gate.vhd~AOR_gate=0*13462*13582
+./src/or_gate.vhd~OR_gate=0*1978*2159
+./src/xor_gate.vhd~AXOR_gate=0*12279*12785
+./src/xor_gate.vhd~XOR_gate=0*0*185
+ModifyID=127
+Version=73
+
+[~MFT]
+0=135|0Structural_Gates.mgf|16210|7595
+1=36|1Structural_Gates.mgf|19611|15000
+3=30|3Structural_Gates.mgf|6360|5592
+
+[~U]
+and_gate=AND_gate 11|0*1375|0*1500
+inverter=INVERTER 11|0*3594|0*3707
+nxor_gate=NXOR_gate 11|0*15853|0*15981
+or_gate=OR_gate 11|0*2487|0*2609
+xor_gate=XOR_gate 11|0*252|0*377
+

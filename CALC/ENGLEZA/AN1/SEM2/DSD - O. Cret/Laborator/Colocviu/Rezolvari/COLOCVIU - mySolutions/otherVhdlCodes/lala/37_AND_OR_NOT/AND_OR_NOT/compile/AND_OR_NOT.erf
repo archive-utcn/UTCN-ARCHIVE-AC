@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\37_AND_OR_NOT\AND_OR_NOT\src\and_or_not.vhd" 
+MESSAGE "Compile Entity "circuit"" 
+MESSAGE "Entity `circuit' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "circuit"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

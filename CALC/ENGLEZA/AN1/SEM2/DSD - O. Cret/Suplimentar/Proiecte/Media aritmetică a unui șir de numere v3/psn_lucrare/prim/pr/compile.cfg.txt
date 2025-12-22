@@ -1,0 +1,13 @@
+[View]
+Entity=and_b
+Architecture=arhitectura_1
+TopLevelType=1
+[file:.\src\primu.vhd]
+File Time Lo=872444748
+File Time Hi=30140587
+Enabled=1
+State=Compiled
+[file:.\src\Waveform Editor 1.awf]
+File Time Lo=1690725998
+File Time Hi=30140587
+Enabled=1

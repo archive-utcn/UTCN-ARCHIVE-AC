@@ -1,0 +1,33 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o F:/project-darabok/automat_bancar/main_isim_beh.exe -prj F:/project-darabok/automat_bancar/main_beh.prj work.main 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "F:/project-darabok/automat_bancar/freq_divider.vhd" into library work
+Parsing VHDL file "F:/project-darabok/automat_bancar/DFF.vhd" into library work
+Parsing VHDL file "F:/project-darabok/automat_bancar/test2.vhd" into library work
+Parsing VHDL file "F:/project-darabok/automat_bancar/memory_money.vhd" into library work
+Parsing VHDL file "F:/project-darabok/automat_bancar/Debounce.vhd" into library work
+Parsing VHDL file "F:/project-darabok/automat_bancar/counter_sum.vhd" into library work
+Parsing VHDL file "C:/Users/nagyhanna007/Downloads/sevenseg.vhd" into library work
+Parsing VHDL file "F:/project-darabok/automat_bancar/main.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture freq_divider_behavioral of entity freq_divider [freq_divider_default]
+Compiling architecture arch_dff of entity DFF [dff_default]
+Compiling architecture arch_debounce of entity Debounce [debounce_default]
+Compiling architecture memory_rom of entity memory_code_pin [memory_code_pin_default]
+Compiling architecture forming_the_sum of entity counter_sum [counter_sum_default]
+Compiling architecture money of entity memory_money [memory_money_default]
+Compiling architecture x7seg of entity x7seg [x7seg_default]
+Compiling architecture main_arh of entity main
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 19 VHDL Units
+Built simulation executable F:/project-darabok/automat_bancar/main_isim_beh.exe
+Fuse Memory Usage: 32564 KB
+Fuse CPU Usage: 624 ms

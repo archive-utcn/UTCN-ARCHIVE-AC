@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd" 
+MESSAGE "Compile Entity "num"" 
+MESSAGE "Entity `num' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "num"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

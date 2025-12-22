@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//3.2. De la tastatura se citeste numarul n si numele a n copii.
+//Sa se simuleze urmatorul joc: cei n copii stau într-un cerc. Începând cu un anumit copil, se numara copiii în sensul acelor de ceasornic.
+//Fiecare al n-lea copil iese din cerc .Câstiga ultimul copil ramas în joc.
+
+typedef struct nod
+{
+  char nume[50];
+  int i;
+  struct nod *urm;
+}TIP_NOD;
+
+void inserare(TIP_NOD **prim, char nume[])
+{
+    TIP_NOD *p=(TIP_NOD *)malloc(sizeof(TIP_NOD));
+      strcpy(p->nume,nume);
+    if((*prim)==NULL)
+    {
+        (*prim)=p;
+        p->urm=p;
+    }
+    else
+    {
+        p->urm=(*prim)->urm;
+        (*prim)->urm=p;
+        (*prim)=p;
+    }
+}
+
+void afisare(TIP_NOD *prim)
+{
+    TIP_NOD *p=prim;
+    if(prim==NULL)
+    {
+        printf("\nLista este vida!\n");
+        return;
+    }
+    printf("\n");
+    printf("Citirea listei in sensul acelor de ceasornic: ");
+    do
+    {
+        printf("%s ",p->nume);
+        p=p->urm;
+    }while(p!=prim);
+    printf("\n");
+}
+
+void joc(TIP_NOD **prim,int n)
+{
+    if((*prim)==NULL)
+    {
+        printf("\nLista este vida!\n");
+        return;
+    }
+    while((*prim)->urm!=(*prim))
+    {
+        TIP_NOD *p=prim;
+        int i=0;
+        for(i=0;i<n;i++)
+        {
+            p=(*prim);
+            (*prim)=(*prim)->urm;
+        }
+        p->urm=(*prim)->urm;
+    printf("\nDin joc iese copilul: %s",(*prim)->nume);
+    free(*prim);
+    *prim=p;
+    }
+    printf("\n");
+    printf("\nCastigatorul este: %s",(*prim)->nume);
+    printf("\n");
+}
+
+int main()
+{
+    int n,i; TIP_NOD *prim=NULL;
+      printf("Numarul de copii citit: "); scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        char nume[50];
+        printf("\nCopilul %d: ",i+1);
+        scanf("%s",nume);
+        inserare(&prim,nume);
+    }
+      afisare(prim);
+      joc(&prim,n);
+     return 0;
+}

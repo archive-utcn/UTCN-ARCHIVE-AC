@@ -1,0 +1,86 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+
+struct nod
+{
+    int data;
+    struct nod *link;
+};
+struct nod *inserare(struct nod *p,int n)
+{
+    struct nod *temp;
+    /*daca lista e vida noul nod va fi cel de start */
+    if(p==NULL)
+    {
+        p=(struct nod *)malloc(sizeof(struct nod));
+        if(p==NULL)
+        {
+            printf("Eroare-out of heap ram :)/n");
+            exit(0);
+        }
+        p->data = n;
+        p->link = p;
+        /* va ponta la el pt ca lista e circulara*/
+    }
+    else
+    {
+        temp=p;
+        /*se parcurge lista pt a gasi pointerul ultimul nod */
+        while(temp->link!=p)
+        temp=temp->link;
+        temp->link=(struct nod *)malloc(sizeof(struct nod));
+        /*se creaza un nod nou...*/
+        if(temp->link==NULL)
+        {
+            printf("eroare-out of heap ram :)/n");
+            exit(0);
+
+        }
+        temp=temp->link;
+        temp->data=n;
+        temp->link=p;
+    }
+    return (p);
+}
+
+void afisarelista(struct nod *p)
+{
+    struct nod *temp;
+    temp=p;
+    printf("\nvalorile din lista sunt\n");
+
+    if(p!=NULL)
+    {
+        do
+        {
+            printf("%d\t",temp->data);
+            temp=temp->link;
+        }
+        while(temp!=p);
+    }
+    else
+    printf("Lista e vida\n");
+}
+
+int main()
+{
+    int n;
+    struct nod *start=NULL;
+    //printf("nr nodurilor de creat:");
+    //scanf("%d",&n);
+    n=3;
+    while(n-->0)
+    {
+        //printf("valoarea intreaga de plasat  in varf:");
+        //scanf("%d",&x);
+        start=inserare(start,n);
+
+    }
+    afisarelista(start);
+    start=inserare(start,7);
+    start=inserare(start,5);
+    afisarelista(start);
+    getch();
+    return 0;
+}

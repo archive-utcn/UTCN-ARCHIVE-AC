@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="gen_med.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="cutie_neagra.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="cutie_neagra.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="cutie_neagra.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="cutie_neagra.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="cutie_neagra.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="cutie_neagra.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="cutie_neagra.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="cutie_neagra.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="cutie_neagra.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="cutie_neagra.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="cutie_neagra.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="cutie_neagra.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="cutie_neagra.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cutie_neagra.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="cutie_neagra.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="cutie_neagra.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="cutie_neagra.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="cutie_neagra.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="cutie_neagra.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="cutie_neagra.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="cutie_neagra.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="cutie_neagra.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="cutie_neagra.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="cutie_neagra_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="cutie_neagra_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="cutie_neagra_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="cutie_neagra_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="cutie_neagra_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="cutie_neagra_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cutie_neagra_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cutie_neagra_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="cutie_neagra_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="cutie_neagra_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cutie_neagra_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="cutie_neagra_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="cutie_neagra_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="cutie_neagra_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cutie_neagra_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1431652729" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652729" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8678302927618938304" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652729" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4619695141598169423" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652729" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652729" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8503595383628952194" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652729" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652729" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="8903292504660919705" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652741" xil_pn:in_ck="3773363971994239739" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3931443723446680280" xil_pn:start_ts="1431652729">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="cutie_neagra.lso"/>
+      <outfile xil_pn:name="cutie_neagra.ngc"/>
+      <outfile xil_pn:name="cutie_neagra.ngr"/>
+      <outfile xil_pn:name="cutie_neagra.prj"/>
+      <outfile xil_pn:name="cutie_neagra.stx"/>
+      <outfile xil_pn:name="cutie_neagra.syr"/>
+      <outfile xil_pn:name="cutie_neagra.xst"/>
+      <outfile xil_pn:name="cutie_neagra_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1431677126" xil_pn:in_ck="-9136871301882277421" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="153118474329748599" xil_pn:start_ts="1431677126">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431677134" xil_pn:in_ck="-4101623012823236512" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-537697151678541350" xil_pn:start_ts="1431677126">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="cutie_neagra.bld"/>
+      <outfile xil_pn:name="cutie_neagra.ngd"/>
+      <outfile xil_pn:name="cutie_neagra_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1431677150" xil_pn:in_ck="-7926952108036431263" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1431677134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="cutie_neagra.pcf"/>
+      <outfile xil_pn:name="cutie_neagra_map.map"/>
+      <outfile xil_pn:name="cutie_neagra_map.mrp"/>
+      <outfile xil_pn:name="cutie_neagra_map.ncd"/>
+      <outfile xil_pn:name="cutie_neagra_map.ngm"/>
+      <outfile xil_pn:name="cutie_neagra_map.xrpt"/>
+      <outfile xil_pn:name="cutie_neagra_summary.xml"/>
+      <outfile xil_pn:name="cutie_neagra_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1431677167" xil_pn:in_ck="4267267423662400506" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1431677150">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="cutie_neagra.ncd"/>
+      <outfile xil_pn:name="cutie_neagra.pad"/>
+      <outfile xil_pn:name="cutie_neagra.par"/>
+      <outfile xil_pn:name="cutie_neagra.ptwx"/>
+      <outfile xil_pn:name="cutie_neagra.unroutes"/>
+      <outfile xil_pn:name="cutie_neagra.xpi"/>
+      <outfile xil_pn:name="cutie_neagra_pad.csv"/>
+      <outfile xil_pn:name="cutie_neagra_pad.txt"/>
+      <outfile xil_pn:name="cutie_neagra_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1431677184" xil_pn:in_ck="-9136871301882285046" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1431677167">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="cutie_neagra.bgn"/>
+      <outfile xil_pn:name="cutie_neagra.bit"/>
+      <outfile xil_pn:name="cutie_neagra.drc"/>
+      <outfile xil_pn:name="cutie_neagra.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1431677193" xil_pn:in_ck="-9136871301882297900" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1431677193">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1431677167" xil_pn:in_ck="-1045601530052617763" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1431677161">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="cutie_neagra.twr"/>
+      <outfile xil_pn:name="cutie_neagra.twx"/>
+    </transform>
+    <transform xil_pn:end_ts="1431652748" xil_pn:in_ck="-7926952108036431263" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1431652748">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1301609135 source:c:\codeblocks\arbori_echilibrati\main.c
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+

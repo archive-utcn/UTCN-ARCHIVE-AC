@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all ;	
+
+
+entity registru is
+	generic(N:integer:=4);
+	port(add: in bit;
+	step: in integer;
+	enable: in bit;
+	iesire: buffer bit_vector(0 to N-1));
+end registru;
+
+architecture comp of registru is
+signal CLK:bit;
+begin
+   CLOCK: process	
+   begin
+	  CLK<='1';
+	  wait for 5ns;
+	  CLK<='0';
+	  wait for 5ns;
+   end process CLOCK;
+end architecture comp; 
+
+entity sau_exclusiv is
+	port(iesire: in bit_vector;
+	d0:out bit);
+end entity;
+
+architecture arh2 of sau_exclusiv is
+begin
+		d0<= iesire(3) xor iesire(2);
+end arh2;
+
+entity generare  is
+	generic(N:integer:=4);
+	port(  CLK,D0:in bit;
+	iesire:buffer bit_vector(0 to N-1)); 
+end entity;
+
+architecture gen of generare is
+component registru
+			port(add: in bit;
+	step: in integer;
+	enable: in bit;
+	iesire: buffer bit_vector(0 to N-1));
+end component;
+
+component sau_exclusiv	 
+	
+	 port(iesire: in bit_vector;
+	d0:out bit);
+end component sau_exclusiv;
+ begin
+end architecture gen;

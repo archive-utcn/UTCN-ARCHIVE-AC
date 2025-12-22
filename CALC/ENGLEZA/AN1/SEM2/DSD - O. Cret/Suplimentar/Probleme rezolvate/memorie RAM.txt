@@ -1,0 +1,77 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+entity memorie_ram is
+	port (a_ram: in bit_vector(3 downto 0);
+	cs_ram: in bit;
+	we: in bit;
+	d_ram:inout bit_vector(7 downto 0));
+end memorie_ram;
+
+architecture arhitectura_ram of memorie_ram is
+type memorie is array(15 downto 0) of bit_vector(7 downto 0);
+begin
+process(a_ram,cs_ram,we) 
+	variable mem: memorie;
+	begin				  			  
+		mem(0):="00000000";			  
+		mem(1):="01000000";			  
+		mem(2):="00010000";			  
+		mem(3):="00000000";			  
+		mem(4):="00000100";			  
+		mem(5):="00000110";			  
+		mem(6):="00110000";			  
+		mem(7):="00111000";			  
+		mem(8):="01100100";			  
+		mem(9):="01000100";			  
+		mem(10):="01010100";			  
+		mem(11):="01010101";			  
+		mem(12):="01101100";			  
+		mem(13):="11000100";			  
+		mem(14):="10001100";			  
+		mem(15):="10000001";
+if cs_ram = '1' then
+	if we='0' then
+case a_ram is					 			   
+	when "0000" => d_ram<=mem(0);
+	when "0001" => d_ram<=mem(1);
+	when "0010" => d_ram<=mem(2);
+	when "0011" => d_ram<=mem(3);
+	when "0100" => d_ram<=mem(4);
+	when "0101" => d_ram<=mem(5);
+	when "0110" => d_ram<=mem(6);
+	when "0111" => d_ram<=mem(7);
+	when "1000" => d_ram<=mem(8);
+	when "1001" => d_ram<=mem(9);
+	when "1010" => d_ram<=mem(10);
+	when "1011" => d_ram<=mem(11);
+	when "1100" => d_ram<=mem(12);
+	when "1101" => d_ram<=mem(13);
+	when "1110" => d_ram<=mem(14);
+	when "1111" => d_ram<=mem(15);
+end case;	
+else 
+	case a_ram is					 			   
+		when "0000" => mem(0):=d_ram;
+		when "0001" => mem(1):=d_ram;
+		when "0010" => mem(2):=d_ram;
+		when "0011" => mem(3):=d_ram;
+		when "0100" => mem(4):=d_ram;
+		when "0101" => mem(5):=d_ram;
+		when "0110" => mem(6):=d_ram;
+		when "0111" => mem(7):=d_ram;
+		when "1000" => mem(8):=d_ram;
+		when "1001" => mem(9):=d_ram;
+		when "1010" => mem(10):=d_ram;
+		when "1011" => mem(11):=d_ram;
+		when "1100" => mem(12):=d_ram;
+		when "1101" => mem(13):=d_ram;
+		when "1110" => mem(14):=d_ram;
+		when "1111" => mem(15):=d_ram;
+	end case;
+end if;	
+
+else  d_ram<="11111111";
+end if;
+
+	end process;
+end arhitectura_ram; 

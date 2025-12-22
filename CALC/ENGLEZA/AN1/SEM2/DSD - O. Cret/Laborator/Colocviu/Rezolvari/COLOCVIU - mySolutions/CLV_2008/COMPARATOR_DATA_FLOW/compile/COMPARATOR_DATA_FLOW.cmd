@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\COMPARATOR_DATA_FLOW\projlib.cfg"  -d "d:\designshdl\CLV_2008\COMPARATOR_DATA_FLOW\compile\"  -work COMPARATOR_DATA_FLOW -dbg -e 100 "d:\designshdl\CLV_2008\COMPARATOR_DATA_FLOW\src\COMPARATOR_DATA_FLOW.vhd" 

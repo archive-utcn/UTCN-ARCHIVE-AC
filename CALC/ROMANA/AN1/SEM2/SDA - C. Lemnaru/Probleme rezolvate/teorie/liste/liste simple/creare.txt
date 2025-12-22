@@ -1,0 +1,5 @@
+void creare(tip_nod **prim,tip_nod **ultim)
+{
+*prim=0;
+*ultim=0;
+}

@@ -1,0 +1,2 @@
+$include = "C:\PROGRA~1\Aldec\ACTIVE~1.3\vlib\"
+SC_hex_ram = ".\SC_hex_ram.lib" 1096367802297

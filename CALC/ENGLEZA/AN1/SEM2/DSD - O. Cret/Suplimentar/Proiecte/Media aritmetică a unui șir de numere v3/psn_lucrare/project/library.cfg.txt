@@ -1,0 +1,2 @@
+$include = "C:\Program Files\Aldec\Active-HDL 6.3\vlib\"
+data_generator = ".\data_generator\data_generator.lib" 1301250147437

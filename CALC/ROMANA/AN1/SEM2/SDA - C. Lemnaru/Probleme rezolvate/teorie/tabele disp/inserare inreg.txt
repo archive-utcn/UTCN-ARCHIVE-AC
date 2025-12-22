@@ -1,0 +1,27 @@
+tip_nod *inserare()
+{
+tip_nod *p,*q;
+int h;
+//alocare spatiu p;
+h=f(p->cheie);
+if (HT[h]==0)
+{
+HT[h]=p;//prima inreg cu codul de disp h
+p->urm=0;
+return p;
+}
+else
+{
+q=cautare(p->cheie);
+if(q==0)
+{//nu exista inreg cu cheie resp
+p->urm=HT[h];
+HT[h]=p;
+return p;
+}
+else {
+prelucare(p,q);
+return p;
+}
+}
+}

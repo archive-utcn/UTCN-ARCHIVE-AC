@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\mux3\projlib.cfg"  -d "D:\designshdl\CRET\mux3\compile\"  -work mux3 -dbg -e 100 -o "D:\designshdl\CRET\mux3\src\mux3.vhd" 

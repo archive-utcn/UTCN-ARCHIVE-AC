@@ -1,0 +1,1 @@
+-w -s "e:\Facultate\Logic Design\SEM II\SEM II Project\ATM\library.cfg"  -j "e:\Facultate\Logic Design\SEM II\SEM II Project\ATM\Bancomat\projlib.cfg"  -d "e:\Facultate\Logic Design\SEM II\SEM II Project\ATM\Bancomat\compile"   -work Bancomat  -O3 -e 100 -2002 "e:\Facultate\Logic Design\SEM II\SEM II Project\ATM\Bancomat\src\Command_Unit.vhd"

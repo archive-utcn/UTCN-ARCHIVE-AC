@@ -1,0 +1,55 @@
+;------------------------------------------------- 
+; DATA section 
+; data definitions 
+;------------------------------------------------- 
+DATA SEGMENT PARA PUBLIC 'DATA' 
+	RADIUS  DQ   8. 567    
+	ARIA   DQ   ?    ; reserve space 
+	VOLUME  DQ   ?    ; for the results 
+	FOUR  DD   4. 0  
+	THREE  DD   3. 0
+DATA ENDS 
+;------------------------------------------------- 
+; STACK section 
+;------------------------------------------------- 
+STCK SEGMENT PARA STACK 'stack' use16
+	DB 64 DUP ('my_stack')	; reserve 256 bytes for stack
+STCK ENDS
+;------------------------------------------------- 
+; CODE section 
+;------------------------------------------------- 
+CODE SEGMENT PARA PUBLIC 'CODE' 
+ASSUME CS:CODE, DS:DATA 
+START  PROC FAR 
+	PUSH DS 
+	XOR AX,AX 
+	PUSH AX 
+	MOV AX,DATA 
+	MOV DS,AX 
+;------------------------------------------------- 
+;... ... the main program's instructions 
+;------------------------------------------------- 
+	FINIT      ; init coprocessor 
+	FLD  RADIUS    ;  load  radius  into coprocessor’s stack   
+	FMUL RADIUS    ; calculate R x R 
+	FLDPI     ; load πto stack 
+	FMUL     ; calculate R x R x π
+	FSTP  ARIA   ; save the result into ARIA 
+	FWAIT   ; synchronize with the processor 
+	LEA  SI, VOLUME   ; load the address of 
+	;VOLUME in SI 
+	FINIT      ; initialize coprocessor 
+	FLD  RADIUS    ; load R 
+	FMUL RADIUS    ; compute R x R 
+	FMUL RADIUS    ; compute R x R x R 
+	FLDPI     ; load π
+	FMUL     ; compute R x R x R x π
+	FMUL FOUR    ; multiply with 4 (4 x R x R x R x π) 
+	FDIV  THREE    ; divide by 3 
+	FSTP QWORD PTR [SI]   ; save result 
+	FWAIT     ;synchronize with 
+	;processor 
+    RET   ; FAR return to DOS 
+START  ENDP 
+CODE ENDS 
+END  START 

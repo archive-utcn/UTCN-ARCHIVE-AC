@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: E:\Facultate\Logic Design\SEM II\ATM\MI\proiect1\proiect1\bancomat\src\DEMUX_AFISOR.vhd" 
+MESSAGE "Compile Entity "MUX_AFISOR"" 
+MESSAGE "Compile Architecture "ARCH_MUX_AFISOR" of Entity "MUX_AFISOR"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 

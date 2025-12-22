@@ -1,0 +1,7 @@
+63
+~E 1 "./src/register.vhd" 4 r
+~A 1 "./src/register.vhd" 10 a
+~E 1 "./src/xor.vhd" 4 gate
+~A 1 "./src/xor.vhd" 9 a
+~E 1 "./src/rng.vhd" 4 rng
+~A 1 "./src/rng.vhd" 10 a

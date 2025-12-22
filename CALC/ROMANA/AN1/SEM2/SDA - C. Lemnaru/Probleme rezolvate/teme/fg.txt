@@ -1,0 +1,75 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+typedef struct tip_nod
+{
+    int f;
+    char cuvant[20];
+    struct tip_nod *urm;
+}TIP_NOD;
+
+TIP_NOD *sant1,*sant2;
+
+void inserare(char *cuv)
+
+     //functie de inserare a unui cuvant distinct in lista
+     //sau de incrementare a frecventei cuv daca el exista in lista
+ {
+   int n;//dimensiunea nodului
+   TIP_NOD *p,*q;
+   //gaasirea locului unde trebuie inserat
+   p=sant1->urm;
+   while (strcmp(p->cuvant,cuv)<0) p=p->urm;
+   if (strcmp(p->cuvant,cuv)==0) p->f ++; //cuv exista in lista
+   else
+   {
+       //inserarea inaintea nodului p
+       n=sizeof(TIP_NOD);
+       q=(TIP_NOD*)malloc(n);
+       *q=*p; //continutul nodului p e mutat in q
+       strcpy(p->cuvant,cuv);
+       p->f=1;
+       p->urm=q;
+       if(p==sant2) sant2=q;
+   }
+ }
+ void listare(void)
+ {
+     TIP_NOD *p;
+     p=sant1->urm;
+     if(p==sant2){
+                    printf("\nLista este vida!");
+                    return;
+                }
+     printf("\n %30s %s\n","CUVANTUL","Frecventa");
+     while(p!=sant2){
+                       printf("\n %30s %d",p->cuvant,p->f);
+                       p=p->urm;
+                    }
+ }
+ void main(void)
+ {
+     int nr,n;//nr=nr.cuvintelor; n=dimensiunea nodului
+     int i;
+     char cuv[20];
+     n=sizeof(TIP_NOD);
+     sant1=(TIP_NOD*)malloc(n);
+     sant2=(TIP_NOD*)malloc(n);
+     strcpy(sant2->cuvant,"\377");//astfel cuvintele vor fi mai mici ca sant2->cuvant
+     sant1->urm=sant2;
+     //citirea nr de cuvinte
+     printf("\nNr cuvinte nr=");scanf("%d",&nr);
+     //construirea listei
+        for(i=1;i<=nr;i++)
+        {
+            printf("\nIntroduceti cuvantul: ");
+            scanf("%s",cuv);
+            inserare(cuv);
+        };
+        listare();
+        getch();
+
+ }

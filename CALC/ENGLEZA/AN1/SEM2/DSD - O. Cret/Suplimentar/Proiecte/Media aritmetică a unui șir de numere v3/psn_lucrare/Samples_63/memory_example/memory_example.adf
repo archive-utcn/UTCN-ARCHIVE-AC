@@ -1,0 +1,59 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=memory_example
+
+
+[$LibMap$]
+example=.
+memory_example=.
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+WireDelay=2
+NoTchkMsg=0
+NoTimingChecks=0
+HESPrepare=0
+CreateASDBDatabase=0
+StackMemorySize=32
+RetvalMemorySize=32
+EnableCallbacks=0
+VitalAccel=1
+DisableVitalMsg=0
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[sdf.c.testbench_for_ram]
+SdfNoWarn=1
+IVG=0
+
+[Files]
+/Readme.txt=-1
+/ram.vhd=-1
+/ram_tb.vhd=-1
+/runme.do=-1
+/ram_mem.mem=-1
+/ram_waveform.awf=-1
+
+[Files.Data]
+.\src\Readme.txt=Text File
+.\src\ram.vhd=VHDL Source Code
+.\src\ram_tb.vhd=VHDL Test Bench
+.\src\runme.do=Macro
+.\src\ram_mem.mem=Memory File
+.\src\ram_waveform.awf=Waveform File
+
+[Library]
+memory_example=.\memory_example.LIB

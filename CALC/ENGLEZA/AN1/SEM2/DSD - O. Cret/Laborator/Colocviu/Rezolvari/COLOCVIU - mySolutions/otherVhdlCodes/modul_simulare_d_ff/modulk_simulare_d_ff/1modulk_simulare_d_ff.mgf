@@ -1,0 +1,757 @@
+I 000044 55 1185          1494606394162 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606394161 2017.05.12 19:26:34)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(4)(3))(_sensitivity(1)(0))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 2037          1494606394677 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494606394676 2017.05.12 19:26:34)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2))(_read(3)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_static
+    (116 101 115 116 32 102 97 105 108 101 100 )
+    (116 101 115 116 32 102 97 105 108 101 100 )
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494606442977 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606442976 2017.05.12 19:27:22)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3)(4))(_sensitivity(0)(1))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 2037          1494606443071 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494606443070 2017.05.12 19:27:23)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2))(_read(3)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_static
+    (116 101 115 116 32 102 97 105 108 101 100 )
+    (116 101 115 116 32 102 97 105 108 101 100 )
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494606660987 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606660986 2017.05.12 19:31:00)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(4)(3))(_sensitivity(0)(1))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494606693145 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606693144 2017.05.12 19:31:33)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3)(4))(_sensitivity(0)(1))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1910          1494606693239 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494606693238 2017.05.12 19:31:33)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494606755898 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606755897 2017.05.12 19:32:35)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3)(4))(_sensitivity(0)(1))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1910          1494606756008 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494606756007 2017.05.12 19:32:36)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494606856591 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606856590 2017.05.12 19:34:16)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3)(4))(_sensitivity(1)(0))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1910          1494606856700 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494606856699 2017.05.12 19:34:16)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494606921328 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606921327 2017.05.12 19:35:21)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3)(4))(_sensitivity(0)(1))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1910          1494606921422 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494606921421 2017.05.12 19:35:21)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494606983894 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494606983893 2017.05.12 19:36:23)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3)(4))(_sensitivity(1)(0))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1910          1494606983988 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494606983987 2017.05.12 19:36:23)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1185          1494607105790 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494607105789 2017.05.12 19:38:25)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(4)(3))(_sensitivity(0)(1))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1910          1494607105900 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494607105899 2017.05.12 19:38:25)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+V 000044 55 1185          1494607158324 arh
+(_unit VHDL (d_ff 0 6 (arh 0 11 ))
+  (_version v33)
+  (_time 1494607158323 2017.05.12 19:39:18)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394083)
+    (_use )
+  )
+  (_object
+    (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3)(4))(_sensitivity(1)(0))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+V 000044 55 1910          1494607158418 arh
+(_unit VHDL (ms_d_ff 0 30 (arh 0 33 ))
+  (_version v33)
+  (_time 1494607158417 2017.05.12 19:39:18)
+  (_source (\./src/modul_simulare_d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1494606394553)
+    (_use )
+  )
+  (_component
+    (d_ff
+      (_object
+        (_port (_internal clk ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 36 (_entity (_in ))))
+        (_port (_internal q ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+        (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 37 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 45 (_component d_ff )
+    (_port
+      ((clk)(clk))
+      ((reset)(reset))
+      ((d)(d))
+      ((q)(q))
+      ((nq)(nq))
+    )
+    (_use (_entity . d_ff)
+    )
+  )
+  (_object
+    (_signal (_internal clk ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal reset ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 40 (_architecture (_uni ))))
+    (_signal (_internal q ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_signal (_internal nq ~extieee.std_logic_1164.std_logic 0 41 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 46 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)

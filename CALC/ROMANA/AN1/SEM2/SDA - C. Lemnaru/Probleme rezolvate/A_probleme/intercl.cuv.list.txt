@@ -1,0 +1,126 @@
+//Sa se scrie programul care creeaza doua liste ordonate crescator dupa o cheie numerica si apoi le interclaseaza.
+typedef struct cuvant
+{int fr;
+char cuv[20];
+struct cuvant *urm,*prec;
+} NOD;
+void creare(NOD **prim,NOD **ultim, char cuv[])
+{NOD *p=*prim;
+int inserat=0, gasit=0;
+while ((p!=0) && (inserat==0) && (gasit==0))
+{int rez;
+rez=strcmp(cuv,p->cuv);
+if (rez==0){
+p->fr++;
+inserat=1;}
+else if (rez>0) p=p->urm;
+else gasit=1;}
+if ((p==0)||(gasit==1)){
+NOD *q;
+q=(NOD*)malloc(sizeof(NOD));
+strcpy(q->cuv,cuv);
+q->fr=1;
+q->urm=q->prec=0;
+if (p==0)
+{
+if (*ultim==0)        //lista este vida
+{
+*prim=*ultim=q;
+(*prim)->prec=0;
+(*ultim)->urm=0;}
+else                  //lista nu e vida
+{
+(*ultim)->urm=q;
+q->prec=*ultim;
+*ultim=q;
+(*ultim)->urm=0;}}
+if (gasit==1){
+q->prec=p->prec;
+q->urm=p;
+if (p->prec!=0){
+p->prec->urm=q;
+p->prec=q;}
+if (p==*prim){
+*prim=q;
+(*prim)->urm=p;
+p->prec=*prim;}}}}
+void afisare1(NOD *prim)
+{printf("\n\nAfisare in ordine alfabetica:\n\n");
+NOD *p=prim;
+while (p!=0){
+printf("\n%s",p->cuv);
+p=p->urm;}}
+void afisare2(NOD *ultim)
+{
+printf("\n\nAfisare in ordine alfabetica inversa:\n\n");
+NOD *p=ultim;
+while (p!=0){
+printf("\n%s",p->cuv);
+p=p->prec;}}
+void interclasare(NOD **prim1, NOD **ultim1, NOD **prim2, NOD **ultim2)
+{NOD *q=*prim2;
+while (q!=0)
+{
+NOD *p=*prim1;
+int inserat=0, gasit=0;
+while ((p!=0) && (inserat==0) && (gasit==0))
+{int rez;
+rez=strcmp(q->cuv,p->cuv);
+if (rez==0){
+p->fr++;
+inserat=1;}
+else if (rez>0) p=p->urm;
+else gasit=1;}
+if ((p==0)||(gasit==1))
+{
+q->urm=q->prec=0;
+if (p==0){
+if (*ultim1==0)        //lista este vida
+{*prim1=*ultim1=q;
+(*prim1)->prec=0;
+(*ultim1)->urm=0;}
+else                  //lista nu e vida
+{
+(*ultim1)->urm=q;
+q->prec=*ultim1;
+*ultim1=q;
+(*ultim1)->urm=0;}}
+if (gasit==1)
+{
+q->prec=p->prec;
+q->urm=p;
+if (p->prec!=0){
+p->prec->urm=q;
+p->prec=q;}
+if (p==*prim1){
+*prim1=q;
+(*prim1)->urm=p;
+p->prec=*prim1;}}}
+q=q->urm;}}
+void main()
+{
+NOD *prim1=0;
+NOD *ultim1=0;
+NOD *prim2=0;
+NOD *ultim2=0;
+char s[20];
+int n,i;
+printf("\nCate cuvinte vreti sa introduceti in prima lista? ");
+scanf("%d",&n);
+printf("\n\nCreare lista 1\n\n");
+for (i=0; i<n; i++){
+printf("Introduceti al %d-lea cuvant ",i);
+scanf("%s",s);
+creare(&prim1,&ultim1,s);}
+printf("\nCate cuvinte vreti sa introduceti in a doua lista? ");
+scanf("%d",&n);
+printf("\n\nCreare lista 2\n\n");
+for (i=0; i<n; i++){
+printf("Introduceti al %d-lea cuvant ",i);
+scanf("%s",s);
+creare(&prim2,&ultim2,s);}
+afisare1(prim1);
+afisare1(prim2);
+interclasare(&prim1,&ultim1,&prim2,&ultim2);
+afisare1(prim1);
+}

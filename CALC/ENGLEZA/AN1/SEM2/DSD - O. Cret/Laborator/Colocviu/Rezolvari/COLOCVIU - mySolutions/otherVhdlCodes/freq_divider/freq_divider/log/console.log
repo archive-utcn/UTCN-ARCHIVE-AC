@@ -1,0 +1,23 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom $DSN/src/freq_divider.vhd
+# Compile...
+# File: D:\designshdl\freq_divider\freq_divider\src\freq_divider.vhd
+# Compile Entity "Clock_Divider"
+# Entity `Clock_Divider' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "Clock_Divider"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/freq_divider.vhd
+# Compile...
+# File: D:\designshdl\freq_divider\freq_divider\src\freq_divider.vhd
+# Compile Entity "Clock_Divider"
+# Entity `Clock_Divider' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "Clock_Divider"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/freq_divider.vhd
+# Compile...
+# File: D:\designshdl\freq_divider\freq_divider\src\freq_divider.vhd
+# Compile Entity "Clock_Divider"
+# Entity `Clock_Divider' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "Clock_Divider"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]

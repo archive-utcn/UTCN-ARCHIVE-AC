@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+learning=.\learning\learning.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+learning=1

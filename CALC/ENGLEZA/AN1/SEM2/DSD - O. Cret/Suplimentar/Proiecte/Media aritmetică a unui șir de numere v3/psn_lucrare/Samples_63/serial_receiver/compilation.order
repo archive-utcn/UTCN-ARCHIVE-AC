@@ -1,0 +1,7 @@
+.\src\clk_gen.vhd
+.\src\rcv_reg.vhd
+.\src\synchronizer.vhd
+.\src\latched_val.vhd
+.\src\rcv.bde
+.\src\test_env.bde
+.\src\testwrapper.dlm

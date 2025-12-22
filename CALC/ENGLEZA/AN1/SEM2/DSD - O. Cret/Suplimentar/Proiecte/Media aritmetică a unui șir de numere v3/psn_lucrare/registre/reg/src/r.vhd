@@ -1,0 +1,23 @@
+entity reg is
+	port(D: in bit_vector(7 downto 0);
+	     clock, reset: in bit;
+		 q: out bit_vector(7 downto 0));
+end reg;	
+
+
+architecture RTL of reg is
+signal FF1, FF2, FF3, FF4 : bit_vector(7 downto 0);
+signal SUM : bit_vector(8 downto 0);
+begin
+-- SHIFT REGISTER
+process(clock) 
+begin
+  if (clock'event and clock = '1') then
+   FF1 <= d;
+   FF2 <= FF1;
+   FF3 <= FF2;
+   FF4 <= FF3;		
+   q <= FF4;
+end if;
+end process;	
+end architecture rtl;

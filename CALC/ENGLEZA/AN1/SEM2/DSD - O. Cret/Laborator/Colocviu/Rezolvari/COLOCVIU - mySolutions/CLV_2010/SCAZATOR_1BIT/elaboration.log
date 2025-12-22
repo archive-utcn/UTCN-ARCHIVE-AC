@@ -1,0 +1,19 @@
+elbread.dll ver. 1.0.5.365 Tue May 23 01:32:57 2017
+
+
+------------------------------------------------
+Entity         | Architecture    | Library    
+------------------------------------------------
+scazator_1bit  | arh_structurala | SCAZATOR_1BIT
+xor_gate       | arh             | scazator_1bit
+not_gate       | arh             | scazator_1bit
+and_gate       | arh             | scazator_1bit
+or_gate        | arh             | scazator_1bit
+------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

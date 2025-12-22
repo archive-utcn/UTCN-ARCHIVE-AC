@@ -1,0 +1,76 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 17 1 4 x
+$SC 1-13/4
+I 3 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 26 3 2 sel
+$SC 18 +4
+$IN +5 2 but
+$IN +4 2 enable
+I 4 "i#21#INTEGER range 0 to 31rict0 31 "
+$IN +4 4 ADRESA_CARD
+I 5 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +68 5 16 pin1
+$SC 39-99/4
+$ENDTIME 100000
+$WAVES 13
+=0 T 0
+$VALUES
+V 1
+1
+$END
+$WAVES 1-9/4 +9 +4 +5 +4
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES +8-99/4
+*0
+$VALUES
+V 1
+U
+$END
+$WAVES 35
+*0
+$VALUES
+V 1
+0
+$END
+$ENDTIME 200000
+$WAVES 27
+=1 D 100k 1
+$VALUES
+V 1
+1
+$END
+$WAVES 87
+=2 D 100k 2
+$VALUES
+V 1
+0
+$END
+$WAVES +4
+*2
+$VALUES
+V 1
+0
+$END
+$WAVES +4
+*2
+$VALUES
+V 1
+0
+$END
+$WAVES +4
+*2
+$VALUES
+V 1
+1
+$END
+$ENDTIME 300000
+$ENDTIME 400000
+$ENDTIME 500000
+$ENDWAVE

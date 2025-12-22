@@ -1,0 +1,1 @@
+-w -s "C:\Users\Marcu\Desktop\documentatie lift\proiect lift\library.cfg"  -j "C:\Users\Marcu\Desktop\documentatie lift\proiect lift\pro\projlib.cfg"  -d "C:\Users\Marcu\Desktop\documentatie lift\proiect lift\pro\compile\"  -work pro -dbg -e 100 "C:\Users\Marcu\Desktop\documentatie lift\proiect lift\pro\src\RAM.vhd" 

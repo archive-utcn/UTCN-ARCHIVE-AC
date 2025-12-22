@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2010\library.cfg"  -j "D:\designshdl\CLV_2010\XOR_NXOR_ANDORNOT_GATE\projlib.cfg"  -d "D:\designshdl\CLV_2010\XOR_NXOR_ANDORNOT_GATE\compile\"  -work XOR_NXOR_ANDORNOT_GATE -dbg -e 100 "D:\designshdl\CLV_2010\XOR_NXOR_ANDORNOT_GATE\src\XOR_NXOR_ANDORNOT_GATE.vhd" 

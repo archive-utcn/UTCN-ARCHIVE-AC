@@ -1,0 +1,165 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 220000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 2 1 clk -1 0 460000
+$IN 1 1 clr
+$IN 3 1 but_sum
+$IN 4 1 but_pin
+$IN 5 1 but_card
+I 2 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 9 2 4 sw
+$SC +1-+3
+I 3 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 6 3 2 sel
+$SC 7 8
+$S 31 1 verif_card
+$S +1 1 6 0 pin
+$BUS IN 14 3 2 m_sel
+$SC +1 +1
+$S 33 1 afisare
+I 4 "a#28#std_logic_vector(6 downto 0)1 ricd6 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT 18 4 7 display
+$SC +1-+6
+$S +9 1 extragere
+$OUT 17 1 chitanta
+$S 35 1 iesire
+I 5 "a#29#std_logic_vector(11 downto 0)1 ricd11 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +1 5 12 suma_sold
+$SC +1-48
+I 6 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +1 6 16 value
+$SC +1-65
+$BUS S +1 2 4 id_client
+$SC +1-+3
+P 0 1-25 +6-70 CS "0"
+P 0 2 Stimulator "CLK:FRM:Override:20.000000;2;1;0;50;1:Clock:1:"
+P 0 8 Stimulator "KEY:KEY:Override:65/0,1:A:1:"
+P 0 4 Stimulator "KEY:KEY:Override:67/0,1:C:1:"
+P 0 15 Stimulator "KEY:KEY:Override:73/0,1:I:1:"
+P 0 +1 Stimulator "KEY:KEY:Override:79/0,1:O:1:"
+P 0 10 Stimulator "KEY:KEY:Override:81/0,1:Q:1:"
+P 0 7 Stimulator "KEY:KEY:Override:83/0,1:S:1:"
+P 0 3 Stimulator "KEY:KEY:Override:86/0,1:V:1:"
+P 0 +9 +1 Stimulator "KEY:KEY:Override:87/0,1:W:1:"
+P 0 5 Stimulator "KEY:KEY:Override:88/0,1:X:1:"
+P 0 66 Stimulator "VAL:FRM:Override:0:<= 0:0:"
+P 0 1 11 Stimulator "VAL:FRM:Override:0:<= 0:1:"
+$WAVES 1 3 4 +7 +4 +1
+=0 T 0
+$VALUES
+V 1
+0
+$END
+$WAVES 2
+*0
+R 1 46 =1 T 10k
+$VALUES
+R 2 23 0 1
+V 1
+0
+$END
+$WAVES 5
+*0
+R 1 7 =2 D 20k 1
+=3 D 20k 2
+$VALUES
+R 2 4 0 1
+V 1
+0
+$END
+$WAVES 7
+*0
+=4 D 60k 1
+=5 D 0 1
+=6 D 40k 1
+$VALUES
+V 4
+0
+U
+0
+1
+$END
+$WAVES 8
+*0
+*4
+*6
+*5
+*6
+$VALUES
+V 5
+0
+1
+U
+0
+1
+$END
+$WAVES +2
+*0
+=7 D 100k 1
+$VALUES
+V 2
+0
+1
+$END
+$WAVES +2
+*0
+=8 D 140k 1
+$VALUES
+V 2
+0
+1
+$END
+$WAVES +1
+*0
+*8
+*5
+$VALUES
+V 3
+0
+U
+1
+$END
+$WAVES +4 31 +1 +5-48 +6-65
+*0
+$VALUES
+V 1
+U
+$END
+$WAVES 19
+*0
+*5
+$VALUES
+V 2
+U
+1
+$END
+$WAVES +1-+5
+*0
+*5
+=9 D 0 3
+$VALUES
+V 3
+U
+1
+0
+$END
+$WAVES +8-+2 50-+3 67 +1 +2
+*0
+*5
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 69
+*0
+*5
+=10 D 170k 2
+$VALUES
+V 3
+U
+0
+1
+$END
+$ENDWAVE

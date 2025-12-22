@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct NOD{ char nume[20];
+                 int fr;
+                 struct NOD *urm;
+                 struct NOD *pre;
+                } nod;
+int main()
+{ int i,n,k;
+char s[20];
+nod *prim,*ultim,*p,*q;
+    printf("n="); scanf("%d",&n);
+prim=0;
+for(i=0;i<n;i++){ printf("nume[%d]=",i+1);
+                  scanf("%s",s);
+                  if(prim==0){prim=(nod*)malloc(sizeof(nod));
+                              strcpy(prim->nume,s);
+                              prim->fr=1;
+                              prim->pre=0;
+                              prim->urm=0;
+                              ultim=prim;
+                               }
+                        else{ p=prim; k=0;
+                              while(p!=0){ if(strcmp(p->nume,s)==0){ p->fr=p->fr+1;
+                                                                              k=1;
+                                                                             }
+                                                    p=p->urm;
+                                           }
+                               if(k==0){p=(nod*)malloc(sizeof(nod));
+                                        strcpy(p->nume,s);
+                                        p->fr=1;
+                                        q=prim;
+                                        k=0;
+                                        while(q!=0){ if(strcmp(q->nume,s)>0){ k=1;
+                                                                              p->urm=q;
+                                                                              p->pre=q->pre;
+                                                                              if(q!=prim){q->pre->urm=p;
+                                                                                          q->pre=p;
+                                                                              }
+                                                                                        else{prim->pre=p;
+                                                                                              prim=p;
+                                                                                              q=prim->urm;
+                                                                                            }
+                                                                               q=ultim;
+                                                                             }
+                                                             q=q->urm;
+                                                             }
+                                        if (k==0){p->pre=ultim;
+                                                  p->urm=0;
+                                                  ultim->urm=p;
+                                                  ultim=p;
+                                                  }
+                                        }
+
+                             }
+
+
+}
+p=prim;
+while(p!=0){ printf("nume=%s     frecventa=%d \n",p->nume,p->fr);
+             p=p->urm;
+             }
+
+}

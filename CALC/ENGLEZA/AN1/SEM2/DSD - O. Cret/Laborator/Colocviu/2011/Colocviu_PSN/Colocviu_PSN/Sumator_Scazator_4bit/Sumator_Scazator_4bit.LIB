@@ -1,0 +1,27 @@
+timestamp=1401731986890
+
+[sum_min]
+A/arh_comp=A/ARH_COMP 21|./src/Plus_minus_4.vhd|13|1*5724
+B/arh_comp=3*0
+H/arh_comp=0*5235
+I=0*619
+I/arh_comp=I/ARH_COMP 0*2018
+M=11|0|v147|1305098657226|./src/Plus_minus_4.vhd|0*235*0xd7d16893b0e3efef42c545eb35e69b5bf602aa69|0*542*0x7bd7e13dc0415552f89596087806a8cf
+M/arh_comp=M/ARH_COMP 21|0|v147|1305098791838|./src/Plus_minus_4.vhd|0*1556*0x9fab492d1cbc0d41a28004fbf230ba26a96c3fff|0*1929*0x7bd7e13dc0415552f89596087806a8cf
+R=./src/Plus_minus_4.vhd|6
+V=0*3970
+
+[~A]
+./src/Plus_minus_4.vhd~ARH_COMPSUM_MIN=0*5326*5728
+./src/Plus_minus_4.vhd~SUM_MIN=0*2262*2593
+ModifyID=28
+Version=73
+
+[~MFT]
+0=27|0Sumator_Scazator_4bit.mgf|5728|1508
+1=6|1Sumator_Scazator_4bit.mgf|5724|5724
+3=0|3Sumator_Scazator_4bit.mgf|0|0
+
+[~U]
+sum_min=SUM_MIN 11|0*3234|0*3469
+

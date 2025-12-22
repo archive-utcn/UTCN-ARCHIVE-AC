@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Thu Jun 01 21:52:03 2017
+
+
+----------------------------------------
+Entity   | Architecture | Library     
+----------------------------------------
+counter  | arh          | counter_mod_10
+----------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

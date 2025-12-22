@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=NUMARATOR_MODULO
+
+[Library]
+NUMARATOR_MODULO=.\NUMARATOR_MODULO.lib
+
+[$LibMap$]
+NUMARATOR_MODULO=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/NUMARATOR_MODULO.vhd=-1
+
+[Files.Data]
+.\src\NUMARATOR_MODULO.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\NUMARATOR_MODULO\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\NUMARATOR_MODULO\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\NUMARATOR_MODULO\
+Extension5=dll

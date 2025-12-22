@@ -1,0 +1,9 @@
+[View]
+Entity=mean
+Architecture=arch
+TopLevelType=1
+[file:.\src\ave.vhd]
+File Time Lo=1423095034
+File Time Hi=30147396
+Enabled=1
+State=Error

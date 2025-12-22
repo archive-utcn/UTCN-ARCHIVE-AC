@@ -1,0 +1,13 @@
+Diana 2024 colocviu engleza
+You need to create a parity generator/detector.You are given a 4 bit number loaded in parallel and
+a) you need to detect the parity bit -> for ABCD=0110 -> P=1(even number of ones)
+b)You need to generate the number togheter with the pairty bit -> for ABCD=0110 -> 01101(ultimul bit e cel de paritate)
+
+
+->Problema e super usoara, ai nevoie de un mod, ca sa vezi ce ai de afisat.
+La primul iti generezi bit ul de paritate facand xor intre toti biti si apoi negand rezultatul =>P=not(vec(0) xor vec(1) xor vec(2) xor vec(3))
+** faci not pentru ca vrei sa ai logica pozitiva pe bitul de paritate
+-> la a doua tot ce trebuie e sa iti concatenezi numarul initial cu bitul de paritate => vec&P
+
+Implementare pe FPGA.
+Spor.

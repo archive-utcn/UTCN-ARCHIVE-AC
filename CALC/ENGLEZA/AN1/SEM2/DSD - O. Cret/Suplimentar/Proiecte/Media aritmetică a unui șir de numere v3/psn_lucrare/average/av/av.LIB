@@ -1,0 +1,20 @@
+timestamp=1303734531343
+
+[mean]
+A/arch=A/Arch +21|./src/ave.vhd|13|1*2554
+R=./src/ave.vhd|6
+V=0*6609
+
+[~A]
+./src/ave.vhd~ArchMean=0*4868*5175
+./src/ave.vhd~Mean=0*5237*5608
+ModifyID=21
+Version=73
+
+[~MFT]
+0=24|0av.mgf|6609|4868
+1=2|1av.mgf|2554|2554
+
+[~U]
+mean=11|0*5666|0*5966
+

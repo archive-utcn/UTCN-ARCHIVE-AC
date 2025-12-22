@@ -1,0 +1,72 @@
+V 000042 55 850           1495482416753 a
+(_unit VHDL (full_adder 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495482416753 2017.05.22 22:46:56)
+  (_source (\./src/full_adder.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495482416674)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal cin ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal cout ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal s ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_process (_simple)(_target(4)(3))(_sensitivity(2)(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+V 000043 55 1516          1495483077629 ar
+(_unit VHDL (tb 0 4 (ar 0 7 ))
+  (_version v33)
+  (_time 1495483077628 2017.05.22 22:57:57)
+  (_source (\./src/tb.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495483070947)
+    (_use )
+  )
+  (_component
+    (full_adder
+      (_object
+        (_port (_internal a ~extSTD.STANDARD.BIT 0 9 (_entity (_in ))))
+        (_port (_internal b ~extSTD.STANDARD.BIT 0 9 (_entity (_in ))))
+        (_port (_internal cin ~extSTD.STANDARD.BIT 0 9 (_entity (_in ))))
+        (_port (_internal cout ~extSTD.STANDARD.BIT 0 10 (_entity (_out ))))
+        (_port (_internal s ~extSTD.STANDARD.BIT 0 10 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UUT 0 15 (_component full_adder )
+    (_port
+      ((a)(a))
+      ((b)(b))
+      ((cin)(cin))
+      ((cout)(cout))
+      ((s)(s))
+    )
+    (_use (_entity . full_adder)
+    )
+  )
+  (_object
+    (_signal (_internal a ~extSTD.STANDARD.BIT 0 13 (_architecture (_uni ))))
+    (_signal (_internal b ~extSTD.STANDARD.BIT 0 13 (_architecture (_uni ))))
+    (_signal (_internal cin ~extSTD.STANDARD.BIT 0 13 (_architecture (_uni ))))
+    (_signal (_internal cout ~extSTD.STANDARD.BIT 0 13 (_architecture (_uni ))))
+    (_signal (_internal s ~extSTD.STANDARD.BIT 0 13 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 16 (_process (_wait_for)(_target(0)(1)(2)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . ar 1 -1
+  )
+)

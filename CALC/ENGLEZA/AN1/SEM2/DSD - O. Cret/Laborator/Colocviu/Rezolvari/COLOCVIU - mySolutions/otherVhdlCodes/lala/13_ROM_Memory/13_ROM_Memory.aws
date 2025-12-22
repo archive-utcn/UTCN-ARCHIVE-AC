@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+rom_memory=.\ROM_Memory\ROM_Memory.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+rom_memory=1

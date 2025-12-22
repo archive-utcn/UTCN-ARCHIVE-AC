@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define m 10
+
+int n,sol[m];
+
+void initializare(int k)
+{
+    sol[k]=0;
+}
+
+int succesor(int k)
+{
+    if(sol[k]<n)
+    {
+        sol[k]++;
+        return 1;
+    }
+    else
+        return 0;
+}
+
+int valid(int k)
+{
+    int i,ok=1;
+    for(i=1;i<=k-1;i++)
+        if(sol[k]==sol[i])
+            ok=0;
+        return ok;
+}
+
+int solutie(int k)
+{
+    return k==n+1;
+}
+
+void afisare()
+{
+    int i;
+    for(i=1;i<=n;i++)
+    {
+        printf(" %d ",sol[i]);
+    }
+        printf("\n");
+}
+
+void backtracking(int k)
+{
+    if(solutie(k))
+        afisare();
+    else
+    {
+        initializare(k);
+        while(succesor(k))
+            if(valid(k))
+            backtracking(k+1);
+    }
+}
+
+int main()
+{
+    printf("Dati n: "); scanf("%d",&n);
+    backtracking(1);
+    return 0;
+}

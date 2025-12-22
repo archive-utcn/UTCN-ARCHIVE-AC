@@ -1,0 +1,1385 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.14 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.14 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: top_level.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_level.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_level"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-tq144
+
+---- Source Options
+Top Module Name                    : top_level
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : top_level.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3215 - Unit work/top_level is now defined in a different file: was C:/Xilinx/1/top_level.vhd, now is C:/Xilinx/asdsadas/top_level.vhd
+WARNING:HDLParsers:3215 - Unit work/top_level/final is now defined in a different file: was C:/Xilinx/1/top_level.vhd, now is C:/Xilinx/asdsadas/top_level.vhd
+WARNING:HDLParsers:3215 - Unit work/afisare is now defined in a different file: was C:/Xilinx/1/afis.vhd, now is C:/Xilinx/asdsadas/afis.vhd
+WARNING:HDLParsers:3215 - Unit work/afisare/functionare is now defined in a different file: was C:/Xilinx/1/afis.vhd, now is C:/Xilinx/asdsadas/afis.vhd
+WARNING:HDLParsers:3215 - Unit work/afisor_errPin is now defined in a different file: was C:/Xilinx/1/afisor_errpin.vhd, now is C:/Xilinx/asdsadas/afisor_errpin.vhd
+WARNING:HDLParsers:3215 - Unit work/afisor_errPin/errPin is now defined in a different file: was C:/Xilinx/1/afisor_errpin.vhd, now is C:/Xilinx/asdsadas/afisor_errpin.vhd
+WARNING:HDLParsers:3215 - Unit work/afisor_suma is now defined in a different file: was C:/Xilinx/1/afisor_suma.vhd, now is C:/Xilinx/asdsadas/afisor_suma.vhd
+WARNING:HDLParsers:3215 - Unit work/afisor_suma/afis_suma is now defined in a different file: was C:/Xilinx/1/afisor_suma.vhd, now is C:/Xilinx/asdsadas/afisor_suma.vhd
+WARNING:HDLParsers:3215 - Unit work/decod_mii is now defined in a different file: was C:/Xilinx/1/decodificator_mii.vhd, now is C:/Xilinx/asdsadas/decodificator_mii.vhd
+WARNING:HDLParsers:3215 - Unit work/decod_mii/comp is now defined in a different file: was C:/Xilinx/1/decodificator_mii.vhd, now is C:/Xilinx/asdsadas/decodificator_mii.vhd
+WARNING:HDLParsers:3215 - Unit work/decod is now defined in a different file: was C:/Xilinx/1/decodificator_sute.vhd, now is C:/Xilinx/asdsadas/decodificator_sute.vhd
+WARNING:HDLParsers:3215 - Unit work/decod/comp is now defined in a different file: was C:/Xilinx/1/decodificator_sute.vhd, now is C:/Xilinx/asdsadas/decodificator_sute.vhd
+WARNING:HDLParsers:3215 - Unit work/decod_zeci is now defined in a different file: was C:/Xilinx/1/decodificator_zeci.vhd, now is C:/Xilinx/asdsadas/decodificator_zeci.vhd
+WARNING:HDLParsers:3215 - Unit work/decod_zeci/comp is now defined in a different file: was C:/Xilinx/1/decodificator_zeci.vhd, now is C:/Xilinx/asdsadas/decodificator_zeci.vhd
+WARNING:HDLParsers:3215 - Unit work/div is now defined in a different file: was C:/Xilinx/1/div_frecv.vhd, now is C:/Xilinx/asdsadas/div_frecv.vhd
+WARNING:HDLParsers:3215 - Unit work/div/comp is now defined in a different file: was C:/Xilinx/1/div_frecv.vhd, now is C:/Xilinx/asdsadas/div_frecv.vhd
+WARNING:HDLParsers:3215 - Unit work/cod is now defined in a different file: was C:/Xilinx/1/mux4_1.vhd, now is C:/Xilinx/asdsadas/mux4_1.vhd
+WARNING:HDLParsers:3215 - Unit work/cod/arh is now defined in a different file: was C:/Xilinx/1/mux4_1.vhd, now is C:/Xilinx/asdsadas/mux4_1.vhd
+WARNING:HDLParsers:3215 - Unit work/mux_chit is now defined in a different file: was C:/Xilinx/1/mux_chit.vhd, now is C:/Xilinx/asdsadas/mux_chit.vhd
+WARNING:HDLParsers:3215 - Unit work/mux_chit/mux_chit_arh is now defined in a different file: was C:/Xilinx/1/mux_chit.vhd, now is C:/Xilinx/asdsadas/mux_chit.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_sute is now defined in a different file: was C:/Xilinx/1/num_sute.vhd, now is C:/Xilinx/asdsadas/num_sute.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_sute/arht is now defined in a different file: was C:/Xilinx/1/num_sute.vhd, now is C:/Xilinx/asdsadas/num_sute.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_adrese is now defined in a different file: was C:/Xilinx/1/numarator_adrese.vhd, now is C:/Xilinx/asdsadas/numarator_adrese.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_adrese/ar is now defined in a different file: was C:/Xilinx/1/numarator_adrese.vhd, now is C:/Xilinx/asdsadas/numarator_adrese.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_mii is now defined in a different file: was C:/Xilinx/1/numarator_mii.vhd, now is C:/Xilinx/asdsadas/numarator_mii.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_mii/numarator_mii_arh is now defined in a different file: was C:/Xilinx/1/numarator_mii.vhd, now is C:/Xilinx/asdsadas/numarator_mii.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_zeci is now defined in a different file: was C:/Xilinx/1/numarator_zeci.vhd, now is C:/Xilinx/asdsadas/numarator_zeci.vhd
+WARNING:HDLParsers:3215 - Unit work/numarator_zeci/arh is now defined in a different file: was C:/Xilinx/1/numarator_zeci.vhd, now is C:/Xilinx/asdsadas/numarator_zeci.vhd
+WARNING:HDLParsers:3215 - Unit work/poarta_sau is now defined in a different file: was C:/Xilinx/1/poarta_si.vhd, now is C:/Xilinx/asdsadas/poarta_si.vhd
+WARNING:HDLParsers:3215 - Unit work/poarta_sau/poarta_sau_arh is now defined in a different file: was C:/Xilinx/1/poarta_si.vhd, now is C:/Xilinx/asdsadas/poarta_si.vhd
+WARNING:HDLParsers:3215 - Unit work/poarta_si_retr is now defined in a different file: was C:/Xilinx/1/poarta_si_retr.vhd, now is C:/Xilinx/asdsadas/poarta_si_retr.vhd
+WARNING:HDLParsers:3215 - Unit work/poarta_si_retr/poarta_si_retr_arh is now defined in a different file: was C:/Xilinx/1/poarta_si_retr.vhd, now is C:/Xilinx/asdsadas/poarta_si_retr.vhd
+WARNING:HDLParsers:3215 - Unit work/ram_suma is now defined in a different file: was C:/Xilinx/1/ram_suma_2_0.vhd, now is C:/Xilinx/asdsadas/ram_suma_2_0.vhd
+WARNING:HDLParsers:3215 - Unit work/ram_suma/comportamental is now defined in a different file: was C:/Xilinx/1/ram_suma_2_0.vhd, now is C:/Xilinx/asdsadas/ram_suma_2_0.vhd
+WARNING:HDLParsers:3215 - Unit work/memrom is now defined in a different file: was C:/Xilinx/1/rom_id_pin.vhd, now is C:/Xilinx/asdsadas/rom_id_pin.vhd
+WARNING:HDLParsers:3215 - Unit work/memrom/comp_rom is now defined in a different file: was C:/Xilinx/1/rom_id_pin.vhd, now is C:/Xilinx/asdsadas/rom_id_pin.vhd
+Compiling vhdl file "C:/Xilinx/asdsadas/rom_id_pin.vhd" in Library work.
+Architecture comp_rom of Entity memrom is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/num_sute.vhd" in Library work.
+Architecture arht of Entity numarator_sute is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/numarator_zeci.vhd" in Library work.
+Architecture arh of Entity numarator_zeci is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/numarator_mii.vhd" in Library work.
+Architecture numarator_mii_arh of Entity numarator_mii is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/div_frecv.vhd" in Library work.
+Architecture comp of Entity div is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/numarator_adrese.vhd" in Library work.
+Architecture ar of Entity numarator_adrese is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/ram_suma_2_0.vhd" in Library work.
+Architecture comportamental of Entity ram_suma is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/decodificator_zeci.vhd" in Library work.
+Architecture comp of Entity decod_zeci is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/decodificator_sute.vhd" in Library work.
+Architecture comp of Entity decod is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/decodificator_mii.vhd" in Library work.
+Architecture comp of Entity decod_mii is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/afis.vhd" in Library work.
+Architecture functionare of Entity afisare is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/afisor_errpin.vhd" in Library work.
+Architecture errpin of Entity afisor_errpin is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/afisor_suma.vhd" in Library work.
+Architecture afis_suma of Entity afisor_suma is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/mux4_1.vhd" in Library work.
+Architecture arh of Entity cod is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/poarta_si.vhd" in Library work.
+Architecture poarta_sau_arh of Entity poarta_sau is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/poarta_si_retr.vhd" in Library work.
+Architecture poarta_si_retr_arh of Entity poarta_si_retr is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/mux_chit.vhd" in Library work.
+Architecture mux_chit_arh of Entity mux_chit is up to date.
+Compiling vhdl file "C:/Xilinx/asdsadas/top_level.vhd" in Library work.
+Architecture final of Entity top_level is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_level> in library <work> (architecture <final>).
+
+Analyzing hierarchy for entity <memrom> in library <work> (architecture <comp_rom>).
+
+Analyzing hierarchy for entity <numarator_sute> in library <work> (architecture <arht>).
+
+Analyzing hierarchy for entity <numarator_zeci> in library <work> (architecture <arh>).
+
+Analyzing hierarchy for entity <numarator_mii> in library <work> (architecture <numarator_mii_arh>).
+
+Analyzing hierarchy for entity <div> in library <work> (architecture <comp>).
+
+Analyzing hierarchy for entity <numarator_adrese> in library <work> (architecture <ar>).
+
+Analyzing hierarchy for entity <ram_suma> in library <work> (architecture <comportamental>).
+
+Analyzing hierarchy for entity <decod_zeci> in library <work> (architecture <comp>).
+
+Analyzing hierarchy for entity <decod> in library <work> (architecture <comp>).
+
+Analyzing hierarchy for entity <decod_mii> in library <work> (architecture <comp>).
+
+Analyzing hierarchy for entity <afisare> in library <work> (architecture <functionare>).
+
+Analyzing hierarchy for entity <afisor_errPin> in library <work> (architecture <errpin>).
+
+Analyzing hierarchy for entity <afisor_suma> in library <work> (architecture <afis_suma>).
+
+Analyzing hierarchy for entity <cod> in library <work> (architecture <arh>).
+
+Analyzing hierarchy for entity <poarta_sau> in library <work> (architecture <poarta_sau_arh>).
+
+Analyzing hierarchy for entity <poarta_si_retr> in library <work> (architecture <poarta_si_retr_arh>).
+
+Analyzing hierarchy for entity <mux_chit> in library <work> (architecture <mux_chit_arh>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_level> in library <work> (Architecture <final>).
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/top_level.vhd" line 223: The following signals are missing in the process sensitivity list:
+   pinrom, confirmare, inscazr.
+INFO:Xst:1304 - Contents of register <ensuma> in unit <top_level> never changes during circuit operation. The register is replaced by logic.
+Entity <top_level> analyzed. Unit <top_level> generated.
+
+Analyzing Entity <memrom> in library <work> (Architecture <comp_rom>).
+Entity <memrom> analyzed. Unit <memrom> generated.
+
+Analyzing Entity <numarator_sute> in library <work> (Architecture <arht>).
+Entity <numarator_sute> analyzed. Unit <numarator_sute> generated.
+
+Analyzing Entity <numarator_zeci> in library <work> (Architecture <arh>).
+Entity <numarator_zeci> analyzed. Unit <numarator_zeci> generated.
+
+Analyzing Entity <numarator_mii> in library <work> (Architecture <numarator_mii_arh>).
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/numarator_mii.vhd" line 16: The following signals are missing in the process sensitivity list:
+   Q.
+Entity <numarator_mii> analyzed. Unit <numarator_mii> generated.
+
+Analyzing Entity <div> in library <work> (Architecture <comp>).
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/div_frecv.vhd" line 12: The following signals are missing in the process sensitivity list:
+   enable.
+Entity <div> analyzed. Unit <div> generated.
+
+Analyzing Entity <numarator_adrese> in library <work> (Architecture <ar>).
+Entity <numarator_adrese> analyzed. Unit <numarator_adrese> generated.
+
+Analyzing Entity <ram_suma> in library <work> (Architecture <comportamental>).
+Entity <ram_suma> analyzed. Unit <ram_suma> generated.
+
+Analyzing Entity <decod_zeci> in library <work> (Architecture <comp>).
+INFO:Xst:1561 - "C:/Xilinx/asdsadas/decodificator_zeci.vhd" line 28: Mux is complete : default of case is discarded
+Entity <decod_zeci> analyzed. Unit <decod_zeci> generated.
+
+Analyzing Entity <decod> in library <work> (Architecture <comp>).
+INFO:Xst:1561 - "C:/Xilinx/asdsadas/decodificator_sute.vhd" line 28: Mux is complete : default of case is discarded
+Entity <decod> analyzed. Unit <decod> generated.
+
+Analyzing Entity <decod_mii> in library <work> (Architecture <comp>).
+INFO:Xst:1561 - "C:/Xilinx/asdsadas/decodificator_mii.vhd" line 17: Mux is complete : default of case is discarded
+Entity <decod_mii> analyzed. Unit <decod_mii> generated.
+
+Analyzing Entity <afisare> in library <work> (Architecture <functionare>).
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/afis.vhd" line 35: The following signals are missing in the process sensitivity list:
+   enable.
+INFO:Xst:1304 - Contents of register <catod> in unit <afisare> never changes during circuit operation. The register is replaced by logic.
+Entity <afisare> analyzed. Unit <afisare> generated.
+
+Analyzing Entity <afisor_errPin> in library <work> (Architecture <errpin>).
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/afisor_errpin.vhd" line 30: The following signals are missing in the process sensitivity list:
+   enable.
+Entity <afisor_errPin> analyzed. Unit <afisor_errPin> generated.
+
+Analyzing Entity <afisor_suma> in library <work> (Architecture <afis_suma>).
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/afisor_suma.vhd" line 34: The following signals are missing in the process sensitivity list:
+   enable.
+Entity <afisor_suma> analyzed. Unit <afisor_suma> generated.
+
+Analyzing Entity <cod> in library <work> (Architecture <arh>).
+INFO:Xst:1561 - "C:/Xilinx/asdsadas/mux4_1.vhd" line 23: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/mux4_1.vhd" line 16: The following signals are missing in the process sensitivity list:
+   a, an1, b, an2, c, an3, d, an4.
+Entity <cod> analyzed. Unit <cod> generated.
+
+Analyzing Entity <poarta_sau> in library <work> (Architecture <poarta_sau_arh>).
+Entity <poarta_sau> analyzed. Unit <poarta_sau> generated.
+
+Analyzing Entity <poarta_si_retr> in library <work> (Architecture <poarta_si_retr_arh>).
+Entity <poarta_si_retr> analyzed. Unit <poarta_si_retr> generated.
+
+Analyzing Entity <mux_chit> in library <work> (Architecture <mux_chit_arh>).
+WARNING:Xst:819 - "C:/Xilinx/asdsadas/mux_chit.vhd" line 17: The following signals are missing in the process sensitivity list:
+   A, B.
+Entity <mux_chit> analyzed. Unit <mux_chit> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <memrom>.
+    Related source file is "C:/Xilinx/asdsadas/rom_id_pin.vhd".
+    Found 8x4-bit ROM for signal <D>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <memrom> synthesized.
+
+
+Synthesizing Unit <numarator_sute>.
+    Related source file is "C:/Xilinx/asdsadas/num_sute.vhd".
+    Found 4-bit up counter for signal <Q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <numarator_sute> synthesized.
+
+
+Synthesizing Unit <numarator_zeci>.
+    Related source file is "C:/Xilinx/asdsadas/numarator_zeci.vhd".
+    Found 4-bit up counter for signal <Q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <numarator_zeci> synthesized.
+
+
+Synthesizing Unit <numarator_mii>.
+    Related source file is "C:/Xilinx/asdsadas/numarator_mii.vhd".
+    Found 2-bit up counter for signal <Q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <numarator_mii> synthesized.
+
+
+Synthesizing Unit <div>.
+    Related source file is "C:/Xilinx/asdsadas/div_frecv.vhd".
+    Found 1-bit tristate buffer for signal <div_out>.
+    Found 25-bit adder for signal <$add0000> created at line 17.
+    Found 1-bit register for signal <Mtridata_div_out> created at line 19.
+    Found 25-bit up counter for signal <var>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Tristate(s).
+Unit <div> synthesized.
+
+
+Synthesizing Unit <numarator_adrese>.
+    Related source file is "C:/Xilinx/asdsadas/numarator_adrese.vhd".
+    Found 3-bit up counter for signal <temp_var>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <numarator_adrese> synthesized.
+
+
+Synthesizing Unit <ram_suma>.
+    Related source file is "C:/Xilinx/asdsadas/ram_suma_2_0.vhd".
+    Found 8x10-bit single-port distributed RAM for signal <ram>.
+    -----------------------------------------------------------------------
+    | ram_style          | Auto                                |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 10-bit                     |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <data_i>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    Found 10-bit register for signal <data_o>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <ram_suma> synthesized.
+
+
+Synthesizing Unit <decod_zeci>.
+    Related source file is "C:/Xilinx/asdsadas/decodificator_zeci.vhd".
+    Found 16x7-bit ROM for signal <q>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decod_zeci> synthesized.
+
+
+Synthesizing Unit <decod>.
+    Related source file is "C:/Xilinx/asdsadas/decodificator_sute.vhd".
+    Found 16x7-bit ROM for signal <q>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decod> synthesized.
+
+
+Synthesizing Unit <decod_mii>.
+    Related source file is "C:/Xilinx/asdsadas/decodificator_mii.vhd".
+    Found 4x7-bit ROM for signal <q>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decod_mii> synthesized.
+
+
+Synthesizing Unit <afisare>.
+    Related source file is "C:/Xilinx/asdsadas/afis.vhd".
+    Found finite state machine <FSM_0> for signal <i>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 7                                              |
+    | Clock              | cclk (rising_edge)                             |
+    | Clock enable       | enable (positive)                              |
+    | Power Up State     | 00000000000000000000000000000011               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit tristate buffer for signal <catod>.
+    Found 4-bit tristate buffer for signal <anod>.
+    Found 7-bit register for signal <catodin>.
+    Found 11-bit up counter for signal <clkdiv>.
+    Found 4-bit register for signal <Mtridata_anod> created at line 41.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   7 D-type flip-flop(s).
+	inferred  11 Tristate(s).
+Unit <afisare> synthesized.
+
+
+Synthesizing Unit <afisor_errPin>.
+    Related source file is "C:/Xilinx/asdsadas/afisor_errpin.vhd".
+    Found finite state machine <FSM_1> for signal <i>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 7                                              |
+    | Clock              | cclk (rising_edge)                             |
+    | Clock enable       | enable (positive)                              |
+    | Power Up State     | 00000000000000000000000000000011               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit tristate buffer for signal <catod>.
+    Found 4-bit tristate buffer for signal <anod>.
+    Found 11-bit up counter for signal <clkdiv>.
+    Found 4-bit register for signal <Mtridata_anod> created at line 36.
+    Found 7-bit register for signal <Mtridata_catod> created at line 37.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  11 Tristate(s).
+Unit <afisor_errPin> synthesized.
+
+
+Synthesizing Unit <afisor_suma>.
+    Related source file is "C:/Xilinx/asdsadas/afisor_suma.vhd".
+    Found finite state machine <FSM_2> for signal <i>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 7                                              |
+    | Clock              | cclk (rising_edge)                             |
+    | Clock enable       | enable (positive)                              |
+    | Power Up State     | 00000000000000000000000000000011               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit tristate buffer for signal <catod>.
+    Found 4-bit tristate buffer for signal <anod>.
+    Found 7-bit 4-to-1 multiplexer for signal <$mux0010>.
+    Found 11-bit up counter for signal <clkdiv>.
+    Found 4-bit register for signal <Mtridata_anod> created at line 40.
+    Found 7-bit register for signal <Mtridata_catod> created at line 41.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   7 Multiplexer(s).
+	inferred  11 Tristate(s).
+Unit <afisor_suma> synthesized.
+
+
+Synthesizing Unit <cod>.
+    Related source file is "C:/Xilinx/asdsadas/mux4_1.vhd".
+    Found 7-bit 4-to-1 multiplexer for signal <y>.
+    Found 4-bit 4-to-1 multiplexer for signal <y1>.
+    Summary:
+	inferred  11 Multiplexer(s).
+Unit <cod> synthesized.
+
+
+Synthesizing Unit <poarta_sau>.
+    Related source file is "C:/Xilinx/asdsadas/poarta_si.vhd".
+Unit <poarta_sau> synthesized.
+
+
+Synthesizing Unit <poarta_si_retr>.
+    Related source file is "C:/Xilinx/asdsadas/poarta_si_retr.vhd".
+Unit <poarta_si_retr> synthesized.
+
+
+Synthesizing Unit <mux_chit>.
+    Related source file is "C:/Xilinx/asdsadas/mux_chit.vhd".
+    Found 1-bit 4-to-1 multiplexer for signal <Q>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_chit> synthesized.
+
+
+Synthesizing Unit <top_level>.
+    Related source file is "C:/Xilinx/asdsadas/top_level.vhd".
+WARNING:Xst:646 - Signal <suma> is assigned but never used.
+WARNING:Xst:653 - Signal <catodcard> is used but never assigned. Tied to value 0000000.
+WARNING:Xst:646 - Signal <miiint> is assigned but never used.
+WARNING:Xst:646 - Signal <enafisCard> is assigned but never used.
+WARNING:Xst:646 - Signal <suteint> is assigned but never used.
+WARNING:Xst:1780 - Signal <idrom> is never used or assigned.
+WARNING:Xst:646 - Signal <zecioutt> is assigned but never used.
+WARNING:Xst:646 - Signal <suteoutt> is assigned but never used.
+WARNING:Xst:646 - Signal <zeciint> is assigned but never used.
+WARNING:Xst:653 - Signal <ok_cardvar> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <anodcard> is used but never assigned. Tied to value 0000.
+WARNING:Xst:646 - Signal <miioutt> is assigned but never used.
+WARNING:Xst:737 - Found 2-bit latch for signal <S_mux>.
+WARNING:Xst:737 - Found 1-bit latch for signal <enafisSuma>.
+WARNING:Xst:737 - Found 1-bit latch for signal <suma_invalidavar>.
+WARNING:Xst:737 - Found 1-bit latch for signal <enafis>.
+WARNING:Xst:737 - Found 1-bit latch for signal <ok_tranzvar>.
+WARNING:Xst:737 - Found 10-bit latch for signal <$mux0037>.
+WARNING:Xst:643 - "C:/Xilinx/asdsadas/top_level.vhd" line 262: The result of a 2x10-bit multiplication is partially used. Only the 10 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Xilinx/asdsadas/top_level.vhd" line 265: The result of a 4x7-bit multiplication is partially used. Only the 10 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 10-bit adder for signal <$add0000> created at line 270.
+    Found 10-bit subtractor for signal <$addsub0000> created at line 273.
+    Found 10-bit adder for signal <$addsub0001>.
+    Found 4-bit comparator equal for signal <$cmp_eq0000> created at line 249.
+    Found 10-bit comparator greater for signal <$cmp_gt0000> created at line 271.
+    Found 4-bit comparator not equal for signal <$cmp_ne0000> created at line 249.
+    Found 4x4-bit multiplier for signal <$mult0002> created at line 268.
+    Found 2x10-bit multiplier for signal <$mult0005> created at line 262.
+    Found 4x7-bit multiplier for signal <$mult0006> created at line 265.
+    Found 2-bit 4-to-1 multiplexer for signal <$mux0042> created at line 253.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+	inferred   3 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <top_level> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x10-bit single-port distributed RAM                  : 1
+# ROMs                                                 : 7
+ 16x7-bit ROM                                          : 4
+ 4x7-bit ROM                                           : 2
+ 8x4-bit ROM                                           : 1
+# Multipliers                                          : 3
+ 2x10-bit multiplier                                   : 1
+ 4x4-bit multiplier                                    : 1
+ 4x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+ 25-bit adder                                          : 1
+# Counters                                             : 8
+ 11-bit up counter                                     : 3
+ 2-bit up counter                                      : 1
+ 25-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 8
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+ 4-bit register                                        : 3
+ 7-bit register                                        : 3
+# Latches                                              : 6
+ 1-bit latch                                           : 4
+ 10-bit latch                                          : 1
+ 2-bit latch                                           : 1
+# Comparators                                          : 3
+ 10-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator not equal                            : 1
+# Multiplexers                                         : 5
+ 1-bit 4-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 7-bit 4-to-1 multiplexer                              : 2
+# Tristates                                            : 13
+ 1-bit tristate buffer                                 : 8
+ 4-bit tristate buffer                                 : 3
+ 7-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <afis_suma/i> on signal <i[1:2]> with gray encoding.
+----------------------------------------------
+ State                            | Encoding
+----------------------------------------------
+ 00000000000000000000000000000000 | 10
+ 00000000000000000000000000000001 | 11
+ 00000000000000000000000000000010 | 01
+ 00000000000000000000000000000011 | 00
+----------------------------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <afis_errPin/i> on signal <i[1:2]> with gray encoding.
+----------------------------------------------
+ State                            | Encoding
+----------------------------------------------
+ 00000000000000000000000000000000 | 10
+ 00000000000000000000000000000001 | 11
+ 00000000000000000000000000000010 | 01
+ 00000000000000000000000000000011 | 00
+----------------------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <afis/i> on signal <i[1:2]> with gray encoding.
+----------------------------------------------
+ State                            | Encoding
+----------------------------------------------
+ 00000000000000000000000000000000 | 10
+ 00000000000000000000000000000001 | 11
+ 00000000000000000000000000000010 | 01
+ 00000000000000000000000000000011 | 00
+----------------------------------------------
+Loading device for application Rf_Device from file '3s250e.nph' in environment C:\Xilinx.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# RAMs                                                 : 1
+ 8x10-bit single-port distributed RAM                  : 1
+# ROMs                                                 : 7
+ 16x7-bit ROM                                          : 4
+ 4x7-bit ROM                                           : 2
+ 8x4-bit ROM                                           : 1
+# Multipliers                                          : 3
+ 2x10-bit multiplier                                   : 1
+ 4x4-bit multiplier                                    : 1
+ 4x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+ 25-bit adder                                          : 1
+# Counters                                             : 8
+ 11-bit up counter                                     : 3
+ 2-bit up counter                                      : 1
+ 25-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+# Latches                                              : 6
+ 1-bit latch                                           : 4
+ 10-bit latch                                          : 1
+ 2-bit latch                                           : 1
+# Comparators                                          : 3
+ 10-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator not equal                            : 1
+# Multiplexers                                         : 5
+ 1-bit 4-to-1 multiplexer                              : 1
+ 2-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 7-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1988 - Unit <top_level>: instances <Mcompar__cmp_eq0000>, <Mcompar__cmp_ne0000> of unit <LPM_COMPARE_1> and unit <LPM_COMPARE_3> are dual, second instance is removed
+INFO:Xst:2261 - The FF/Latch <afis_errPin/Mtridata_catod_0> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <afis_errPin/Mtridata_catod_2> 
+WARNING:Xst:638 - in unit top_level Conflict on KEEP property on signal afis_errPin/Mtridata_catod<0> and afis_errPin/Mtridata_catod<2> afis_errPin/Mtridata_catod<2> signal will be lost.
+INFO:Xst:2261 - The FF/Latch <afis_errPin/Mtridata_catod_3> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <afis_errPin/Mtridata_anod_3> 
+WARNING:Xst:638 - in unit top_level Conflict on KEEP property on signal afis_errPin/Mtridata_catod<3> and afis_errPin/Mtridata_anod<3> afis_errPin/Mtridata_anod<3> signal will be lost.
+INFO:Xst:2261 - The FF/Latch <afis_errPin/Mtridata_catod_1> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <afis_errPin/Mtridata_catod_6> 
+WARNING:Xst:638 - in unit top_level Conflict on KEEP property on signal afis_errPin/Mtridata_catod<1> and afis_errPin/Mtridata_catod<6> afis_errPin/Mtridata_catod<6> signal will be lost.
+INFO:Xst:2261 - The FF/Latch <afis_errPin/Mtridata_catod_5> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <afis_errPin/Mtridata_anod_0> 
+WARNING:Xst:638 - in unit top_level Conflict on KEEP property on signal afis_errPin/Mtridata_catod<5> and afis_errPin/Mtridata_anod<0> afis_errPin/Mtridata_anod<0> signal will be lost.
+WARNING:Xst:1710 - FF/Latch  <afis_errPin/Mtridata_catod_0> (without init value) has a constant value of 0 in block <top_level>.
+WARNING:Xst:1710 - FF/Latch  <afis_errPin/Mtridata_catod_4> (without init value) has a constant value of 1 in block <top_level>.
+INFO:Xst:2146 - In block <top_level>, Counter <afis_errPin/clkdiv> <afis_suma/clkdiv> are equivalent, XST will keep only <afis_errPin/clkdiv>.
+WARNING:Xst:2042 - Unit top_level: 23 internal tristates are replaced by logic (pull-up yes): anodpin<0>, anodpin<1>, anodpin<2>, anodpin<3>, anodsuma<0>, anodsuma<1>, anodsuma<2>, anodsuma<3>, catodpin<0>, catodpin<1>, catodpin<2>, catodpin<3>, catodpin<4>, catodpin<5>, catodpin<6>, catodsuma<0>, catodsuma<1>, catodsuma<2>, catodsuma<3>, catodsuma<4>, catodsuma<5>, catodsuma<6>, clkdiv.
+WARNING:Xst:2042 - Unit afisare: 4 internal tristates are replaced by logic (pull-up yes): anod<0>, anod<1>, anod<2>, anod<3>.
+
+Optimizing unit <top_level> ...
+WARNING:Xst:1710 - FF/Latch  <S_mux_1> (without init value) has a constant value of 0 in block <top_level>.
+
+Optimizing unit <afisare> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_level, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 104
+ Flip-Flops                                            : 104
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_level.ngr
+Top Level Output File Name         : top_level
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 28
+
+Cell Usage :
+# BELS                             : 416
+#      GND                         : 1
+#      INV                         : 14
+#      LUT1                        : 68
+#      LUT2                        : 37
+#      LUT3                        : 38
+#      LUT4                        : 92
+#      MUXCY                       : 94
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 119
+#      FD                          : 24
+#      FDC                         : 10
+#      FDE                         : 48
+#      FDR                         : 11
+#      FDS                         : 11
+#      LD                          : 13
+#      LDC                         : 2
+# RAMS                             : 10
+#      RAM16X1S                    : 10
+# Clock Buffers                    : 6
+#      BUFG                        : 1
+#      BUFGP                       : 5
+# IO Buffers                       : 23
+#      IBUF                        : 7
+#      OBUF                        : 16
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250etq144-4 
+
+ Number of Slices:                     140  out of   2448     5%  
+ Number of Slice Flip Flops:           119  out of   4896     2%  
+ Number of 4 input LUTs:               259  out of   4896     5%  
+    Number used as logic:              249
+    Number used as RAMs:                10
+ Number of IOs:                         28
+ Number of bonded IOBs:                 28  out of    108    25%  
+ Number of MULT18X18SIOs:                1  out of     12     8%  
+ Number of GCLKs:                        6  out of     24    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+confirmare                         | BUFGP                       | 2     |
+ok_pin_OBUF(ok_pin454:O)           | NONE(*)(_mux0037_2)         | 13    |
+clock                              | BUFGP                       | 68    |
+afis_errPin/clkdiv_101             | BUFG                        | 20    |
+suma_sute                          | BUFGP                       | 4     |
+suma_zeci                          | BUFGP                       | 4     |
+suma_mii                           | BUFGP                       | 2     |
+clkdiv(clkdivLogicTrst1:O)         | NONE(*)(numaradr/temp_var_2)| 3     |
+afis/clkdiv_10                     | NONE(afis/i_FFd1)           | 13    |
+-----------------------------------+-----------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------+------------------------+-------+
+Control Signal                               | Buffer(FF name)        | Load  |
+---------------------------------------------+------------------------+-------+
+ok_tranzvar__not0001(ok_tranzvar__not00011:O)| NONE(suma_invalidavar) | 2     |
+CNL                                          | IBUF                   | 8     |
+numarm/_or0000(numarm/_or00001:O)            | NONE(numarm/Q_0)       | 2     |
+---------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.130ns (Maximum Frequency: 123.001MHz)
+   Minimum input arrival time before clock: 9.169ns
+   Maximum output required time after clock: 23.959ns
+   Maximum combinational path delay: 16.066ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ok_pin_OBUF'
+  Clock period: 2.600ns (frequency: 384.615MHz)
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Delay:               2.600ns (Levels of Logic = 1)
+  Source:            _mux0037_9 (LATCH)
+  Destination:       _mux0037_9 (LATCH)
+  Source Clock:      ok_pin_OBUF falling
+  Destination Clock: ok_pin_OBUF falling
+
+  Data Path: _mux0037_9 to _mux0037_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.676   0.912  _mux0037_9 (_mux0037_9)
+     LUT3:I2->O            1   0.704   0.000  _mux0047<9>2 (_mux0047<9>)
+     LD:D                      0.308          _mux0037_9
+    ----------------------------------------
+    Total                      2.600ns (1.688ns logic, 0.912ns route)
+                                       (64.9% logic, 35.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 8.130ns (frequency: 123.001MHz)
+  Total number of paths / destination ports: 692 / 78
+-------------------------------------------------------------------------
+Delay:               8.130ns (Levels of Logic = 26)
+  Source:            devifez/var_1 (FF)
+  Destination:       devifez/Mtridata_div_out (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: devifez/var_1 to devifez/Mtridata_div_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   1.052  devifez/var_1 (devifez/var_1)
+     LUT1:I0->O            1   0.704   0.000  devifez/var_1_rt (devifez/var_1_rt)
+     MUXCY:S->O            1   0.464   0.000  devifez/Madd__add0000_cy<1> (devifez/Madd__add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<2> (devifez/Madd__add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<3> (devifez/Madd__add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<4> (devifez/Madd__add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<5> (devifez/Madd__add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<6> (devifez/Madd__add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<7> (devifez/Madd__add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<8> (devifez/Madd__add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<9> (devifez/Madd__add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<10> (devifez/Madd__add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<11> (devifez/Madd__add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<12> (devifez/Madd__add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<13> (devifez/Madd__add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<14> (devifez/Madd__add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<15> (devifez/Madd__add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<16> (devifez/Madd__add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<17> (devifez/Madd__add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<18> (devifez/Madd__add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<19> (devifez/Madd__add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<20> (devifez/Madd__add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<21> (devifez/Madd__add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  devifez/Madd__add0000_cy<22> (devifez/Madd__add0000_cy<22>)
+     MUXCY:CI->O           0   0.059   0.000  devifez/Madd__add0000_cy<23> (devifez/Madd__add0000_cy<23>)
+     XORCY:CI->O           1   0.804   0.801  devifez/Madd__add0000_xor<24> (devifez/_add0000<24>)
+     INV:I->O              1   0.704   0.801  devifez/_add0000<24>_inv1_INV_0 (devifez/_add0000<24>_inv)
+     FDR:R                     0.911          devifez/Mtridata_div_out
+    ----------------------------------------
+    Total                      8.130ns (5.476ns logic, 2.654ns route)
+                                       (67.4% logic, 32.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'afis_errPin/clkdiv_101'
+  Clock period: 4.643ns (frequency: 215.378MHz)
+  Total number of paths / destination ports: 61 / 34
+-------------------------------------------------------------------------
+Delay:               4.643ns (Levels of Logic = 1)
+  Source:            afis_suma/i_FFd2 (FF)
+  Destination:       afis_suma/Mtridata_catod_0 (FF)
+  Source Clock:      afis_errPin/clkdiv_101 rising
+  Destination Clock: afis_errPin/clkdiv_101 rising
+
+  Data Path: afis_suma/i_FFd2 to afis_suma/Mtridata_catod_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.591   1.293  afis_suma/i_FFd2 (afis_suma/i_FFd2)
+     LUT2:I0->O           11   0.704   1.144  afis_suma/i_Out01 (afis_suma/_cmp_eq0000)
+     FDR:R                     0.911          afis_suma/Mtridata_catod_0
+    ----------------------------------------
+    Total                      4.643ns (2.206ns logic, 2.437ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'suma_sute'
+  Clock period: 3.522ns (frequency: 283.930MHz)
+  Total number of paths / destination ports: 12 / 4
+-------------------------------------------------------------------------
+Delay:               3.522ns (Levels of Logic = 1)
+  Source:            numars/Q_0 (FF)
+  Destination:       numars/Q_0 (FF)
+  Source Clock:      suma_sute rising
+  Destination Clock: suma_sute rising
+
+  Data Path: numars/Q_0 to numars/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             12   0.591   1.118  numars/Q_0 (numars/Q_0)
+     INV:I->O              1   0.704   0.801  numars/Q__mux0000<0>1_INV_0 (numars/Q__mux0000<0>)
+     FDC:D                     0.308          numars/Q_0
+    ----------------------------------------
+    Total                      3.522ns (1.603ns logic, 1.919ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'suma_zeci'
+  Clock period: 3.919ns (frequency: 255.167MHz)
+  Total number of paths / destination ports: 12 / 4
+-------------------------------------------------------------------------
+Delay:               3.919ns (Levels of Logic = 1)
+  Source:            numarz/Q_0 (FF)
+  Destination:       numarz/Q_0 (FF)
+  Source Clock:      suma_zeci rising
+  Destination Clock: suma_zeci rising
+
+  Data Path: numarz/Q_0 to numarz/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             21   0.591   1.515  numarz/Q_0 (numarz/Q_0)
+     INV:I->O              1   0.704   0.801  numarz/Q__mux0000<0>1_INV_0 (numarz/Q__mux0000<0>)
+     FDC:D                     0.308          numarz/Q_0
+    ----------------------------------------
+    Total                      3.919ns (1.603ns logic, 2.316ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'suma_mii'
+  Clock period: 3.592ns (frequency: 278.396MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               3.592ns (Levels of Logic = 1)
+  Source:            numarm/Q_0 (FF)
+  Destination:       numarm/Q_0 (FF)
+  Source Clock:      suma_mii rising
+  Destination Clock: suma_mii rising
+
+  Data Path: numarm/Q_0 to numarm/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.591   1.188  numarm/Q_0 (numarm/Q_0)
+     INV:I->O              1   0.704   0.801  numarm/Q_Madd__add0000__not00001_INV_0 (numarm/Q__add0000<0>)
+     FDC:D                     0.308          numarm/Q_0
+    ----------------------------------------
+    Total                      3.592ns (1.603ns logic, 1.989ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv'
+  Clock period: 3.597ns (frequency: 278.030MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               3.597ns (Levels of Logic = 1)
+  Source:            numaradr/temp_var_0 (FF)
+  Destination:       numaradr/temp_var_1 (FF)
+  Source Clock:      clkdiv rising
+  Destination Clock: clkdiv rising
+
+  Data Path: numaradr/temp_var_0 to numaradr/temp_var_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             26   0.591   1.994  numaradr/temp_var_0 (numaradr/temp_var_0)
+     LUT3:I0->O            1   0.704   0.000  numaradr/temp_var_Madd__add0000_Mxor_Result<2>_Result1 (numaradr/temp_var__add0000<2>)
+     FD:D                      0.308          numaradr/temp_var_2
+    ----------------------------------------
+    Total                      3.597ns (1.603ns logic, 1.994ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'afis/clkdiv_10'
+  Clock period: 4.779ns (frequency: 209.249MHz)
+  Total number of paths / destination ports: 35 / 16
+-------------------------------------------------------------------------
+Delay:               4.779ns (Levels of Logic = 2)
+  Source:            afis/i_FFd2 (FF)
+  Destination:       afis/catodin_1 (FF)
+  Source Clock:      afis/clkdiv_10 rising
+  Destination Clock: afis/clkdiv_10 rising
+
+  Data Path: afis/i_FFd2 to afis/catodin_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             18   0.591   1.592  afis/i_FFd2 (afis/i_FFd2)
+     LUT4:I0->O            1   0.704   0.880  afis/_mux0010<6>_SW0 (N294)
+     LUT4:I1->O            1   0.704   0.000  afis/_mux0010<6> (afis/_mux0010<6>)
+     FDE:D                     0.308          afis/catodin_6
+    ----------------------------------------
+    Total                      4.779ns (2.307ns logic, 2.472ns route)
+                                       (48.3% logic, 51.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ok_pin_OBUF'
+  Total number of paths / destination ports: 24 / 13
+-------------------------------------------------------------------------
+Offset:              5.827ns (Levels of Logic = 3)
+  Source:            confirmare (PAD)
+  Destination:       _mux0037_9 (LATCH)
+  Destination Clock: ok_pin_OBUF falling
+
+  Data Path: confirmare to _mux0037_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O           13   1.457   1.345  confirmare_BUFGP (confirmare_BUFGP)
+     LUT3:I0->O           10   0.704   1.309  _mux0047<9>11 (N210)
+     LUT3:I0->O            1   0.704   0.000  _mux0047<9>2 (_mux0047<9>)
+     LD:D                      0.308          _mux0037_9
+    ----------------------------------------
+    Total                      5.827ns (3.173ns logic, 2.654ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 400 / 45
+-------------------------------------------------------------------------
+Offset:              9.169ns (Levels of Logic = 5)
+  Source:            pin<0> (PAD)
+  Destination:       ram/data_o_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: pin<0> to ram/data_o_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.956  pin_0_IBUF (pin_0_IBUF)
+     LUT4:I1->O            1   0.704   0.000  ok_pin426_G (N359)
+     MUXF5:I1->O          12   0.321   1.293  ok_pin426 (ok_pin4_map57)
+     LUT2:I0->O           20   0.704   1.580  ok_pin454 (ok_pin_OBUF)
+     LUT4:I2->O           10   0.704   1.134  ram/we_inv1 (ram/we_inv)
+     FDE:CE                    0.555          ram/data_o_0
+    ----------------------------------------
+    Total                      9.169ns (4.206ns logic, 4.963ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'afis_errPin/clkdiv_101'
+  Total number of paths / destination ports: 16 / 2
+-------------------------------------------------------------------------
+Offset:              7.575ns (Levels of Logic = 4)
+  Source:            pin<0> (PAD)
+  Destination:       afis_errPin/i_FFd2 (FF)
+  Destination Clock: afis_errPin/clkdiv_101 rising
+
+  Data Path: pin<0> to afis_errPin/i_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.956  pin_0_IBUF (pin_0_IBUF)
+     LUT4:I1->O            1   0.704   0.000  ok_pin426_G (N359)
+     MUXF5:I1->O          12   0.321   1.293  ok_pin426 (ok_pin4_map57)
+     LUT2:I0->O           27   0.704   1.824  enafisPin1 (enafisPin)
+     FDE:CE                    0.555          afis_errPin/i_FFd2
+    ----------------------------------------
+    Total                      7.575ns (3.502ns logic, 4.073ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkdiv'
+  Total number of paths / destination ports: 330 / 14
+-------------------------------------------------------------------------
+Offset:              16.477ns (Levels of Logic = 8)
+  Source:            numaradr/temp_var_0 (FF)
+  Destination:       anod<3> (PAD)
+  Source Clock:      clkdiv rising
+
+  Data Path: numaradr/temp_var_0 to anod<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             26   0.591   1.994  numaradr/temp_var_0 (numaradr/temp_var_0)
+     LUT4:I0->O            1   0.704   0.000  ok_pin426_F (N358)
+     MUXF5:I0->O          12   0.321   1.293  ok_pin426 (ok_pin4_map57)
+     LUT3:I0->O            6   0.704   1.178  ok_tranzvar__not00011 (ok_tranzvar__not0001)
+     LUT3:I0->O            8   0.704   1.162  anod<0>21 (N101)
+     LUT3:I1->O            1   0.704   0.836  anod<0>12 (anod<0>_map17)
+     LUT4:I2->O            1   0.704   0.805  anod<0>211_SW0 (N334)
+     LUT4:I3->O            1   0.704   0.801  anod<0>211 (anod_0_OBUF)
+     OBUF:I->O                 3.272          anod_0_OBUF (anod<0>)
+    ----------------------------------------
+    Total                     16.477ns (8.408ns logic, 8.069ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ok_pin_OBUF'
+  Total number of paths / destination ports: 16 / 12
+-------------------------------------------------------------------------
+Offset:              9.847ns (Levels of Logic = 4)
+  Source:            enafis (LATCH)
+  Destination:       anod<3> (PAD)
+  Source Clock:      ok_pin_OBUF falling
+
+  Data Path: enafis to anod<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              13   0.676   1.345  enafis (enafis)
+     LUT3:I0->O            1   0.704   0.836  anod<3>12 (anod<3>_map44)
+     LUT4:I2->O            1   0.704   0.805  anod<3>21_SW0 (N340)
+     LUT4:I3->O            1   0.704   0.801  anod<3>21 (anod_3_OBUF)
+     OBUF:I->O                 3.272          anod_3_OBUF (anod<3>)
+    ----------------------------------------
+    Total                      9.847ns (6.060ns logic, 3.787ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'suma_sute'
+  Total number of paths / destination ports: 9152 / 13
+-------------------------------------------------------------------------
+Offset:              23.959ns (Levels of Logic = 18)
+  Source:            numars/Q_1 (FF)
+  Destination:       anod<3> (PAD)
+  Source Clock:      suma_sute rising
+
+  Data Path: numars/Q_1 to anod<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.591   1.144  numars/Q_1 (numars/Q_1)
+     MULT18X18SIO:A1->P1    4   3.657   1.092  Mmult__mult0006 (_mult0006<1>)
+     LUT2:I0->O            3   0.704   1.082  Madd__add0000C7 (Madd__add0000C)
+     LUT3:I0->O            1   0.704   0.000  Madd__add0000_Madd_lut<2> (N54)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0000_Madd_cy<2> (Madd__add0000_Madd_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<3> (Madd__add0000_Madd_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<4> (Madd__add0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<5> (Madd__add0000_Madd_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<6> (Madd__add0000_Madd_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<7> (Madd__add0000_Madd_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0000_Madd_cy<8> (Madd__add0000_Madd_cy<8>)
+     XORCY:CI->O           2   0.804   1.052  Madd__add0000_Madd_xor<9> (_add0000<9>)
+     LUT2:I0->O            1   0.704   0.000  Mcompar__cmp_gt0000_lut<9> (N81)
+     MUXCY:S->O           11   0.736   1.179  Mcompar__cmp_gt0000_cy<9> (Mcompar__cmp_gt0000_cy<9>)
+     LUT3:I2->O            8   0.704   1.162  anod<0>21 (N101)
+     LUT3:I1->O            1   0.704   0.836  anod<0>12 (anod<0>_map17)
+     LUT4:I2->O            1   0.704   0.805  anod<0>211_SW0 (N334)
+     LUT4:I3->O            1   0.704   0.801  anod<0>211 (anod_0_OBUF)
+     OBUF:I->O                 3.272          anod_0_OBUF (anod<0>)
+    ----------------------------------------
+    Total                     23.959ns (14.806ns logic, 9.153ns route)
+                                       (61.8% logic, 38.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 130 / 13
+-------------------------------------------------------------------------
+Offset:              14.636ns (Levels of Logic = 16)
+  Source:            ram/data_o_0 (FF)
+  Destination:       anod<3> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: ram/data_o_0 to anod<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.591   1.203  ram/data_o_0 (ram/data_o_0)
+     LUT2:I1->O            1   0.704   0.000  Mcompar__cmp_gt0000_lut<0> (N72)
+     MUXCY:S->O            1   0.464   0.000  Mcompar__cmp_gt0000_cy<0> (Mcompar__cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<1> (Mcompar__cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<2> (Mcompar__cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<3> (Mcompar__cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<4> (Mcompar__cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<5> (Mcompar__cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<6> (Mcompar__cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<7> (Mcompar__cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar__cmp_gt0000_cy<8> (Mcompar__cmp_gt0000_cy<8>)
+     MUXCY:CI->O          11   0.331   1.179  Mcompar__cmp_gt0000_cy<9> (Mcompar__cmp_gt0000_cy<9>)
+     LUT3:I2->O            8   0.704   1.162  anod<0>21 (N101)
+     LUT3:I1->O            1   0.704   0.836  anod<0>12 (anod<0>_map17)
+     LUT4:I2->O            1   0.704   0.805  anod<0>211_SW0 (N334)
+     LUT4:I3->O            1   0.704   0.801  anod<0>211 (anod_0_OBUF)
+     OBUF:I->O                 3.272          anod_0_OBUF (anod<0>)
+    ----------------------------------------
+    Total                     14.636ns (8.650ns logic, 5.986ns route)
+                                       (59.1% logic, 40.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'suma_zeci'
+  Total number of paths / destination ports: 6266 / 13
+-------------------------------------------------------------------------
+Offset:              21.089ns (Levels of Logic = 15)
+  Source:            numarz/Q_0 (FF)
+  Destination:       anod<3> (PAD)
+  Source Clock:      suma_zeci rising
+
+  Data Path: numarz/Q_0 to anod<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             21   0.591   1.690  numarz/Q_0 (numarz/Q_0)
+     LUT4:I0->O            2   0.704   0.912  Mmult__mult0002_Madd_xor<4>11 (_mult0002<4>)
+     LUT3:I2->O            1   0.704   0.976  Madd__add0000C31 (Madd__add0000C3)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0000_Madd_lut<5> (N57)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0000_Madd_cy<5> (Madd__add0000_Madd_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<6> (Madd__add0000_Madd_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<7> (Madd__add0000_Madd_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0000_Madd_cy<8> (Madd__add0000_Madd_cy<8>)
+     XORCY:CI->O           2   0.804   1.052  Madd__add0000_Madd_xor<9> (_add0000<9>)
+     LUT2:I0->O            1   0.704   0.000  Mcompar__cmp_gt0000_lut<9> (N81)
+     MUXCY:S->O           11   0.736   1.179  Mcompar__cmp_gt0000_cy<9> (Mcompar__cmp_gt0000_cy<9>)
+     LUT3:I2->O            8   0.704   1.162  anod<0>21 (N101)
+     LUT3:I1->O            1   0.704   0.836  anod<0>12 (anod<0>_map17)
+     LUT4:I2->O            1   0.704   0.805  anod<0>211_SW0 (N334)
+     LUT4:I3->O            1   0.704   0.801  anod<0>211 (anod_0_OBUF)
+     OBUF:I->O                 3.272          anod_0_OBUF (anod<0>)
+    ----------------------------------------
+    Total                     21.089ns (11.676ns logic, 9.413ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'suma_mii'
+  Total number of paths / destination ports: 2002 / 13
+-------------------------------------------------------------------------
+Offset:              19.034ns (Levels of Logic = 15)
+  Source:            numarm/Q_0 (FF)
+  Destination:       anod<3> (PAD)
+  Source Clock:      suma_mii rising
+
+  Data Path: numarm/Q_0 to anod<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.591   1.192  numarm/Q_0 (numarm/Q_0)
+     LUT4:I3->O            1   0.704   0.976  Madd__add0000C21 (Madd__add0000C2)
+     LUT4:I0->O            1   0.704   0.000  Madd__add0000_Madd_lut<4> (N56)
+     MUXCY:S->O            1   0.464   0.000  Madd__add0000_Madd_cy<4> (Madd__add0000_Madd_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<5> (Madd__add0000_Madd_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<6> (Madd__add0000_Madd_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd__add0000_Madd_cy<7> (Madd__add0000_Madd_cy<7>)
+     MUXCY:CI->O           0   0.059   0.000  Madd__add0000_Madd_cy<8> (Madd__add0000_Madd_cy<8>)
+     XORCY:CI->O           2   0.804   1.052  Madd__add0000_Madd_xor<9> (_add0000<9>)
+     LUT2:I0->O            1   0.704   0.000  Mcompar__cmp_gt0000_lut<9> (N81)
+     MUXCY:S->O           11   0.736   1.179  Mcompar__cmp_gt0000_cy<9> (Mcompar__cmp_gt0000_cy<9>)
+     LUT3:I2->O            8   0.704   1.162  anod<0>21 (N101)
+     LUT3:I1->O            1   0.704   0.836  anod<0>12 (anod<0>_map17)
+     LUT4:I2->O            1   0.704   0.805  anod<0>211_SW0 (N334)
+     LUT4:I3->O            1   0.704   0.801  anod<0>211 (anod_0_OBUF)
+     OBUF:I->O                 3.272          anod_0_OBUF (anod<0>)
+    ----------------------------------------
+    Total                     19.034ns (11.031ns logic, 8.003ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'confirmare'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              6.750ns (Levels of Logic = 3)
+  Source:            ok_tranzvar (LATCH)
+  Destination:       ok_tranz (PAD)
+  Source Clock:      confirmare falling
+
+  Data Path: ok_tranzvar to ok_tranz
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.676   0.976  ok_tranzvar (ok_tranzvar)
+     LUT4:I0->O            1   0.704   0.000  _mux00402 (N366)
+     MUXF5:I0->O           1   0.321   0.801  _mux0040_f5 (ok_tranz_OBUF)
+     OBUF:I->O                 3.272          ok_tranz_OBUF (ok_tranz)
+    ----------------------------------------
+    Total                      6.750ns (4.973ns logic, 1.777ns route)
+                                       (73.7% logic, 26.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'afis_errPin/clkdiv_101'
+  Total number of paths / destination ports: 19 / 11
+-------------------------------------------------------------------------
+Offset:              7.864ns (Levels of Logic = 3)
+  Source:            afis_errPin/Mtridata_catod_1 (FF)
+  Destination:       catod<6> (PAD)
+  Source Clock:      afis_errPin/clkdiv_101 rising
+
+  Data Path: afis_errPin/Mtridata_catod_1 to catod<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.956  afis_errPin/Mtridata_catod_1 (afis_errPin/Mtridata_catod_1)
+     LUT4:I1->O            1   0.704   0.836  catod<6>_SW1 (N326)
+     LUT4:I2->O            1   0.704   0.801  catod<6> (catod_6_OBUF)
+     OBUF:I->O                 3.272          catod_6_OBUF (catod<6>)
+    ----------------------------------------
+    Total                      7.864ns (5.271ns logic, 2.593ns route)
+                                       (67.0% logic, 33.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'afis/clkdiv_10'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              9.372ns (Levels of Logic = 4)
+  Source:            afis/catodin_4 (FF)
+  Destination:       catod<4> (PAD)
+  Source Clock:      afis/clkdiv_10 rising
+
+  Data Path: afis/catodin_4 to catod<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.880  afis/catodin_4 (afis/catodin_4)
+     LUT4:I1->O            1   0.704   0.880  catod<4>17 (catod<4>_map7)
+     LUT3:I1->O            1   0.704   0.836  catod<4>20 (catod<4>_map9)
+     LUT4:I2->O            1   0.704   0.801  catod<4>29 (catod_4_OBUF)
+     OBUF:I->O                 3.272          catod_4_OBUF (catod<4>)
+    ----------------------------------------
+    Total                      9.372ns (5.975ns logic, 3.397ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 305 / 15
+-------------------------------------------------------------------------
+Delay:               16.066ns (Levels of Logic = 9)
+  Source:            pin<0> (PAD)
+  Destination:       anod<3> (PAD)
+
+  Data Path: pin<0> to anod<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.956  pin_0_IBUF (pin_0_IBUF)
+     LUT4:I1->O            1   0.704   0.000  ok_pin426_G (N359)
+     MUXF5:I1->O          12   0.321   1.293  ok_pin426 (ok_pin4_map57)
+     LUT3:I0->O            6   0.704   1.178  ok_tranzvar__not00011 (ok_tranzvar__not0001)
+     LUT3:I0->O            8   0.704   1.162  anod<0>21 (N101)
+     LUT3:I1->O            1   0.704   0.836  anod<0>12 (anod<0>_map17)
+     LUT4:I2->O            1   0.704   0.805  anod<0>211_SW0 (N334)
+     LUT4:I3->O            1   0.704   0.801  anod<0>211 (anod_0_OBUF)
+     OBUF:I->O                 3.272          anod_0_OBUF (anod<0>)
+    ----------------------------------------
+    Total                     16.066ns (9.035ns logic, 7.031ns route)
+                                       (56.2% logic, 43.8% route)
+
+=========================================================================
+CPU : 8.82 / 8.98 s | Elapsed : 9.00 / 9.00 s
+ 
+--> 
+
+Total memory usage is 151752 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   74 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

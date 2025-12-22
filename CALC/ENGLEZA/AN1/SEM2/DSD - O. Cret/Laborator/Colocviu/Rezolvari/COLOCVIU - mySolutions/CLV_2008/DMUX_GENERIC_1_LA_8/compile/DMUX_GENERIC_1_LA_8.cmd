@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\DMUX_GENERIC_1_LA_8\projlib.cfg"  -d "d:\designshdl\CLV_2008\DMUX_GENERIC_1_LA_8\compile\"  -work DMUX_GENERIC_1_LA_8 -dbg -e 100 "d:\designshdl\CLV_2008\DMUX_GENERIC_1_LA_8\src\DMUX_GENERIX_1_LA_8.vhd" 

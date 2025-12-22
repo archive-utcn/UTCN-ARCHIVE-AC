@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\NUMARATOR_ZECIMAL\projlib.cfg"  -d "D:\designshdl\CLV_2008\NUMARATOR_ZECIMAL\compile\"  -work NUMARATOR_ZECIMAL -dbg -e 100 "D:\designshdl\CLV_2008\NUMARATOR_ZECIMAL\src\NUMARATOR_ZECIMAL.vhd" 

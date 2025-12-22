@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+priority_encoder=.\Priority_Encoder\Priority_Encoder.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+priority_encoder=1

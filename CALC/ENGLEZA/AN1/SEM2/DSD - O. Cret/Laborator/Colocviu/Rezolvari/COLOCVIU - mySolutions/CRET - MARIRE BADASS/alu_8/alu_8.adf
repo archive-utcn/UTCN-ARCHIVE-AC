@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=alu_8
+
+[Library]
+alu_8=.\alu_8.lib
+
+[$LibMap$]
+alu_8=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=MV_QUARTUS_SYNTHESIS4
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=IMPL_WITH_SYNTH
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/alu_8.vhd=-1
+
+[Files.Data]
+.\src\alu_8.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\alu_8\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\alu_8\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\alu_8\
+Extension5=dll

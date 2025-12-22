@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+mixed_VHDL_Verilog_EDIF=mixed_VHDL_Verilog_EDIF.adf
+[Settings]
+Active=mixed_VHDL_Verilog_EDIF
+[Browser]
+sort=order
+mode=none
+[Expand]
+mixed_vhdl_verilog_edif=1
+[Order]
+order=1
+macro=

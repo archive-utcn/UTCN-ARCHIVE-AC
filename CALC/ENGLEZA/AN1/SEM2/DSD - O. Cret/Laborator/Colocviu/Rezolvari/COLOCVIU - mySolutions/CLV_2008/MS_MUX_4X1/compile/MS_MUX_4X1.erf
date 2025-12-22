@@ -1,0 +1,8 @@
+MESSAGE "File: D:\designshdl\CLV_2008\MS_MUX_4X1\src\MS_MUX_4X1.vhd" 
+MESSAGE "Compile Entity "MUX_GENERIC"" 
+MESSAGE "Entity `MUX_GENERIC' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "MUX_GENERIC"" 
+MESSAGE "Compile Entity "MS_MUX_GENERIC"" 
+MESSAGE "Entity `MS_MUX_GENERIC' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "MS_MUX_GENERIC"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

@@ -1,0 +1,23 @@
+timestamp=1305192215188
+
+[jk_sinc]
+A/arh_comp=A/ARH_COMP 21|./src/JK_SINC.vhd|10|1*1066
+B/arh_comp=3*0
+I=0*397
+I/arh_comp=I/ARH_COMP 0*1529
+M=11|0|v147|1305192081314|./src/JK_SINC.vhd|0*149*0x0afa00b0213a86a132a263abd2879d7ae2c722e6|0*325*0x7bd7e13dc0415552f89596087806a8cf
+M/arh_comp=M/ARH_COMP 21|0|v147|1305192215104|./src/JK_SINC.vhd|0*1052*0x221fe95843a8a9869a6866b36214609c79d4a4bf|0*1445*0x7bd7e13dc0415552f89596087806a8cf
+R=./src/JK_SINC.vhd|4
+
+[~A]
+ModifyID=43
+Version=73
+
+[~MFT]
+0=12|0JK_Sincron.mgf|1529|554
+1=2|1JK_Sincron.mgf|1066|1066
+3=0|3JK_Sincron.mgf|0|0
+
+[~U]
+jk_sinc=JK_Sinc 11|0*0|
+

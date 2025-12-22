@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1304530762 source:d:\facultate\sda\backtracking\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\modul_simulare_d_ff\library.cfg"  -j "D:\designshdl\modul_simulare_d_ff\modulk_simulare_d_ff\projlib.cfg"  -d "D:\designshdl\modul_simulare_d_ff\modulk_simulare_d_ff\compile\"  -work modulk_simulare_d_ff -dbg -e 100 "D:\designshdl\modul_simulare_d_ff\modulk_simulare_d_ff\src\modul_simulare_d_ff.vhd" 

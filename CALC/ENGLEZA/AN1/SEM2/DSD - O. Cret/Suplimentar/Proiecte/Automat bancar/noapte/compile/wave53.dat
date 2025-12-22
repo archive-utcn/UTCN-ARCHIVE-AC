@@ -1,0 +1,75 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "i#7#integerrict-2147483648 2147483647 "
+$IN 1 1 id_client
+I 2 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+I 3 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 69 2 16 pin_in
+$SC 5-65/4
+$IN +5 3 enable
+$BUS S +68 2 16 pin_m
+$SC 74-+60/4
+$S +5 3 corect
+$OUT +4 3 verifpin
+$BUS IN +4 2 16 pin_in
+$SC 5-65/4
+$IN 1 0 id_client
+$ENDTIME 20000
+$WAVES 1
+=0 T 0
+$VALUES
+V 1
+2
+$END
+$WAVES 9 25-65/4 +5 +69
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES 5 +8-+8/4
+*0
+$VALUES
+V 1
+1
+$END
+$WAVES 74 +8-+8/4
+*0
+=1 D 0 1
+$VALUES
+V 2
+U
+1
+$END
+$WAVES 78 94-+40/4 +9
+*0
+*1
+$VALUES
+V 2
+U
+0
+$END
+$ENDTIME 40000
+$ENDTIME 60000
+$WAVES 70
+=2 D 40k 1
+$VALUES
+V 1
+1
+$END
+$WAVES +69
+=3 D 40k 2
+$VALUES
+V 1
+1
+$END
+$WAVES +4
+=4 D 40k 3
+$VALUES
+V 1
+1
+$END
+$ENDTIME 80000
+$ENDTIME 100000
+$ENDTIME 120000
+$ENDWAVE

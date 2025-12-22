@@ -1,0 +1,10 @@
+void acces(tip_nod *prim)
+{
+tip_nod *p;
+p=prim;
+while(p!=0)
+{
+//prelucrare p;
+p=p->urm;
+}
+}

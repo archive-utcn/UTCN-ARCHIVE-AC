@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\11_Structural_Comparator\library.cfg"  -j "c:\My_Designs\11_Structural_Comparator\Structural_Comparator\projlib.cfg"  -d "c:\My_Designs\11_Structural_Comparator\Structural_Comparator\compile\"  -work Structural_Comparator -dbg -e 100 "c:\My_Designs\11_Structural_Comparator\Structural_Comparator\src\comparator.vhd" 

@@ -1,0 +1,713 @@
+V 000039 40 3925 1046097740062 bin2bcd
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+  #MODIFIED="1046097740"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-60,260,240)
+  FREEID 23
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,-10,98,14)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (128,110,235,134)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,90,65,114)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (129,50,235,74)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,130,103,154)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (130,-10,235,14)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 12
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  15, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,170,92,194)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 14
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  17, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (129,170,235,194)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 16
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  21, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,-40,240,220)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,0)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="BIN(9:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (260,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="BCD_D(3:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,100)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="CLK"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (260,60)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="BCD_H(3:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,140)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="ENABLE"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (260,0)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="BCD_T(3:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  14, 0, 0
+  {
+   COORD (0,180)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="RESET"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  16, 0, 0
+  {
+   COORD (260,180)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="BCD_U(3:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+ }
+}
+V 000039 40 2500 1046097745843 cnt_10b
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+  #MODIFIED="1046097745"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,280,180)
+  FREEID 15
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,65,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (147,110,255,134)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,103,94)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (206,30,255,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,92,134)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  13, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,260,160)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="CLK"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (280,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="COUNT(9:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="ENABLE"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (280,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="FULL"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="RESET"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+V 000039 40 2966 1046097750390 control
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+  #MODIFIED="1046097750"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,300,180)
+  FREEID 19
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,65,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (197,30,275,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,92,94)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (128,110,275,134)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,91,134)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (220,70,275,94)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 12
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  17, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,280,160)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="CLK"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (300,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="ENABLE"
+    #NUMBER="0"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="RESET"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (300,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="END_MEASURE"
+    #NUMBER="0"
+    #SIDE="right"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="START"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (300,80)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="GATE"
+    #NUMBER="0"
+    #SIDE="right"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+ }
+}
+V 000039 40 1267 1046097734421 hex2led
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+  #MODIFIED="1046097734"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,220,100)
+  FREEID 7
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,200,80)
+   FILL (0,(255,255,180),0)
+  }
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,105,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (116,30,195,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="HEX(3:0)"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (220,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="LED(6:0)"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+ }
+}

@@ -1,0 +1,222 @@
+--------------------------------------------------------------------------------
+Release 14.5 Trace  (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+E:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml pwm.twx pwm.ncd -o pwm.twr pwm.pcf -ucf pwm.ucf
+
+Design file:              pwm.ncd
+Physical constraint file: pwm.pcf
+Device,package,speed:     xc3s1200e,fg320,-4 (PRODUCTION 1.27 2013-03-26)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+btn_clr     |    0.142(R)|    1.165(R)|clk_BUFGP         |   0.000|
+sMod        |    8.357(R)|   -2.567(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+a_anod<0>   |   11.502(R)|clk_BUFGP         |   0.000|
+a_anod<1>   |   12.389(R)|clk_BUFGP         |   0.000|
+a_anod<2>   |   10.534(R)|clk_BUFGP         |   0.000|
+a_anod<3>   |   10.346(R)|clk_BUFGP         |   0.000|
+a_segment<0>|   20.419(R)|clk_BUFGP         |   0.000|
+a_segment<1>|   20.338(R)|clk_BUFGP         |   0.000|
+a_segment<2>|   21.754(R)|clk_BUFGP         |   0.000|
+a_segment<3>|   20.980(R)|clk_BUFGP         |   0.000|
+a_segment<4>|   20.608(R)|clk_BUFGP         |   0.000|
+a_segment<5>|   19.908(R)|clk_BUFGP         |   0.000|
+a_segment<6>|   20.945(R)|clk_BUFGP         |   0.000|
+pwm_led<0>  |   20.395(R)|clk_BUFGP         |   0.000|
+pwm_led<1>  |   20.892(R)|clk_BUFGP         |   0.000|
+pwm_led<2>  |   19.405(R)|clk_BUFGP         |   0.000|
+pwm_led<3>  |   20.442(R)|clk_BUFGP         |   0.000|
+pwm_led<4>  |   17.389(R)|clk_BUFGP         |   0.000|
+pwm_led<5>  |   17.905(R)|clk_BUFGP         |   0.000|
+pwm_led<6>  |   17.906(R)|clk_BUFGP         |   0.000|
+pwm_led<7>  |   17.897(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.490|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Switch<0>      |a_segment<0>   |   11.316|
+Switch<0>      |a_segment<1>   |   10.863|
+Switch<0>      |a_segment<2>   |   12.221|
+Switch<0>      |a_segment<3>   |   11.819|
+Switch<0>      |a_segment<4>   |   11.075|
+Switch<0>      |a_segment<5>   |   11.067|
+Switch<0>      |a_segment<6>   |   11.470|
+Switch<0>      |pwm_led<0>     |   14.600|
+Switch<0>      |pwm_led<1>     |   15.097|
+Switch<0>      |pwm_led<2>     |   13.610|
+Switch<0>      |pwm_led<3>     |   14.647|
+Switch<0>      |pwm_led<4>     |   11.594|
+Switch<0>      |pwm_led<5>     |   12.110|
+Switch<0>      |pwm_led<6>     |   12.111|
+Switch<0>      |pwm_led<7>     |   12.102|
+Switch<1>      |a_segment<0>   |   12.679|
+Switch<1>      |a_segment<1>   |   12.306|
+Switch<1>      |a_segment<2>   |   13.722|
+Switch<1>      |a_segment<3>   |   13.240|
+Switch<1>      |a_segment<4>   |   12.576|
+Switch<1>      |a_segment<5>   |   11.507|
+Switch<1>      |a_segment<6>   |   12.913|
+Switch<1>      |pwm_led<0>     |   15.392|
+Switch<1>      |pwm_led<1>     |   15.889|
+Switch<1>      |pwm_led<2>     |   14.402|
+Switch<1>      |pwm_led<3>     |   15.439|
+Switch<1>      |pwm_led<4>     |   12.386|
+Switch<1>      |pwm_led<5>     |   12.902|
+Switch<1>      |pwm_led<6>     |   12.903|
+Switch<1>      |pwm_led<7>     |   12.894|
+Switch<2>      |a_segment<0>   |   15.775|
+Switch<2>      |a_segment<1>   |   15.402|
+Switch<2>      |a_segment<2>   |   16.818|
+Switch<2>      |a_segment<3>   |   16.336|
+Switch<2>      |a_segment<4>   |   15.672|
+Switch<2>      |a_segment<5>   |   14.938|
+Switch<2>      |a_segment<6>   |   16.009|
+Switch<2>      |pwm_led<0>     |   14.800|
+Switch<2>      |pwm_led<1>     |   15.297|
+Switch<2>      |pwm_led<2>     |   13.810|
+Switch<2>      |pwm_led<3>     |   14.847|
+Switch<2>      |pwm_led<4>     |   11.794|
+Switch<2>      |pwm_led<5>     |   12.310|
+Switch<2>      |pwm_led<6>     |   12.311|
+Switch<2>      |pwm_led<7>     |   12.302|
+Switch<3>      |a_segment<0>   |   15.735|
+Switch<3>      |a_segment<1>   |   15.479|
+Switch<3>      |a_segment<2>   |   16.895|
+Switch<3>      |a_segment<3>   |   16.296|
+Switch<3>      |a_segment<4>   |   15.749|
+Switch<3>      |a_segment<5>   |   15.049|
+Switch<3>      |a_segment<6>   |   16.086|
+Switch<3>      |pwm_led<0>     |   14.983|
+Switch<3>      |pwm_led<1>     |   15.480|
+Switch<3>      |pwm_led<2>     |   13.993|
+Switch<3>      |pwm_led<3>     |   15.030|
+Switch<3>      |pwm_led<4>     |   11.977|
+Switch<3>      |pwm_led<5>     |   12.493|
+Switch<3>      |pwm_led<6>     |   12.494|
+Switch<3>      |pwm_led<7>     |   12.485|
+Switch<4>      |a_segment<0>   |   15.454|
+Switch<4>      |a_segment<1>   |   15.204|
+Switch<4>      |a_segment<2>   |   16.620|
+Switch<4>      |a_segment<3>   |   16.015|
+Switch<4>      |a_segment<4>   |   15.474|
+Switch<4>      |a_segment<5>   |   14.774|
+Switch<4>      |a_segment<6>   |   15.811|
+Switch<4>      |pwm_led<0>     |   16.665|
+Switch<4>      |pwm_led<1>     |   17.162|
+Switch<4>      |pwm_led<2>     |   15.675|
+Switch<4>      |pwm_led<3>     |   16.712|
+Switch<4>      |pwm_led<4>     |   13.659|
+Switch<4>      |pwm_led<5>     |   14.175|
+Switch<4>      |pwm_led<6>     |   14.176|
+Switch<4>      |pwm_led<7>     |   14.167|
+Switch<5>      |a_segment<0>   |   16.649|
+Switch<5>      |a_segment<1>   |   16.568|
+Switch<5>      |a_segment<2>   |   17.984|
+Switch<5>      |a_segment<3>   |   17.210|
+Switch<5>      |a_segment<4>   |   16.838|
+Switch<5>      |a_segment<5>   |   16.138|
+Switch<5>      |a_segment<6>   |   17.175|
+Switch<5>      |pwm_led<0>     |   17.161|
+Switch<5>      |pwm_led<1>     |   17.658|
+Switch<5>      |pwm_led<2>     |   16.171|
+Switch<5>      |pwm_led<3>     |   17.208|
+Switch<5>      |pwm_led<4>     |   14.155|
+Switch<5>      |pwm_led<5>     |   14.671|
+Switch<5>      |pwm_led<6>     |   14.672|
+Switch<5>      |pwm_led<7>     |   14.663|
+Switch<6>      |a_segment<0>   |   17.632|
+Switch<6>      |a_segment<1>   |   17.551|
+Switch<6>      |a_segment<2>   |   18.967|
+Switch<6>      |a_segment<3>   |   18.193|
+Switch<6>      |a_segment<4>   |   17.821|
+Switch<6>      |a_segment<5>   |   17.121|
+Switch<6>      |a_segment<6>   |   18.158|
+Switch<6>      |pwm_led<0>     |   15.379|
+Switch<6>      |pwm_led<1>     |   15.876|
+Switch<6>      |pwm_led<2>     |   14.389|
+Switch<6>      |pwm_led<3>     |   15.426|
+Switch<6>      |pwm_led<4>     |   12.373|
+Switch<6>      |pwm_led<5>     |   12.889|
+Switch<6>      |pwm_led<6>     |   12.890|
+Switch<6>      |pwm_led<7>     |   12.881|
+sMod           |a_segment<0>   |   20.370|
+sMod           |a_segment<1>   |   20.289|
+sMod           |a_segment<2>   |   21.705|
+sMod           |a_segment<3>   |   20.931|
+sMod           |a_segment<4>   |   20.559|
+sMod           |a_segment<5>   |   19.859|
+sMod           |a_segment<6>   |   20.896|
+sMod           |pwm_led<0>     |   15.410|
+sMod           |pwm_led<1>     |   15.907|
+sMod           |pwm_led<2>     |   14.420|
+sMod           |pwm_led<3>     |   15.457|
+sMod           |pwm_led<4>     |   12.404|
+sMod           |pwm_led<5>     |   12.920|
+sMod           |pwm_led<6>     |   12.921|
+sMod           |pwm_led<7>     |   12.912|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 21 16:19:08 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 132 MB
+
+
+

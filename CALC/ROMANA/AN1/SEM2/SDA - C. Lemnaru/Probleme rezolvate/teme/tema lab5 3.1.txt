@@ -1,0 +1,122 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*De la tastatura se citesc cuvinte ( siruri de caractere ).
+Sa se scrie un program care creeaza un arbore de cautare,
+care contine în noduri cuvintele si frecventa lor de aparitie.
+Sa se afiseze apoi cuvintele în ordine lexicografica crescatoare si
+frecventa lor de aparitie*/
+
+typedef struct tip_nod{ char cuv[20];
+                        int frecv;
+                        struct tip_nod *stg,*dr;}TIP_NOD;
+TIP_NOD *rad;
+
+void inserare_nerecursiva(char key[20])
+{
+    TIP_NOD *p,*q;
+    //constructie nod p
+    p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+    //introducere inform in nod
+    strcpy(p->cuv,key);
+    p->stg=0;
+    p->dr=0;
+    p->frecv=1;
+    if(rad==0)
+    {
+        //arbore vid
+        rad=p;
+        return;
+    }
+    //arborele nefiind vid se cauta nodul tata pt nodul p
+    q=rad;
+    for(;;)
+    {
+        if(strcmp(key,q->cuv)<0)
+        {
+            //cautarea se face in subarborele stg
+            if(q->stg==0)
+            {
+                //inserare
+                q->stg=p;
+                return;
+            }
+            else q=q->stg;
+        }
+        else
+        {
+
+            if (strcmp(key,q->cuv)>0)
+        {
+            //cautarea se face in subarborele drept
+            if(q->dr==0)
+            {
+                //inserare
+                q->dr=p;
+                return;
+            }
+            else q=q->dr;
+        }
+        else if(strcmp(key,q->cuv)==0)
+        {
+            q->frecv=q->frecv+1;
+            return;
+        }
+        }
+    }
+}
+void preordine(TIP_NOD *p, int nivel)
+{
+  int i;
+  if (p!=0){
+		 for(i=0;i<=nivel;i++) printf("  ");
+		 printf("%s\n",p->cuv);
+		 preordine(p->stg,nivel+1);
+		 preordine(p->dr,nivel+1);
+	       }
+}
+void inordine(TIP_NOD *p, int nivel)
+{
+  int i;
+  if (p!=0){
+		 inordine(p->stg,nivel+1);
+		 //for(i=0;i<=nivel;i++) printf("  ");
+		 printf("%s(%i) ",p->cuv,p->frecv);
+		 inordine(p->dr,nivel+1);
+	       }
+}
+void postordine(TIP_NOD *p, int nivel)
+{
+  int i;
+  if (p!=0){
+		 postordine(p->stg,nivel+1);
+		 postordine(p->dr,nivel+1);
+		 for(i=0;i<=nivel;i++) printf("  ");
+		 printf("%s\n",p->cuv);
+	       }
+}
+int main()
+{
+    int n,i;
+    char key[20];
+    printf("cate noduri?");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        printf("\nCheia nodului=");
+        scanf("%s",key);
+        inserare_nerecursiva(key);
+    }
+
+    printf("\nVIZITAREA IN INORDINE\n");
+    inordine(rad,0);
+    getch();
+    printf("\nVIZITAREA IN PREORDINE\n");
+    preordine(rad,0);
+    getch();
+    printf("\nVIZITAREA IN POSTORDINE\n");
+    postordine(rad,0);
+    getch();
+    return 0;
+}

@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+seg=.\seg\seg.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+seg=1

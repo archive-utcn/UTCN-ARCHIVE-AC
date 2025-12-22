@@ -1,0 +1,113 @@
+typedef struct nod
+{
+    char nume[20];
+    struct nod *urm;
+} NOD;
+
+void inserare(NOD **prim, char c[])
+{
+    int rez,gasit;
+    NOD *p;
+    p=(NOD *)malloc(sizeof(NOD));
+    strcpy(p->nume,c);
+
+    if (*prim==0)
+    {
+        *prim=p;
+        (*prim)->urm=0;
+    }
+    else if ((*prim!=0)&&((*prim)->urm==0))
+    {
+        if ((rez=strcmp(p->nume,(*prim)->nume))<0)
+        {
+            p->urm=*prim;
+            *prim=p;
+        }
+        else
+        {
+            (*prim)->urm=p;
+            p->urm=0;
+        }
+    }
+    else if ((rez=strcmp(p->nume,(*prim)->nume))<0)
+    {
+        p->urm=*prim;
+        *prim=p;
+    }
+    else
+    {
+        gasit=0;
+        NOD *qa,*qb;
+        qa=*prim;
+        qb=(*prim)->urm;
+        while ((qb!=0)&&(gasit==0))
+        {
+            if (((strcmp(qa->nume,p->nume))<0)&&((strcmp(p->nume,qb->nume))<0))
+            {
+                qa->urm=p;
+                p->urm=qb;
+                gasit=1;
+            }
+            else
+            {
+                qa=qb;
+                qb=qb->urm;
+            }
+        }
+        if (gasit==0)
+        {
+            qa->urm=p;
+            p->urm=0;
+        }
+    }
+}
+
+void afisare(NOD *prim)
+{
+    NOD *p=prim;
+    while (p!=0)
+    {
+        printf("\n%s",p->nume);
+        p=p->urm;
+    }
+    printf("\n");
+}
+
+void stergere(NOD **prim)
+{
+    NOD *p;
+    while( *prim != 0)
+    {
+        p=*prim;
+        *prim=(*prim)->urm;
+        free(p);
+    }
+    *prim=0;
+}
+
+void main()
+{
+    char w;
+    w='d';
+    NOD *prim;
+    prim=0;
+    while ((w=='D')||(w=='d'))
+    {
+        int i,n;
+        char c[20];
+        printf("\nCate cuvinte vreti sa introduceti? ");
+        scanf("%d",&n);
+        for (i=0; i<n; i++)
+        {
+            printf("Introduceti cuvantul nr %d ",i);
+            scanf("%s",c);
+            inserare(&prim,c);
+        }
+        afisare(prim);
+        getch();
+        stergere(&prim);
+        printf("\nMai vreti sa introduceti alte cuvinte? D/d");
+        w=getch();
+    }
+
+}

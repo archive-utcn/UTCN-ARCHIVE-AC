@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+int a[100];
+
+void creare(int n,int a[])
+{
+    int i;
+    printf("Introduceti elementele:\n");
+    for(i=1;i<=n;i++)
+    scanf("%d",&a[i]);
+}
+
+void afisare(int n,int a[])
+{
+    int i;
+    for(i=1;i<=n;i++)
+    printf("%d ",a[i]);
+}
+
+void quicksort(int prim, int ultim, int a[])
+{
+    int i,j,x,pivot;
+    i=prim;
+    j=ultim;
+    pivot=a[(prim + ultim)/2];
+    do
+    {
+        while(a[i]<pivot) i++;
+        while(a[j]>pivot) j--;
+        if(i<=j)
+        {
+            x=a[i];
+            a[i]=a[j];
+            a[j]=x;
+
+            i++;
+            j--;
+        }
+    }while(i<=j);
+    if(prim<j) quicksort(prim,j,a);
+    if(i<ultim) quicksort(i,ultim,a);
+}
+
+
+int main()
+{
+    int n,m;
+    printf("lungime vector ");
+    scanf("%d",&n);
+
+    printf("al catelea element mai mic: ");
+    scanf("%d",&m);
+
+    creare(n,a);
+    afisare(n,a);
+    quicksort(1,n,a);
+    printf("\n");
+    afisare(n,a);
+    printf("\nRASPUNS %d",a[m]);
+    return 0;
+}

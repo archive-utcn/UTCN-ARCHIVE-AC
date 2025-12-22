@@ -1,0 +1,49 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=XOR_NXOR_ANDORNOT_GATE
+
+[Library]
+XOR_NXOR_ANDORNOT_GATE=.\XOR_NXOR_ANDORNOT_GATE.lib
+
+[$LibMap$]
+XOR_NXOR_ANDORNOT_GATE=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/XOR_NXOR_ANDORNOT_GATE.vhd=-1
+
+[Files.Data]
+.\src\XOR_NXOR_ANDORNOT_GATE.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=nxor_gate|arh|0 si_sau_nu_gate|arh|0 xor_gate|arh|0 
+ShowHide=ShowTopLevel
+Selected=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2010\XOR_NXOR_ANDORNOT_GATE\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2010\XOR_NXOR_ANDORNOT_GATE\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2010\XOR_NXOR_ANDORNOT_GATE\
+Extension5=dll

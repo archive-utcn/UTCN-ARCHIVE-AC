@@ -1,0 +1,97 @@
+#include <stdio.h>
+
+#define MAX 10
+
+void print(int *a,int n)
+{
+		int i;
+        for(i=0;i<n;i++)
+			printf("%d ", a[i]);
+}
+
+void radix_sort(int *a, int n)
+{
+		int i,b[MAX],m=0,exp=1;
+		for(i=0;i<n;i++)
+		{
+			if(a[i]>m)
+				m=a[i];
+		}
+
+		while(m / exp > 0)
+		{
+			int aux[10]={0};
+
+			for(i=0;i<n;i++)
+				aux[a[i]/exp%10]++;
+
+			for(i=1;i<10;i++)
+				aux[i]+=aux[i-1];
+
+			for(i=n-1;i>=0;i--)
+				b[--aux[a[i]/exp%10]]=a[i];
+
+			for(i=0;i<n;i++)
+				a[i]=b[i];
+
+			exp*=10;
+        }
+	}
+
+void shell_sort(int n, int a[MAX])
+{
+  int i, j, incr;
+  int x;
+  incr = 1;
+
+  while(incr < n)
+    incr = incr * 3 + 1;
+
+  while(incr >= 1){
+
+    incr = incr / 3;
+    for(i = incr; i < n; i++){
+
+       x = a[i];
+       j = i;
+
+       while (a[j-incr] > x){
+
+          a[j] = a[j - incr];
+          j = j - incr;
+          if(j < incr) break;
+
+       };
+       a[j] = x;
+    }
+
+  }
+}
+
+int main()
+{
+           int arr[MAX] = {329, 477, 657, 839, 436, 720, 355};
+           int aux[MAX] = {329, 477, 657, 839, 436, 720, 355};
+           int i, n = 7;
+
+           printf("INITIAL:    ");
+           for(i = 0; i < n; i++)
+             printf("%d ", arr[i]);
+
+           printf("\n\nSortare prin:\n");
+           radix_sort(&arr[0],n);
+
+           printf("\nRADIX:       ");
+           print(&arr[0],n);
+           printf("\n");
+
+           printf("SHELL SORT: ");
+
+           shell_sort(n, aux);
+
+           printf(" ");
+           for(i = 0; i < n; i++)
+             printf("%d ", aux[i]);
+
+           return 0;
+}

@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+V_BJACK=V_BJACK.adf
+[Settings]
+Active=V_BJACK
+[Browser]
+sort=order
+mode=none
+[Expand]
+v_bjack=1
+[Order]
+order=1
+macro=

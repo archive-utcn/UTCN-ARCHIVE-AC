@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\ram\projlib.cfg"  -d "D:\designshdl\CRET\ram\compile\"  -work ram -dbg -e 100 "D:\designshdl\CRET\ram\src\ram.vhd" 

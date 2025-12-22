@@ -1,0 +1,56 @@
+acom $DSN/src/MS_MUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_MUX_4X1\src\MS_MUX_4X1.vhd
+# Compile Entity "MUX_GENERIC"
+# Entity `MUX_GENERIC' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MUX_GENERIC"
+# Compile Entity "MS_MUX_GENERIC"
+# Entity `MS_MUX_GENERIC' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_MUX_GENERIC"
+# Error: COMP96_0085: MS_MUX_4X1.vhd : (44, 66): Time expression expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_MUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_MUX_4X1\src\MS_MUX_4X1.vhd
+# Compile Entity "MUX_GENERIC"
+# Entity `MUX_GENERIC' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MUX_GENERIC"
+# Compile Entity "MS_MUX_GENERIC"
+# Entity `MS_MUX_GENERIC' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_MUX_GENERIC"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  ms_mux_generic arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=300 kernel=1048 sdf=0)
+# 8:16 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_mux_generic (arh)
+run 100 ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST,  Process: line__14.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST,  Process: line__14.
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: Design "MS_DMUX_4X1" has been set as active.

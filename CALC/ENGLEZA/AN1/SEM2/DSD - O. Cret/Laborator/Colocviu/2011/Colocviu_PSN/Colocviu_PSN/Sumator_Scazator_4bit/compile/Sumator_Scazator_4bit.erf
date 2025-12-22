@@ -1,0 +1,5 @@
+MESSAGE "File: c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\Sumator_Scazator_4bit\src\Plus_minus_4.vhd" 
+MESSAGE "Compile Entity "SUM_MIN"" 
+MESSAGE "Entity `SUM_MIN' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ARH_COMP" of Entity "SUM_MIN"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

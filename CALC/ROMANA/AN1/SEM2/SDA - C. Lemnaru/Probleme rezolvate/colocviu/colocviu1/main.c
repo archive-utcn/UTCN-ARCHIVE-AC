@@ -1,0 +1,115 @@
+/*1. De la tastatura se citesc cuvinte. Sa se creeze o lista dublu înlantuita ordonata alfabetic, care contine în
+noduri cuvintele distincte si frecventa lor de aparitie. Se va afisa continutul listei în ordine alfabetica.*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+typedef struct n{
+    char key[20];///cuvantul
+    int f;///frecventa
+    struct n *urm,*prec;
+}nod;
+
+nod *prim,*ultim;
+
+void creareListaVida()
+{
+    prim=NULL;
+    ultim=NULL;
+}
+
+
+void adaugareNod()
+{
+    char cheie[20];
+    nod *p,*q;
+    int inserat=0;
+    printf("\nCuv: ");
+    fflush(stdin);
+    scanf("%s",cheie);
+    if(!prim)///daca lista e vida, acesta e primul nod introdus
+    {
+        prim=(nod*)malloc(sizeof(nod));
+        strcpy(prim->key,cheie);
+        prim->f=1;
+        prim->urm=prim->prec=NULL;
+        ultim=prim;
+    }
+    else///daca mai exista noduri in lista, cautam cuvantul
+    {
+        p=prim;
+        while(p)
+        {
+            if(!strcmp(p->key,cheie))///cuvantul mai exista, crestem frecventa
+            {
+                p->f++;
+                inserat=1;
+                break;
+            }
+            else
+            if(strcmp(p->key,cheie)<0) ///n-am ajuns inca la pozitia de inserare
+            {
+                p=p->urm;
+            }
+            else///am ajuns imediat dupa pozitia de inserare =>inseram inaintea nodului p
+            {
+                q=(nod*)malloc(sizeof(nod));
+                strcpy(q->key,cheie);
+                q->f=1;
+                if(p!=prim)
+                {
+                    p->prec->urm=q;
+                    q->prec=p->prec;
+                    p->prec=q;
+                    q->urm=p;
+                }
+                else///inserare inaintea primului nod
+                {
+                    p->prec=q;
+                    q->urm=p;
+                    q->prec=NULL;
+                    prim=q;
+                }
+                inserat=1;
+                break;
+            }
+        }
+        if(!inserat)
+        {
+            ///adaugare dupa ultimul nod
+            q=(nod*)malloc(sizeof(nod));
+            strcpy(q->key,cheie);
+            q->f=1;
+            ultim->urm=q;
+            q->prec=ultim;
+            q->urm=NULL;
+            ultim=q;
+        }
+    }
+}
+
+
+void afisareLista()
+{
+    nod *p;
+    p=prim;
+    printf("\n--------------Afisare-----------\n");
+    printf("       Cuvant          Frecventa   \n");
+    while(p)
+    {
+        printf("%20s%15d\n",p->key,p->f);
+        p=p->urm;
+    }
+}
+
+
+int main()
+{
+    int i;
+    creareListaVida();
+    for(i=0;i<4;i++)
+    adaugareNod();
+    afisareLista();
+    return 0;
+}

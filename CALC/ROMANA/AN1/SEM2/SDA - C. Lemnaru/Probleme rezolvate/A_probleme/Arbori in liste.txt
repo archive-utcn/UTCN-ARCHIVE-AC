@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+//structura arboreului
+
+typedef struct tip_nod
+{
+    int ch;
+    struct tip_nod *stg, *dr;
+}TIP_NOD;
+
+//structura listei
+typedef struct nod
+{
+    int nr;
+    struct nod *urm, *prec;
+}NOD;
+
+TIP_NOD *rad;
+NOD *adr;//adresa unui nod din lista
+
+//construirea arborelui
+TIP_NOD *construire()
+{
+    TIP_NOD *p;
+    int c;
+    printf("Nod: "); scanf("%d", &c);
+    if (c==0) return 0;
+    else
+    {
+        p=(TIP_NOD *)malloc(sizeof(TIP_NOD));
+        p->ch=c;
+        adauga(c);
+        p->stg=construire();
+        p->dr=construire();
+    }
+    return p;
+}
+
+
+//cosntruirea listei
+void adauga(int nr)
+{
+    NOD *q;
+    q=(NOD *)malloc(sizeof(NOD));
+    q->nr=nr;
+
+    if (adr==NULL)
+    {
+        q->urm=q;
+        q->prec=q;
+        adr=q;
+    }
+    else
+    {
+        q->urm=adr->urm;
+        q->prec=adr;
+        adr->urm->prec=q;
+        adr->urm=q;
+        adr=q;
+    }
+
+}
+
+
+//afisarea listei
+void afisare()
+{
+    NOD *q;
+    q=adr;
+
+    if(q==NULL)
+    printf("Lista este goala!");
+
+    do
+    {
+        printf("%d\n ",q->nr);
+        q=q->urm;
+    }while(q!=adr);
+}
+
+
+
+
+
+int main()
+{
+    rad=construire();
+    printf("Lista este urmatoarea: \n");
+    afisare();
+
+    return 0;
+}

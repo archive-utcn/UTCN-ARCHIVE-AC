@@ -1,0 +1,27 @@
+acom -O3 -work demutiplexer -2002  $dsn/src/dm.bde
+# Compile...
+# DRC: Checking file 'C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\demutiplexer\src\dm.bde'.
+# DRC: dm.bde - 0 error(s), 0 warning(s)
+# DRC: DRC process completed in 1 second(s).
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\demutiplexer\compile\dm.vhd from C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\demutiplexer\src\dm.bde ...
+# Generation successful
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available.
+# File: .\dm.vhd
+# Compile Entity "dm"
+# Compile Architecture "dm" of Entity "dm"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -O3 -work demutiplexer -2002  $dsn/src/demultiplexor.bde
+# Compile...
+# DRC: Checking file 'C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\demutiplexer\src\demultiplexor.bde'.
+# DRC: demultiplexor.bde - 0 error(s), 0 warning(s)
+# DRC: DRC process completed in 1 second(s).
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\demutiplexer\compile\demultiplexor.vhd from C:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\demutiplexer\src\demultiplexor.bde ...
+# Generation successful
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available.
+# File: .\demultiplexor.vhd
+# Compile Entity "demultiplexor"
+# Compile Architecture "demultiplexor" of Entity "demultiplexor"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# Design: Design "dp" has been set as active.

@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\lifo\projlib.cfg"  -d "D:\designshdl\CRET\lifo\compile\"  -work lifo -dbg -e 100 "D:\designshdl\CRET\lifo\src\lifo.vhd" 

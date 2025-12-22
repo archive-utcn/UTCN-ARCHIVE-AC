@@ -1,0 +1,5 @@
+20
+~E 1 "./src/XOR_NXOR_STRUCTURAL.vhd" 19 nxor_gate
+~A 1 "./src/XOR_NXOR_STRUCTURAL.vhd" 24 arh
+~E 1 "./src/XOR_NXOR_STRUCTURAL.vhd" 5 xor_gate
+~A 1 "./src/XOR_NXOR_STRUCTURAL.vhd" 10 arh

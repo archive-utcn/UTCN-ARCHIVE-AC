@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+behavioral_comparator=.\Behavioral_Comparator\Behavioral_Comparator.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+behavioral_comparator=1

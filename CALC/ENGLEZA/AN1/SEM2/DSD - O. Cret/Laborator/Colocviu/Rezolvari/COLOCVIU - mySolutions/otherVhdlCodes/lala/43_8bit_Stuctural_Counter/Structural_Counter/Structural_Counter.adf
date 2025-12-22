@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Structural_Counter
+
+[Library]
+Structural_Counter=.\Structural_Counter.lib
+
+[$LibMap$]
+Structural_Counter=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/counter_8.vhd=-1
+/counter_2.vhd=-1
+
+[Files.Data]
+.\src\counter_8.vhd=VHDL Source Code
+.\src\counter_2.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=counter_8|a|0  
+ShowHide=ShowTopLevel
+Selected=

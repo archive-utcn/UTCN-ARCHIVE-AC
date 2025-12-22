@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=SUMATOR_SCAZATOR_4BITI
+
+[Library]
+SUMATOR_SCAZATOR_4BITI=.\SUMATOR_SCAZATOR_4BITI.lib
+
+[$LibMap$]
+SUMATOR_SCAZATOR_4BITI=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/SUMATOR_SCAZATOR_4BITI.vhd=-1
+
+[Files.Data]
+.\src\SUMATOR_SCAZATOR_4BITI.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=sumator_scazator|comportamental|0  
+ShowHide=ShowTopLevel
+Selected=

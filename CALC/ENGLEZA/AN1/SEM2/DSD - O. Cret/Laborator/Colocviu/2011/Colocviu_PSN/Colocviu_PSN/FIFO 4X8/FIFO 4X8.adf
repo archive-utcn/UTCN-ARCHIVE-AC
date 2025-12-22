@@ -1,0 +1,53 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=FIFO_4X8
+
+[Library]
+FIFO_4X8=.\FIFO_4X8.LIB
+
+[$LibMap$]
+FIFO_4X8=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\Colocviu_PSN\FIFO 4X8\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\Colocviu_PSN\FIFO 4X8\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\Colocviu_PSN\FIFO 4X8\
+Extension5=dll
+Name6=PDF
+Directory6=c:\My_Designs\Colocviu_PSN\FIFO 4X8\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\My_Designs\Colocviu_PSN\FIFO 4X8\
+Extension7=
+
+[Files]
+/FIFO.vhd=-1
+
+[Files.Data]
+.\src\FIFO.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

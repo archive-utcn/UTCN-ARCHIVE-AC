@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\decodificator_binar\src\decodificator_binar.vhd" 
+MESSAGE "Compile Entity "dec"" 
+MESSAGE "Entity `dec' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "dec"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

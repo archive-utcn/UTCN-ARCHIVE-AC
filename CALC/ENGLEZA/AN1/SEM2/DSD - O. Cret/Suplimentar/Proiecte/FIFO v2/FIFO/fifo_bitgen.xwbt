@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Windows\Desktop\FIFODANA\FIFO\fifo.ncd
+OUTFILE=C:\Users\Windows\Desktop\FIFODANA\FIFO\fifo.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Windows\Desktop\FIFODANA\FIFO
+LICENSE=WebPack
+USER_INFO=211044466_0_0_756

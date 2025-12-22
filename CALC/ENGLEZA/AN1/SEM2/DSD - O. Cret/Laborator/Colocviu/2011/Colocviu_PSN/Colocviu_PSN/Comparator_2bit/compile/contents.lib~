@@ -1,0 +1,5 @@
+10
+~E 0 "./src/Comparator_1bit.vhd" 5 comp_1
+~A 1 "./src/Comparator_1bit.vhd" 11 arh_comportamentala
+~E 0 "./src/Comparator_2bit.vhd" 1 comparator_2bit
+~A 1 "./src/Comparator_2bit.vhd" 6 arh_str

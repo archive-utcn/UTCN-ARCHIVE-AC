@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\counter\library.cfg"  -j "d:\designshdl\counter\ram_memory\projlib.cfg"  -d "d:\designshdl\counter\ram_memory\compile\"  -work ram_memory -dbg -e 100 "d:\designshdl\counter\ram_memory\src\ram_memory.vhd" 

@@ -1,0 +1,2 @@
+C:/MinGW/bin/ar.exe qc libintGraph.a CMakeFiles/intGraph.dir/intGraph/intGraph.c.obj
+C:/MinGW/bin/ranlib.exe libintGraph.a

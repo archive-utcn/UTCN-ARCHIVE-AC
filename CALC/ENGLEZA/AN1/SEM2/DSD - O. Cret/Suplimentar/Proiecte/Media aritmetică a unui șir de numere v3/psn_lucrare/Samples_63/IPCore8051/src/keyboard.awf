@@ -1,0 +1,19 @@
+$WAVE4
+$RESOLUTION 1000
+$IN 1 0 "UUT/U3/ACKA"
+$OUT 2 0 7 0 CODE
+$OUT 3 0 7 0 INTA
+$IN 4 0 7 0 Key_0
+$IN 5 0 11 0 "1"
+$IN 6 0 11 0 "2"
+$IN 7 0 11 0 "3"
+$IN 8 0 11 0 "4"
+$IN 9 0 11 0 "5"
+$IN +1 0 11 0 "6"
+$IN +1 0 11 0 "7"
+$IN +1 0 11 0 "8"
+$IN +1 0 11 0 "9"
+$IN +1 0 7 0 RESET
+$S +1 0 7 1 IN
+P 0 1-15 CS "1"
+$ENDWAVE

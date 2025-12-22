@@ -1,0 +1,23 @@
+timestamp=1495702264923
+
+[ual]
+A/comportamental=21|./src/nu.vhd|20|1*0
+B/comportamental=3*0
+H/comportamental=0*426
+R=./src/nu.vhd|9
+V=0*2381
+
+[~A]
+./src/nu.vhd~UAL=0*0*370
+./src/nu.vhd~comportamentalUAL=0*529*1440
+ModifyID=7
+Version=73
+
+[~MFT]
+0=7|0ual.mgf|2381|0
+1=0|1ual.mgf|0|0
+3=0|3ual.mgf|0|0
+
+[~U]
+ual=UAL 11|0*1510|0*1755
+

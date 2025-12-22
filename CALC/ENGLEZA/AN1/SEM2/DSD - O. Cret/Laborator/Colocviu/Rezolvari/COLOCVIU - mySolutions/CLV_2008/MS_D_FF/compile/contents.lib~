@@ -1,0 +1,5 @@
+20
+~E 1 "./src/MS_D_FF.vhd" 4 d_ff
+~A 1 "./src/MS_D_FF.vhd" 9 arh
+~E 1 "./src/MS_D_FF.vhd" 42 ms_d_ff
+~A 1 "./src/MS_D_FF.vhd" 42 arh

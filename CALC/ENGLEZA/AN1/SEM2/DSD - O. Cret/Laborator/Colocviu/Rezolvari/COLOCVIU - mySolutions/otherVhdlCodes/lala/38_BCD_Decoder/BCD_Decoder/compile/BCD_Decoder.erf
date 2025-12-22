@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\38_BCD_Decoder\BCD_Decoder\src\decoder.vhd" 
+MESSAGE "Compile Entity "decoder"" 
+MESSAGE "Compile Architecture "a" of Entity "decoder"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   decoder" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

@@ -1,0 +1,25 @@
+ --clk   reprezinta TACTUL de intrare cu frecventa de 50MHz
+ --clk1 reprezinta TACTUL de iesire cu frecventa de 1Hz
+entity div is
+	port(clk:in bit; clk1:out bit);         
+end entity;
+
+architecture fct_div of div is
+begin
+	process
+	variable a:integer:=0;
+	variable b:bit:='0';
+	begin
+	 if clk='1' and clk'event then
+	  a:=a+1;
+	   if a=25000000 and b='0' then
+		   b:='1'; a:=0;
+	   elsif a=25000000 and b='1' then
+		   b:='0'; a:=0;
+	   end if;
+	 end if;
+	 clk1<=b;
+	 wait on clk;
+	end process;	
+end architecture;	
+	

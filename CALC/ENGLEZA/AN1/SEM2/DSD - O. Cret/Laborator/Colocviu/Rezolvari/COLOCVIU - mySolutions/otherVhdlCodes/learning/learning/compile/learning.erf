@@ -1,0 +1,6 @@
+MESSAGE "File: D:\designshdl\learning\learning\src\learning.vhd" 
+MESSAGE "Compile Entity "E1"" 
+MESSAGE "Entity `E1' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ARH1" of Entity "E1"" 
+MESSAGE "Compile Architecture "ARH2" of Entity "E1"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

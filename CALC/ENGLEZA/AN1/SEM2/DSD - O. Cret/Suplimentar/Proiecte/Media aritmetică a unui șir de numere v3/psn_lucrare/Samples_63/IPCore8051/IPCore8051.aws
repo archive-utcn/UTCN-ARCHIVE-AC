@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+IPCore8051=IPCore8051.adf
+[Settings]
+Active=IPCore8051
+[Browser]
+sort=order
+mode=none
+[Expand]
+ipcore8051=1
+[Order]
+order=1
+macro=

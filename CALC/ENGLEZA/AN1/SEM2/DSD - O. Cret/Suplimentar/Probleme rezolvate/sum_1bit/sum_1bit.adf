@@ -1,0 +1,66 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=sum_1bit
+
+[Library]
+sum_1bit=.\sum_1bit.LIB
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+sum_1bit=.
+Active_lib=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\
+Extension3=mak
+Name4=Memory
+Directory4=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\
+Extension5=dll
+Name6=PDF
+Directory6=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\
+Extension7=
+
+[Files]
+/sum_1bit.bde=-1
+
+[Files.Data]
+.\src\sum_1bit.bde=Block Diagram
+
+[file_out:/sum_1bit.bde]
+/..\compile\sum_1bit.vhd=-1
+

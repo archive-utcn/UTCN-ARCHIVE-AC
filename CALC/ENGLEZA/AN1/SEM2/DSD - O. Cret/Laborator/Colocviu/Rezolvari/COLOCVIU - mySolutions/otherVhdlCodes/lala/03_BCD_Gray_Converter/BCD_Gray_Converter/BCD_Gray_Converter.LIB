@@ -1,0 +1,37 @@
+timestamp=1495274449297
+
+[bcd_to_gray]
+A/a=A/A 21|./src/converter.vhd|9|1*42488
+A/arch=A/ARCH +21|./src/converter_TB.vhd|7|1*25120
+B/a=3*44314
+H/a=0*59732
+R=./src/converter.vhd|4
+V=0*50069
+
+[tb_bcd_to_gray]
+A/arch=A/ARCH 21|./src/converter_TB.vhd|7|1*46853
+B/arch=3*47927
+H/arch=0*64354
+R=./src/converter_TB.vhd|4
+V=0*34263
+
+[~A]
+./src/converter.vhd~ABCD_to_GRAY=0*59809*60455
+./src/converter.vhd~BCD_to_GRAY=0*48437*48667
+./src/converter_TB.vhd~ABCD_to_GRAY=0*10675*12043
+./src/converter_TB.vhd~ARCHBCD_to_GRAY=0*39942*41303
+./src/converter_TB.vhd~ARCHtb_BCD_to_GRAY=0*66429*68011
+./src/converter_TB.vhd~BCD_to_GRAY=0*26146*26305
+./src/converter_TB.vhd~tb_BCD_to_GRAY=0*33748*33917
+ModifyID=172
+Version=73
+
+[~MFT]
+0=179|0BCD_Gray_Converter.mgf|68011|57975
+1=40|1BCD_Gray_Converter.mgf|46853|42801
+3=19|3BCD_Gray_Converter.mgf|47927|44314
+
+[~U]
+bcd_to_gray=11|0*49533|0*49680
+tb_bcd_to_gray=tb_BCD_to_GRAY 11|0*33994|0*34077
+

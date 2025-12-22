@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-make"
+	BuildStamp="20230515-0400-Nightly"
+	Name="AlexPC"
+	Generator="ctest-3.26.1"
+	CompilerName="C:/MinGW/bin/g++.exe"
+	CompilerVersion="6.3.0"
+	OSName="Windows"
+	Hostname="AlexPC"
+	OSRelease=" Professional"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="20682"
+	TotalPhysicalMemory="16074"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2995"
+	>
+	<Configure>
+		<StartDateTime>May 15 10:35 GTB Daylight Time</StartDateTime>
+		<StartConfigureTime>1684136137</StartConfigureTime>
+		<ConfigureCommand>"C:/Program Files/CMake/bin/cmake.exe" "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj10"</ConfigureCommand>
+		<Log>-- Configuring done (0.4s)
+-- Generating done (0.4s)
+-- Build files have been written to: C:/Users/Alex/Documents/VSCode/faculta/SDA/proj10/build
+</Log>
+		<ConfigureStatus>0</ConfigureStatus>
+		<EndDateTime>May 15 10:35 GTB Daylight Time</EndDateTime>
+		<EndConfigureTime>1684136139</EndConfigureTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Configure>
+</Site>

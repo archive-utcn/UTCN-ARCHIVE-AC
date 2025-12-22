@@ -1,0 +1,50 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#22#BIT_VECTOR(3 downto 0)1 ricd3 0 e#3#bitc2 01"
+I 2 "e#3#bitc2 01"
+$BUS IN 17 1 4 bcd
+$SC 1-13/4
+I 3 "a#22#BIT_VECTOR(9 downto 0)1 ricd9 0 e#3#bitc2 01"
+$BUS OUT 58 3 10 decimal
+$SC 18-54/4
+$ENDTIME 100000
+$WAVES 5
+=0 T 0
+$VALUES
+V 1
+1
+$END
+$WAVES 38
+*0
+=1 D 0 1
+$VALUES
+V 2
+0
+1
+$END
+$WAVES 1 9 +4 +5-34/4 +8-54/4
+*0
+$VALUES
+V 1
+0
+$END
+$ENDTIME 200000
+$WAVES 38
+=2 D 100k 2
+$VALUES
+V 1
+0
+$END
+$WAVES 9
+=3 D 100k 1
+$VALUES
+V 1
+1
+$END
+$WAVES 30
+*2
+$VALUES
+V 1
+1
+$END
+$ENDWAVE

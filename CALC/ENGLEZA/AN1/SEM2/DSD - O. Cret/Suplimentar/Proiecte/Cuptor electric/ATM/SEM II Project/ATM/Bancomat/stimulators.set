@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML>
+ <document type="stimulators" version="1">
+  <set name="ASDB Stimulators" active="1">
+   <stimulator>
+    <signal_path value="/SUBTRACTOR/A"/>
+    <rawdescription value="VAL:FRM:Override:0100:&lt;= 0100:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/SUBTRACTOR/B"/>
+    <rawdescription value="VAL:FRM:Override:0001:&lt;= 0001:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/SUBTRACTOR/BUT"/>
+    <rawdescription value="KEY:KEY:Override:65/0,1:A:0:"/>
+   </stimulator>
+  </set>
+ </document>
+</XML>

@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+PressController=PressController.adf
+[Settings]
+Active=PressController
+[Browser]
+sort=order
+mode=none
+[Expand]
+presscontroller=1
+[Order]
+order=1
+macro=

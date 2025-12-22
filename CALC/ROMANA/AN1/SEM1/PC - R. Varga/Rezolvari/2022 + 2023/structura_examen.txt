@@ -1,0 +1,12 @@
+Structura examenului
+
+1p	prezenta
+1p	Intrebare teoretica
+2p	Ce afiseaza programul?
+2p	Program complet - notiunile pana la siruri
+1p	Functie recursiva
+3p	Program complet - notiuni avansate dupa pointeri
+
+
+1p 	test din mijlocul semestrului
++bonusuri teme

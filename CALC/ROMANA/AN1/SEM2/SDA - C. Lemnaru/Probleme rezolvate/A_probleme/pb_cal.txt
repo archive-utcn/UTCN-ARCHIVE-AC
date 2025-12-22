@@ -1,0 +1,108 @@
+#define NMAX 9
+
+void afisare(int n,int tabla[][NMAX])
+{
+    int i,j;
+    printf("Rezultat:\n");
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            if (tabla[i][j]==0) printf(" _ ");
+            else printf(" %d ",tabla[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void verif(int n,int tabla[][NMAX],int *poz_i,int *poz_j,int *bun,int p)
+{
+    *bun=1;
+    {
+if ((p==0)&&((((*poz_i)+2<=n)&&((*poz_j)+1<=n))&&(tabla[(*poz_i)+2][(*poz_j)+1]==0)))
+{
+    (*poz_i)+=2;
+    (*poz_j)+=1;
+}
+ if (p==1&&((((*poz_i)+2<=n)&&((*poz_j)-1>0))&&(tabla[(*poz_i)+2][(*poz_j)-1]==0)))
+{
+    (*poz_i)+=2;
+    (*poz_j)-=1;
+}
+if (p==2&&((((*poz_i)-2>0)&&((*poz_j)+1<=n))&&(tabla[(*poz_i)-2][(*poz_j)+1]==0)))
+{
+    (*poz_i)-=2;
+    (*poz_j)+=1;
+}
+if (p==3&&((((*poz_i)-2>0)&&((*poz_j)-1>0))&&(tabla[(*poz_i)+2][(*poz_j)+1]==0)))
+{
+    (*poz_i)-=2;
+    (*poz_j)-=1;
+}
+if (p==4&&((((*poz_j)+2<=n)&&((*poz_i)+1<=n))&&(tabla[(*poz_j)+2][(*poz_i)+1]==0)))
+{
+    (*poz_j)+=2;
+    (*poz_i)+=1;
+}
+if (p==5&&((((*poz_j)+2<=n)&&((*poz_i)-1>0))&&(tabla[(*poz_j)+2][(*poz_i)-1]==0)))
+{
+    (*poz_j)+=2;
+    (*poz_i)-=1;
+}
+if (p==6&&((((*poz_j)-2>0)&&((*poz_i)+1<=n))&&(tabla[(*poz_j)-2][(*poz_i)+1]==0)))
+{
+    (*poz_j)-=2;
+    (*poz_i)+=1;
+}
+if (p==7&&((((*poz_j)-2>0)&&((*poz_i)-1>0))&&(tabla[(*poz_j)+2][(*poz_i)+1]==0)))
+{
+    (*poz_j)-=2;
+    (*poz_i)-=1;
+}
+}
+}
+
+void back_rec(int n, int k, int tabla[][NMAX],int *poz_i, int *poz_j,int *bun)
+{
+        int i,j;
+        for(i=(*poz_i);i<=n;i++)
+        for(j=(*poz_j);j<=n;j++)
+        {
+        tabla[i][j]=k;
+        afisare(n,tabla);
+        getch();
+        if (k<=n*n)
+        {
+        if ((k==n*n))
+        {
+            afisare(n,tabla);
+            getch();
+        }
+        else
+        {
+            int p;
+            for(p=0;p<8;p++)
+            {
+                verif(n,tabla,poz_i,poz_j,bun,p);
+                printf("\n%d - %d!!!",*poz_i,*poz_j);
+                back_rec(n,k+1,tabla,poz_i,poz_j,bun);
+            }
+        }
+        }
+        }
+}
+
+void main()
+{
+    int i,j,poz_i=1,poz_j=1,bun=1;
+    int n=8;
+    int tabla[NMAX][NMAX];
+    for (i=1; i<=n; i++)
+    {
+        for (j=1; j<=n; j++)
+        {
+            tabla[i][j]=0;
+        }
+    }
+    back_rec(n,1,tabla,&poz_i,&poz_j,&bun);
+}

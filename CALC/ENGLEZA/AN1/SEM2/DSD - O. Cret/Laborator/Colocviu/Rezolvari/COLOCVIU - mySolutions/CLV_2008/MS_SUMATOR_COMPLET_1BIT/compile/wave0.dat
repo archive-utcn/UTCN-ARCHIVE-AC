@@ -1,0 +1,84 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$S 1 1 a
+$S 5 1 b
+$S 9 1 cin
+$S +4 1 cout
+$S +4 1 s
+$ENDTIME 100000
+$WAVES 1
+=0 T 0
+=1 D 0 1
+=2 T 80k
+$VALUES
+V 3
+U
+0
+1
+$END
+$WAVES 13
+*0
+=3 D 0 2
+=4 D 60k 1
+R 1 2 =5 D 20k 1
+$VALUES
+V 1
+U
+R 2 2 0 1
+$END
+$WAVES 9
+*0
+*1
+R 1 5 =6 T 20k
+$VALUES
+V 1
+U
+R 2 3 0 1
+$END
+$WAVES +8
+*0
+*3
+*5
+=7 D 40k 1
+R 1 2 *5
+$VALUES
+V 1
+U
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 5
+*0
+*1
+R 1 2 =8 T 40k
+$VALUES
+V 4
+U
+0
+1
+0
+$END
+$ENDTIME 200000
+$WAVES 9
+=9 T 120k
+*6
+$VALUES
+V 2
+0
+1
+$END
+$WAVES +8
+=10 D 140k 1
+$VALUES
+V 1
+1
+$END
+$WAVES 5
+*9
+$VALUES
+V 1
+1
+$END
+$ENDWAVE

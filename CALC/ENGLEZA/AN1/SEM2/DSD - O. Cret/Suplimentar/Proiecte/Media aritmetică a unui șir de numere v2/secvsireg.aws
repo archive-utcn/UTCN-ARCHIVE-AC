@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+reg=.\reg\reg.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+reg=1

@@ -1,0 +1,6 @@
+MESSAGE "File: d:\designshdl\CLV_2008\DECODIFICATOR_BCD_BINAR\src\DECODIFICATOR_BCD_BINAR.vhd" 
+MESSAGE "Compile Entity "DECODIFICATOR_BCD_BINAR"" 
+MESSAGE "Compile Architecture "arh" of Entity "DECODIFICATOR_BCD_BINAR"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   DECODIFICATOR_BCD_BINAR" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

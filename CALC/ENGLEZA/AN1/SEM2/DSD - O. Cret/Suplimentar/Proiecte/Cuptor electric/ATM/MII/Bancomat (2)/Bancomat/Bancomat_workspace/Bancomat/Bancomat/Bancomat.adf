@@ -1,0 +1,80 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=Bancomat
+
+[Library]
+Bancomat=.\Bancomat.lib
+
+[$LibMap$]
+Bancomat=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[Files]
+/decodificator.vhd=-1
+/divizor.vhd=-1
+/memorie_ram.vhd=-1
+/mux.vhd=-1
+/mytypes.vhd=-1
+/scazator.vhd=-1
+/selector.vhd=-1
+/sistem_introducere.vhd=-1
+/sistemafisare.vhd=-1
+/unitate_comanda.vhd=-1
+/Bancomat.bde=-1
+
+[Files.Data]
+.\src\decodificator.vhd=VHDL Source Code
+.\src\divizor.vhd=VHDL Source Code
+.\src\memorie_ram.vhd=VHDL Source Code
+.\src\mux.vhd=VHDL Source Code
+.\src\mytypes.vhd=VHDL Source Code
+.\src\scazator.vhd=VHDL Source Code
+.\src\selector.vhd=VHDL Source Code
+.\src\sistem_introducere.vhd=VHDL Source Code
+.\src\sistemafisare.vhd=VHDL Source Code
+.\src\unitate_comanda.vhd=VHDL Source Code
+.\src\Bancomat.bde=Block Diagram
+
+
+[SpecTracer]
+WindowVisible=0
+[file_out:/Bancomat.bde]
+/..\compile\Bancomat.vhd=-1

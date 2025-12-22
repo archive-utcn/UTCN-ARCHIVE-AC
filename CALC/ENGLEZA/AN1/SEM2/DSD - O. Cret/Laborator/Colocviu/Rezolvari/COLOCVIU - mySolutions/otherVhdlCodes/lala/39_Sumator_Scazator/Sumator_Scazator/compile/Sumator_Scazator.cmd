@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\39_Sumator_Scazator\library.cfg"  -j "c:\My_Designs\39_Sumator_Scazator\Sumator_Scazator\projlib.cfg"  -d "c:\My_Designs\39_Sumator_Scazator\Sumator_Scazator\compile\"  -work Sumator_Scazator -dbg -e 100 "c:\My_Designs\39_Sumator_Scazator\Sumator_Scazator\src\sumator_scazator.vhd" 

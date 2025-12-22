@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\full_adder_1\library.cfg"  -j "d:\designshdl\full_adder_1\full_adder_1\projlib.cfg"  -d "d:\designshdl\full_adder_1\full_adder_1\compile\"  -work full_adder_1 -dbg -e 100 "d:\designshdl\full_adder_1\full_adder_1\src\full_adder_1.vhd" 

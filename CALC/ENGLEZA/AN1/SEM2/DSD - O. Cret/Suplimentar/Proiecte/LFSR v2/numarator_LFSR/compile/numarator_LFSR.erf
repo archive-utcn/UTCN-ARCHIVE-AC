@@ -1,0 +1,5 @@
+MESSAGE "File: C:\Users\TP_LENOVO\Desktop\5 biti\numarator_LFSR\src\numarator.vhd" 
+MESSAGE "Compile Entity "LFSR"" 
+MESSAGE "Entity `LFSR' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ARHITECTURA" of Entity "LFSR"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=num_bin
+
+[Library]
+num_bin=.\num_bin.lib
+
+[$LibMap$]
+num_bin=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\num_bin\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\num_bin\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\num_bin\
+Extension5=dll
+
+[Files]
+/num_bin.vhd=-1
+
+[Files.Data]
+.\src\num_bin.vhd=VHDL Source Code
+

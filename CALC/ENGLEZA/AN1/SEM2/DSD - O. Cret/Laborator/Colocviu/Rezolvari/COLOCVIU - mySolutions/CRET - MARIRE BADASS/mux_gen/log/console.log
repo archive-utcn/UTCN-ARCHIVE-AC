@@ -1,0 +1,99 @@
+# Compile...
+# File: D:\designshdl\CRET\mux_gen\src\mux_gen.vhd
+# Compile Entity "mux"
+# Entity `mux' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Design: Design mux_gen already active.
+asim -advdataflow  mux arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2416 kB (elbread=1070 elab2=298 kernel=1048 sdf=0)
+# 12:54 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: mux (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom $DSN/src/mux_gen.vhd
+# Compile...
+# File: D:\designshdl\CRET\mux_gen\src\mux_gen.vhd
+# Compile Entity "mux"
+# Compile Architecture "arh" of Entity "mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+run 100 ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  TOP instance,  Process: line__14.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  TOP instance,  Process: line__14.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  TOP instance,  Process: line__14.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  TOP instance,  Process: line__14.
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom $DSN/src/mux_gen.vhd
+# Compile...
+# File: D:\designshdl\CRET\mux_gen\src\mux_gen.vhd
+# Compile Entity "mux"
+# Entity `mux' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom $DSN/src/mux_gen.vhd
+# Compile...
+# File: D:\designshdl\CRET\mux_gen\src\mux_gen.vhd
+# Compile Entity "mux"
+# Entity `mux' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "mux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  mux arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2416 kB (elbread=1070 elab2=298 kernel=1048 sdf=0)
+# 12:56 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: mux (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: 1:02 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\dmux_gen\dmux_gen.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "dmux_gen" has been set as active.

@@ -1,0 +1,34 @@
+V 000044 55 1705          1493657594917 arh
+(_unit VHDL (shift_register 0 6 (arh 0 12 ))
+  (_version v33)
+  (_time 1493657594916 2017.05.01 19:53:14)
+  (_source (\./src/shift_reg.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_arith))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493657594823)
+    (_use )
+  )
+  (_object
+    (_generic (_internal n ~extSTD.STANDARD.INTEGER 0 7 \7\ (_entity ((i 7)))))
+    (_port (_internal clock ~extieee.std_logic_1164.std_logic 0 8 (_entity (_in )(_event))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 8 (_entity (_in ))))
+    (_port (_internal din ~extieee.std_logic_1164.std_logic 0 8 (_entity (_in ))))
+    (_type (_internal ~std_logic_vector{n~downto~1}~12 0 9 (_array ~extieee.std_logic_1164.std_logic ((_downto (c 1 )(i 1))))))
+    (_port (_internal q ~std_logic_vector{n~downto~1}~12 0 9 (_entity (_out ))))
+    (_type (_internal ~std_logic_vector{n~downto~1}~13 0 15 (_array ~extieee.std_logic_1164.std_logic ((_downto (c 2 )(i 1))))))
+    (_variable (_internal intQ ~std_logic_vector{n~downto~1}~13 0 15 (_process 0 )))
+    (_process
+      (line__14(_architecture 0 0 14 (_process (_simple)(_target(3))(_sensitivity(0)(1))(_read(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_model . arh 3 -1
+  )
+)

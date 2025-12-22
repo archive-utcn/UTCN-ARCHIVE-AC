@@ -1,0 +1,5 @@
+vhdl work "FrequencyDivider.vhd"
+vhdl work "Register.vhd"
+vhdl work "DaraGenerator.vhd"
+vhdl work "Anod.vhd"
+vhdl work "Filter.vhd"

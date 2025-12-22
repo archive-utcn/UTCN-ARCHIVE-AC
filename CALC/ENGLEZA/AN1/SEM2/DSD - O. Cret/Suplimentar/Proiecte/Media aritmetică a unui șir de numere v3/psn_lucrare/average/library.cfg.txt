@@ -1,0 +1,2 @@
+$include = "C:\Program Files\Aldec\Active-HDL 6.3\vlib\"
+av = ".\av\av.lib" 1303165955890

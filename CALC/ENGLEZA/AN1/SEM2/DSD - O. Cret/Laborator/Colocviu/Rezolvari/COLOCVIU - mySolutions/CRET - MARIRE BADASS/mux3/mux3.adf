@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=mux3
+
+[Library]
+mux3=.\mux3.lib
+
+[$LibMap$]
+mux3=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\mux3\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\mux3\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\mux3\
+Extension5=dll
+
+[Files]
+/mux3.vhd=-1
+
+[Files.Data]
+.\src\mux3.vhd=VHDL Source Code
+

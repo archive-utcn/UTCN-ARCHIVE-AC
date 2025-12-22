@@ -1,0 +1,56 @@
+tip_nod *stergere)tip_nod *rad,int key)
+{
+tip nod *p,*tata_p,*nod_inloc,*tata_nod_inloc;
+int directie;
+p=rad;
+tata_p=0;
+//cautare nod cu cheie key
+while((p!=0)&&(p->cheie!=key))
+{
+if(key<p->cheie)
+{//cautare in stg:
+tata_p=p;
+p=p->stg;
+directie=1;
+}
+else
+{
+tata_p=p;
+p=p->dr;
+directie=2;
+}
+}
+if(p==0)
+{
+printf("nu exista cheia data");
+return rad;
+}
+if(p->stg==0) nod_inloc=p->dr;//nodul de sters nu are fiu stang
+else if(p->dr==0) nod_inloc=p->stg;
+else
+{
+tata_nod_inloc=p;
+nod_inloc=p->dr;
+while(nod_inloc->stg!=0)
+{
+tata_nod_inloc=nod_inloc;
+nod_inloc=nod_inloc->stg;
+}
+if(tata_nod_inloc!=p)
+{
+tata_nod_inloc->stg=nod_inloc->dr;
+nod_inloc->dr=p->dr;
+}
+nod_inloc->stg=p->stg;
+}
+free(p);
+
+printf("nodul a fost sters");
+if(tata_p==0) return nod_inloc;
+else
+{if(directie==1)
+tata_p->stg=nod_inloc;
+else tata_p->dr=nod_inloc;
+return rad;
+}
+}

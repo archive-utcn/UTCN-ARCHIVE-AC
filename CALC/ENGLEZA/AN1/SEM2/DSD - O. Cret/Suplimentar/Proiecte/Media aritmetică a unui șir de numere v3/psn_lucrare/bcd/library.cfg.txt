@@ -1,0 +1,2 @@
+$include = "C:\Program Files\Aldec\Active-HDL 6.3\vlib\"
+seg = ".\seg\seg.lib" 1303165250593

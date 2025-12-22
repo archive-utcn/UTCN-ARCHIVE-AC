@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=counter_mod_10
+
+[Library]
+counter_mod_10=.\counter_mod_10.lib
+
+[$LibMap$]
+counter_mod_10=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/counter_mod_10.vhd=-1
+
+[Files.Data]
+.\src\counter_mod_10.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=counter|arh|0  
+ShowHide=ShowTopLevel
+Selected=

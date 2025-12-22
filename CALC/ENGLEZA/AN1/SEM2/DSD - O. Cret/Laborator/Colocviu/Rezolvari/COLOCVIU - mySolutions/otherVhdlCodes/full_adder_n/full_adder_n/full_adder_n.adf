@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=full_adder_n
+
+[Library]
+full_adder_n=.\full_adder_n.lib
+
+[$LibMap$]
+full_adder_n=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/full_adder_n.vhd=-1
+
+[Files.Data]
+.\src\full_adder_n.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=fa_n|a|0   
+ShowHide=ShowTopLevel
+Selected=

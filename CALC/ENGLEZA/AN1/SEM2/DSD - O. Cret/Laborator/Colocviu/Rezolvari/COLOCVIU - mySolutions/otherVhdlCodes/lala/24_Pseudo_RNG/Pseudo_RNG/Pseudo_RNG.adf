@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Pseudo_RNG
+
+[Library]
+Pseudo_RNG=.\Pseudo_RNG.lib
+
+[$LibMap$]
+Pseudo_RNG=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/rng.vhd=-1
+/register.vhd=-1
+/xor.vhd=-1
+
+[Files.Data]
+.\src\rng.vhd=VHDL Source Code
+.\src\register.vhd=VHDL Source Code
+.\src\xor.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=rng|a|0   
+ShowHide=ShowTopLevel
+Selected=

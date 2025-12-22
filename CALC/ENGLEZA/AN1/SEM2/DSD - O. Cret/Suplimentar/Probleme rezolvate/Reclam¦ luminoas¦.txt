@@ -1,0 +1,288 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;	
+use IEEE.STD_LOGIC_MISC.all;
+
+
+  entity modulul is
+    Port ( SS: in std_logic_vector(3 downto 0);
+			  CLKIN : in std_logic;
+           AN3 : out std_logic;
+           AN2 : out std_logic;
+           AN1 : out std_logic;
+           AN0 : out std_logic;
+           LED : out std_logic_vector(7 downto 0):="11111111");
+		   
+		   
+end modulul;
+
+architecture arhh of modulul is
+
+signal ff:std_logic:='0';  
+ 
+begin			
+  process(CLKIN)
+  variable qq:integer:=0;	
+
+ 
+  begin
+	 if CLKIN='1' and CLKIN'event then 
+	  qq:=qq+1;
+	  if qq=100000 and ff='0' then 
+		  ff<='1'; qq:=0;
+	  elsif qq=100000 and ff='1' then
+		  ff<='0'; qq:=0;
+	  end if;
+    end if;	  
+	 
+   end process;	  
+ 	
+  process(ff) 
+        variable AA:integer:=0;   
+  	variable a:std_logic_vector(7 downto 0):="10001000";
+	variable b:std_logic_vector(7 downto 0):="10000011"; 	   
+	variable c:std_logic_vector(7 downto 0):="11000110";
+	variable d:std_logic_vector(7 downto 0):="10100001";
+	variable e:std_logic_vector(7 downto 0):="10000110";
+	variable f:std_logic_vector(7 downto 0):="10001110";
+	variable g:std_logic_vector(7 downto 0):="10000010";
+	variable h:std_logic_vector(7 downto 0):="10001001";
+	variable i:std_logic_vector(7 downto 0):="11001111";
+	variable j:std_logic_vector(7 downto 0):="11110001";
+	variable k:std_logic_vector(7 downto 0):="10001111";
+	variable l:std_logic_vector(7 downto 0):="11000111";
+	variable m:std_logic_vector(7 downto 0):="11001000";
+	variable n:std_logic_vector(7 downto 0):="10001011";
+	variable o:std_logic_vector(7 downto 0):="11000000";
+	variable p:std_logic_vector(7 downto 0):="10001100";
+	variable q:std_logic_vector(7 downto 0):="10011000";
+	variable r:std_logic_vector(7 downto 0):="11001100";
+	variable s:std_logic_vector(7 downto 0):="10010010";
+	variable t:std_logic_vector(7 downto 0):="11001110";
+	variable u:std_logic_vector(7 downto 0):="11000001";
+	variable v:std_logic_vector(7 downto 0):="10011101";
+	variable w:std_logic_vector(7 downto 0):="10101011";
+	variable x:std_logic_vector(7 downto 0):="10101101";
+	variable y:std_logic_vector(7 downto 0):="10011001";
+        variable z:std_logic_vector(7 downto 0):="10110000";
+	
+ 
+	
+	--Variabile pentru palpaire
+	variable x1:std_logic_vector(7 downto 0):="11111111"; 
+	variable x2:std_logic_vector(7 downto 0):="11111111";
+        variable x3:std_logic_vector(7 downto 0):="11111111"; 
+	variable x4:std_logic_vector(7 downto 0):="11111111";  
+	variable x5:std_logic_vector(7 downto 0):="11111111";
+
+	--Variabile pentru deplasarea de la stanga la dreapta
+	variable x6:std_logic_vector(7 downto 0):="11000000";   --O
+	variable x7:std_logic_vector(7 downto 0):="10001100";   --P 
+	variable x8:std_logic_vector(7 downto 0):="10000110";   --E
+	variable x9:std_logic_vector(7 downto 0):="11000111";   --L
+	variable x10:std_logic_vector(7 downto 0):="11111111"; 	
+	variable x11:std_logic_vector(7 downto 0):="11111111"; 
+	variable xx:std_logic_vector(7 downto 0):="11111111";
+	
+	--Variabile pentru deplasarea de la dreapta la stanga
+	variable x12:std_logic_vector(7 downto 0):="10001100";  --P
+	variable x13:std_logic_vector(7 downto 0):="10000110";  --E
+	variable x14:std_logic_vector(7 downto 0):="10001100";  --P
+        variable x15:std_logic_vector(7 downto 0):="10010010";  --S
+        variable x16:std_logic_vector(7 downto 0):="11001111";  --I 
+        variable x17:std_logic_vector(7 downto 0):="11111111"; 
+        variable x18:std_logic_vector(7 downto 0):="11111111";
+   
+	--Variabile pentru al patrulea mod de functionare
+	variable x19:std_logic_vector(7 downto 0):="10000110";  --E
+        variable x20:std_logic_vector(7 downto 0):="11000001";  --U
+        variable x21:std_logic_vector(7 downto 0):="11111111"; 
+	variable x22:std_logic_vector(7 downto 0):="11111111"; 
+        variable x23:std_logic_vector(7 downto 0):="11111111"; 		
+	variable cc:std_logic_vector(7 downto 0):="10000110";  --e
+	variable dd:std_logic_vector(7 downto 0):="11000001";  --u
+	
+		   
+	variable kk:integer:=0;  
+	variable pp:integer:=0;  
+   
+   variable qq:integer:=0;
+   variable ww:integer:=1;	
+
+  begin		
+    if SS="0001" then pp:=0;
+	         elsif SS="0010" then pp:=1;
+				elsif SS="0100" then pp:=2;
+				elsif SS="1000" then pp:=3;
+				elsif SS="0000" then pp:=5;
+				end if;
+	 
+	
+					
+    if  ff='1' and ff'event then
+			if pp=5  then x1:=x23;
+	                        x2:=x23;
+		        	x3:=x23;
+				x4:=x23;
+			end if;			
+        if (AA=0) then 
+          	AN0<='0';
+		  			AN1<='1';
+					  AN2<='1';
+					  AN3<='1';
+		     LED <= x4;        
+      			   
+         
+        elsif (AA=1) then 
+          	AN0<='1';
+		  			AN1<='0';
+					  AN2<='1';
+					  AN3<='1';	 
+          LED <= x3;            
+          
+        elsif (AA=2) then 
+          	 AN0<='1';
+		  			AN1<='1';
+					  AN2<='0';
+					  AN3<='1';
+          LED <= x2;             
+          
+        elsif (AA=3) then 
+         	 AN0<='1';
+		  			AN1<='1';
+					  AN2<='1';
+					  AN3<='0';
+        			
+		    LED <= x1;			
+          
+        end if;	
+	
+		kk:=kk+1;	
+		         
+	if kk>118 then kk:=0;
+		           AA:=0;
+					  end if; 
+	if pp=0 then if AA=4 then if kk<60	then AA:=0;	            --PALPAIE
+									 x1:=f; 
+	                 	                    x2:=p;
+									 x3:=g;
+									 x4:=a;
+	                        elsif kk<120 then 
+		                         AA:=0;
+									
+		     					       x1:=x5; 
+	              	             x2:=x5;
+								       x3:=x5;				
+								       x4:=x5;
+						 
+	          	  end if;	
+				 
+	
+    else AA:=AA+1;	
+	end if;
+	end if;
+
+	
+	if pp=1 then 															--DEPLASARE STANGA DREAPTA
+	  
+		if AA=4 then if kk>100 then AA:=0;	
+	                xx:=x11;
+				       x11:=x10;
+		             x10:=x9;
+		             x9:=x8;
+		             x8:=x7;
+			          x7:=x6;
+		             x6:=xx;
+						
+						x1:=x6;
+						x2:=x7;
+						x3:=x8;
+						x4:=x9;
+				 kk:=0;
+	        else AA:=0;  
+	         	end if;
+	
+  else AA:=AA+1;	
+  end if;
+  end if;
+	
+	
+	
+	if pp=2 then 															--DEPLASARE DREAPTA STANGA
+	  
+		if AA=4 then if kk>100 then AA:=0;	
+	                     x18:=x12;
+			     x12:=x13;
+		             x13:=x14;
+		             x14:=x15;
+		             x15:=x16;
+			          x16:=x17;
+		             x17:=x18;
+						
+			
+						
+						x1:=x12;
+						x2:=x13;
+						x3:=x14;
+						x4:=x15;
+				 kk:=0;
+	        else AA:=0;  
+	         	end if;
+	
+  else AA:=AA+1;	
+  end if;
+  end if;
+
+
+
+if pp=3 then 															--AL PATRULEA MOD DE FUNCTIONARE
+	  
+		if AA=4 then if kk>100 then AA:=0;	
+					
+				
+					
+					if qq=0 then
+						
+							x22:=x21;
+							x21:=x20;
+							x20:=x19;
+							x19:=x23;
+						end if;
+						if ww=0 then 
+							x19:=x20;
+							x20:=x21;
+							x21:=x22;
+							x22:=x23;
+							end if;
+					if cc=x19 then qq:=0;
+								 ww:=1;
+							x20:=dd;
+								end if;
+					if dd=x22 then ww:=0;
+							    qq:=1;
+							x21:=cc;
+							x22:=dd;
+								end if;
+				   
+					
+					x1:=x19;
+					x2:=x20;
+					x3:=x21;
+					x4:=x22;	
+						
+					
+				 kk:=0;
+	        else AA:=0;  
+	         	end if;
+	
+  else AA:=AA+1;	
+  end if;
+  end if;
+	
+end if;
+
+	
+	
+  End Process;
+End arhh;

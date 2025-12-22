@@ -1,0 +1,243 @@
+I 000050 55 1314          1305218010243 ARH_Count
+(_unit VHDL (count_2bit 0 6 (arh_count 0 12 ))
+	(_version v147)
+	(_time 1305218010261 2011.05.12 19:33:30)
+	(_source (\./src/Count_2bit.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164))(ieee(std_logic_arith))(ieee(std_logic_unsigned)))
+	(_parameters dbg)
+	(_code 8b8c8b858fddda9ddf8b9fd28c)
+	(_entity
+		(_time 1305218010241)
+	)
+	(_object
+		(_port (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_entity (_in ))))
+		(_type (_internal ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 1)(i 0))))))
+		(_port (_internal Q ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_entity (_inout ))))
+		(_port (_internal over ~extSTD.STANDARD.BIT 0 9 (_entity (_out ((i 0))))))
+		(_process
+			(line__14(_architecture 0 0 14 (_process (_simple)(_target(1)(2))(_sensitivity(0))(_read(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
+	)
+	(_static
+		(771 )
+		(770 )
+	)
+	(_model . ARH_Count 1 -1
+	)
+)
+I 000050 55 1314          1305218027818 ARH_Count
+(_unit VHDL (count_2bit 0 6 (arh_count 0 12 ))
+	(_version v147)
+	(_time 1305218027819 2011.05.12 19:33:47)
+	(_source (\./src/Count_2bit.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164))(ieee(std_logic_arith))(ieee(std_logic_unsigned)))
+	(_parameters dbg)
+	(_code 191a121e464f480f4d190d401e)
+	(_entity
+		(_time 1305218010240)
+	)
+	(_object
+		(_port (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_entity (_in ))))
+		(_type (_internal ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 1)(i 0))))))
+		(_port (_internal Q ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_entity (_inout ))))
+		(_port (_internal over ~extSTD.STANDARD.BIT 0 9 (_entity (_out ((i 0))))))
+		(_process
+			(line__14(_architecture 0 0 14 (_process (_simple)(_target(1)(2))(_sensitivity(0))(_read(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
+	)
+	(_static
+		(771 )
+		(770 )
+	)
+	(_model . ARH_Count 1 -1
+	)
+)
+I 000050 55 1330          1305218087821 ARH_Count
+(_unit VHDL (count_2bit 0 6 (arh_count 0 12 ))
+	(_version v147)
+	(_time 1305218087822 2011.05.12 19:34:47)
+	(_source (\./src/Count_2bit.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164))(ieee(std_logic_arith))(ieee(std_logic_unsigned)))
+	(_parameters dbg)
+	(_code 87858689d6d1d691d38793de80)
+	(_entity
+		(_time 1305218087819)
+	)
+	(_object
+		(_port (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_entity (_in ))))
+		(_type (_internal ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 1)(i 0))))))
+		(_port (_internal Q ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_entity (_inout (_string \"00"\)))))
+		(_port (_internal over ~extSTD.STANDARD.BIT 0 9 (_entity (_out ((i 0))))))
+		(_process
+			(line__14(_architecture 0 0 14 (_process (_simple)(_target(1)(2))(_sensitivity(0))(_read(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
+	)
+	(_static
+		(771 )
+		(770 )
+	)
+	(_model . ARH_Count 1 -1
+	)
+)
+V 000050 55 1338          1305218159181 ARH_Count
+(_unit VHDL (count_2bit 0 6 (arh_count 0 12 ))
+	(_version v147)
+	(_time 1305218159182 2011.05.12 19:35:59)
+	(_source (\./src/Count_2bit.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164))(ieee(std_logic_arith))(ieee(std_logic_unsigned)))
+	(_parameters dbg)
+	(_code 4241484016141354164c561b45)
+	(_entity
+		(_time 1305218087818)
+	)
+	(_object
+		(_port (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_entity (_in )(_event))))
+		(_type (_internal ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 1)(i 0))))))
+		(_port (_internal Q ~STD_LOGIC_VECTOR{1~downto~0}~12 0 8 (_entity (_inout (_string \"00"\)))))
+		(_port (_internal over ~extSTD.STANDARD.BIT 0 9 (_entity (_out ((i 0))))))
+		(_process
+			(line__14(_architecture 0 0 14 (_process (_simple)(_target(1)(2))(_sensitivity(0))(_read(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
+	)
+	(_static
+		(771 )
+		(770 )
+	)
+	(_model . ARH_Count 1 -1
+	)
+)
+V 000048 55 541           1305218724109 CLK_CLK
+(_unit VHDL (clock 0 1 (clk_clk 0 5 ))
+	(_version v147)
+	(_time 1305218724110 2011.05.12 19:45:24)
+	(_source (\./src/Clock.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 00500b06535702160354425a52)
+	(_entity
+		(_time 1305218724107)
+	)
+	(_object
+		(_port (_internal CLK ~extSTD.STANDARD.BIT 0 2 (_entity (_inout ))))
+		(_process
+			(line__7(_architecture 0 0 7 (_process (_simple)(_target(0))(_sensitivity(0)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . CLK_CLK 1 -1
+	)
+)
+V 000050 55 2699          1305219273744 Count_STR
+(_unit VHDL (counter 0 6 (count_str 0 10 ))
+	(_version v147)
+	(_time 1305219273745 2011.05.12 19:54:33)
+	(_source (\./src/Numarator_8biti.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164))(ieee(std_logic_arith))(ieee(std_logic_unsigned)))
+	(_parameters dbg)
+	(_code 06055700565057105255125c52)
+	(_entity
+		(_time 1305219256308)
+	)
+	(_component
+		(clock
+			(_object
+				(_port (_internal CLK ~extSTD.STANDARD.BIT 0 19 (_entity (_inout ))))
+			)
+		)
+		(count_2bit
+			(_object
+				(_port (_internal CLK ~extSTD.STANDARD.BIT 0 13 (_entity (_in ))))
+				(_port (_internal Q ~STD_LOGIC_VECTOR{1~downto~0}~13 0 14 (_entity (_inout (_string \"00"\)))))
+				(_port (_internal over ~extSTD.STANDARD.BIT 0 15 (_entity (_out ((i 0))))))
+			)
+		)
+	)
+	(_instantiation Ceas 0 25 (_component clock )
+		(_port
+			((CLK)(CLK1))
+		)
+		(_use (_entity . clock)
+		)
+	)
+	(_instantiation P1 0 26 (_component count_2bit )
+		(_port
+			((CLK)(CLK1))
+			((Q)(Q(d_1_0)))
+			((over)(CLK2))
+		)
+		(_use (_entity . count_2bit)
+		)
+	)
+	(_instantiation P2 0 27 (_component count_2bit )
+		(_port
+			((CLK)(CLK2))
+			((Q)(Q(d_3_2)))
+			((over)(CLK3))
+		)
+		(_use (_entity . count_2bit)
+		)
+	)
+	(_instantiation P3 0 28 (_component count_2bit )
+		(_port
+			((CLK)(CLK3))
+			((Q)(Q(d_5_4)))
+			((over)(CLK4))
+		)
+		(_use (_entity . count_2bit)
+		)
+	)
+	(_instantiation P4 0 29 (_component count_2bit )
+		(_port
+			((CLK)(CLK4))
+			((Q)(Q(d_7_6)))
+			((over)(x))
+		)
+		(_use (_entity . count_2bit)
+		)
+	)
+	(_object
+		(_type (_internal ~STD_LOGIC_VECTOR{7~downto~0}~12 0 7 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 7)(i 0))))))
+		(_port (_internal Q ~STD_LOGIC_VECTOR{7~downto~0}~12 0 7 (_entity (_inout ))))
+		(_type (_internal ~STD_LOGIC_VECTOR{1~downto~0}~13 0 14 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 1)(i 0))))))
+		(_signal (_internal CLK1 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+		(_signal (_internal CLK2 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+		(_signal (_internal CLK3 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+		(_signal (_internal CLK4 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+		(_signal (_internal x ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+)

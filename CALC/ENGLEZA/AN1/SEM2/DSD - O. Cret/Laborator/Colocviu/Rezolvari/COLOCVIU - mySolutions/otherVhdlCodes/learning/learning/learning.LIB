@@ -1,0 +1,47 @@
+timestamp=1493563814420
+
+[and_gate]
+A/arh=21|./src/learning.vhd|10|1*10656
+B/arh=3*1195
+H/arh=0*9868
+R=./src/learning.vhd|4
+V=0*10754
+
+[e1]
+A/arh1=A/ARH1 21|./src/learning.vhd|53|1*16736
+A/arh2=A/ARH2 21|./src/learning.vhd|64|1*17518
+B/arh1=3*7880
+B/arh2=3*8831
+H/arh1=0*14548
+H/arh2=0*14901
+R=./src/learning.vhd|49
+V=0*12365
+
+[or_gate]
+A/arh=21|./src/learning.vhd|10|1*2360
+B/arh=3*0
+H/arh=0*2586
+R=./src/learning.vhd|4
+V=0*3464
+
+[~A]
+./src/learning.vhd~ARH1E1=0*14631*14836
+./src/learning.vhd~ARH2E1=0*14984*15236
+./src/learning.vhd~E1=0*11456*11639
+./src/learning.vhd~OR_gate=0*2279*2520
+./src/learning.vhd~and_gate=0*9557*9801
+./src/learning.vhd~arhOR_gate=0*2667*2910
+./src/learning.vhd~arhand_gate=0*9949*10194
+ModifyID=133
+Version=73
+
+[~MFT]
+0=140|0learning.mgf|15236|9930
+1=31|1learning.mgf|17518|14375
+3=27|3learning.mgf|8831|5490
+
+[~U]
+and_gate=11|0*10264|0*10424
+e1=E1 11|0*12053|0*12166
+or_gate=11|0*2979|0*3136
+

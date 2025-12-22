@@ -1,0 +1,13 @@
+.\src\fir_32.vhd
+.\src\abs.vhd
+.\src\sign.vhd
+.\src\top_demodulator.bde
+.\src\packages\twos_complement_types_pkg.vhd
+.\src\packages\generic_functions_pkg.vhd
+.\src\packages\generic_conversions_pkg.vhd
+.\src\packages\std_operators_pkg.vhd
+.\src\packages\mixed_operators_pkg.vhd
+.\src\packages\maths_class_pkg.vhd
+.\src\packages\bus_class_pkg.vhd
+.\src\packages\matrix_class_pkg.vhd
+.\src\packages\fir_32_coeff_table.vhd

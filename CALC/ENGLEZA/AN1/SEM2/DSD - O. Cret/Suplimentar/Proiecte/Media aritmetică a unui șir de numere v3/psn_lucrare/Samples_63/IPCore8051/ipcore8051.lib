@@ -1,0 +1,49 @@
+[a8051_exp]
+A/a8051_exp=A/A8051_exp 24|.\src\A8051_exp.bde|10000|
+
+[al8051]
+A/al8051_arch=A/AL8051_ARCH 21|./src/8051/AL8051.vhd|42|
+S/al8051=40|0|2*0
+
+[display]
+A/display=21|./src/Devices/display.vhd|29|
+S/display=40|0|2*4811
+
+[fpga]
+A/fpga=A/Fpga 24|.\src\Fpga.bde|10000|
+S/fpga=S/FPGA 40|0|2*8647
+
+[keyboard]
+A/keyboard=21|./src/Devices/keyboard.vhd|34|
+S/keyboard=40|0|2*16431
+
+[latch]
+A/latch=A/Latch 21|./src/Devices/Latch.vhd|23|
+S/latch=S/Latch 40|0|2*23459
+
+[pr_sr_register]
+A/pr_sr_register=21|./src/Devices/pr_sr_register.vhd|28|
+S/pr_sr_register=40|0|2*25244
+
+[ram]
+A/ram=21|./src/Devices/ram.vhd|26|
+S/ram=40|0|2*28597
+
+[~A]
+ModifyID=273
+Version=73
+
+[~MFT]
+0=0|0IPCore8051.mgf|2541|1
+2=0|2IPCore8051.mgf|28597|1
+
+[~U]
+a8051_exp=A8051_exp 11|0*0|
+al8051=AL8051 11|0*489||3
+display=11|0*830||3
+fpga=FPGA 11|0*1126||7
+keyboard=11|0*1675||3
+latch=Latch 11|0*2091||3
+pr_sr_register=11|0*2265||3
+ram=11|0*2541||3
+

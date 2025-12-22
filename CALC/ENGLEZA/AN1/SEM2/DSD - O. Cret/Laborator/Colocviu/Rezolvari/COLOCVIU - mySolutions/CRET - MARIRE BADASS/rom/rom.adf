@@ -1,0 +1,50 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=rom
+
+[Library]
+rom=.\rom.lib
+
+[$LibMap$]
+rom=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/rom.vhd=-1
+
+[Files.Data]
+.\src\rom.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\rom\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\rom\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\rom\
+Extension5=dll

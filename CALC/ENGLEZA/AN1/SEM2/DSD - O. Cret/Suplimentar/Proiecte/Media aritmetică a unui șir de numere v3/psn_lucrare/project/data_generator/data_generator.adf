@@ -1,0 +1,50 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=data_generator
+
+[Library]
+data_generator=.\data_generator.lib
+
+[$LibMap$]
+data_generator=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=random|behavioral|0   
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/generator.vhd=-1
+/Waveform Editor 4.awf=-1
+/Waveform Editor 5corect.awf=-1
+/Waveform Editor 7corect255.awf=-1
+/Waveform Editor 5corect_2stari.awf=-1
+/Waveform Editor 4 stari.awf=-1
+
+[Files.Data]
+.\src\generator.vhd=VHDL Source Code
+.\src\Waveform Editor 4.awf=Waveform File
+.\src\Waveform Editor 5corect.awf=Waveform File
+.\src\Waveform Editor 7corect255.awf=Waveform File
+.\src\Waveform Editor 5corect_2stari.awf=Waveform File
+.\src\Waveform Editor 4 stari.awf=Waveform File
+

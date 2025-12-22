@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1305546218 source:d:\facultate\sda\backtraking damele\main.c
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<stdlib.h>
+

@@ -1,0 +1,101 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ File Name:  P03.c                                                      ~
+~                                                                        ~
+~Purpose: The activity problem.                                          ~
+~                                                                        ~
+~                                                                        ~
+~Student name: 6519                                                      ~
+~E-mail:       caveman0000@yhoo.com                                      ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/  
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define MAXD 20
+#define MAXL 20
+#define separators " ,\n\t"
+
+FILE *in , *out;
+int T[MAXD][2] , n = 0;
+
+int succesor( int stack[MAXD] , int k )
+{
+
+	if( stack[k] == 1 | k >= n )
+	return 0;
+	stack[k]++;
+	return 1;
+}
+
+int inT (int t , int a , int b )
+{
+	return t > a && t < b;
+}
+
+int valid(int stack[MAXD] , int k )
+{
+	int i;
+	for( i = 0 ; i < k ; i++)
+		if( stack[i] == 1 && (inT( T[k][0] , T[i][0] , T[i][1]) || inT( T[k][1] , T[i][0] , T[i][1]) || inT( T[i][0] , T[k][0] , T[k][1])))
+			return 0;
+	return 1;
+}
+
+int solution(int stack[MAXD] , int k , int sol[MAXD] , int *ano)
+{
+	int i , s = 0;
+	if( k < n-1 )
+		return 0;
+	for( i = 0; i < n ; s += stack[i++] );
+	if( s > *ano )
+		{
+			/*new best solution found*/
+			for( i = 0 ; i < n ; sol[i] = stack[i++] );
+			*ano = s;
+		}
+	return 1;
+}
+
+void greedy( void )
+{
+	/*uses the backtracking algorithm and selects best solution. */
+	int stack[MAXD] , sol[MAXD] , k = 0 , i , as , ev , ano = 0;
+	for( i = 0 ; i < MAXD; i++)
+		stack[i] = -1;
+	while( k > -1 )
+	 {
+		do
+			{
+				if( as = succesor( stack , k ))
+					 ev = valid( stack , k );
+			}while(!( !as || ev ));
+		if( as )
+			 {
+				if( !solution( stack , k , sol , &ano) )/*we have found a solution*/
+					k++;
+			 }
+			else
+				stack[k--] = -1;
+	 }
+	out = fopen("out.dat" , "w");
+	for( i = 0 ; i < n ; i++)
+		if( sol[i] )
+			fprintf( out , "%d " , i + 1 );
+	fprintf( out , "\n" );
+	fclose( out );
+}
+
+int main()
+{
+	char *s;
+	in = fopen("in.dat" , "r");
+	for( ; !feof(in) ; )
+		{
+			s = malloc(MAXL);
+			fgets( s , MAXL , in );
+			T[n][0] = atoi( strtok( s , separators ));
+			T[n++][1] = atoi( strtok( NULL , separators ));
+		}
+	fclose( in );
+	greedy();
+	return 1;
+}

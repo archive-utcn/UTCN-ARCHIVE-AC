@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MUX_8_LA_1_GENERIC
+
+[Library]
+MUX_8_LA_1_GENERIC=.\MUX_8_LA_1_GENERIC.lib
+
+[$LibMap$]
+MUX_8_LA_1_GENERIC=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/MUX_8_LA_1_GENERIC.vhd=-1
+
+[Files.Data]
+.\src\MUX_8_LA_1_GENERIC.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\MUX_8_LA_1_GENERIC\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\MUX_8_LA_1_GENERIC\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\MUX_8_LA_1_GENERIC\
+Extension5=dll

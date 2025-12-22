@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\codificator\projlib.cfg"  -d "D:\designshdl\CRET\codificator\compile\"  -work codificator -dbg -e 100 "D:\designshdl\CRET\codificator\src\codificator.vhd" 

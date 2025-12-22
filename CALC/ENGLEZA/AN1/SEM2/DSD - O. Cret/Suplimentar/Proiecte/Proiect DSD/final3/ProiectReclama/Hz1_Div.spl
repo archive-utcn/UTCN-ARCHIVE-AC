@@ -1,0 +1,6 @@
+[Inputs]
+Main_CLK
+RST
+[Outputs]
+New_CLK
+[BiDir]

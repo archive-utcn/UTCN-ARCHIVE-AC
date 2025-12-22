@@ -1,0 +1,68 @@
+#include<string.h>
+#include<stdlib.h>
+
+#include<stdio.h>
+#include<conio.h>
+
+typedef struct elem
+{
+    struct elem *urm;
+    int fr;
+    char cuv[10];
+}Elem;
+
+int main()
+{
+    Elem *prim=NULL;
+    Elem *ultim=NULL;
+    int i;
+    for(i=1;i<=5;i++)
+
+    {
+        char cuv[10];
+        scanf("%s",cuv);
+        Elem *p=NULL;
+        p=(Elem*)malloc(sizeof(Elem));
+        strcpy(p->cuv,cuv);
+        p->fr=1;
+        p->urm=NULL;
+        Elem *q=NULL,*gr=NULL;
+        q=prim;
+        int inserat=0;
+        while((q!=NULL)&&(inserat==0))
+        {
+            int rez=strcmp(p->cuv,q->cuv);
+            if(rez==0)
+            {
+                q->fr++;
+                free(p);
+                inserat=1;
+            }
+            else
+            if(rez>0)
+            {
+                q1=q;
+                q=q->urm;
+            }
+            else
+            {
+                if (q==prim) 
+                {
+                p->urm=prim; prim=p;
+}
+                else 
+                {
+                q1->urm=p; p->urm=q;
+                }
+                if (inserat==0)
+                {....}
+
+    }
+        Elem *p=prim;
+        while(p!=NULL)
+        {
+            printf("%s",p->cuv);
+            p=p->urm;
+        }
+        return 0;
+}

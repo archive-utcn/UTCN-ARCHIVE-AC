@@ -1,0 +1,54 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Registru_universal
+
+[Library]
+Registru_universal=.\Registru_universal.LIB
+
+[$LibMap$]
+Registru_universal=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=registru|registru_comp|0
+ShowHide=ShowTopLevel
+Selected=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\Colocviu_PSN\Registru_universal\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\Colocviu_PSN\Registru_universal\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\Colocviu_PSN\Registru_universal\
+Extension5=dll
+Name6=PDF
+Directory6=c:\My_Designs\Colocviu_PSN\Registru_universal\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\My_Designs\Colocviu_PSN\Registru_universal\
+Extension7=
+
+[Files]
+/Registru_universal.vhd=-1
+
+[Files.Data]
+.\src\Registru_universal.vhd=VHDL Source Code
+

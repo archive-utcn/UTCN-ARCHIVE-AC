@@ -1,0 +1,16 @@
+elbread.dll ver. 1.0.5.365 Mon May 22 23:54:21 2017
+
+
+---------------------------------------------------
+Entity            | Architecture | Library       
+---------------------------------------------------
+ms_scazator_1bit  | arh          | MS_SCAZATOR_1BIT
+scazator_1bit     | arh          | ms_scazator_1bit
+---------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

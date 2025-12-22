@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=modul_simulare_sumator
+
+[Library]
+modul_simulare_sumator=.\modul_simulare_sumator.lib
+
+[$LibMap$]
+modul_simulare_sumator=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/modul_simulare_sumator.vhd=-1
+/modul_simulare_nr.vhd=-1
+/numarator_asincron_4_biti.vhd=-1
+
+[Files.Data]
+.\src\modul_simulare_sumator.vhd=VHDL Source Code
+
+.\src\modul_simulare_nr.vhd=VHDL Source Code
+.\src\numarator_asincron_4_biti.vhd=VHDL Source Code
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

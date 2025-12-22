@@ -1,0 +1,150 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity letters_ROM is
+	port(A:in std_logic_vector(1 downto 0);
+		O:out std_logic_vector(7 downto 0));
+end letters_ROM;
+
+architecture letters_ROM_a of letters_ROM is
+begin
+	process(A)
+	type memmap is array(0 to 3) of std_logic_vector(7 downto 0);
+	variable mMap:memmap:=("11111111","11111001","11111000","10011001");	
+	--memorie cifre: [ ], [1], [7], [4]
+	
+	begin
+		O<=mMap(CONV_INTEGER(A));
+	end process;
+end letters_ROM_a;	   
+
+
+
+
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity anim_zero_ROM is
+	port(A:in std_logic_vector(1 downto 0);
+		O:out std_logic_vector(7 downto 0));
+end anim_zero_ROM;
+
+architecture anim_zero_ROM of anim_zero_ROM is
+begin
+	process(A)
+	type memmap is array(0 to 7) of std_logic_vector(0 to 7);
+	variable mMap:memmap:=("11100110","11100110","11100110","11100110","11100110","11100110","11100110","11100110");
+	begin --mem. litere "de afisat" - sunt adresele letters_ROM, sub forma lit4,lit3,lit2,lit1 pe cate 3 biti
+			O<=mMap(CONV_INTEGER(A));
+	end process;
+end anim_zero_ROM;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+--FOR animation_one \/
+
+entity anim_one_ROM is
+	port(A:in std_logic_vector(1 downto 0);
+		O:out std_logic_vector(7 downto 0));
+end anim_one_ROM;
+
+architecture anim_one_ROM_a of anim_one_ROM is
+begin
+	process(A)
+	type memmap is array(0 to 8) of std_logic_vector(0 to 7);
+	variable mMap:memmap:=("00000000","00000001","00000110","00010101",
+				"01100111","10011100", "01110000","11000000", "00000000");
+
+	begin	--mem. litere "de afisat" - sunt adresele letters_ROM, dub forma lit4,lit3,lit2,lit1 pe cate 3 biti
+			O<=mMap(CONV_INTEGER(A));
+	end process;
+end anim_one_ROM_a;	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+--FOR animation_two \/
+
+entity anim_two_ROM is
+	port(A:in std_logic_vector(1 downto 0);
+		O:out std_logic_vector(7 downto 0));
+end anim_two_ROM;
+
+architecture anim_two_ROM_a of anim_two_ROM is
+begin
+	process(A)
+	type memmap is array(0 to 7) of std_logic_vector(0 to 7);
+	variable mMap:memmap:=("00000000","01100111","00000000","00011011",
+				"00000000","01100111","00000000","01100111");
+	begin
+			O<=mMap(CONV_INTEGER(A));
+	end process;
+end anim_two_ROM_a;	
+
+
+
+
+
+
+
+
+
+
+
+--FOR animation_four \/
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity anim_four_ROM is
+	port(A:in std_logic_vector(1 downto 0);
+	O:out std_logic_vector(7 downto 0));
+end entity;	   
+
+architecture anim_four_ROM of anim_four_ROM is
+begin
+	process(A)
+	type memmap is array(0 to 19) of std_logic_vector(0 to 7);
+	variable mMap:memmap:=("00000000","00000001","00000100","00010000","01000000",
+				"01000010", "01001000","01100000", "01100001","01100100",
+				"01100111","01100100", "01100001","01100000", "01001000",
+				"01000010","01000000", "00010000","00000100","00000000");
+	begin
+			O<=mMap(CONV_INTEGER(A));
+	end process;
+end architecture;
+
+
+
+
+
+		
+
+		
+		

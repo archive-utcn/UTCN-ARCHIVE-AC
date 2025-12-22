@@ -1,0 +1,203 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 300000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 A
+$IN 2 1 B
+$IN 3 1 C
+$IN 4 1 CLK
+I 2 "a#35#std_logic_vector((LUNG-1) downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT 5 2 8 NR_GEN
+$SC 22-+7
+I 3 "a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT 6 3 8 MED
+$SC 30-+7
+$BUS S 7 3 8 REG1
+$SC 38-+7
+$BUS S 8 3 8 REG2
+$SC 46-+7
+$BUS S 9 3 8 REG3
+$SC 54-+7
+$BUS S 10 3 8 REG4
+$SC 62-+7
+I 4 "a#28#std_logic_vector(8 downto 0)1 ricd8 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 11 4 9 SUM1
+$SC 70-+8
+$BUS S 12 4 9 SUM2
+$SC 79-+8
+I 5 "a#28#std_logic_vector(9 downto 0)1 ricd9 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 13 5 10 SUM3
+$SC 88-+9
+I 6 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 14 6 4 PRIM4
+$SC 98-+3
+$BUS S 15 6 4 ULTIM4
+$SC +87-+3
+$BUS S 16 6 4 MEDIE1
+$SC +90-+3
+$BUS S 17 6 4 5 0 "2"
+$SC +93-+3
+I 7 "a#28#std_logic_vector(6 downto 0)1 ricd6 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 18 7 7 SEGMENT70
+$SC +96-+6
+$BUS S 19 7 7 8 0 "1"
+$SC 121-+6
+$BUS S 20 7 7 8 0 "2"
+$SC 128-+6
+$BUS S 21 7 7 8 0 "3"
+$SC 135-+6
+P 0 1-141 CS "0"
+P 0 4 Stimulator "CLK:FRM:Override:100.000000;2;1;0;50;1:Clock:1:"
+P 0 1-3 Stimulator "VAL:FRM:Override:0:<= 0:1:"
+$WAVES 1-3
+=0 T 0
+$VALUES
+V 1
+0
+$END
+$WAVES 4
+*0
+R 1 2 =1 T 50k
+*1
+*1
+*1
+*1
+$VALUES
+V 3
+0
+1
+0
+V 2
+1
+0
+V 2
+1
+0
+$END
+$WAVES 22-+7 +9-+7 98-+7
+*0
+=2 D 0 1
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 30-+7 +69-+7
+*0
+=3 D 0 3
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 46-+7
+*0
+=4 D 50k 1
+$VALUES
+V 2
+U
+0
+$END
+$WAVES +1-+7
+*0
+=5 D 100k 1
+$VALUES
+V 2
+U
+0
+$END
+$WAVES +1
+*0
+=6 D 150k 1
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1
+*0
+*6
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1
+*0
+*6
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1
+*0
+*6
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1
+*0
+*6
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1
+*0
+*6
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1
+*0
+*6
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1
+*0
+*6
+$VALUES
+V 1
+U
+V 1
+0
+$END
+$WAVES +1-97
+*0
+=7 D 0 2
+$VALUES
+V 2
+U
+0
+$END
+$WAVES +17-+5 +2-+5
+*0
+*4
+$VALUES
+V 2
+1
+0
+$END
+$WAVES +-6 +7-+14
+*0
+$VALUES
+V 1
+1
+$END
+$ENDWAVE

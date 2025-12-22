@@ -1,0 +1,193 @@
+acom -reorder $DSN/src/MS_Counter.vhd
+# Compile with File Reorder...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd
+# Compile Entity "Numarator_2bit"
+# Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"
+# Error: ELAB1_0008: MS_Counter.vhd : (19, 8): Cannot read output : "Q".
+# Compile Entity "MS_Counter"
+# Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Compile failure 4 Errors 0 Warnings
+# ELBREAD: Elaboration process.
+# Error: ULM_0021: Architecture "arh_counter" is not up-to-date. Please, recompile file: ./src/MS_Counter.vhd.
+# ELBREAD: Error: Architecture 'arh_counter' of entity 'numarator_2bit' not found in library 'MS_Numarator_2bit'.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+acom $DSN/src/MS_Counter.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd
+# Compile Entity "Numarator_2bit"
+# Entity `Numarator_2bit' has been skipped - no difference detected.
+# Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"
+# Error: ELAB1_0008: MS_Counter.vhd : (19, 8): Cannot read output : "Q".
+# Compile Entity "MS_Counter"
+# Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Compile failure 4 Errors 0 Warnings
+acom $DSN/src/MS_Counter.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd
+# Compile Entity "Numarator_2bit"
+# Entity `Numarator_2bit' has been skipped - no difference detected.
+# Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"
+# Error: ELAB1_0008: MS_Counter.vhd : (19, 8): Cannot read output : "Q".
+# Compile Entity "MS_Counter"
+# Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR
+#   (compiled file "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" - globally process)
+# Compile failure 4 Errors 0 Warnings
+acom $DSN/src/MS_Counter.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd
+# Compile Entity "Numarator_2bit"
+# Entity `Numarator_2bit' has been skipped - no difference detected.
+# Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"
+# Error: COMP96_0015: MS_Counter.vhd : (15, 2): ';' expected.
+# Compile Entity "MS_Counter"
+# Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_Counter.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd
+# Compile Entity "Numarator_2bit"
+# Entity `Numarator_2bit' has been skipped - no difference detected.
+# Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"
+# Error: COMP96_0123: MS_Counter.vhd : (17, 19): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: MS_Counter.vhd : (17, 19): Object "intQ" may not be written
+# Error: COMP96_0123: MS_Counter.vhd : (20, 5): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: MS_Counter.vhd : (20, 5): Object "intQ" may not be written
+# Compile Entity "MS_Counter"
+# Entity `MS_Counter' has been skipped - no difference detected.
+# Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_Counter.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd
+# Compile Entity "Numarator_2bit"
+# Entity `Numarator_2bit' has been skipped - no difference detected.
+# Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"
+# Error: COMP96_0123: MS_Counter.vhd : (17, 19): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: MS_Counter.vhd : (17, 19): Object "intQ" may not be written
+# Error: COMP96_0123: MS_Counter.vhd : (20, 5): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0143: MS_Counter.vhd : (20, 5): Object "intQ" may not be written
+# Compile Entity "MS_Counter"
+# Entity `MS_Counter' has been skipped - no difference detected.
+# Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_Counter.vhd
+# Compile...
+# File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd
+# Compile Entity "Numarator_2bit"
+# Entity `Numarator_2bit' has been skipped - no difference detected.
+# Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"
+# Compile Entity "MS_Counter"
+# Entity `MS_Counter' has been skipped - no difference detected.
+# Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  ms_counter arh_ms_counter
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 12:27 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_counter (arh_ms_counter)
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 12:28 PM, Thursday, May 25, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_counter (arh_ms_counter)
+run 10 ns
+# KERNEL: stopped at time: 10 ns
+run 10 ns
+# KERNEL: stopped at time: 20 ns
+run 10 ns
+# KERNEL: stopped at time: 30 ns
+run 10 ns
+# KERNEL: stopped at time: 40 ns
+run 10 ns
+# KERNEL: stopped at time: 50 ns
+run 10 ns
+# KERNEL: stopped at time: 60 ns
+run 10 ns
+# KERNEL: stopped at time: 70 ns
+run 10 ns
+# KERNEL: stopped at time: 80 ns
+run 10 ns
+# KERNEL: stopped at time: 90 ns
+run 10 ns
+# KERNEL: stopped at time: 100 ns
+run 10 ns
+# KERNEL: stopped at time: 110 ns
+run 10 ns
+# KERNEL: stopped at time: 120 ns
+run 10 ns
+# KERNEL: stopped at time: 130 ns
+run 10 ns
+# KERNEL: stopped at time: 140 ns
+run 10 ns
+# KERNEL: stopped at time: 150 ns
+run 10 ns
+# KERNEL: stopped at time: 160 ns
+run 10 ns
+# KERNEL: stopped at time: 170 ns
+run 10 ns
+# KERNEL: stopped at time: 180 ns
+run 10 ns
+# KERNEL: stopped at time: 190 ns
+run 10 ns
+# KERNEL: stopped at time: 200 ns
+run 10 ns
+# KERNEL: stopped at time: 210 ns
+run 10 ns
+# KERNEL: stopped at time: 220 ns
+run 10 ns
+# KERNEL: stopped at time: 230 ns
+run 10 ns
+# KERNEL: stopped at time: 240 ns
+run 10 ns
+# KERNEL: stopped at time: 250 ns
+# Simulation has been stopped
+# Design: 12:44 PM, Thursday, May 25, 2017
+# Design: Opening design "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\sumator_nbiti\sumator_nbiti.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "sumator_nbiti" has been set as active.

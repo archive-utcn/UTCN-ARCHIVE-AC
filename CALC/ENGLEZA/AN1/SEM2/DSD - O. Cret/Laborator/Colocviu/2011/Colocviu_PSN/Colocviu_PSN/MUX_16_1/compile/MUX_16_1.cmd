@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\MUX_16_1\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\MUX_16_1\compile"   -work MUX_16_1  -dbg -e 100 -o -2002 "c:\\My_Designs\\Colocviu_PSN\\MUX_16_1\\src\\MUX_16la1.vhd" 

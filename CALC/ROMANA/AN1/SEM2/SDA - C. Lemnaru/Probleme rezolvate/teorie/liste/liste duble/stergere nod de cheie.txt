@@ -1,0 +1,12 @@
+//antet
+//prim==0..
+tip_nod *q;
+//cautare q=nodul de cheie data
+if(q==prim)//stergere prim nod
+else if(q==ultim)//stergere ultim nod
+else{
+q->urm->prec=q->prec;
+q->prec->urm=q->urm;
+free(&p);
+}
+}

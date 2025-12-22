@@ -1,0 +1,15 @@
+[Version]
+Version=6.3
+[Designs]
+memorie_rom2=.\memorie_rom2\memorie_rom2.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+memorie_rom=0
+memorie_rom2=1
+[Settings]
+Active=memorie_rom2

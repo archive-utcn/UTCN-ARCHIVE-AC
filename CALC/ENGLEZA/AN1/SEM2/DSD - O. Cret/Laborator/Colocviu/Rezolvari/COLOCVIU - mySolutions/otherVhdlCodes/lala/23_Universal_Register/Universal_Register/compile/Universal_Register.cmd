@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\23_Universal_Register\library.cfg"  -j "c:\My_Designs\23_Universal_Register\Universal_Register\projlib.cfg"  -d "c:\My_Designs\23_Universal_Register\Universal_Register\compile\"  -work Universal_Register -dbg -e 100 "c:\My_Designs\23_Universal_Register\Universal_Register\src\register.vhd" 

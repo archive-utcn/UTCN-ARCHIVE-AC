@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\35_T_FF\library.cfg"  -j "c:\My_Designs\35_T_FF\T_FF\projlib.cfg"  -d "c:\My_Designs\35_T_FF\T_FF\compile\"  -work T_FF -dbg -e 100 "c:\My_Designs\35_T_FF\T_FF\src\tb.vhd" 

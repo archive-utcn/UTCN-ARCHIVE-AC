@@ -1,0 +1,1 @@
+-w -s "F:\PSN\ATM\library.cfg"  -j "F:\PSN\ATM\ATM\projlib.cfg"  -d "F:\PSN\ATM\ATM\compile\"  -work ATM -o2 -e 100 "F:\PSN\ATM\ATM\src\Main_P.vhd" 

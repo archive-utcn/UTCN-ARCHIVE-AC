@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+rotate_seq=.\rotate_seq\rotate_seq.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+rotate_seq=1

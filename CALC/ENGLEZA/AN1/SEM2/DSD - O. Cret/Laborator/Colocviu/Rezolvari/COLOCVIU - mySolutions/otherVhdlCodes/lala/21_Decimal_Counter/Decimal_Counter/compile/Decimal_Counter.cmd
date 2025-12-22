@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\21_Decimal_Counter\library.cfg"  -j "c:\My_Designs\21_Decimal_Counter\Decimal_Counter\projlib.cfg"  -d "c:\My_Designs\21_Decimal_Counter\Decimal_Counter\compile\"  -work Decimal_Counter -dbg -e 100 "c:\My_Designs\21_Decimal_Counter\Decimal_Counter\src\counter.vhd" 

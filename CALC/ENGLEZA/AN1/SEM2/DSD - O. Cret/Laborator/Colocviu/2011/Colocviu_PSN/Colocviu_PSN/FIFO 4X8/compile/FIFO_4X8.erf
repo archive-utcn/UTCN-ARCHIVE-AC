@@ -1,0 +1,10 @@
+MESSAGE "File: c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\FIFO 4X8\src\FIFO.vhd" 
+MESSAGE "Compile Entity "FIFO"" 
+MESSAGE "Compile Architecture "ARH_FIFO" of Entity "FIFO"" 
+ERROR COMP96_0236: "Fatal error : INTERNAL COMPILER ERROR
+  (compiled file "c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\FIFO 4X8\src\FIFO.vhd" - globally process)" 
+ERROR COMP96_0236: "Fatal error : INTERNAL COMPILER ERROR
+  (compiled file "c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\FIFO 4X8\src\FIFO.vhd" - globally process)" 
+ERROR COMP96_0236: "Fatal error : INTERNAL COMPILER ERROR
+  (compiled file "c:\Users\Marcu\Desktop\cursuri\sem2\psn\PSN\PSN\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\FIFO 4X8\src\FIFO.vhd" - globally process)" 
+FAILURE "Compile failure 3 Errors 0 Warnings" 

@@ -1,0 +1,48 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Sumator_Scazator_4bit
+
+[Library]
+Sumator_Scazator_4bit=.\Sumator_Scazator_4bit.LIB
+
+[$LibMap$]
+Sumator_Scazator_4bit=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\
+Extension5=dll
+Name6=PDF
+Directory6=c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\
+Extension7=
+
+[Files]
+/Plus_minus_4.vhd=-1
+
+[Files.Data]
+.\src\Plus_minus_4.vhd=VHDL Source Code
+

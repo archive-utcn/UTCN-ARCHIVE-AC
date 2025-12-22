@@ -1,0 +1,68 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=SC_hex_ram
+
+[Library]
+SC_hex_ram=.\SC_hex_ram.lib
+
+[$LibMap$]
+SC_hex_ram=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+HESPrepare=0
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Groups]
+systemc=1
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/readme.txt=-1
+/run_ver.do=-1
+/run_vhd.do=-1
+/testbench.v=-1
+/testbench.vhd=-1
+systemc/hex_ram.dlm=-1
+systemc/comp.cpp=-1
+systemc/comp.h=-1
+systemc/hex2bin.cpp=-1
+systemc/hex2bin.h=-1
+systemc/sc_top.cpp=-1
+systemc/simprims.cpp=-1
+systemc/simprims.h=-1
+
+[Files.Data]
+.\src\readme.txt=Text File
+.\src\run_ver.do=Macro
+.\src\run_vhd.do=Macro
+.\src\testbench.v=Verilog Source Code
+.\src\testbench.vhd=VHDL Source Code
+.\src\systemc\hex_ram.dlm=C/C++ Configuration
+.\src\systemc\comp.cpp=C++ Source Code
+.\src\systemc\comp.h=C++ Source Code
+.\src\systemc\hex2bin.cpp=C++ Source Code
+.\src\systemc\hex2bin.h=C++ Source Code
+.\src\systemc\sc_top.cpp=C++ Source Code
+.\src\systemc\simprims.cpp=C++ Source Code
+.\src\systemc\simprims.h=C++ Source Code
+

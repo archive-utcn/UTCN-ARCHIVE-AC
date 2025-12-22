@@ -1,0 +1,13 @@
+timestamp=1498478419587
+
+[~A]
+./src/mux_gen.vhd~arhmux=0*0*139
+./src/mux_gen.vhd~mux=0*203*535
+ModifyID=47
+Version=73
+
+[~MFT]
+0=0|0mux_gen.mgf|535|0
+
+[~U]
+

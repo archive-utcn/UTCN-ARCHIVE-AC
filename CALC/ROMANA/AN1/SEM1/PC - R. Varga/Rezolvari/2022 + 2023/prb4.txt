@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+long long b2dec(int* a, int b, int len);
+int dec2b(long long x, int* a, int b);
+long long ppm(long long x, int b);
+
+int main(){
+	
+	
+	int b;
+	long long x, y;
+	int a[100];
+	
+	
+	while(1){
+		scanf("%lld %d", &x, &b);
+		if (x == -1)
+			break;
+		int len = dec2b(x, a, b);
+		if (len != -1){
+			y = ppm(x, b);
+			//printf("ppm lui %lld este %lld\n", x, y);
+			
+			if (y == -1)
+				printf("%lld nu are ppm\n");
+			else
+				printf("ppm lui %lld este %lld\n", x, y);
+		}
+	}
+	return 0;
+}
+
+int dec2b(long long x, int* a, int b){
+	int k = 0;
+	do{
+		a[k] = x % b;
+		x /= b;
+		k++;
+	}while(x);
+	for(int i=0; i<k; i++)
+		if (a[i] < 10)
+			return -1;
+	return k;
+}
+
+long long ppm(long long x, int b){
+	int a[100];
+	int fr[40] = {};
+	int c[100];
+	int k = 0;
+	
+	
+	int len = dec2b(x, a, b);
+	if (len == -1)
+		return -1;
+	for(int i=0; i<len; i++)
+		fr[a[i]]++;
+		
+	int impar = 0;
+	for(int i=0; i<b; i++)
+		impar += fr[i]%2;
+	if (impar > 1)
+		return -1;
+	
+	for(int i = b-1; i>=0; i--){
+		while(fr[i]>=2){
+			c[k] = c[len-1-k] = i;
+			fr[i] -= 2;
+			k++;
+		}
+	}
+	for(int i = b-1; i>=0; i--)
+		if (fr[i])
+			c[k] = i;
+	
+	return b2dec(c, b, len);
+}
+
+long long b2dec(int* c, int b, int len){
+	long long y = 0;
+	for(int i=len-1; i>=0; i--)
+		y = y * b + c[i];
+	return y;
+}

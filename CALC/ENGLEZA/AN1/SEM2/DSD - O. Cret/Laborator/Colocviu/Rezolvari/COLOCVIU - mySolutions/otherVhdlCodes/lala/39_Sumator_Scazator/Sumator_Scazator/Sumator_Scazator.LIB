@@ -1,0 +1,33 @@
+timestamp=1495558695691
+
+[ss]
+A/a=21|./src/sumator_scazator.vhd|13|1*22668
+B/a=3*1472
+H/a=0*39689
+R=./src/sumator_scazator.vhd|6
+V=0*37651
+
+[sum_min]
+A/arh_comp=A/ARH_COMP 21|./src/sumator_scazator.vhd|13|1*1664
+B/arh_comp=3*0
+H/arh_comp=0*9470
+R=./src/sumator_scazator.vhd|6
+V=0*10785
+
+[~A]
+./src/sumator_scazator.vhd~ARH_COMPSUM_MIN=0*9561*9967
+./src/sumator_scazator.vhd~SUM_MIN=0*9061*9396
+./src/sumator_scazator.vhd~ass=0*39766*40356
+./src/sumator_scazator.vhd~ss=0*35809*36150
+ModifyID=158
+Version=73
+
+[~MFT]
+0=205|0Sumator_Scazator.mgf|40356|34264
+1=21|1Sumator_Scazator.mgf|22668|20735
+3=19|3Sumator_Scazator.mgf|1472|0
+
+[~U]
+ss=11|0*36943|0*37155
+sum_min=SUM_MIN 11|0*10049|0*10284
+

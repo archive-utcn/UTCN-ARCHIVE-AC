@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/Alex/Documents/Shared/tudor/proj11/build",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/proj11.dir/includes_C.rsp -g -Wall -o CMakeFiles/proj11.dir/main_hanoi.c.obj -c C:/Users/Alex/Documents/Shared/tudor/proj11/main_hanoi.c",
+  "file": "C:/Users/Alex/Documents/Shared/tudor/proj11/main_hanoi.c",
+  "output": "CMakeFiles/proj11.dir/main_hanoi.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/Documents/Shared/tudor/proj11/build/proj11",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/intArray.dir/includes_C.rsp -g -o CMakeFiles/intArray.dir/array/array_int.c.obj -c C:/Users/Alex/Documents/Shared/tudor/proj11/lib/array/array_int.c",
+  "file": "C:/Users/Alex/Documents/Shared/tudor/proj11/lib/array/array_int.c",
+  "output": "proj11/CMakeFiles/intArray.dir/array/array_int.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/Documents/Shared/tudor/proj11/build/proj11",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/stack.dir/includes_C.rsp -g -o CMakeFiles/stack.dir/stack/intStack.c.obj -c C:/Users/Alex/Documents/Shared/tudor/proj11/lib/stack/intStack.c",
+  "file": "C:/Users/Alex/Documents/Shared/tudor/proj11/lib/stack/intStack.c",
+  "output": "proj11/CMakeFiles/stack.dir/stack/intStack.c.obj"
+}
+]

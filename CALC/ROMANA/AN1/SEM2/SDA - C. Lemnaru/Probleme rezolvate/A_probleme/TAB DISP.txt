@@ -1,0 +1,139 @@
+//problema 3.2 Laborator 8
+//Sa se implementeze algoritmii prezentati aferenti unei tabele de dispersie.
+//Înregistrarea va contine datele aferente unui student.
+//Cheia va fi numele si prenumele studentului. Scrieti în plus fata de cele prezentate
+//o functie de stergere a unei înregistrari de cheie data
+
+#include <stdio.h>
+#include <stdlib.h>
+#define M 47
+
+typedef struct nod
+{
+char nume[20];
+char prenume[20];
+float m; //media
+struct nod *urm;
+}NOD;
+
+NOD *HT[50];
+
+int f(char *cheie)  //fct de disp-hashing: transforma o cheie într-un numar natural numit cod de dispersie
+{
+    int i,a;
+    a=0;
+    for(i=0;i<length(cheie);i++)
+        a=a+*(cheie+i);
+    return (a % M);
+}
+
+void construire (char nume[20],char prenume[20],float m)
+{
+    int f();
+  char n[40],n1[40];
+  NOD *p,*q,*s;
+  strcpy(n,nume);
+  int r=f(strcat(n,prenume));
+    if (HT[r]==0)
+    {
+        p=(NOD *)malloc(sizeof(NOD));
+        strcpy(p->nume,nume);
+        strcpy(p->prenume,prenume);
+        p->m=m;
+        p->urm=0;
+        HT[r]=p;
+    }
+    else
+    {
+        s=HT[r];
+        q=0;
+        while(s!=0)
+        {
+            strcpy(n1,nume);
+            strcat(n1,s->prenume);
+            if(strcmp(n,n1)==0)
+            {
+                printf("student exista");
+                return;
+            }
+            else
+            if (strcmp(n,n1)<0)
+            if(q==0)
+            {
+            p=(NOD *)malloc(sizeof(NOD));
+            strcpy(p->nume,nume);
+            strcpy(p->prenume,prenume);
+            p->m=m;
+            p->urm=s;
+            HT[r]=p;
+            return;
+            }
+           else
+           {
+            p=(NOD *)malloc(sizeof(NOD));
+            strcpy(p->nume,nume);
+            strcpy(p->prenume,prenume);
+            s->urm=s;
+            q->urm=p;
+           }
+        }
+    }
+}
+void afisare ()
+{
+    NOD *s;
+    int i;
+    for(i=0;i<=M-1;i++)
+    {
+        printf("La indexul%d",i);
+        if (HT[i]==0)
+        printf("Nu exista");
+        else
+        s=HT[i];
+        while(s!=0)
+        {
+            printf("Numele %s,Penumele%s,Media%f",s->nume,s->prenume,s->m);
+            s=s->urm;
+        }
+    }
+}
+void cauta (char nume[20],char prenume[20])
+{
+    NOD *s;
+    char n[40],n1[40];
+    strcpy (n,nume);
+    strcat(n1,prenume);
+    int i;
+    for(i=0;i<=M-1;i++)
+    {
+//	s==f(n);
+    s=HT[i];
+    if(HT[i]==0)
+    {
+        printf("Nu exista");
+    }
+    }
+}
+int main()
+{
+    FILE *fi;
+    int i;
+    char nume[20],prenume[20];
+    float media;
+    fi=fopen("fis.txt","r");
+    int n;
+    fscanf(fi,"%d",&n);
+    for (i=1;i<=n;i++)
+    {
+        /*fscanf*/scanf("%s,%s,%f",nume,prenume,&media);
+        construire(nume,prenume,media);
+    }
+    afisare();
+{
+    printf("Numele si prenumele elevului dorit ");
+    scanf ("%s",nume);
+    scanf("%s",prenume);
+    cauta (nume,prenume);
+}
+return 0;
+}

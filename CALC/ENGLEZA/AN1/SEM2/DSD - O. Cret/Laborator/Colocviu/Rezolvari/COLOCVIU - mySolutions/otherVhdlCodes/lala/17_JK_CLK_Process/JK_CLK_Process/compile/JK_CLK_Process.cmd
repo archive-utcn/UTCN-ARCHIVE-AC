@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\17_JK_CLK_Process\library.cfg"  -j "c:\My_Designs\17_JK_CLK_Process\JK_CLK_Process\projlib.cfg"  -d "c:\My_Designs\17_JK_CLK_Process\JK_CLK_Process\compile\"  -work JK_CLK_Process -dbg -e 100 "c:\My_Designs\17_JK_CLK_Process\JK_CLK_Process\src\jk.vhd" 

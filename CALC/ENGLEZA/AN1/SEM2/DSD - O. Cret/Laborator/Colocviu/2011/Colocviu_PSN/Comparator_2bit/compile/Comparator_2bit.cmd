@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\Comparator_2bit\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\Comparator_2bit\compile"   -work Comparator_2bit  -dbg -e 100 -2002 "c:\\My_Designs\\Colocviu_PSN\\Comparator_2bit\\src\\Comparator_2bit.vhd" 

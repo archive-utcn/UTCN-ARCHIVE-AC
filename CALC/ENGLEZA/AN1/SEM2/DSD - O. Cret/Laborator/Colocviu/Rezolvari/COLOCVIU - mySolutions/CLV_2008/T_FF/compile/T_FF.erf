@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2008\T_FF\src\T_FF.vhd" 
+MESSAGE "Compile Entity "T_FF"" 
+MESSAGE "Entity `T_FF' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "T_FF"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

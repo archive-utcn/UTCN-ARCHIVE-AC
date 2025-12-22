@@ -1,0 +1,16 @@
+elbread.dll ver. 1.0.5.365 Thu May 25 01:44:09 2017
+
+
+----------------------------------------------------------------------
+Entity                      | Architecture | Library                
+----------------------------------------------------------------------
+ms_buffer_tri_state_8_biti  | arh          | MS_BUFFER_TRI_STATE_8BITI
+buffer_tri_state_8_biti     | arh          | ms_buffer_tri_state_8biti
+----------------------------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

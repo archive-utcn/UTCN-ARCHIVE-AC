@@ -1,0 +1,47 @@
+# Design Explorer: Shortcut to "D:\CTI_2\DSD\DSD_de_laIoana\DSD\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\MS_Bist_JK\MS_Bist_JK.aws" design added.
+acom -reorder $DSN/src/ms_jk.vhd
+# Compile with File Reorder...
+# File: D:\CTI_2\DSD\DSD_de_laIoana\DSD\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\MS_Bist_JK\src\MS_JK.vhd
+# Compile Entity "Bist_JK"
+# Compile Architecture "ARH_JK" of Entity "Bist_JK"
+# Compile Entity "MS_JK"
+# Compile Architecture "ARH_MS_JK" of Entity "MS_JK"
+# Top-Level unit detected
+# Entity  =>   MS_JK
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  ms_jk arh_ms_jk
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 1:22 AM, Tuesday, May 26, 2015
+# Simulation has been initialized
+# Selected Top-Level: ms_jk (arh_ms_jk)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+# Simulation has been stopped

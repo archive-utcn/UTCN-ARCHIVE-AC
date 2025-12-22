@@ -1,0 +1,368 @@
+I 000042 55 627           1495538674010 a
+(_unit VHDL (inverter 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495538674009 2017.05.23 14:24:34)
+  (_source (\./src/inverter.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538673910)
+    (_use )
+  )
+  (_object
+    (_port (_internal x ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(1))(_sensitivity(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+I 000042 55 698           1495538731498 a
+(_unit VHDL (or_gate 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495538731497 2017.05.23 14:25:31)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538731458)
+    (_use )
+  )
+  (_object
+    (_port (_internal x ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal z ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+I 000042 55 719           1495538787257 a
+(_unit VHDL (or_gate 1 4 (a 1 9 ))
+  (_version v33)
+  (_time 1495538787257 2017.05.23 14:26:27)
+  (_source (\./src/and_gate.vhd\(\./src/or_gate.vhd\)))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538731458)
+    (_use )
+  )
+  (_object
+    (_port (_internal x ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal z ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 1 11 (_assignment (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+I 000042 55 2262          1495538997291 a
+(_unit VHDL (circuit 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495538997290 2017.05.23 14:29:57)
+  (_source (\./src/and_or_not.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538997261)
+    (_use )
+  )
+  (_component
+    (and_gate
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 15 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 15 (_entity (_in ))))
+        (_port (_internal z ~extSTD.STANDARD.BIT 0 16 (_entity (_out ))))
+      )
+    )
+    (or_gate
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 19 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 19 (_entity (_in ))))
+        (_port (_internal z ~extSTD.STANDARD.BIT 0 20 (_entity (_out ))))
+      )
+    )
+    (inverter
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 11 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 12 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation T1 0 24 (_component and_gate )
+    (_port
+      ((x)(a))
+      ((y)(b))
+      ((z)(aux1))
+    )
+  )
+  (_instantiation T2 0 25 (_component and_gate )
+    (_port
+      ((x)(c))
+      ((y)(d))
+      ((z)(aux2))
+    )
+  )
+  (_instantiation T3 0 26 (_component or_gate )
+    (_port
+      ((x)(aux1))
+      ((y)(aux2))
+      ((z)(aux3))
+    )
+    (_use (_entity . or_gate)
+    )
+  )
+  (_instantiation T4 0 27 (_component inverter )
+    (_port
+      ((x)(aux3))
+      ((y)(f))
+    )
+    (_use (_entity . inverter)
+    )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal c ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal f ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal aux1 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_signal (_internal aux2 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_signal (_internal aux3 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+)
+I 000042 55 2262          1495539007671 a
+(_unit VHDL (circuit 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495539007670 2017.05.23 14:30:07)
+  (_source (\./src/and_or_not.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538997261)
+    (_use )
+  )
+  (_component
+    (and_gate
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 15 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 15 (_entity (_in ))))
+        (_port (_internal z ~extSTD.STANDARD.BIT 0 16 (_entity (_out ))))
+      )
+    )
+    (or_gate
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 19 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 19 (_entity (_in ))))
+        (_port (_internal z ~extSTD.STANDARD.BIT 0 20 (_entity (_out ))))
+      )
+    )
+    (inverter
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 11 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 12 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation T1 0 24 (_component and_gate )
+    (_port
+      ((x)(a))
+      ((y)(b))
+      ((z)(aux1))
+    )
+  )
+  (_instantiation T2 0 25 (_component and_gate )
+    (_port
+      ((x)(c))
+      ((y)(d))
+      ((z)(aux2))
+    )
+  )
+  (_instantiation T3 0 26 (_component or_gate )
+    (_port
+      ((x)(aux1))
+      ((y)(aux2))
+      ((z)(aux3))
+    )
+    (_use (_entity . or_gate)
+    )
+  )
+  (_instantiation T4 0 27 (_component inverter )
+    (_port
+      ((x)(aux3))
+      ((y)(f))
+    )
+    (_use (_entity . inverter)
+    )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal c ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal f ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal aux1 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_signal (_internal aux2 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_signal (_internal aux3 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+)
+V 000042 55 627           1495539007711 a
+(_unit VHDL (inverter 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495539007710 2017.05.23 14:30:07)
+  (_source (\./src/inverter.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538673910)
+    (_use )
+  )
+  (_object
+    (_port (_internal x ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(1))(_sensitivity(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+V 000042 55 699           1495539007861 a
+(_unit VHDL (and_gate 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495539007860 2017.05.23 14:30:07)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495539007822)
+    (_use )
+  )
+  (_object
+    (_port (_internal x ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal z ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+V 000042 55 719           1495539007961 a
+(_unit VHDL (or_gate 1 4 (a 1 9 ))
+  (_version v33)
+  (_time 1495539007960 2017.05.23 14:30:07)
+  (_source (\./src/and_gate.vhd\(\./src/or_gate.vhd\)))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538731458)
+    (_use )
+  )
+  (_object
+    (_port (_internal x ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal z ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 1 11 (_assignment (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+V 000042 55 2340          1495539010691 a
+(_unit VHDL (circuit 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495539010690 2017.05.23 14:30:10)
+  (_source (\./src/and_or_not.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495538997261)
+    (_use )
+  )
+  (_component
+    (and_gate
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 15 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 15 (_entity (_in ))))
+        (_port (_internal z ~extSTD.STANDARD.BIT 0 16 (_entity (_out ))))
+      )
+    )
+    (or_gate
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 19 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 19 (_entity (_in ))))
+        (_port (_internal z ~extSTD.STANDARD.BIT 0 20 (_entity (_out ))))
+      )
+    )
+    (inverter
+      (_object
+        (_port (_internal x ~extSTD.STANDARD.BIT 0 11 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 12 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation T1 0 24 (_component and_gate )
+    (_port
+      ((x)(a))
+      ((y)(b))
+      ((z)(aux1))
+    )
+    (_use (_entity . and_gate)
+    )
+  )
+  (_instantiation T2 0 25 (_component and_gate )
+    (_port
+      ((x)(c))
+      ((y)(d))
+      ((z)(aux2))
+    )
+    (_use (_entity . and_gate)
+    )
+  )
+  (_instantiation T3 0 26 (_component or_gate )
+    (_port
+      ((x)(aux1))
+      ((y)(aux2))
+      ((z)(aux3))
+    )
+    (_use (_entity . or_gate)
+    )
+  )
+  (_instantiation T4 0 27 (_component inverter )
+    (_port
+      ((x)(aux3))
+      ((y)(f))
+    )
+    (_use (_entity . inverter)
+    )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal c ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal f ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal aux1 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_signal (_internal aux2 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_signal (_internal aux3 ~extSTD.STANDARD.BIT 0 22 (_architecture (_uni ))))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+)

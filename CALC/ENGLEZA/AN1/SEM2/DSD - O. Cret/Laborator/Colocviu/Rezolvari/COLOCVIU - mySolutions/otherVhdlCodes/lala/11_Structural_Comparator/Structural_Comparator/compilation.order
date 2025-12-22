@@ -1,0 +1,6 @@
+.\src\comparator.vhd
+.\src\inverter.vhd
+.\src\and_2.vhd
+.\src\and_3.vhd
+.\src\or_3.vhd
+.\src\nxor_2.vhd

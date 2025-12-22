@@ -1,0 +1,19 @@
+tip_nod *constructie(void)
+{
+tip_nod *p;
+char c;
+scanf("%c",&c);
+if(c=='*')return 0;
+else
+{
+p=(tip_nod*)malloc(sizeof(tip_nod));
+p->ch=c;
+p->stg=construire();
+p->dr=construire();
+}
+return p;
+}
+
+
+
+//apel: rad=constructie();

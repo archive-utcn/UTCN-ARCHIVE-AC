@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1419983096 source:d:\cti_i\cp_lab\lab_2\3.9\main.c
+	<stdio.h>
+	<conio.h>
+	<math.h>
+

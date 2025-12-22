@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\BCDtoExcess3\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\BCDtoExcess3\compile"   -work BCDtoExcess3  -dbg -e 100 -2002 "c:\\My_Designs\\Colocviu_PSN\\BCDtoExcess3\\src\\Decodificator.vhd" 

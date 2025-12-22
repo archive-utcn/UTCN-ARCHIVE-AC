@@ -1,0 +1,2621 @@
+//
+// Written by Synplify
+// Synplify 7.6.0, Build 080R.
+// Fri Jun 18 17:29:41 2004
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "noname"
+// file 1 "\c:\program files\synplicity\synplify_76\lib\vhd\std.vhd "
+// file 2 "\c:\program files\aldec\active-hdl 6.3\vlib\handelc\src\handelc.vhd "
+// file 3 "\c:\program files\synplicity\synplify_76\lib\vhd\std1164.vhd "
+// file 4 "\c:\program files\synplicity\synplify_76\lib\vhd\arith.vhd "
+// file 5 "\c:\program files\synplicity\synplify_76\lib\vhd\numeric.vhd "
+// file 6 "\c:\my_designs\samples_63\filter\src\sine_lookup_pkg.vhd "
+// file 7 "\c:\my_designs\samples_63\filter\celoxica\vhdl\receiver_hcc.vhd "
+// file 8 "\c:\my_designs\samples_63\filter\celoxica\vhdl\receiver_top.vhd "
+// file 9 "\c:\my_designs\samples_63\filter\src\synchronizer.vhd "
+// file 10 "\c:\my_designs\samples_63\filter\src\filter.vhd "
+// file 11 "\c:\my_designs\samples_63\filter\compile\top.vhd "
+
+module Filter (
+  regf_0,
+  regf_1,
+  regf_2,
+  regf_3,
+  regf_4,
+  regf_5,
+  regf_6,
+  regf_7,
+  current_0,
+  current_1,
+  current_2,
+  current_3,
+  current_4,
+  current_5,
+  current_6,
+  current_7,
+  outp,
+  Ack,
+  reset,
+  FilterClock
+);
+input regf_0 ;
+input regf_1 ;
+input regf_2 ;
+input regf_3 ;
+input regf_4 ;
+input regf_5 ;
+input regf_6 ;
+input regf_7 ;
+output current_0 ;
+output current_1 ;
+output current_2 ;
+output current_3 ;
+output current_4 ;
+output current_5 ;
+output current_6 ;
+output current_7 ;
+input outp ;
+output Ack ;
+input reset ;
+input FilterClock ;
+wire regf_0 ;
+wire regf_1 ;
+wire regf_2 ;
+wire regf_3 ;
+wire regf_4 ;
+wire regf_5 ;
+wire regf_6 ;
+wire regf_7 ;
+wire current_0 ;
+wire current_1 ;
+wire current_2 ;
+wire current_3 ;
+wire current_4 ;
+wire current_5 ;
+wire current_6 ;
+wire current_7 ;
+wire outp ;
+wire Ack ;
+wire reset ;
+wire FilterClock ;
+wire [9:8] un9_current_0;
+wire [8:8] current_cout;
+wire [7:0] previoussample1f;
+wire [7:0] previoussample2;
+wire un9_current_0_add7_cout ;
+wire ack_4 ;
+wire un9_current_carry_7 ;
+wire un9_current_0_add7 ;
+wire un9_current_carry_6 ;
+wire un9_current_0_add6 ;
+wire un9_current_carry_5 ;
+wire un9_current_0_add5 ;
+wire un9_current_carry_4 ;
+wire un9_current_0_add4 ;
+wire un9_current_carry_3 ;
+wire un9_current_0_add3 ;
+wire un9_current_carry_2 ;
+wire un9_current_0_add2 ;
+wire un9_current_carry_1 ;
+wire un9_current_0_add1 ;
+wire un9_current_carry_0 ;
+wire un9_current_0_add0 ;
+wire un9_current_0_carry_6 ;
+wire un9_current_0_carry_5 ;
+wire un9_current_0_carry_4 ;
+wire un9_current_0_carry_3 ;
+wire un9_current_0_carry_2 ;
+wire un9_current_0_carry_1 ;
+wire un9_current_0_carry_0 ;
+wire N_1 ;
+wire N_2 ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @2:201
+  stratix_lcell current_term_8_ (
+	.combout(un9_current_0[9]),
+	.cin(current_cout[8])
+);
+defparam current_term_8_.cin_used="true";
+defparam current_term_8_.operation_mode="normal";
+defparam current_term_8_.output_mode="comb_only";
+defparam current_term_8_.lut_mask="f0f0";
+defparam current_term_8_.synch_mode="off";
+defparam current_term_8_.sum_lutc_input="cin";
+// @2:201
+  stratix_lcell un9_current_0_add7_term (
+	.combout(un9_current_0[8]),
+	.cin(un9_current_0_add7_cout)
+);
+defparam un9_current_0_add7_term.cin_used="true";
+defparam un9_current_0_add7_term.operation_mode="normal";
+defparam un9_current_0_add7_term.output_mode="comb_only";
+defparam un9_current_0_add7_term.lut_mask="f0f0";
+defparam un9_current_0_add7_term.synch_mode="off";
+defparam un9_current_0_add7_term.sum_lutc_input="cin";
+  stratix_lcell previoussample1f_7_ (
+	.regout(previoussample1f[7]),
+	.clk(FilterClock),
+	.datad(current_7),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_7_.operation_mode="normal";
+defparam previoussample1f_7_.output_mode="reg_only";
+defparam previoussample1f_7_.lut_mask="ff00";
+defparam previoussample1f_7_.synch_mode="off";
+defparam previoussample1f_7_.sum_lutc_input="datac";
+  stratix_lcell previoussample1f_6_ (
+	.regout(previoussample1f[6]),
+	.clk(FilterClock),
+	.datad(current_6),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_6_.operation_mode="normal";
+defparam previoussample1f_6_.output_mode="reg_only";
+defparam previoussample1f_6_.lut_mask="ff00";
+defparam previoussample1f_6_.synch_mode="off";
+defparam previoussample1f_6_.sum_lutc_input="datac";
+  stratix_lcell previoussample1f_5_ (
+	.regout(previoussample1f[5]),
+	.clk(FilterClock),
+	.datad(current_5),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_5_.operation_mode="normal";
+defparam previoussample1f_5_.output_mode="reg_only";
+defparam previoussample1f_5_.lut_mask="ff00";
+defparam previoussample1f_5_.synch_mode="off";
+defparam previoussample1f_5_.sum_lutc_input="datac";
+  stratix_lcell previoussample1f_4_ (
+	.regout(previoussample1f[4]),
+	.clk(FilterClock),
+	.datad(current_4),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_4_.operation_mode="normal";
+defparam previoussample1f_4_.output_mode="reg_only";
+defparam previoussample1f_4_.lut_mask="ff00";
+defparam previoussample1f_4_.synch_mode="off";
+defparam previoussample1f_4_.sum_lutc_input="datac";
+  stratix_lcell previoussample1f_3_ (
+	.regout(previoussample1f[3]),
+	.clk(FilterClock),
+	.datad(current_3),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_3_.operation_mode="normal";
+defparam previoussample1f_3_.output_mode="reg_only";
+defparam previoussample1f_3_.lut_mask="ff00";
+defparam previoussample1f_3_.synch_mode="off";
+defparam previoussample1f_3_.sum_lutc_input="datac";
+  stratix_lcell previoussample1f_2_ (
+	.regout(previoussample1f[2]),
+	.clk(FilterClock),
+	.datad(current_2),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_2_.operation_mode="normal";
+defparam previoussample1f_2_.output_mode="reg_only";
+defparam previoussample1f_2_.lut_mask="ff00";
+defparam previoussample1f_2_.synch_mode="off";
+defparam previoussample1f_2_.sum_lutc_input="datac";
+  stratix_lcell previoussample1f_1_ (
+	.regout(previoussample1f[1]),
+	.clk(FilterClock),
+	.datad(current_1),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_1_.operation_mode="normal";
+defparam previoussample1f_1_.output_mode="reg_only";
+defparam previoussample1f_1_.lut_mask="ff00";
+defparam previoussample1f_1_.synch_mode="off";
+defparam previoussample1f_1_.sum_lutc_input="datac";
+  stratix_lcell previoussample1f_0_ (
+	.regout(previoussample1f[0]),
+	.clk(FilterClock),
+	.datad(current_0),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample1f_0_.operation_mode="normal";
+defparam previoussample1f_0_.output_mode="reg_only";
+defparam previoussample1f_0_.lut_mask="ff00";
+defparam previoussample1f_0_.synch_mode="off";
+defparam previoussample1f_0_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_0_ (
+	.regout(previoussample2[0]),
+	.clk(FilterClock),
+	.datad(previoussample1f[0]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_0_.operation_mode="normal";
+defparam previoussample2_0_.output_mode="reg_only";
+defparam previoussample2_0_.lut_mask="ff00";
+defparam previoussample2_0_.synch_mode="off";
+defparam previoussample2_0_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_1_ (
+	.regout(previoussample2[1]),
+	.clk(FilterClock),
+	.datad(previoussample1f[1]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_1_.operation_mode="normal";
+defparam previoussample2_1_.output_mode="reg_only";
+defparam previoussample2_1_.lut_mask="ff00";
+defparam previoussample2_1_.synch_mode="off";
+defparam previoussample2_1_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_2_ (
+	.regout(previoussample2[2]),
+	.clk(FilterClock),
+	.datad(previoussample1f[2]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_2_.operation_mode="normal";
+defparam previoussample2_2_.output_mode="reg_only";
+defparam previoussample2_2_.lut_mask="ff00";
+defparam previoussample2_2_.synch_mode="off";
+defparam previoussample2_2_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_3_ (
+	.regout(previoussample2[3]),
+	.clk(FilterClock),
+	.datad(previoussample1f[3]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_3_.operation_mode="normal";
+defparam previoussample2_3_.output_mode="reg_only";
+defparam previoussample2_3_.lut_mask="ff00";
+defparam previoussample2_3_.synch_mode="off";
+defparam previoussample2_3_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_4_ (
+	.regout(previoussample2[4]),
+	.clk(FilterClock),
+	.datad(previoussample1f[4]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_4_.operation_mode="normal";
+defparam previoussample2_4_.output_mode="reg_only";
+defparam previoussample2_4_.lut_mask="ff00";
+defparam previoussample2_4_.synch_mode="off";
+defparam previoussample2_4_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_5_ (
+	.regout(previoussample2[5]),
+	.clk(FilterClock),
+	.datad(previoussample1f[5]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_5_.operation_mode="normal";
+defparam previoussample2_5_.output_mode="reg_only";
+defparam previoussample2_5_.lut_mask="ff00";
+defparam previoussample2_5_.synch_mode="off";
+defparam previoussample2_5_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_6_ (
+	.regout(previoussample2[6]),
+	.clk(FilterClock),
+	.datad(previoussample1f[6]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_6_.operation_mode="normal";
+defparam previoussample2_6_.output_mode="reg_only";
+defparam previoussample2_6_.lut_mask="ff00";
+defparam previoussample2_6_.synch_mode="off";
+defparam previoussample2_6_.sum_lutc_input="datac";
+  stratix_lcell previoussample2_7_ (
+	.regout(previoussample2[7]),
+	.clk(FilterClock),
+	.datad(previoussample1f[7]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam previoussample2_7_.operation_mode="normal";
+defparam previoussample2_7_.output_mode="reg_only";
+defparam previoussample2_7_.lut_mask="ff00";
+defparam previoussample2_7_.synch_mode="off";
+defparam previoussample2_7_.sum_lutc_input="datac";
+// @10:97
+  stratix_lcell current_9_ (
+	.regout(current_7),
+	.clk(FilterClock),
+	.datad(un9_current_0[9]),
+	.aclr(reset),
+	.ena(ack_4)
+);
+defparam current_9_.operation_mode="normal";
+defparam current_9_.output_mode="reg_only";
+defparam current_9_.lut_mask="ff00";
+defparam current_9_.synch_mode="off";
+defparam current_9_.sum_lutc_input="datac";
+// @10:97
+  stratix_lcell current_8_ (
+	.regout(current_6),
+	.cout(current_cout[8]),
+	.clk(FilterClock),
+	.dataa(un9_current_0[8]),
+	.aclr(reset),
+	.ena(ack_4),
+	.cin(un9_current_carry_7)
+);
+defparam current_8_.cin_used="true";
+defparam current_8_.operation_mode="arithmetic";
+defparam current_8_.output_mode="reg_only";
+defparam current_8_.lut_mask="5aa0";
+defparam current_8_.synch_mode="off";
+defparam current_8_.sum_lutc_input="cin";
+// @10:97
+  stratix_lcell current_7_ (
+	.regout(current_5),
+	.cout(un9_current_carry_7),
+	.clk(FilterClock),
+	.dataa(un9_current_0_add7),
+	.datab(previoussample2[7]),
+	.aclr(reset),
+	.ena(ack_4),
+	.cin(un9_current_carry_6)
+);
+defparam current_7_.cin_used="true";
+defparam current_7_.operation_mode="arithmetic";
+defparam current_7_.output_mode="reg_only";
+defparam current_7_.lut_mask="96e8";
+defparam current_7_.synch_mode="off";
+defparam current_7_.sum_lutc_input="cin";
+// @10:97
+  stratix_lcell current_6_ (
+	.regout(current_4),
+	.cout(un9_current_carry_6),
+	.clk(FilterClock),
+	.dataa(un9_current_0_add6),
+	.datab(previoussample2[6]),
+	.aclr(reset),
+	.ena(ack_4),
+	.cin(un9_current_carry_5)
+);
+defparam current_6_.cin_used="true";
+defparam current_6_.operation_mode="arithmetic";
+defparam current_6_.output_mode="reg_only";
+defparam current_6_.lut_mask="96e8";
+defparam current_6_.synch_mode="off";
+defparam current_6_.sum_lutc_input="cin";
+// @10:97
+  stratix_lcell current_5_ (
+	.regout(current_3),
+	.cout(un9_current_carry_5),
+	.clk(FilterClock),
+	.dataa(un9_current_0_add5),
+	.datab(previoussample2[5]),
+	.aclr(reset),
+	.ena(ack_4),
+	.cin(un9_current_carry_4)
+);
+defparam current_5_.cin_used="true";
+defparam current_5_.operation_mode="arithmetic";
+defparam current_5_.output_mode="reg_only";
+defparam current_5_.lut_mask="96e8";
+defparam current_5_.synch_mode="off";
+defparam current_5_.sum_lutc_input="cin";
+// @10:97
+  stratix_lcell current_4_ (
+	.regout(current_2),
+	.cout(un9_current_carry_4),
+	.clk(FilterClock),
+	.dataa(un9_current_0_add4),
+	.datab(previoussample2[4]),
+	.aclr(reset),
+	.ena(ack_4),
+	.cin(un9_current_carry_3)
+);
+defparam current_4_.cin_used="true";
+defparam current_4_.operation_mode="arithmetic";
+defparam current_4_.output_mode="reg_only";
+defparam current_4_.lut_mask="96e8";
+defparam current_4_.synch_mode="off";
+defparam current_4_.sum_lutc_input="cin";
+// @10:97
+  stratix_lcell current_3_ (
+	.regout(current_1),
+	.cout(un9_current_carry_3),
+	.clk(FilterClock),
+	.dataa(un9_current_0_add3),
+	.datab(previoussample2[3]),
+	.aclr(reset),
+	.ena(ack_4),
+	.cin(un9_current_carry_2)
+);
+defparam current_3_.cin_used="true";
+defparam current_3_.operation_mode="arithmetic";
+defparam current_3_.output_mode="reg_only";
+defparam current_3_.lut_mask="96e8";
+defparam current_3_.synch_mode="off";
+defparam current_3_.sum_lutc_input="cin";
+// @10:97
+  stratix_lcell current_2_ (
+	.regout(current_0),
+	.cout(un9_current_carry_2),
+	.clk(FilterClock),
+	.dataa(un9_current_0_add2),
+	.datab(previoussample2[2]),
+	.aclr(reset),
+	.ena(ack_4),
+	.cin(un9_current_carry_1)
+);
+defparam current_2_.cin_used="true";
+defparam current_2_.operation_mode="arithmetic";
+defparam current_2_.output_mode="reg_only";
+defparam current_2_.lut_mask="96e8";
+defparam current_2_.synch_mode="off";
+defparam current_2_.sum_lutc_input="cin";
+// @10:97
+  stratix_lcell Ack_0 (
+	.combout(ack_4),
+	.regout(Ack),
+	.clk(FilterClock),
+	.dataa(outp),
+	.datab(Ack),
+	.aclr(reset)
+);
+defparam Ack_0.operation_mode="normal";
+defparam Ack_0.output_mode="reg_and_comb";
+defparam Ack_0.lut_mask="2222";
+defparam Ack_0.synch_mode="off";
+defparam Ack_0.sum_lutc_input="datac";
+// @10:110
+  stratix_lcell un9_current_add1 (
+	.combout(N_1),
+	.cout(un9_current_carry_1),
+	.dataa(un9_current_0_add1),
+	.datab(previoussample2[1]),
+	.cin(un9_current_carry_0)
+);
+defparam un9_current_add1.cin_used="true";
+defparam un9_current_add1.operation_mode="arithmetic";
+defparam un9_current_add1.output_mode="comb_only";
+defparam un9_current_add1.lut_mask="96e8";
+defparam un9_current_add1.synch_mode="off";
+defparam un9_current_add1.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_add0 (
+	.combout(N_2),
+	.cout(un9_current_carry_0),
+	.dataa(un9_current_0_add0),
+	.datab(previoussample2[0])
+);
+defparam un9_current_add0.operation_mode="arithmetic";
+defparam un9_current_add0.output_mode="comb_only";
+defparam un9_current_add0.lut_mask="6688";
+defparam un9_current_add0.synch_mode="off";
+defparam un9_current_add0.sum_lutc_input="datac";
+// @10:110
+  stratix_lcell un9_current_0_add7_Z (
+	.combout(un9_current_0_add7),
+	.cout(un9_current_0_add7_cout),
+	.dataa(previoussample1f[7]),
+	.datab(regf_7),
+	.cin(un9_current_0_carry_6)
+);
+defparam un9_current_0_add7_Z.cin_used="true";
+defparam un9_current_0_add7_Z.operation_mode="arithmetic";
+defparam un9_current_0_add7_Z.output_mode="comb_only";
+defparam un9_current_0_add7_Z.lut_mask="96e8";
+defparam un9_current_0_add7_Z.synch_mode="off";
+defparam un9_current_0_add7_Z.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_0_add6_Z (
+	.combout(un9_current_0_add6),
+	.cout(un9_current_0_carry_6),
+	.dataa(previoussample1f[6]),
+	.datab(regf_6),
+	.cin(un9_current_0_carry_5)
+);
+defparam un9_current_0_add6_Z.cin_used="true";
+defparam un9_current_0_add6_Z.operation_mode="arithmetic";
+defparam un9_current_0_add6_Z.output_mode="comb_only";
+defparam un9_current_0_add6_Z.lut_mask="96e8";
+defparam un9_current_0_add6_Z.synch_mode="off";
+defparam un9_current_0_add6_Z.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_0_add5_Z (
+	.combout(un9_current_0_add5),
+	.cout(un9_current_0_carry_5),
+	.dataa(previoussample1f[5]),
+	.datab(regf_5),
+	.cin(un9_current_0_carry_4)
+);
+defparam un9_current_0_add5_Z.cin_used="true";
+defparam un9_current_0_add5_Z.operation_mode="arithmetic";
+defparam un9_current_0_add5_Z.output_mode="comb_only";
+defparam un9_current_0_add5_Z.lut_mask="96e8";
+defparam un9_current_0_add5_Z.synch_mode="off";
+defparam un9_current_0_add5_Z.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_0_add4_Z (
+	.combout(un9_current_0_add4),
+	.cout(un9_current_0_carry_4),
+	.dataa(previoussample1f[4]),
+	.datab(regf_4),
+	.cin(un9_current_0_carry_3)
+);
+defparam un9_current_0_add4_Z.cin_used="true";
+defparam un9_current_0_add4_Z.operation_mode="arithmetic";
+defparam un9_current_0_add4_Z.output_mode="comb_only";
+defparam un9_current_0_add4_Z.lut_mask="96e8";
+defparam un9_current_0_add4_Z.synch_mode="off";
+defparam un9_current_0_add4_Z.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_0_add3_Z (
+	.combout(un9_current_0_add3),
+	.cout(un9_current_0_carry_3),
+	.dataa(previoussample1f[3]),
+	.datab(regf_3),
+	.cin(un9_current_0_carry_2)
+);
+defparam un9_current_0_add3_Z.cin_used="true";
+defparam un9_current_0_add3_Z.operation_mode="arithmetic";
+defparam un9_current_0_add3_Z.output_mode="comb_only";
+defparam un9_current_0_add3_Z.lut_mask="96e8";
+defparam un9_current_0_add3_Z.synch_mode="off";
+defparam un9_current_0_add3_Z.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_0_add2_Z (
+	.combout(un9_current_0_add2),
+	.cout(un9_current_0_carry_2),
+	.dataa(previoussample1f[2]),
+	.datab(regf_2),
+	.cin(un9_current_0_carry_1)
+);
+defparam un9_current_0_add2_Z.cin_used="true";
+defparam un9_current_0_add2_Z.operation_mode="arithmetic";
+defparam un9_current_0_add2_Z.output_mode="comb_only";
+defparam un9_current_0_add2_Z.lut_mask="96e8";
+defparam un9_current_0_add2_Z.synch_mode="off";
+defparam un9_current_0_add2_Z.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_0_add1_Z (
+	.combout(un9_current_0_add1),
+	.cout(un9_current_0_carry_1),
+	.dataa(previoussample1f[1]),
+	.datab(regf_1),
+	.cin(un9_current_0_carry_0)
+);
+defparam un9_current_0_add1_Z.cin_used="true";
+defparam un9_current_0_add1_Z.operation_mode="arithmetic";
+defparam un9_current_0_add1_Z.output_mode="comb_only";
+defparam un9_current_0_add1_Z.lut_mask="96e8";
+defparam un9_current_0_add1_Z.synch_mode="off";
+defparam un9_current_0_add1_Z.sum_lutc_input="cin";
+// @10:110
+  stratix_lcell un9_current_0_add0_Z (
+	.combout(un9_current_0_add0),
+	.cout(un9_current_0_carry_0),
+	.dataa(previoussample1f[0]),
+	.datab(regf_0)
+);
+defparam un9_current_0_add0_Z.operation_mode="arithmetic";
+defparam un9_current_0_add0_Z.output_mode="comb_only";
+defparam un9_current_0_add0_Z.lut_mask="6688";
+defparam un9_current_0_add0_Z.synch_mode="off";
+defparam un9_current_0_add0_Z.sum_lutc_input="datac";
+endmodule /* Filter */
+
+module receiver_hcc_main (
+  globals_bytes_out_3_0,
+  globals_bytes_out_0_0_0,
+  globals_DataReady_out_0,
+  globals_Data_out_0,
+  globals_Data_out_1,
+  globals_Data_out_2,
+  globals_Data_out_3,
+  globals_Data_out_4,
+  globals_Data_out_5,
+  globals_Data_out_6,
+  globals_Data_out_7,
+  globals_WrPtr_out_3,
+  globals_WrPtr_out_2,
+  globals_WrPtr_out_1,
+  globals_WrPtr_out_0,
+  globals_RdPtr_outf_2,
+  globals_RdPtr_outf_1,
+  globals_RdPtr_outf_0,
+  globals_RdPtr_outf_3,
+  globals_FalseZ_1_out_0_a2_1_1_0,
+  bitindex_i_i_i_n_0,
+  I_24_1,
+  binopout_3_NE,
+  outp,
+  DataIn,
+  N_335_i,
+  reset,
+  ReceiverClock,
+  N_335_i_0
+);
+input globals_bytes_out_3_0 ;
+input globals_bytes_out_0_0_0 ;
+input globals_DataReady_out_0 ;
+output globals_Data_out_0 ;
+output globals_Data_out_1 ;
+output globals_Data_out_2 ;
+output globals_Data_out_3 ;
+output globals_Data_out_4 ;
+output globals_Data_out_5 ;
+output globals_Data_out_6 ;
+output globals_Data_out_7 ;
+output globals_WrPtr_out_3 ;
+output globals_WrPtr_out_2 ;
+output globals_WrPtr_out_1 ;
+output globals_WrPtr_out_0 ;
+output globals_RdPtr_outf_2 ;
+output globals_RdPtr_outf_1 ;
+output globals_RdPtr_outf_0 ;
+output globals_RdPtr_outf_3 ;
+output globals_FalseZ_1_out_0_a2_1_1_0 ;
+output bitindex_i_i_i_n_0 ;
+input I_24_1 ;
+output binopout_3_NE ;
+input outp ;
+input DataIn ;
+output N_335_i ;
+input reset ;
+input ReceiverClock ;
+output N_335_i_0 ;
+wire globals_bytes_out_3_0 ;
+wire globals_bytes_out_0_0_0 ;
+wire globals_DataReady_out_0 ;
+wire globals_Data_out_0 ;
+wire globals_Data_out_1 ;
+wire globals_Data_out_2 ;
+wire globals_Data_out_3 ;
+wire globals_Data_out_4 ;
+wire globals_Data_out_5 ;
+wire globals_Data_out_6 ;
+wire globals_Data_out_7 ;
+wire globals_WrPtr_out_3 ;
+wire globals_WrPtr_out_2 ;
+wire globals_WrPtr_out_1 ;
+wire globals_WrPtr_out_0 ;
+wire globals_RdPtr_outf_2 ;
+wire globals_RdPtr_outf_1 ;
+wire globals_RdPtr_outf_0 ;
+wire globals_RdPtr_outf_3 ;
+wire globals_FalseZ_1_out_0_a2_1_1_0 ;
+wire bitindex_i_i_i_n_0 ;
+wire I_24_1 ;
+wire binopout_3_NE ;
+wire outp ;
+wire DataIn ;
+wire N_335_i ;
+wire reset ;
+wire ReceiverClock ;
+wire N_335_i_0 ;
+wire [2:1] bitindex_i;
+wire [0:0] globals_StartOut_out;
+wire [0:0] thendone;
+wire [0:0] z_dones_1;
+wire [0:0] globals_CForkIn_out_i_a2_a;
+wire [0:0] globals_FalseZ_1_out_0_a2_0;
+wire [0:0] bitindex;
+wire [0:0] globals_TrueZ_out_0_a2;
+wire [0:0] globals_FalseZ_1_out_0_a2;
+wire [0:0] elsedone;
+wire binopout_4_NE ;
+wire binopout_5_sum1 ;
+wire binopout_5_sum2 ;
+wire binopout_5_sum3 ;
+wire binopout_4_0 ;
+wire binopout_4_NE_a ;
+wire binopout_3_NE_a ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+//@2:201
+  assign  bitindex_i_i_i_n_0 = ~ bitindex_i[2];
+// @2:597
+  stratix_lcell globals_CForkIn_out_i_a2_0_0_ (
+	.combout(N_335_i_0),
+	.dataa(globals_StartOut_out[0]),
+	.datab(thendone[0]),
+	.datac(z_dones_1[0]),
+	.datad(globals_CForkIn_out_i_a2_a[0])
+);
+defparam globals_CForkIn_out_i_a2_0_0_.operation_mode="normal";
+defparam globals_CForkIn_out_i_a2_0_0_.output_mode="comb_only";
+defparam globals_CForkIn_out_i_a2_0_0_.lut_mask="feff";
+defparam globals_CForkIn_out_i_a2_0_0_.synch_mode="off";
+defparam globals_CForkIn_out_i_a2_0_0_.sum_lutc_input="datac";
+// @2:565
+  stratix_lcell globals_FalseZ_1_out_0_a2_0_0_ (
+	.combout(globals_FalseZ_1_out_0_a2_0[0]),
+	.dataa(bitindex[0]),
+	.datab(bitindex_i[2]),
+	.datac(binopout_4_NE),
+	.datad(globals_FalseZ_1_out_0_a2_1_1_0)
+);
+defparam globals_FalseZ_1_out_0_a2_0_0_.operation_mode="normal";
+defparam globals_FalseZ_1_out_0_a2_0_0_.output_mode="comb_only";
+defparam globals_FalseZ_1_out_0_a2_0_0_.lut_mask="0200";
+defparam globals_FalseZ_1_out_0_a2_0_0_.synch_mode="off";
+defparam globals_FalseZ_1_out_0_a2_0_0_.sum_lutc_input="datac";
+  stratix_lcell globals_RdPtr_outf_3_ (
+	.regout(globals_RdPtr_outf_3),
+	.clk(ReceiverClock),
+	.dataa(globals_RdPtr_outf_0),
+	.datab(globals_RdPtr_outf_1),
+	.datac(globals_RdPtr_outf_2),
+	.datad(globals_RdPtr_outf_3),
+	.aclr(reset),
+	.ena(globals_TrueZ_out_0_a2[0])
+);
+defparam globals_RdPtr_outf_3_.operation_mode="normal";
+defparam globals_RdPtr_outf_3_.output_mode="reg_only";
+defparam globals_RdPtr_outf_3_.lut_mask="7f80";
+defparam globals_RdPtr_outf_3_.synch_mode="off";
+defparam globals_RdPtr_outf_3_.sum_lutc_input="datac";
+  stratix_lcell globals_RdPtr_outf_2_ (
+	.regout(globals_RdPtr_outf_2),
+	.clk(ReceiverClock),
+	.dataa(globals_RdPtr_outf_0),
+	.datab(globals_RdPtr_outf_1),
+	.datac(globals_RdPtr_outf_2),
+	.aclr(reset),
+	.ena(globals_TrueZ_out_0_a2[0])
+);
+defparam globals_RdPtr_outf_2_.operation_mode="normal";
+defparam globals_RdPtr_outf_2_.output_mode="reg_only";
+defparam globals_RdPtr_outf_2_.lut_mask="7878";
+defparam globals_RdPtr_outf_2_.synch_mode="off";
+defparam globals_RdPtr_outf_2_.sum_lutc_input="datac";
+  stratix_lcell globals_RdPtr_outf_1_ (
+	.regout(globals_RdPtr_outf_1),
+	.clk(ReceiverClock),
+	.dataa(globals_RdPtr_outf_1),
+	.datab(globals_RdPtr_outf_0),
+	.aclr(reset),
+	.ena(globals_TrueZ_out_0_a2[0])
+);
+defparam globals_RdPtr_outf_1_.operation_mode="normal";
+defparam globals_RdPtr_outf_1_.output_mode="reg_only";
+defparam globals_RdPtr_outf_1_.lut_mask="6666";
+defparam globals_RdPtr_outf_1_.synch_mode="off";
+defparam globals_RdPtr_outf_1_.sum_lutc_input="datac";
+  stratix_lcell globals_RdPtr_outf_0_ (
+	.regout(globals_RdPtr_outf_0),
+	.clk(ReceiverClock),
+	.dataa(globals_RdPtr_outf_0),
+	.datab(globals_TrueZ_out_0_a2[0]),
+	.aclr(reset)
+);
+defparam globals_RdPtr_outf_0_.operation_mode="normal";
+defparam globals_RdPtr_outf_0_.output_mode="reg_only";
+defparam globals_RdPtr_outf_0_.lut_mask="6666";
+defparam globals_RdPtr_outf_0_.synch_mode="off";
+defparam globals_RdPtr_outf_0_.sum_lutc_input="datac";
+  stratix_lcell globals_WrPtr_out_0_ (
+	.regout(globals_WrPtr_out_0),
+	.clk(ReceiverClock),
+	.datac(globals_WrPtr_out_0),
+	.datad(globals_FalseZ_1_out_0_a2[0]),
+	.aclr(reset)
+);
+defparam globals_WrPtr_out_0_.operation_mode="normal";
+defparam globals_WrPtr_out_0_.output_mode="reg_only";
+defparam globals_WrPtr_out_0_.lut_mask="0ff0";
+defparam globals_WrPtr_out_0_.synch_mode="off";
+defparam globals_WrPtr_out_0_.sum_lutc_input="datac";
+  stratix_lcell globals_WrPtr_out_1_ (
+	.combout(binopout_5_sum1),
+	.regout(globals_WrPtr_out_1),
+	.clk(ReceiverClock),
+	.dataa(globals_WrPtr_out_1),
+	.datab(globals_WrPtr_out_0),
+	.aclr(reset),
+	.ena(globals_FalseZ_1_out_0_a2_0[0])
+);
+defparam globals_WrPtr_out_1_.operation_mode="normal";
+defparam globals_WrPtr_out_1_.output_mode="reg_and_comb";
+defparam globals_WrPtr_out_1_.lut_mask="6666";
+defparam globals_WrPtr_out_1_.synch_mode="off";
+defparam globals_WrPtr_out_1_.sum_lutc_input="datac";
+  stratix_lcell globals_WrPtr_out_2_ (
+	.combout(binopout_5_sum2),
+	.regout(globals_WrPtr_out_2),
+	.clk(ReceiverClock),
+	.dataa(globals_WrPtr_out_0),
+	.datab(globals_WrPtr_out_1),
+	.datac(globals_WrPtr_out_2),
+	.aclr(reset),
+	.ena(globals_FalseZ_1_out_0_a2_0[0])
+);
+defparam globals_WrPtr_out_2_.operation_mode="normal";
+defparam globals_WrPtr_out_2_.output_mode="reg_and_comb";
+defparam globals_WrPtr_out_2_.lut_mask="7878";
+defparam globals_WrPtr_out_2_.synch_mode="off";
+defparam globals_WrPtr_out_2_.sum_lutc_input="datac";
+  stratix_lcell globals_WrPtr_out_3_ (
+	.combout(binopout_5_sum3),
+	.regout(globals_WrPtr_out_3),
+	.clk(ReceiverClock),
+	.dataa(globals_WrPtr_out_0),
+	.datab(globals_WrPtr_out_1),
+	.datac(globals_WrPtr_out_2),
+	.datad(globals_WrPtr_out_3),
+	.aclr(reset),
+	.ena(globals_FalseZ_1_out_0_a2_0[0])
+);
+defparam globals_WrPtr_out_3_.operation_mode="normal";
+defparam globals_WrPtr_out_3_.output_mode="reg_and_comb";
+defparam globals_WrPtr_out_3_.lut_mask="7f80";
+defparam globals_WrPtr_out_3_.synch_mode="off";
+defparam globals_WrPtr_out_3_.sum_lutc_input="datac";
+// @7:386
+  stratix_lcell bitindex_i_2_ (
+	.regout(bitindex_i[2]),
+	.clk(ReceiverClock),
+	.dataa(bitindex[0]),
+	.datab(bitindex_i[1]),
+	.datac(bitindex_i[2]),
+	.datad(N_335_i),
+	.aclr(reset)
+);
+defparam bitindex_i_2_.operation_mode="normal";
+defparam bitindex_i_2_.output_mode="reg_only";
+defparam bitindex_i_2_.lut_mask="d2f0";
+defparam bitindex_i_2_.synch_mode="off";
+defparam bitindex_i_2_.sum_lutc_input="datac";
+// @7:386
+  stratix_lcell bitindex_i_1_ (
+	.regout(bitindex_i[1]),
+	.clk(ReceiverClock),
+	.dataa(bitindex[0]),
+	.datab(bitindex_i[1]),
+	.datac(N_335_i),
+	.aclr(reset)
+);
+defparam bitindex_i_1_.operation_mode="normal";
+defparam bitindex_i_1_.output_mode="reg_only";
+defparam bitindex_i_1_.lut_mask="6c6c";
+defparam bitindex_i_1_.synch_mode="off";
+defparam bitindex_i_1_.sum_lutc_input="datac";
+// @7:386
+  stratix_lcell bitindex_0_ (
+	.regout(bitindex[0]),
+	.clk(ReceiverClock),
+	.dataa(bitindex[0]),
+	.datab(N_335_i),
+	.aclr(reset)
+);
+defparam bitindex_0_.operation_mode="normal";
+defparam bitindex_0_.output_mode="reg_only";
+defparam bitindex_0_.lut_mask="6666";
+defparam bitindex_0_.synch_mode="off";
+defparam bitindex_0_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_7_ (
+	.regout(globals_Data_out_7),
+	.clk(ReceiverClock),
+	.datad(DataIn),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_7_.operation_mode="normal";
+defparam globals_Data_out_7_.output_mode="reg_only";
+defparam globals_Data_out_7_.lut_mask="ff00";
+defparam globals_Data_out_7_.synch_mode="off";
+defparam globals_Data_out_7_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_6_ (
+	.regout(globals_Data_out_6),
+	.clk(ReceiverClock),
+	.datad(globals_Data_out_7),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_6_.operation_mode="normal";
+defparam globals_Data_out_6_.output_mode="reg_only";
+defparam globals_Data_out_6_.lut_mask="ff00";
+defparam globals_Data_out_6_.synch_mode="off";
+defparam globals_Data_out_6_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_5_ (
+	.regout(globals_Data_out_5),
+	.clk(ReceiverClock),
+	.datad(globals_Data_out_6),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_5_.operation_mode="normal";
+defparam globals_Data_out_5_.output_mode="reg_only";
+defparam globals_Data_out_5_.lut_mask="ff00";
+defparam globals_Data_out_5_.synch_mode="off";
+defparam globals_Data_out_5_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_4_ (
+	.regout(globals_Data_out_4),
+	.clk(ReceiverClock),
+	.datad(globals_Data_out_5),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_4_.operation_mode="normal";
+defparam globals_Data_out_4_.output_mode="reg_only";
+defparam globals_Data_out_4_.lut_mask="ff00";
+defparam globals_Data_out_4_.synch_mode="off";
+defparam globals_Data_out_4_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_3_ (
+	.regout(globals_Data_out_3),
+	.clk(ReceiverClock),
+	.datad(globals_Data_out_4),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_3_.operation_mode="normal";
+defparam globals_Data_out_3_.output_mode="reg_only";
+defparam globals_Data_out_3_.lut_mask="ff00";
+defparam globals_Data_out_3_.synch_mode="off";
+defparam globals_Data_out_3_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_2_ (
+	.regout(globals_Data_out_2),
+	.clk(ReceiverClock),
+	.datad(globals_Data_out_3),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_2_.operation_mode="normal";
+defparam globals_Data_out_2_.output_mode="reg_only";
+defparam globals_Data_out_2_.lut_mask="ff00";
+defparam globals_Data_out_2_.synch_mode="off";
+defparam globals_Data_out_2_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_1_ (
+	.regout(globals_Data_out_1),
+	.clk(ReceiverClock),
+	.datad(globals_Data_out_2),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_1_.operation_mode="normal";
+defparam globals_Data_out_1_.output_mode="reg_only";
+defparam globals_Data_out_1_.lut_mask="ff00";
+defparam globals_Data_out_1_.synch_mode="off";
+defparam globals_Data_out_1_.sum_lutc_input="datac";
+// @7:350
+  stratix_lcell globals_Data_out_0_ (
+	.regout(globals_Data_out_0),
+	.clk(ReceiverClock),
+	.datad(globals_Data_out_1),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam globals_Data_out_0_.operation_mode="normal";
+defparam globals_Data_out_0_.output_mode="reg_only";
+defparam globals_Data_out_0_.lut_mask="ff00";
+defparam globals_Data_out_0_.synch_mode="off";
+defparam globals_Data_out_0_.sum_lutc_input="datac";
+// @7:511
+  stratix_lcell z_dones_1_0_ (
+	.combout(globals_TrueZ_out_0_a2[0]),
+	.regout(z_dones_1[0]),
+	.clk(ReceiverClock),
+	.dataa(globals_DataReady_out_0),
+	.datab(outp),
+	.datac(N_335_i),
+	.datad(binopout_3_NE),
+	.aclr(reset)
+);
+defparam z_dones_1_0_.operation_mode="normal";
+defparam z_dones_1_0_.output_mode="reg_and_comb";
+defparam z_dones_1_0_.lut_mask="0080";
+defparam z_dones_1_0_.synch_mode="off";
+defparam z_dones_1_0_.sum_lutc_input="datac";
+// @7:490
+  stratix_lcell elsedone_0_ (
+	.regout(elsedone[0]),
+	.clk(ReceiverClock),
+	.dataa(globals_DataReady_out_0),
+	.datab(outp),
+	.datac(N_335_i),
+	.datad(binopout_3_NE),
+	.aclr(reset)
+);
+defparam elsedone_0_.operation_mode="normal";
+defparam elsedone_0_.output_mode="reg_only";
+defparam elsedone_0_.lut_mask="0020";
+defparam elsedone_0_.synch_mode="off";
+defparam elsedone_0_.sum_lutc_input="datac";
+// @7:546
+  stratix_lcell thendone_0_ (
+	.regout(thendone[0]),
+	.clk(ReceiverClock),
+	.dataa(N_335_i),
+	.datab(binopout_3_NE),
+	.aclr(reset)
+);
+defparam thendone_0_.operation_mode="normal";
+defparam thendone_0_.output_mode="reg_only";
+defparam thendone_0_.lut_mask="8888";
+defparam thendone_0_.synch_mode="off";
+defparam thendone_0_.sum_lutc_input="datac";
+// @7:408
+  stratix_lcell globals_StartOut_out_0_ (
+	.regout(globals_StartOut_out[0]),
+	.clk(ReceiverClock),
+	.dataa(globals_bytes_out_0_0_0),
+	.aclr(reset)
+);
+defparam globals_StartOut_out_0_.operation_mode="normal";
+defparam globals_StartOut_out_0_.output_mode="reg_only";
+defparam globals_StartOut_out_0_.lut_mask="5555";
+defparam globals_StartOut_out_0_.synch_mode="off";
+defparam globals_StartOut_out_0_.sum_lutc_input="datac";
+// @2:565
+  stratix_lcell globals_FalseZ_1_out_0_a2_0_ (
+	.combout(globals_FalseZ_1_out_0_a2[0]),
+	.dataa(bitindex[0]),
+	.datab(bitindex_i[2]),
+	.datac(binopout_4_NE),
+	.datad(globals_FalseZ_1_out_0_a2_1_1_0)
+);
+defparam globals_FalseZ_1_out_0_a2_0_.operation_mode="normal";
+defparam globals_FalseZ_1_out_0_a2_0_.output_mode="comb_only";
+defparam globals_FalseZ_1_out_0_a2_0_.lut_mask="0200";
+defparam globals_FalseZ_1_out_0_a2_0_.synch_mode="off";
+defparam globals_FalseZ_1_out_0_a2_0_.sum_lutc_input="datac";
+// @2:340
+  stratix_lcell eq_binopout_4_NE (
+	.combout(binopout_4_NE),
+	.dataa(globals_RdPtr_outf_3),
+	.datab(binopout_4_0),
+	.datac(binopout_5_sum3),
+	.datad(binopout_4_NE_a)
+);
+defparam eq_binopout_4_NE.operation_mode="normal";
+defparam eq_binopout_4_NE.output_mode="comb_only";
+defparam eq_binopout_4_NE.lut_mask="0021";
+defparam eq_binopout_4_NE.synch_mode="off";
+defparam eq_binopout_4_NE.sum_lutc_input="datac";
+// @2:340
+  stratix_lcell eq_binopout_4_NE_a (
+	.combout(binopout_4_NE_a),
+	.dataa(globals_RdPtr_outf_2),
+	.datab(globals_RdPtr_outf_1),
+	.datac(binopout_5_sum1),
+	.datad(binopout_5_sum2)
+);
+defparam eq_binopout_4_NE_a.operation_mode="normal";
+defparam eq_binopout_4_NE_a.output_mode="comb_only";
+defparam eq_binopout_4_NE_a.lut_mask="7dbe";
+defparam eq_binopout_4_NE_a.synch_mode="off";
+defparam eq_binopout_4_NE_a.sum_lutc_input="datac";
+// @2:597
+  stratix_lcell globals_CForkIn_out_i_a2_0_ (
+	.combout(N_335_i),
+	.dataa(globals_StartOut_out[0]),
+	.datab(thendone[0]),
+	.datac(z_dones_1[0]),
+	.datad(globals_CForkIn_out_i_a2_a[0])
+);
+defparam globals_CForkIn_out_i_a2_0_.operation_mode="normal";
+defparam globals_CForkIn_out_i_a2_0_.output_mode="comb_only";
+defparam globals_CForkIn_out_i_a2_0_.lut_mask="feff";
+defparam globals_CForkIn_out_i_a2_0_.synch_mode="off";
+defparam globals_CForkIn_out_i_a2_0_.sum_lutc_input="datac";
+// @2:597
+  stratix_lcell globals_CForkIn_out_i_a2_a_0_ (
+	.combout(globals_CForkIn_out_i_a2_a[0]),
+	.datac(elsedone[0]),
+	.datad(globals_bytes_out_3_0)
+);
+defparam globals_CForkIn_out_i_a2_a_0_.operation_mode="normal";
+defparam globals_CForkIn_out_i_a2_a_0_.output_mode="comb_only";
+defparam globals_CForkIn_out_i_a2_a_0_.lut_mask="000f";
+defparam globals_CForkIn_out_i_a2_a_0_.synch_mode="off";
+defparam globals_CForkIn_out_i_a2_a_0_.sum_lutc_input="datac";
+// @2:340
+  stratix_lcell eq_binopout_3_NE (
+	.combout(binopout_3_NE),
+	.dataa(globals_WrPtr_out_1),
+	.datab(globals_RdPtr_outf_1),
+	.datac(binopout_3_NE_a),
+	.datad(I_24_1)
+);
+defparam eq_binopout_3_NE.operation_mode="normal";
+defparam eq_binopout_3_NE.output_mode="comb_only";
+defparam eq_binopout_3_NE.lut_mask="0900";
+defparam eq_binopout_3_NE.synch_mode="off";
+defparam eq_binopout_3_NE.sum_lutc_input="datac";
+// @2:340
+  stratix_lcell eq_binopout_3_NE_a (
+	.combout(binopout_3_NE_a),
+	.dataa(globals_RdPtr_outf_0),
+	.datab(globals_WrPtr_out_0)
+);
+defparam eq_binopout_3_NE_a.operation_mode="normal";
+defparam eq_binopout_3_NE_a.output_mode="comb_only";
+defparam eq_binopout_3_NE_a.lut_mask="6666";
+defparam eq_binopout_3_NE_a.synch_mode="off";
+defparam eq_binopout_3_NE_a.sum_lutc_input="datac";
+// @2:565
+  stratix_lcell globals_FalseZ_1_out_0_a2_1_1_0_ (
+	.combout(globals_FalseZ_1_out_0_a2_1_1_0),
+	.datac(bitindex_i[1]),
+	.datad(N_335_i)
+);
+defparam globals_FalseZ_1_out_0_a2_1_1_0_.operation_mode="normal";
+defparam globals_FalseZ_1_out_0_a2_1_1_0_.output_mode="comb_only";
+defparam globals_FalseZ_1_out_0_a2_1_1_0_.lut_mask="0f00";
+defparam globals_FalseZ_1_out_0_a2_1_1_0_.synch_mode="off";
+defparam globals_FalseZ_1_out_0_a2_1_1_0_.sum_lutc_input="datac";
+// @2:340
+  stratix_lcell eq_binopout_4_0 (
+	.combout(binopout_4_0),
+	.dataa(globals_WrPtr_out_0),
+	.datab(globals_RdPtr_outf_0)
+);
+defparam eq_binopout_4_0.operation_mode="normal";
+defparam eq_binopout_4_0.output_mode="comb_only";
+defparam eq_binopout_4_0.lut_mask="9999";
+defparam eq_binopout_4_0.synch_mode="off";
+defparam eq_binopout_4_0.sum_lutc_input="datac";
+endmodule /* receiver_hcc_main */
+
+module receiver_hcc (
+  globals_RdPtr_outf_3,
+  globals_RdPtr_outf_2,
+  globals_RdPtr_outf_1,
+  globals_RdPtr_outf_0,
+  globals_WrPtr_out_3,
+  globals_WrPtr_out_2,
+  globals_WrPtr_out_1,
+  globals_WrPtr_out_0,
+  globals_bytes_out_1_0,
+  globals_bytes_out_1_1,
+  globals_bytes_out_1_2,
+  globals_bytes_out_1_3,
+  globals_bytes_out_1_4,
+  globals_bytes_out_1_5,
+  globals_bytes_out_1_6,
+  globals_bytes_out_1_7,
+  globals_binopout_0,
+  globals_binopout_1,
+  globals_binopout_2,
+  globals_binopout_3,
+  globals_binopout_4,
+  globals_binopout_5,
+  globals_binopout_6,
+  globals_binopout_7,
+  p_0,
+  p_1,
+  p_2,
+  p_3,
+  p_4,
+  p_5,
+  p_6,
+  p_7,
+  globals_DataReady_out_0,
+  DataIn,
+  outp,
+  I_24_1,
+  I_22_a,
+  reset,
+  ReceiverClock
+);
+output globals_RdPtr_outf_3 ;
+output globals_RdPtr_outf_2 ;
+output globals_RdPtr_outf_1 ;
+output globals_RdPtr_outf_0 ;
+output globals_WrPtr_out_3 ;
+output globals_WrPtr_out_2 ;
+output globals_WrPtr_out_1 ;
+output globals_WrPtr_out_0 ;
+output globals_bytes_out_1_0 ;
+output globals_bytes_out_1_1 ;
+output globals_bytes_out_1_2 ;
+output globals_bytes_out_1_3 ;
+output globals_bytes_out_1_4 ;
+output globals_bytes_out_1_5 ;
+output globals_bytes_out_1_6 ;
+output globals_bytes_out_1_7 ;
+input globals_binopout_0 ;
+input globals_binopout_1 ;
+input globals_binopout_2 ;
+input globals_binopout_3 ;
+input globals_binopout_4 ;
+input globals_binopout_5 ;
+input globals_binopout_6 ;
+input globals_binopout_7 ;
+output p_0 ;
+output p_1 ;
+output p_2 ;
+output p_3 ;
+output p_4 ;
+output p_5 ;
+output p_6 ;
+output p_7 ;
+output globals_DataReady_out_0 ;
+input DataIn ;
+input outp ;
+input I_24_1 ;
+input I_22_a ;
+input reset ;
+input ReceiverClock ;
+wire globals_RdPtr_outf_3 ;
+wire globals_RdPtr_outf_2 ;
+wire globals_RdPtr_outf_1 ;
+wire globals_RdPtr_outf_0 ;
+wire globals_WrPtr_out_3 ;
+wire globals_WrPtr_out_2 ;
+wire globals_WrPtr_out_1 ;
+wire globals_WrPtr_out_0 ;
+wire globals_bytes_out_1_0 ;
+wire globals_bytes_out_1_1 ;
+wire globals_bytes_out_1_2 ;
+wire globals_bytes_out_1_3 ;
+wire globals_bytes_out_1_4 ;
+wire globals_bytes_out_1_5 ;
+wire globals_bytes_out_1_6 ;
+wire globals_bytes_out_1_7 ;
+wire globals_binopout_0 ;
+wire globals_binopout_1 ;
+wire globals_binopout_2 ;
+wire globals_binopout_3 ;
+wire globals_binopout_4 ;
+wire globals_binopout_5 ;
+wire globals_binopout_6 ;
+wire globals_binopout_7 ;
+wire p_0 ;
+wire p_1 ;
+wire p_2 ;
+wire p_3 ;
+wire p_4 ;
+wire p_5 ;
+wire p_6 ;
+wire p_7 ;
+wire globals_DataReady_out_0 ;
+wire DataIn ;
+wire outp ;
+wire I_24_1 ;
+wire I_22_a ;
+wire reset ;
+wire ReceiverClock ;
+wire [7:7] globals_bytes_out_3_0;
+wire [7:7] globals_bytes_out_0_0;
+wire [7:7] globals_bytes_out_3;
+wire [7:0] globals_bytes_out_2;
+wire [7:0] mpram_fifo;
+wire [0:0] globals_FalseZ_1_out_0_a2_1_1;
+wire [7:0] globals_Data_out;
+wire [2:2] bitindex_i_i_i_n;
+wire N_335_i ;
+wire binopout_3_NE ;
+wire VCC ;
+wire N_335_i_0 ;
+wire un1_globals_truez_2_i ;
+wire GND ;
+//@1:1
+  assign VCC = 1'b1;
+//@1:1
+  assign GND = 1'b0;
+// @7:190
+  stratix_lcell globals_bytes_out_3_0_7_ (
+	.regout(globals_bytes_out_3_0[7]),
+	.clk(ReceiverClock),
+	.dataa(globals_DataReady_out_0),
+	.datab(N_335_i),
+	.datac(binopout_3_NE),
+	.aclr(reset)
+);
+defparam globals_bytes_out_3_0_7_.operation_mode="normal";
+defparam globals_bytes_out_3_0_7_.output_mode="reg_only";
+defparam globals_bytes_out_3_0_7_.lut_mask="0404";
+defparam globals_bytes_out_3_0_7_.synch_mode="off";
+defparam globals_bytes_out_3_0_7_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_0_0_7_ (
+	.regout(globals_bytes_out_0_0[7]),
+	.clk(ReceiverClock),
+	.datad(VCC),
+	.aclr(reset)
+);
+defparam globals_bytes_out_0_0_7_.operation_mode="normal";
+defparam globals_bytes_out_0_0_7_.output_mode="reg_only";
+defparam globals_bytes_out_0_0_7_.lut_mask="ff00";
+defparam globals_bytes_out_0_0_7_.synch_mode="off";
+defparam globals_bytes_out_0_0_7_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_3_7_ (
+	.regout(globals_bytes_out_3[7]),
+	.clk(ReceiverClock),
+	.datab(globals_DataReady_out_0),
+	.datac(N_335_i),
+	.datad(binopout_3_NE),
+	.aclr(reset)
+);
+defparam globals_bytes_out_3_7_.operation_mode="normal";
+defparam globals_bytes_out_3_7_.output_mode="reg_only";
+defparam globals_bytes_out_3_7_.lut_mask="0030";
+defparam globals_bytes_out_3_7_.synch_mode="off";
+defparam globals_bytes_out_3_7_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_7_ (
+	.regout(globals_bytes_out_2[7]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[7]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_7_.operation_mode="normal";
+defparam globals_bytes_out_2_7_.output_mode="reg_only";
+defparam globals_bytes_out_2_7_.lut_mask="f000";
+defparam globals_bytes_out_2_7_.synch_mode="off";
+defparam globals_bytes_out_2_7_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_6_ (
+	.regout(globals_bytes_out_2[6]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[6]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_6_.operation_mode="normal";
+defparam globals_bytes_out_2_6_.output_mode="reg_only";
+defparam globals_bytes_out_2_6_.lut_mask="f000";
+defparam globals_bytes_out_2_6_.synch_mode="off";
+defparam globals_bytes_out_2_6_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_5_ (
+	.regout(globals_bytes_out_2[5]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[5]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_5_.operation_mode="normal";
+defparam globals_bytes_out_2_5_.output_mode="reg_only";
+defparam globals_bytes_out_2_5_.lut_mask="f000";
+defparam globals_bytes_out_2_5_.synch_mode="off";
+defparam globals_bytes_out_2_5_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_4_ (
+	.regout(globals_bytes_out_2[4]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[4]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_4_.operation_mode="normal";
+defparam globals_bytes_out_2_4_.output_mode="reg_only";
+defparam globals_bytes_out_2_4_.lut_mask="f000";
+defparam globals_bytes_out_2_4_.synch_mode="off";
+defparam globals_bytes_out_2_4_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_3_ (
+	.regout(globals_bytes_out_2[3]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[3]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_3_.operation_mode="normal";
+defparam globals_bytes_out_2_3_.output_mode="reg_only";
+defparam globals_bytes_out_2_3_.lut_mask="f000";
+defparam globals_bytes_out_2_3_.synch_mode="off";
+defparam globals_bytes_out_2_3_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_2_ (
+	.regout(globals_bytes_out_2[2]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[2]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_2_.operation_mode="normal";
+defparam globals_bytes_out_2_2_.output_mode="reg_only";
+defparam globals_bytes_out_2_2_.lut_mask="f000";
+defparam globals_bytes_out_2_2_.synch_mode="off";
+defparam globals_bytes_out_2_2_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_1_ (
+	.regout(globals_bytes_out_2[1]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[1]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_1_.operation_mode="normal";
+defparam globals_bytes_out_2_1_.output_mode="reg_only";
+defparam globals_bytes_out_2_1_.lut_mask="f000";
+defparam globals_bytes_out_2_1_.synch_mode="off";
+defparam globals_bytes_out_2_1_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_2_0_ (
+	.regout(globals_bytes_out_2[0]),
+	.clk(ReceiverClock),
+	.datac(globals_bytes_out_0_0[7]),
+	.datad(mpram_fifo[0]),
+	.aclr(reset),
+	.ena(globals_bytes_out_3_0[7])
+);
+defparam globals_bytes_out_2_0_.operation_mode="normal";
+defparam globals_bytes_out_2_0_.output_mode="reg_only";
+defparam globals_bytes_out_2_0_.lut_mask="f000";
+defparam globals_bytes_out_2_0_.synch_mode="off";
+defparam globals_bytes_out_2_0_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_11_ (
+	.regout(p_7),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_7),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_11_.operation_mode="normal";
+defparam p_11_.output_mode="reg_only";
+defparam p_11_.lut_mask="ff00";
+defparam p_11_.synch_mode="off";
+defparam p_11_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_10_ (
+	.regout(p_6),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_6),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_10_.operation_mode="normal";
+defparam p_10_.output_mode="reg_only";
+defparam p_10_.lut_mask="ff00";
+defparam p_10_.synch_mode="off";
+defparam p_10_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_9_ (
+	.regout(p_5),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_5),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_9_.operation_mode="normal";
+defparam p_9_.output_mode="reg_only";
+defparam p_9_.lut_mask="ff00";
+defparam p_9_.synch_mode="off";
+defparam p_9_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_8_ (
+	.regout(p_4),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_4),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_8_.operation_mode="normal";
+defparam p_8_.output_mode="reg_only";
+defparam p_8_.lut_mask="ff00";
+defparam p_8_.synch_mode="off";
+defparam p_8_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_7_ (
+	.regout(p_3),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_3),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_7_.operation_mode="normal";
+defparam p_7_.output_mode="reg_only";
+defparam p_7_.lut_mask="ff00";
+defparam p_7_.synch_mode="off";
+defparam p_7_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_6_ (
+	.regout(p_2),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_2),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_6_.operation_mode="normal";
+defparam p_6_.output_mode="reg_only";
+defparam p_6_.lut_mask="ff00";
+defparam p_6_.synch_mode="off";
+defparam p_6_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_5_ (
+	.regout(p_1),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_1),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_5_.operation_mode="normal";
+defparam p_5_.output_mode="reg_only";
+defparam p_5_.lut_mask="ff00";
+defparam p_5_.synch_mode="off";
+defparam p_5_.sum_lutc_input="datac";
+// @7:162
+  stratix_lcell p_4_ (
+	.regout(p_0),
+	.clk(ReceiverClock),
+	.datad(globals_binopout_0),
+	.aclr(reset),
+	.ena(N_335_i_0)
+);
+defparam p_4_.operation_mode="normal";
+defparam p_4_.output_mode="reg_only";
+defparam p_4_.lut_mask="ff00";
+defparam p_4_.synch_mode="off";
+defparam p_4_.sum_lutc_input="datac";
+// @7:174
+  stratix_lcell globals_DataReady_out_0_ (
+	.regout(globals_DataReady_out_0),
+	.clk(ReceiverClock),
+	.dataa(globals_DataReady_out_0),
+	.datab(I_22_a),
+	.datac(I_24_1),
+	.aclr(reset),
+	.ena(un1_globals_truez_2_i)
+);
+defparam globals_DataReady_out_0_.operation_mode="normal";
+defparam globals_DataReady_out_0_.output_mode="reg_only";
+defparam globals_DataReady_out_0_.lut_mask="4545";
+defparam globals_DataReady_out_0_.synch_mode="off";
+defparam globals_DataReady_out_0_.sum_lutc_input="datac";
+// @7:182
+  stratix_lcell un1_globals_truez_2_i_Z (
+	.combout(un1_globals_truez_2_i),
+	.dataa(globals_DataReady_out_0),
+	.datab(outp),
+	.datac(N_335_i),
+	.datad(binopout_3_NE)
+);
+defparam un1_globals_truez_2_i_Z.operation_mode="normal";
+defparam un1_globals_truez_2_i_Z.output_mode="comb_only";
+defparam un1_globals_truez_2_i_Z.lut_mask="f0d0";
+defparam un1_globals_truez_2_i_Z.synch_mode="off";
+defparam un1_globals_truez_2_i_Z.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_7_ (
+	.combout(globals_bytes_out_1_7),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[7]),
+	.datad(mpram_fifo[7])
+);
+defparam globals_bytes_out_1_7_.operation_mode="normal";
+defparam globals_bytes_out_1_7_.output_mode="comb_only";
+defparam globals_bytes_out_1_7_.lut_mask="b830";
+defparam globals_bytes_out_1_7_.synch_mode="off";
+defparam globals_bytes_out_1_7_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_6_ (
+	.combout(globals_bytes_out_1_6),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[6]),
+	.datad(mpram_fifo[6])
+);
+defparam globals_bytes_out_1_6_.operation_mode="normal";
+defparam globals_bytes_out_1_6_.output_mode="comb_only";
+defparam globals_bytes_out_1_6_.lut_mask="b830";
+defparam globals_bytes_out_1_6_.synch_mode="off";
+defparam globals_bytes_out_1_6_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_5_ (
+	.combout(globals_bytes_out_1_5),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[5]),
+	.datad(mpram_fifo[5])
+);
+defparam globals_bytes_out_1_5_.operation_mode="normal";
+defparam globals_bytes_out_1_5_.output_mode="comb_only";
+defparam globals_bytes_out_1_5_.lut_mask="b830";
+defparam globals_bytes_out_1_5_.synch_mode="off";
+defparam globals_bytes_out_1_5_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_4_ (
+	.combout(globals_bytes_out_1_4),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[4]),
+	.datad(mpram_fifo[4])
+);
+defparam globals_bytes_out_1_4_.operation_mode="normal";
+defparam globals_bytes_out_1_4_.output_mode="comb_only";
+defparam globals_bytes_out_1_4_.lut_mask="b830";
+defparam globals_bytes_out_1_4_.synch_mode="off";
+defparam globals_bytes_out_1_4_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_3_ (
+	.combout(globals_bytes_out_1_3),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[3]),
+	.datad(mpram_fifo[3])
+);
+defparam globals_bytes_out_1_3_.operation_mode="normal";
+defparam globals_bytes_out_1_3_.output_mode="comb_only";
+defparam globals_bytes_out_1_3_.lut_mask="b830";
+defparam globals_bytes_out_1_3_.synch_mode="off";
+defparam globals_bytes_out_1_3_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_2_ (
+	.combout(globals_bytes_out_1_2),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[2]),
+	.datad(mpram_fifo[2])
+);
+defparam globals_bytes_out_1_2_.operation_mode="normal";
+defparam globals_bytes_out_1_2_.output_mode="comb_only";
+defparam globals_bytes_out_1_2_.lut_mask="b830";
+defparam globals_bytes_out_1_2_.synch_mode="off";
+defparam globals_bytes_out_1_2_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_1_ (
+	.combout(globals_bytes_out_1_1),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[1]),
+	.datad(mpram_fifo[1])
+);
+defparam globals_bytes_out_1_1_.operation_mode="normal";
+defparam globals_bytes_out_1_1_.output_mode="comb_only";
+defparam globals_bytes_out_1_1_.lut_mask="b830";
+defparam globals_bytes_out_1_1_.synch_mode="off";
+defparam globals_bytes_out_1_1_.sum_lutc_input="datac";
+// @7:190
+  stratix_lcell globals_bytes_out_1_0_ (
+	.combout(globals_bytes_out_1_0),
+	.dataa(globals_bytes_out_0_0[7]),
+	.datab(globals_bytes_out_3[7]),
+	.datac(globals_bytes_out_2[0]),
+	.datad(mpram_fifo[0])
+);
+defparam globals_bytes_out_1_0_.operation_mode="normal";
+defparam globals_bytes_out_1_0_.output_mode="comb_only";
+defparam globals_bytes_out_1_0_.lut_mask="b830";
+defparam globals_bytes_out_1_0_.synch_mode="off";
+defparam globals_bytes_out_1_0_.sum_lutc_input="datac";
+// @7:110
+  altsyncram mpram_fifo_I_1 (
+	.wren_a(globals_FalseZ_1_out_0_a2_1_1[0]),
+	.wren_b(GND),
+	.data_a({globals_Data_out[7], globals_Data_out[6], globals_Data_out[5], 
+   globals_Data_out[4], globals_Data_out[3], globals_Data_out[2], globals_Data_out[1], 
+   globals_Data_out[0]}),
+	.address_a({globals_WrPtr_out_3, globals_WrPtr_out_2, globals_WrPtr_out_1, 
+   globals_WrPtr_out_0}),
+	.address_b({globals_RdPtr_outf_3, globals_RdPtr_outf_2, globals_RdPtr_outf_1, 
+   globals_RdPtr_outf_0}),
+	.clock0(ReceiverClock),
+	.clock1(ReceiverClock),
+	.clocken0(bitindex_i_i_i_n[2]),
+	.clocken1(VCC),
+	.q_b({mpram_fifo[7], mpram_fifo[6], mpram_fifo[5], mpram_fifo[4], mpram_fifo[3], 
+   mpram_fifo[2], mpram_fifo[1], mpram_fifo[0]})
+);
+defparam mpram_fifo_I_1.lpm_type =  "altsyncram";
+defparam mpram_fifo_I_1.operation_mode =  "DUAL_PORT";
+defparam mpram_fifo_I_1.width_a =  8;
+defparam mpram_fifo_I_1.widthad_a =  4;
+defparam mpram_fifo_I_1.numwords_a =  16;
+defparam mpram_fifo_I_1.outdata_reg_a =  "UNREGISTERED";
+defparam mpram_fifo_I_1.address_aclr_a =  "UNUSED";
+defparam mpram_fifo_I_1.outdata_aclr_a =  "UNUSED";
+defparam mpram_fifo_I_1.indata_aclr_a =  "UNUSED";
+defparam mpram_fifo_I_1.wrcontrol_aclr_a =  "UNUSED";
+defparam mpram_fifo_I_1.width_byteena_a =  1;
+defparam mpram_fifo_I_1.width_b =  8;
+defparam mpram_fifo_I_1.widthad_b =  4;
+defparam mpram_fifo_I_1.numwords_b =  16;
+defparam mpram_fifo_I_1.rdcontrol_reg_b =  "CLOCK1";
+defparam mpram_fifo_I_1.address_reg_b =  "CLOCK1";
+defparam mpram_fifo_I_1.outdata_reg_b =  "UNREGISTERED";
+defparam mpram_fifo_I_1.rdcontrol_aclr_b =  "UNUSED";
+defparam mpram_fifo_I_1.indata_reg_b =  "UNUSED";
+defparam mpram_fifo_I_1.wrcontrol_wraddress_reg_b =  "CLOCK1";
+defparam mpram_fifo_I_1.indata_aclr_b =  "UNUSED";
+defparam mpram_fifo_I_1.wrcontrol_aclr_b =  "UNUSED";
+defparam mpram_fifo_I_1.address_aclr_b =  "UNUSED";
+defparam mpram_fifo_I_1.width_byteena_b =  1;
+defparam mpram_fifo_I_1.byte_size =  9;
+defparam mpram_fifo_I_1.read_during_write_mode_mixed_ports =  "OLD_DATA";
+defparam mpram_fifo_I_1.ram_block_type =  "AUTO";
+defparam mpram_fifo_I_1.init_file =  "UNUSED";
+// @7:223
+  receiver_hcc_main Instance0 (
+	.globals_bytes_out_3_0(globals_bytes_out_3[7]),
+	.globals_bytes_out_0_0_0(globals_bytes_out_0_0[7]),
+	.globals_DataReady_out_0(globals_DataReady_out_0),
+	.globals_Data_out_0(globals_Data_out[0]),
+	.globals_Data_out_1(globals_Data_out[1]),
+	.globals_Data_out_2(globals_Data_out[2]),
+	.globals_Data_out_3(globals_Data_out[3]),
+	.globals_Data_out_4(globals_Data_out[4]),
+	.globals_Data_out_5(globals_Data_out[5]),
+	.globals_Data_out_6(globals_Data_out[6]),
+	.globals_Data_out_7(globals_Data_out[7]),
+	.globals_WrPtr_out_3(globals_WrPtr_out_3),
+	.globals_WrPtr_out_2(globals_WrPtr_out_2),
+	.globals_WrPtr_out_1(globals_WrPtr_out_1),
+	.globals_WrPtr_out_0(globals_WrPtr_out_0),
+	.globals_RdPtr_outf_2(globals_RdPtr_outf_2),
+	.globals_RdPtr_outf_1(globals_RdPtr_outf_1),
+	.globals_RdPtr_outf_0(globals_RdPtr_outf_0),
+	.globals_RdPtr_outf_3(globals_RdPtr_outf_3),
+	.globals_FalseZ_1_out_0_a2_1_1_0(globals_FalseZ_1_out_0_a2_1_1[0]),
+	.bitindex_i_i_i_n_0(bitindex_i_i_i_n[2]),
+	.I_24_1(I_24_1),
+	.binopout_3_NE(binopout_3_NE),
+	.outp(outp),
+	.DataIn(DataIn),
+	.N_335_i(N_335_i),
+	.reset(reset),
+	.ReceiverClock(ReceiverClock),
+	.N_335_i_0(N_335_i_0)
+);
+endmodule /* receiver_hcc */
+
+module receiver_top (
+  globals_DataReady_out_0,
+  p_7,
+  p_6,
+  p_5,
+  p_4,
+  p_3,
+  p_2,
+  p_1,
+  p_0,
+  globals_binopout_7,
+  globals_binopout_6,
+  globals_binopout_5,
+  globals_binopout_4,
+  globals_binopout_3,
+  globals_binopout_2,
+  globals_binopout_1,
+  globals_binopout_0,
+  globals_bytes_out_1_7,
+  globals_bytes_out_1_6,
+  globals_bytes_out_1_5,
+  globals_bytes_out_1_4,
+  globals_bytes_out_1_3,
+  globals_bytes_out_1_2,
+  globals_bytes_out_1_1,
+  globals_bytes_out_1_0,
+  globals_WrPtr_out_0,
+  globals_WrPtr_out_1,
+  globals_WrPtr_out_2,
+  globals_WrPtr_out_3,
+  globals_RdPtr_outf_0,
+  globals_RdPtr_outf_1,
+  globals_RdPtr_outf_2,
+  globals_RdPtr_outf_3,
+  ReceiverClock,
+  reset,
+  I_22_a,
+  I_24_1,
+  outp,
+  DataIn
+);
+output globals_DataReady_out_0 ;
+output p_7 ;
+output p_6 ;
+output p_5 ;
+output p_4 ;
+output p_3 ;
+output p_2 ;
+output p_1 ;
+output p_0 ;
+input globals_binopout_7 ;
+input globals_binopout_6 ;
+input globals_binopout_5 ;
+input globals_binopout_4 ;
+input globals_binopout_3 ;
+input globals_binopout_2 ;
+input globals_binopout_1 ;
+input globals_binopout_0 ;
+output globals_bytes_out_1_7 ;
+output globals_bytes_out_1_6 ;
+output globals_bytes_out_1_5 ;
+output globals_bytes_out_1_4 ;
+output globals_bytes_out_1_3 ;
+output globals_bytes_out_1_2 ;
+output globals_bytes_out_1_1 ;
+output globals_bytes_out_1_0 ;
+output globals_WrPtr_out_0 ;
+output globals_WrPtr_out_1 ;
+output globals_WrPtr_out_2 ;
+output globals_WrPtr_out_3 ;
+output globals_RdPtr_outf_0 ;
+output globals_RdPtr_outf_1 ;
+output globals_RdPtr_outf_2 ;
+output globals_RdPtr_outf_3 ;
+input ReceiverClock ;
+input reset ;
+input I_22_a ;
+input I_24_1 ;
+input outp ;
+input DataIn ;
+wire globals_DataReady_out_0 ;
+wire p_7 ;
+wire p_6 ;
+wire p_5 ;
+wire p_4 ;
+wire p_3 ;
+wire p_2 ;
+wire p_1 ;
+wire p_0 ;
+wire globals_binopout_7 ;
+wire globals_binopout_6 ;
+wire globals_binopout_5 ;
+wire globals_binopout_4 ;
+wire globals_binopout_3 ;
+wire globals_binopout_2 ;
+wire globals_binopout_1 ;
+wire globals_binopout_0 ;
+wire globals_bytes_out_1_7 ;
+wire globals_bytes_out_1_6 ;
+wire globals_bytes_out_1_5 ;
+wire globals_bytes_out_1_4 ;
+wire globals_bytes_out_1_3 ;
+wire globals_bytes_out_1_2 ;
+wire globals_bytes_out_1_1 ;
+wire globals_bytes_out_1_0 ;
+wire globals_WrPtr_out_0 ;
+wire globals_WrPtr_out_1 ;
+wire globals_WrPtr_out_2 ;
+wire globals_WrPtr_out_3 ;
+wire globals_RdPtr_outf_0 ;
+wire globals_RdPtr_outf_1 ;
+wire globals_RdPtr_outf_2 ;
+wire globals_RdPtr_outf_3 ;
+wire ReceiverClock ;
+wire reset ;
+wire I_22_a ;
+wire I_24_1 ;
+wire outp ;
+wire DataIn ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @8:87
+  receiver_hcc Instance0 (
+	.globals_RdPtr_outf_3(globals_RdPtr_outf_3),
+	.globals_RdPtr_outf_2(globals_RdPtr_outf_2),
+	.globals_RdPtr_outf_1(globals_RdPtr_outf_1),
+	.globals_RdPtr_outf_0(globals_RdPtr_outf_0),
+	.globals_WrPtr_out_3(globals_WrPtr_out_3),
+	.globals_WrPtr_out_2(globals_WrPtr_out_2),
+	.globals_WrPtr_out_1(globals_WrPtr_out_1),
+	.globals_WrPtr_out_0(globals_WrPtr_out_0),
+	.globals_bytes_out_1_0(globals_bytes_out_1_0),
+	.globals_bytes_out_1_1(globals_bytes_out_1_1),
+	.globals_bytes_out_1_2(globals_bytes_out_1_2),
+	.globals_bytes_out_1_3(globals_bytes_out_1_3),
+	.globals_bytes_out_1_4(globals_bytes_out_1_4),
+	.globals_bytes_out_1_5(globals_bytes_out_1_5),
+	.globals_bytes_out_1_6(globals_bytes_out_1_6),
+	.globals_bytes_out_1_7(globals_bytes_out_1_7),
+	.globals_binopout_0(globals_binopout_0),
+	.globals_binopout_1(globals_binopout_1),
+	.globals_binopout_2(globals_binopout_2),
+	.globals_binopout_3(globals_binopout_3),
+	.globals_binopout_4(globals_binopout_4),
+	.globals_binopout_5(globals_binopout_5),
+	.globals_binopout_6(globals_binopout_6),
+	.globals_binopout_7(globals_binopout_7),
+	.p_0(p_0),
+	.p_1(p_1),
+	.p_2(p_2),
+	.p_3(p_3),
+	.p_4(p_4),
+	.p_5(p_5),
+	.p_6(p_6),
+	.p_7(p_7),
+	.globals_DataReady_out_0(globals_DataReady_out_0),
+	.DataIn(DataIn),
+	.outp(outp),
+	.I_24_1(I_24_1),
+	.I_22_a(I_22_a),
+	.reset(reset),
+	.ReceiverClock(ReceiverClock)
+);
+endmodule /* receiver_top */
+
+module synchronizer (
+  Ack,
+  reset,
+  ReceiverClock,
+  outp
+);
+input Ack ;
+input reset ;
+input ReceiverClock ;
+output outp ;
+wire Ack ;
+wire reset ;
+wire ReceiverClock ;
+wire outp ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell outp_0 (
+	.regout(outp),
+	.clk(ReceiverClock),
+	.datad(int),
+	.aclr(reset)
+);
+defparam outp_0.operation_mode="normal";
+defparam outp_0.output_mode="reg_only";
+defparam outp_0.lut_mask="ff00";
+defparam outp_0.synch_mode="off";
+defparam outp_0.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell int_Z (
+	.regout(int),
+	.clk(ReceiverClock),
+	.datad(Ack),
+	.aclr(reset)
+);
+defparam int_Z.operation_mode="normal";
+defparam int_Z.output_mode="reg_only";
+defparam int_Z.lut_mask="ff00";
+defparam int_Z.synch_mode="off";
+defparam int_Z.sum_lutc_input="datac";
+endmodule /* synchronizer */
+
+module synchronizer_1 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_1 */
+
+module synchronizer_2 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_2 */
+
+module synchronizer_3 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_3 */
+
+module synchronizer_4 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_4 */
+
+module synchronizer_5 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_5 */
+
+module synchronizer_6 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_6 */
+
+module synchronizer_7 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_7 */
+
+module synchronizer_8 (
+  p_0,
+  reset,
+  FilterClock,
+  int
+);
+input p_0 ;
+input reset ;
+input FilterClock ;
+output int ;
+wire p_0 ;
+wire reset ;
+wire FilterClock ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell int_0 (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(p_0),
+	.aclr(reset)
+);
+defparam int_0.operation_mode="normal";
+defparam int_0.output_mode="reg_only";
+defparam int_0.lut_mask="ff00";
+defparam int_0.synch_mode="off";
+defparam int_0.sum_lutc_input="datac";
+endmodule /* synchronizer_8 */
+
+module synchronizer_9 (
+  globals_DataReady_out_0,
+  reset,
+  FilterClock,
+  outp
+);
+input globals_DataReady_out_0 ;
+input reset ;
+input FilterClock ;
+output outp ;
+wire globals_DataReady_out_0 ;
+wire reset ;
+wire FilterClock ;
+wire outp ;
+wire int ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell outp_0 (
+	.regout(outp),
+	.clk(FilterClock),
+	.datad(int),
+	.aclr(reset)
+);
+defparam outp_0.operation_mode="normal";
+defparam outp_0.output_mode="reg_only";
+defparam outp_0.lut_mask="ff00";
+defparam outp_0.synch_mode="off";
+defparam outp_0.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell int_Z (
+	.regout(int),
+	.clk(FilterClock),
+	.datad(globals_DataReady_out_0),
+	.aclr(reset)
+);
+defparam int_Z.operation_mode="normal";
+defparam int_Z.output_mode="reg_only";
+defparam int_Z.lut_mask="ff00";
+defparam int_Z.synch_mode="off";
+defparam int_Z.sum_lutc_input="datac";
+endmodule /* synchronizer_9 */
+
+module top (
+  DataIn,
+  FilterClock,
+  ReceiverClock,
+  reset,
+  Volume,
+  DataOut
+);
+input DataIn ;
+input FilterClock ;
+input ReceiverClock ;
+input reset ;
+input [3:0] Volume ;
+output [7:0] DataOut ;
+wire DataIn ;
+wire FilterClock ;
+wire ReceiverClock ;
+wire reset ;
+wire [7:0] regf;
+wire [3:0] ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf;
+wire [3:0] ReceiverInstance_Instance0_Instance0_globals_WrPtr_out;
+wire [3:0] Instance0_un1_globals_bytes_out_mulonly_71_60__globals_binopout;
+wire [11:4] ReceiverInstance_Instance0_globals_binopout;
+wire [7:0] ReceiverInstance_Instance0_globals_bytes_out_1;
+wire [0:0] ReceiverInstance_Instance0_globals_DataReady_out;
+wire [11:4] ReceiverInstance_Instance0_p;
+wire VCC ;
+wire GND ;
+wire data_synchronizer_ARRAY0_int ;
+wire data_synchronizer_ARRAY1_int ;
+wire data_synchronizer_ARRAY2_int ;
+wire data_synchronizer_ARRAY3_int ;
+wire data_synchronizer_ARRAY4_int ;
+wire data_synchronizer_ARRAY5_int ;
+wire data_synchronizer_ARRAY6_int ;
+wire data_synchronizer_ARRAY7_int ;
+wire I_22_a ;
+wire I_24_1 ;
+wire rdy_synchronizer_outp ;
+wire FilterInstance_Ack ;
+wire ack_synchronizer_outp ;
+//@1:1
+  assign VCC = 1'b1;
+//@1:1
+  assign GND = 1'b0;
+// @9:20
+  stratix_lcell regf_7_ (
+	.regout(regf[7]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY0_int),
+	.aclr(reset)
+);
+defparam regf_7_.operation_mode="normal";
+defparam regf_7_.output_mode="reg_only";
+defparam regf_7_.lut_mask="ff00";
+defparam regf_7_.synch_mode="off";
+defparam regf_7_.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell regf_6_ (
+	.regout(regf[6]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY1_int),
+	.aclr(reset)
+);
+defparam regf_6_.operation_mode="normal";
+defparam regf_6_.output_mode="reg_only";
+defparam regf_6_.lut_mask="ff00";
+defparam regf_6_.synch_mode="off";
+defparam regf_6_.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell regf_5_ (
+	.regout(regf[5]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY2_int),
+	.aclr(reset)
+);
+defparam regf_5_.operation_mode="normal";
+defparam regf_5_.output_mode="reg_only";
+defparam regf_5_.lut_mask="ff00";
+defparam regf_5_.synch_mode="off";
+defparam regf_5_.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell regf_4_ (
+	.regout(regf[4]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY3_int),
+	.aclr(reset)
+);
+defparam regf_4_.operation_mode="normal";
+defparam regf_4_.output_mode="reg_only";
+defparam regf_4_.lut_mask="ff00";
+defparam regf_4_.synch_mode="off";
+defparam regf_4_.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell regf_3_ (
+	.regout(regf[3]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY4_int),
+	.aclr(reset)
+);
+defparam regf_3_.operation_mode="normal";
+defparam regf_3_.output_mode="reg_only";
+defparam regf_3_.lut_mask="ff00";
+defparam regf_3_.synch_mode="off";
+defparam regf_3_.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell regf_2_ (
+	.regout(regf[2]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY5_int),
+	.aclr(reset)
+);
+defparam regf_2_.operation_mode="normal";
+defparam regf_2_.output_mode="reg_only";
+defparam regf_2_.lut_mask="ff00";
+defparam regf_2_.synch_mode="off";
+defparam regf_2_.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell regf_1_ (
+	.regout(regf[1]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY6_int),
+	.aclr(reset)
+);
+defparam regf_1_.operation_mode="normal";
+defparam regf_1_.output_mode="reg_only";
+defparam regf_1_.lut_mask="ff00";
+defparam regf_1_.synch_mode="off";
+defparam regf_1_.sum_lutc_input="datac";
+// @9:20
+  stratix_lcell regf_0_ (
+	.regout(regf[0]),
+	.clk(FilterClock),
+	.datad(data_synchronizer_ARRAY7_int),
+	.aclr(reset)
+);
+defparam regf_0_.operation_mode="normal";
+defparam regf_0_.output_mode="reg_only";
+defparam regf_0_.lut_mask="ff00";
+defparam regf_0_.synch_mode="off";
+defparam regf_0_.sum_lutc_input="datac";
+// @2:201
+  stratix_lcell I_22_a_Z (
+	.combout(I_22_a),
+	.dataa(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[0]),
+	.datab(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[0]),
+	.datac(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[1]),
+	.datad(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[1])
+);
+defparam I_22_a_Z.operation_mode="normal";
+defparam I_22_a_Z.output_mode="comb_only";
+defparam I_22_a_Z.lut_mask="6ff6";
+defparam I_22_a_Z.synch_mode="off";
+defparam I_22_a_Z.sum_lutc_input="datac";
+// @2:201
+  stratix_lcell I_24_1_Z (
+	.combout(I_24_1),
+	.dataa(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[3]),
+	.datab(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[3]),
+	.datac(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[2]),
+	.datad(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[2])
+);
+defparam I_24_1_Z.operation_mode="normal";
+defparam I_24_1_Z.output_mode="comb_only";
+defparam I_24_1_Z.lut_mask="9009";
+defparam I_24_1_Z.synch_mode="off";
+defparam I_24_1_Z.sum_lutc_input="datac";
+// @2:201
+  lpm_mult Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_ (
+	.result({ReceiverInstance_Instance0_globals_binopout[11], ReceiverInstance_Instance0_globals_binopout[10], 
+   ReceiverInstance_Instance0_globals_binopout[9], ReceiverInstance_Instance0_globals_binopout[8], 
+   ReceiverInstance_Instance0_globals_binopout[7], ReceiverInstance_Instance0_globals_binopout[6], 
+   ReceiverInstance_Instance0_globals_binopout[5], ReceiverInstance_Instance0_globals_binopout[4], 
+   Instance0_un1_globals_bytes_out_mulonly_71_60__globals_binopout[3], 
+   Instance0_un1_globals_bytes_out_mulonly_71_60__globals_binopout[2], 
+   Instance0_un1_globals_bytes_out_mulonly_71_60__globals_binopout[1], 
+   Instance0_un1_globals_bytes_out_mulonly_71_60__globals_binopout[0]}),
+	.dataa({ReceiverInstance_Instance0_globals_bytes_out_1[7], ReceiverInstance_Instance0_globals_bytes_out_1[6], 
+   ReceiverInstance_Instance0_globals_bytes_out_1[5], ReceiverInstance_Instance0_globals_bytes_out_1[4], 
+   ReceiverInstance_Instance0_globals_bytes_out_1[3], ReceiverInstance_Instance0_globals_bytes_out_1[2], 
+   ReceiverInstance_Instance0_globals_bytes_out_1[1], ReceiverInstance_Instance0_globals_bytes_out_1[0]}),
+	.datab({Volume[3], Volume[2], Volume[1], Volume[0]})
+);
+defparam Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_.lpm_widths =  1;
+defparam Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_.lpm_representation =  "UNSIGNED";
+defparam Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_.lpm_pipeline =  0;
+defparam Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_.lpm_hint =  "dedicated_multiplier_circuitry=yes";
+defparam Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_.lpm_widthb =  4;
+defparam Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_.lpm_widtha =  8;
+defparam Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_.lpm_widthp =  12;
+// @11:83
+  Filter FilterInstance (
+	.regf_0(regf[0]),
+	.regf_1(regf[1]),
+	.regf_2(regf[2]),
+	.regf_3(regf[3]),
+	.regf_4(regf[4]),
+	.regf_5(regf[5]),
+	.regf_6(regf[6]),
+	.regf_7(regf[7]),
+	.current_0(DataOut[0]),
+	.current_1(DataOut[1]),
+	.current_2(DataOut[2]),
+	.current_3(DataOut[3]),
+	.current_4(DataOut[4]),
+	.current_5(DataOut[5]),
+	.current_6(DataOut[6]),
+	.current_7(DataOut[7]),
+	.outp(rdy_synchronizer_outp),
+	.Ack(FilterInstance_Ack),
+	.reset(reset),
+	.FilterClock(FilterClock)
+);
+// @11:93
+  receiver_top ReceiverInstance (
+	.globals_DataReady_out_0(ReceiverInstance_Instance0_globals_DataReady_out[0]),
+	.p_7(ReceiverInstance_Instance0_p[11]),
+	.p_6(ReceiverInstance_Instance0_p[10]),
+	.p_5(ReceiverInstance_Instance0_p[9]),
+	.p_4(ReceiverInstance_Instance0_p[8]),
+	.p_3(ReceiverInstance_Instance0_p[7]),
+	.p_2(ReceiverInstance_Instance0_p[6]),
+	.p_1(ReceiverInstance_Instance0_p[5]),
+	.p_0(ReceiverInstance_Instance0_p[4]),
+	.globals_binopout_7(ReceiverInstance_Instance0_globals_binopout[11]),
+	.globals_binopout_6(ReceiverInstance_Instance0_globals_binopout[10]),
+	.globals_binopout_5(ReceiverInstance_Instance0_globals_binopout[9]),
+	.globals_binopout_4(ReceiverInstance_Instance0_globals_binopout[8]),
+	.globals_binopout_3(ReceiverInstance_Instance0_globals_binopout[7]),
+	.globals_binopout_2(ReceiverInstance_Instance0_globals_binopout[6]),
+	.globals_binopout_1(ReceiverInstance_Instance0_globals_binopout[5]),
+	.globals_binopout_0(ReceiverInstance_Instance0_globals_binopout[4]),
+	.globals_bytes_out_1_7(ReceiverInstance_Instance0_globals_bytes_out_1[7]),
+	.globals_bytes_out_1_6(ReceiverInstance_Instance0_globals_bytes_out_1[6]),
+	.globals_bytes_out_1_5(ReceiverInstance_Instance0_globals_bytes_out_1[5]),
+	.globals_bytes_out_1_4(ReceiverInstance_Instance0_globals_bytes_out_1[4]),
+	.globals_bytes_out_1_3(ReceiverInstance_Instance0_globals_bytes_out_1[3]),
+	.globals_bytes_out_1_2(ReceiverInstance_Instance0_globals_bytes_out_1[2]),
+	.globals_bytes_out_1_1(ReceiverInstance_Instance0_globals_bytes_out_1[1]),
+	.globals_bytes_out_1_0(ReceiverInstance_Instance0_globals_bytes_out_1[0]),
+	.globals_WrPtr_out_0(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[0]),
+	.globals_WrPtr_out_1(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[1]),
+	.globals_WrPtr_out_2(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[2]),
+	.globals_WrPtr_out_3(ReceiverInstance_Instance0_Instance0_globals_WrPtr_out[3]),
+	.globals_RdPtr_outf_0(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[0]),
+	.globals_RdPtr_outf_1(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[1]),
+	.globals_RdPtr_outf_2(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[2]),
+	.globals_RdPtr_outf_3(ReceiverInstance_Instance0_Instance0_globals_RdPtr_outf[3]),
+	.ReceiverClock(ReceiverClock),
+	.reset(reset),
+	.I_22_a(I_22_a),
+	.I_24_1(I_24_1),
+	.outp(ack_synchronizer_outp),
+	.DataIn(DataIn)
+);
+// @11:104
+  synchronizer ack_synchronizer (
+	.Ack(FilterInstance_Ack),
+	.reset(reset),
+	.ReceiverClock(ReceiverClock),
+	.outp(ack_synchronizer_outp)
+);
+// @11:112
+  synchronizer_1 data_synchronizer_ARRAY0 (
+	.p_0(ReceiverInstance_Instance0_p[11]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY0_int)
+);
+// @11:120
+  synchronizer_2 data_synchronizer_ARRAY1 (
+	.p_0(ReceiverInstance_Instance0_p[10]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY1_int)
+);
+// @11:128
+  synchronizer_3 data_synchronizer_ARRAY2 (
+	.p_0(ReceiverInstance_Instance0_p[9]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY2_int)
+);
+// @11:136
+  synchronizer_4 data_synchronizer_ARRAY3 (
+	.p_0(ReceiverInstance_Instance0_p[8]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY3_int)
+);
+// @11:144
+  synchronizer_5 data_synchronizer_ARRAY4 (
+	.p_0(ReceiverInstance_Instance0_p[7]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY4_int)
+);
+// @11:152
+  synchronizer_6 data_synchronizer_ARRAY5 (
+	.p_0(ReceiverInstance_Instance0_p[6]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY5_int)
+);
+// @11:160
+  synchronizer_7 data_synchronizer_ARRAY6 (
+	.p_0(ReceiverInstance_Instance0_p[5]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY6_int)
+);
+// @11:168
+  synchronizer_8 data_synchronizer_ARRAY7 (
+	.p_0(ReceiverInstance_Instance0_p[4]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.int(data_synchronizer_ARRAY7_int)
+);
+// @11:176
+  synchronizer_9 rdy_synchronizer (
+	.globals_DataReady_out_0(ReceiverInstance_Instance0_globals_DataReady_out[0]),
+	.reset(reset),
+	.FilterClock(FilterClock),
+	.outp(rdy_synchronizer_outp)
+);
+endmodule /* top */
+

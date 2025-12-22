@@ -1,0 +1,19 @@
+# Compile...
+# File: D:\designshdl\CRET\PORTI\src\PORTI.vhd
+# Compile Entity "NOT_GATE"
+# Entity `NOT_GATE' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "NOT_GATE"
+# Compile Entity "AND_GATE"
+# Entity `AND_GATE' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "AND_GATE"
+# Compile Entity "OR_GATE"
+# Entity `OR_GATE' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "OR_GATE"
+# Compile Entity "NOT_AND_GATE"
+# Entity `NOT_AND_GATE' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "NOT_AND_GATE"
+# Compile Entity "NOT_OR_GATE"
+# Entity `NOT_OR_GATE' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "NOT_OR_GATE"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+# Design: Design "xor_nxor" has been set as active.

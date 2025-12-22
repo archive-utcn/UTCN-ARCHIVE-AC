@@ -1,0 +1,165 @@
+[Project]
+Current config=compile
+VCS=0
+modified=261
+version=1
+Current Flow=Multivendor
+
+[Configurations]
+Generic=Loadable_Counter
+compile=Loadable_Counter
+
+[sdf.c.TESTBENCH_FOR_counter]
+SdfNoWarn=0
+IVG=0
+0=src\counter_tim.sdf| /UUT, Average, No
+
+[Library]
+Loadable_Counter=.\Loadable_Counter.LIB
+
+[sdf.c.TIMING_FOR_counter]
+0=src\counter_tim.sdf| /UUT, Average, No
+SdfNoWarn=0
+IVG=0
+
+[Settings]
+SYNTH_TOOL=<none>
+FLOWTOOLS=ONLY_IMPL
+IMPL_TOOL=<none>
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FAMILY=
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+UseCeloxica=0
+IMPL_STATUS=NONE
+REFRESH_FLOW=1
+CSYNTH_TOOL=<none>
+Celoxica=0
+RUN_MODE_SYNTH=0
+FUNC_LIB=Loadable_Counter
+
+[$LibMap$]
+Active_lib=VIRTEX2
+xilinxun=VIRTEX2
+Loadable_Counter=.
+UnlinkedDesignLibrary=VIRTEX2
+DESIGNS=VIRTEX2
+
+[SYNTHESIS]
+FAMILY=
+DEVICE=
+SPEED=
+OBSOLETE_ALIASES=1
+TOPLEVEL=COUNTER
+FORCE_GSR=1
+INSERT_IO_PADS=1
+DISABLED_RESET=1
+FORCE_RESET_PIN=1
+CLOCK_FREQ=0
+OBTAIN_MAX_FREQUENCY=0
+FANOUT_LIMIT=100
+SYNTHESIS.USE_DEF_FANOUT=1
+SYMBOLIC_FSM=0
+FSM_ENCODE=onehot
+RESOURCE_SHARING=0
+RESULT_FORMAT=EDIF
+ADD_SYS_LIB=0
+CONSTRAINT_PATH=
+PROPERTY_PATH=
+SIMOUTFORM=1
+AUTO_CLOSE_GUI=0
+OVERRIDE_EXISTING_PROJECT=1
+Verilog2001=0
+Retiming=0
+Pipeline=0
+JOB_DESCRIPTION=SynthesisJob1
+SERVERFARM_INCLUDE_INPUT_FILES=*.*
+SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:implement\*.*
+LAST_RUN=1088769791
+OUTPUT_NETLIST=synthesis\COUNTER.edf
+OUTPUT_SIMUL_NETLIST=synthesis\COUNTER.vhm
+
+[IMPLEMENTATION]
+FAMILY=
+DEVICE=
+SPEED=
+NETLIST=synthesis\COUNTER.edf
+SYNPLIFY_NCF=C:/my_designs/Samples_63/Loadable_Counter/synthesis/COUNTER/COUNTER.ncf
+LAST_RUN=1088769808
+OUTPUT_NETLIST=IMPLEMENT\TIME_SIM.VHD
+OUTPUT_SDF=IMPLEMENT\TIME_SIM.SDF
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[ORDER]
+autorefresh=0
+macro_path=
+macro_name=
+modified=1
+Synchronize=1
+
+[sdf.ea.counter-structure]
+0=src\counter_tim.sdf| /, Average, Yes
+SdfNoWarn=0
+IVG=0
+
+[sdf.ea.counter-counter_behav]
+0=src\counter_tim.sdf| /, Average, No
+SdfNoWarn=0
+IVG=0
+1=IMPLEMENT\TIME_SIM.SDF| /, Average, No
+
+[SIM.POST]
+TOPLEVEL=COUNTER
+
+[SIM.TIME]
+SDF_PATH=IMPLEMENT\TIME_SIM.SDF
+TOPLEVEL=COUNTER
+
+[Files.Data]
+.\src\readme.txt=Text File
+.\src\counter.vhd=VHDL Source Code
+.\src\counter_tim.vhd=VHDL Source Code
+.\src\counter_tim.sdf=SDF File
+.\src\WAVES\counter_TB_header=Text File
+.\src\WAVES\counter_TB_pins.vhd=VHDL Test Bench
+.\src\WAVES\waves_objects.vhd=VHDL Test Bench
+.\src\WAVES\counter_TB_declaration.vhd=VHDL Test Bench
+.\src\WAVES\waves_generator.vhd=VHDL Test Bench
+.\src\WAVES\counter_TB.vhd=VHDL Test Bench
+.\src\WAVES\counter_TB_tim_cfg.vhd=VHDL Test Bench
+.\src\WAVES\Functional.vec=Text File
+.\src\WAVES\monitor_utilities.vhd=VHDL Test Bench
+.\src\WAVES\counter_TB_runtest.do=Macro
+.\src\WAVES\counter_TB_tim_runtest.do=Macro
+
+[Groups]
+WAVES=1
+
+[Files]
+/readme.txt=-1
+/counter.vhd=-1
+/counter_tim.vhd=-1
+/counter_tim.sdf=-1
+WAVES/counter_TB_header=-1
+WAVES/counter_TB_pins.vhd=-1
+WAVES/waves_objects.vhd=-1
+WAVES/counter_TB_declaration.vhd=-1
+WAVES/waves_generator.vhd=-1
+WAVES/counter_TB.vhd=-1
+WAVES/Functional.vec=-1
+WAVES/monitor_utilities.vhd=-1
+WAVES/counter_TB_tim_cfg.vhd=-1
+WAVES/counter_TB_runtest.do=-1
+WAVES/counter_TB_tim_runtest.do=-1
+

@@ -1,0 +1,93 @@
+
+typedef struct nod {
+    char id[11];
+    float tonaj;
+    int an;
+    struct nod * urm;
+    } Nod;
+
+Nod *prim=NULL, *ultim=NULL;
+
+void adaugare_dupa(char c[11],float t,int a)
+{
+    Nod * p;
+    p=(Nod*)malloc(sizeof(Nod));              // Alocam spatiu
+    strcpy(p->id,c);                          // Partea de informatie
+    p->tonaj=t;                               // Partea de informatie
+    p->an=a;                                  // Partea de informatie
+    if(ultim)ultim->urm=p;                    // Facem legatura de la ultimul nod, catre cel proaspat creat
+    p->urm=NULL;                              // Noul nod va fi ultimul si ii facem legatura catre 0
+    if (prim==NULL)prim=p;                    // Daca este primul nod pe care il cream ( ne folosim de contorul i ), il memoram in prim
+    ultim=p;                                  // Primul nod este si ultimul, setam ultimul nod ca acest nod proaspat creat
+}
+
+
+void stergere()
+{
+    Nod *aux,*q;
+    aux=prim;                                 // Pornim de la primul nod
+
+    if(aux==NULL) printf("\nLISTA ESTE VIDA");
+    else
+    {
+    if(prim==ultim)
+        {
+            q=prim;
+            prim=NULL;
+            ultim=NULL;
+            free(q);
+        }
+
+    while(aux->urm!=ultim) aux=aux->urm;
+    q=ultim;
+    ultim=aux;
+    ultim->urm=NULL;
+    free(q);
+    }
+}
+
+void afisare()
+{
+    Nod * p;
+    p = prim;
+    printf("Afisare:\n-------------------------------------------------------\n");
+    if(p==NULL) printf("LISTA ESTE VIDA");
+    if(p)
+    while(p)                                // Parcurgem lista
+    {
+        printf("\tID-ul = %s",p->id);       // Afisam valoarea din nodul la care am ajuns
+        printf("\t tonaj = %g",p->tonaj);   // Afisam valoarea din nodul la care am ajuns
+        printf("\tAn = %d\n",p->an);        // Afisam valoarea din nodul la care am ajuns
+        p=p->urm;                           // Trecem la nodul urmator
+    }
+}
+
+void adaugare()
+{
+    float t;                    // Reprezinta Tonajul
+    char d[11]="";              // Reprezinta ID-ul
+    int a;                      // Reprezinta An-ul
+
+    printf("\nIntroduceti ID-ul trenului : ");scanf("%s",&d);
+    printf("\nIntroduceti Tonajul trenului : ");scanf("%f",&t);
+    printf("\Introduceti anul fabricatiei : ");scanf("%d",&a);
+    adaugare_dupa(d,t,a);
+}
+
+
+int main()
+{
+    char c='0';
+    while(c!='q')
+    {
+        printf("\n1-Adaugare 2-Stergere 3-Afisare q-QUIT : \n");
+        c=getch();
+        switch(c)
+        {
+            case '1': { adaugare(); break; }
+            case '2': { stergere(); break; }
+            case '3': { afisare(); break; }
+        }
+     }
+return 0;
+}

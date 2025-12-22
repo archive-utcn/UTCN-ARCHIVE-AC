@@ -1,0 +1,237 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct nod
+{
+    float coef;
+    int grad;
+    struct nod *urm;
+}polinom;
+polinom *x,*y,*aux, *scade;
+
+void adaugare(float coef, int grad, polinom **a)
+{
+    polinom *p=(polinom*)malloc(sizeof(polinom));
+    polinom *k;
+    p->coef=coef;
+    p->grad=grad;
+    p->urm=0;
+    if (*a==0)  *a=p;
+    else
+    {
+        k=*a;
+        while (k->urm!=0)  k=k->urm;
+        k->urm=p;
+    }
+}
+
+void afisare (polinom **a )
+{
+    polinom *k=*a;
+    int i=0;
+    while (k!=0)
+    {
+        if (i==0) ;
+        if (k->coef > 0)  printf("+%0.1fx^%d",k->coef,k->grad);
+
+        else if (k->coef < 0)  printf("%0.1fx^%d",k->coef,k->grad);
+        else ;
+
+        k=k->urm;
+        i++;
+    }
+
+}
+
+void adunare()
+{
+    polinom *p=x;
+    polinom *q=y;
+    polinom *suma=0;
+
+
+    while (p!=0 && q!=0)
+    {
+        if (p->grad==q->grad)
+        {
+            adaugare(p->coef+q->coef,p->grad,&suma);
+            p=p->urm;
+            q=q->urm;
+        }
+        else if (p->grad>q->grad)
+        {
+            adaugare(p->coef,p->grad,&suma);
+            p=p->urm;
+        }
+        else
+        {
+            adaugare(q->coef,q->grad,&suma);
+            q=q->urm;
+        }
+    }
+    if (p!=0)  while (p!=0)
+        {
+            adaugare(p->coef,p->grad,&suma);
+            p=p->urm;
+        }
+    if (q!=0)  while (q!=0)
+        {
+            adaugare(q->coef,q->grad,&suma);
+            q=q->urm;
+        }
+    printf("suma=");
+    afisare(&suma);
+}
+
+void scadere(polinom **a,polinom **b)
+{
+    polinom *p=*a;
+    polinom *q=*b;
+    scade=0;
+
+
+    while (p!=0 && q!=0)
+    {
+        if (p->grad==q->grad)
+        {
+            adaugare(p->coef-q->coef,p->grad,&scade);
+            p=p->urm;
+            q=q->urm;
+        }
+        else if (p->grad>q->grad)
+        {
+            adaugare(p->coef,p->grad,&scade);
+            p=p->urm;
+        }
+        else
+        {
+            adaugare(q->coef*(-1),q->grad,&scade);
+            q=q->urm;
+        }
+    }
+    if (p!=0)  while (p!=0)
+        {
+            adaugare(p->coef,p->grad,&scade);
+            p=p->urm;
+        }
+    if (q!=0)  while (q!=0)
+        {
+            adaugare(q->coef*(-1),q->grad,&scade);
+            q=q->urm;
+        }
+
+}
+
+void inmultire(polinom **a, polinom **b)
+{
+    polinom *p=*a;
+    polinom *q=*b;
+    aux=0;
+    while (p!=0)
+    {
+        while (q->urm!=0)
+        {
+            adaugare(p->coef * q->coef, p->grad+q->grad, &aux);
+            q=q->urm;
+        }
+        q=*b;
+        p=p->urm;
+    }
+
+    p=aux;
+    polinom *k;
+    while (p!=0)
+    {
+        k=p;
+        while (k->urm!=0)
+        {
+            if (k->urm->grad==p->grad)
+            {
+                p->coef+=k->urm->coef;
+                q=k->urm;
+                k->urm=q->urm;
+                free(q);
+            }
+            k=k->urm;
+        }
+        p=p->urm;
+    }
+
+
+}
+
+void impartire(polinom **a, polinom **b)
+{
+        polinom *p=*a;
+        polinom *q=*b;
+        polinom *cat=0;
+        while(p->grad >= q->grad)
+        {
+                adaugare(p->coef/q->coef,p->grad-q->grad,&cat);
+                polinom *k=cat;
+                while(k->urm!=0) k=k->urm;
+                inmultire(&k,&q);
+                scadere(&p,&aux);
+                p=scade->urm;
+        }
+        printf("\n cat=");
+                afisare(&cat);
+        printf("\n rest=");
+                afisare(&scade);
+
+}
+
+int main()
+{
+    FILE *in;
+    in=fopen("polin.txt","r");
+    char p,c;
+    float coef;
+    int grad;
+    x=0;
+    y=0;
+    fscanf(in,"%c%c%c",&p,&p,&c);
+    while (c!=10)
+    {
+        fscanf(in,"%f",&coef);
+        if (c=='-') coef*=-1;
+        fscanf(in,"%c",&c);
+        if (c=='x') fscanf(in,"%c%d",&p,&grad);
+        else if (c==10) grad=0;
+        adaugare(coef,grad,&x);
+        //fscanf(in,"%c",&c);
+        //printf("%0.1f  %d ",x,y);
+    }
+
+    fscanf(in,"%c%c",&p,&p);
+    // printf("\n");
+
+    while (!feof(in))
+    {
+        fscanf(in,"%c%f",&c,&coef);
+        if (c=='-') coef*=-1;
+        fscanf(in,"%c",&p);
+        if (p=='x')  fscanf(in,"%c%d",&p,&grad);
+        else if (p==10) grad=0;
+        adaugare(coef,grad,&y);
+        //        printf("%0.1f  %d ",x,y);
+    }
+    printf("x=");
+    afisare(&x);
+    printf("\n");
+    printf("y=");
+    afisare(&y);
+    printf("\n");
+    adunare();
+    printf("\n");
+    scadere(&x,&y);
+       printf("scadere=");
+    afisare(&scade);
+    printf("\n");
+    inmultire(&x,&y);
+    printf("inmultire=");
+        afisare(&aux);
+        impartire(&x,&y);
+        printf("\n");
+    return 0;
+}

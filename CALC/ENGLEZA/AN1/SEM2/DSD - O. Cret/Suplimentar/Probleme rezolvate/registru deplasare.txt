@@ -1,0 +1,37 @@
+library	IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity registru is
+	port(intrari: in bit_vector(3 downto 0);
+	clk: in bit;
+	ser: in bit;
+	sel: in bit;
+	clr: in bit;
+	load: in bit;
+	iesiri: out bit_vector(3 downto 0));
+end entity registru;
+
+architecture registru1 of registru is
+begin 
+	process	(clk, sel, ser)
+	variable reg: bit_vector(3 downto 0);
+	begin								 
+		if clr='1' then reg:="0000";
+			iesiri <= reg;
+		end if;
+		
+		if (clk='0') and (clk'event) then
+			if sel='1' then
+				reg:= reg sll 1;
+				reg(0):=ser;
+				iesiri <= reg;
+			end if;
+			if sel='0' then
+				reg:= reg srl 1;
+				reg(3):=ser;
+				iesiri <= reg;
+			end if;
+		end if;
+end process;
+end registru1;
+	 

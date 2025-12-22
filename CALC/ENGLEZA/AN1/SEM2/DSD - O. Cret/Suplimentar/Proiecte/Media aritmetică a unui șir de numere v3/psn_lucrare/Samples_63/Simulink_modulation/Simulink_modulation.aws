@@ -1,0 +1,16 @@
+[Version]
+Version=6.2
+[Designs]
+demodulator=.\Demodulator\Demodulator.adf
+modulator=.\Modulator\Modulator.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+modulator=1
+demodulator=1
+[Settings]
+Active=demodulator

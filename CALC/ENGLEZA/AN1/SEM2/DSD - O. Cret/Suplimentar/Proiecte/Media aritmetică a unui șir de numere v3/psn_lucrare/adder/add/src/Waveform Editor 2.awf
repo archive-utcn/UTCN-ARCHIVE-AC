@@ -1,0 +1,93 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 100000
+I 1 "a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 1 1 8 A
+$SC +9-+7
+$BUS IN 2 1 8 B
+$SC 18-+7
+$BUS IN 3 1 8 C
+$SC 26-+7
+$BUS IN 4 1 8 D
+$SC 34-+7
+I 3 "a#28#std_logic_vector(9 downto 0)1 ricd9 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT 5 3 10 suma
+$SC 42-+9
+$BUS S 6 1 8 media
+$SC 52-+7
+I 4 "a#28#std_logic_vector(8 downto 0)1 ricd8 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 7 4 9 sum1
+$SC 60-+8
+$BUS S 8 4 9 sum2
+$SC 69-+8
+$BUS S 9 3 10 sum3
+$SC 78-+9
+P 0 1-87 CS "0"
+P 0 3 Stimulator "VAL:FRM:Override:00000010:<= 00000010:1:"
+P 0 4 Stimulator "VAL:FRM:Override:00000100:<= 00000100:1:"
+P 0 1 Stimulator "VAL:FRM:Override:00001000:<= 00001000:1:"
+P 0 2 Stimulator "VAL:FRM:Override:01100110:<= 01100110:1:"
+$WAVES +8-+3 +2-+3 +3 +1 +3-+6 +2-+5 +2 +1
+=0 T 0
+$VALUES
+V 1
+0
+$END
+$WAVES 14 +5 +1 +3 +1 +8 +7
+*0
+$VALUES
+V 1
+1
+$END
+$WAVES +3-+9
+*0
+$VALUES
+V 1
+U
+$END
+$WAVES +1-+2 +4
+*0
+=1 D 0 3
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 55-+2 +2
+*0
+*1
+=2 D 0 5
+$VALUES
+V 3
+U
+0
+1
+$END
+$WAVES +1 +1 +3 +4-+6 +3-+3 +4 +2 +1
+*0
+=3 D 0 2
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 62 +1 +2-+2 +8 +1
+*0
+*3
+$VALUES
+V 2
+U
+1
+$END
+$WAVES +5-+2 +2
+*0
+*3
+=4 D 0 4
+$VALUES
+V 3
+U
+0
+1
+$END
+$ENDWAVE

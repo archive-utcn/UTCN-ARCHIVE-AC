@@ -1,0 +1,6 @@
+MESSAGE "File: d:\designshdl\CLV_2011\FIFO_4X8\src\FIFO_4X8.vhd" 
+MESSAGE "Compile Entity "FIFO_4X8"" 
+MESSAGE "Compile Architecture "arh" of Entity "FIFO_4X8"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   FIFO_4X8" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]" 

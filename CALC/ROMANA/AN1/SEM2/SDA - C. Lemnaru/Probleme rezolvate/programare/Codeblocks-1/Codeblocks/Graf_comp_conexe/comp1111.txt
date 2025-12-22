@@ -1,0 +1,88 @@
+#include<stdio.h>
+#include<conio.h>
+
+int a[20][20],n,m,viz[100],gasit;
+
+int nrc; //pastreaza numarul componentei conexe
+
+
+
+void dfmr(int nod)
+
+{ viz[nod]=nrc; //se incarca numarul componentei
+int k;
+ for(k=1;k<=n;k++)
+
+      if(a[nod][k]==1&&viz[k]==0)
+
+               dfmr(k);
+
+}
+
+
+
+void main()
+
+{int x,y,j,i,nod;
+
+FILE *f;
+
+
+ f=fopen("graf.txt","r"); //memorare matrice de adiacenta
+
+        if (f==0) printf("nulllll");
+        fscanf(f,"%d",&m);
+        fscanf(f,"%d",&n);
+        for (i=0;i<n;i++)
+             { printf("\n");
+             for (j=0;j<n;j++)
+              {fscanf(f,"%d", &a[i][j]);
+               printf(" %d ",a[i][j]);
+              }
+             }
+
+printf("\nmatricea de adiacente\n");
+
+for(i=1;i<=n;i++)
+
+   {for(j=1;j<=n;j++)
+
+       printf(" %d",a[i][j]);
+
+   printf("\n");}
+
+
+
+for(nod=1;nod<=n;nod++)
+
+    if(viz[nod]==0) //se incearca parcurgerea numai daca un nod nu a fost deja parcurs
+
+       {nrc++;
+
+       dfmr(nod);}
+
+
+
+printf("\nvectorul viz \n");
+
+for(i=1;i<=n;i++)
+
+   printf("viz[i]=%d",viz[i]);
+
+
+
+printf("Componentele conexe :\n");
+
+for(i=1;i<=nrc;i++)
+
+   {printf("componenta %d",i);
+
+   for(j=1;j<=n;j++)
+
+      if(viz[j]==i)
+
+          printf("%d",j);
+
+   }
+
+getch();}

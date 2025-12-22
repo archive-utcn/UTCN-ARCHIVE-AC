@@ -1,0 +1,5 @@
+MESSAGE "File: C:\My_Designs\42_Reclama\Reclama\src\reclama.vhd" 
+MESSAGE "Compile Entity "reclama"" 
+MESSAGE "Entity `reclama' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "reclama"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

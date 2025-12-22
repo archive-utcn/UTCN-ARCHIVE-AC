@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "F:/project-darabok/automat_bancar/main_isim_beh.exe" -prj "F:/project-darabok/automat_bancar/main_beh.prj" "work.main" 

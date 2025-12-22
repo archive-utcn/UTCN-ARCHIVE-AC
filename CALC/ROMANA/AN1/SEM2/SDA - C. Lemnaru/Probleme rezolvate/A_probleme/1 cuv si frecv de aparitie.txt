@@ -1,0 +1,95 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct nod
+{
+    char c[20]; //cuvantul
+    int f;   //frecventa cuvantului
+    struct nod *urm;
+}NOD;
+
+NOD *prim=NULL;
+
+void adaugare()
+{
+    NOD *q,*p;
+    int k=1;
+    q=prim;
+    char d[20];
+    printf("Introduceti un cuvant : ");
+    gets(d);
+
+    //Verificam daca Lista este vida
+    if(prim==NULL)
+    {
+        p=(NOD*)malloc(sizeof(NOD));
+        strcpy(p->c,d);
+        p->f=1;
+        p->urm=NULL;
+        prim=p;
+    }
+
+    else
+    {
+    //Verificam daca nu exista deja in lista
+        while(q&&k==1)
+            {
+             if(strcmp(q->c,d)==0)
+                {
+                    q->f++;k=0;
+                }
+             q=q->urm;
+            }
+
+        if(q==NULL&&k==1)
+        {
+            q=prim;
+            p=(NOD*)malloc(sizeof(NOD));
+            strcpy(p->c,d);
+            p->f=1;
+            p->urm=NULL;
+            //Verificam daca d > prim->c si inseram inaintea lui prim
+            if(strcmp(prim,d)==1)
+            {
+                p->urm=prim;
+                prim=p;
+            }
+            else
+            { //Verificam daca d > q->urm->c  si
+            //daca da dam cautare poz + inserare inainte
+                while(q->urm&&strcmp(d,q->urm->c)!=-1)
+                 q=q->urm;
+                p->urm=q->urm;
+                q->urm=p;
+            }
+        }
+
+    }
+
+}
+
+void afisare()
+{
+NOD *q=prim;
+while(q)
+  {
+   printf("\n%s : acest cuvant apare de %d ori !",q->c,q->f);
+   q=q->urm;
+  }
+}
+
+int main()
+{
+char c='0';
+    while(c!='3')
+    {
+        printf("\n1-Adaugare 2-Afisare 3-Iesire : \n");
+        c=getch();
+        switch(c)
+        {
+            case '1': { adaugare(); break; }
+            case '2': { afisare(); break; }
+        }
+     }
+}

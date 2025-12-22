@@ -1,0 +1,97 @@
+//pr.3.2 laborator 9 :  Problema rucsacului. Greutatea maxima care poate fi transportata cu un rucsac este G.
+//Dându-se n materiale, fiecare având greutatea m si costul C pe unitatea de greutate,
+//sa se gaseasca ce cantitate din fiecare material sa fie introdus în rucsac pentru ca sa se obtina câstigul maxim.
+//  Se vor deosebi doua cazuri:
+//  a)	un material poate fi luat numai în întregime;
+//  b)	se poate lua o fractiune din material.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+float m[20],c[20],G,total; //m=masa, c=costul, G=greutatea maxima
+int n,rez[20],M;
+char ch[20][20]; //ch=numele obiectelor
+
+void citire ()
+{
+    int i;
+    FILE *PF;
+    PF=fopen("FILE.TXT","r");
+    fscanf(PF,"%d",&n);
+    fscanf(PF,"%f",&G);
+    for (i=1;i<=n;i++)
+    {
+        fscanf(PF,"%s ",ch[i]);
+        fscanf(PF,"%f ",&m);
+        fscanf(PF,"%f",&c[i]);
+    }
+    fclose(PF);
+}
+
+void posibil (int i)
+{
+    if(m[i]*c[i]+total<=G)
+    {
+        total+=m[i]*c[i];
+        rez[M]=i;
+        M++;
+    }
+}
+
+void afisare()
+{
+    int i;
+    for (i=0;i<=M;i++)
+    printf("Obiectul %.2s, are masa %.2f, cu costul %.2f \n",ch[rez[i]],m[rez[i]],c[rez[i]]);
+}
+
+int alege (int i)
+{
+    int j;
+    int k=i;
+    float max=m[i]*c[i];
+    for(j=i+1;j<=n;j++)
+    if(m[j]*c[j]>max)
+    {
+        max=m[j]*c[j];
+        k=j;
+    }
+    return k;
+}
+
+void interschimbare (int i, int k)
+{
+    float aux1;
+    char aux2[20];
+    aux1=m[i];
+    m[i]=m[k];
+    m[k]=aux1;
+
+    aux1=c[i];
+    c[i]=c[k];
+    c[k]=aux1;
+
+    strcpy(aux2,ch[i]);
+    strcpy(ch[i],ch[k]);
+    strcpy(ch[k],aux2);
+}
+
+void greedy()
+{
+    int i;
+    int k;
+    for(i=1;i<=n;i++)
+    {
+        k=alege(i);
+        interschimbare (i,k);
+        posibil(i);
+    }
+}
+
+int main()
+{
+    citire();
+    greedy();
+    afisare();
+    return 0;
+}

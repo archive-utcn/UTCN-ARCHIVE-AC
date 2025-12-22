@@ -1,0 +1,151 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Programul citeste toate randurile unui fisier si le afiseaza, in ordine inversa, intr-un alt fisier
+
+FILE *f,*g; //declarare fisiere
+//d//
+
+void afisare(int rand)
+{
+    int c;
+    char s[50];  //declarare vector de caractere; va retine fiecare rand
+    c=fgets(s,50,f); //citire rand curent
+    if (c!=0)   //conditie care verifica daca nu s-a ajuns la finalul fisierului
+     afisare(rand+1); //se trece la randul urmator
+    if (c!=0)
+     fputs(s,g);   //afisare rand curent, in functie de nivelul atins in stiva
+}
+
+int main()
+{
+    f=fopen("fisier.in","r");   //deschidere pt citire
+    g=fopen("fisier.out","w");  //deschidere pt scriere
+    afisare(1);   //apel procedura de afisare, incepand cu randul 1
+    fclose(f);
+    fclose(g);    //inchidere fisiere
+    return 0;
+}
+
+
+//a//
+#include <stdio.h>
+#include <stdlib.h>
+
+//Programul citeste elementele unei liste simplu inlantuite si le afiseaza in ordinea citirii si apoi in ordine inversa
+
+typedef struct tip_nod{   //declarare structura nod
+                        int data;
+                        struct tip_nod *urm;
+                      }tip_nod;
+
+
+void invers(tip_nod **p) //proc recursiva ce face afisarea inversa
+{   tip_nod *c;
+    if ((*p)->urm!=0) //verificarea daca s-a ajuns la finalul listei
+    {c=(*p)->urm;
+     invers(&c);}  //autoapel
+    printf("%d\n",(*p)->data); //printarea informatiei de la nivelul curent al stivei
+    return 0;
+}
+
+
+int main()
+{
+    int n,i;
+    tip_nod *prim,*ultim,*p,*q;
+    printf("Nr. elemente:");
+    scanf("%d",&n);  //citire nr de elemente
+    printf("Elementele:");
+    prim=(tip_nod*)malloc(sizeof(tip_nod));  //alocare memorie pt primul nod
+    scanf("%d",&(prim->data));  //citire informatie pt primul nod
+    prim->urm=0;
+    ultim=prim;
+    p=prim;
+
+    for (i=1;i<n;i++)  //citire noduri
+    {
+        p=(tip_nod*)malloc(sizeof(tip_nod)); //alocare memorie
+        scanf("%d",&(p->data));  //citire informatie
+        ultim->urm=p;  //adaugare la lista deja formata
+        p->urm=0;
+        ultim=p;  //nodul curent devine ultimul din lista
+    }
+    p=prim;
+    printf("Ordinea initiala:\n");
+    for (i=0;i<n;i++)
+    {
+        printf("%d\n",p->data);
+        p=p->urm;
+    }
+    printf("Ordinea inversa:\n");
+    invers(&prim);
+    return 0;
+}
+
+
+//b//
+#include <stdio.h>
+#include <stdlib.h>
+
+//Programul face conversia unui nr din baza 10 in baza b, folosind o procedura recursiva
+
+int nr; //nr nou format, in baza b
+
+void conversie(int n,int b)
+{
+    int c;
+    c=n/b; //se face impartirea parametrului n la baza b; variabila c retine catul
+
+    if (c!=0) //verifcarea catului daca este diferit de 0
+    { conversie(c,b);} //autoapel
+    nr=nr*10 + (n%b); //formare nr in baza b
+
+}
+
+int main()
+{
+    int n,b; //declarare n-nr in baza 10; b-baza de tranformare
+
+    printf("Numarul in baza 10:");
+    scanf("%d", &n); //citire n, b
+    printf("Baza in care se face conversia:");
+    scanf("%d", &b);
+
+    printf("\nNumarul in baza %d:",b);
+
+    conversie(n,b); //apel fct recursiva
+
+    printf("%d",nr);
+    return 0;
+}
+
+//c//
+#include <stdio.h>
+#include <stdlib.h>
+
+//Programul afiseaza elementele unui tablou in ordine inversa, folosind o procedura recursiva care se autoapeleaza
+
+int v[50];
+int n;
+
+void afisare(int i)
+{
+    if (i!=n-1) afisare(i+1); //daca nu s-a ajuns la final, se inainteaza in vector; autoapel pentru elementul urmator
+    printf("\n%d",v[i]); //afisare element curent
+
+}
+
+int main()
+{
+    int i;
+
+    printf("Nr. elemente:");
+    scanf("%d",&n); //citire nr de elemente
+    printf("Elementele:");
+    for (i=0;i<n;i++)
+        scanf("%d",&v[i]); //citire elemente
+    printf("Ordinea inversa:");
+    afisare(0); //apel procedura recursiva de afisare, incepand cu elementul de pe prima pozitie a vectorului
+    return 0;
+}

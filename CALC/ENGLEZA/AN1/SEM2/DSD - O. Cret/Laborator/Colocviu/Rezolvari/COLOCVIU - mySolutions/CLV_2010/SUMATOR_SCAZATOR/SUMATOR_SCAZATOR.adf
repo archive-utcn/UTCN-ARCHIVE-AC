@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+[Configurations]
+compile=SUMATOR_SCAZATOR
+[Library]
+SUMATOR_SCAZATOR=.\SUMATOR_SCAZATOR.lib
+[$LibMap$]
+SUMATOR_SCAZATOR=.
+Active_lib=
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+[IMPLEMENTATION]
+UCF=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2010\SUMATOR_SCAZATOR\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2010\SUMATOR_SCAZATOR\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2010\SUMATOR_SCAZATOR\
+Extension5=dll

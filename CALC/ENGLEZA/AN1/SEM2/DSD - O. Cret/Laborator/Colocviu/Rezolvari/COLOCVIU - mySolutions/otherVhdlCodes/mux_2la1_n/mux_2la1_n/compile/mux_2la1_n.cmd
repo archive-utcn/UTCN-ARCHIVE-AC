@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\mux_2la1_n\library.cfg"  -j "d:\designshdl\mux_2la1_n\mux_2la1_n\projlib.cfg"  -d "d:\designshdl\mux_2la1_n\mux_2la1_n\compile\"  -work mux_2la1_n -dbg -e 100 -o "d:\designshdl\mux_2la1_n\mux_2la1_n\src\mux-2la1_n.vhd" 

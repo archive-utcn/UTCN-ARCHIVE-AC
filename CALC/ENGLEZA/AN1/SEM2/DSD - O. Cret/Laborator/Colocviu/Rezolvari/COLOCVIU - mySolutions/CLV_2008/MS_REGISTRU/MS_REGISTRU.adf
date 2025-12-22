@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MS_REGISTRU
+
+[Library]
+MS_REGISTRU=.\MS_REGISTRU.lib
+
+[$LibMap$]
+MS_REGISTRU=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\MS_REGISTRU\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\MS_REGISTRU\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\MS_REGISTRU\
+Extension5=dll
+
+[Files]
+/MS_REGISTRU.vhd=-1
+
+[Files.Data]
+.\src\MS_REGISTRU.vhd=VHDL Source Code
+

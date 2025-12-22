@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Numarator_binar_8bit_2biti\src\Numarator_8biti.vhd" 
+MESSAGE "Compile Entity "Counter"" 
+MESSAGE "Compile Architecture "Count_STR" of Entity "Counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]" 

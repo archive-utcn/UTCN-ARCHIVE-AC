@@ -1,0 +1,28 @@
+entity Lant_de_inversoare is 
+	generic(N:integer:=4);
+	port(intrare:in bit;iesire:out bit);
+end Lant_de_inversoare;
+entity inversor is
+	port(A:in bit;Y:out bit);
+end inversor;
+architecture comp of inversor is
+begin
+	Y<=not(A);
+end comp;
+architecture structurala of Lant_de_inversoare is
+signal P:Bit_vector(1 to N-1);
+component inversor
+	port(A:in bit;Y:out bit);
+end component; 
+for all:inversor use entity inversor(comp);
+	begin
+		primul_inversor:if N>=1 generate
+			inversor_1:inversor port map(intrare,P(1));
+		end generate primul_inversor;
+alte_inversoare:for I in 1 to N-2 generate
+	inversor_1:inversor port map(P(I),P(I+1));
+end generate alte_inversoare;
+ultimul_inversor:if N>=2 generate
+	inversor_N:inversor port map(P(N-1),iesire);
+end generate ultimul_inversor;
+end structurala;

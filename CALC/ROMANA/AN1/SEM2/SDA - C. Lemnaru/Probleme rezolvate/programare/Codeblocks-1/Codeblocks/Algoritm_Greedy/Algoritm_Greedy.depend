@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1304669844 source:c:\codeblocks\algoritm_greedy\main.c
+	<stdio.h>
+	<stdlib.h>
+

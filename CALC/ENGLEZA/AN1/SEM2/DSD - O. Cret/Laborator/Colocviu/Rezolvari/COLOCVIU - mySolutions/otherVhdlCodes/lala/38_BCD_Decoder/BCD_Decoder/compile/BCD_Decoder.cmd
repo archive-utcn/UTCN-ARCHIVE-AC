@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\38_BCD_Decoder\library.cfg"  -j "c:\My_Designs\38_BCD_Decoder\BCD_Decoder\projlib.cfg"  -d "c:\My_Designs\38_BCD_Decoder\BCD_Decoder\compile\"  -work BCD_Decoder -dbg -e 100 -o "c:\My_Designs\38_BCD_Decoder\BCD_Decoder\src\decoder.vhd" 

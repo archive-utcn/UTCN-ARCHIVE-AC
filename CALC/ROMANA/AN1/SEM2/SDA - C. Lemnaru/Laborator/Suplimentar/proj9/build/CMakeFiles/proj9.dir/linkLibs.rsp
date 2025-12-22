@@ -1,0 +1,1 @@
+ proj9/libintGraph.a proj9/libarray.a proj9/libvector.a proj9/libqueue.a proj9/libstack.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

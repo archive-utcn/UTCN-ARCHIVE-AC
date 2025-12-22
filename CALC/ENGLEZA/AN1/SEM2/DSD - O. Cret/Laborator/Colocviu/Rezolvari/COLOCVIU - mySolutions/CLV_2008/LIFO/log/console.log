@@ -1,0 +1,500 @@
+acom -reorder $DSN/src/LIFO.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Top-Level unit detected
+# Entity  =>   LIFO_4X4
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:25 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# RUNTIME: Fatal Error: RUNTIME_0047 LIFO.vhd (38): Index 4 out of range (3 downto 0).
+# KERNEL: Time: 650 ns,  Iteration: 0,  TOP instance,  Process: line__21.
+# KERNEL: stopped at delta: 0 at time 650 ns.
+# Fatal error occurred during simulation.
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:28 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Error: COMP96_0078: LIFO.vhd : (38, 16): Unknown identifier "Poos".
+# Error: COMP96_0133: LIFO.vhd : (38, 16): Cannot find object declaration.
+# Error: COMP96_0138: LIFO.vhd : (38, 16): The index types in the reference to the array object are incompatible with its range type.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:28 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:28 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:31 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+run 100 ns
+# KERNEL: stopped at time: 3 us
+run 100 ns
+# KERNEL: stopped at time: 3100 ns
+run 100 ns
+# KERNEL: stopped at time: 3200 ns
+run 100 ns
+# KERNEL: stopped at time: 3300 ns
+run 100 ns
+# KERNEL: stopped at time: 3400 ns
+run 100 ns
+# KERNEL: stopped at time: 3500 ns
+run 100 ns
+# KERNEL: stopped at time: 3600 ns
+run 100 ns
+# KERNEL: stopped at time: 3700 ns
+run 100 ns
+# KERNEL: stopped at time: 3800 ns
+run 100 ns
+# KERNEL: stopped at time: 3900 ns
+run 100 ns
+# KERNEL: stopped at time: 4 us
+run 100 ns
+# KERNEL: stopped at time: 4100 ns
+run 100 ns
+# KERNEL: stopped at time: 4200 ns
+run 100 ns
+# KERNEL: stopped at time: 4300 ns
+run 100 ns
+# KERNEL: stopped at time: 4400 ns
+run 100 ns
+# KERNEL: stopped at time: 4500 ns
+run 100 ns
+# KERNEL: stopped at time: 4600 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Error: COMP96_0077: LIFO.vhd : (39, 15): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:34 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Error: COMP96_0010: LIFO.vhd : (40, 46): Invalid literal.
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Error: COMP96_0029: LIFO.vhd : (40, 46): Expression expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:36 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/LIFO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd
+# Compile Entity "LIFO_4X4"
+# Entity `LIFO_4X4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "LIFO_4X4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  lifo_4x4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 2:37 PM, Sunday, May 21, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo_4x4 (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+# Design: Design "FIFO_4X4" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

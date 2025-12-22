@@ -1,0 +1,58 @@
+typedef struct tip_nod {
+char *cheie;
+informaþie
+struct tip_nod *urm;
+}TIP_NOD;
+
+Tabloul HT este declarat astfel:
+
+TIP_NOD *HT[M];
+ 
+Iniþial el conþine pointerii nuli: 	
+for(i=0;i<M;i++)
+	HT[i]=0;		
+
+- se calculeazã codul de dispersie:
+h=f(key); 
+
+Cãutarea este liniarã:
+
+p=HT(h);
+while(p!=0)
+  {
+		if(strcmp(key,p->cheie)==0) return p;
+		p=p->urm;
+  }
+	return 0;
+Inserarea unei înregistrãri într-o tabelã de dispersie 
+
+p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+citire_nod(p);
+
+h=f(p->cheie);
+
+if(HT[h]==0){
+		 HT[h]=p;
+		 p->urm=0;
+	           }
+
+q=cautare(p->cheie);
+if(q==o){  
+		p->urm=HT[h];
+		HT[h]=p;
+	         }
+else prelucrare(p,q);
+
+Listarea tuturor înregistrãrilor pe coduri
+
+for(i=0;i<M;i++)
+  {
+ if(HT[i]!=0)
+{
+         printf(“\nInregistrãri avand codul de dispersie=%d\n”,i);
+p=HT[i];
+while(p!=0){
+afisare(p);
+p=p->urm;
+		}
+   }

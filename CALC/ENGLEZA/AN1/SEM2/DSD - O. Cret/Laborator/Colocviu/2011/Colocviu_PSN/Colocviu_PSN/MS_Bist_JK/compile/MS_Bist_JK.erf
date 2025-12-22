@@ -1,0 +1,8 @@
+MESSAGE "File: D:\CTI_2\DSD\DSD_de_laIoana\DSD\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\MS_Bist_JK\src\MS_JK.vhd" 
+MESSAGE "Compile Entity "Bist_JK"" 
+MESSAGE "Compile Architecture "ARH_JK" of Entity "Bist_JK"" 
+MESSAGE "Compile Entity "MS_JK"" 
+MESSAGE "Compile Architecture "ARH_MS_JK" of Entity "MS_JK"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   MS_JK" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]" 

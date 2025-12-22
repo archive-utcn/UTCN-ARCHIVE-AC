@@ -1,0 +1,86 @@
+acom -reorder $DSN/src/comparator_data_flow.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd
+# Compile Entity "comparator"
+# Error: COMP96_0015: comparator_data_flow.vhd : (7, 27): ';' expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (7, 28): Keyword "end" expected.
+# Error: COMP96_0016: comparator_data_flow.vhd : (8, 1): Design unit declaration expected.
+# Compile Architecture "arh" of Entity "comparator"
+# Error: COMP96_0329: comparator_data_flow.vhd : (15, 2): Generate statement must have a label.
+# Error: COMP96_0019: comparator_data_flow.vhd : (16, 3): Keyword "generate" expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (17, 2): Keyword "end" expected.
+# Error: COMP96_0016: comparator_data_flow.vhd : (17, 8): Design unit declaration expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (22, 21): Keyword "of" expected.
+# Error: COMP96_0018: comparator_data_flow.vhd : (22, 21): Identifier expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/comparator_data_flow.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd
+# Compile Entity "comparator"
+# Compile Architecture "arh" of Entity "comparator"
+# Error: COMP96_0329: comparator_data_flow.vhd : (15, 2): Generate statement must have a label.
+# Error: COMP96_0019: comparator_data_flow.vhd : (16, 3): Keyword "generate" expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (17, 2): Keyword "end" expected.
+# Error: COMP96_0016: comparator_data_flow.vhd : (17, 8): Design unit declaration expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (22, 21): Keyword "of" expected.
+# Error: COMP96_0018: comparator_data_flow.vhd : (22, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/comparator_data_flow.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd
+# Compile Entity "comparator"
+# Entity `comparator' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "comparator"
+# Error: COMP96_0329: comparator_data_flow.vhd : (15, 2): Generate statement must have a label.
+# Error: COMP96_0019: comparator_data_flow.vhd : (15, 41): Keyword "generate" expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (17, 2): Keyword "end" expected.
+# Error: COMP96_0016: comparator_data_flow.vhd : (17, 8): Design unit declaration expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (22, 21): Keyword "of" expected.
+# Error: COMP96_0018: comparator_data_flow.vhd : (22, 21): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/comparator_data_flow.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd
+# Compile Entity "comparator"
+# Entity `comparator' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "comparator"
+# Error: COMP96_0019: comparator_data_flow.vhd : (13, 2): Keyword "begin" expected.
+# Error: COMP96_0329: comparator_data_flow.vhd : (16, 2): Generate statement must have a label.
+# Error: COMP96_0019: comparator_data_flow.vhd : (16, 41): Keyword "generate" expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (18, 2): Keyword "end" expected.
+# Error: COMP96_0016: comparator_data_flow.vhd : (18, 8): Design unit declaration expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (24, 21): Keyword "of" expected.
+# Error: COMP96_0018: comparator_data_flow.vhd : (24, 21): Identifier expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/comparator_data_flow.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd
+# Compile Entity "comparator"
+# Compile Architecture "arh" of Entity "comparator"
+# Error: COMP96_0019: comparator_data_flow.vhd : (14, 2): Keyword "begin" expected.
+# Error: COMP96_0329: comparator_data_flow.vhd : (17, 2): Generate statement must have a label.
+# Error: COMP96_0019: comparator_data_flow.vhd : (17, 41): Keyword "generate" expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (19, 2): Keyword "end" expected.
+# Error: COMP96_0016: comparator_data_flow.vhd : (19, 8): Design unit declaration expected.
+# Error: COMP96_0019: comparator_data_flow.vhd : (25, 21): Keyword "of" expected.
+# Error: COMP96_0018: comparator_data_flow.vhd : (25, 21): Identifier expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/comparator_data_flow.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd
+# Compile Entity "comparator"
+# Entity `comparator' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "comparator"
+# Error: COMP96_0015: comparator_data_flow.vhd : (25, 13): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/comparator_data_flow.vhd
+# Compile...
+# File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd
+# Compile Entity "comparator"
+# Entity `comparator' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "comparator"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# Design: 1:39 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\comparator_comp\comparator_comp.adf"
+# Design: Design "comparator_comp" has been set as active.
+# Design Explorer: Shortcut to "D:\designshdl\CRET\CRET.aws" design added.

@@ -1,0 +1,9 @@
+acom $DSN/src/COMPARATOR_COMPORTAMENTAL.vhd
+# Compile...
+# File: d:\designshdl\CLV_2008\COMPARATOR_COMPORTAMENTAL\src\COMPARATOR_COMPORTAMENTAL.vhd
+# Compile Entity "COMPARATOR_DATA_FLOW"
+# Compile Architecture "arh" of Entity "COMPARATOR_DATA_FLOW"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Design: Design "COMPARATOR_DATA_FLOW" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

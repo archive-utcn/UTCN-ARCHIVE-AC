@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>Code2Graphics generation results</TITLE>
+<STYLE>
+.Err	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.Warn	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.Info	{color:'#000000';cursor:hand;text-decoration:underline;}
+.ErrH	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.WarnH	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.InfoH	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Err1	{color:'#FF0000';}
+.Warn1	{color:'#0000FF';}
+.Info1	{color:'#000000';}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="C:\PROGRA~2\Aldec\ACTIVE~1.3\\Flows\Res\default.bmp">
+<FONT FACE="Verdana" SIZE=2>
+
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+	
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>Code2Graphics generation results</H2>
+Created on Mon May 18 22:19:08 2015
+
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>CODE2GRAPHICS&nbsp;SETTINGS:</SPAN><BR>
+<SPAN class=Info1>&nbsp;</SPAN><BR>
+<SPAN class=Info1>Multipage&nbsp;block&nbsp;diagrams&nbsp;generation:&nbsp;DISABLED</SPAN><BR>
+<SPAN class=Info1>Hierarchical&nbsp;state&nbsp;diagrams&nbsp;generation:&nbsp;DISABLED</SPAN><BR>
+<SPAN class=Info1>Destination&nbsp;directory:&nbsp;D:\semestrul&nbsp;2\VHDL\ProiectReclama\VHDL&nbsp;Source</SPAN><BR>
+<SPAN class=Info1>&nbsp;</SPAN><BR>
+<SPAN class=Info1>INTERMEDIATE&nbsp;FILES&nbsp;GENERATION:</SPAN><BR>
+<SPAN class=Info1>&nbsp;</SPAN><BR>
+<SPAN class=Info onmouseup="OpenPlugIn('Aldec.Hde.HdePlugIn.7','-1','D:\\semestrul 2\\VHDL\\ProiectReclama\\VHDL Source\\system.vhd','','');">Source&nbsp;file&nbsp;D:\semestrul&nbsp;2\VHDL\ProiectReclama\VHDL&nbsp;Source\system.vhd&nbsp;has&nbsp;been&nbsp;successfully&nbsp;converted&nbsp;into&nbsp;file&nbsp;C:\Users\BEREKM~1\AppData\Local\Temp\system.lid</SPAN><BR>
+<SPAN class=Info1>&nbsp;</SPAN><BR>
+<SPAN class=Info1>DIAGRAM&nbsp;FILES&nbsp;GENERATION:</SPAN><BR>
+<SPAN class=Info1>&nbsp;</SPAN><BR>
+<SPAN class=Warn1>Conversion&nbsp;of&nbsp;the&nbsp;file&nbsp;D:\semestrul&nbsp;2\VHDL\ProiectReclama\VHDL&nbsp;Source\system.vhd&nbsp;to&nbsp;state&nbsp;diagram&nbsp;is&nbsp;not&nbsp;possible,&nbsp;because&nbsp;it&nbsp;does&nbsp;not&nbsp;contain&nbsp;any&nbsp;behavioural&nbsp;part&nbsp;or&nbsp;it&nbsp;contains&nbsp;structural&nbsp;part.<BR></SPAN><BR>
+<SPAN class=Info1>Generating&nbsp;temporary&nbsp;block&nbsp;diagram&nbsp;file&nbsp;C:\Users\BEREKM~1\AppData\Local\Temp\970CC8D.tmp&nbsp;...<BR></SPAN><BR>
+<SPAN class=Info1>Temporary&nbsp;block&nbsp;diagram&nbsp;file&nbsp;has&nbsp;been&nbsp;successfully&nbsp;generated.<BR></SPAN><BR>
+<SPAN class=Info1>Diagram&nbsp;file(s)&nbsp;generation&nbsp;finished&nbsp;in&nbsp;time&nbsp;0.266&nbsp;seconds.<BR></SPAN><BR>
+<SPAN class=Info onmouseup="OpenPlugIn('Aldec.BDE.7','0','D:\\semestrul 2\\VHDL\\ProiectReclama\\VHDL Source\\system.bde','','');">File&nbsp;D:\semestrul&nbsp;2\VHDL\ProiectReclama\VHDL&nbsp;Source\system.bde&nbsp;has&nbsp;been&nbsp;successfully&nbsp;generated.</SPAN><BR>
+</FONT>
+</BODY>
+
+</HTML>

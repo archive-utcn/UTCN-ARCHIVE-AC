@@ -1,0 +1,485 @@
+acom -reorder -work JK_Sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile with File Reorder...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Error: COMP96_0019: JK_SINC.vhd : (11, 1): Keyword "begin" expected.
+# Error: COMP96_0016: JK_SINC.vhd : (11, 6): Design unit declaration expected.
+# Error: COMP96_0018: JK_SINC.vhd : (21, 17): Identifier expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -work JK_Sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Error: ELAB1_0008: JK_SINC.vhd : (19, 17): Cannot read output : "Q".
+# Error: ELAB1_0008: JK_SINC.vhd : (20, 17): Cannot read output : "Q".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -work JK_Sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom -work JK_Sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Design: Design JK_Sincron already active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.2 [s].
+asim -advdataflow  jk_sinc arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1617 kB (elbread=1023 elab2=323 kernel=270 sdf=0)
+#  12:16 PM, Thursday, May 12, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: jk_sinc (arh_comp)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 5 ns
+# KERNEL: stopped at time: 105 ns
+run 5 ns
+# KERNEL: stopped at time: 110 ns
+run 5 ns
+# KERNEL: stopped at time: 115 ns
+run 5 ns
+# KERNEL: stopped at time: 120 ns
+run 5 ns
+# KERNEL: stopped at time: 125 ns
+run 5 ns
+# KERNEL: stopped at time: 130 ns
+run 5 ns
+# KERNEL: stopped at time: 135 ns
+run 5 ns
+# KERNEL: stopped at time: 140 ns
+run 5 ns
+# KERNEL: stopped at time: 145 ns
+run 5 ns
+# KERNEL: stopped at time: 150 ns
+run 5 ns
+# KERNEL: stopped at time: 155 ns
+run 2 ns
+# KERNEL: stopped at time: 157 ns
+run 2 ns
+# KERNEL: stopped at time: 159 ns
+run 2 ns
+# KERNEL: stopped at time: 161 ns
+run 2 ns
+# KERNEL: stopped at time: 163 ns
+run 5 ns
+# KERNEL: stopped at time: 168 ns
+run 5 ns
+# KERNEL: stopped at time: 173 ns
+run 5 ns
+# KERNEL: stopped at time: 178 ns
+run 5 ns
+# KERNEL: stopped at time: 183 ns
+run 5 ns
+# KERNEL: stopped at time: 188 ns
+run 5 ns
+# KERNEL: stopped at time: 193 ns
+run 5 ns
+# KERNEL: stopped at time: 198 ns
+run 5 ns
+# KERNEL: stopped at time: 203 ns
+run 5 ns
+# KERNEL: stopped at time: 208 ns
+run 5 ns
+# KERNEL: stopped at time: 213 ns
+run 5 ns
+# KERNEL: stopped at time: 218 ns
+endsim
+#  Simulation has been stopped
+asim -advdataflow  jk_sinc arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1617 kB (elbread=1023 elab2=323 kernel=270 sdf=0)
+#  12:17 PM, Thursday, May 12, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: jk_sinc (arh_comp)
+run 5 ns
+# KERNEL: stopped at time: 5 ns
+run 5 ns
+# KERNEL: stopped at time: 10 ns
+run 5 ns
+# KERNEL: stopped at time: 15 ns
+run 5 ns
+# KERNEL: stopped at time: 20 ns
+run 5 ns
+# KERNEL: stopped at time: 25 ns
+run 5 ns
+# KERNEL: stopped at time: 30 ns
+run 5 ns
+# KERNEL: stopped at time: 35 ns
+run 5 ns
+# KERNEL: stopped at time: 40 ns
+run 5 ns
+# KERNEL: stopped at time: 45 ns
+run 5 ns
+# KERNEL: stopped at time: 50 ns
+run 5 ns
+# KERNEL: stopped at time: 55 ns
+run 5 ns
+# KERNEL: stopped at time: 60 ns
+run 5 ns
+# KERNEL: stopped at time: 65 ns
+run 5 ns
+# KERNEL: stopped at time: 70 ns
+run 5 ns
+# KERNEL: stopped at time: 75 ns
+run 5 ns
+# KERNEL: stopped at time: 80 ns
+run 5 ns
+# KERNEL: stopped at time: 85 ns
+run 5 ns
+# KERNEL: stopped at time: 90 ns
+run 5 ns
+# KERNEL: stopped at time: 95 ns
+run 5 ns
+# KERNEL: stopped at time: 100 ns
+run 5 ns
+# KERNEL: stopped at time: 105 ns
+run 5 ns
+# KERNEL: stopped at time: 110 ns
+run 5 ns
+# KERNEL: stopped at time: 115 ns
+run 5 ns
+# KERNEL: stopped at time: 120 ns
+endsim
+#  Simulation has been stopped
+acom -work JK_Sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -work JK_Sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Error: COMP96_0018: JK_SINC.vhd : (8, 1): Identifier expected.
+# Error: COMP96_0015: JK_SINC.vhd : (8, 1): ')' expected.
+# Error: COMP96_0015: JK_SINC.vhd : (8, 1): ';' expected.
+# Error: COMP96_0019: JK_SINC.vhd : (8, 5): Keyword "end" expected.
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Compile failure 4 Errors 0 Warnings  Analysis time :  93.0 [ms]
+# Library Manager: Library "jk_sincron" contents cleared.
+acom -reorder -work JK_Sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile with File Reorder...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Top-level unit(s) detected:
+# Entity => JK_Sinc
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  jk_sinc arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1617 kB (elbread=1023 elab2=323 kernel=270 sdf=0)
+#  12:21 PM, Thursday, May 12, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: jk_sinc (arh_comp)
+endsim
+#  Simulation has been stopped
+asim -advdataflow  jk_sinc arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1617 kB (elbread=1023 elab2=323 kernel=270 sdf=0)
+#  12:21 PM, Thursday, May 12, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: jk_sinc (arh_comp)
+run 5 ns
+# KERNEL: stopped at time: 5 ns
+run 5 ns
+# KERNEL: stopped at time: 10 ns
+run 5 ns
+# KERNEL: stopped at time: 15 ns
+run 5 ns
+# KERNEL: stopped at time: 20 ns
+run 5 ns
+# KERNEL: stopped at time: 25 ns
+run 5 ns
+# KERNEL: stopped at time: 30 ns
+run 5 ns
+# KERNEL: stopped at time: 35 ns
+run 5 ns
+# KERNEL: stopped at time: 40 ns
+run 5 ns
+# KERNEL: stopped at time: 45 ns
+run 5 ns
+# KERNEL: stopped at time: 50 ns
+run 5 ns
+# KERNEL: stopped at time: 55 ns
+run 5 ns
+# KERNEL: stopped at time: 60 ns
+run 5 ns
+# KERNEL: stopped at time: 65 ns
+run 5 ns
+# KERNEL: stopped at time: 70 ns
+run 5 ns
+# KERNEL: stopped at time: 75 ns
+run 5 ns
+# KERNEL: stopped at time: 80 ns
+run 5 ns
+# KERNEL: stopped at time: 85 ns
+run 5 ns
+# KERNEL: stopped at time: 90 ns
+run 5 ns
+# KERNEL: stopped at time: 95 ns
+run 5 ns
+# KERNEL: stopped at time: 100 ns
+run 5 ns
+# KERNEL: stopped at time: 105 ns
+run 5 ns
+# KERNEL: stopped at time: 110 ns
+run 5 ns
+# KERNEL: stopped at time: 115 ns
+run 5 ns
+# KERNEL: stopped at time: 120 ns
+run 5 ns
+# KERNEL: stopped at time: 125 ns
+acom -work jk_sincron -2002  $DSN/src/JK_SINC.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\JK_Sincron\src\JK_SINC.vhd
+# Compile Entity "JK_Sinc"
+# Compile Architecture "ARH_COMP" of Entity "JK_Sinc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+endsim
+#  Simulation has been stopped
+asim -advdataflow  jk_sinc arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1617 kB (elbread=1023 elab2=323 kernel=270 sdf=0)
+#  12:23 PM, Thursday, May 12, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: jk_sinc (arh_comp)
+run 5 ns
+# KERNEL: stopped at time: 5 ns
+run 5 ns
+# KERNEL: stopped at time: 10 ns
+run 5 ns
+# KERNEL: stopped at time: 15 ns
+run 5 ns
+# KERNEL: stopped at time: 20 ns
+run 5 ns
+# KERNEL: stopped at time: 25 ns
+run 5 ns
+# KERNEL: stopped at time: 30 ns
+run 5 ns
+# KERNEL: stopped at time: 35 ns
+run 5 ns
+# KERNEL: stopped at time: 40 ns
+run 5 ns
+# KERNEL: stopped at time: 45 ns
+run 5 ns
+# KERNEL: stopped at time: 50 ns
+endsim
+#  Simulation has been stopped
+asim -advdataflow  jk_sinc arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1617 kB (elbread=1023 elab2=323 kernel=270 sdf=0)
+#  12:24 PM, Thursday, May 12, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: jk_sinc (arh_comp)
+run 5 ns
+# KERNEL: stopped at time: 5 ns
+run 5 ns
+# KERNEL: stopped at time: 10 ns
+run 5 ns
+# KERNEL: stopped at time: 15 ns
+run 5 ns
+# KERNEL: stopped at time: 20 ns
+run 5 ns
+# KERNEL: stopped at time: 25 ns
+run 5 ns
+# KERNEL: stopped at time: 30 ns
+run 5 ns
+# KERNEL: stopped at time: 35 ns
+run 5 ns
+# KERNEL: stopped at time: 40 ns
+run 5 ns
+# KERNEL: stopped at time: 45 ns
+run 5 ns
+# KERNEL: stopped at time: 50 ns
+run 5 ns
+# KERNEL: stopped at time: 55 ns
+run 5 ns
+# KERNEL: stopped at time: 60 ns
+run 5 ns
+# KERNEL: stopped at time: 65 ns
+run 5 ns
+# KERNEL: stopped at time: 70 ns
+run 5 ns
+# KERNEL: stopped at time: 75 ns
+run 5 ns
+# KERNEL: stopped at time: 80 ns
+run 5 ns
+# KERNEL: stopped at time: 85 ns
+run 5 ns
+# KERNEL: stopped at time: 90 ns
+run 5 ns
+# KERNEL: stopped at time: 95 ns
+run 5 ns
+# KERNEL: stopped at time: 100 ns
+run 5 ns
+# KERNEL: stopped at time: 105 ns
+run 5 ns
+# KERNEL: stopped at time: 110 ns
+run 5 ns
+# KERNEL: stopped at time: 115 ns
+run 5 ns
+# KERNEL: stopped at time: 120 ns
+run 5 ns
+# KERNEL: stopped at time: 125 ns
+run 5 ns
+# KERNEL: stopped at time: 130 ns
+run 5 ns
+# KERNEL: stopped at time: 135 ns
+run 5 ns
+# KERNEL: stopped at time: 140 ns
+run 5 ns
+# KERNEL: stopped at time: 145 ns
+run 5 ns
+# KERNEL: stopped at time: 150 ns
+run 5 ns
+# KERNEL: stopped at time: 155 ns
+run 5 ns
+# KERNEL: stopped at time: 160 ns
+run 5 ns
+# KERNEL: stopped at time: 165 ns
+run 5 ns
+# KERNEL: stopped at time: 170 ns
+run 5 ns
+# KERNEL: stopped at time: 175 ns
+run 5 ns
+# KERNEL: stopped at time: 180 ns
+run 5 ns
+# KERNEL: stopped at time: 185 ns
+run 5 ns
+# KERNEL: stopped at time: 190 ns
+run 5 ns
+# KERNEL: stopped at time: 195 ns
+run 5 ns
+# KERNEL: stopped at time: 200 ns
+run 5 ns
+# KERNEL: stopped at time: 205 ns
+run 5 ns
+# KERNEL: stopped at time: 210 ns
+run 5 ns
+# KERNEL: stopped at time: 215 ns
+run 5 ns
+# KERNEL: stopped at time: 220 ns
+run 5 ns
+# KERNEL: stopped at time: 225 ns
+run 5 ns
+# KERNEL: stopped at time: 230 ns
+run 5 ns
+# KERNEL: stopped at time: 235 ns
+run 5 ns
+# KERNEL: stopped at time: 240 ns
+run 5 ns
+# KERNEL: stopped at time: 245 ns
+run 5 ns
+# KERNEL: stopped at time: 250 ns
+run 5 ns
+# KERNEL: stopped at time: 255 ns
+run 5 ns
+# KERNEL: stopped at time: 260 ns
+run 5 ns
+# KERNEL: stopped at time: 265 ns
+run 5 ns
+# KERNEL: stopped at time: 270 ns
+run 5 ns
+# KERNEL: stopped at time: 275 ns
+run 5 ns
+# KERNEL: stopped at time: 280 ns
+run 5 ns
+# KERNEL: stopped at time: 285 ns
+run 5 ns
+# KERNEL: stopped at time: 290 ns
+run 5 ns
+# KERNEL: stopped at time: 295 ns
+run 5 ns
+# KERNEL: stopped at time: 300 ns
+run 5 ns
+# KERNEL: stopped at time: 305 ns
+run 5 ns
+# KERNEL: stopped at time: 310 ns
+run 5 ns
+# KERNEL: stopped at time: 315 ns
+run 5 ns
+# KERNEL: stopped at time: 320 ns
+endsim
+#  Simulation has been stopped
+# Design: 12:25 PM, Thursday, May 12, 2011
+# Design: Opening design "c:\My_Designs\Colocviu_PSN\Numarator_binar_sincron\Numarator_binar_sincron.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "Numarator_binar_sincron" has been set as active.
+# Design Explorer: Shortcut to "c:\My_Designs\Colocviu_PSN\Colocviu_PSN.aws" design added.

@@ -1,0 +1,15 @@
+TIP_NOD *cautare (TIP_NOD *rad, int key)
+/* funcşia returneazã adresa nodului în caz de gãsire sau 0 în caz cã nu existã un nod de cheia key */
+{
+                            TIP_NOD *p;
+                             if (rad==0) return 0; /* arborele este vid */
+                             /* dacã arborele nu este vid, cãutarea începe din rãdãcina rad */
+                              p=rad;
+                              while (p!=0)
+     {
+      if (p->cheie==key) return p;           /* s-a gãsit */
+      else if (key<p->cheie) p=p->stg; /*cãutarea se face în subarb.stâng */
+       else p=p->dr; /* cãutarea se face în subarborele drept */
+    }
+   return 0; /* nu existã nod de cheie key */
+  }

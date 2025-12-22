@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\MS_Numarator_2bit\src\MS_Counter.vhd" 
+MESSAGE "Compile Entity "Numarator_2bit"" 
+MESSAGE "Compile Architecture "ARH_Counter" of Entity "Numarator_2bit"" 
+MESSAGE "Compile Entity "MS_Counter"" 
+MESSAGE "Compile Architecture "ARH_MS_COUNTER" of Entity "MS_Counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

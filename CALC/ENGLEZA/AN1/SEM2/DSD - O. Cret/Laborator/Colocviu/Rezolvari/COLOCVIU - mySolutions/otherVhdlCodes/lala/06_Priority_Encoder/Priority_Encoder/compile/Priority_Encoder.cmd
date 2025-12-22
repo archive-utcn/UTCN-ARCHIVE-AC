@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\06_Priority_Encoder\library.cfg"  -j "c:\My_Designs\06_Priority_Encoder\Priority_Encoder\projlib.cfg"  -d "c:\My_Designs\06_Priority_Encoder\Priority_Encoder\compile\"  -work Priority_Encoder -dbg -e 100 "c:\My_Designs\06_Priority_Encoder\Priority_Encoder\src\tb.vhd" 

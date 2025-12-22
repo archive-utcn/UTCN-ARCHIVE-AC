@@ -1,0 +1,3 @@
+20
+~E 1 "./src/Count_SINC.vhd" 6 counter
+~A 1 "./src/Count_SINC.vhd" 12 arh_count

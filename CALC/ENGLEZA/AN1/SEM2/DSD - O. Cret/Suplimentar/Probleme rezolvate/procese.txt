@@ -1,0 +1,59 @@
+library ieee;
+use ieee.std_logic_1164.all;  
+use ieee.std_logic_arith.all;  
+use ieee.std_logic_unsigned.all;  
+
+entity detect is
+	port(d,clk,rst:in std_logic;
+		q,nq:out std_logic_vector(3 downto 0));
+end detect;
+
+architecture A of detect is
+				
+	signal iq:std_logic_vector (3 downto 0);
+	signal iclk:std_logic;
+--1.shift register description
+
+begin
+	shift_reg:process(clk,rst)
+	variable intq:std_logic_vector (3 downto 0);   --use it only inside process
+	begin
+		if rst='1' then
+			intq:="0000";
+		else
+			if(clk'EVENT) and (clk='1')then--detects rising edge of the clk
+				for i in 0 to 2 loop --specify the shifting
+					intq(i):=intq(i+1);
+				end loop;
+				intq(3):=d;
+			end if;
+	end if;
+	iq<=intq;-- asiganre de variabila unui semnal, la procese secvential
+end process shift_reg;
+
+--2. counter description
+
+counter:process(iclk,rst)
+variable intq:std_logic_vector (3 downto 0);
+begin
+	if rst='1' then
+		intq:="0000";
+	else
+		if(clk'event) and (clk='1')then
+			intq:=intq+1;
+		end if;
+	end if;
+	q<=intq;--asignare de semnal
+end process counter;
+
+--3.and gate description for 0110
+	gate:process(iq)
+	begin
+		iclk<=not(iq(3)) and (iq(2)) and iq(1)and not (iq(0));
+	end process gate;										  
+end A;
+	
+
+	
+	
+	

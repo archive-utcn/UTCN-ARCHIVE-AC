@@ -1,0 +1,26 @@
+entity Comparator is
+	port(A,B : in Bit;
+	F1,F2,F3 : out Bit);
+end entity;
+
+architecture A_Comparator of Comparator is
+begin
+F1<=not (A xor B);
+F2<=(not A ) and B;
+F3<=A and (Not B);
+end architecture;		 
+
+entity MS_Comparator is
+end entity;
+
+architecture A_MS_Comparator of MS_Comparator is
+component Comparator is
+	port (A,B: in Bit;
+	F1,F2,F3 : out Bit);
+end component;			
+signal X,Y,Z,W,T : Bit;
+begin		  
+U: Comparator port map (X,Y,T,W,Z);
+X<='0','1' after 20ns,'0' after 40ns,'1' after 60ns;
+Y<='1','0' after 20ns,'0' after 40ns,'1' after 60ns;
+end architecture;

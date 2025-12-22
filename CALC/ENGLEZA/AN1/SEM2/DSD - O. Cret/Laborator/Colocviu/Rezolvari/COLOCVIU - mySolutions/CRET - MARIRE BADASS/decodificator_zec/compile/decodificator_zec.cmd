@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\decodificator_zec\projlib.cfg"  -d "D:\designshdl\CRET\decodificator_zec\compile\"  -work decodificator_zec -dbg -e 100 "D:\designshdl\CRET\decodificator_zec\src\decodificator_zec.vhd" 

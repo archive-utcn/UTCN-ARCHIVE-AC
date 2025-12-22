@@ -1,0 +1,835 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: Filter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Filter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Filter"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : Filter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd" in Library work.
+Architecture flash of Entity frequencydivider is up to date.
+Compiling vhdl file "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" in Library work.
+Entity <datagenerator> compiled.
+Entity <datagenerator> (Architecture <attempting2>) compiled.
+Compiling vhdl file "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Anod.vhd" in Library work.
+Architecture flash of Entity anoddevider is up to date.
+Compiling vhdl file "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Register.vhd" in Library work.
+Architecture sregister of Entity shiftregister is up to date.
+Compiling vhdl file "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" in Library work.
+Architecture attempting1 of Entity filter is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Filter> in library <work> (architecture <attempting1>).
+
+Analyzing hierarchy for entity <FrequencyDivider> in library <work> (architecture <flash>).
+
+Analyzing hierarchy for entity <DataGenerator> in library <work> (architecture <attempting2>).
+
+Analyzing hierarchy for entity <AnodDevider> in library <work> (architecture <flash>).
+
+Analyzing hierarchy for entity <ShiftRegister> in library <work> (architecture <sregister>).
+
+Analyzing hierarchy for entity <FrequencyDivider> in library <work> (architecture <flash>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Filter> in library <work> (Architecture <attempting1>).
+WARNING:Xst:1610 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 88: Width mismatch. <Sum> has a width of 12 bits but assigned expression is 8-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 107: Width mismatch. <Sum> has a width of 12 bits but assigned expression is 8-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 128: Width mismatch. <Sum> has a width of 12 bits but assigned expression is 8-bit wide.
+WARNING:Xst:1610 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 148: Width mismatch. <Sum> has a width of 12 bits but assigned expression is 8-bit wide.
+INFO:Xst:1561 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 176: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 196: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 216: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 236: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" line 156: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Anod>, <AverageTemp>, <Data>
+Entity <Filter> analyzed. Unit <Filter> generated.
+
+Analyzing Entity <FrequencyDivider> in library <work> (Architecture <flash>).
+Entity <FrequencyDivider> analyzed. Unit <FrequencyDivider> generated.
+
+Analyzing Entity <DataGenerator> in library <work> (Architecture <attempting2>).
+WARNING:Xst:819 - "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" line 24: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Reset>
+Entity <DataGenerator> analyzed. Unit <DataGenerator> generated.
+
+Analyzing Entity <AnodDevider> in library <work> (Architecture <flash>).
+Entity <AnodDevider> analyzed. Unit <AnodDevider> generated.
+
+Analyzing Entity <ShiftRegister> in library <work> (Architecture <sregister>).
+Entity <ShiftRegister> analyzed. Unit <ShiftRegister> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <FrequencyDivider>.
+    Related source file is "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd".
+    Found 1-bit register for signal <Q>.
+    Found 1-bit register for signal <N>.
+    Found 25-bit adder for signal <N$add0000> created at line 19.
+    Found 25-bit up counter for signal <QINt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <FrequencyDivider> synthesized.
+
+
+Synthesizing Unit <AnodDevider>.
+    Related source file is "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Anod.vhd".
+    Found 1-bit register for signal <Q>.
+    Found 1-bit register for signal <N>.
+    Found 15-bit up counter for signal <QInt>.
+    Found 15-bit adder for signal <QInt$addsub0000> created at line 19.
+    Found 15-bit comparator greatequal for signal <QInt$cmp_ge0000> created at line 20.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <AnodDevider> synthesized.
+
+
+Synthesizing Unit <ShiftRegister>.
+    Related source file is "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Register.vhd".
+    Found finite state machine <FSM_0> for signal <N>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Power Up State     | 1110                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <Output>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 D-type flip-flop(s).
+Unit <ShiftRegister> synthesized.
+
+
+Synthesizing Unit <DataGenerator>.
+    Related source file is "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd".
+WARNING:Xst:1781 - Signal <Student2> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <Student1> is used but never assigned. Tied to default value.
+WARNING:Xst:737 - Found 8-bit latch for signal <Q$mux0000>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 6x8-bit ROM for signal <Student1$mux0000> created at line 106.
+    Found 8-bit register for signal <Q>.
+    Found 1-bit register for signal <D0>.
+    Found 1-bit xor2 for signal <D0$xor0000> created at line 71.
+    Found 1-bit register for signal <D1>.
+    Found 1-bit register for signal <D2>.
+    Found 1-bit register for signal <D3>.
+    Found 1-bit register for signal <D4>.
+    Found 1-bit register for signal <D5>.
+    Found 1-bit register for signal <D6>.
+    Found 1-bit register for signal <D7>.
+    Found 1-bit register for signal <DD0>.
+    Found 1-bit xor2 for signal <DD0$xor0000> created at line 48.
+    Found 1-bit register for signal <DD1>.
+    Found 1-bit register for signal <DD2>.
+    Found 1-bit register for signal <DD3>.
+    Found 3-bit up counter for signal <i>.
+    Found 3-bit adder for signal <i$addsub0000> created at line 101.
+    Found 3-bit comparator greater for signal <i$cmp_gt0000> created at line 102.
+    Found 3-bit up counter for signal <k>.
+    Found 3-bit adder for signal <k$addsub0000> created at line 109.
+    Found 3-bit comparator greater for signal <k$cmp_gt0000> created at line 110.
+    Found 2-bit up counter for signal <n>.
+    Found 2-bit adder for signal <n$add0000> created at line 117.
+    Found 2-bit comparator greatequal for signal <n$cmp_ge0000> created at line 118.
+    Found 1-bit register for signal <Q0>.
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q2>.
+    Found 1-bit register for signal <Q3>.
+    Found 1-bit register for signal <Q4>.
+    Found 1-bit register for signal <Q5>.
+    Found 1-bit register for signal <Q6>.
+    Found 1-bit register for signal <Q7>.
+    Found 1-bit register for signal <QQ0>.
+    Found 1-bit register for signal <QQ1>.
+    Found 1-bit register for signal <QQ2>.
+    Found 1-bit register for signal <QQ3>.
+    Found 1-bit register for signal <x>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   3 Counter(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <DataGenerator> synthesized.
+
+
+Synthesizing Unit <Filter>.
+    Related source file is "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd".
+WARNING:Xst:646 - Signal <Sum<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Queue<14:15>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <AverageTemp>.
+    Found 112-bit register for signal <Queue<0:13>>.
+    Found 12-bit register for signal <Sum>.
+    Found 8-bit adder for signal <Sum$add0001> created at line 107.
+    Found 8-bit adder for signal <Sum$add0003> created at line 148.
+    Found 8-bit adder for signal <Sum$add0004> created at line 88.
+    Found 8-bit adder for signal <Sum$add0005> created at line 128.
+    Found 8-bit adder for signal <Sum$addsub0000> created at line 107.
+    Found 8-bit adder for signal <Sum$addsub0001> created at line 148.
+    Found 8-bit adder for signal <Sum$addsub0002> created at line 148.
+    Found 8-bit adder for signal <Sum$addsub0003> created at line 148.
+    Found 8-bit adder for signal <Sum$addsub0004> created at line 148.
+    Found 8-bit adder for signal <Sum$addsub0005> created at line 148.
+    Found 8-bit adder for signal <Sum$addsub0006> created at line 148.
+    Found 8-bit adder for signal <Sum$addsub0007> created at line 128.
+    Found 8-bit adder for signal <Sum$addsub0008> created at line 128.
+    Found 8-bit adder for signal <Sum$addsub0009> created at line 128.
+    Found 8-bit adder for signal <Sum$addsub0010> created at line 128.
+    Found 8-bit adder for signal <Sum$addsub0011> created at line 128.
+    Summary:
+	inferred 132 D-type flip-flop(s).
+	inferred  16 Adder/Subtractor(s).
+Unit <Filter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 6x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 22
+ 15-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 25-bit adder                                          : 2
+ 3-bit adder                                           : 2
+ 8-bit adder                                           : 16
+# Counters                                             : 6
+ 15-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 25-bit up counter                                     : 2
+ 3-bit up counter                                      : 2
+# Registers                                            : 56
+ 1-bit register                                        : 39
+ 12-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 15
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 4
+ 15-bit comparator greatequal                          : 1
+ 2-bit comparator greatequal                           : 1
+ 3-bit comparator greater                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Shifter/N/FSM> on signal <N[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0111  | 0111
+ 1011  | 1011
+ 1101  | 1101
+ 1110  | 1110
+-------------------
+WARNING:Xst:1293 - FF/Latch <AverageTemp_7> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_8> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_9> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_10> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_11> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Sum_0> of sequential type is unconnected in block <Filter>.
+WARNING:Xst:2677 - Node <Sum_0> of sequential type is unconnected in block <Filter>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 6x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 22
+ 15-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 25-bit adder                                          : 2
+ 3-bit adder                                           : 2
+ 8-bit adder                                           : 16
+# Counters                                             : 6
+ 15-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 25-bit up counter                                     : 2
+ 3-bit up counter                                      : 2
+# Registers                                            : 174
+ Flip-Flops                                            : 174
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 4
+ 15-bit comparator greatequal                          : 1
+ 2-bit comparator greatequal                           : 1
+ 3-bit comparator greater                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <AverageTemp_7> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_8> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_9> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_10> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sum_11> has a constant value of 0 in block <Filter>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Shifter/N_FSM_FFd1> in Unit <Filter> is equivalent to the following FF/Latch, which will be removed : <Shifter/Output_3> 
+INFO:Xst:2261 - The FF/Latch <Shifter/N_FSM_FFd2> in Unit <Filter> is equivalent to the following FF/Latch, which will be removed : <Shifter/Output_2> 
+INFO:Xst:2261 - The FF/Latch <Shifter/N_FSM_FFd3> in Unit <Filter> is equivalent to the following FF/Latch, which will be removed : <Shifter/Output_1> 
+INFO:Xst:2261 - The FF/Latch <Shifter/N_FSM_FFd4> in Unit <Filter> is equivalent to the following FF/Latch, which will be removed : <Shifter/Output_0> 
+INFO:Xst:2261 - The FF/Latch <7> in Unit <LPM_LATCH_1> is equivalent to the following 7 FFs/Latches, which will be removed : <6> <5> <4> <3> <2> <1> <0> 
+
+Optimizing unit <Filter> ...
+
+Optimizing unit <FrequencyDivider> ...
+
+Optimizing unit <DataGenerator> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Filter, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 242
+ Flip-Flops                                            : 242
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Filter.ngr
+Top Level Output File Name         : Filter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 965
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 129
+#      LUT2                        : 87
+#      LUT3                        : 102
+#      LUT4                        : 196
+#      LUT4_L                      : 4
+#      MUXCY                       : 208
+#      MUXF5                       : 28
+#      VCC                         : 1
+#      XORCY                       : 197
+# FlipFlops/Latches                : 243
+#      FD                          : 4
+#      FDC                         : 14
+#      FDCE                        : 114
+#      FDCP                        : 8
+#      FDE                         : 87
+#      FDR                         : 15
+#      LDE                         : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 8
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                      307  out of   8672     3%  
+ Number of Slice Flip Flops:            243  out of  17344     1%  
+ Number of 4 input LUTs:                530  out of  17344     3%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    250     8%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+FreqDiv/Q1                         | BUFG                      | 126   |
+Clk                                | BUFGP                     | 71    |
+Anods/Q                            | NONE(Shifter/N_FSM_FFd1)  | 4     |
+NrGen/Q_and0000(NrGen/Q_and00001:O)| NONE(*)(NrGen/Q_mux0000_7)| 1     |
+NrGen/div/Q1                       | BUFG                      | 41    |
+-----------------------------------+---------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------+------------------------+-------+
+Control Signal                         | Buffer(FF name)        | Load  |
+---------------------------------------+------------------------+-------+
+ResetF                                 | IBUF                   | 126   |
+AverageTemp<7>(XST_GND:G)              | NONE(FreqDiv/Q)        | 2     |
+NrGen/Q_0_and0000(NrGen/Q_0_and00001:O)| NONE(NrGen/Q_0)        | 1     |
+NrGen/Q_0_or0000(NrGen/Q_0_or00001:O)  | NONE(NrGen/Q_0)        | 1     |
+NrGen/Q_1_and0000(NrGen/Q_1_and00001:O)| NONE(NrGen/Q_1)        | 1     |
+NrGen/Q_1_or0000(NrGen/Q_1_or00001:O)  | NONE(NrGen/Q_1)        | 1     |
+NrGen/Q_2_and0000(NrGen/Q_2_and00001:O)| NONE(NrGen/Q_2)        | 1     |
+NrGen/Q_2_or0000(NrGen/Q_2_or00001:O)  | NONE(NrGen/Q_2)        | 1     |
+NrGen/Q_3_and0000(NrGen/Q_3_and00001:O)| NONE(NrGen/Q_3)        | 1     |
+NrGen/Q_3_or0000(NrGen/Q_3_or00002:O)  | NONE(NrGen/Q_3)        | 1     |
+NrGen/Q_4_and0000(NrGen/Q_4_and00001:O)| NONE(NrGen/Q_4)        | 1     |
+NrGen/Q_4_or0000(NrGen/Q_4_or00001:O)  | NONE(NrGen/Q_4)        | 1     |
+NrGen/Q_5_and0000(NrGen/Q_5_and00001:O)| NONE(NrGen/Q_5)        | 1     |
+NrGen/Q_5_or0000(NrGen/Q_5_or00001:O)  | NONE(NrGen/Q_5)        | 1     |
+NrGen/Q_6_and0000(NrGen/Q_6_and00001:O)| NONE(NrGen/Q_6)        | 1     |
+NrGen/Q_6_or0000(NrGen/Q_6_or00001:O)  | NONE(NrGen/Q_6)        | 1     |
+NrGen/Q_7_and0000(NrGen/Q_7_and00001:O)| NONE(NrGen/Q_7)        | 1     |
+NrGen/Q_7_or0000(NrGen/Q_7_or00001:O)  | NONE(NrGen/Q_7)        | 1     |
+---------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 19.798ns (Maximum Frequency: 50.510MHz)
+   Minimum input arrival time before clock: 6.449ns
+   Maximum output required time after clock: 8.806ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FreqDiv/Q1'
+  Clock period: 19.798ns (frequency: 50.510MHz)
+  Total number of paths / destination ports: 343631 / 118
+-------------------------------------------------------------------------
+Delay:               19.798ns (Levels of Logic = 22)
+  Source:            Queue_1_0 (FF)
+  Destination:       Sum_7 (FF)
+  Source Clock:      FreqDiv/Q1 rising
+  Destination Clock: FreqDiv/Q1 rising
+
+  Data Path: Queue_1_0 to Sum_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.706  Queue_1_0 (Queue_1_0)
+     LUT1:I0->O            1   0.704   0.000  Madd_Sum_addsub0008_Madd_cy<0>_rt (Madd_Sum_addsub0008_Madd_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_Sum_addsub0008_Madd_cy<0> (Madd_Sum_addsub0008_Madd_cy<0>)
+     XORCY:CI->O           3   0.804   0.566  Madd_Sum_addsub0008_Madd_xor<1> (Sum_addsub0008<1>)
+     LUT3:I2->O            1   0.704   0.000  Madd_Sum_addsub0010R4 (Madd_Sum_addsub0010R)
+     MUXCY:S->O            1   0.464   0.000  Madd_Sum_addsub0010_Madd_cy<1> (Madd_Sum_addsub0010_Madd_cy<1>)
+     XORCY:CI->O           3   0.804   0.535  Madd_Sum_addsub0010_Madd_xor<2> (Sum_addsub0010<2>)
+     LUT4:I3->O            1   0.704   0.000  Madd_Sum_add0005_Madd_lut<2> (Madd_Sum_add0005_Madd_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  Madd_Sum_add0005_Madd_cy<2> (Madd_Sum_add0005_Madd_cy<2>)
+     XORCY:CI->O           4   0.804   0.591  Madd_Sum_add0005_Madd_xor<3> (Sum_add0005<3>)
+     LUT4:I3->O            1   0.704   0.000  Madd_Sum_addsub0002_Madd_lut<3> (Madd_Sum_addsub0002_Madd_lut<3>)
+     MUXCY:S->O            1   0.464   0.000  Madd_Sum_addsub0002_Madd_cy<3> (Madd_Sum_addsub0002_Madd_cy<3>)
+     XORCY:CI->O           3   0.804   0.535  Madd_Sum_addsub0002_Madd_xor<4> (Sum_addsub0002<4>)
+     LUT4:I3->O            1   0.704   0.000  Madd_Sum_addsub0004_Madd_lut<4> (Madd_Sum_addsub0004_Madd_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  Madd_Sum_addsub0004_Madd_cy<4> (Madd_Sum_addsub0004_Madd_cy<4>)
+     XORCY:CI->O           3   0.804   0.535  Madd_Sum_addsub0004_Madd_xor<5> (Sum_addsub0004<5>)
+     LUT4:I3->O            1   0.704   0.000  Madd_Sum_addsub0006_Madd_lut<5> (Madd_Sum_addsub0006_Madd_lut<5>)
+     MUXCY:S->O            1   0.464   0.000  Madd_Sum_addsub0006_Madd_cy<5> (Madd_Sum_addsub0006_Madd_cy<5>)
+     XORCY:CI->O           1   0.804   0.499  Madd_Sum_addsub0006_Madd_xor<6> (Sum_addsub0006<6>)
+     LUT2:I1->O            1   0.704   0.000  Madd_Sum_add0003_lut<6> (Madd_Sum_add0003_lut<6>)
+     MUXCY:S->O            0   0.464   0.000  Madd_Sum_add0003_cy<6> (Madd_Sum_add0003_cy<6>)
+     XORCY:CI->O           1   0.804   0.424  Madd_Sum_add0003_xor<7> (Sum_add0003<7>)
+     LUT4:I3->O            1   0.704   0.000  Sum_mux0000<7>39 (Sum_mux0000<7>)
+     FDC:D                     0.308          Sum_7
+    ----------------------------------------
+    Total                     19.798ns (15.407ns logic, 4.391ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 8.870ns (frequency: 112.744MHz)
+  Total number of paths / destination ports: 20264 / 92
+-------------------------------------------------------------------------
+Delay:               8.870ns (Levels of Logic = 28)
+  Source:            FreqDiv/QINt_1 (FF)
+  Destination:       FreqDiv/QINt_24 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: FreqDiv/QINt_1 to FreqDiv/QINt_24
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   0.622  FreqDiv/QINt_1 (FreqDiv/QINt_1)
+     LUT1:I0->O            1   0.704   0.000  FreqDiv/Madd_N_add0000_cy<1>_rt (FreqDiv/Madd_N_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  FreqDiv/Madd_N_add0000_cy<1> (FreqDiv/Madd_N_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<2> (FreqDiv/Madd_N_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<3> (FreqDiv/Madd_N_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<4> (FreqDiv/Madd_N_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<5> (FreqDiv/Madd_N_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<6> (FreqDiv/Madd_N_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<7> (FreqDiv/Madd_N_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<8> (FreqDiv/Madd_N_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<9> (FreqDiv/Madd_N_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<10> (FreqDiv/Madd_N_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<11> (FreqDiv/Madd_N_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<12> (FreqDiv/Madd_N_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<13> (FreqDiv/Madd_N_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<14> (FreqDiv/Madd_N_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<15> (FreqDiv/Madd_N_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<16> (FreqDiv/Madd_N_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<17> (FreqDiv/Madd_N_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<18> (FreqDiv/Madd_N_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<19> (FreqDiv/Madd_N_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<20> (FreqDiv/Madd_N_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Madd_N_add0000_cy<21> (FreqDiv/Madd_N_add0000_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  FreqDiv/Madd_N_add0000_xor<22> (FreqDiv/N_add0000<22>)
+     LUT4:I0->O            1   0.704   0.000  FreqDiv/Q_cmp_eq0000_wg_lut<4> (FreqDiv/Q_cmp_eq0000_wg_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  FreqDiv/Q_cmp_eq0000_wg_cy<4> (FreqDiv/Q_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  FreqDiv/Q_cmp_eq0000_wg_cy<5> (FreqDiv/Q_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O          27   0.331   1.340  FreqDiv/Q_cmp_eq0000_wg_cy<6> (FreqDiv/N_and0000)
+     LUT2:I1->O            1   0.704   0.000  FreqDiv/Mcount_QINt_eqn_91 (FreqDiv/Mcount_QINt_eqn_9)
+     FDE:D                     0.308          FreqDiv/QINt_9
+    ----------------------------------------
+    Total                      8.870ns (6.313ns logic, 2.557ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Anods/Q'
+  Clock period: 2.063ns (frequency: 484.731MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               2.063ns (Levels of Logic = 0)
+  Source:            Shifter/N_FSM_FFd1 (FF)
+  Destination:       Shifter/N_FSM_FFd4 (FF)
+  Source Clock:      Anods/Q rising
+  Destination Clock: Anods/Q rising
+
+  Data Path: Shifter/N_FSM_FFd1 to Shifter/N_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              22   0.591   1.164  Shifter/N_FSM_FFd1 (Shifter/N_FSM_FFd1)
+     FD:D                      0.308          Shifter/N_FSM_FFd4
+    ----------------------------------------
+    Total                      2.063ns (0.899ns logic, 1.164ns route)
+                                       (43.6% logic, 56.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'NrGen/div/Q1'
+  Clock period: 2.976ns (frequency: 336.021MHz)
+  Total number of paths / destination ports: 51 / 34
+-------------------------------------------------------------------------
+Delay:               2.976ns (Levels of Logic = 1)
+  Source:            NrGen/n_0 (FF)
+  Destination:       NrGen/x (FF)
+  Source Clock:      NrGen/div/Q1 rising
+  Destination Clock: NrGen/div/Q1 rising
+
+  Data Path: NrGen/n_0 to NrGen/x
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.591   0.706  NrGen/n_0 (NrGen/n_0)
+     LUT4:I0->O            1   0.704   0.420  NrGen/x_and0000 (NrGen/x_and0000)
+     FDE:CE                    0.555          NrGen/x
+    ----------------------------------------
+    Total                      2.976ns (1.850ns logic, 1.126ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FreqDiv/Q1'
+  Total number of paths / destination ports: 233 / 134
+-------------------------------------------------------------------------
+Offset:              6.449ns (Levels of Logic = 4)
+  Source:            Length<2> (PAD)
+  Destination:       Sum_1 (FF)
+  Destination Clock: FreqDiv/Q1 rising
+
+  Data Path: Length<2> to Sum_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           145   1.218   1.473  Length_2_IBUF (Length_2_IBUF)
+     LUT2:I0->O            7   0.704   0.743  Sum_mux0000<1>21 (N5)
+     LUT4:I2->O            1   0.704   0.595  Sum_mux0000<1>12 (Sum_mux0000<1>12)
+     LUT4:I0->O            1   0.704   0.000  Sum_mux0000<1>39 (Sum_mux0000<1>)
+     FDC:D                     0.308          Sum_1
+    ----------------------------------------
+    Total                      6.449ns (3.638ns logic, 2.811ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'NrGen/Q_and0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.841ns (Levels of Logic = 1)
+  Source:            Control<0> (PAD)
+  Destination:       NrGen/Q_mux0000_7 (LATCH)
+  Destination Clock: NrGen/Q_and0000 falling
+
+  Data Path: Control<0> to NrGen/Q_mux0000_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.218   1.068  Control_0_IBUF (Control_0_IBUF)
+     LDE:GE                    0.555          NrGen/Q_mux0000_7
+    ----------------------------------------
+    Total                      2.841ns (1.773ns logic, 1.068ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'NrGen/div/Q1'
+  Total number of paths / destination ports: 132 / 33
+-------------------------------------------------------------------------
+Offset:              5.452ns (Levels of Logic = 3)
+  Source:            Control<1> (PAD)
+  Destination:       NrGen/x (FF)
+  Destination Clock: NrGen/div/Q1 rising
+
+  Data Path: Control<1> to NrGen/x
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            24   1.218   1.427  Control_1_IBUF (Control_1_IBUF)
+     LUT3:I0->O            1   0.704   0.424  NrGen/x_and0000_SW0 (N7)
+     LUT4:I3->O            1   0.704   0.420  NrGen/x_and0000 (NrGen/x_and0000)
+     FDE:CE                    0.555          NrGen/x
+    ----------------------------------------
+    Total                      5.452ns (3.181ns logic, 2.271ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Anods/Q'
+  Total number of paths / destination ports: 69 / 11
+-------------------------------------------------------------------------
+Offset:              7.946ns (Levels of Logic = 4)
+  Source:            Shifter/N_FSM_FFd1 (FF)
+  Destination:       NumberOut<6> (PAD)
+  Source Clock:      Anods/Q rising
+
+  Data Path: Shifter/N_FSM_FFd1 to NumberOut<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              22   0.591   1.339  Shifter/N_FSM_FFd1 (Shifter/N_FSM_FFd1)
+     LUT4:I0->O            1   0.704   0.595  NumberOut<6>255 (NumberOut<6>255)
+     LUT3:I0->O            1   0.704   0.000  NumberOut<6>343_G (N187)
+     MUXF5:I1->O           1   0.321   0.420  NumberOut<6>343 (NumberOut_6_OBUF)
+     OBUF:I->O                 3.272          NumberOut_6_OBUF (NumberOut<6>)
+    ----------------------------------------
+    Total                      7.946ns (5.592ns logic, 2.354ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FreqDiv/Q1'
+  Total number of paths / destination ports: 49 / 7
+-------------------------------------------------------------------------
+Offset:              8.730ns (Levels of Logic = 5)
+  Source:            AverageTemp_3 (FF)
+  Destination:       NumberOut<6> (PAD)
+  Source Clock:      FreqDiv/Q1 rising
+
+  Data Path: AverageTemp_3 to NumberOut<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.591   0.995  AverageTemp_3 (AverageTemp_3)
+     LUT4:I0->O            1   0.704   0.424  NumberOut<6>255_SW0 (N158)
+     LUT4:I3->O            1   0.704   0.595  NumberOut<6>255 (NumberOut<6>255)
+     LUT3:I0->O            1   0.704   0.000  NumberOut<6>343_G (N187)
+     MUXF5:I1->O           1   0.321   0.420  NumberOut<6>343 (NumberOut_6_OBUF)
+     OBUF:I->O                 3.272          NumberOut_6_OBUF (NumberOut<6>)
+    ----------------------------------------
+    Total                      8.730ns (6.296ns logic, 2.434ns route)
+                                       (72.1% logic, 27.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'NrGen/div/Q1'
+  Total number of paths / destination ports: 56 / 7
+-------------------------------------------------------------------------
+Offset:              8.806ns (Levels of Logic = 5)
+  Source:            NrGen/Q_2 (FF)
+  Destination:       NumberOut<6> (PAD)
+  Source Clock:      NrGen/div/Q1 rising
+
+  Data Path: NrGen/Q_2 to NumberOut<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q            12   0.591   1.136  NrGen/Q_2 (NrGen/Q_2)
+     LUT4:I0->O            1   0.704   0.499  NumberOut<6>116 (NumberOut<6>116)
+     LUT4:I1->O            1   0.704   0.455  NumberOut<6>157 (NumberOut<6>157)
+     LUT3:I2->O            1   0.704   0.000  NumberOut<6>343_G (N187)
+     MUXF5:I1->O           1   0.321   0.420  NumberOut<6>343 (NumberOut_6_OBUF)
+     OBUF:I->O                 3.272          NumberOut_6_OBUF (NumberOut<6>)
+    ----------------------------------------
+    Total                      8.806ns (6.296ns logic, 2.510ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.30 secs
+ 
+--> 
+
+Total memory usage is 156060 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

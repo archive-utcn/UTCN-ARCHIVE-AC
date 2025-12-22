@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\comparator_data_flow\projlib.cfg"  -d "D:\designshdl\CRET\comparator_data_flow\compile\"  -work comparator_data_flow -dbg -e 100 "D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd" 

@@ -1,0 +1,2 @@
+atmel_averager = ".\Atmel_averager.LIB" 1024581250720
+Atmel_averager_timing = ".\Atmel_averager_timing\Atmel_averager_timing.lib" 1024581257328

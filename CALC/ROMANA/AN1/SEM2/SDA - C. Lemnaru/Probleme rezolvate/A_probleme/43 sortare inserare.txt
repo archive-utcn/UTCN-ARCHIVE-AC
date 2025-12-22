@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+int a[100];
+
+void creare(int n,int a[])
+{
+    int i;
+    printf("Introduceti elementele:\n");
+    for(i=1;i<=n;i++)
+    scanf("%d",&a[i]);
+}
+
+void afisare(int n,int a[])
+{
+    int i;
+    for(i=1;i<=n;i++)
+    printf("%d ",a[i]);
+}
+
+void sortare(int n, int a[])
+{
+    int i,j,x;
+    for(j=1;j<=n;j++)
+    {
+        x=a[j];
+        i=j-1;
+        while((i>=0) && (x<a[i]))
+        {
+            a[i+1]=a[i];
+            i=i-1;
+        }
+        a[i+1]=x;
+    }
+
+}
+
+int main()
+{
+    int n;
+    printf("Elemente vector: ");
+    scanf("%d",&n);
+
+    creare(n,a);
+    afisare(n,a);
+    sortare(n,a);
+    printf("\n");
+    afisare(n,a);
+
+    return 0;
+}

@@ -1,0 +1,39 @@
+timestamp=1097050461748
+
+[c2or]
+A/c2or=A/C2OR 24|.\src\c2or.bde|10000|
+S/c2or=S/C2OR 40|0|2*0
+
+[crv]
+A/crv=A/CRV 24|.\src\crv.bde|10000|
+S/crv=S/CRV 40|0|2*2346
+
+[filter]
+A/filter=24|.\src\filter.bde|10000|
+
+[oscil]
+A/oscil=A/OSCIL 24|.\src\oscil.bde|10000|
+S/oscil=S/OSCIL 40|0|2*4252
+
+[pfdiv]
+A/pfdiv=A/PFDIV 24|.\src\pfdiv.bde|10000|
+S/pfdiv=S/PFDIV 40|0|2*6601
+
+[~A]
+./src/TB_vhd/filter_TB.vhd~FILTER_functional_tb=0*0*246
+./src/TB_vhd/filter_TB.vhd~TB_ARCHITECTUREFILTER_functional_tb=0*333*1824
+./src/TB_vhd/filter_TB.vhd~TESTBENCH_FOR_FILTER_FUNCTIONALFILTER_functional_tb=0*1926*2224
+ModifyID=47
+Version=73
+
+[~MFT]
+0=0|0filter_bde.mgf|3068|0
+2=0|2filter_bde.mgf|6601|0
+
+[~U]
+c2or=C2OR 13|0*2342||0x3
+crv=CRV 13|0*2516||0x3
+filter=13|0*2680|
+oscil=OSCIL 13|0*2888||0x3
+pfdiv=PFDIV 13|0*3068||0x3
+

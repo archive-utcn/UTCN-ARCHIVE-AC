@@ -1,0 +1,9 @@
+[View]
+Entity=test
+Architecture=behavioral
+TopLevelType=1
+[file:.\src\segmente.vhd]
+File Time Lo=-847236312
+File Time Hi=30146071
+Enabled=1
+State=Compiled

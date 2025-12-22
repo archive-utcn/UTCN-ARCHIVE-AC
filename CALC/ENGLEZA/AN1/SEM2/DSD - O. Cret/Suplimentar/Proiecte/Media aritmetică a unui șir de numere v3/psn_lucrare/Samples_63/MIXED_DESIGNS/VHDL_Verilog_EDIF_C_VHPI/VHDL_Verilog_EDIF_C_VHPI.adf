@@ -1,0 +1,140 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=VHDL_Verilog_EDIF_C_VHPI
+
+[Library]
+VHDL_Verilog_EDIF_C_VHPI=.\VHDL_Verilog_EDIF_C_VHPI.lib
+
+[$LibMap$]
+VHDL_Verilog_EDIF_C_VHPI=.
+Active_lib=VIRTEX
+xilinxun=VIRTEX
+UnlinkedDesignLibrary=VIRTEX
+DESIGNS=VIRTEX
+
+[settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+CDebugMacro=$DSN\compile\run_cdebug.do
+WireDelay=2
+NoTchkMsg=0
+NoTimingChecks=0
+HESPrepare=0
+StackMemorySize=32
+RetvalMemorySize=32
+RetriesNumber=3
+EnableCallbacks=0
+VitalAccel=1
+CBS=0
+CSYNTH_TOOL=<none>
+Celoxica=0
+UseCeloxica=0
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+SYNTH_STATUS=NONE
+IMPL_STATUS=NONE
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+FAMILY=
+DEVICE=
+SPEED=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\nosrc\projects50\MIXED_DESIGNS\VHDL_Verilog_EDIF_C_VHPI\
+Extension3=mak
+Name4=Memory
+Directory4=c:\nosrc\projects50\MIXED_DESIGNS\VHDL_Verilog_EDIF_C_VHPI\src
+Extension4=mem;mif;hex
+
+[sdf.ea.oscil_c_vhpi-oscil_c_vhpi]
+SdfNoWarn=0
+IVG=0
+
+[LocalVerilogSets]
+ContinuousCompilation=1
+Strict=0
+Strict2001=1
+Force=0
+AlphabeticOrderMode=0
+ErrorOutputLimit=0
+WarningPrnLevel=1
+OptimizationLevel=2
+EnableDebug=1
+
+[Verilog Library]
+ovi_lpm=
+
+[SYNTHESIS]
+CeloxicaPath=
+FAMILY=
+
+[ORDER]
+Synchronize=1
+
+[Groups]
+VHPI=1
+Testbench=1
+C-Debug=1
+
+[Files]
+/and2.v=-1
+/and3.v=-1
+/and4.v=-1
+/c2or.vhd=-1
+/cb4ce.vhd=-1
+/pfdiv.vhd=-1
+/oscil_c_vhpi.vhd=-1
+/crv.bde=-1
+/filter.bde=-1
+/vhpiuser_aldec.dlm=-1
+/readme.txt=-1
+VHPI/vhpiuser_aldec.c=-1
+VHPI/oscil_c_vhpi.h=-1
+VHPI/oscil_c_vhpi.c=-1
+Testbench/run_functional.do=-1
+Testbench/filter_tb.vhd=-1
+C-Debug/Initialize_c_code_debug.do=-1
+C-Debug/GDB_command_usage.do=-1
+
+[Files.Data]
+.\src\and2.v=Verilog Source Code
+.\src\and3.v=Verilog Source Code
+.\src\and4.v=Verilog Source Code
+.\src\c2or.vhd=VHDL Source Code
+.\src\cb4ce.vhd=VHDL Source Code
+.\src\pfdiv.vhd=VHDL Source Code
+.\src\oscil_c_vhpi.vhd=VHDL Source Code
+.\src\crv.bde=Block Diagram
+.\src\filter.bde=Block Diagram
+.\src\vhpiuser_aldec.dlm=C/C++ Configuration
+.\src\readme.txt=Text File
+.\src\VHPI\vhpiuser_aldec.c=C++ Source Code
+.\src\VHPI\oscil_c_vhpi.h=C++ Source Code
+.\src\VHPI\oscil_c_vhpi.c=C++ Source Code
+.\src\Testbench\run_functional.do=Macro
+.\src\Testbench\filter_tb.vhd=VHDL Source Code
+.\src\C-Debug\Initialize_c_code_debug.do=Macro
+.\src\C-Debug\GDB_command_usage.do=Macro
+

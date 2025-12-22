@@ -1,0 +1,35 @@
+[cnt_4b]
+A/cnt_4b=A/CNT_4B 21|./src/cnt_4b.vhd|15|
+S/cnt_4b=S/CNT_4B 40|0|2*0
+
+[cnt_bcd]
+A/cnt_bcd=A/CNT_BCD 24|.\src\CNT_BCD.bde|10000|
+A/cnt_bcd2=A/CNT_BCD2 24|.\src\CNT_BCD2.bde|10000|
+S/cnt_bcd=S/CNT_BCD 40|0|2*2495
+
+[control]
+A/control_arch=23|.\src\CONTROL.asf|10000|
+S/control=S/CONTROL 40|0|2*5921
+
+[freq_top]
+A/freq_top=24|.\src\freq_top.bde|10000|
+
+[hex2led]
+A/hex2led=21|./src/hex2led.vhd|23|
+S/hex2led=40|0|2*8427
+
+[~A]
+ModifyID=83
+Version=73
+
+[~MFT]
+0=0|0freq_meter.mgf|1050|1
+2=0|2freq_meter.mgf|8427|1
+
+[~U]
+cnt_4b=CNT_4B 11|0*0||3
+cnt_bcd=CNT_BCD 11|0*209||7
+control=11|0*506||7
+freq_top=11|0*719|
+hex2led=11|0*1050||3
+

@@ -1,0 +1,355 @@
+acom -reorder $DSN/src/MS_JK_FF.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Error: COMP96_0019: MS_JK_FF.vhd : (54, 5): Keyword "component" expected.
+# Error: COMP96_0033: MS_JK_FF.vhd : (60, 32): Missing actual.
+# Top-Level unit detected
+# Entity  =>   JK_FF
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Error: COMP96_0019: MS_JK_FF.vhd : (54, 5): Keyword "component" expected.
+# Error: COMP96_0033: MS_JK_FF.vhd : (60, 32): Missing actual.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Error: COMP96_0111: MS_JK_FF.vhd : (54, 15): Labels do not match.
+# Error: COMP96_0033: MS_JK_FF.vhd : (60, 32): Missing actual.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Error: COMP96_0033: MS_JK_FF.vhd : (60, 32): Missing actual.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Warning: DAGGEN_0001: MS_JK_FF.vhd : (61, 0): Process without explicit or implicit wait statement - possible infinite loop.
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  ms_jk_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:11 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:11 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:12 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  ms_jk_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:12 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:12 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Error: DAGGEN_0004: MS_JK_FF.vhd : (66, 36): Next waveform time expression is equal to or less than the current one.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  ms_jk_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:18 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:18 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Error: DAGGEN_0004: MS_JK_FF.vhd : (66, 36): Next waveform time expression is equal to or less than the current one.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  ms_jk_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:20 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:20 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  ms_jk_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:20 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/MS_JK_FF.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_JK_FF\src\MS_JK_FF.vhd
+# Compile Entity "JK_FF"
+# Entity `JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "JK_FF"
+# Compile Entity "MS_JK_FF"
+# Entity `MS_JK_FF' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_JK_FF"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  ms_jk_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 1:22 AM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_jk_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# Simulation has been stopped
+# Design: Design "MS_COMPARATOR_1BIT" has been set as active.

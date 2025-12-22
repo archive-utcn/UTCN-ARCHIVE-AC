@@ -1,0 +1,50 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=ram_memory
+
+[Library]
+ram_memory=.\ram_memory.lib
+
+[$LibMap$]
+ram_memory=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\counter\ram_memory\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\counter\ram_memory\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\counter\ram_memory\
+Extension5=dll
+
+[Files]
+/ram_memory.vhd=-1
+
+[Files.Data]
+.\src\ram_memory.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=memorie_ram|arhram|0   
+ShowHide=ShowTopLevel
+Selected=

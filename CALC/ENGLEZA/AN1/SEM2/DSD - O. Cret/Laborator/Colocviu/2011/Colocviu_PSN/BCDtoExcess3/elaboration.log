@@ -1,0 +1,19 @@
+elbread.dll ver. 1.0.5.375 Thu May 12 19:14:08 2011
+
+
+----------------------------------------
+Entity     | Architecture | Library   
+----------------------------------------
+convertor  | arh_struc    | bcdtoexcess3
+add3       | arh_add3     | bcdtoexcess3
+----------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+textio              | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

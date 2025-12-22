@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1302852327 source:c:\codeblocks\graf_tema\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

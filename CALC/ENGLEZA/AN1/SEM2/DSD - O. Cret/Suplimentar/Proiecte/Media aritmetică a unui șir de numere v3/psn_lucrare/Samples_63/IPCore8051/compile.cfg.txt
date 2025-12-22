@@ -1,0 +1,164 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\readme.txt]
+File Time Hi=29603067
+File Time Lo=253203590
+Enabled=1
+[file:.\src\Fpga.bde]
+File Time Hi=29603067
+File Time Lo=250703718
+STATE=Compiled
+Enabled=1
+[file:.\src\A8051_exp.bde]
+File Time Hi=29603068
+File Time Lo=227548944
+STATE=Compiled
+Enabled=1
+[file:.\src\Fpga_post_synth.vhd]
+File Time Hi=29603067
+File Time Lo=252578622
+STATE=Compiled
+Enabled=1
+[file:.\src\Fpga_post_P&R.vhd]
+File Time Hi=29603067
+File Time Lo=252266138
+STATE=Compiled
+Enabled=1
+[file:.\src\Fpga.sdf]
+File Time Hi=29603067
+File Time Lo=251797412
+Enabled=1
+[file:.\src\Fpga.edf]
+File Time Hi=29603067
+File Time Lo=251328686
+STATE=Compiled
+Enabled=1
+[file:.\src\8051\registers.vhd]
+File Time Hi=29603067
+File Time Lo=254922252
+STATE=Compiled
+Enabled=1
+[file:.\src\8051\InternalProgramMemory.vhd]
+File Time Hi=29603067
+File Time Lo=254609768
+STATE=Compiled
+Enabled=1
+[file:.\src\8051\Timers.VHD]
+File Time Hi=29603067
+File Time Lo=255078494
+STATE=Compiled
+Enabled=1
+[file:.\src\8051\Console.vhd]
+File Time Hi=29603067
+File Time Lo=254297284
+STATE=Compiled
+Enabled=1
+[file:.\src\8051\AL8051.vhd]
+File Time Hi=29603067
+File Time Lo=253984800
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\Types.vhd]
+File Time Hi=29603067
+File Time Lo=260234480
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\display.vhd]
+File Time Hi=29603067
+File Time Lo=257578366
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\keyboard.vhd]
+File Time Hi=29603067
+File Time Lo=258359576
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\pr_sr_register.vhd]
+File Time Hi=29603067
+File Time Lo=259297028
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\ram.vhd]
+File Time Hi=29603067
+File Time Lo=259921996
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\Latch.vhd]
+File Time Hi=29603067
+File Time Lo=258672060
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\TestBench\display_TB.vhd]
+File Time Hi=29603067
+File Time Lo=260859448
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\TestBench\display_TB_runtest.do]
+File Time Hi=29603067
+File Time Lo=261015690
+Enabled=1
+[file:.\src\Devices\TestBench\keyboard_TB.vhd]
+File Time Hi=29603067
+File Time Lo=261328174
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\TestBench\keyboard_TB_runtest.do]
+File Time Hi=29603067
+File Time Lo=261484416
+Enabled=1
+[file:.\src\Devices\TestBench\pr_sr_register_TB.vhd]
+File Time Hi=29603067
+File Time Lo=262265626
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\TestBench\pr_sr_register_TB_runtest.do]
+File Time Hi=29603067
+File Time Lo=262421868
+Enabled=1
+[file:.\src\Devices\TestBench\ram_TB.vhd]
+File Time Hi=29603067
+File Time Lo=262734352
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\TestBench\ram_TB_runtest.do]
+File Time Hi=29603067
+File Time Lo=262890594
+Enabled=1
+[file:.\src\Devices\TestBench\Latch_TB.vhd]
+File Time Hi=29603067
+File Time Lo=261796900
+STATE=Compiled
+Enabled=1
+[file:.\src\Devices\TestBench\Latch_TB_runtest.do]
+File Time Hi=29603067
+File Time Lo=261953142
+Enabled=1
+[file:.\src\TestBench\A8051_exp_TB.vhd]
+File Time Hi=29603067
+File Time Lo=263203078
+STATE=Compiled
+Enabled=1
+[file:.\src\TestBench\A8051_exp_TB_post_synth_cfg.vhd]
+File Time Hi=29603067
+File Time Lo=264140530
+STATE=Compiled
+Enabled=1
+[file:.\src\TestBench\A8051_exp_TB_timing_cfg.vhd]
+File Time Hi=29603067
+File Time Lo=264609256
+STATE=Compiled
+Enabled=1
+[file:.\src\TestBench\A8051_exp_TB_behavior.do]
+File Time Hi=29603067
+File Time Lo=263515562
+Enabled=1
+[file:.\src\TestBench\A8051_exp_TB_post_synth.do]
+File Time Hi=29603067
+File Time Lo=263828046
+Enabled=1
+[file:.\src\TestBench\A8051_exp_TB_timing.do]
+File Time Hi=29603067
+File Time Lo=264453014
+Enabled=1

@@ -1,0 +1,44 @@
+
+typedef struct nod
+{
+int info;
+struct nod *st,*dr;
+}TNOD;
+
+TNOD * rad;
+
+TNOD *constructie()
+{
+    TNOD *p;
+    int inf,n;
+    n=sizeof(TNOD);
+        printf("\nIntroduceti Inf.din nod inf=");
+        scanf("%d",&inf);
+    if(inf==0) return 0;
+    else {
+        p=(TNOD *)malloc(n);
+        p->info=inf;
+        p->st=constructie();
+        p->dr=constructie();
+    }
+    return p;
+}
+
+void inaltime(TNOD *rad,int nivel,int *max)
+{
+  if(rad != 0)
+  {
+      if(nivel>*max)
+        *max=nivel;
+      inaltime(rad->st,nivel+1,max);
+      inaltime(rad->dr,nivel+1,max);
+  }
+}
+int main()
+{
+	int i=0;
+    TNOD *p;
+    rad=constructie();
+    inaltime(rad,0,&i);
+    printf("H = %d",i);
+}

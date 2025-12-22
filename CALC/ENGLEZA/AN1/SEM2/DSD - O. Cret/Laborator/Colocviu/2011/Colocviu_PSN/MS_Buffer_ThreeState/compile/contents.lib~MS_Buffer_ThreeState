@@ -1,0 +1,5 @@
+28
+~E 1 "./src/MS_Buffer.vhd" 3 buffer_3state
+~A 1 "./src/MS_Buffer.vhd" 8 arh_buff
+~E 1 "./src/MS_Buffer.vhd" 23 ms_buffer
+~A 1 "./src/MS_Buffer.vhd" 26 arh_ms_buffer

@@ -1,0 +1,33 @@
+V 000044 55 2115          1495489289870 arh
+(_unit VHDL (memorie_rom_16x4 0 5 (arh 0 11 ))
+  (_version v33)
+  (_time 1495489289871 2017.05.23 00:41:29)
+  (_source (\./src/MEMORIE_ROM_16X4.vhd\))
+  (_use (std(standard))(ieee(std_logic_unsigned))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495489289792)
+    (_use )
+  )
+  (_object
+    (_type (_internal ~std_logic_vector{3~downto~0}~12 0 6 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 3)(i 0))))))
+    (_port (_internal A_ROM ~std_logic_vector{3~downto~0}~12 0 6 (_entity (_in ))))
+    (_port (_internal CS ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_type (_internal ~std_logic_vector{3~downto~0}~122 0 8 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 3)(i 0))))))
+    (_port (_internal D_ROM ~std_logic_vector{3~downto~0}~122 0 8 (_entity (_out ))))
+    (_type (_internal ~std_logic_vector{3~downto~0}~13 0 12 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 3)(i 0))))))
+    (_type (_internal MATRIX 0 12 (_array ~std_logic_vector{3~downto~0}~13 ((_to (i 0)(i 15))))))
+    (_variable (_internal M MATRIX 0 15 (_process 0 ((((i 2))((i 2))((i 2))((i 2)))(((i 2))((i 2))((i 2))((i 3)))(((i 2))((i 2))((i 3))((i 2)))(((i 2))((i 2))((i 3))((i 3)))(((i 2))((i 3))((i 2))((i 2)))(((i 2))((i 3))((i 2))((i 3)))(((i 2))((i 3))((i 3))((i 2)))(((i 2))((i 3))((i 3))((i 3)))(((i 3))((i 2))((i 2))((i 2)))(((i 3))((i 2))((i 2))((i 3)))(((i 3))((i 2))((i 3))((i 2)))(((i 3))((i 2))((i 3))((i 3)))(((i 3))((i 3))((i 2))((i 2)))(((i 3))((i 3))((i 2))((i 3)))(((i 3))((i 3))((i 3))((i 2)))(((i 3))((i 3))((i 3))((i 3)))))))
+    (_process
+      (line__14(_architecture 0 0 14 (_process (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_model . arh 1 -1
+  )
+)

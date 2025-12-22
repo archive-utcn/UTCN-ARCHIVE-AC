@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\src\MS_Scazator_1bit.vhd" 
+MESSAGE "Compile Entity "Scazator_1bit"" 
+MESSAGE "Compile Architecture "ARH_Scazator" of Entity "Scazator_1bit"" 
+MESSAGE "Compile Entity "MS"" 
+MESSAGE "Compile Architecture "MS_Arh" of Entity "MS"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

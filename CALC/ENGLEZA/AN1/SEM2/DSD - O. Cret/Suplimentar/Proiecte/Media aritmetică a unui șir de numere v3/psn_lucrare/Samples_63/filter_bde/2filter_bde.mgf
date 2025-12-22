@@ -1,0 +1,523 @@
+V 000036 40 2310 1097050458106 c2or
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050458"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,180,140)
+    FREEID 54
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CM"
+        #NUMBER="0"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    RECT 10,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,160,120)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CP"
+        #NUMBER="0"
+      }
+      COORD (0,40)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="NQ"
+        #NUMBER="0"
+      }
+      COORD (160,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 4,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="Q"
+        #NUMBER="0"
+      }
+      COORD (160,40)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 5,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,70,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 6,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,31,68,50)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 7,0,0
+    {
+      TEXT "$#NAME"
+      RECT (92,71,115,90)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 8,0,0
+    {
+      TEXT "$#NAME"
+      RECT (103,31,115,50)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 4
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 9,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,120),(40,0),(120,0),(120,120),(40,120))
+      FILL (1,(0,0,0),0)
+    }
+  }
+}
+V 000035 40 1871 1097050458496 crv
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050458"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,220,180)
+    FREEID 46
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CDN"
+        #NUMBER="0"
+      }
+      COORD (0,120)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CUP"
+        #NUMBER="0"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="Q(3:0)"
+        #NUMBER="0"
+      }
+      COORD (200,120)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(-38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 4,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,111,80,130)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 5,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,79,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 6,0,0
+    {
+      TEXT "$#NAME"
+      RECT (110,111,155,130)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 7,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,160),(40,0),(160,0),(160,160),(40,160))
+      FILL (1,(0,0,0),0)
+    }
+    RECT 8,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,200,160)
+      FILL (1,(0,0,0),0)
+    }
+  }
+}
+V 000037 40 2312 1097050458856 oscil
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050458"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,180,140)
+    FREEID 54
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CLK"
+        #NUMBER="0"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    RECT 10,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,160,120)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CLR"
+        #NUMBER="0"
+      }
+      COORD (0,40)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="F0"
+        #NUMBER="0"
+      }
+      COORD (160,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 4,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="F1"
+        #NUMBER="0"
+      }
+      COORD (160,40)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 5,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,77,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 6,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,31,77,50)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 7,0,0
+    {
+      TEXT "$#NAME"
+      RECT (96,71,115,90)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 8,0,0
+    {
+      TEXT "$#NAME"
+      RECT (96,31,115,50)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 4
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 9,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,120),(40,0),(120,0),(120,120),(40,120))
+      FILL (1,(0,0,0),0)
+    }
+  }
+}
+V 000037 40 2325 1097050459262 pfdiv
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050459"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,300,180)
+    FREEID 54
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="N(3:0)"
+        #NUMBER="0"
+      }
+      COORD (0,120)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    RECT 10,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,280,160)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CLKIN"
+        #NUMBER="0"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="RESET"
+        #NUMBER="0"
+      }
+      COORD (0,40)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 4,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="CLKOUT"
+        #NUMBER="0"
+      }
+      COORD (280,120)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 5,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,111,89,130)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 6,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,93,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 7,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,31,98,50)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 8,0,0
+    {
+      TEXT "$#NAME"
+      RECT (171,111,235,130)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 4
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 9,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,160),(40,0),(240,0),(240,160),(40,160))
+      FILL (1,(0,0,0),0)
+    }
+  }
+}

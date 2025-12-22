@@ -1,0 +1,7 @@
+.\src\c2or.bde
+.\src\crv.bde
+.\src\oscil.bde
+.\src\pfdiv.bde
+.\src\filter.bde
+.\src\TB_verilog\filter_TB.v
+.\src\TB_vhd\filter_TB.vhd

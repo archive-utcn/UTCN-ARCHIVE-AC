@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=REGISTRU_UNIVERSAL
+
+[Library]
+REGISTRU_UNIVERSAL=.\REGISTRU_UNIVERSAL.lib
+
+[$LibMap$]
+REGISTRU_UNIVERSAL=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/REGISTRU_UNIVERSAL.vhd=-1
+
+[Files.Data]
+.\src\REGISTRU_UNIVERSAL.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\REGISTRU_UNIVERSAL\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\REGISTRU_UNIVERSAL\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\REGISTRU_UNIVERSAL\
+Extension5=dll

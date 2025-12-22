@@ -1,0 +1,117 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct nod
+{
+    char x,y;
+    struct nod *urm,*prec;
+}NOD;
+
+NOD *ultim,*prim;
+
+void creareListaVida()
+{
+    prim=NULL;
+    ultim=NULL;
+}
+
+
+NOD *citireDate()
+{
+    NOD *p;
+    char x,y;
+    int valid=1;
+    do
+    {
+        valid=1;
+        printf("\nx=");
+        fflush(stdin);
+        scanf("%c",&x);
+        printf("\ny=");
+        fflush(stdin);
+        scanf("%c",&y);
+        if(x>=y)
+        {
+            printf("\nReintroduceti!!!");
+            valid=0;
+        }
+    }
+    while(!valid);
+    p=(NOD*)malloc(sizeof(NOD));
+    p->x=x;
+    p->y=y;
+    return p;
+}
+
+void adaugareNod()
+{
+    NOD *p;
+    NOD *q;
+    p=citireDate();
+    //lista este momentan vida
+    if(!prim)
+    {
+        prim=p;
+        prim->urm=NULL;
+        prim->prec=NULL;
+        ultim=prim;
+    }
+    else
+    {
+        q=prim;
+        while( q)
+        {
+            if(p->y<=q->x)
+            {
+    //inserare inaintea primului nod
+                if(q==prim)
+                {
+                    q->prec=p;
+                    p->urm=q;
+                    p->prec=NULL;
+                    prim=p;
+                    return;
+                }
+    //inserare inaintea lui q
+                else
+                {
+                    q->prec->urm=p;
+                    p->urm=q;
+                    p->prec=q->prec;
+                    q->prec=p;
+                    return;
+                }
+            }
+            else
+            q=q->urm;
+        }
+    //inserare dupa ultimul
+        p->urm=NULL;
+        p->prec=ultim;
+        ultim->urm=p;
+        ultim=p;
+    }
+}
+
+void afisareLista()
+{
+    NOD *p;
+    printf("\nSecventa: \n");
+    p=prim;
+    while(p)
+    {
+        printf("%c %c ",p->x,p->y);
+        p=p->urm;
+    }
+}
+
+int main()
+{
+   int i;
+   creareListaVida();
+   for(i=0;i<3;i++)
+   adaugareNod();
+   afisareLista();
+   return 0;
+}

@@ -1,0 +1,23 @@
+V 000054 55 693           1300810042000 ARHITECTURA_1
+(_unit VHDL (and_b 0 1 (arhitectura_1 0 6 ))
+  (_version v33)
+  (_time 1300810042000 2011.03.22 18:07:22)
+  (_source (\./src/primu.vhd\))
+  (_use (std(standard)))
+  (_parameters dbg )
+  (_entity
+    (_time 1300810041829)
+    (_use )
+  )
+  (_object
+    (_port (_internal A ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+    (_port (_internal B ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+    (_port (_internal Y ~extSTD.STANDARD.BIT 0 3 (_entity (_out ))))
+    (_process
+      (line__8(_architecture 0 0 8 (_assignment (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . ARHITECTURA_1 1 -1
+  )
+)

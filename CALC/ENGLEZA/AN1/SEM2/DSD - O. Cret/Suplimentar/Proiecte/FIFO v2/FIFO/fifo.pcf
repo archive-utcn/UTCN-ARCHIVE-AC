@@ -1,0 +1,36 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed May 20 21:33:20 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "pop" LOCATE = SITE "C4" LEVEL 1;
+PIN pop_pin<0> = BEL "pop" PINNAME PAD;
+PIN "pop_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "datain<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "datain<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "datain<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "datain<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "datain<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "datain<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "datain<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "datain<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "last" LOCATE = SITE "R11" LEVEL 1;
+COMP "full" LOCATE = SITE "N11" LEVEL 1;
+COMP "push" LOCATE = SITE "D9" LEVEL 1;
+PIN push_pin<0> = BEL "push" PINNAME PAD;
+PIN "push_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "AN<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "AN<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "AN<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "AN<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "empty" LOCATE = SITE "T11" LEVEL 1;
+COMP "CAT<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "CAT<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "CAT<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "CAT<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "CAT<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "CAT<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "CAT<6>" LOCATE = SITE "L14" LEVEL 1;
+SCHEMATIC END;
+

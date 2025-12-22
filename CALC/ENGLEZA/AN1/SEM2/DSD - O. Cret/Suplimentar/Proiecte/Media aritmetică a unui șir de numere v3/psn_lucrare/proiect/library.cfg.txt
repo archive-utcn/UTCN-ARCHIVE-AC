@@ -1,0 +1,2 @@
+$include = "C:\Program Files\Aldec\Active-HDL 6.3\vlib\"
+proiect = ".\proiect\proiect.lib" 1305757807125

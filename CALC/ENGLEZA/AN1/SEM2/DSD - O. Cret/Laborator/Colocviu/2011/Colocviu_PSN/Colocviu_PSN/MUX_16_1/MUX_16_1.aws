@@ -1,0 +1,14 @@
+[Version]
+Version=8.1
+[Designs]
+MUX_16_1=MUX_16_1.adf
+[Settings]
+Active=MUX_16_1
+[Expand]
+mux_16_1=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

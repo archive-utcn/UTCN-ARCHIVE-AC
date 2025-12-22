@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\modul_simulare\full_adder_1\library.cfg"  -j "D:\designshdl\modul_simulare\full_adder_1\full_adder_1\projlib.cfg"  -d "D:\designshdl\modul_simulare\full_adder_1\full_adder_1\compile\"  -work full_adder_1 -dbg -e 100 "D:\designshdl\modul_simulare\full_adder_1\full_adder_1\src\modul_simulare_sumator.vhd" 

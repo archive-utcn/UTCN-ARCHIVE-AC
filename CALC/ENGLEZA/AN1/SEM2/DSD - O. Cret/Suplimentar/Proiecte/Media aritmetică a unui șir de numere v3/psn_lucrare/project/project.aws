@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+data_generator=.\data_generator\data_generator.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+data_generator=1

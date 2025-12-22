@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+BCDtoExcess3=BCDtoExcess3.adf
+[Settings]
+Active=BCDtoExcess3
+[Expand]
+bcdtoexcess3=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

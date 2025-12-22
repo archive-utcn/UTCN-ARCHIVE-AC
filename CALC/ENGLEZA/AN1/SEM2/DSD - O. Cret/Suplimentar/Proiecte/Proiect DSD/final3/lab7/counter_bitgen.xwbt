@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\semestrul 2\final3\lab7\counter.ncd
+OUTFILE=D:\semestrul 2\final3\lab7\counter.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=D:\semestrul 2\final3\lab7
+LICENSE=WebPack
+USER_INFO=207362627_0_0_835

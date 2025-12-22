@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305232694 source:c:\codeblocks\divid_et_impera\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+

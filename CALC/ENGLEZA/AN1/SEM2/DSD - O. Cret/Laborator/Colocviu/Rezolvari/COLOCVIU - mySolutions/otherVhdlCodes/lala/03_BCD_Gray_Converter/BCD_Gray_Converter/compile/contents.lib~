@@ -1,0 +1,6 @@
+172
+~E 1 "./src/converter.vhd" 4 bcd_to_gray
+~A 1 "./src/converter_TB.vhd" 7 arch
+~A 1 "./src/converter.vhd" 9 a
+~E 1 "./src/converter_TB.vhd" 4 tb_bcd_to_gray
+~A 1 "./src/converter_TB.vhd" 7 arch

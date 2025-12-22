@@ -1,0 +1,6 @@
+[Inputs]
+CLK
+RST
+[Outputs]
+=D[3:0]=
+[BiDir]

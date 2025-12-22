@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct DATA
+{
+    int zi,luna,an;
+} datan;
+
+typedef struct NOD
+{
+    int cheie;
+    char nume[20],g,adresa[25];
+    datan data;
+    struct NOD *prec;
+    struct NOD *urm;
+} nod;
+
+nod *prim,*ultim;
+void citire ( char fis[30])
+{
+    nod *p;
+    FILE *f;
+    char num[20],gen,adr[25];
+    int Cheie;
+    datan dt;
+   char stud[70];
+    f= fopen(fis,"r");
+    while(feof(f)==0)
+    {
+
+
+   fgets(stud,69,f);
+   sscanf(stud,"%d %s %c %s %d %d %d",&Cheie,num,&gen,adr,&dt.an,&dt.luna,&dt.zi);
+   p->cheie=Cheie;
+   p->nume=num;
+   p->g=gen;
+   p->adresa=adr;
+   (p->data).an=dt.an;
+   (p->data).luna=dt.luna;
+   (p->data).zi=dt.zi;
+printf("%d\n %s\n%c \n%s\n%d \n%d \n%d\n\n\n",p->cheie,p->nume,p->g,p->adresa,(p->data).an,(p->data).luna,(p->data).zi);
+    }
+
+}
+
+void inserare(nod *inreg)
+
+ {
+   //dimensiunea nodului
+   nod *p,*q;
+   //gaasirea locului unde trebuie inserat
+   p=prim->urm;
+   while (strcmp(p->g,inreg->g)<0) p=p->urm; //comparam dupa gen
+   if (strcmp(p->g,inreg->g)==0) {while (strcmp(p->nume,inreg->nume)<0) p=p->urm;  }//au acelasi gen si comparam dupa nume
+   else
+   {
+       //inserarea inaintea nodului p
+
+       q=(nod*)malloc(sizeof(nod));
+       *q=*p; //continutul nodului p e mutat in q
+       p->cheie=inreg->cheie;
+       strcpy(p->nume,inreg->nume);
+       strcpy(p->adresa,inreg->adresa);
+       strcpy(p->g,inreg->g);
+       (p->data).an=(inreg->data).an;
+       (p->data).luna=(inreg->data).luna;
+       (p->data).zi=(inreg->data).zi;
+       p->urm=q;
+       if(p==ultim) ultim=q;
+   }
+
+void main()
+{
+    char fis[30];
+printf("dati nume fisier");
+scanf("%s",fis);
+citire(fis);
+nod *inreg;
+inserare(inreg);
+
+}
+
+
+
+
+
+
+ 
+

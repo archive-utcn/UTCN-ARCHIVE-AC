@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Secventa_pseudoaleatoare\src\Pseudo.vhd" 
+MESSAGE "Compile Entity "Pseudo"" 
+MESSAGE "Compile Architecture "ARH_STR" of Entity "Pseudo"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]" 

@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct nod
+{
+    char nume[20];
+    struct nod *urm;
+}NOD;
+
+void creare (NOD **prim,char nume[20])
+{
+    NOD *p;
+    if (*prim==NULL)
+    {
+        *prim=(NOD *)malloc(sizeof(NOD));
+        strcpy((*prim)->nume,nume);
+        (*prim)->urm=*prim;
+    }
+    else
+    {
+        p=(NOD *)malloc(sizeof(NOD));
+        strcpy(p->nume, nume);
+        p->urm=(*prim)->urm;
+        (*prim)->urm=p;
+    }
+}
+
+void startjoc(NOD **prim,int k, int n)
+{
+    int i,j;
+    NOD *p,*q;
+    p=*prim;
+
+    for(i=1;i<=k;i++)
+    p=p->urm;
+
+    for(i=1;i<n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+        q=p;
+        p=p->urm;
+        }
+        if (p==*prim)
+        {
+            q->urm=p->urm;
+            *prim=q;
+        }
+        else
+        {
+            q->urm=p->urm;
+        }
+    free(p);
+    }
+
+}
+
+
+
+int main()
+{
+    FILE *f;
+    NOD *prim=NULL;
+    int n,k,i;
+    char nume[20];
+
+    prim=NULL;
+
+    f=fopen("text.txt","r");
+    fscanf(f,"%d",&n);
+
+
+    for(i=1;i<=n;i++)
+    {
+        fscanf(f,"%s",nume);
+        creare(&prim,nume);
+    }
+
+    printf("de la al catelea incep sa numar ");
+    scanf("%d",&k);
+    startjoc(&prim,k,n);
+
+    printf("castigator: %s",prim->nume);
+    fclose(f);
+
+    return 0;
+}
+

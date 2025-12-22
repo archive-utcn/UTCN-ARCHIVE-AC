@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="unknown" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="535" delta="unknown" >The following Virtex BUFG(s) is/are being retargetted to Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+<arg fmt="%s" index="1">BUFG symbol &quot;afis_errPin/clkdiv_10_BUFG&quot; (output signal=afis_errPin/clkdiv&lt;10&gt;),
+BUFGP symbol &quot;clock_BUFGP&quot; (output signal=clock_BUFGP),
+BUFGP symbol &quot;confirmare_BUFGP&quot; (output signal=confirmare_BUFGP),
+BUFGP symbol &quot;suma_mii_BUFGP&quot; (output signal=suma_mii_BUFGP),
+BUFGP symbol &quot;suma_sute_BUFGP&quot; (output signal=suma_sute_BUFGP),
+BUFGP symbol &quot;suma_zeci_BUFGP&quot; (output signal=suma_zeci_BUFGP)</arg>
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem10&quot; (output signal=ram/_varindex0000&lt;0&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">007F</arg> to <arg fmt="%s" index="3">7f7f</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem11&quot; (output signal=ram/_varindex0000&lt;1&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">0037</arg> to <arg fmt="%s" index="3">3737</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem21&quot; (output signal=ram/_varindex0000&lt;2&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">007E</arg> to <arg fmt="%s" index="3">7e7e</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem31&quot; (output signal=ram/_varindex0000&lt;3&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">0036</arg> to <arg fmt="%s" index="3">3636</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem41&quot; (output signal=ram/_varindex0000&lt;4&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">00FD</arg> to <arg fmt="%s" index="3">fdfd</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem51&quot; (output signal=ram/_varindex0000&lt;5&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">0084</arg> to <arg fmt="%s" index="3">8484</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem61&quot; (output signal=ram/_varindex0000&lt;6&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">00C9</arg> to <arg fmt="%s" index="3">c9c9</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem71&quot; (output signal=ram/_varindex0000&lt;7&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">000C</arg> to <arg fmt="%s" index="3">0c0c</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem81&quot; (output signal=ram/_varindex0000&lt;8&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">005B</arg> to <arg fmt="%s" index="3">5b5b</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="MapLib" num="355" delta="unknown" >SelectRam <arg fmt="%s" index="1">RAM16X1S symbol &quot;inst_Mram_mem91&quot; (output signal=ram/_varindex0000&lt;9&gt;)</arg> INITSTATE is changed from <arg fmt="%s" index="2">0012</arg> to <arg fmt="%s" index="3">1212</arg> because pin <arg fmt="%s" index="4">A3 </arg> is/are driven by GND. Signals driving <arg fmt="%s" index="5">A3 </arg> are inverted to relieve routing congestion.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="unknown" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs in the schematic.
+</msg>
+
+<msg type="warning" file="LIT" num="176" delta="unknown" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_afis_errPin/clkdiv&lt;10&gt;/afis_errPin/clkdiv_10_BUFG&quot; (output signal=afis_errPin/clkdiv&lt;10&gt;)</arg> has a mix of clock and non-clock loads. The non-clock loads are:
+<arg fmt="%s" index="2">Pin LI of afis_errPin/Mcount_clkdiv_xor&lt;10&gt;</arg>
+</msg>
+
+<msg type="warning" file="LIT" num="175" delta="unknown" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_confirmare_BUFGP/confirmare_BUFGP/BUFG&quot; (output signal=confirmare_BUFGP)</arg> has a mix of clock and non-clock loads. Some of the non-clock loads are (maximum of 5 listed):
+<arg fmt="%s" index="2">Pin I1 of chit_led1
+Pin I0 of _mux0042&lt;1&gt;1
+Pin I1 of ram/we_inv1
+Pin I1 of scriere1
+Pin I1 of anod&lt;0&gt;21</arg>
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372">Gated clock. Clock net ok_pin_OBUF is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372">Gated clock. Clock net clkdiv is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+</messages>

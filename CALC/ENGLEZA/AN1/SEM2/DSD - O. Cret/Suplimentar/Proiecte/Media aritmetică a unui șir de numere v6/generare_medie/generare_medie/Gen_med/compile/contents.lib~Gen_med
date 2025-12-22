@@ -1,0 +1,10 @@
+1361
+~E 1 "./../src/Cutia_neagra.vhd" 7 cutie_neagra
+~A 1 "./../src/Cutia_neagra.vhd" 15 arhitectura_cutie
+~E 1 "./../src/Afisare.vhd" 5 display
+~A 1 "./../src/Afisare.vhd" 15 architecture_display
+~E 1 "./../src/Divizor_fr.vhd" 6 divizor_de_frecventa
+~E 1 "./../src/Generator.vhd" 6 generator
+~A 1 "./../src/Generator.vhd" 13 arhitectura_generator
+~E 1 "./../src/Medie.vhd" 6 medie
+~A 1 "./../src/Medie.vhd" 15 media_architecture

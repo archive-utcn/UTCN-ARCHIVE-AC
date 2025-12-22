@@ -1,0 +1,5 @@
+MESSAGE "File: d:\designshdl\CLV_2008\COMPARATOR_DATA_FLOW\src\COMPARATOR_DATA_FLOW.vhd" 
+MESSAGE "Compile Entity "COMPARATOR_COMPORTAMENTAL"" 
+MESSAGE "Entity `COMPARATOR_COMPORTAMENTAL' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "COMPARATOR_COMPORTAMENTAL"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

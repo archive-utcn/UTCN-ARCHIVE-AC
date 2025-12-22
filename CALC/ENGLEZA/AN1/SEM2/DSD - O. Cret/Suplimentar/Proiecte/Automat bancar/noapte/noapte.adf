@@ -1,0 +1,92 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=noapte
+
+[Library]
+noapte=.\noapte.lib
+
+[$LibMap$]
+noapte=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=0
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[LocalVhdlSets]
+CompileWithDebug=1
+
+[LocalVerilogSets]
+EnableDebug=1
+EnableSLP=0
+
+[Folders]
+Name3=Makefiles
+Directory3=E:\Facultate\An I\Semestrul II\PSN\Proiectarea Sistemelor Numerice\proiect banc\automat bancar\proi\noapte\
+Extension3=mak
+Name4=Memory
+Directory4=E:\Facultate\An I\Semestrul II\PSN\Proiectarea Sistemelor Numerice\proiect banc\automat bancar\proi\noapte\
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=E:\Facultate\An I\Semestrul II\PSN\Proiectarea Sistemelor Numerice\proiect banc\automat bancar\proi\noapte\
+Extension5=dll
+Name6=PDF
+Directory6=E:\Facultate\An I\Semestrul II\PSN\Proiectarea Sistemelor Numerice\proiect banc\automat bancar\proi\noapte\
+Extension6=pdf
+Name7=HTML
+Directory7=E:\Facultate\An I\Semestrul II\PSN\Proiectarea Sistemelor Numerice\proiect banc\automat bancar\proi\noapte\
+Extension7=
+
+[SpecTracer]
+WindowVisible=0
+
+[Files]
+/read_card.vhd=-1
+/verif_card.vhd=-1
+/read_pin.vhd=-1
+/verif_pin.vhd=-1
+/meniu.vhd=-1
+/procesare_meniu.vhd=-1
+/afisare.vhd=-1
+/decodificare.vhd=-1
+/bacomat.vhd=-1
+/banc.awf=-1
+
+[Files.Data]
+.\src\read_card.vhd=VHDL Source Code
+.\src\verif_card.vhd=VHDL Source Code
+.\src\read_pin.vhd=VHDL Source Code
+.\src\verif_pin.vhd=VHDL Source Code
+.\src\meniu.vhd=VHDL Source Code
+.\src\procesare_meniu.vhd=VHDL Source Code
+.\src\afisare.vhd=VHDL Source Code
+.\src\decodificare.vhd=VHDL Source Code
+.\src\bacomat.vhd=VHDL Source Code
+.\src\banc.awf=Waveform File
+

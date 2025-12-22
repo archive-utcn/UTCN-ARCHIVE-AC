@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+full_adder=.\Full_Adder\Full_Adder.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+full_adder=1

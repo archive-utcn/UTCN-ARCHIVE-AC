@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+ram_memory=.\RAM_Memory\RAM_Memory.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+ram_memory=1

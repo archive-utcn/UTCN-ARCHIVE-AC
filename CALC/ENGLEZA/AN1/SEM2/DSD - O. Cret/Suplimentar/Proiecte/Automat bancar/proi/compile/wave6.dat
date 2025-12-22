@@ -1,0 +1,9 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$OUT 1 1 card_exista
+$IN 5 1 but
+I 2 "a#28#std_logic_vector(4 downto 0)1 ricd4 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 29 2 5 ADRESA_CARD
+$SC 9-25/4
+$ENDWAVE

@@ -1,0 +1,69 @@
+
+#define f(b) (long)(pow(b,2))%n
+
+long gcd(long u,long v)
+{
+	long shift;
+
+
+     if (u == 0 || v == 0)
+       return u | v;
+
+
+     for (shift = 0; ((u | v) & 1) == 0; ++shift) {
+         u >>= 1;
+         v >>= 1;
+     }
+
+     while ((u & 1) == 0)
+       u >>= 1;
+
+
+     do {
+         while ((v & 1) == 0)
+           v >>= 1;
+
+
+         if (u < v) {
+             v -= u;
+         } else {
+             long diff = u - v;
+             u = v;
+             v = diff;
+         }
+         v >>= 1;
+     } while (v != 0);
+
+     return u << shift;
+
+}
+long factoriz(long n)
+{
+	long x=2,y=2,d=1;
+	while(d==1)
+	{
+		x=f(x);
+		y=f(f(y));
+		d = gcd(abs(x-y),n);
+	}
+
+	if (d == n) return 0;
+	return d;
+}
+
+int main(int argc, char **argv) {
+
+	long n;
+	printf("Dati n: ");
+	scanf("%ld",&n);
+	
+	long d = factoriz(n);
+	
+	if (d!=0)
+		printf("Rez: %ld*%ld\n",d,n/d);
+	else
+		printf("Eroare!\n");
+		
+	getch();
+    return 0;
+}

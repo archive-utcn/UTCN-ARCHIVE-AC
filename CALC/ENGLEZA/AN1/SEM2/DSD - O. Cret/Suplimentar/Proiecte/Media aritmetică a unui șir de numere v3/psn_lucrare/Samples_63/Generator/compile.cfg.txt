@@ -1,0 +1,26 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+
+
+
+
+[file:.\src\Readme.txt]
+File Time Hi=29639210
+File Time Lo=130723840
+Enabled=1
+[file:.\src\generator.asf]
+File Time Hi=29639210
+File Time Lo=130723840
+STATE=Compiled
+Enabled=1
+[file:.\src\testbench.vhd]
+File Time Hi=29639210
+File Time Lo=130723840
+STATE=Compiled
+Enabled=1
+[file:.\src\Functional.do]
+File Time Hi=29639210
+File Time Lo=130723840
+Enabled=1

@@ -1,0 +1,10 @@
+[~A]
+./src/mult.vhd~behmult=60*4294967295
+./src/mult.vhd~mult=60*4294967295
+ModifyID=92
+Version=73
+
+[~MFT]
+
+[~U]
+

@@ -1,0 +1,22 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 clock
+$IN 5 1 reset
+$IN 9 1 WE
+$IN +4 1 RE
+$OUT +4 1 Empty
+$OUT +4 1 Full
+I 2 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 41 2 4 DataIn
+$SC 25-37/4
+$BUS OUT 58 2 4 DataOut
+$SC 42-54/4
+$VARIABLE +5 1 tEmpty
+$VARIABLE +1 1 tFull
+I 3 "i#20#INTEGER range 0 to 4rict0 4 "
+$VARIABLE +1 3 Pos
+I 4 "a#3#mem1 ricd3 0 a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS VARIABLE +1 4 4 M
+$SC +2-+3 +2-+3 +2-+3 +2-+3
+$ENDWAVE

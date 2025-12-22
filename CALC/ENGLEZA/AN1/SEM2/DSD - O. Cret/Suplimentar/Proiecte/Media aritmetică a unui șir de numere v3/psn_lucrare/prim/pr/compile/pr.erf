@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\prim\pr\src\primu.vhd" 
+MESSAGE "Compile Entity "AND_B"" 
+MESSAGE "Compile Architecture "ARHITECTURA_1" of Entity "AND_B"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   AND_B" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  1.0 [s]" 

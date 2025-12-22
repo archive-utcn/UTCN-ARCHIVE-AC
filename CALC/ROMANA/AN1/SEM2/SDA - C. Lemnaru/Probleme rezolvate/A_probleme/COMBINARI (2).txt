@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <conio.h>
+#define NMAX 10
+
+void afisare(int n,int nrcrt,int p[])
+{
+    int i;
+
+    printf("\n%3d   ",nrcrt);
+    for (i=0;i<n;i++)
+    {
+        printf("  %2d",p[i]);
+    }
+    if (nrcrt % 20==0) getch();
+}
+
+void combinari(int n,int m)
+{
+    int p[NMAX];
+    int i,j,nrcrt;
+
+    nrcrt=1;
+    for (i=1;i<=m;i++)
+    {
+        p[i]=i;
+    }
+    afisare(m,nrcrt,p);
+    i=m;
+    while (i>0)
+    {
+        p[i]++;
+        if (p[i]>n-m+i) i--;
+        else
+        {
+            for (j=i+1;j<m;j++)
+            {
+                p[j]=p[j-1]+1;
+            }
+            nrcrt++;
+            afisare(m,nrcrt,p);
+            i=m;
+        }
+    }
+}
+
+void main(void)
+{
+    int n,m;
+
+    printf("\nNr elementelor multimii n=");
+    scanf("%d",&n);
+    printf("\nNr elementelor submultimii(combinarii)m=");
+    scanf("%d",&m);
+    printf("\nELEMENTELE COMBINATIILOR");
+    printf("\nNr crt elementele combinatiei");
+    combinari(n,m);
+    getch();
+}

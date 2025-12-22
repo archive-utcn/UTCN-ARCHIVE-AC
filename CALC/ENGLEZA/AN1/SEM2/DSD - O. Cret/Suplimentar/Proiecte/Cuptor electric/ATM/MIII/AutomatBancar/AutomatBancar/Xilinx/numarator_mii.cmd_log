@@ -1,0 +1,3 @@
+xst -ise "C:/Xilinx/1/1.ise" -intstyle ise -ifn numarator_mii.xst -ofn numarator_mii.syr
+xst -ise "C:/Xilinx/1/1.ise" -intstyle ise -ifn numarator_mii.xst -ofn numarator_mii.syr
+xst -ise "C:/Xilinx/1/1.ise" -intstyle ise -ifn numarator_mii.xst -ofn numarator_mii.syr

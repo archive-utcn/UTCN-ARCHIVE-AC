@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1302201143 source:c:\documents and settings\anca\desktop\afff\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

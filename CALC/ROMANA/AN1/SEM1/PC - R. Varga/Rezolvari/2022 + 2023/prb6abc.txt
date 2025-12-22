@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+	char s[35];
+	int p, ga;
+}echipa;
+int cauta(echipa* v, int n, char* s);
+typedef unsigned long long ull;
+ull f(int p, int k, ull** memo, char** done);
+
+
+int main(){
+	int n, m;
+	echipa* v;
+
+
+
+	FILE* pf = fopen("input.txt", "r");
+	if (!pf)
+		return -1;
+
+	fscanf(pf, "%d%d", &n, &m);
+	v = calloc(n, sizeof(echipa));
+	if (!v)
+		return -2;
+
+	for(int i=0; i<n; i++)
+		fscanf(pf, " %s", v[i].s);
+
+	for(int i=0; i<m; i++){
+		char ech1[35];
+		char ech2[35];
+		int g1, g2;
+		fscanf(pf, " %s vs %s %d-%d", ech1, ech2, &g1, &g2);
+		int pos1 = cauta(v, n, ech1);
+		int pos2 = cauta(v, n, ech2);
+		if (pos1 == -1 || pos2 == -1)
+			continue;
+		v[pos1].ga += g1 - g2;
+		v[pos2].ga += g2 - g1;
+		if (g1 == g2){
+			v[pos1].p += 1;
+			v[pos2].p += 1;
+		}
+		else if (g1 > g2)
+			v[pos1].p += 3;
+		else
+			v[pos2].p += 3;
+
+
+	}
+
+	for(int i=0; i<n; i++){
+		for(int j=i+1; j<n; j++){
+			if (v[i].p < v[j].p ||
+				v[i].p == v[j].p && v[i].ga < v[j].ga ||
+				v[i].p == v[j].p && v[i].ga == v[j].ga || strcmp(v[i].s, v[j].s) < 0){
+					echipa aux = v[i];
+					v[i] = v[j];
+					v[j] = aux;
+				}
+		}
+	}
+
+	printf("%-30s|%-5s|%-5s\n", "echipa", "p", "ga.");
+	puts("-----------");
+	for(int i=0; i<n; i++)
+		printf("%-30s|%-5d|%-5d\n", v[i].s, v[i].p, v[i].ga);
+
+    int p = 11, k = 9;
+	ull** memo = calloc(p+1, sizeof(ull*));
+	for(int i=0; i<=p; i++)
+		memo[i] = calloc(k+1, sizeof(ull));
+	char** done = calloc(p+1, sizeof(char*));
+	for(int i=0; i<=p; i++)
+		done[i] = calloc(k+1, sizeof(char));
+	printf("%llu\n", f(p, k, memo, done));
+
+}
+
+
+int cauta(echipa* v, int n, char* s){
+	for(int i=0; i<n; i++)
+		if (strcmp(v[i].s, s) == 0)
+			return i;
+	return -1;
+}
+
+ull f(int p, int k, ull** memo, char** done){
+	if (k == 0)
+		return p == 0;
+	if (done[p][k])
+		return memo[p][k];
+	ull r = 0;
+	r += f(p, k-1, memo, done);
+	if (p >= 1)
+		r += f(p-1, k-1, memo, done);
+	if (p >= 3)
+		r += f(p-3, k-1, memo, done);
+	memo[p][k] = r;
+	done[p][k] = 1;
+	return r;
+}
+
+
+// am castigat a meciuri
+// am egalat b meciuri
+// a3 + b == p
+// a + b <= k

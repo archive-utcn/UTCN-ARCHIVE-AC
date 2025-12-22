@@ -1,0 +1,2 @@
+C:/MinGW/bin/ar.exe qc libintArray.a CMakeFiles/intArray.dir/array/array_int.c.obj
+C:/MinGW/bin/ranlib.exe libintArray.a

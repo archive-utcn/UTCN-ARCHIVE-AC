@@ -1,0 +1,32 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 33 1 8 COMUTATOARE
+$SC 1-29/4
+I 3 "a#28#std_logic_vector(2 downto 0)1 ricd2 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 46 3 3 SEL_DEMUX
+$SC 34-+8/4
+I 4 "a#28#std_logic_vector(4 downto 0)1 ricd4 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 67 4 5 ADRESA_CARD
+$SC 47-63/4
+$BUS S +37 1 8 EN
+$SC 68-96/4
+$IN +5 2 CLOCK
+$S +4 2 CHITANTA
+$S +4 2 OPERATIE
+I 5 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +68 5 16 SUMA_INTRODUSA
+$SC 113-+60/4
+$BUS S +69 5 16 PIN_MEMORIE
+$SC 178-+60/4
+$S +5 2 ENABLE1
+$OUT +4 2 CARD_RETINUT
+$OUT +4 2 PIN_INCORECT
+$BUS S +68 5 16 6 0 TRODUS
+$SC 255-+60/4
+I 6 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +13 6 2 Y
+$SC +-8 +4
+$S +5 2 RESET_COMANDA
+$ENDWAVE

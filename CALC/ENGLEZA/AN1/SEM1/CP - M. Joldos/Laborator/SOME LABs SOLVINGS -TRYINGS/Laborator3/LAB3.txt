@@ -1,0 +1,31 @@
+P1
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double x,y;
+    printf("Valorile x si y sunt:");
+    scanf("%lf %lf", &x, &y);
+    pow(x,y);
+    printf("Valoarea lui z este %f\n", pow(x,y));
+    return 0;
+}
+
+P3
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define M_PI 3.14159265358979323846264338327
+int main()
+{
+    double angleDeg, angleRad;
+
+    printf("angle[in degrees]=");
+    scanf("%lf", &angleDeg);
+    angleRad = angleDeg * M_PI/180.0;
+    printf("sin(%f)=%f cos(%f)=%f tan(%f)=%f\n", angleDeg, sin(angleRad),
+            angleDeg, cos(angleRad), angleDeg, tan(angleRad));
+    return 0;
+}
+

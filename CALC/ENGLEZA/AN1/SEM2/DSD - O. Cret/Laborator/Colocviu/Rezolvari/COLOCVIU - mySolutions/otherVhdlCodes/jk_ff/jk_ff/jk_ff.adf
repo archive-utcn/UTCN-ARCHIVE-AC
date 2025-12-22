@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=jk_ff
+
+[Library]
+jk_ff=.\jk_ff.lib
+
+[$LibMap$]
+jk_ff=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/jk_ff.vhd=-1
+
+[Files.Data]
+.\src\jk_ff.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=jk_ff|arh|0 
+ShowHide=ShowTopLevel
+Selected=

@@ -1,0 +1,18 @@
+int inserare(tip nod **prim,char key,tip_nod *p)
+{
+tip_nod q,q1;
+q1=0; q=prim;
+while(q!=0)
+{
+if(q->cheie==key) break;
+q1=q; q=q->urm;
+}
+if(q!=0) { /*nodul de cheie “key” are adresa q */
+if (q==prim) {
+p->urm=prim; prim=p;
+}
+else {
+q1->urm=p; p->urm=q;
+}
+}
+

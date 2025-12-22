@@ -1,0 +1,150 @@
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: Flow Manager: Not Defined
+acom -reorder -work Comparator_2bit -2002  $DSN/src/Comparator_1bit.vhd
+# Compile with File Reorder...
+# File: c:\My_Designs\Colocviu_PSN\Comparator_2bit\src\Comparator_1bit.vhd
+# Compile Entity "COMP_1"
+# Compile Architecture "ARH_Comportamentala" of Entity "COMP_1"
+# Error: COMP96_0329: Comparator_1bit.vhd : (13, 2): Generate statement must have a label.
+# Error: COMP96_0019: Comparator_1bit.vhd : (13, 10): Keyword "generate" expected.
+# Error: COMP96_0019: Comparator_1bit.vhd : (15, 2): Keyword "end" expected.
+# Error: COMP96_0016: Comparator_1bit.vhd : (16, 3): Design unit declaration expected.
+# Error: COMP96_0019: Comparator_1bit.vhd : (18, 37): Keyword "of" expected.
+# Error: COMP96_0018: Comparator_1bit.vhd : (18, 37): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work Comparator_2bit -2002  $DSN/src/Comparator_1bit.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\Comparator_2bit\src\Comparator_1bit.vhd
+# Compile Entity "COMP_1"
+# Compile Architecture "ARH_Comportamentala" of Entity "COMP_1"
+# Error: COMP96_0329: Comparator_1bit.vhd : (13, 2): Generate statement must have a label.
+# Error: COMP96_0049: Comparator_1bit.vhd : (13, 7): Syntax error in expression.
+# Error: COMP96_0015: Comparator_1bit.vhd : (13, 7): ')' expected.
+# Error: COMP96_0019: Comparator_1bit.vhd : (13, 8): Keyword "generate" expected.
+# Error: COMP96_0019: Comparator_1bit.vhd : (15, 2): Keyword "end" expected.
+# Error: COMP96_0016: Comparator_1bit.vhd : (16, 3): Design unit declaration expected.
+# Error: COMP96_0019: Comparator_1bit.vhd : (18, 37): Keyword "of" expected.
+# Error: COMP96_0018: Comparator_1bit.vhd : (18, 37): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work Comparator_2bit -2002  $DSN/src/Comparator_1bit.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\Comparator_2bit\src\Comparator_1bit.vhd
+# Compile Entity "COMP_1"
+# Compile Architecture "ARH_Comportamentala" of Entity "COMP_1"
+# Error: COMP96_0329: Comparator_1bit.vhd : (13, 2): Generate statement must have a label.
+# Error: COMP96_0019: Comparator_1bit.vhd : (13, 10): Keyword "generate" expected.
+# Error: COMP96_0019: Comparator_1bit.vhd : (15, 2): Keyword "end" expected.
+# Error: COMP96_0016: Comparator_1bit.vhd : (16, 3): Design unit declaration expected.
+# Error: COMP96_0019: Comparator_1bit.vhd : (18, 37): Keyword "of" expected.
+# Error: COMP96_0018: Comparator_1bit.vhd : (18, 37): Identifier expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work Comparator_2bit -2002  $DSN/src/Comparator_1bit.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\Comparator_2bit\src\Comparator_1bit.vhd
+# Compile Entity "COMP_1"
+# Compile Architecture "ARH_Comportamentala" of Entity "COMP_1"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+# Design: Design Comparator_2bit already active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  comp_1 arh_comportamentala
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1590 kB (elbread=1023 elab2=297 kernel=269 sdf=0)
+#  10:06 AM, Wednesday, May 11, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: comp_1 (arh_comportamentala)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+asim -advdataflow  comp_1 arh_comportamentala
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1590 kB (elbread=1023 elab2=297 kernel=269 sdf=0)
+#  10:06 AM, Wednesday, May 11, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: comp_1 (arh_comportamentala)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+acom -work Comparator_2bit -2002  $DSN/src/Comparator_2bit.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\Comparator_2bit\src\Comparator_2bit.vhd
+# Compile Entity "Comparator_2bit"
+# Compile Architecture "ARH_STR" of Entity "Comparator_2bit"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  comparator_2bit arh_str
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1592 kB (elbread=1023 elab2=298 kernel=269 sdf=0)
+#  10:15 AM, Wednesday, May 11, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: comparator_2bit (arh_str)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+# Design: 10:17 AM, Wednesday, May 11, 2011
+# Design: Opening design "c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\Sumator_Scazator_4bit.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "Sumator_Scazator_4bit" has been set as active.

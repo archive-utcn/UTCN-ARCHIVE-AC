@@ -1,0 +1,91 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=fft
+
+[Library]
+fft=.\fft.lib
+
+[$LibMap$]
+fft=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\nosrc\projects50\matlab_mixed_example\fft\
+Extension3=mak
+Name4=Memory
+Directory4=c:\nosrc\projects50\matlab_mixed_example\fft\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\nosrc\projects50\matlab_mixed_example\fft\
+Extension5=dll
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[ORDER]
+Synchronize=0
+
+[Groups]
+cfft=1
+RAM=1
+control=1
+
+[Files]
+/compile_all.do=-1
+/compile_cfft.do=-1
+/compile_ram.do=-1
+/top_fft.bde=-1
+/readme.txt=-1
+cfft/address.vhd=-1
+cfft/blockdram.vhd=-1
+cfft/div4limit.vhd=-1
+cfft/cfft4.vhd=-1
+cfft/p2r_CordicPipe.vhd=-1
+cfft/rofactor.vhd=-1
+cfft/p2r_cordic.vhd=-1
+cfft/sc_corproc.vhd=-1
+cfft/mulfactor.vhd=-1
+cfft/cfft.vhd=-1
+RAM/ram.vhd=-1
+control/control.asf=-1
+
+[Files.Data]
+.\src\compile_all.do=Macro
+.\src\compile_cfft.do=Macro
+.\src\compile_ram.do=Macro
+.\src\top_fft.bde=Block Diagram
+.\src\readme.txt=Text File
+.\src\cfft\address.vhd=VHDL Source Code
+.\src\cfft\blockdram.vhd=VHDL Source Code
+.\src\cfft\div4limit.vhd=VHDL Source Code
+.\src\cfft\cfft4.vhd=VHDL Source Code
+.\src\cfft\p2r_CordicPipe.vhd=VHDL Source Code
+.\src\cfft\rofactor.vhd=VHDL Source Code
+.\src\cfft\p2r_cordic.vhd=VHDL Source Code
+.\src\cfft\sc_corproc.vhd=VHDL Source Code
+.\src\cfft\mulfactor.vhd=VHDL Source Code
+.\src\cfft\cfft.vhd=VHDL Source Code
+.\src\RAM\ram.vhd=VHDL Source Code
+.\src\control\control.asf=State Diagram
+

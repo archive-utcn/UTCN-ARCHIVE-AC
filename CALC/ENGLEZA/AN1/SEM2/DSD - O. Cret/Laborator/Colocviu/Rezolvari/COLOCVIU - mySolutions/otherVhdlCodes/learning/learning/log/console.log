@@ -1,0 +1,59 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  or_gate arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2416 kB (elbread=1070 elab2=298 kernel=1048 sdf=0)
+# 5:49 PM, Sunday, April 30, 2017
+# Simulation has been initialized
+# Selected Top-Level: or_gate (arh)
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/learning.vhd
+# Compile...
+# File: D:\designshdl\learning\learning\src\learning.vhd
+# Compile Entity "E1"
+# Entity `E1' has been skipped - no difference detected.
+# Compile Architecture "ARH1" of Entity "E1"
+# Compile Architecture "ARH2" of Entity "E1"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/learning.vhd
+# Compile...
+# File: D:\designshdl\learning\learning\src\learning.vhd
+# Compile Entity "E1"
+# Entity `E1' has been skipped - no difference detected.
+# Compile Architecture "ARH1" of Entity "E1"
+# Compile Architecture "ARH2" of Entity "E1"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  or_gate arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2416 kB (elbread=1070 elab2=298 kernel=1048 sdf=0)
+# 5:50 PM, Sunday, April 30, 2017
+# Simulation has been initialized
+# Selected Top-Level: or_gate (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped

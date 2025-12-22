@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <conio.h>
+#include <alloc.h>
+/* ARBORI BINARI TOTAL ECHILIBRATI */
+
+typedef struct tip_nod{
+int nr;/*informaþie */
+struct tip_nod *stg,*dr;
+} TIP_NOD;
+TIP_NOD *rad;
+void preordine(TIP_NOD *p, int nivel)
+{
+int i;
+if(p!=0) {
+                                                 for(i=0;i<=nivel;i++) printf("  ");
+                printf("%2d\n",p->nr);
+                   preordine(p->stg,nivel+1);
+                preordine(p->dr,nivel+1);
+               }
+}
+void inordine(TIP_NOD *p, int nivel)
+{
+   int i;
+ if (p!=0){
+               inordine(p->stg,nivel+1);
+               for(i=0;i<=nivel;i++) printf("  ");
+                printf("%2d\n",p->nr);
+                inordine(p->dr,nivel+1);
+              }
+  }
+ void postordine(TIP_NOD *p, int nivel)
+ { 
+   int i;
+ if (p!=0){
+               postordine(p->stg,nivel+1);
+               postordine(p->dr,nivel+1);
+               for(i=0;i<=nivel;i++) printf("  ");
+               printf("%2d\n",p->nr);
+              }
+  }
+ TIP_NOD *constructie(int nr_noduri)
+  {
+    TIP_NOD *p;
+   int n_stg,n_dr;
+   int inf,n;
+   n=sizeof(TIP_NOD);
+   if(nr_noduri==0) return 0;
+   else {
+             n_stg=nr_noduri/2; 
+/*nr_noduri din subarborele stang */
+             n_dr=nr_noduri-n_stg-1;
+/*nr.noduri din subarborele drept */
+             p=(TIP_NOD *)malloc(n);
+             printf("\nIntroduceti informatia din nod in preordine ");
+             scanf("%d",&(p->nr));
+             p->stg=constructie(n_stg);
+             p->dr=constructie(n_dr);
+      }
+     return p;
+   }
+
+     void main(void)
+     {
+       int nr_total_noduri;
+       printf("\nNumarul total de noduri =");
+       scanf("%d",&nr_total_noduri);\
+        rad=constructie(nr_total_noduri);
+        printf("\nVIZITAREA IN PREORDINE\n");
+        preordine(rad,0);
+        getch();
+        printf("\nVIZITAREA IN INORDINE\n");
+        inordine(rad,0);
+        getch();
+        printf("VIZITAREA IN POSTORDINE\n");
+        postordine(rad,0);
+        getch();
+    }

@@ -1,0 +1,1 @@
+SC_hex_ram = ".\SC_hex_ram.LIB" 1096367800313

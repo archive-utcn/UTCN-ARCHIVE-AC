@@ -1,0 +1,12 @@
+1. media elem dintr-un sir
+2. separare siruri
+3. Sa se puna intr-un sir litere mari si in celalat litere mici
+4. sa se verifice daca elem din 2 siruri sunt egale si daca da sa se mute in al 3 sir
+5. sa se verifice daca 2 siruri sunt egale si daca da sa se afiseze a intr-un registru
+7. sa se conv nr din string in int
+8. sa se mute nr pare in alt sir
+9 (A). SUMA SI MEDIA UNUI VECTOR
+10 (c4a). CITIRE SI CALCULARE
+11 (c4b). SEPARARE NUMERE
+12 (p). sa se elimina spatiile si taburile
+13 (sir2). sir cu litere mici si mari, selecteaza in 2 siruri diferite, unul cu litere mari si unul cu litere mici

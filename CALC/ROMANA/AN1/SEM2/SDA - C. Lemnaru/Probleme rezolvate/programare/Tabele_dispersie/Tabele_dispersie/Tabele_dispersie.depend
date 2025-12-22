@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1302248792 source:c:\codeblocks\tabele_dispersie\main.c
+	<stdio.h>
+	<conio.h>
+	<malloc.h>
+	<string.h>
+
+1302248794 source:c:\users\anca\desktop\tabele_dispersie\tabele_dispersie\main.c
+	<stdio.h>
+	<conio.h>
+	<malloc.h>
+	<string.h>
+

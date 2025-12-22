@@ -1,0 +1,41 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 33 1 8 COMUTATOARE
+$SC 1-29/4
+$OUT +5 2 ELIB_CHITANTA
+$OUT +4 2 6 0 ARD
+$OUT +4 2 5 0 MONEDE
+$OUT +4 2 CARD_RETINUT
+$OUT +4 2 PIN_INCORECT
+$OUT +4 2 SOLD_INDISPONIBIL
+$IN +4 2 CLOCK
+$OUT +4 2 SUMA_INSUFICIENTA
+$OUT +4 2 5 0 MARE
+I 3 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +68 3 16 5 0 INTRODUSA
+$SC 70-+60/4
+$BUS S +69 3 16 PIN_INTRODUS
+$SC 135-+60/4
+$S +5 2 CHITANTA
+$S +4 2 OPERATIE
+I 4 "a#28#std_logic_vector(9 downto 0)1 ricd9 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +44 4 10 SUMA_NOUA
+$SC 208-+36/4
+$BUS S +69 3 16 SOLD
+$SC 249-+60/4
+$BUS S +45 4 10 SUMA_NUMARATOR
+$SC 314-+36/4
+I 5 "a#28#std_logic_vector(2 downto 0)1 ricd2 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +17 5 3 SEL_DEMUX
+$SC 355-+8/4
+I 6 "a#28#std_logic_vector(4 downto 0)1 ricd4 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +25 6 5 ADRESA_CARD
+$SC 368-+16/4
+$BUS S +69 3 16 SOLD_NOU
+$SC 389-+60/4
+$S +5 2 WE
+$BUS S +36 1 8 EN
+$SC 458-+28/4
+$ENDWAVE

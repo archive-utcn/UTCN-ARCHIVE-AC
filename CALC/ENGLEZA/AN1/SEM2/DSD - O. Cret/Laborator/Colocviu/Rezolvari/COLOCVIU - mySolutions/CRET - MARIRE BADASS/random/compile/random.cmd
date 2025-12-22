@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\random\projlib.cfg"  -d "D:\designshdl\CRET\random\compile\"  -work random -dbg -e 100 "D:\designshdl\CRET\random\src\random.vhd" 

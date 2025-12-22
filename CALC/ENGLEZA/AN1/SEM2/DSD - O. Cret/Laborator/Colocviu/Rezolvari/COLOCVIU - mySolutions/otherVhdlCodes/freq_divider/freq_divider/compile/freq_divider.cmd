@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\freq_divider\library.cfg"  -j "D:\designshdl\freq_divider\freq_divider\projlib.cfg"  -d "D:\designshdl\freq_divider\freq_divider\compile\"  -work freq_divider -dbg -e 100 "D:\designshdl\freq_divider\freq_divider\src\freq_divider.vhd" 

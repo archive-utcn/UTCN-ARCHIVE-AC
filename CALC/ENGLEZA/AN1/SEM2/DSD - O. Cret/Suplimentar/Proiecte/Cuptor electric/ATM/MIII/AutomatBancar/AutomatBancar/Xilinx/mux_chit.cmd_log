@@ -1,0 +1,1 @@
+xst -ise "C:/Xilinx/1/1.ise" -intstyle ise -ifn mux_chit.xst -ofn mux_chit.syr

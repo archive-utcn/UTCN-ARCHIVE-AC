@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+memorie_rom=memorie_rom.adf
+[Settings]
+Active=memorie_rom
+[Expand]
+memorie_rom=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

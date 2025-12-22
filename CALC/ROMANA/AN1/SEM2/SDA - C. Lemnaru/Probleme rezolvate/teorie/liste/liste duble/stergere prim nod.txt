@@ -1,0 +1,11 @@
+void sterge(tip_nod **ultim,tip_nod **prim)
+{
+tip_nod *p;
+if(prim==0)print("lista vida);
+p=prim;
+prim=prim->urm;
+free(&p);
+if(prim==0)
+ultim=0;
+else prim->prec=0;
+}

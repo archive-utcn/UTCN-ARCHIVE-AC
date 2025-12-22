@@ -1,0 +1,142 @@
+acom -reorder $DSN/src/dmux_gen.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\dmux_gen\src\dmux_gen.vhd
+# Compile Entity "dmux"
+# Compile Architecture "arh" of Entity "dmux"
+# Error: COMP96_0019: dmux_gen.vhd : (14, 41): Keyword "generate" expected.
+# Error: COMP96_0015: dmux_gen.vhd : (16, 6): ';' expected.
+# Error: COMP96_0016: dmux_gen.vhd : (16, 14): Design unit declaration expected.
+# Error: COMP96_0019: dmux_gen.vhd : (17, 21): Keyword "of" expected.
+# Error: COMP96_0018: dmux_gen.vhd : (17, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/dmux_gen.vhd
+# Compile...
+# File: D:\designshdl\CRET\dmux_gen\src\dmux_gen.vhd
+# Compile Entity "dmux"
+# Entity `dmux' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "dmux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  dmux arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1071 elab2=300 kernel=1049 sdf=0)
+# KERNEL: Error: Value 00010011 doesn't belong to type std_logic
+# Cannot force signal x with formula 00010011.
+# 1:07 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: dmux (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom $DSN/src/dmux_gen.vhd
+# Compile...
+# File: D:\designshdl\CRET\dmux_gen\src\dmux_gen.vhd
+# Compile Entity "dmux"
+# Entity `dmux' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "dmux"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+run 100 ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__0,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__0,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__0,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__1,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__1,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__1,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__2,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__2,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__2,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__3,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__3,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__3,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__4,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__4,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__4,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__5,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__5,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__5,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__6,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__6,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__6,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__7,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__7,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 100 ns,  Iteration: 1,  Instance: /generate_output__7,  Process: line__15.
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: 1:17 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\comparator_data_flow\comparator_data_flow.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "comparator_data_flow" has been set as active.

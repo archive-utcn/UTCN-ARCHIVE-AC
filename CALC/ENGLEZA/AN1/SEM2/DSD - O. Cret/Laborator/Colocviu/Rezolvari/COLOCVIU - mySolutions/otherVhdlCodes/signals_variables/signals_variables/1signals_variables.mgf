@@ -1,0 +1,47 @@
+V 000045 55 742           1493563886382 ARH1
+(_unit VHDL (e1 0 4 (arh1 0 8 ))
+  (_version v33)
+  (_time 1493563886382 2017.04.30 17:51:26)
+  (_source (\./src/signals_varialbes.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493563886320)
+    (_use )
+  )
+  (_object
+    (_port (_internal A ~extSTD.STANDARD.NATURAL 0 5 (_entity (_in ((i 1))))))
+    (_port (_internal B ~extSTD.STANDARD.NATURAL 0 6 (_entity (_inout ((i 1))))))
+    (_process
+      (P1(_architecture 0 0 10 (_process (_simple)(_target(1))(_sensitivity(0))(_read(1)))))
+    )
+    (_type (_external ~extSTD.STANDARD.NATURAL (std STANDARD NATURAL)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+  )
+  (_model . ARH1 1 -1
+  )
+)
+V 000045 55 812           1493563886493 ARH2
+(_unit VHDL (e1 0 4 (arh2 0 19 ))
+  (_version v33)
+  (_time 1493563886491 2017.04.30 17:51:26)
+  (_source (\./src/signals_varialbes.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493563886320)
+    (_use )
+  )
+  (_object
+    (_port (_internal A ~extSTD.STANDARD.NATURAL 0 5 (_entity (_in ((i 1))))))
+    (_port (_internal B ~extSTD.STANDARD.NATURAL 0 6 (_entity (_inout ((i 1))))))
+    (_variable (_internal B_VAR ~extSTD.STANDARD.NATURAL 0 22 (_process 0 )))
+    (_process
+      (P2(_architecture 0 0 21 (_process (_simple)(_target(1))(_sensitivity(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.NATURAL (std STANDARD NATURAL)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+  )
+  (_model . ARH2 1 -1
+  )
+)

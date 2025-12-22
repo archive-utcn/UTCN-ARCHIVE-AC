@@ -1,0 +1,101 @@
+acom -reorder $DSN/src/reg_uni.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\reg_uni\src\reg_uni.vhd
+# Compile Entity "reg"
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0019: reg_uni.vhd : (14, 56): Keyword "=>" expected.
+# Error: COMP96_0331: reg_uni.vhd : (14, 56): Syntax error in expression.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/reg_uni.vhd
+# Compile...
+# File: D:\designshdl\CRET\reg_uni\src\reg_uni.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0078: reg_uni.vhd : (16, 22): Unknown identifier "clcok".
+# Error: COMP96_0133: reg_uni.vhd : (16, 22): Cannot find object declaration.
+# Error: COMP96_0071: reg_uni.vhd : (16, 22): Operator "and" is not defined for such operands.
+# Error: COMP96_0104: reg_uni.vhd : (16, 6): Undefined type of expression.
+# Error: COMP96_0098: reg_uni.vhd : (16, 6): Boolean type expected.
+# Error: COMP96_0077: reg_uni.vhd : (17, 28): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0071: reg_uni.vhd : (17, 28): Operator "-" is not defined for such operands.
+# Error: COMP96_0104: reg_uni.vhd : (17, 28): Undefined type of expression.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/reg_uni.vhd
+# Compile...
+# File: D:\designshdl\CRET\reg_uni\src\reg_uni.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0077: reg_uni.vhd : (17, 28): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0071: reg_uni.vhd : (17, 28): Operator "-" is not defined for such operands.
+# Error: COMP96_0104: reg_uni.vhd : (17, 28): Undefined type of expression.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/reg_uni.vhd
+# Compile...
+# File: D:\designshdl\CRET\reg_uni\src\reg_uni.vhd
+# Compile Entity "reg"
+# Compile Architecture "arh" of Entity "reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  reg arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 5:56 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: reg (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+# Simulation has been stopped
+# Design: Design "random" has been set as active.

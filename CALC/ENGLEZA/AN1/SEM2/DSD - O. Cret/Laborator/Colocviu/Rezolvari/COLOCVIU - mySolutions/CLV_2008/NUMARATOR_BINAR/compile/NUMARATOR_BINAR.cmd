@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\NUMARATOR_BINAR\projlib.cfg"  -d "D:\designshdl\CLV_2008\NUMARATOR_BINAR\compile\"  -work NUMARATOR_BINAR -dbg -e 100 "D:\designshdl\CLV_2008\NUMARATOR_BINAR\src\NUMARATOR_BINAR.vhd" 

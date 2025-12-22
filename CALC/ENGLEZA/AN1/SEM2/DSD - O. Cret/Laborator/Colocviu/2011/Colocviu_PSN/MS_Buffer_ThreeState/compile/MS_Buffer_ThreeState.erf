@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\MS_Buffer_ThreeState\src\MS_Buffer.vhd" 
+MESSAGE "Compile Entity "Buffer_3state"" 
+MESSAGE "Compile Architecture "ARH_Buff" of Entity "Buffer_3state"" 
+MESSAGE "Compile Entity "MS_Buffer"" 
+MESSAGE "Compile Architecture "ARH_MS_Buffer" of Entity "MS_Buffer"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

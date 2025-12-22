@@ -1,0 +1,25 @@
+entity Scazator is
+	port(A,B : in Bit;
+	REST,D : out Bit);
+end entity;
+
+architecture A_Scazator of Scazator is
+begin
+D<=A xor B;
+REST<=(not A) and B;
+end architecture;		 
+
+entity MS_Scazator is
+end entity;
+
+architecture A_MS_Scazator of MS_Scazator is
+component Scazator is
+	port (A,B: in Bit;
+	REST,D : out Bit);
+end component;			
+signal X,Y,Z,W : Bit;
+begin		  
+U: Scazator port map (X,Y,W,Z);
+X<='0','1' after 20ns,'0' after 40ns,'1' after 60ns;
+Y<='1','0' after 20ns,'0' after 40ns,'1' after 60ns;
+end architecture;

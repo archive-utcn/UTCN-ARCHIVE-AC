@@ -1,0 +1,9 @@
+#define M…
+int f(char *key)
+{
+  int i,suma;
+  suma=0;
+  for(i=0;i<length(key);i++)
+	suma=suma+*(key+i);
+  return suma%M;
+}

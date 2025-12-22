@@ -1,0 +1,2 @@
+C:/MinGW/bin/ar.exe qc libvector.a CMakeFiles/vector.dir/vector/Vector.c.obj
+C:/MinGW/bin/ranlib.exe libvector.a

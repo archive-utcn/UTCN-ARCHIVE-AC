@@ -1,0 +1,27 @@
+[Files List]
+C:\Aldec\Active-HDL Student Edition\vlib\std/src/standard.vhd=S
+C:\Aldec\Active-HDL Student Edition\vlib\std/src/textio.vhd=S
+C:\Aldec\Active-HDL Student Edition\vlib\ieee/src/std_logic_1164.vhdl=S
+C:\Aldec\Active-HDL Student Edition\vlib\ieee/src/std_logic_1164-body.vhdl=S
+C:\Aldec\Active-HDL Student Edition\vlib\ieee/src/arith_p.vhd=S
+C:\Aldec\Active-HDL Student Edition\vlib\ieee/src/arith_b.vhd=S
+C:\Aldec\Active-HDL Student Edition\vlib\ieee/src/unsigned_p.vhd=S
+C:\Aldec\Active-HDL Student Edition\vlib\ieee/src/unsigned_b.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/OR.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/AND.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/Mx.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/MxChit.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/DivizorF.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/DecodificatorMii.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/DecodificatorSute.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/DecodificatorZeci.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/NrMii.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/NrSute.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/NrZeci.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/MemoriaRam.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/MemoriaRom.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/AfisajSuma.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/Afisare_EroarePin.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/Afisare_EroareCard.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/Afisare.vhd=S
+C:\Users\Admin\Desktop\ATM\ATM\ATM/src/Main_P.vhd=S

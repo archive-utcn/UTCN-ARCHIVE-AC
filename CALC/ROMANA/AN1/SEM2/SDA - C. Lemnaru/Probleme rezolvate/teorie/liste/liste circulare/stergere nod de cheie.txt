@@ -1,0 +1,20 @@
+void sterge(tip_nod **ptr_nod,char key)
+{q = ptr_nod;
+do {
+q1 = q; q = q -> urm;
+if (q -> cheie == key ) break;
+/* s-a gãsit nodul */
+}
+while (q! = ptr_nod);
+if (q-> cheie == key)
+{
+if (q==q -> urm)  ptr_nod==0;
+/* lista a devenit vidã */
+else {
+q1 -> urm = q -> urm;
+if (q == ptr_nod) ptr_nod = q1;
+}
+elib_nod(q);
+}
+
+}

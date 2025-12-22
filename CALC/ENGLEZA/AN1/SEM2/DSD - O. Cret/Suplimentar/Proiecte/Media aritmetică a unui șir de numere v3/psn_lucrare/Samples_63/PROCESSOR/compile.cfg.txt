@@ -1,0 +1,86 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\readme.txt]
+File Time Lo=1296761371
+File Time Hi=29660166
+Enabled=1
+[file:.\src\processor_top_TB.v]
+State=Compiled
+LIB=
+File Time Lo=1295823883
+File Time Hi=29660166
+Enabled=1
+Strict=
+Force=
+Strict2001=
+[file:.\processor.hp]
+File Time Lo=1292386427
+File Time Hi=29660166
+Enabled=1
+State=Compiled
+[file:.\proc.hcc]
+File Time Lo=1291761435
+File Time Hi=29660166
+Enabled=1
+[file:.\Celoxica\Verilog\processor_top.v]
+File Time Lo=1292855171
+File Time Hi=29660166
+Enabled=1
+State=Compiled
+[file:.\Celoxica\Verilog\proc_hcc.v]
+File Time Lo=1292698923
+File Time Hi=29660166
+Enabled=1
+State=Compiled
+[file:.\src\Cosim\processor_top_wrapper.v]
+File Time Lo=1298011355
+File Time Hi=29660166
+Enabled=1
+State=Warning
+[file:.\src\processor_top_TB_cosim.do]
+File Time Lo=1295980131
+File Time Hi=29660166
+Enabled=1
+[file:.\src\processor_top_TB_func.do]
+File Time Lo=1296292627
+File Time Hi=29660166
+Enabled=1
+[file:.\src\processor_top_TB_tim.do]
+File Time Lo=1296605123
+File Time Hi=29660166
+Enabled=1
+[file:.\src\processor_top_TB_synth.do]
+File Time Lo=1296448875
+File Time Hi=29660166
+Enabled=1
+[file:.\synthesis\processor_top.vqm]
+File Time Lo=1301761307
+File Time Hi=29660166
+Enabled=0
+SIM.FUNC.INCLUDED=0
+LIB=processor_post_synthesis
+[file:.\synthesis\processor_top.vm]
+File Time Lo=1301136315
+File Time Hi=29660166
+Enabled=1
+LIB=processor_post_synthesis
+SIM.POST.INCLUDED=1
+SIM.FUNC.INCLUDED=0
+SIM.POST.AUTO=1
+SIM.POST.INDEX=0
+State=Warning
+[file:.\implement\ver1\rev1\simulation\custom\processor_top.vo]
+File Time Lo=1294417651
+File Time Hi=29660166
+Enabled=1
+SIM.FUNC.INCLUDED=0
+LIB=processor_timing
+State=Compiled
+SIM.TIME.INCLUDED=1
+SIM.TIME.AUTO=1
+[file:.\implement\ver1\rev1\simulation\custom\processor_top_v.sdo]
+File Time Lo=1295355139
+File Time Hi=29660166
+Enabled=1

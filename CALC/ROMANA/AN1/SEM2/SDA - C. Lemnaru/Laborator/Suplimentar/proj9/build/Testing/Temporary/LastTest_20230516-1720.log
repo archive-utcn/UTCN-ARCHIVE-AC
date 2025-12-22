@@ -1,0 +1,18 @@
+Start testing: May 16 20:20 GTB Daylight Time
+----------------------------------------------------------
+1/1 Testing: test1
+1/1 Test: test1
+Command: "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build/proj9.exe"
+Directory: C:/Users/Alex/Documents/VSCode/faculta/SDA/proj9/build
+"test1" start time: May 16 20:20 GTB Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"test1" end time: May 16 20:20 GTB Daylight Time
+"test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 16 20:20 GTB Daylight Time

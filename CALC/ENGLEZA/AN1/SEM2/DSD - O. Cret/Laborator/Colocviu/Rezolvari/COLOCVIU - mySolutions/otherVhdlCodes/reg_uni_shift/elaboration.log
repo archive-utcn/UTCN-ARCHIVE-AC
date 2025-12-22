@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Thu May 25 11:50:57 2017
+
+
+-----------------------------------------------
+Entity         | Architecture   | Library    
+-----------------------------------------------
+generator_spa  | structural     | reg_uni_shift
+registru       | comportamental | reg_uni_shift
+xor2           | comportamental | reg_uni_shift
+-----------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

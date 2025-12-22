@@ -1,0 +1,148 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define NRMAX_NODURI 20
+#define NRMAX_MUCHII 100
+
+typedef struct{
+                int u,v;
+                float cost;
+              }MUCHIE;
+
+void citire(int *nr_noduri,int *nr_muchii,MUCHIE *m)
+{
+    int i,j;
+    float c;
+    printf("Nr. noduri= ");
+    scanf("%d",nr_noduri);
+    printf("Introduceti muchiile:\n");
+    *nr_muchii=0;
+    for(i=1;i<*nr_noduri;i++)
+    {
+        do
+        {
+            printf("Muchia pleaca din nodul i=%d in nodul j= ",i);
+            scanf("%d",&j);
+            if(j>0)
+            {
+                (*nr_muchii)++;
+                m[*nr_muchii].u=i;
+                m[*nr_muchii].v=j;
+                printf("Costul muchiei=");
+                scanf("%f",&c);
+                m[*nr_muchii].cost=c;
+            };
+        }while(j>0);
+    }
+}
+
+void scriere(int nr_noduri,int nr_muchii,MUCHIE *m)
+{
+    int i;
+    printf("\nNr. noduri=%d",nr_noduri);
+    printf("\nNr. muchii=%d",nr_muchii);
+    printf("\nMuchia cost\n");
+    for(i=1;i<=nr_muchii;i++)
+    printf("(%d,%d)  %f\n",m[i].u,m[i].v,m[i].cost);
+}
+
+void ordonare(int nr_muchii,MUCHIE *m)
+{
+    int i,j,sem;
+    MUCHIE x;
+    j=-1;
+    do
+    {
+        sem=1;
+        j++;
+        for(i=1;i<nr_muchii-j;i++)
+        if(m[i].cost>m[i+1].cost)
+        {
+            x=m[i];
+            m[i]=m[i+1];
+            m[i+1]=x;
+            sem=0;
+        };
+    }while(sem==0);
+}
+
+int gasire_cap_componenta(int *tata,int i)
+{
+    while(tata[i]>0)
+    i=tata[i];
+    return i;
+}
+
+void unire_componente(int a,int b,int *tata)
+{
+    int k;
+    k=tata[a]+tata[b];
+    if(tata[a]>tata[b])
+    {
+        tata[a]=b;
+        tata[b]=k;
+    }
+    else
+    {
+        tata[b]=a;
+        tata[a]=k;
+    };
+}
+
+int kruskal(int nr_noduri,int nr_muchii,MUCHIE *m,int *selectate,int *tata)
+{
+    int i,j,c1,c2;
+    i=0;j=0;
+    while((i<nr_noduri-1)&&(j<nr_muchii))
+    {
+        j++;
+        c1=gasire_cap_componenta(tata,m[j].u);
+        c2=gasire_cap_componenta(tata,m[j].v);
+        if(c1!=c2)
+        {
+            i++;
+            selectate[j]=1;
+            unire_componente(c1,c2,tata);
+        };
+    }
+    if(i==nr_noduri-1) return 1;
+    else return 0;
+}
+
+int main()
+{
+    int nr_noduri,nr_muchii,i,j;
+    int tata[NRMAX_NODURI];
+    int selectate[NRMAX_MUCHII];
+    float cost_total;
+    MUCHIE m[100];
+    citire(&nr_noduri,&nr_muchii,m);
+    scriere(nr_noduri,nr_muchii,m);
+    ordonare(nr_muchii,m);
+    printf("Dupa ordonare\n");
+    scriere(nr_noduri,nr_muchii,m);
+    getch();
+    for(i=1;i<=nr_noduri;i++)
+    tata[i]=-1;
+    for(i=1;i<=nr_muchii;i++)
+    selectate[i]=0;
+    i=kruskal(nr_noduri,nr_muchii,m,selectate,tata);
+    if(i==0) printf("\n Nu s-a putut construi arborele!\n");
+    else
+    {
+        cost_total=0;
+        printf("Arborele de acoperire de cost minim are muchiile\n");
+        printf("Muchia cost\n");
+        for(i=1;i<=nr_muchii;i++)
+        {
+            if(selectate[i]==1)
+            {
+                printf("(%d,%d)  %f\n",m[i].u,m[i].v,m[i].cost);
+                cost_total+=m[i].cost;
+            };
+        };
+        printf("Costul total al arborelui: %f\n",cost_total);
+    }
+    getch();
+}
+

@@ -1,0 +1,1 @@
+-w -s "D:\HDL & ISE\designshdl\counter_mod_10\library.cfg"  -j "D:\HDL & ISE\designshdl\counter_mod_10\counter_mod_10\projlib.cfg"  -d "D:\HDL & ISE\designshdl\counter_mod_10\counter_mod_10\compile\"  -work counter_mod_10 -dbg -e 100 "D:\HDL & ISE\designshdl\counter_mod_10\counter_mod_10\src\counter_mod_10.vhd" 

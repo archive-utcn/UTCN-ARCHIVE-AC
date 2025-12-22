@@ -1,0 +1,101 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\Main_P.vhd]
+Enabled=1
+File Time Lo=-804402432
+File Time Hi=30443541
+State=Modified
+[file:.\src\Afisare.vhd]
+Enabled=1
+File Time Lo=1690041600
+File Time Hi=30443525
+State=Compiled
+[file:.\src\Afisare_EroareCard.vhd]
+Enabled=1
+File Time Lo=-1190220032
+File Time Hi=30443516
+State=Compiled
+[file:.\src\Afisare_EroarePin.vhd]
+Enabled=1
+File Time Lo=-30220032
+File Time Hi=30443516
+State=Compiled
+[file:.\src\AfisajSuma.vhd]
+Enabled=1
+File Time Lo=1149779968
+File Time Hi=30443517
+State=Compiled
+[file:.\src\MemoriaRom.vhd]
+Enabled=1
+File Time Lo=2029779968
+File Time Hi=30443517
+State=Compiled
+[file:.\src\Ram.vhd]
+Enabled=1
+[file:.\src\MemoriaRam.vhd]
+Enabled=1
+File Time Lo=1914812672
+File Time Hi=30443518
+State=Compiled
+[file:.\src\NrZeci.vhd]
+Enabled=1
+File Time Lo=-790089216
+File Time Hi=30443520
+State=Compiled
+[file:.\src\NrSute.vhd]
+Enabled=1
+File Time Lo=-810089216
+File Time Hi=30443520
+State=Compiled
+[file:.\src\NrMii.vhd]
+Enabled=1
+File Time Lo=-970089216
+File Time Hi=30443520
+State=Compiled
+[file:.\src\NrSyncAdrese.vhd]
+Enabled=1
+File Time Lo=405401344
+File Time Hi=30443536
+State=Compiled
+[file:.\src\DecodificatorZeci.vhd]
+Enabled=1
+File Time Lo=2119976192
+File Time Hi=30443523
+State=Compiled
+[file:.\src\DecodificatorSute.vhd]
+Enabled=1
+File Time Lo=-2114991104
+File Time Hi=30443523
+State=Compiled
+[file:.\src\DecodificatorMii.vhd]
+Enabled=1
+File Time Lo=-2074991104
+File Time Hi=30443523
+State=Compiled
+[file:.\src\DivizorF.vhd]
+Enabled=1
+File Time Lo=564878080
+File Time Hi=30443520
+State=Compiled
+[file:.\src\MxChit.vhd]
+Enabled=1
+File Time Lo=-374991104
+File Time Hi=30443523
+State=Compiled
+[file:.\src\Mx.vhd]
+Enabled=1
+File Time Lo=485008896
+File Time Hi=30443524
+State=Compiled
+[file:.\src\AND.vhd]
+Enabled=1
+File Time Lo=-2009958400
+File Time Hi=30443524
+State=Compiled
+[file:.\src\OR.vhd]
+Enabled=1
+File Time Lo=-689958400
+File Time Hi=30443524
+State=Compiled

@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Fri May 12 19:39:26 2017
+
+
+----------------------------------------------
+Entity   | Architecture | Library           
+----------------------------------------------
+ms_d_ff  | arh          | modulk_simulare_d_ff
+d_ff     | arh          | modulk_simulare_d_ff
+----------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

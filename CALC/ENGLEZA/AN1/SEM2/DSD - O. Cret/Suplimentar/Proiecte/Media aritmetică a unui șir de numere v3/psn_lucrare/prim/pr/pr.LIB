@@ -1,0 +1,23 @@
+timestamp=1300810043093
+
+[and_b]
+A/arhitectura_1=A/ARHITECTURA_1 21|./src/primu.vhd|6|1*0
+B/arhitectura_1=3*0
+H/arhitectura_1=0*191
+R=./src/primu.vhd|1
+V=0*822
+
+[~A]
+./src/primu.vhd~AND_B=0*0*130
+./src/primu.vhd~ARHITECTURA_1AND_B=0*292*442
+ModifyID=7
+Version=73
+
+[~MFT]
+0=7|0pr.mgf|822|0
+1=0|1pr.mgf|0|0
+3=0|3pr.mgf|0|0
+
+[~U]
+and_b=AND_B 11|0*516|0*632
+

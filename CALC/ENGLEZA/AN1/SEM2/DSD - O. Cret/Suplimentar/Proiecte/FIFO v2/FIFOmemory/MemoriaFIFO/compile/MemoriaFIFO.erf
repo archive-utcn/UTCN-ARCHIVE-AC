@@ -1,0 +1,7 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:\Users\Dana\Desktop\MEMORIE FIFO\FIFOmemory\MemoriaFIFO\src\BCD.vhd" 
+MESSAGE "Compile Entity "BCD"" 
+MESSAGE "Compile Architecture "Arh_BCD" of Entity "BCD"" 
+WARNING DAGGEN_0001: "Process without explicit or implicit wait statement - possible infinite loop." "c:\Users\Dana\Desktop\MEMORIE FIFO\FIFOmemory\MemoriaFIFO\src\BCD.vhd" 60 0
+WARNING DAGGEN_0001: "Process without explicit or implicit wait statement - possible infinite loop." "c:\Users\Dana\Desktop\MEMORIE FIFO\FIFOmemory\MemoriaFIFO\src\BCD.vhd" 83 0
+SUCCESS "Compile success 0 Errors 2 Warnings  Analysis time :  0.7 [s]" 

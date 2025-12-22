@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\memorie_rom\library.cfg"  -j "d:\designshdl\memorie_rom\memorie_rom\projlib.cfg"  -d "d:\designshdl\memorie_rom\memorie_rom\compile\"  -work memorie_rom -dbg -e 100 "d:\designshdl\memorie_rom\memorie_rom\src\memorie_rom.vhd" 

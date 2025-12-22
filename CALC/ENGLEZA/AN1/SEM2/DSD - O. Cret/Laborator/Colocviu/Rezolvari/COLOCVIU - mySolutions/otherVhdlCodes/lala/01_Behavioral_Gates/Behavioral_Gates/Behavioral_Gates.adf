@@ -1,0 +1,47 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Behavioral_Gates
+
+[Library]
+Behavioral_Gates=.\Behavioral_Gates.lib
+
+[$LibMap$]
+Behavioral_Gates=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/inverter.vhd=-1
+/and_gate.vhd=-1
+/or_gate.vhd=-1
+/nand_gate.vhd=-1
+/nor_gate.vhd=-1
+
+[Files.Data]
+.\src\inverter.vhd=VHDL Source Code
+.\src\and_gate.vhd=VHDL Source Code
+.\src\or_gate.vhd=VHDL Source Code
+.\src\nand_gate.vhd=VHDL Source Code
+.\src\nor_gate.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=nor_gate|a|0   
+ShowHide=ShowTopLevel
+Selected=

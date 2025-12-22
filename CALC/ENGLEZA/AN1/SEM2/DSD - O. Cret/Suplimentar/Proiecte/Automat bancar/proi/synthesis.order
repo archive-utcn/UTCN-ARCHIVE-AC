@@ -1,0 +1,13 @@
+i<>.\src\identificare_card.vhd
+i<>.\src\citire_pin.vhd
+i<>.\src\memorie_rom_pin.vhd
+i<>.\src\comparator_card_pin.vhd
+i<>.\src\memorie_ram_sold.vhd
+i<>.\src\afisor.vhd
+i<>.\src\unitate_Comanda.vhd
+i<>.\src\demux.vhd
+i<>.\src\CITIRE_SUMA.vhd
+i<>.\src\COMP_MAI_MIC_EGAL.vhd
+i<>.\src\SCAZATOR.vhd
+i<>.\src\NUMARATOR_PIN.vhd
+i<>.\src\bancomat.bde

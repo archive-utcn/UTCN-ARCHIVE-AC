@@ -1,0 +1,3921 @@
+--
+-- Written by Synplicity
+-- Fri Jun 18 17:29:41 2004
+--
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity receiver_hcc_main is
+port(
+  globals_bytes_out_3_0 :  in std_logic;
+  globals_bytes_out_0_0_0 :  in std_logic;
+  globals_DataReady_out_0 :  in std_logic;
+  globals_Data_out_0 :  out std_logic;
+  globals_Data_out_1 :  out std_logic;
+  globals_Data_out_2 :  out std_logic;
+  globals_Data_out_3 :  out std_logic;
+  globals_Data_out_4 :  out std_logic;
+  globals_Data_out_5 :  out std_logic;
+  globals_Data_out_6 :  out std_logic;
+  globals_Data_out_7 :  out std_logic;
+  globals_WrPtr_out_3 :  out std_logic;
+  globals_WrPtr_out_2 :  out std_logic;
+  globals_WrPtr_out_1 :  out std_logic;
+  globals_WrPtr_out_0 :  out std_logic;
+  globals_RdPtr_outf_2 :  out std_logic;
+  globals_RdPtr_outf_1 :  out std_logic;
+  globals_RdPtr_outf_0 :  out std_logic;
+  globals_RdPtr_outf_3 :  out std_logic;
+  globals_FalseZ_1_out_0_a2_1_1_0 :  out std_logic;
+  bitindex_i_i_i_n_0 :  out std_logic;
+  I_24_1 :  in std_logic;
+  binopout_3_NE :  out std_logic;
+  outp :  in std_logic;
+  DataIn :  in std_logic;
+  N_335_i :  out std_logic;
+  reset :  in std_logic;
+  ReceiverClock :  in std_logic;
+  N_335_i_0 :  out std_logic);
+end receiver_hcc_main;
+
+architecture beh of receiver_hcc_main is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal BITINDEX_I : std_logic_vector (2 downto 1);
+  signal GLOBALS_STARTOUT_OUT : std_logic_vector (0 to 0);
+  signal THENDONE : std_logic_vector (0 to 0);
+  signal Z_DONES_1 : std_logic_vector (0 to 0);
+  signal GLOBALS_CFORKIN_OUT_I_A2_A : std_logic_vector (0 to 0);
+  signal GLOBALS_FALSEZ_1_OUT_0_A2_0 : std_logic_vector (0 to 0);
+  signal BITINDEX : std_logic_vector (0 to 0);
+  signal GLOBALS_TRUEZ_OUT_0_A2 : std_logic_vector (0 to 0);
+  signal GLOBALS_FALSEZ_1_OUT_0_A2 : std_logic_vector (0 to 0);
+  signal ELSEDONE : std_logic_vector (0 to 0);
+  signal GLOBALS_DATA_OUT_1_INT_9 : std_logic ;
+  signal GLOBALS_DATA_OUT_2_INT_10 : std_logic ;
+  signal GLOBALS_DATA_OUT_3_INT_11 : std_logic ;
+  signal GLOBALS_DATA_OUT_4_INT_12 : std_logic ;
+  signal GLOBALS_DATA_OUT_5_INT_13 : std_logic ;
+  signal GLOBALS_DATA_OUT_6_INT_14 : std_logic ;
+  signal GLOBALS_DATA_OUT_7_INT_15 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_3_INT_16 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_2_INT_17 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_1_INT_18 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_0_INT_19 : std_logic ;
+  signal GLOBALS_RDPTR_OUTF_2_INT_20 : std_logic ;
+  signal GLOBALS_RDPTR_OUTF_1_INT_21 : std_logic ;
+  signal GLOBALS_RDPTR_OUTF_0_INT_22 : std_logic ;
+  signal GLOBALS_RDPTR_OUTF_3_INT_23 : std_logic ;
+  signal GLOBALS_FALSEZ_1_OUT_0_A2_1_1_0_INT_24 : std_logic ;
+  signal BINOPOUT_3_NE_INT_25 : std_logic ;
+  signal N_335_I_INT_26 : std_logic ;
+  signal N_335_I_0_INT_27 : std_logic ;
+  signal BINOPOUT_4_NE : std_logic ;
+  signal BINOPOUT_5_SUM1 : std_logic ;
+  signal BINOPOUT_5_SUM2 : std_logic ;
+  signal BINOPOUT_5_SUM3 : std_logic ;
+  signal BINOPOUT_4_0 : std_logic ;
+  signal BINOPOUT_4_NE_A : std_logic ;
+  signal BINOPOUT_3_NE_A : std_logic ;
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  bitindex_i_i_i_n_0 <= not BITINDEX_I(2);
+  \II_globals_CForkIn_out_i_a2_0_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "feff")
+  port map (
+  combout => N_335_I_0_INT_27,
+  dataa => GLOBALS_STARTOUT_OUT(0),
+  datab => THENDONE(0),
+  datac => Z_DONES_1(0),
+  datad => GLOBALS_CFORKIN_OUT_I_A2_A(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_FalseZ_1_out_0_a2_0_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0200")
+  port map (
+  combout => GLOBALS_FALSEZ_1_OUT_0_A2_0(0),
+  dataa => BITINDEX(0),
+  datab => BITINDEX_I(2),
+  datac => BINOPOUT_4_NE,
+  datad => GLOBALS_FALSEZ_1_OUT_0_A2_1_1_0_INT_24,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_RdPtr_outf_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "7f80")
+  port map (
+  regout => GLOBALS_RDPTR_OUTF_3_INT_23,
+  clk => ReceiverClock,
+  dataa => GLOBALS_RDPTR_OUTF_0_INT_22,
+  datab => GLOBALS_RDPTR_OUTF_1_INT_21,
+  datac => GLOBALS_RDPTR_OUTF_2_INT_20,
+  datad => GLOBALS_RDPTR_OUTF_3_INT_23,
+  aclr => reset,
+  ena => GLOBALS_TRUEZ_OUT_0_A2(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_RdPtr_outf_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "7878")
+  port map (
+  regout => GLOBALS_RDPTR_OUTF_2_INT_20,
+  clk => ReceiverClock,
+  dataa => GLOBALS_RDPTR_OUTF_0_INT_22,
+  datab => GLOBALS_RDPTR_OUTF_1_INT_21,
+  datac => GLOBALS_RDPTR_OUTF_2_INT_20,
+  aclr => reset,
+  ena => GLOBALS_TRUEZ_OUT_0_A2(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_RdPtr_outf_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6666")
+  port map (
+  regout => GLOBALS_RDPTR_OUTF_1_INT_21,
+  clk => ReceiverClock,
+  dataa => GLOBALS_RDPTR_OUTF_1_INT_21,
+  datab => GLOBALS_RDPTR_OUTF_0_INT_22,
+  aclr => reset,
+  ena => GLOBALS_TRUEZ_OUT_0_A2(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_RdPtr_outf_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6666")
+  port map (
+  regout => GLOBALS_RDPTR_OUTF_0_INT_22,
+  clk => ReceiverClock,
+  dataa => GLOBALS_RDPTR_OUTF_0_INT_22,
+  datab => GLOBALS_TRUEZ_OUT_0_A2(0),
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_WrPtr_out_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0ff0")
+  port map (
+  regout => GLOBALS_WRPTR_OUT_0_INT_19,
+  clk => ReceiverClock,
+  datac => GLOBALS_WRPTR_OUT_0_INT_19,
+  datad => GLOBALS_FALSEZ_1_OUT_0_A2(0),
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_WrPtr_out_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_and_comb",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6666")
+  port map (
+  combout => BINOPOUT_5_SUM1,
+  regout => GLOBALS_WRPTR_OUT_1_INT_18,
+  clk => ReceiverClock,
+  dataa => GLOBALS_WRPTR_OUT_1_INT_18,
+  datab => GLOBALS_WRPTR_OUT_0_INT_19,
+  aclr => reset,
+  ena => GLOBALS_FALSEZ_1_OUT_0_A2_0(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_WrPtr_out_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_and_comb",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "7878")
+  port map (
+  combout => BINOPOUT_5_SUM2,
+  regout => GLOBALS_WRPTR_OUT_2_INT_17,
+  clk => ReceiverClock,
+  dataa => GLOBALS_WRPTR_OUT_0_INT_19,
+  datab => GLOBALS_WRPTR_OUT_1_INT_18,
+  datac => GLOBALS_WRPTR_OUT_2_INT_17,
+  aclr => reset,
+  ena => GLOBALS_FALSEZ_1_OUT_0_A2_0(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_WrPtr_out_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_and_comb",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "7f80")
+  port map (
+  combout => BINOPOUT_5_SUM3,
+  regout => GLOBALS_WRPTR_OUT_3_INT_16,
+  clk => ReceiverClock,
+  dataa => GLOBALS_WRPTR_OUT_0_INT_19,
+  datab => GLOBALS_WRPTR_OUT_1_INT_18,
+  datac => GLOBALS_WRPTR_OUT_2_INT_17,
+  datad => GLOBALS_WRPTR_OUT_3_INT_16,
+  aclr => reset,
+  ena => GLOBALS_FALSEZ_1_OUT_0_A2_0(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_bitindex_i_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "d2f0")
+  port map (
+  regout => BITINDEX_I(2),
+  clk => ReceiverClock,
+  dataa => BITINDEX(0),
+  datab => BITINDEX_I(1),
+  datac => BITINDEX_I(2),
+  datad => N_335_I_INT_26,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_bitindex_i_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6c6c")
+  port map (
+  regout => BITINDEX_I(1),
+  clk => ReceiverClock,
+  dataa => BITINDEX(0),
+  datab => BITINDEX_I(1),
+  datac => N_335_I_INT_26,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_bitindex_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6666")
+  port map (
+  regout => BITINDEX(0),
+  clk => ReceiverClock,
+  dataa => BITINDEX(0),
+  datab => N_335_I_INT_26,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_DATA_OUT_7_INT_15,
+  clk => ReceiverClock,
+  datad => DataIn,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_6_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_DATA_OUT_6_INT_14,
+  clk => ReceiverClock,
+  datad => GLOBALS_DATA_OUT_7_INT_15,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_5_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_DATA_OUT_5_INT_13,
+  clk => ReceiverClock,
+  datad => GLOBALS_DATA_OUT_6_INT_14,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_4_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_DATA_OUT_4_INT_12,
+  clk => ReceiverClock,
+  datad => GLOBALS_DATA_OUT_5_INT_13,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_DATA_OUT_3_INT_11,
+  clk => ReceiverClock,
+  datad => GLOBALS_DATA_OUT_4_INT_12,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_DATA_OUT_2_INT_10,
+  clk => ReceiverClock,
+  datad => GLOBALS_DATA_OUT_3_INT_11,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_DATA_OUT_1_INT_9,
+  clk => ReceiverClock,
+  datad => GLOBALS_DATA_OUT_2_INT_10,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_Data_out_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => globals_Data_out_0,
+  clk => ReceiverClock,
+  datad => GLOBALS_DATA_OUT_1_INT_9,
+  aclr => reset,
+  ena => N_335_I_0_INT_27,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_z_dones_1_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_and_comb",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0080")
+  port map (
+  combout => GLOBALS_TRUEZ_OUT_0_A2(0),
+  regout => Z_DONES_1(0),
+  clk => ReceiverClock,
+  dataa => globals_DataReady_out_0,
+  datab => outp,
+  datac => N_335_I_INT_26,
+  datad => BINOPOUT_3_NE_INT_25,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_elsedone_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0020")
+  port map (
+  regout => ELSEDONE(0),
+  clk => ReceiverClock,
+  dataa => globals_DataReady_out_0,
+  datab => outp,
+  datac => N_335_I_INT_26,
+  datad => BINOPOUT_3_NE_INT_25,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_thendone_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "8888")
+  port map (
+  regout => THENDONE(0),
+  clk => ReceiverClock,
+  dataa => N_335_I_INT_26,
+  datab => BINOPOUT_3_NE_INT_25,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_StartOut_out_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "5555")
+  port map (
+  regout => GLOBALS_STARTOUT_OUT(0),
+  clk => ReceiverClock,
+  dataa => globals_bytes_out_0_0_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datab => VCC,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_FalseZ_1_out_0_a2_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0200")
+  port map (
+  combout => GLOBALS_FALSEZ_1_OUT_0_A2(0),
+  dataa => BITINDEX(0),
+  datab => BITINDEX_I(2),
+  datac => BINOPOUT_4_NE,
+  datad => GLOBALS_FALSEZ_1_OUT_0_A2_1_1_0_INT_24,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_eq_binopout_4_NE: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0021")
+  port map (
+  combout => BINOPOUT_4_NE,
+  dataa => GLOBALS_RDPTR_OUTF_3_INT_23,
+  datab => BINOPOUT_4_0,
+  datac => BINOPOUT_5_SUM3,
+  datad => BINOPOUT_4_NE_A,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_eq_binopout_4_NE_a: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "7dbe")
+  port map (
+  combout => BINOPOUT_4_NE_A,
+  dataa => GLOBALS_RDPTR_OUTF_2_INT_20,
+  datab => GLOBALS_RDPTR_OUTF_1_INT_21,
+  datac => BINOPOUT_5_SUM1,
+  datad => BINOPOUT_5_SUM2,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_CForkIn_out_i_a2_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "feff")
+  port map (
+  combout => N_335_I_INT_26,
+  dataa => GLOBALS_STARTOUT_OUT(0),
+  datab => THENDONE(0),
+  datac => Z_DONES_1(0),
+  datad => GLOBALS_CFORKIN_OUT_I_A2_A(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_CForkIn_out_i_a2_a_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "000f")
+  port map (
+  combout => GLOBALS_CFORKIN_OUT_I_A2_A(0),
+  datac => ELSEDONE(0),
+  datad => globals_bytes_out_3_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_eq_binopout_3_NE: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0900")
+  port map (
+  combout => BINOPOUT_3_NE_INT_25,
+  dataa => GLOBALS_WRPTR_OUT_1_INT_18,
+  datab => GLOBALS_RDPTR_OUTF_1_INT_21,
+  datac => BINOPOUT_3_NE_A,
+  datad => I_24_1,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_eq_binopout_3_NE_a: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6666")
+  port map (
+  combout => BINOPOUT_3_NE_A,
+  dataa => GLOBALS_RDPTR_OUTF_0_INT_22,
+  datab => GLOBALS_WRPTR_OUT_0_INT_19,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_FalseZ_1_out_0_a2_1_1_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0f00")
+  port map (
+  combout => GLOBALS_FALSEZ_1_OUT_0_A2_1_1_0_INT_24,
+  datac => BITINDEX_I(1),
+  datad => N_335_I_INT_26,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_eq_binopout_4_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "9999")
+  port map (
+  combout => BINOPOUT_4_0,
+  dataa => GLOBALS_WRPTR_OUT_0_INT_19,
+  datab => GLOBALS_RDPTR_OUTF_0_INT_22,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+  globals_Data_out_1 <= GLOBALS_DATA_OUT_1_INT_9;
+  globals_Data_out_2 <= GLOBALS_DATA_OUT_2_INT_10;
+  globals_Data_out_3 <= GLOBALS_DATA_OUT_3_INT_11;
+  globals_Data_out_4 <= GLOBALS_DATA_OUT_4_INT_12;
+  globals_Data_out_5 <= GLOBALS_DATA_OUT_5_INT_13;
+  globals_Data_out_6 <= GLOBALS_DATA_OUT_6_INT_14;
+  globals_Data_out_7 <= GLOBALS_DATA_OUT_7_INT_15;
+  globals_WrPtr_out_3 <= GLOBALS_WRPTR_OUT_3_INT_16;
+  globals_WrPtr_out_2 <= GLOBALS_WRPTR_OUT_2_INT_17;
+  globals_WrPtr_out_1 <= GLOBALS_WRPTR_OUT_1_INT_18;
+  globals_WrPtr_out_0 <= GLOBALS_WRPTR_OUT_0_INT_19;
+  globals_RdPtr_outf_2 <= GLOBALS_RDPTR_OUTF_2_INT_20;
+  globals_RdPtr_outf_1 <= GLOBALS_RDPTR_OUTF_1_INT_21;
+  globals_RdPtr_outf_0 <= GLOBALS_RDPTR_OUTF_0_INT_22;
+  globals_RdPtr_outf_3 <= GLOBALS_RDPTR_OUTF_3_INT_23;
+  globals_FalseZ_1_out_0_a2_1_1_0 <= GLOBALS_FALSEZ_1_OUT_0_A2_1_1_0_INT_24;
+  binopout_3_NE <= BINOPOUT_3_NE_INT_25;
+  N_335_i <= N_335_I_INT_26;
+  N_335_i_0 <= N_335_I_0_INT_27;
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+library lpm;
+use lpm.lpm_components.all;
+
+library altera_mf;
+use altera_mf.altera_mf_components.all;
+
+entity receiver_hcc is
+port(
+  globals_RdPtr_outf_3 :  out std_logic;
+  globals_RdPtr_outf_2 :  out std_logic;
+  globals_RdPtr_outf_1 :  out std_logic;
+  globals_RdPtr_outf_0 :  out std_logic;
+  globals_WrPtr_out_3 :  out std_logic;
+  globals_WrPtr_out_2 :  out std_logic;
+  globals_WrPtr_out_1 :  out std_logic;
+  globals_WrPtr_out_0 :  out std_logic;
+  globals_bytes_out_1_0 :  out std_logic;
+  globals_bytes_out_1_1 :  out std_logic;
+  globals_bytes_out_1_2 :  out std_logic;
+  globals_bytes_out_1_3 :  out std_logic;
+  globals_bytes_out_1_4 :  out std_logic;
+  globals_bytes_out_1_5 :  out std_logic;
+  globals_bytes_out_1_6 :  out std_logic;
+  globals_bytes_out_1_7 :  out std_logic;
+  globals_binopout_0 :  in std_logic;
+  globals_binopout_1 :  in std_logic;
+  globals_binopout_2 :  in std_logic;
+  globals_binopout_3 :  in std_logic;
+  globals_binopout_4 :  in std_logic;
+  globals_binopout_5 :  in std_logic;
+  globals_binopout_6 :  in std_logic;
+  globals_binopout_7 :  in std_logic;
+  p_0 :  out std_logic;
+  p_1 :  out std_logic;
+  p_2 :  out std_logic;
+  p_3 :  out std_logic;
+  p_4 :  out std_logic;
+  p_5 :  out std_logic;
+  p_6 :  out std_logic;
+  p_7 :  out std_logic;
+  globals_DataReady_out_0 :  out std_logic;
+  DataIn :  in std_logic;
+  outp :  in std_logic;
+  I_24_1 :  in std_logic;
+  I_22_a :  in std_logic;
+  reset :  in std_logic;
+  ReceiverClock :  in std_logic);
+end receiver_hcc;
+
+architecture beh of receiver_hcc is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GLOBALS_BYTES_OUT_3_0 : std_logic_vector (7 to 7);
+  signal GLOBALS_BYTES_OUT_0_0 : std_logic_vector (7 to 7);
+  signal GLOBALS_BYTES_OUT_3 : std_logic_vector (7 to 7);
+  signal GLOBALS_BYTES_OUT_2 : std_logic_vector (7 downto 0);
+  signal MPRAM_FIFO : std_logic_vector (7 downto 0);
+  signal GLOBALS_FALSEZ_1_OUT_0_A2_1_1 : std_logic_vector (0 to 0);
+  signal GLOBALS_DATA_OUT : std_logic_vector (7 downto 0);
+  signal BITINDEX_I_I_I_N : std_logic_vector (2 to 2);
+  signal GLOBALS_RDPTR_OUTF_3_INT_28 : std_logic ;
+  signal GLOBALS_RDPTR_OUTF_2_INT_29 : std_logic ;
+  signal GLOBALS_RDPTR_OUTF_1_INT_30 : std_logic ;
+  signal GLOBALS_RDPTR_OUTF_0_INT_31 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_3_INT_32 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_2_INT_33 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_1_INT_34 : std_logic ;
+  signal GLOBALS_WRPTR_OUT_0_INT_35 : std_logic ;
+  signal GLOBALS_DATAREADY_OUT_0_INT_36 : std_logic ;
+  signal N_335_I : std_logic ;
+  signal BINOPOUT_3_NE : std_logic ;
+  signal VCC : std_logic ;
+  signal N_335_I_0 : std_logic ;
+  signal UN1_GLOBALS_TRUEZ_2_I : std_logic ;
+  signal GND : std_logic ;
+  component receiver_hcc_main
+    port(
+      globals_bytes_out_3_0 : in std_logic;
+      globals_bytes_out_0_0_0 : in std_logic;
+      globals_DataReady_out_0 : in std_logic;
+      globals_Data_out_0 : out std_logic;
+      globals_Data_out_1 : out std_logic;
+      globals_Data_out_2 : out std_logic;
+      globals_Data_out_3 : out std_logic;
+      globals_Data_out_4 : out std_logic;
+      globals_Data_out_5 : out std_logic;
+      globals_Data_out_6 : out std_logic;
+      globals_Data_out_7 : out std_logic;
+      globals_WrPtr_out_3 : out std_logic;
+      globals_WrPtr_out_2 : out std_logic;
+      globals_WrPtr_out_1 : out std_logic;
+      globals_WrPtr_out_0 : out std_logic;
+      globals_RdPtr_outf_2 : out std_logic;
+      globals_RdPtr_outf_1 : out std_logic;
+      globals_RdPtr_outf_0 : out std_logic;
+      globals_RdPtr_outf_3 : out std_logic;
+      globals_FalseZ_1_out_0_a2_1_1_0 : out std_logic;
+      bitindex_i_i_i_n_0 : out std_logic;
+      I_24_1 : in std_logic;
+      binopout_3_NE : out std_logic;
+      outp : in std_logic;
+      DataIn : in std_logic;
+      N_335_i : out std_logic;
+      reset : in std_logic;
+      ReceiverClock : in std_logic;
+      N_335_i_0 : out std_logic  );
+  end component;
+begin
+  \II_globals_bytes_out_3_0_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0404")
+  port map (
+  regout => GLOBALS_BYTES_OUT_3_0(7),
+  clk => ReceiverClock,
+  dataa => GLOBALS_DATAREADY_OUT_0_INT_36,
+  datab => N_335_I,
+  datac => BINOPOUT_3_NE,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_0_0_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => GLOBALS_BYTES_OUT_0_0(7),
+  clk => ReceiverClock,
+  datad => VCC,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_3_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "0030")
+  port map (
+  regout => GLOBALS_BYTES_OUT_3(7),
+  clk => ReceiverClock,
+  datab => GLOBALS_DATAREADY_OUT_0_INT_36,
+  datac => N_335_I,
+  datad => BINOPOUT_3_NE,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(7),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(7),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_6_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(6),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(6),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_5_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(5),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(5),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_4_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(4),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(4),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(3),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(3),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(2),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(2),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(1),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(1),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_2_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f000")
+  port map (
+  regout => GLOBALS_BYTES_OUT_2(0),
+  clk => ReceiverClock,
+  datac => GLOBALS_BYTES_OUT_0_0(7),
+  datad => MPRAM_FIFO(0),
+  aclr => reset,
+  ena => GLOBALS_BYTES_OUT_3_0(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_11_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_7,
+  clk => ReceiverClock,
+  datad => globals_binopout_7,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_10_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_6,
+  clk => ReceiverClock,
+  datad => globals_binopout_6,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_9_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_5,
+  clk => ReceiverClock,
+  datad => globals_binopout_5,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_8_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_4,
+  clk => ReceiverClock,
+  datad => globals_binopout_4,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_3,
+  clk => ReceiverClock,
+  datad => globals_binopout_3,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_6_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_2,
+  clk => ReceiverClock,
+  datad => globals_binopout_2,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_5_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_1,
+  clk => ReceiverClock,
+  datad => globals_binopout_1,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_p_4_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => p_0,
+  clk => ReceiverClock,
+  datad => globals_binopout_0,
+  aclr => reset,
+  ena => N_335_I_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_DataReady_out_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "4545")
+  port map (
+  regout => GLOBALS_DATAREADY_OUT_0_INT_36,
+  clk => ReceiverClock,
+  dataa => GLOBALS_DATAREADY_OUT_0_INT_36,
+  datab => I_22_a,
+  datac => I_24_1,
+  aclr => reset,
+  ena => UN1_GLOBALS_TRUEZ_2_I,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_un1_globals_truez_2_i: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "f0d0")
+  port map (
+  combout => UN1_GLOBALS_TRUEZ_2_I,
+  dataa => GLOBALS_DATAREADY_OUT_0_INT_36,
+  datab => outp,
+  datac => N_335_I,
+  datad => BINOPOUT_3_NE,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_7,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(7),
+  datad => MPRAM_FIFO(7),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_6_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_6,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(6),
+  datad => MPRAM_FIFO(6),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_5_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_5,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(5),
+  datad => MPRAM_FIFO(5),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_4_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_4,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(4),
+  datad => MPRAM_FIFO(4),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_3,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(3),
+  datad => MPRAM_FIFO(3),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_2,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(2),
+  datad => MPRAM_FIFO(2),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_1,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(1),
+  datad => MPRAM_FIFO(1),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_globals_bytes_out_1_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "b830")
+  port map (
+  combout => globals_bytes_out_1_0,
+  dataa => GLOBALS_BYTES_OUT_0_0(7),
+  datab => GLOBALS_BYTES_OUT_3(7),
+  datac => GLOBALS_BYTES_OUT_2(0),
+  datad => MPRAM_FIFO(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_mpram_fifo_I_1: altsyncram  generic map(
+   operation_mode =>  "DUAL_PORT" ,
+   width_a =>  8,
+   widthad_a =>  4,
+   numwords_a =>  16,
+   outdata_reg_a =>  "UNREGISTERED" ,
+   address_aclr_a =>  "UNUSED" ,
+   outdata_aclr_a =>  "UNUSED" ,
+   indata_aclr_a =>  "UNUSED" ,
+   wrcontrol_aclr_a =>  "UNUSED" ,
+   width_byteena_a =>  1,
+   width_b =>  8,
+   widthad_b =>  4,
+   numwords_b =>  16,
+   rdcontrol_reg_b =>  "CLOCK1" ,
+   address_reg_b =>  "CLOCK1" ,
+   outdata_reg_b =>  "UNREGISTERED" ,
+   rdcontrol_aclr_b =>  "UNUSED" ,
+   indata_reg_b =>  "UNUSED" ,
+   wrcontrol_wraddress_reg_b =>  "CLOCK1" ,
+   indata_aclr_b =>  "UNUSED" ,
+   wrcontrol_aclr_b =>  "UNUSED" ,
+   address_aclr_b =>  "UNUSED" ,
+   width_byteena_b =>  1,
+   byte_size =>  9,
+   read_during_write_mode_mixed_ports =>  "OLD_DATA" ,
+   ram_block_type =>  "AUTO" ,
+   init_file =>  "UNUSED" )
+  port map (
+    wren_a => GLOBALS_FALSEZ_1_OUT_0_A2_1_1(0),
+    wren_b => GND,
+    data_a(0) => GLOBALS_DATA_OUT(0),
+    data_a(1) => GLOBALS_DATA_OUT(1),
+    data_a(2) => GLOBALS_DATA_OUT(2),
+    data_a(3) => GLOBALS_DATA_OUT(3),
+    data_a(4) => GLOBALS_DATA_OUT(4),
+    data_a(5) => GLOBALS_DATA_OUT(5),
+    data_a(6) => GLOBALS_DATA_OUT(6),
+    data_a(7) => GLOBALS_DATA_OUT(7),
+    address_a(0) => GLOBALS_WRPTR_OUT_0_INT_35,
+    address_a(1) => GLOBALS_WRPTR_OUT_1_INT_34,
+    address_a(2) => GLOBALS_WRPTR_OUT_2_INT_33,
+    address_a(3) => GLOBALS_WRPTR_OUT_3_INT_32,
+    address_b(0) => GLOBALS_RDPTR_OUTF_0_INT_31,
+    address_b(1) => GLOBALS_RDPTR_OUTF_1_INT_30,
+    address_b(2) => GLOBALS_RDPTR_OUTF_2_INT_29,
+    address_b(3) => GLOBALS_RDPTR_OUTF_3_INT_28,
+    clock0 => ReceiverClock,
+    clock1 => ReceiverClock,
+    clocken0 => BITINDEX_I_I_I_N(2),
+    clocken1 => VCC,
+    q_b(0) => MPRAM_FIFO(0),
+    q_b(1) => MPRAM_FIFO(1),
+    q_b(2) => MPRAM_FIFO(2),
+    q_b(3) => MPRAM_FIFO(3),
+    q_b(4) => MPRAM_FIFO(4),
+    q_b(5) => MPRAM_FIFO(5),
+    q_b(6) => MPRAM_FIFO(6),
+    q_b(7) => MPRAM_FIFO(7));
+  II_Instance0: receiver_hcc_main port map (
+      globals_bytes_out_3_0 => GLOBALS_BYTES_OUT_3(7),
+      globals_bytes_out_0_0_0 => GLOBALS_BYTES_OUT_0_0(7),
+      globals_DataReady_out_0 => GLOBALS_DATAREADY_OUT_0_INT_36,
+      globals_Data_out_0 => GLOBALS_DATA_OUT(0),
+      globals_Data_out_1 => GLOBALS_DATA_OUT(1),
+      globals_Data_out_2 => GLOBALS_DATA_OUT(2),
+      globals_Data_out_3 => GLOBALS_DATA_OUT(3),
+      globals_Data_out_4 => GLOBALS_DATA_OUT(4),
+      globals_Data_out_5 => GLOBALS_DATA_OUT(5),
+      globals_Data_out_6 => GLOBALS_DATA_OUT(6),
+      globals_Data_out_7 => GLOBALS_DATA_OUT(7),
+      globals_WrPtr_out_3 => GLOBALS_WRPTR_OUT_3_INT_32,
+      globals_WrPtr_out_2 => GLOBALS_WRPTR_OUT_2_INT_33,
+      globals_WrPtr_out_1 => GLOBALS_WRPTR_OUT_1_INT_34,
+      globals_WrPtr_out_0 => GLOBALS_WRPTR_OUT_0_INT_35,
+      globals_RdPtr_outf_2 => GLOBALS_RDPTR_OUTF_2_INT_29,
+      globals_RdPtr_outf_1 => GLOBALS_RDPTR_OUTF_1_INT_30,
+      globals_RdPtr_outf_0 => GLOBALS_RDPTR_OUTF_0_INT_31,
+      globals_RdPtr_outf_3 => GLOBALS_RDPTR_OUTF_3_INT_28,
+      globals_FalseZ_1_out_0_a2_1_1_0 => GLOBALS_FALSEZ_1_OUT_0_A2_1_1(0),
+      bitindex_i_i_i_n_0 => BITINDEX_I_I_I_N(2),
+      I_24_1 => I_24_1,
+      binopout_3_NE => BINOPOUT_3_NE,
+      outp => outp,
+      DataIn => DataIn,
+      N_335_i => N_335_I,
+      reset => reset,
+      ReceiverClock => ReceiverClock,
+      N_335_i_0 => N_335_I_0);
+  VCC <= '1';
+  GND <= '0';
+  globals_RdPtr_outf_3 <= GLOBALS_RDPTR_OUTF_3_INT_28;
+  globals_RdPtr_outf_2 <= GLOBALS_RDPTR_OUTF_2_INT_29;
+  globals_RdPtr_outf_1 <= GLOBALS_RDPTR_OUTF_1_INT_30;
+  globals_RdPtr_outf_0 <= GLOBALS_RDPTR_OUTF_0_INT_31;
+  globals_WrPtr_out_3 <= GLOBALS_WRPTR_OUT_3_INT_32;
+  globals_WrPtr_out_2 <= GLOBALS_WRPTR_OUT_2_INT_33;
+  globals_WrPtr_out_1 <= GLOBALS_WRPTR_OUT_1_INT_34;
+  globals_WrPtr_out_0 <= GLOBALS_WRPTR_OUT_0_INT_35;
+  globals_DataReady_out_0 <= GLOBALS_DATAREADY_OUT_0_INT_36;
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_9 is
+port(
+  globals_DataReady_out_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  outp :  out std_logic);
+end synchronizer_9;
+
+architecture beh of synchronizer_9 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal INT : std_logic ;
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_outp_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => outp,
+  clk => FilterClock,
+  datad => INT,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_int: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => INT,
+  clk => FilterClock,
+  datad => globals_DataReady_out_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_8 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_8;
+
+architecture beh of synchronizer_8 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_7 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_7;
+
+architecture beh of synchronizer_7 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_6 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_6;
+
+architecture beh of synchronizer_6 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_5 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_5;
+
+architecture beh of synchronizer_5 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_4 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_4;
+
+architecture beh of synchronizer_4 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_3 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_3;
+
+architecture beh of synchronizer_3 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_2 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_2;
+
+architecture beh of synchronizer_2 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer_1 is
+port(
+  p_0 :  in std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic;
+  int :  out std_logic);
+end synchronizer_1;
+
+architecture beh of synchronizer_1 is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_int_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => int,
+  clk => FilterClock,
+  datad => p_0,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity synchronizer is
+port(
+  Ack :  in std_logic;
+  reset :  in std_logic;
+  ReceiverClock :  in std_logic;
+  outp :  out std_logic);
+end synchronizer;
+
+architecture beh of synchronizer is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal INT : std_logic ;
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  II_outp_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => outp,
+  clk => ReceiverClock,
+  datad => INT,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_int: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => INT,
+  clk => ReceiverClock,
+  datad => Ack,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity receiver_top is
+port(
+  globals_DataReady_out_0 :  out std_logic;
+  p_7 :  out std_logic;
+  p_6 :  out std_logic;
+  p_5 :  out std_logic;
+  p_4 :  out std_logic;
+  p_3 :  out std_logic;
+  p_2 :  out std_logic;
+  p_1 :  out std_logic;
+  p_0 :  out std_logic;
+  globals_binopout_7 :  in std_logic;
+  globals_binopout_6 :  in std_logic;
+  globals_binopout_5 :  in std_logic;
+  globals_binopout_4 :  in std_logic;
+  globals_binopout_3 :  in std_logic;
+  globals_binopout_2 :  in std_logic;
+  globals_binopout_1 :  in std_logic;
+  globals_binopout_0 :  in std_logic;
+  globals_bytes_out_1_7 :  out std_logic;
+  globals_bytes_out_1_6 :  out std_logic;
+  globals_bytes_out_1_5 :  out std_logic;
+  globals_bytes_out_1_4 :  out std_logic;
+  globals_bytes_out_1_3 :  out std_logic;
+  globals_bytes_out_1_2 :  out std_logic;
+  globals_bytes_out_1_1 :  out std_logic;
+  globals_bytes_out_1_0 :  out std_logic;
+  globals_WrPtr_out_0 :  out std_logic;
+  globals_WrPtr_out_1 :  out std_logic;
+  globals_WrPtr_out_2 :  out std_logic;
+  globals_WrPtr_out_3 :  out std_logic;
+  globals_RdPtr_outf_0 :  out std_logic;
+  globals_RdPtr_outf_1 :  out std_logic;
+  globals_RdPtr_outf_2 :  out std_logic;
+  globals_RdPtr_outf_3 :  out std_logic;
+  ReceiverClock :  in std_logic;
+  reset :  in std_logic;
+  I_22_a :  in std_logic;
+  I_24_1 :  in std_logic;
+  outp :  in std_logic;
+  DataIn :  in std_logic);
+end receiver_top;
+
+architecture beh of receiver_top is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+  component receiver_hcc
+    port(
+      globals_RdPtr_outf_3 : out std_logic;
+      globals_RdPtr_outf_2 : out std_logic;
+      globals_RdPtr_outf_1 : out std_logic;
+      globals_RdPtr_outf_0 : out std_logic;
+      globals_WrPtr_out_3 : out std_logic;
+      globals_WrPtr_out_2 : out std_logic;
+      globals_WrPtr_out_1 : out std_logic;
+      globals_WrPtr_out_0 : out std_logic;
+      globals_bytes_out_1_0 : out std_logic;
+      globals_bytes_out_1_1 : out std_logic;
+      globals_bytes_out_1_2 : out std_logic;
+      globals_bytes_out_1_3 : out std_logic;
+      globals_bytes_out_1_4 : out std_logic;
+      globals_bytes_out_1_5 : out std_logic;
+      globals_bytes_out_1_6 : out std_logic;
+      globals_bytes_out_1_7 : out std_logic;
+      globals_binopout_0 : in std_logic;
+      globals_binopout_1 : in std_logic;
+      globals_binopout_2 : in std_logic;
+      globals_binopout_3 : in std_logic;
+      globals_binopout_4 : in std_logic;
+      globals_binopout_5 : in std_logic;
+      globals_binopout_6 : in std_logic;
+      globals_binopout_7 : in std_logic;
+      p_0 : out std_logic;
+      p_1 : out std_logic;
+      p_2 : out std_logic;
+      p_3 : out std_logic;
+      p_4 : out std_logic;
+      p_5 : out std_logic;
+      p_6 : out std_logic;
+      p_7 : out std_logic;
+      globals_DataReady_out_0 : out std_logic;
+      DataIn : in std_logic;
+      outp : in std_logic;
+      I_24_1 : in std_logic;
+      I_22_a : in std_logic;
+      reset : in std_logic;
+      ReceiverClock : in std_logic  );
+  end component;
+begin
+  II_Instance0: receiver_hcc port map (
+      globals_RdPtr_outf_3 => globals_RdPtr_outf_3,
+      globals_RdPtr_outf_2 => globals_RdPtr_outf_2,
+      globals_RdPtr_outf_1 => globals_RdPtr_outf_1,
+      globals_RdPtr_outf_0 => globals_RdPtr_outf_0,
+      globals_WrPtr_out_3 => globals_WrPtr_out_3,
+      globals_WrPtr_out_2 => globals_WrPtr_out_2,
+      globals_WrPtr_out_1 => globals_WrPtr_out_1,
+      globals_WrPtr_out_0 => globals_WrPtr_out_0,
+      globals_bytes_out_1_0 => globals_bytes_out_1_0,
+      globals_bytes_out_1_1 => globals_bytes_out_1_1,
+      globals_bytes_out_1_2 => globals_bytes_out_1_2,
+      globals_bytes_out_1_3 => globals_bytes_out_1_3,
+      globals_bytes_out_1_4 => globals_bytes_out_1_4,
+      globals_bytes_out_1_5 => globals_bytes_out_1_5,
+      globals_bytes_out_1_6 => globals_bytes_out_1_6,
+      globals_bytes_out_1_7 => globals_bytes_out_1_7,
+      globals_binopout_0 => globals_binopout_0,
+      globals_binopout_1 => globals_binopout_1,
+      globals_binopout_2 => globals_binopout_2,
+      globals_binopout_3 => globals_binopout_3,
+      globals_binopout_4 => globals_binopout_4,
+      globals_binopout_5 => globals_binopout_5,
+      globals_binopout_6 => globals_binopout_6,
+      globals_binopout_7 => globals_binopout_7,
+      p_0 => p_0,
+      p_1 => p_1,
+      p_2 => p_2,
+      p_3 => p_3,
+      p_4 => p_4,
+      p_5 => p_5,
+      p_6 => p_6,
+      p_7 => p_7,
+      globals_DataReady_out_0 => globals_DataReady_out_0,
+      DataIn => DataIn,
+      outp => outp,
+      I_24_1 => I_24_1,
+      I_22_a => I_22_a,
+      reset => reset,
+      ReceiverClock => ReceiverClock);
+  GND <= '0';
+  VCC <= '1';
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+entity Filter is
+port(
+  regf_0 :  in std_logic;
+  regf_1 :  in std_logic;
+  regf_2 :  in std_logic;
+  regf_3 :  in std_logic;
+  regf_4 :  in std_logic;
+  regf_5 :  in std_logic;
+  regf_6 :  in std_logic;
+  regf_7 :  in std_logic;
+  current_0 :  out std_logic;
+  current_1 :  out std_logic;
+  current_2 :  out std_logic;
+  current_3 :  out std_logic;
+  current_4 :  out std_logic;
+  current_5 :  out std_logic;
+  current_6 :  out std_logic;
+  current_7 :  out std_logic;
+  outp :  in std_logic;
+  Ack :  out std_logic;
+  reset :  in std_logic;
+  FilterClock :  in std_logic);
+end Filter;
+
+architecture beh of Filter is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal UN9_CURRENT_0 : std_logic_vector (9 downto 8);
+  signal CURRENT_COUT : std_logic_vector (8 to 8);
+  signal PREVIOUSSAMPLE1F : std_logic_vector (7 downto 0);
+  signal PREVIOUSSAMPLE2 : std_logic_vector (7 downto 0);
+  signal CURRENT_0_INT_0 : std_logic ;
+  signal CURRENT_1_INT_1 : std_logic ;
+  signal CURRENT_2_INT_2 : std_logic ;
+  signal CURRENT_3_INT_3 : std_logic ;
+  signal CURRENT_4_INT_4 : std_logic ;
+  signal CURRENT_5_INT_5 : std_logic ;
+  signal CURRENT_6_INT_6 : std_logic ;
+  signal CURRENT_7_INT_7 : std_logic ;
+  signal ACK_INT_8 : std_logic ;
+  signal UN9_CURRENT_0_ADD7_COUT : std_logic ;
+  signal ACK_4 : std_logic ;
+  signal UN9_CURRENT_CARRY_7 : std_logic ;
+  signal UN9_CURRENT_0_ADD7 : std_logic ;
+  signal UN9_CURRENT_CARRY_6 : std_logic ;
+  signal UN9_CURRENT_0_ADD6 : std_logic ;
+  signal UN9_CURRENT_CARRY_5 : std_logic ;
+  signal UN9_CURRENT_0_ADD5 : std_logic ;
+  signal UN9_CURRENT_CARRY_4 : std_logic ;
+  signal UN9_CURRENT_0_ADD4 : std_logic ;
+  signal UN9_CURRENT_CARRY_3 : std_logic ;
+  signal UN9_CURRENT_0_ADD3 : std_logic ;
+  signal UN9_CURRENT_CARRY_2 : std_logic ;
+  signal UN9_CURRENT_0_ADD2 : std_logic ;
+  signal UN9_CURRENT_CARRY_1 : std_logic ;
+  signal UN9_CURRENT_0_ADD1 : std_logic ;
+  signal UN9_CURRENT_CARRY_0 : std_logic ;
+  signal UN9_CURRENT_0_ADD0 : std_logic ;
+  signal UN9_CURRENT_0_CARRY_6 : std_logic ;
+  signal UN9_CURRENT_0_CARRY_5 : std_logic ;
+  signal UN9_CURRENT_0_CARRY_4 : std_logic ;
+  signal UN9_CURRENT_0_CARRY_3 : std_logic ;
+  signal UN9_CURRENT_0_CARRY_2 : std_logic ;
+  signal UN9_CURRENT_0_CARRY_1 : std_logic ;
+  signal UN9_CURRENT_0_CARRY_0 : std_logic ;
+  signal N_1 : std_logic ;
+  signal N_2 : std_logic ;
+  signal GND : std_logic ;
+  signal VCC : std_logic ;
+begin
+  \II_current_term_8_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "f0f0")
+  port map (
+  combout => UN9_CURRENT_0(9),
+  cin => CURRENT_COUT(8),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add7_term: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "f0f0")
+  port map (
+  combout => UN9_CURRENT_0(8),
+  cin => UN9_CURRENT_0_ADD7_COUT,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(7),
+  clk => FilterClock,
+  datad => CURRENT_7_INT_7,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_6_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(6),
+  clk => FilterClock,
+  datad => CURRENT_6_INT_6,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_5_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(5),
+  clk => FilterClock,
+  datad => CURRENT_5_INT_5,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_4_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(4),
+  clk => FilterClock,
+  datad => CURRENT_4_INT_4,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(3),
+  clk => FilterClock,
+  datad => CURRENT_3_INT_3,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(2),
+  clk => FilterClock,
+  datad => CURRENT_2_INT_2,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(1),
+  clk => FilterClock,
+  datad => CURRENT_1_INT_1,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample1f_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE1F(0),
+  clk => FilterClock,
+  datad => CURRENT_0_INT_0,
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(0),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(0),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(1),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(1),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(2),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(2),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(3),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(3),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_4_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(4),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(4),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_5_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(5),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(5),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_6_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(6),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(6),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_previoussample2_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => PREVIOUSSAMPLE2(7),
+  clk => FilterClock,
+  datad => PREVIOUSSAMPLE1F(7),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_9_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => CURRENT_7_INT_7,
+  clk => FilterClock,
+  datad => UN9_CURRENT_0(9),
+  aclr => reset,
+  ena => ACK_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_8_\: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "5aa0")
+  port map (
+  regout => CURRENT_6_INT_6,
+  cout => CURRENT_COUT(8),
+  clk => FilterClock,
+  dataa => UN9_CURRENT_0(8),
+  aclr => reset,
+  ena => ACK_4,
+  cin => UN9_CURRENT_CARRY_7,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datab => VCC,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_7_\: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  regout => CURRENT_5_INT_5,
+  cout => UN9_CURRENT_CARRY_7,
+  clk => FilterClock,
+  dataa => UN9_CURRENT_0_ADD7,
+  datab => PREVIOUSSAMPLE2(7),
+  aclr => reset,
+  ena => ACK_4,
+  cin => UN9_CURRENT_CARRY_6,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_6_\: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  regout => CURRENT_4_INT_4,
+  cout => UN9_CURRENT_CARRY_6,
+  clk => FilterClock,
+  dataa => UN9_CURRENT_0_ADD6,
+  datab => PREVIOUSSAMPLE2(6),
+  aclr => reset,
+  ena => ACK_4,
+  cin => UN9_CURRENT_CARRY_5,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_5_\: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  regout => CURRENT_3_INT_3,
+  cout => UN9_CURRENT_CARRY_5,
+  clk => FilterClock,
+  dataa => UN9_CURRENT_0_ADD5,
+  datab => PREVIOUSSAMPLE2(5),
+  aclr => reset,
+  ena => ACK_4,
+  cin => UN9_CURRENT_CARRY_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_4_\: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  regout => CURRENT_2_INT_2,
+  cout => UN9_CURRENT_CARRY_4,
+  clk => FilterClock,
+  dataa => UN9_CURRENT_0_ADD4,
+  datab => PREVIOUSSAMPLE2(4),
+  aclr => reset,
+  ena => ACK_4,
+  cin => UN9_CURRENT_CARRY_3,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_3_\: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  regout => CURRENT_1_INT_1,
+  cout => UN9_CURRENT_CARRY_3,
+  clk => FilterClock,
+  dataa => UN9_CURRENT_0_ADD3,
+  datab => PREVIOUSSAMPLE2(3),
+  aclr => reset,
+  ena => ACK_4,
+  cin => UN9_CURRENT_CARRY_2,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_current_2_\: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  regout => CURRENT_0_INT_0,
+  cout => UN9_CURRENT_CARRY_2,
+  clk => FilterClock,
+  dataa => UN9_CURRENT_0_ADD2,
+  datab => PREVIOUSSAMPLE2(2),
+  aclr => reset,
+  ena => ACK_4,
+  cin => UN9_CURRENT_CARRY_1,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_Ack_0: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_and_comb",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "2222")
+  port map (
+  combout => ACK_4,
+  regout => ACK_INT_8,
+  clk => FilterClock,
+  dataa => outp,
+  datab => ACK_INT_8,
+  aclr => reset,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_add1: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => N_1,
+  cout => UN9_CURRENT_CARRY_1,
+  dataa => UN9_CURRENT_0_ADD1,
+  datab => PREVIOUSSAMPLE2(1),
+  cin => UN9_CURRENT_CARRY_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_add0: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6688")
+  port map (
+  combout => N_2,
+  cout => UN9_CURRENT_CARRY_0,
+  dataa => UN9_CURRENT_0_ADD0,
+  datab => PREVIOUSSAMPLE2(0),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add7: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => UN9_CURRENT_0_ADD7,
+  cout => UN9_CURRENT_0_ADD7_COUT,
+  dataa => PREVIOUSSAMPLE1F(7),
+  datab => regf_7,
+  cin => UN9_CURRENT_0_CARRY_6,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add6: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => UN9_CURRENT_0_ADD6,
+  cout => UN9_CURRENT_0_CARRY_6,
+  dataa => PREVIOUSSAMPLE1F(6),
+  datab => regf_6,
+  cin => UN9_CURRENT_0_CARRY_5,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add5: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => UN9_CURRENT_0_ADD5,
+  cout => UN9_CURRENT_0_CARRY_5,
+  dataa => PREVIOUSSAMPLE1F(5),
+  datab => regf_5,
+  cin => UN9_CURRENT_0_CARRY_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add4: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => UN9_CURRENT_0_ADD4,
+  cout => UN9_CURRENT_0_CARRY_4,
+  dataa => PREVIOUSSAMPLE1F(4),
+  datab => regf_4,
+  cin => UN9_CURRENT_0_CARRY_3,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add3: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => UN9_CURRENT_0_ADD3,
+  cout => UN9_CURRENT_0_CARRY_3,
+  dataa => PREVIOUSSAMPLE1F(3),
+  datab => regf_3,
+  cin => UN9_CURRENT_0_CARRY_2,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add2: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => UN9_CURRENT_0_ADD2,
+  cout => UN9_CURRENT_0_CARRY_2,
+  dataa => PREVIOUSSAMPLE1F(2),
+  datab => regf_2,
+  cin => UN9_CURRENT_0_CARRY_1,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add1: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "cin",
+       cin_used => "true",
+      lut_mask => "96e8")
+  port map (
+  combout => UN9_CURRENT_0_ADD1,
+  cout => UN9_CURRENT_0_CARRY_1,
+  dataa => PREVIOUSSAMPLE1F(1),
+  datab => regf_1,
+  cin => UN9_CURRENT_0_CARRY_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  inverta => GND,
+	  aload => GND);
+  II_un9_current_0_add0: stratix_lcell generic map (
+      operation_mode => "arithmetic",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6688")
+  port map (
+  combout => UN9_CURRENT_0_ADD0,
+  cout => UN9_CURRENT_0_CARRY_0,
+  dataa => PREVIOUSSAMPLE1F(0),
+  datab => regf_0,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  datac => VCC,
+	  datad => VCC,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  GND <= '0';
+  VCC <= '1';
+  current_0 <= CURRENT_0_INT_0;
+  current_1 <= CURRENT_1_INT_1;
+  current_2 <= CURRENT_2_INT_2;
+  current_3 <= CURRENT_3_INT_3;
+  current_4 <= CURRENT_4_INT_4;
+  current_5 <= CURRENT_5_INT_5;
+  current_6 <= CURRENT_6_INT_6;
+  current_7 <= CURRENT_7_INT_7;
+  Ack <= ACK_INT_8;
+end beh;
+
+--
+library ieee, stratix;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+use stratix.stratix_components.all;
+
+library lpm;
+use lpm.lpm_components.all;
+
+library altera_mf;
+use altera_mf.altera_mf_components.all;
+
+entity top is
+port(
+  DataIn :  in std_logic;
+  FilterClock :  in std_logic;
+  ReceiverClock :  in std_logic;
+  reset :  in std_logic;
+  Volume : in std_logic_vector (3 downto 0);
+  DataOut : out std_logic_vector (7 downto 0));
+end top;
+
+architecture beh of top is
+  signal devclrn : std_logic := '1';
+  signal devpor : std_logic := '1';
+  signal devoe : std_logic := '0';
+  signal REGF : std_logic_vector (7 downto 0);
+  signal \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\ : std_logic_vector (3 downto 0);
+  signal \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\ : std_logic_vector (3 downto 0);
+  signal \INSTANCE0.UN1_GLOBALS_BYTES_OUT_MULONLY_71_60_.GLOBALS_BINOPOUT\ : std_logic_vector (3 downto 0);
+  signal \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\ : std_logic_vector (11 downto 4);
+  signal \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\ : std_logic_vector (7 downto 0);
+  signal \RECEIVERINSTANCE.INSTANCE0.GLOBALS_DATAREADY_OUT\ : std_logic_vector (0 to 0);
+  signal \RECEIVERINSTANCE.INSTANCE0.P\ : std_logic_vector (11 downto 4);
+  signal DATAOUTZ : std_logic_vector (7 downto 0);
+  signal DATAIN_INTERNAL : std_logic ;
+  signal FILTERCLOCK_INTERNAL : std_logic ;
+  signal RECEIVERCLOCK_INTERNAL : std_logic ;
+  signal RESET_INTERNAL : std_logic ;
+  signal VOLUME_0_INTERNAL : std_logic ;
+  signal VOLUME_1_INTERNAL : std_logic ;
+  signal VOLUME_2_INTERNAL : std_logic ;
+  signal VOLUME_3_INTERNAL : std_logic ;
+  signal VCC : std_logic ;
+  signal GND : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY0.INT\ : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY1.INT\ : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY2.INT\ : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY3.INT\ : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY4.INT\ : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY5.INT\ : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY6.INT\ : std_logic ;
+  signal \DATA_SYNCHRONIZER_ARRAY7.INT\ : std_logic ;
+  signal I_22_A : std_logic ;
+  signal I_24_1 : std_logic ;
+  signal \RDY_SYNCHRONIZER.OUTP\ : std_logic ;
+  signal \FILTERINSTANCE.ACK\ : std_logic ;
+  signal \ACK_SYNCHRONIZER.OUTP\ : std_logic ;
+  signal N_1 : std_logic ;
+  signal N_2 : std_logic ;
+  signal N_3 : std_logic ;
+  signal N_4 : std_logic ;
+  signal N_5 : std_logic ;
+  signal N_6 : std_logic ;
+  signal N_7 : std_logic ;
+  signal N_8 : std_logic ;
+  signal N_9_INT_37 : std_logic ;
+  signal N_10_INT_38 : std_logic ;
+  signal N_11_INT_39 : std_logic ;
+  signal N_12_INT_40 : std_logic ;
+  signal N_13_INT_41 : std_logic ;
+  signal N_14_INT_42 : std_logic ;
+  signal N_15_INT_43 : std_logic ;
+  signal N_16_INT_44 : std_logic ;
+  component Filter
+    port(
+      regf_0 : in std_logic;
+      regf_1 : in std_logic;
+      regf_2 : in std_logic;
+      regf_3 : in std_logic;
+      regf_4 : in std_logic;
+      regf_5 : in std_logic;
+      regf_6 : in std_logic;
+      regf_7 : in std_logic;
+      current_0 : out std_logic;
+      current_1 : out std_logic;
+      current_2 : out std_logic;
+      current_3 : out std_logic;
+      current_4 : out std_logic;
+      current_5 : out std_logic;
+      current_6 : out std_logic;
+      current_7 : out std_logic;
+      outp : in std_logic;
+      Ack : out std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic  );
+  end component;
+  component receiver_top
+    port(
+      globals_DataReady_out_0 : out std_logic;
+      p_7 : out std_logic;
+      p_6 : out std_logic;
+      p_5 : out std_logic;
+      p_4 : out std_logic;
+      p_3 : out std_logic;
+      p_2 : out std_logic;
+      p_1 : out std_logic;
+      p_0 : out std_logic;
+      globals_binopout_7 : in std_logic;
+      globals_binopout_6 : in std_logic;
+      globals_binopout_5 : in std_logic;
+      globals_binopout_4 : in std_logic;
+      globals_binopout_3 : in std_logic;
+      globals_binopout_2 : in std_logic;
+      globals_binopout_1 : in std_logic;
+      globals_binopout_0 : in std_logic;
+      globals_bytes_out_1_7 : out std_logic;
+      globals_bytes_out_1_6 : out std_logic;
+      globals_bytes_out_1_5 : out std_logic;
+      globals_bytes_out_1_4 : out std_logic;
+      globals_bytes_out_1_3 : out std_logic;
+      globals_bytes_out_1_2 : out std_logic;
+      globals_bytes_out_1_1 : out std_logic;
+      globals_bytes_out_1_0 : out std_logic;
+      globals_WrPtr_out_0 : out std_logic;
+      globals_WrPtr_out_1 : out std_logic;
+      globals_WrPtr_out_2 : out std_logic;
+      globals_WrPtr_out_3 : out std_logic;
+      globals_RdPtr_outf_0 : out std_logic;
+      globals_RdPtr_outf_1 : out std_logic;
+      globals_RdPtr_outf_2 : out std_logic;
+      globals_RdPtr_outf_3 : out std_logic;
+      ReceiverClock : in std_logic;
+      reset : in std_logic;
+      I_22_a : in std_logic;
+      I_24_1 : in std_logic;
+      outp : in std_logic;
+      DataIn : in std_logic  );
+  end component;
+  component synchronizer
+    port(
+      Ack : in std_logic;
+      reset : in std_logic;
+      ReceiverClock : in std_logic;
+      outp : out std_logic  );
+  end component;
+  component synchronizer_1
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_2
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_3
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_4
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_5
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_6
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_7
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_8
+    port(
+      p_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      int : out std_logic  );
+  end component;
+  component synchronizer_9
+    port(
+      globals_DataReady_out_0 : in std_logic;
+      reset : in std_logic;
+      FilterClock : in std_logic;
+      outp : out std_logic  );
+  end component;
+begin
+  VCC <= '1';
+  GND <= '0';
+  \II_regf_7_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(7),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY0.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_regf_6_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(6),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY1.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_regf_5_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(5),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY2.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_regf_4_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(4),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY3.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_regf_3_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(3),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY4.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_regf_2_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(2),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY5.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_regf_1_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(1),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY6.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_regf_0_\: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "reg_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "ff00")
+  port map (
+  regout => REGF(0),
+  clk => N_2,
+  datad => \DATA_SYNCHRONIZER_ARRAY7.INT\,
+  aclr => N_4,
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  dataa => VCC,
+	  datab => VCC,
+	  datac => VCC,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_I_22_a: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "6ff6")
+  port map (
+  combout => I_22_A,
+  dataa => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(0),
+  datab => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(0),
+  datac => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(1),
+  datad => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(1),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  II_I_24_1: stratix_lcell generic map (
+      operation_mode => "normal",
+      output_mode => "comb_only",
+      synch_mode => "off",
+       sum_lutc_input => "datac",
+      lut_mask => "9009")
+  port map (
+  combout => I_24_1,
+  dataa => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(3),
+  datab => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(3),
+  datac => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(2),
+  datad => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(2),
+	  devpor => devpor,
+	  devclrn => devclrn,
+	  aclr => GND,
+	  sclr => GND,
+	  sload => GND,
+	  ena => VCC,
+	  cin => GND,
+	  inverta => GND,
+	  aload => GND);
+  \II_Instance0_un1_globals_bytes_out_mulonly_71_60__Instance0_un1_globals_bytes_out_71_60_\: lpm_mult  generic map(
+   lpm_widths =>  1,
+   lpm_representation =>  "UNSIGNED" ,
+   lpm_pipeline =>  0,
+   lpm_hint =>  "dedicated_multiplier_circuitry=yes" ,
+   lpm_widthb =>  4,
+   lpm_widtha =>  8,
+   lpm_widthp =>  12)
+  port map (
+    result(0) => \INSTANCE0.UN1_GLOBALS_BYTES_OUT_MULONLY_71_60_.GLOBALS_BINOPOUT\(0),
+    result(1) => \INSTANCE0.UN1_GLOBALS_BYTES_OUT_MULONLY_71_60_.GLOBALS_BINOPOUT\(1),
+    result(2) => \INSTANCE0.UN1_GLOBALS_BYTES_OUT_MULONLY_71_60_.GLOBALS_BINOPOUT\(2),
+    result(3) => \INSTANCE0.UN1_GLOBALS_BYTES_OUT_MULONLY_71_60_.GLOBALS_BINOPOUT\(3),
+    result(4) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(4),
+    result(5) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(5),
+    result(6) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(6),
+    result(7) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(7),
+    result(8) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(8),
+    result(9) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(9),
+    result(10) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(10),
+    result(11) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(11),
+    dataa(0) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(0),
+    dataa(1) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(1),
+    dataa(2) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(2),
+    dataa(3) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(3),
+    dataa(4) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(4),
+    dataa(5) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(5),
+    dataa(6) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(6),
+    dataa(7) => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(7),
+    datab(0) => N_5,
+    datab(1) => N_6,
+    datab(2) => N_7,
+    datab(3) => N_8);
+  II_FilterInstance: Filter port map (
+      regf_0 => REGF(0),
+      regf_1 => REGF(1),
+      regf_2 => REGF(2),
+      regf_3 => REGF(3),
+      regf_4 => REGF(4),
+      regf_5 => REGF(5),
+      regf_6 => REGF(6),
+      regf_7 => REGF(7),
+      current_0 => DATAOUTZ(0),
+      current_1 => DATAOUTZ(1),
+      current_2 => DATAOUTZ(2),
+      current_3 => DATAOUTZ(3),
+      current_4 => DATAOUTZ(4),
+      current_5 => DATAOUTZ(5),
+      current_6 => DATAOUTZ(6),
+      current_7 => DATAOUTZ(7),
+      outp => \RDY_SYNCHRONIZER.OUTP\,
+      Ack => \FILTERINSTANCE.ACK\,
+      reset => N_4,
+      FilterClock => N_2);
+  II_ReceiverInstance: receiver_top port map (
+      globals_DataReady_out_0 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_DATAREADY_OUT\(0),
+      p_7 => \RECEIVERINSTANCE.INSTANCE0.P\(11),
+      p_6 => \RECEIVERINSTANCE.INSTANCE0.P\(10),
+      p_5 => \RECEIVERINSTANCE.INSTANCE0.P\(9),
+      p_4 => \RECEIVERINSTANCE.INSTANCE0.P\(8),
+      p_3 => \RECEIVERINSTANCE.INSTANCE0.P\(7),
+      p_2 => \RECEIVERINSTANCE.INSTANCE0.P\(6),
+      p_1 => \RECEIVERINSTANCE.INSTANCE0.P\(5),
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(4),
+      globals_binopout_7 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(11),
+      globals_binopout_6 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(10),
+      globals_binopout_5 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(9),
+      globals_binopout_4 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(8),
+      globals_binopout_3 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(7),
+      globals_binopout_2 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(6),
+      globals_binopout_1 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(5),
+      globals_binopout_0 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BINOPOUT\(4),
+      globals_bytes_out_1_7 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(7),
+      globals_bytes_out_1_6 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(6),
+      globals_bytes_out_1_5 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(5),
+      globals_bytes_out_1_4 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(4),
+      globals_bytes_out_1_3 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(3),
+      globals_bytes_out_1_2 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(2),
+      globals_bytes_out_1_1 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(1),
+      globals_bytes_out_1_0 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_BYTES_OUT_1\(0),
+      globals_WrPtr_out_0 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(0),
+      globals_WrPtr_out_1 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(1),
+      globals_WrPtr_out_2 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(2),
+      globals_WrPtr_out_3 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_WRPTR_OUT\(3),
+      globals_RdPtr_outf_0 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(0),
+      globals_RdPtr_outf_1 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(1),
+      globals_RdPtr_outf_2 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(2),
+      globals_RdPtr_outf_3 => \RECEIVERINSTANCE.INSTANCE0.INSTANCE0.GLOBALS_RDPTR_OUTF\(3),
+      ReceiverClock => N_3,
+      reset => N_4,
+      I_22_a => I_22_A,
+      I_24_1 => I_24_1,
+      outp => \ACK_SYNCHRONIZER.OUTP\,
+      DataIn => N_1);
+  II_ack_synchronizer: synchronizer port map (
+      Ack => \FILTERINSTANCE.ACK\,
+      reset => N_4,
+      ReceiverClock => N_3,
+      outp => \ACK_SYNCHRONIZER.OUTP\);
+  II_data_synchronizer_ARRAY0: synchronizer_1 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(11),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY0.INT\);
+  II_data_synchronizer_ARRAY1: synchronizer_2 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(10),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY1.INT\);
+  II_data_synchronizer_ARRAY2: synchronizer_3 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(9),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY2.INT\);
+  II_data_synchronizer_ARRAY3: synchronizer_4 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(8),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY3.INT\);
+  II_data_synchronizer_ARRAY4: synchronizer_5 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(7),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY4.INT\);
+  II_data_synchronizer_ARRAY5: synchronizer_6 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(6),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY5.INT\);
+  II_data_synchronizer_ARRAY6: synchronizer_7 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(5),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY6.INT\);
+  II_data_synchronizer_ARRAY7: synchronizer_8 port map (
+      p_0 => \RECEIVERINSTANCE.INSTANCE0.P\(4),
+      reset => N_4,
+      FilterClock => N_2,
+      int => \DATA_SYNCHRONIZER_ARRAY7.INT\);
+  II_rdy_synchronizer: synchronizer_9 port map (
+      globals_DataReady_out_0 => \RECEIVERINSTANCE.INSTANCE0.GLOBALS_DATAREADY_OUT\(0),
+      reset => N_4,
+      FilterClock => N_2,
+      outp => \RDY_SYNCHRONIZER.OUTP\);
+  N_1 <= DATAIN_INTERNAL;
+  N_2 <= FILTERCLOCK_INTERNAL;
+  N_3 <= RECEIVERCLOCK_INTERNAL;
+  N_4 <= RESET_INTERNAL;
+  N_5 <= VOLUME_0_INTERNAL;
+  N_6 <= VOLUME_1_INTERNAL;
+  N_7 <= VOLUME_2_INTERNAL;
+  N_8 <= VOLUME_3_INTERNAL;
+  N_9_INT_37 <= DATAOUTZ(0);
+  N_10_INT_38 <= DATAOUTZ(1);
+  N_11_INT_39 <= DATAOUTZ(2);
+  N_12_INT_40 <= DATAOUTZ(3);
+  N_13_INT_41 <= DATAOUTZ(4);
+  N_14_INT_42 <= DATAOUTZ(5);
+  N_15_INT_43 <= DATAOUTZ(6);
+  N_16_INT_44 <= DATAOUTZ(7);
+  DataOut(0) <= N_9_INT_37;
+  DataOut(1) <= N_10_INT_38;
+  DataOut(2) <= N_11_INT_39;
+  DataOut(3) <= N_12_INT_40;
+  DataOut(4) <= N_13_INT_41;
+  DataOut(5) <= N_14_INT_42;
+  DataOut(6) <= N_15_INT_43;
+  DataOut(7) <= N_16_INT_44;
+  DATAIN_INTERNAL <= DataIn;
+  FILTERCLOCK_INTERNAL <= FilterClock;
+  RECEIVERCLOCK_INTERNAL <= ReceiverClock;
+  RESET_INTERNAL <= reset;
+  VOLUME_0_INTERNAL <= Volume(0);
+  VOLUME_1_INTERNAL <= Volume(1);
+  VOLUME_2_INTERNAL <= Volume(2);
+  VOLUME_3_INTERNAL <= Volume(3);
+end beh;
+

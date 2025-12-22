@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\20_Binary_Counter\library.cfg"  -j "c:\My_Designs\20_Binary_Counter\Binary_counter\projlib.cfg"  -d "c:\My_Designs\20_Binary_Counter\Binary_counter\compile\"  -work Binary_counter -dbg -e 100 "c:\My_Designs\20_Binary_Counter\Binary_counter\src\counter.vhd" 

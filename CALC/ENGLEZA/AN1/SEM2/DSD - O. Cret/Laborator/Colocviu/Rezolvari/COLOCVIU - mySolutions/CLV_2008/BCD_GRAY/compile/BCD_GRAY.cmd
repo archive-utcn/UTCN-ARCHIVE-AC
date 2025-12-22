@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\BCD_GRAY\projlib.cfg"  -d "d:\designshdl\CLV_2008\BCD_GRAY\compile\"  -work BCD_GRAY -dbg -e 100 "d:\designshdl\CLV_2008\BCD_GRAY\src\BCD_GRAY.vhd" 

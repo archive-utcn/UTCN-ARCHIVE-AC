@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1302213737 source:c:\codeblocks\tabel_dispersie_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

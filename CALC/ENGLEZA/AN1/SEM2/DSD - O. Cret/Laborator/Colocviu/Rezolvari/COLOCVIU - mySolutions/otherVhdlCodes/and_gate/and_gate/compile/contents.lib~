@@ -1,0 +1,7 @@
+90
+~E 1 "./src/and_gate.vhd" 4 logic
+~A 1 "./src/and_gate.vhd" 9 arh
+~E 1 "./src/and.vhd" 4 and_gate
+~A 1 "./src/and.vhd" 9 arh
+~E 1 "./src/or.vhd" 4 or_gate
+~A 1 "./src/or.vhd" 9 arh

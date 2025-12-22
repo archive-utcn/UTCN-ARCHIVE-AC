@@ -1,0 +1,5 @@
+MESSAGE "File: d:\designshdl\full_adder_1\full_adder_1\src\full_adder_1.vhd" 
+MESSAGE "Compile Entity "full_adder_1"" 
+MESSAGE "Entity `full_adder_1' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "full_adder_1"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

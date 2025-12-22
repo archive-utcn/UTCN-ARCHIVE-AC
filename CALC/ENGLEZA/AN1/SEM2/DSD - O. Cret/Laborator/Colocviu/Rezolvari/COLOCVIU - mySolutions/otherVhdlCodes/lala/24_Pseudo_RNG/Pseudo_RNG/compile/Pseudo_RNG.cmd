@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\24_Pseudo_RNG\library.cfg"  -j "c:\My_Designs\24_Pseudo_RNG\Pseudo_RNG\projlib.cfg"  -d "c:\My_Designs\24_Pseudo_RNG\Pseudo_RNG\compile\"  -work Pseudo_RNG -dbg -e 100 "c:\My_Designs\24_Pseudo_RNG\Pseudo_RNG\src\rng.vhd" 

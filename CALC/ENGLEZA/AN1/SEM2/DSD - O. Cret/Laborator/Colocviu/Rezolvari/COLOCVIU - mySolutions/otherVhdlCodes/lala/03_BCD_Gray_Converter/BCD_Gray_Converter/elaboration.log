@@ -1,0 +1,16 @@
+elbread.dll ver. 1.0.5.365 Thu May 25 15:10:16 2017
+
+
+---------------------------------------------------
+Entity          | Architecture | Library         
+---------------------------------------------------
+tb_bcd_to_gray  | arch         | BCD_Gray_Converter
+bcd_to_gray     | a            | bcd_gray_converter
+---------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

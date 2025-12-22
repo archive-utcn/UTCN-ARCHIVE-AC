@@ -1,0 +1,5 @@
+MESSAGE "File: d:\designshdl\CLV_2008\DECODIFICATOR_BCD_ZECIMAL\src\DECODIFICATOR_BCD_ZECIMAL.vhd" 
+MESSAGE "Compile Entity "DECODIFICATOR_BCD_ZECIMAL"" 
+MESSAGE "Entity `DECODIFICATOR_BCD_ZECIMAL' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "DECODIFICATOR_BCD_ZECIMAL"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

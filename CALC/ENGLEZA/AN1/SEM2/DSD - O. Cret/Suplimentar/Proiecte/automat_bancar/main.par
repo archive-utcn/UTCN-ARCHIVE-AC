@@ -1,0 +1,288 @@
+Release 14.5 par P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+HANNA::  Thu May 14 23:18:56 2015
+
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+
+
+Constraints file: main.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment C:\Xilinx\14.5\ISE_DS\ISE\.
+   "main" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.23 2013-03-26".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   424 out of  18,224    2%
+    Number used as Flip Flops:                 358
+    Number used as Latches:                     66
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        908 out of   9,112    9%
+    Number used as logic:                      904 out of   9,112    9%
+      Number using O6 output only:             694
+      Number using O5 output only:              66
+      Number using O5 and O6:                  144
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      1
+      Number with same-slice carry load:         3
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   368 out of   2,278   16%
+  Number of MUXCYs used:                       424 out of   4,556    9%
+  Number of LUT Flip Flop pairs used:        1,054
+    Number with an unused Flip Flop:           634 out of   1,054   60%
+    Number with an unused LUT:                 146 out of   1,054   13%
+    Number of fully used LUT-FF pairs:         274 out of   1,054   25%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       121 out of     232   52%
+    Number of LOCed IOBs:                       27 out of     121   22%
+    IOB Flip Flops:                             31
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       6 out of      16   37%
+    Number used as BUFGs:                        6
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                  31 out of     248   12%
+    Number used as OLOGIC2s:                    31
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            2 out of      32    6%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
+
+Starting Router
+
+
+Phase  1  : 5086 unrouted;      REAL time: 4 secs 
+
+Phase  2  : 4481 unrouted;      REAL time: 5 secs 
+
+Phase  3  : 1437 unrouted;      REAL time: 12 secs 
+
+Phase  4  : 1439 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+
+Updating file: main.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+Total REAL time to Router completion: 16 secs 
+Total CPU time to Router completion: 16 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 81 (Setup: 81, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net okp | SETUP       |         N/A|     1.347ns|     N/A|           0
+  in_OBUF                                   | HOLD        |     0.477ns|            |       0|           0
+                                            | MINPERIOD   |         N/A|     1.730ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     3.206ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.502ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sig | SETUP       |         N/A|     4.295ns|     N/A|           0
+  n_clock_zecimals_BUFG                     | HOLD        |     0.512ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sig | SETUP       |         N/A|     2.065ns|     N/A|           0
+  n_clock_hundreds_BUFG                     | HOLD        |     0.533ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sig | SETUP       |         N/A|     6.073ns|     N/A|           0
+  n_actualizare_BUFG                        | HOLD        |     0.412ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.923ns|     N/A|           0
+  options_pin[2]_AND_2030_o                 | HOLD        |     1.576ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.052ns|     N/A|           0
+  options_pin[2]_AND_2024_o                 | HOLD        |     1.695ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.643ns|     N/A|           0
+  options_pin[2]_AND_2032_o                 | HOLD        |     1.278ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.104ns|     N/A|           0
+  options_pin[2]_AND_2040_o                 | HOLD        |     1.747ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.261ns|     N/A|           0
+  options_pin[2]_AND_2026_o                 | HOLD        |     1.727ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.426ns|     N/A|           0
+  options_pin[2]_AND_2034_o                 | HOLD        |     1.913ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.951ns|     N/A|           0
+  options_pin[2]_AND_2042_o                 | HOLD        |     1.610ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.910ns|     N/A|           0
+  options_pin[2]_AND_2050_o                 | HOLD        |     1.563ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.624ns|     N/A|           0
+  options_pin[2]_AND_2028_o                 | HOLD        |     1.306ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.201ns|     N/A|           0
+  options_pin[2]_AND_2036_o                 | HOLD        |     1.607ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.545ns|     N/A|           0
+  options_pin[2]_AND_2044_o                 | HOLD        |     1.363ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.307ns|     N/A|           0
+  options_pin[2]_AND_2052_o                 | HOLD        |     1.576ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.334ns|     N/A|           0
+  options_pin[2]_AND_2060_o                 | HOLD        |     1.727ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.211ns|     N/A|           0
+  options_pin[2]_AND_2038_o                 | HOLD        |     1.677ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.172ns|     N/A|           0
+  options_pin[2]_AND_2046_o                 | HOLD        |     1.559ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.167ns|     N/A|           0
+  options_pin[2]_AND_2054_o                 | HOLD        |     1.714ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.201ns|     N/A|           0
+  options_pin[2]_AND_2062_o                 | HOLD        |     1.681ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.624ns|     N/A|           0
+  options_pin[2]_AND_2070_o                 | HOLD        |     1.311ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.337ns|     N/A|           0
+  options_pin[2]_AND_2048_o                 | HOLD        |     1.619ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.046ns|     N/A|           0
+  options_pin[2]_AND_2056_o                 | HOLD        |     1.592ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.345ns|     N/A|           0
+  options_pin[2]_AND_2064_o                 | HOLD        |     1.690ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.548ns|     N/A|           0
+  options_pin[2]_AND_2072_o                 | HOLD        |     1.366ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.934ns|     N/A|           0
+  options_pin[2]_AND_2080_o                 | HOLD        |     1.587ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.555ns|     N/A|           0
+  options_pin[2]_AND_2058_o                 | HOLD        |     1.373ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.839ns|     N/A|           0
+  options_pin[2]_AND_2066_o                 | HOLD        |     1.852ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.043ns|     N/A|           0
+  options_pin[2]_AND_2074_o                 | HOLD        |     1.576ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     4.549ns|     N/A|           0
+  options_pin[2]_AND_2082_o                 | HOLD        |     1.959ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.359ns|     N/A|           0
+  options_pin[2]_AND_2068_o                 | HOLD        |     1.753ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     3.164ns|     N/A|           0
+  options_pin[2]_AND_2076_o                 | HOLD        |     1.590ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     2.550ns|     N/A|           0
+  options_pin[2]_AND_2084_o                 | HOLD        |     1.367ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     5.571ns|     N/A|           0
+  options_pin[2]_AND_2078_o                 | HOLD        |     1.411ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net deb | SETUP       |         N/A|     1.300ns|     N/A|          81
+  ounce_actualizare/Divide/CLK0             | HOLD        |     0.538ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 17 secs 
+Total CPU time to PAR completion: 16 secs 
+
+Peak Memory Usage:  338 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file main.ncd
+
+
+
+PAR done!

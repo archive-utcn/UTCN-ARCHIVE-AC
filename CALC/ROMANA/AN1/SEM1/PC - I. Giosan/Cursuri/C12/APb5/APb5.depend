@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1484301274 source:d:\apb5\main.c
+	<stdio.h>
+	<stdlib.h>
+

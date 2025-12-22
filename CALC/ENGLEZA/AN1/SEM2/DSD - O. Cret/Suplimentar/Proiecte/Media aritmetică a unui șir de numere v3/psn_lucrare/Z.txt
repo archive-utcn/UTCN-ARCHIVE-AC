@@ -1,0 +1,12 @@
+A<=FF1;
+B<=FF2;	 
+A1<=FF3;
+B1<=FF4;
+	 tmp1 <= conv_std_logic_vector((conv_integer(A) + conv_integer(B)),9);
+    SUM1 <= tmp1(8 downto 0);
+	 tmp2 <= conv_std_logic_vector((conv_integer(A1) + conv_integer(B1)),9);
+    SUM2 <= tmp1(8 downto 0); 
+	
+	tmp <= conv_std_logic_vector((conv_integer(SUM2) + conv_integer(SUM2)),10);
+    SUM <= tmp(9 downto 0);				  		   
+			 media<=SUM(9 downto 2);

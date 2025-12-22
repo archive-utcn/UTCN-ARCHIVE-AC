@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "*.c",
+                "-o",
+                "BANANE",
+            ],
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": ".\\BANANE",
+            "dependsOn":["Build"]
+        }
+    ]
+}

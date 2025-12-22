@@ -1,0 +1,57 @@
+[AND2]
+A/AND2=22|./src/and2.v|1|
+P/~emb=129,324,427,515
+S/and2=S/AND2 40|0|2*0
+
+[AND3]
+A/AND3=22|./src/and3.v|1|
+P/~emb=156,354,461,552
+S/and3=S/AND3 40|0|2*1387
+
+[AND4]
+A/AND4=22|./src/and4.v|1|
+P/~emb=183,384,494,591
+S/and4=S/AND4 40|0|2*3116
+
+[c2or]
+A/c2or=A/C2OR 21|./src/c2or.vhd|12|
+S/c2or=40|0|2*5189
+
+[cb4ce]
+A/cb4ce=A/CB4CE 21|./src/cb4ce.vhd|15|
+S/cb4ce=40|0|2*7206
+
+[crv]
+A/crv=A/CRV 24|.\src\crv.bde|10000|
+S/crv=S/CRV 40|0|2*9504
+
+[filter]
+A/filter=24|.\src\filter.bde|10000|
+
+[oscil_c_vhpi]
+A/oscil_c_vhpi=21|./src/oscil_c_vhpi.vhd|38|
+S/oscil_c_vhpi=40|0|2*11295
+
+[pfdiv]
+A/pfdiv=A/PFDIV 21|./src/pfdiv.vhd|13|
+S/pfdiv=S/PFDIV 40|0|2*13049
+
+[~A]
+ModifyID=1537
+Version=73
+
+[~MFT]
+0=0|0VHDL_Verilog_EDIF_C_VHPI.mgf|2878|0
+2=0|2VHDL_Verilog_EDIF_C_VHPI.mgf|13049|0
+
+[~U]
+AND2=12|0*0||147
+AND3=12|0*601||147
+AND4=12|0*1239||147
+c2or=C2OR 11|0*1916||3
+cb4ce=CB4CE 11|0*2100||3
+crv=CRV 13|0*2306||23
+filter=11|0*2493|
+oscil_c_vhpi=11|0*2689||3
+pfdiv=PFDIV 11|0*2878||3
+

@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\alu_8\projlib.cfg"  -d "D:\designshdl\CRET\alu_8\compile\"  -work alu_8 -dbg -e 100 "D:\designshdl\CRET\alu_8\src\alu_8.vhd" 

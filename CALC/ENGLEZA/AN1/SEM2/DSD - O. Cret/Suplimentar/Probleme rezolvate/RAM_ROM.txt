@@ -1,0 +1,151 @@
+RAM
+library	ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity RAM is
+port (addr:in std_logic_vector (3 downto 0);
+	we:in std_logic;
+	din: in std_logic_vector (1 downto 0);
+	c:out std_logic_vector(1 downto 0));
+	end RAM;
+
+architecture A of RAM is		   
+type MemType is array(15 downto 0) of std_logic_vector (1 downto 0);
+signal MMap:MemType:=("01","01","10","11","10","11","00","10","01","01","10","11","10","11","00","10");
+
+begin
+	process(we,addr,din)
+	begin
+	if (we='1') then
+		MMap(CONV_INTEGER(addr))<=din;
+	else
+	   c<=MMap(CONV_INTEGER(addr));		  
+	  end if;
+	end process;   
+end A;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+entity RAM is
+   port (ADDR: in std_logic_vector(3 downto 0);
+    	   WE: in BIT;
+		  DIN: in std_logic_vector(1 downto 0);
+		    C: out std_logic_vector(1 downto 0));
+end RAM;
+
+architecture A of RAM is 
+type MemType is array(15 downto 0) of std_logic_vector(1 downto 0);
+signal MMap: MemType:=("00","01","10","11","00","01","10","11","00","01","10","11","00","01","10","11");
+begin
+process (WE,DIN,ADDR)
+begin 
+if WE = '0'then
+				case ADDR is
+					when "0000" => C <=MMap(0);
+					when "0001" => C <=MMap(1);
+					when "0010" => C <=MMap(2);
+					when "0011" => C <=MMap(3);
+					when "0100" => C <=MMap(4);
+					when "0101" => C <=MMap(5);
+					when "0110" => C <=MMap(6);
+					when "0111" => C <=MMap(7);
+					when "1000" => C <=MMap(8);
+					when "1001" => C <=MMap(9);
+					when "1010" => C <=MMap(10);
+					when "1011" => C <=MMap(11);
+					when "1100" => C <=MMap(12);
+					when "1101" => C <=MMap(13);
+					when "1110" => C <=MMap(14);
+					when "1111" => C <=MMap(15); 
+					when others => null;
+				end case;
+   else 
+   		if we= '1' then	
+		   MMap(CONV_INTEGER(ADDR))<=DIN; 
+		end if;
+end if;
+--wait on WE;
+end process;
+end;
+NET "Addr(3)" LOC =T5;
+NET "Addr(2)" LOC =V8;
+NET "Addr(1)" LOC =U8;
+NET "Addr(0)" LOC =N8;
+NET "din(1)" LOC =M8;
+NET "din(2)" LOC =V9;
+
+NET "C" LOC =T11;
+
+
+
+ROM pe 2 biti
+
+
+library	ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity ROM is
+port (addr:in std_logic_vector (3 downto 0);
+	c:out std_logic_vector(1 downto 0));
+	end ROM;
+
+architecture A of ROM is
+type MemType is array(15 downto 0) of std_logic_vector (1 downto 0);
+signal MMap:MemType:=("01","01","10","11","10","11","00","10","01","01","10","11","10","11","00","10");
+
+begin
+	c<=MMap(CONV_INTEGER(addr));
+end A;
+NET "addr(0)" LOC=T5;
+NET "addr(1)" LOC=V8;
+NET "addr(2)" LOC=U8;
+NET "addr(3)" LOC=N8;
+NET "c(0)" LOC=T11;
+NET "c(1)" LOC=R11;
+
+
+
+
+ROM pe 1 bit
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity RAM is
+	port(addr:in std_logic_vector(3 downto 0);		 
+	we:in std_logic;
+	din:in std_logic_vector(1 downto 0);
+	c:out std_logic_vector(1 downto 0));
+end RAM;
+
+architecture A of RAM is										 
+type MemType is array(15 downto 0) of std_logic_vector(1 downto 0);
+signal MMap:MemType:=("01","10","11","00","01","10","11","00","01","10","11","00","11","10","01","00");
+begin
+	process(we,addr,din)	
+	begin
+	if (we='1')
+		then MMap(CONV_INTEGER(addr))<=din;
+	else
+		c<=MMap(CONV_INTEGER(addr));	  
+		end if;
+	end process;
+end A;
+
+
+
+
+NET "Addr(0)" LOC= T5;
+NET "Addr(1)" LOC= V8;
+NET "Addr(2)" LOC= U8;
+NET "Addr(3)" LOC= N8;
+NET "C" LOC= R11;
+

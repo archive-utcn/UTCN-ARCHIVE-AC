@@ -1,0 +1,5 @@
+MESSAGE "File: C:\Users\Amalia\Desktop\adesiama\New folder\adesiama\proi\proi\src\unitate_Comanda.vhd" 
+MESSAGE "Compile Entity "bancomat"" 
+MESSAGE "Compile Architecture "arh_bancomat" of Entity "bancomat"" 
+WARNING ELAB1_0026: "There is no default binding for component "DEMUX".(Port "x" is not on the entity)." "C:\Users\Amalia\Desktop\adesiama\New folder\adesiama\proi\proi\src\unitate_Comanda.vhd" 122 0
+SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time :  0.2 [s]" 

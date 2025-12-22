@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Documents and Settings\CORE 2 DUO\Desktop\DSD\1\AverageValue\Xilinx\AverageValue\Filter.ncd
+OUTFILE=C:\Documents and Settings\CORE 2 DUO\Desktop\DSD\1\AverageValue\Xilinx\AverageValue\Filter.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=C:\Documents and Settings\CORE 2 DUO\Desktop\DSD\1\AverageValue\Xilinx\AverageValue
+LICENSE=WebPack
+USER_INFO=__0_0_0

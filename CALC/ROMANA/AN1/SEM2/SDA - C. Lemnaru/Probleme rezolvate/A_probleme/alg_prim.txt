@@ -1,0 +1,81 @@
+#include <stdio.h>
+
+#define infinit 5590
+
+int nrNoduri;
+int c[50][50];
+int s[50]; //noduri selectate
+
+int citire(char numeFisier[]){
+    
+  FILE *f; 
+  int i, j, val;
+  
+  f = fopen(numeFisier, "r");
+  if(!f)
+    return 0;
+    
+  fscanf(f, "%d", &nrNoduri);
+  
+  //initializare matrice de costuri
+  for(i=1; i<=nrNoduri; i++)
+    for(j=1; j<=nrNoduri; j++)
+      if(i == j)
+        c[i][j] = 0;
+      else{
+        c[i][j] = infinit;
+        c[j][i] = infinit;
+      }
+  
+  while(!feof(f)){
+     
+     fscanf(f, "%d %d %d", &i, &j, &val);
+     c[i][j] = val;
+     c[j][i] = val;
+  }
+    
+  fclose(f);    
+  
+  return 1; 
+}
+
+
+void prim(){
+
+
+  int i, j, k, min, lin, col;     
+  
+  s[1] = 1;  //selectez primul nod
+  
+  for(k=1; k<=nrNoduri-1; k++){
+    
+    min = infinit;
+    for(i=1; i<=nrNoduri; i++)
+     for(j=1; j<=nrNoduri; j++)
+      if((s[i] == 1) && (s[j] == 0) && (min > c[i][j]))   
+      {  
+        min = c[i][j];                 
+        lin = i;
+        col = j;      
+      } 
+
+    printf("Linie %d Col %d Val %d\n", lin, col, min);
+    s[col] = 1;
+  }
+  return;   
+}
+
+int main(){  
+    int i,j;
+  
+  citire("alg_prim.in");
+  prim();
+  /*  for(i=1; i<=nrNoduri; i++){
+      for(j=1; j<=nrNoduri; j++)
+        printf("%d ", c[i][j]);
+      printf("\n");
+    }*/
+  
+  getch();
+  return 1;   
+}

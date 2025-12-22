@@ -1,0 +1,54 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MS_Scazator_1bit
+
+[Library]
+MS_Scazator_1bit=.\MS_Scazator_1bit.LIB
+
+[$LibMap$]
+MS_Scazator_1bit=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=ms|ms_arh|0
+ShowHide=ShowTopLevel
+Selected=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\
+Extension5=dll
+Name6=PDF
+Directory6=c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\
+Extension7=
+
+[Files]
+/MS_Scazator_1bit.vhd=-1
+
+[Files.Data]
+.\src\MS_Scazator_1bit.vhd=VHDL Source Code
+

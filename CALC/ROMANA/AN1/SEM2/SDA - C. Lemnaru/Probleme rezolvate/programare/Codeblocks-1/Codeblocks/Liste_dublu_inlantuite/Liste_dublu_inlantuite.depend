@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1301042102 source:c:\codeblocks\liste_dublu_inlantuite\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

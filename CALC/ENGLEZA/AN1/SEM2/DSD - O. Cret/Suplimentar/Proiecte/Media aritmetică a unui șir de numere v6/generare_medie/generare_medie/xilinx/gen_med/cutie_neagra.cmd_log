@@ -1,0 +1,39 @@
+xst -intstyle ise -ifn "E:/Users/gen_med/cutie_neagra.xst" -ofn "E:/Users/gen_med/cutie_neagra.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+xst -intstyle ise -ifn "E:/Users/gen_med/cutie_neagra.xst" -ofn "E:/Users/gen_med/cutie_neagra.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+xst -intstyle ise -ifn "E:/Users/gen_med/cutie_neagra.xst" -ofn "E:/Users/gen_med/cutie_neagra.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+xst -intstyle ise -ifn "E:/Users/gen_med/cutie_neagra.xst" -ofn "E:/Users/gen_med/cutie_neagra.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+xst -intstyle ise -ifn "E:/Users/gen_med/cutie_neagra.xst" -ofn "E:/Users/gen_med/cutie_neagra.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+par -w -intstyle ise -ol high -mt off cutie_neagra_map.ncd cutie_neagra.ncd cutie_neagra.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml cutie_neagra.twx cutie_neagra.ncd -o cutie_neagra.twr cutie_neagra.pcf 
+xst -intstyle ise -ifn "E:/Users/gen_med/cutie_neagra.xst" -ofn "E:/Users/gen_med/cutie_neagra.syr" 
+xst -intstyle ise -ifn "E:/Users/gen_med/cutie_neagra.xst" -ofn "E:/Users/gen_med/cutie_neagra.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xa7a100t-csg324-2I cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+xst -intstyle ise -ifn "C:/Users/Notebook/Desktop/generare_medie/generare_medie/xilinx/gen_med/cutie_neagra.xst" -ofn "C:/Users/Notebook/Desktop/generare_medie/generare_medie/xilinx/gen_med/cutie_neagra.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xc6slx16-csg324-3 cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cutie_neagra.ucf -p xc6slx16-csg324-3 cutie_neagra.ngc cutie_neagra.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cutie_neagra_map.ncd cutie_neagra.ngd cutie_neagra.pcf 
+par -w -intstyle ise -ol high -mt off cutie_neagra_map.ncd cutie_neagra.ncd cutie_neagra.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cutie_neagra.twx cutie_neagra.ncd -o cutie_neagra.twr cutie_neagra.pcf -ucf cutie_neagra.ucf 
+bitgen -intstyle ise -f cutie_neagra.ut cutie_neagra.ncd 

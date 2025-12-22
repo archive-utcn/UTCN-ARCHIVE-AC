@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\32_Tri_State_Buffer\Tri_State_Buffer\src\tb.vhd" 
+MESSAGE "Compile Entity "tb"" 
+MESSAGE "Entity `tb' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "tb"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

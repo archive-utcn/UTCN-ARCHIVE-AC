@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+MEMORIE_ROM_16X4=MEMORIE_ROM_16X4.adf
+[Settings]
+Active=MEMORIE_ROM_16X4
+[Expand]
+memorie_rom_16x4=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

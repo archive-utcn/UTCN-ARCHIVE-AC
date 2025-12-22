@@ -1,0 +1,1287 @@
+REPREZENTAREA SI TRAVERSAREA GRAFURILOR
+
+1.Continutul lucrarii 
+In lucrare sunt prezentate cateva notiuni legate de grafuri, modurile de reprezentare si traversare  a lor.
+
+2.Consideratii teoretice
+2.1.Notiuni de baza
+Graful orientat sau digraful G =(V, E) este perechea formata din multimea V de varfuri si multimea E ? V ?V de arce. Un arc este o pereche ordonata de varfuri (v, w), unde v este baza arcului, iar w este varful arcului. In alti termeni se spune ca w este adiacent lui v.
+O cale este o succesiune de varfuri v[1],v[2],…,v[k], astfel ca exista arcele (v[1],v[2]), (v[2],v[3]),…,(v[k-1],v[k]) in multimea arcelor E. Lungimea caii este numarul de arce din cale. Prin conventie, calea de la un nod la el insusi are lungimea 0.
+O cale este simpla, daca toate varfurile, cu exceptia primului si ultimului sunt distincte intre ele.
+Un ciclu este o cale de la un varf la el insusi.
+Un graf orientat etichetat este un graf  orientat in care fiecare arc si /sau varf are o eticheta asociata, care poate fi un nume, un cost sau o valoare de un tip oarecare.
+Un graf orientat este tare conex, daca oricare ar fi varfurile v si w exista o cale de la v la w si una de la w la v.
+Un graf G’ =(V’, E’) este subgraf al lui G daca V’? V si E’? E. Se spune ca subgraful indus de V’? V este G’ =(V’, E ?(V’?V’)).
+Un graf neorientat sau prescurtat graf G =(N, R) este perechea formata din multimea N de noduri si multimea R de muchii. O muchie este o pereche neordonata (v, w)=(w, v) de noduri.
+Definitiile prezentate anterior raman valabile si in cazul grafurilor neorientate.
+2.2.Moduri de reprezentare
+Atat grafurile orientate, cat si cele neorientate se reprezinta frecvent sub doua forme: matricea de adiacente  si listele de adiacente.
+Astfel, pentru graful orientat G =(V, E), unde V este multimea varfurilor V ={1,2,…,n},matricea de adiacente A va fi definita astfel :
+Matricea de adiacente etichetata A (sau matricea costurilor) va fi definita astfel :
+Matricea de adiacente este simetrica pentru grafuri neorientate si nesimetrica pentru cele orientate.
+Matricea de adiacente este utila cand se testeaza frecvent prezenta sau absenta unui arc si este dezavantajoasa cand numarul de arce este mult mai mic decat  n x n.
+Reprezentarea prin liste de adicente foloseste mai bine  memoria, dar cautarea arcelor este mai greoaie. In aceasta reprezentare, pentru fiecare nod se pastreaza lista arcelor catre nodurile adiacente. Intregul graf poate fi reprezentat printr-un tablou indexat dupa noduri, fiecare intrare in tablou continand adresa listei nodurilor adiacente. Lista nodurilor adiacente poate fi dinamica sau statica. Pentru graful din fig.2.2.1,  sunt prezentate:
+matricea de adiacente in fig.2.2.2.;
+lista de adiacente dinamica  in fig.2.2.3.; 
+-	lista de adiacente statica in fig.2.2.4.
+
+   2.3.Explorarea in largime
+         Explorarea in largime consta in urmatoarele actiuni:
+se trece intr-o coada vida nodul de pornire;
+se trece extrage din coada cate un nod care este prelucrat si se adauga toate nodurile adiacente lui neprelucrate. Se repeta acest pas pana cand coada devine vida.
+Algoritmul este urmatorul:
+void  explorare_largime(int s)
+/* s este nodul de pornire  */
+   {
+       int vizitate[NrMaxNoduri];
+       coada Q;
+       int i,NrNoduri,v,w;
+       for(i=0;i<NrNoduri;i++)
+            vizitate[i]=0;     /*initializare vector cu zero*/
+       vizitate[s]=1;/*se viziteaza  nodul s */
+       prelucreaza informatia din s;
+       introducere nod s in coada Q;
+       while(coada Q nu este vida)
+            {
+                extrage urmatorul nod v din coada Q;
+                for(fiecare nod w adiacent lui v)
+                      if(nodul w nu a fost vizitat)
+                             {     
+                                  vizitate[w]=1;
+                                  prelucreaza informatia din w;
+                                  introducere nod w in coada Q;
+                              }    
+             }
+    }
+         2.4.Explorarea in adancime
+La explorarea in adancime se marcheaza vizitarea nodului initial, dupa care se viziteaza in adancime, recursiv, fiecare nod adiacent. Dupa vizitarea tuturor nodurilor ce pot fi atinse din nodul de start, parcurgerea se considera incheiata. Daca raman noduri nevizitate, se alege un nou nod si se repeta procedeul de mai sus.
+Algoritmul este urmatorul:
+void explorare_adancime(int s)
+/* s este nodul de pornire* /
+{
+    int vizitate[NrMaxNoduri];
+    stiva ST;
+    int NrNoduri,i,v,w;
+    for(i=0;i<NrNoduri;i++)
+    vizitate[i]=0; /*initializare vector cu zero*/
+    vizitate[s]=1; /*se incepe cu s */
+    prelucrare informatia din s;
+    introducere  s in stiva ST;
+    while(stiva ST nu este vida)
+    {
+       v=continutul nodului din varful stivei;
+       w=urmatorul nod adiacent lui v nevizitat;
+         if(exista w)
+          {
+             vizitate[w]=1;
+             prelucreaza informatia din w;
+             pune pe stiva ST nodul w;
+           }
+         else  pop(ST); /*  se sterge nodul v din varful stivei ST  */
+      } 
+}
+
+Lucrarea de laborator nr.7
+
+
+ALGORITMI PENTRU PRELUCRAREA GRAFURILOR
+
+
+	1.Continutul lucrarii
+
+	In lucrare sunt prezentati algoritmii lui Dijkstra si Floyd pentru gasirea cailor de cost minim intre doua noduri precizate, respectiv intre oricare doua noduri ale unui graf si algoritmii lui  Kruskal si Prim pentru gasirea arborelui de cost minim de acoperire a unui graf.
+
+	2.Consideratii teoretice
+	2.1.Caile de cost minim dintr-un varf
+	Se considera un graf orientat G =(V, E) etichetat, in care fiecare arc are ca eticheta un numar nenegativ numit cost. Graful se reprezinta in memorie prin matricea de adiacente etichetata, care se mai numeste matricea costurilor.
+	Fiind date doua varfuri, unul sursa si unul destinatie, se cere gasirea drumului de cost minim de la sursa la destinatie. Algoritmul lui Dijkstra de rezolvare a acestei probleme consta in urmatoarele:
+	- se pastreaza o multime S de varfuri j?V, pentru care exista cel putin un drum de la sursa la j. Initial S ={sursa}.
+	- la fiecare pas, se adauga la S un varf a carui distanta fata de un varf din S este minima.	
+	Pentru a inregistra caile minime de la sursa la fiecare varf se utilizeaza un tablou TATA, in care TATA[k] pastreaza varful anterior lui k  pe calea cea mai scurta.
+	In descrierea algoritmului se fac urmatoarele notatii:
+- n numarul varfurilor multimii V;
+- multimea S se reprezinta prin vectorul caracteristic ( elementele sale sunt S[i]=1, daca i?S si S[i]=0, daca i?S;
+- vectorul DISTANTE de n elemente al distantelor minime de la sursa la fiecare varf;
+- matricea de costuri COST de nxn elemente: COST[ i ][j]=c>0 daca ( i ,j)?E, COST[i][j]=0 daca i =j si COST[i][j]=+? daca (i, j)?E;
+- vectorul TATA.
+	Algoritmul lui Dijkstra este urmatorul:
+	#define NMAX …
+	#define INFINIT …
+float DISTANTE[NMAX];
+float COST[NMAX][NMAX];
+int TATA[NMAX];
+int S[NMAX];
+void DIJKSTRA(int n,int sursa)
+{
+     /* n este numarul de varfuri;sursa este varful sursa */
+    int i ,j,k,pas;
+    /*initializari*/
+    for (i=1;i<=n;i++)
+        {
+	  S[i]=0;
+  DISTANTE[i]=COST[sursa][i];
+   if  (DISTANTE[i]<INFINIT) TATA[i]=sursa;
+   else TATA[i]=0;
+                   }
+	      /*introducere sursa in S*/
+	      S[sursa]=1;
+      TATA[sursa]=0;
+      DISTANTE[sursa]=0;
+      /*construire vectori DISTANTE si TATA */
+      for (pas=1;pas<=n-1;pas++)
+         {	
+	    gaseste varful k neselectat cu DISTANTE[k] minim;
+    if (minimul anterior gasit==INFINIT) return;
+    S[k]=1;  /* se adauga k la multimea S */
+    for (j=1;j<=n;j++)
+	if ((S[j]=0) && (DISTANTE[k]+COST[k][j]<DISTANTE[j]))
+                {
+		DISTANTE[j]=DISTANTE[k]+COST[k][j];
+TATA[j]=k;
+			      }
+	         }
+        }
+
+Vectorul TATA contine varfurile accesibile din varfurile sursa. El permite reconstruirea drumurilor de la varful sursa la oricare varf accesibil. Pentru varfurile inaccesibile din varful sursa vom avea S[i]=0 si DISTANTE[i]=INFINIT.
+
+2.2.Caile de cost minim din oricare varf
+Algoritmul prezentat la 2.1. poate fi repetat din nodurile unui graf. Acest lucru permite calculul unui tablou al drumurilor minime intre toate perechile de varfuri ale grafului. In continuare se prezinta un algoritm mai simplu, algoritmul lui Floyd.
+Algoritmul lui Floyd consta in gasirea costurilor minime intre oricare doua varfuri i, j?V. Aceste costuri minime se pastreaza in matricea A. Matricea A este initial egala cu matricea costurilor. Calculul distantelor minime se face in n iteratii, n fiind numarul varfurilor. La iteratia k, A[i][j] va avea ca valoare cea mai mica distanta intre i si j pe cai care nu contin varfuri peste k (exceptand capetele i si j). Se utilizeaza formula urmatoare:
+Aij(k)= min (Aij(k-1),Aik(k-1)+Akj(k-1)).
+Deoarece Aik(k)=Aik(k-1) si Akj(k)=Akj(k-1) se poate utiliza o singura copie a matricii A.
+
+Algoritmul lui Floyd este urmatorul:
+
+#define NMAX …
+float C[NMAX][NMAX];  /*matricea costurilor*/
+float A[NMAX][NMAX];
+void FLOYD(int n)
+{
+     int i,j,k;
+     for (i=1;i<=n;i++)
+	for (j=1;j<=n;j++)
+		A[i][j]=C[i][j];/*initializare A*/
+       for (i=1;i<=n;i++)  A[i][i]=0;
+       /*iteratiile*/
+       for (k=1;k<=n;k++) 
+	for (i=1;i<=n;i++) //pentru toate liniile
+		for (j=1;j<=n;j++) //pentru toate coloanele
+			if (A[i][k]+A[k][j]<A[i][j])
+				A[i][j]=A[i][k]+A[k][j];
+	}
+
+	Pentru a pastra caile minime, se utilizeaza un tablou aditional P, unde P[i][j] tine acel varf k ce a condus la distanta minima A[i][j]. Daca P[i][j]==0, atunci arcul (i, j) este calea minima intre i si j.
+	Pentru a afisa varfurile intermediare aflate pe calea cea mai scurta intre i si j se poate proceda conform algoritmului urmator:
+	
+	void CALE(int i, int j)
+            {	
+	     int k;
+	     if  (k!=0){
+		             CALE(i,k);
+		             scrie nodul k;
+		             CALE(k,j);
+		         }
+	 }
+
+	2.3.Arborele de acoperire de cost minim
+
+	Fie G =(N, R) un graf neorientat conex. Fiecarei muchii (i, j)?R i se asociaza un cost c[i][j]>0. Problema consta in a determina un graf partial conex A = (N, T), astfel incat suma costurilor muchiilor din T sa fie minima. Se observa imediat ca acest graf partial este chiar arborele de acoperire.
+	Algoritmul lui Prim consta in urmatoarele:
+- se porneste cu o submultime W, formata din nodul de plecare si multimea T  vida;
+- la fiecare iteratie, se selecteaza muchia (w, u) cu cel mai mic cost, w?W si u?N-W. Se adauga u la W si (w, u) la T. In final, W va contine toate nodurile din N, iar T va contine muchiile arborelui de  acoperire minimal.
+	void algoritm_PRIM(int n)
+            {
+	          W={1};   //se pleaca din nodul 1
+	          T={ };     //multimea vida
+	          while (W!=N)
+                           {
+		       selecteaza muchia (w,u) de cost minim cu w?W si u?N-W;
+		       adauga u la W;
+		       adauga (u,w) la T;
+                           }
+	 }
+
+	Un alt algoritm apartine lui Kruskal. In acest caz, muchiile sunt ordonate crescator dupa cost. Arborele de acoperire va contine n-1 muchii. La fiecare pas se alege muchia de cost minim care nu formeaza ciclu cu muchiile aflate deja in T.
+	Acest algoritm are urmatoarea descriere:
+
+	void algoritm_Kruskal(int n)
+            {
+	      T={};
+	      while (T nu este arbore de  acoperire)
+                      {
+		  selecteaza muchia (w,u) de cost minim din R;
+	              sterge (w,u) din R;
+	              if ( (w,u) nu creeaza un ciclu in T)
+adauga (w,u) la T;
+	          }
+	 }
+
+Problema mai dificila in algoritm consta in verificarea daca o muchie creeaza ciclu in T.
+
+Lucrarea de laborator nr. 8
+
+
+TABELE DE DISPERSIE
+
+1.Continutul lucrarii
+
+In lucrare sunt prezentate principalele operatii asupra unei tabele de dispersie: construirea tabelei de dispersie, inserarea unei inregistrari, cautarea unei inregistrari, afisarea inregistrarilor. De asemenea se fac cateva consideratii asupra alegerii functiei de dispersie.
+
+2.Consideratii teoretice
+
+2.1.Tipuri de tabele
+
+	Tabelul este o colectie de elemente de acelasi tip, identificabile prin chei. Elementele sale se mai numesc inregistrari.
+	Tabelele pot fi :
+- fixe, cu un numar de inregistrari cunoscut dinainte si ordonate;      
+- dinamice 
+	Tabelele dinamice pot fi organizate sub forma de:
+- lista dinamica simplu sau dublu inlantuita;
+- arbore de cautare;
+- tabele de dispersie.
+	Din categoria tabelelor fixe face parte tabelul de cuvinte rezervate dintr-un limbaj de programare. Acesta este organizat ca un tablou de pointeri spre cuvintele rezervate, introduse in ordine alfabetica. Cautarea utilizata este cea binara.
+	Tabelele dinamice organizate sub forma de liste au dezavantajul cautarii liniare. Arborele de cautare reduce timpul de cautare. In cazul in care cheile sunt alfanumerice, comparatiile sunt mari consumatoare de timp. Pentru astfel de situatii, cele mai potrivite sunt tabelele de dispersie.
+
+		2.2.Functia de dispersie ( hashing )
+
+	Functia de dispersie este functia care transforma o cheie intr-un numar natural numit cod de dispersie: 
+                       f: K -> H 
+ unde K este multimea cheilor, iar H este o multime de numere naturale.
+	Functia f nu este injectiva .Doua chei pentru care f(k1)=f(k2) se spune ca intra in coliziune, iar inregistrarile respective se numesc sinonime.
+	Asupra lui f se pun doua conditii:
+- valoarea ei pentru un k? K sa rezulte cat mai simplu si rapid;
+- sa minimizeze numarul de coliziuni.
+	Un exemplu de functie de dispersie este urmatoarea:
+		f(k)=?(k) mod M  
+unde ?(k) este o functie care transforma cheia intr-un numar natural, iar M este un numar 
+natural recomandat a fi prim.
+	Functia ?(k) se alege in functie de natura cheilor. Daca ele sunt numerice, atunci ?(k)=k. In cazul cheilor alfanumerice, cea mai simpla functie ?(k) este suma codurilor ASCII ale caracterelor din componenta lor; ca urmare  functia f de calcul a dispersiei este urmatoarea:
+
+#define M…
+int f(char *key)
+{
+  int i,suma;
+  suma=0;
+  for(i=0;i<length(key);i++)
+	suma=suma+*(key+i);
+  return suma%M;
+}
+
+	    2.3.Tabela de dispersie
+     
+Rezolvarea coliziunilor se face astfel: toate inregistrarile pentru care cheile intra in coliziune sunt inserate intr-o lista simplu inlantuita. Vor exista astfel mai multe liste, fiecare continand inregistrari cu acelasi cod de dispersie. Pointerii spre primul element din fiecare lista se pastreaza intr-un tablou, la indexul egal cu codul de dispersie .Ca urmare modelul unei tabele de dispersie este urmatorul:
+
+
+Un nod al listei are structura urmatoare:
+typedef struct tip_nod {
+char *cheie;
+informatie
+struct tip_nod *urm;
+}TIP_NOD;
+	Tabloul HT este declarat astfel:
+TIP_NOD *HT[M];
+Initial el contine pointerii nuli: 	
+for(i=0;i<M;i++)
+		HT[i]=0;		
+Cautarea intr-o tabela de dispersie a unei inregistrari avand pointerul key la cheia sa, se face astfel:
+- se calculeaza codul de dispersie:
+h=f(key); 
+- se cauta inregistrarea avand pointerul key la  cheia sa, din lista avand pointerul spre primul nod HT[h].
+Cautarea este liniara:
+
+p=HT(h);
+while(p!=0)
+  {
+		if(strcmp(key,p->cheie)==0) return p;
+		p=p->urm;
+  }
+	return 0;
+Inserarea unei inregistrari intr-o tabela de dispersie se face astfel:
+- se construieste nodul de pointer p, care va contine informatia utila si pointerul la cheia inregistrarii:
+
+p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+citire_nod(p);
+- se determina codul de dispersie al inregistrarii:
+h=f(p->cheie);
+- daca este prima inregistrare cu codul respectiv, adresa sa este depusa in tabelul HT:
+
+if(HT[h]==0){
+		 HT[h]=p;
+		 p->urm=0;
+	           }
+in caz contrar se verifica daca nu cumva mai exista  o inregistrare cu cheia respectiva. In caz afirmativ se face o prelucrare a inregistrarii existente ( stergere, actualizare) sau este o eroare (cheie dubla ). Daca nu exista o inregistrare de cheia respectiva, se insereaza in lista ca prim element nodul de adresa p:
+
+q=cautare(p->cheie);
+if(q==o){  /* nu exista o inregistrare de cheia respectiva */
+		p->urm=HT[h];
+		HT[h]=p;
+	         }
+else prelucrare(p,q);/* cheie dubla */
+Construirea tabelei de dispersie se face prin inserarea repetata a nodurilor.
+2.4.Listarea tuturor inregistrarilor
+	Listarea tuturor inregistrarilor pe coduri se face simplu, conform algoritmului urmator:
+
+for(i=0;i<M;i++)
+  {
+ if(HT[i]!=0)
+{
+                printf(“\nInregistrari avand codul de dispersie=%d\n”,i);
+p=HT[i];
+while(p!=0){
+afisare(p);
+p=p->urm;
+		}
+   }
+	
+Lucrarea de laborator nr. 9
+
+
+METODE GENERALE DE ELABORARE A ALGORITMILOR (I)
+
+              1.Continutul lucrarii
+     In lucrare sunt prezentate principiile metodelor Greedy si backtracking, variantele lor de aplicare si exemple.
+
+2         2.Consideratii teoretice
+               2.1.Metoda  Greedy.
+Metoda Greedy se aplica urmatoarelor tipuri de probleme:
+Dintr-o multime A de n elemente se cere determinarea unei submultimi B care sa indeplineasca anumite conditii pentru a fi acceptata.
+Numele metodei vine de la urmatorul fapt: se alege pe rand cate un element din multimea A si eventual se introduce in solutie.
+Se mentioneaza faptul ca o data ce un element a fost ales el ramane in solutia finala, iar daca un element a fost exclus, el nu va mai putea fi reconsiderat pentru includere in solutie.
+Metoda determina o singura solutie.
+Exista doua variante de rezolvare a unei probleme cu ajutorul metodei Greedy:
+
+a)Varianta I
+Se pleaca de la multimea B vida. Se alege din multimea A un element neales in pasii precedenti. Se cerceteaza daca adaugarea la solutia partiala B conduce la o solutie posibila. In caz afirmativ se adauga elementul respectiv la B.
+Descrierea variantei este urmatoarea:
+#define max   ...
+GREEDY1(int A[max], int n, int B[max], int *k)
+/* A este multimea de n elemente date;
+B este multimea extrasa de k elemente */
+{
+    int x, v, i;
+ *k = 0;     /* Multimea B este vida */
+for(i = 0; i<n; i++)
+{
+ALEGE (A, n, i, x);
+/* se alege elementul x dintre elementele A[i], A[i+1], ... A[n-1] si se aduce pe pozitia i prin interschimbare */
+POSIBIL (B, x, v);
+/* v=1 daca x prin adaugare la B conduce la solutie posibila si 
+v=0 in caz contrar */
+                     if(v==1)  ADAUGA(B, x, *k);
+/* se adauga x la B, k indicand numarul de elemente din B */
+}
+ }
+
+In varianta I a metodei, functia ALEGE stabileste criteriul care duce la solutia finala.
+b)Varianta II
+Se stabileste de la inceput ordinea in care trebuie considerate elementele multimii A. Apoi se ia pe rand cate un element in ordinea stabilita si se verifica daca prin adaugare la solutia partiala B anterior construita, se ajunge la o solutie posibila. In caz afirmativ se face adaugarea.
+Descrierea variantei este urmatoarea:
+#define max   ...
+GREEDY2(int A[max], int n, int B[max], int *k)
+/* A este multimea de n elemente date;
+B este multimea extrasa de k elemente */
+{ 
+   int x, v, i;
+*k = 0; /* solutia vida */
+PRELUCRARE(A, n); /* rearanjare vector A */
+            for(i = 0; i<n; i++)
+{
+x=A[i];
+POSIBIL (B, x, v);
+/* v=1 daca prin adaugarea lui x la B se ajunge la o solutie posibila si 
+v=0 in caz contrar */
+                     if(v==1) then  ADAUGA(B, x, *k);
+/* se adauga x la multimea B */
+}
+}
+
+Dificultatea elaborarii functiei PRELUCRARE este identica cu cea a functiei ALEGE din varianta precedenta. 
+Exemplu: Determinarea arborelui de acoperire de cost minim prin algoritmul lui Prim.
+Problema a fost enuntata in cadrul lucrarii nr.7 paragraful 2.3.
+         Algoritmul consta in urmatoarele: 
+a)Initial se ia arborele ce contine un singur varf.  S-a demonstrat ca nu are importanta cu care varf se incepe; ca urmare se ia varful 1. Multimea arcelor este vida.
+b)Se alege arcul de cost minim, care are un varf in arborele deja construit, iar celalalt varf nu apartine arborelui. Se repeta in total acest pas de n-1 ori.
+Pentru evitarea parcurgerii tuturor arcelor grafului la fiecare pas, se ia vectorul v avand n componente definit astfel: 
+daca varful i apartine arborelui deja construit
+
+daca varful i nu apartine arborelui deja construit; k este varful arborelui deja construit a. i. muchia (i, k) este de cost minim.
+Initial v[1]=0 si v[2]=v[3]=...=v[n]=1, adica initial arborele este A =({1}, O).
+
+/*Algoritmul lui Prim */
+  #include <stdio.h>
+  #include <conio.h>
+  #define nmax 10
+  #define MAX 0x7fff
+  void prim(int n,int c[nmax][nmax],
+		    int muchii[nmax][2],int *cost)
+  /* n -numarul nodurilor;
+     c - matricea costurilor;
+     muchii-muchiile arborelui de acoperire de cost minim;
+     cost-costul arborelui de acoperire de cost minim  */
+  {
+    int v[nmax]; /* v[i]=0 daca i apartine arborelui;
+		    v[i]=j daca i nu apartine arborelui.
+			   j este nodul din arbore a.i.
+			     muchia (i,j) este de cost minim */
+    int i,j,k,minim;
+    *cost=0;
+    v[1]=0;
+    for(i=2;i<=n;i++) v[i]=1;   /*arborele este ({1},{}) */
+    /* determinarea celor n-1 muchii */
+    for(i=1;i<=n-1;i++)
+      {
+	/*determinarea muchiei care se adauga arborelui */
+	minim=0x7fff;
+	for(k=1;k<=n;k++)
+	  if(v[k]!=0) if(c[k][v[k]] < minim)
+			 {
+			   j=k;
+			   minim=c[k][v[k]];
+			 }
+	muchii[i][0]=v[j];
+	muchii[i][1]=j;
+	*cost=*cost+c[j][v[j]];
+	/*reactualizare vector v */
+	v[j]=0;
+	for(k=1;k<=n;k++)
+	  if(v[k]!=0)
+	     if(c[k][v[k]]>c[k][j]) v[k]=j;
+      }
+  }
+  void main()
+  {
+   int n;/*nr. nodurilor */
+   int c[nmax][nmax]; /*matricea costurilor */
+   int muchii[nmax][2];/*muchiile arborelui*/
+   int i,j,k,cost;
+   printf("\nNr. nodurilor=");
+   scanf("%d",&n);
+   for(i=1;i<=n;i++)
+      for(j=1;j<=n;j++)
+          c[i][j]=MAX;
+  /*citirea costurilor(numere intregi) */
+  for(i=1;i<n;i++)
+   {
+     do
+       {
+	 printf("\nIntroduceti 0 pentru terminare sau nodul adiacent\n");
+	 printf("	      cu  %2d > ca el =",i);
+	 scanf("%d",&j);
+	 if(j>0)
+	    {
+	      printf("\nCostul c[%d][%d]=",i,j);
+	      scanf("%d",&c[i][j]);
+	      c[j][i]=c[i][j]; /*matricea este simetrica */
+	    }
+       }
+     while(j>0);
+   };
+   prim(n,c,muchii,&cost);
+   printf("\nCOSTUL ARBORELUI = %d",cost);
+   printf("\nMUCHIILE ARBORELUI  COSTUL MUCHIEI\n");
+   for(i=1;i<=n-1;i++)
+     printf("   %2d - %2d %10d\n",muchii[i][0],muchii[i][1],
+			   c[muchii[i][0]][muchii[i][1]]);
+   getch();
+  }
+2.2Metoda backtracking
+Metoda backtracking se aplica algoritmilor pentru rezolvarea urmatoarelor tipuri de probleme:
+Fiind date n multimi S1, S2, ... Sn, fiecare avand un numar nrsi de elemente, se cere gasirea elementelor vectorului X =(x1, x2, ... xn) ª S=S1xS2x…Sn, astfel incat sa fie indeplinita o anumita relatie ?(x1, x2, … ,xn) intre elementele sale.
+Relatia ?(x1, x2, … ,xn) se numeste relatie interna, multimea S=S1xS2x…Sn se numeste spatiul solutiilor posibile, iar vectorul X se numeste solutia rezultat.
+Metoda backtracking determina toate solutiile rezultat ale problemei. Dintre acestea se poate alege una care indeplineste in plus o alta conditie.
+Metoda backtracking elimina generarea tuturor celor  posibilitati din spatiul solutiilor posibile. In acest scop la generarea vectorului X, se respecta urmatoarele conditii:
+a)xk primeste valori numai daca x1, x2, ... ,xk-1 au primit deja valori;
+b)dupa ce se atribuie o valoare lui xk, se verifica relatia numita de continuare ?`(x1, x2, … ,xk), care stabileste situatia in care are sens sa se treaca la calculul lui xk+1. Neindeplinirea conditiei ?` exprima faptul ca oricum am alege xk+1, xk+2, ... ,xn nu se ajunge la solutia rezultat. In caz de neindeplinire a conditiei ?`(x1, x2, … ,xk), se alege o noua valoare pentru xk ª Sk si se reia verificarea conditiei ?`. Daca multimea de valori xk s-a epuizat, se revine la alegerea altei valori pentru xk-1 s.a.m.d. Aceasta micsorare a lui k da numele metodei, ilustrand faptul ca atunci cand nu se poate avansa se urmareste inapoi secventa curenta din solutia posibila. Intre conditia interna  si cea de continuare exista o stransa legatura. Stabilirea optima a conditiilor de continuare reduce mult numarul de calcule.
+Algoritmul backtracking este redat sub forma nerecursiva astfel:
+#define nmax ...
+backtracking_nerecursiv(int n)
+/* se considera globale multimile Si si numarul lor de elemente nrsi */
+{
+int x[nmax];
+int k, v;
+k=1;
+while(k>0)
+{
+v=0;
+while ((mai exista o valoare ? ª Sk netestata) & (v==0))
+{
+x[k]=?;
+if (?(x[1], x[2], ..., x[k]) este indeplinita)  v=1;
+}
+if (v==0) k=k-1;
+else if (k==n) afisare (x, n);  /* afisarea sau eventual prelucrarea solutiei */
+else k=k+1;
+ }
+}
+Sub forma recursiva, algoritmul backtracking poate fi redat astfel:
+#define nmax ...
+int x[nmax];
+
+/* se considera globale n, multimile Si si numarul lor de elemente nrsi */
+backtracking_recursiv(int k)
+{
+int j;
+for (j=1;j<=nrsk;j++)
+{
+x[k]=Sk[j];    /* al j-lea element din mulltimea Sk */
+if (?(x[1], x[2], ..., x[k]) este indeplinita)
+if (k<n) backtracking_recursiv(k+1);
+else afisare (x, n); /* afisarea sau eventual prelucrarea solutiei */
+}
+ }
+Apelul se face:
+backtracking_recursiv(1);
+Exemplu: Problema damelor de sah.
+Se cere gasirea tuturor solutiilor de asezare pe tabla de sah de n linii si n coloane a n dame, astfel incat ele sa nu se atace. Se considera ca ele se ataca daca sunt pe aceeasi linie, coloana sau diagonala.
+Intrucat pe o linie se gaseste o singura dama, solutia se prezinta sub forma de vector
+x =(x1, x2, ... ,xn), unde xi reprezinta coloana pe care se afla dama in linia i.
+
+Conditiile de continuare sunt:
+a)doua dame nu se pot afla pe aceeasi coloana, adica: 
+b)doua dame nu se pot afla pe aceeasi diagonala, adica:
+Varianta nerecursiva este urmatoarea:
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#define nmax 10
+void dame_nerecursiv(int n)
+/* functia gaseste toate asezarile posibile pe o tabla
+de sah de n*n patrate pentru ca n dame sa nu se atace */
+{
+int x[nmax];
+int v;
+int i,j,k,nr_solutie;
+nr_solutie=0;
+k=1;x[k]=0;
+while(k>0)
+{
+/*gasirea unei asezari corecte in linia k */
+v=0;
+while((v==0)&(x[k]<=n-1))
+{
+x[k]++;
+v=1;i=1;
+while((i<=k-1)&(v==1))
+if((x[k]==x[i])|(abs(k-i)==abs(x[k]-x[i]))) v=0;
+else i++;
+}
+if(v==0) k=k-1;
+else {
+if(k==n){
+/*afisarea tablei */
+nr_solutie++;
+printf("\nSOLUTIA nr. %d\n",nr_solutie);
+for(i=1;i<=n;i++)
+{
+for(j=1;j<=n;j++)
+if (x[i]==j) printf("1");
+else printf("0");
+printf("\n");
+};
+getch();
+}
+else {
+k++;
+x[k]=0;
+};
+}
+}
+}
+void main(void)
+{
+int n;
+printf("\nOrdinul tablei de sah=");
+scanf("%d",&n);
+dame_nerecursiv(n);
+printf("\nSFARSIT");
+}
+Varianta recursiva este urmatoarea:
+ #include <stdio.h>
+ #include <conio.h>
+ #include <stdlib.h>
+ #define nmax 10
+ /* Varianta recursiva a problemei damelor */
+ int n; /*dimensiunea (ordinul) tablei de sah */
+ int nr_solutie;
+ int x[nmax];
+ int FI(int k)
+ {
+   /*testeaza conditiile de continuare */
+   int p;
+   for(p=1;p<=k-1;p++)
+         if((x[k]==x[p]) | (abs(k-p) == abs(x[k]-x[p]))) return 0;
+   return 1;
+ }
+ void back_recursiv(int k)
+ {
+  int i,j,p;
+  for(j=1;j<=n;j++)
+    {
+     x[k]=j;
+     if(FI(k)==1)
+	if(k<n) back_recursiv(k+1);
+	else {
+	           /*tiparirea solutiei */
+	            nr_solutie++;
+	             printf("\nSOLUTIA nr.%d\n",nr_solutie);
+	             for(i=1;i<=n;i++)
+		    {
+		         for(p=1;p<=n;p++)
+		               if(x[i]==p) printf("1");
+		               else printf("0");
+		           printf("\n");
+		      };
+		    getch();
+	        }
+      }
+  }
+ void main(void)
+ {
+      printf("\nOrdinul tablei de sah n=");
+      scanf("%d",&n);
+      nr_solutie=0;
+       back_recursiv(1);
+       printf("\nSFARSIT\n");
+  }
+
+
+METODE GENERALE DE ELABORARE A ALGORITMILOR (II)
+
+          1. Continutul lucrarii
+   In lucrare se prezinta esenta metodelor “Branch and Bound” (ramifica si margineste) si a metodei “Divide et Impera”.
+
+2        2. Consideratii teoretice
+        2.1.  Metoda “Branch and Bound”
+              Metoda “Branch and Bound” este inrudita cu metoda backtracking, diferind ordinea de parcurgere a spatiului starilor si a modului de eliminare a subarborilor ce nu pot conduce la rezultat.
+Metoda “Branch and Bound” se aplica urmatoarelor tipuri de probleme: Se cunoaste starea initiala s0 si starea finala sf (starea rezultat). Din starea s0 se ajunge in starea sf printr-o serie de decizii. Ne intereseaza ca numarul starilor intermediare sa fie minim.
+Presupunem ca starile reprezinta nodurile unui graf, iar arcele indica faptul ca o decizie a transformat starea si in starea si+1. Se introduc restrictii ca sa nu existe mai multe noduri in graf cu aceeasi stare, deci graful sa nu fie infinit. Astfel graful se reduce la un arbore. Arborele se genereaza pana la prima aparitie a nodului final.
+Exista posibilitatea parcurgerii grafului in adancime sau in latime, insa timpul de ajungere la rezultat este mare. O strategie superioara din punct de vedere al timpului de calcul se obtine alegand dintre descendentii varfului curent pe cel mai aproape de starea finala. Pentru a putea aprecia departarea fata de starea finala, se va folosi o functie de cost c definita pe multimea varfurilor din arbore. Avand valorile acestei functii, vom alege dintre varfurile descendente ale varfului curent pe cel cu cost minim. O astfel de parcurgere a grafului se numeste “Least Cost” sau prescurtat “LC”.
+
+
+
+
+Functia c ideala pentru a masura distanta de la varf la varful final este:
+
+
+rezultat;
+
+daca x este varf terminalvarful rezultat
+
+daca x nu este varf rezultat
+
+Functia c definita mai sus nu este aplicabila, intrucat calculul ei presupune parcurgerea tuturor varfurilor arborelui,  de fapt urmarindu-se tocmai evitarea acestui lucru.
+Se observa ca daca totusi functia c este calculata, atunci coborarea in arbore la varful rezultat se face pe un drum deja format din varfurile x ce au atasata o valoare c(x) egala cu c(radacina).
+Neputand lucra cu functia c, atunci se defineste o aproximare a sa cu una din urmatoarele doua variante:
+a)nivelul varfului x + distanta dintre starea curenta si starea finala;
+b)costul starii parinte + distanta dintre starea curenta si starea finala.
+Nivelul este numarul deciziilor prin care s-a ajuns la configuratia curenta.
+Stabilirea functiei “distanta” este specifica fiecarei probleme. De exemplu, in cazul jocului perspico (problema 3.1. din lucrare), distanta este numarul de placute care nu sunt la locul potrivit.
+Functia care descrie metoda “Branch and Bound” este data mai jos. Lista L contine varfurile care memoreaza configuratia starilor. Pentru varful i luat in considerare se memoreaza tatal sau in vectorul TATA, permitand ca odata ajunsi in varful rezultat sa se poata reface drumul de la radacina la  varful  rezultat.
+RAD este pointerul la varful ce contine starea initiala.
+TIP_NOD *RAD;
+RAD=(TIP_NOD *)malloc(sizeof(TIP_NOD));
+/* se depune configuratia initiala la adresa RAD */
+void Branch_and_Bound()
+{
+TIP_NOD  *i, *j;
+LISTA L;
+int iesire;
+i=RAD;
+LISTA_VIDA(L);
+for(;;)
+{
+while(mai exista vecini j ai lui i neprelucrati)
+if(j==varf_rezultat)
+   { afisare_drumul_de_la RAD la j;
+   return;
+}
+else {
+ADAUG(j,L);
+TATA[j]=i;
+                                                         };
+  if(ESTE_VIDA(L))
+{
+    printf("Nu exista solutie\n");
+  return;
+                                                  }
+  else i=ELEMENT(L);
+}
+}
+Functiile apelate au urmatoarea semnificatie:
+LISTAVIDA(L) – initializeaza lista L ca fiind vida;
+ESTEVIDA(L) –– returneaza 1 daca lista L este vida sau 0 in caz contrar;
+ELEMENT(L) –– este functia ce returneaza un element al listei care are cel mai mic cost , pentru a ne afla in cazul pacurgerii LC a arborelui starilor;
+ADAUG(j, L) ––– adauga nodul j la lista L. Din descrierea functiei se observa ca atunci cand un varf i din lista L devine varf curent, sunt generati toti descendentii sai, acestia fiind pusi in lista L. Unul din acesti descendenti va deveni la randul sau pe baza costului  varf curent, pana cand se ajunge la varful rezultat (cel ce contine starea finala).
+
+
+2.2Metoda “Divide et Impera”
+Metoda “Divide et Impera” consta in impartirea repetata a unei probleme in doua sau mai multe probleme de acelasi tip si apoi combinarea subproblemelor rezolvate, in final obtinandu-se solutia problemei initiale.
+Astfel, fie vectorul A =(a1, a2, ..., an), a carui elemente se prelucreaza. Metoda “Divide et Impera” este aplicabila daca pentru orice p, q, naturali, astfel incat  exista un  incat prelucrarea secventei  se poate face prelucrand secventele  si  si apoi prin combinarea rezultatelor se obtine prelucrarea dorita.
+Metoda “Divide et Impera” poate fi descrisa astfel:
+void DIVIDE_IMPERA(int p,int q,rezultat:alfa)
+/* p, q reprezinta indicii secventei care se prelucreaza;
+alfa reprezinta rezultatul */
+                                 {
+int eps, m;
+rezultat beta,gama;
+if(abs(q-p)<=eps) PRELUCRARE(p,q,alfa);
+else {
+DIVIDE(p,q,m);
+DIVIDE_IMPERA(p,m,beta);
+DIVIDE_IMPERA(m+1,q,gama);
+COMBINA(beta,gama,alfa);
+                                             }
+}
+
+Apelul functiei “Divide et Impera” se face astfel:
+
+DIVIDE_IMPERA(1, n, alfa);
+
+Variabilele si functiile din functia divide_Impera au urmatoarele semnificatii:
+eps – este lungimea maxima a unei secvente ap, ap+1, ...,aq pentru care prelucrarea se poate face direct;
+m – este indicele intermediar in care secventa ap, ap+1, ...,aq este impartita in doua subsecvente de functia DIVIDE;
+beta si gama – reprezinta rezultatele intermediare obtinute in urma prelucrarii subsecventelor (ap, ap+1, ...,am) si respectiv (am+1, am+2, ...,aq);
+alfa – reprezinta rezultatul combinarii rezultatelor intermediare beta si gama;
+DIVIDE – imparte secventa (ap, ap+1, ...,aq) in doua subsecvente (ap, ap+1, ...,am) si
+(am+1, am+2, ...,aq);
+COMBINA – combina rezultatele beta si gama ale prelucrarii subsecventelor returnate de procedura DIVIDE, obtinand rezultatul alfa a prelucrarii secventei initiale.
+
+Exemplu. Sortarea prin interclasare a unui vector de n elemente:
+/*Program de sortare prin metoda divide et impera */
+#include <stdio.h>
+#include <conio.h>
+#define nmax 100
+int a[nmax]; /* vectorul de sortat */
+void afisare(int n)
+/* afisarea vectorului */
+{
+     int i;
+     printf("\n");
+     for(i=0;i<n;i++)
+         {
+          printf("%5d",a[i]);
+          if(((i+1) % 10)==0)printf("\n");
+        }
+      printf("\n");
+ }
+void comb(int inf,int med,int sup)
+{
+  int i,j,k,l;
+  int b[nmax];
+  i=inf;j=med+1;k=inf;
+  while((i<=med)&(j<=sup))
+     {
+           if(a[i]<=a[j]) {
+           b[k]=a[i];
+           i++;
+                }
+              else{
+                        b[k]=a[j];
+                        j++;
+                 }
+               k++;
+        }
+     for(l=i;l<=med;l++)
+   {
+     /* au ramas elemente in stanga */
+     b[k]=a[l];
+     k++;
+  }
+     for(l=j;l<=sup;l++)
+        {
+             /* au ramas elemente in dreapta */
+             b[k]=a[l];
+             k++;
+         }
+     /* secventa intre inf si sup este sortata */
+     for(l=inf;l<=sup;l++) a[l]=b[l];
+}
+void divide_impera(int inf,int sup)
+{
+     int med;
+     if(inf<sup) {
+           med=(inf+sup) / 2;
+           divide_impera(inf,med);
+           divide_impera(med+1,sup);
+           comb(inf,med,sup);
+               }
+ }
+void main(void)
+{
+    int i,n;
+    printf("\nIntroduceti nr.elementelor n=");
+    scanf("%d",&n);
+  printf("\nIntroduceti elementele vectorului\n");
+  for(i=0;i<n;i++)
+   {
+         printf("a[%d]=",i);
+         scanf("%d",&a[i]);
+    }
+    printf("\nVECTORUL NESORTAT\n");
+    afisare(n);
+    divide_impera(0,n-1);
+     printf("\nVECTORUL SORTAT\n");
+0    afisare(n);
+    getch();
+   }
+
+Lucrarea de laborator nr. 11.
+METODE GENERALE DE ELABORARE A ALGORITMILOR (III)
+
+1.	Continutul lucrarii
+In lucrare sunt prezentate metoda programarii dinamice si metodele euristice.
+2         2.	Consideratii teoretice
+         2.1.	Metoda programarii dinamice
+Metoda programarii dinamice se aplica pentru rezolvarea problemelor de optim, pentru care solutia este rezultatul unui sir de decizii secventiale, dependente de cele luate anterior si care indeplinesc principiul optimalitatii.
+Principiul optimalitatii consta in urmatoarele:
+Fie starile s0, s1, ..., sn, in care s0 este starea initiala si sn este starea finala, obtinute prin deciziile d1, d2, ..., dn (fig. 2.1.1).
+Daca di, di+1, ..., dj  (1 ??i < j ? n) este un sir optim de decizii care transforma starea si-1 in starea sj, trecand prin starile intermediare si, si+1, ..., sj-1 si daca pentru oricare k ?[i, j-1] rezulta ca di, di+1, ..., dk si dk+1 dk+2, ..., dj sunt ambele siruri optime de decizii de trecere din starea si-1 in  starea sk, respectiv din starea sk in starea si-1, atunci este satisfacut principiul optimalitatii.
+Aplicarea metodei programarii dinamice se face astfel:
+se verifica principiul optimalitatii;
+se scriu relatiile de recurenta obtinute din regulile de trecere dintr-o stare in alta si se rezolva.
+Drept exemplu se ia inmultirea optima a unui sir de matrici.
+R=A1*A2*...*An
+in care Ai (i=1,n) este de dimensiunile di*di+1. Matricea rezultat R va fi de dimensiunile di*dn+1.
+Se stie ca la inmultirea matricelor Ai si Ai+1 se efectueaza di*di+1*di+2 operatii de inmultire. Daca matricele au dimensiuni diferite, numarul operatiilor de inmultire necesare obtinerii matricei rezultat R depinde de ordinea efectuarii produselor a cate doua matrice. Se cere gasirea ordinii de asociere pentru care numarul inmultirilor sa fie minim.
+Rezolvarea acestei probleme se va face astfel:
+Fie Cij numarul minim de inmultiri de elemente pentru calculul produsului Ai*Ai+1*...*Aj pentru 1 ??i < j ? n.
+Se observa ca:
+a)Cii=0
+b)Ci,i+1= di*di+1*di+2
+c)C1n este valoarea minima cautata.
+d)este verificat principiul optimalitatii.
+Cij = min {Ci,k+Ck+1,j+di*dk+1*dj+1?1 ??k ?j } asocierile fiind de forma (Ai* Ai+1*…* Ak) * (Ak+1* Ak+2*…* Aj).
+Se calculeaza valorile Ci, i+d pentru fiecare nivel d, pana se ajunge la C1,n. Pentru a construi arborele binar care va descrie ordinea efectuarii operatiilor, se va retine la fiecare pas indicele k care realizeaza minimul, adica modul de asociere a matricelor. Varfurile arborelui vor contine limitele subsirului de matrice care se asociaza; radacina va contine (1,n), iar un subarbore care contine in radacina (i, j) va avea descendenti pe (i, k) si (k+1, j), unde k este valoarea pentru care se realizeaza optimul cerut.
+In continuare este prezentat programul comentat de rezolvare a acestei probleme.
+
+  #include <stdio.h>
+  #include <conio.h>
+  #include <alloc.h>
+  #define  nmax 10
+  typedef struct tip_nod{
+				       long ind1,ind2;
+				       struct tip_nod *stg,*dr;
+				    } TIP_NOD;
+  /*Inmultirea optima a unui sir de matrici A1*A2*...*An */
+  /* de dimensiuni d1*d2,d2*d3,...,dn*d(n+1) */
+  void prod_matr(int n,long c[nmax][nmax],int d[nmax+1])
+  {
+	     int i,j,k,l,poz;
+	     long min,val;
+	     for(i=1;i<=n;i++)
+		 c[i][i]=0;
+	     for(l=1;l<=n-1;l++)
+		for(i=1;i<=n-l;i++)
+		    {
+			 j=i+l;
+			 min=0x7fffffff;
+			 for(k=i;k<=j-1;k++)
+				{
+				    val=c[i][k]+c[k+1][j]+(long)d[i]*d[k+1]*d[j+1];
+				    if(val<min) {
+						    min=val;poz=k;
+					             };
+				};
+			 c[i][j]=min;
+			 c[j][i]=poz;
+		     }
+  }
+  TIP_NOD *constr_arbore(TIP_NOD *p,int i,int j,long c[nmax][nmax])
+  {
+	       p=(TIP_NOD *)malloc(sizeof(TIP_NOD));
+	       p->ind1=i;p->ind2=j;
+	       if(i<j) {
+		          p->stg=constr_arbore(p->stg,i,c[j][i],c);
+		          p->dr=constr_arbore(p->dr,c[j][i]+1,j,c);
+		      }
+	      else {
+		     p->stg=0; p->dr=0;
+		  };
+	       return p;
+  }
+  void postordine(TIP_NOD *p,int nivel)
+  {
+	     int i;
+	     if(p!=0) {
+			postordine(p->stg,nivel+1);
+			postordine(p->dr,nivel+1);
+			for(i=0;i<=nivel;i++) printf("  ");
+			printf("(%ld,%ld)\n",p->ind1,p->ind2);
+		       }
+    }
+
+    void main(void)
+    {
+	       int i,j,n;
+	       long c[nmax][nmax];
+	       int d[nmax+1]; /* dimensiunile matricelor */
+	      TIP_NOD *rad;
+	      printf("\nIntroduceti nr.matricelor n=");
+	      scanf("%d",&n);
+	      printf("\nIntroduceti dimensiunile matricelor\n");
+	      for(i=1;i<=n+1;i++)
+		{
+		    printf("\nDimensiunea d[%d]=",i);
+		    scanf("%d",&d[i]);
+		};
+	      prod_matr(n,c,d);
+	      /* Matricea c rezultata in urma calculelor */
+	      printf("\nMATRICEA C\n");
+	      for(i=1;i<=n;i++)
+		{
+		      for(j=1;j<=n;j++)
+		      printf("%6ld",c[i][j]);
+		      printf("\n");
+		}
+	       printf("\nNR.MINIM DE INMULTIRI = %ld",c[1][n]);
+	       getch();
+	       rad=0;
+	       rad=constr_arbore(rad,1,n,c);
+	       printf("\nARBORELE IN POSTORDINE\n");
+	       postordine(rad,0);
+	       getch();
+  }
+
+2.2. Metode euristice
+Prin algoritm euristic se va intelege un algoritm care furnizeaza o solutie aproximativa, nu neaparat optimala, dar care poate fi implementata usor si da rezultate in timp util, de ordin polinomial.
+Metodele euristice se aplica pentru rezolvarea unor probleme, la care nu se stie daca admit optim si care accepta drept rezultate nu tocmai optimul.
+Una din idei, este descompunerea procesului de determinare a solutiei in mai multe procese succesive, carora li se cauta solutia optimala. Idea nu conduce la obtinerea in final in mod sigur a unei solutii optime, intrucat optimizarea locala nu implica in general optimizarea globala.
+In problemele practice se pot cauta mai multe solutii aproximative, din care sa se aleaga cea mai buna.
+Drept exemplu se prezinta problema comis – voiajorului: Se da un graf neorientat G =(X, ?) in care toate nodurile sunt unite intre ele printr-o muchie, careia i se asociaza un cost strict pozitiv. Se cere determinarea unui ciclu, care sa inceapa dintr-un nod i, sa treaca exact o data prin toate nodurile si sa se intoarca in nodul initial. Se cere ca ciclul gasit sa aiba un cost minim.
+Solutia optimala a problemei se gaseste intr-un timp de ordin exponential prin metoda backtracking.
+
+Algoritmul euristic prezentat mai jos bazat pe metoda Greedy necesita un timp polinomial. Rezolvarea consta in urmatoarele:
+Daca (v1, v2, ..., vk) este calea deja construita, atunci:
+daca (v1, v2, ..., vk) = = X,  se adauga muchia (vk, v1) si ciclul este incheiat;
+daca (v1, v2, ..., vk) ? X,  se adauga muchia care leaga vk de un varf apartinand lui x, dar neinclus in cale.
+Pentru ca ciclul este o cale inchisa, putem considera ca punct de plecare oricare nod. De aceea se pot alege niste noduri de start, se determina pentru fiecare ciclul corespunzator dupa strategia descrisa si se retine ciclul de cost minim dintre ele.
+In continuare este prezentat programul corespunzator.
+  #include <stdio.h>
+  #include <conio.h>
+  #define nmax 10
+  /*Problema comis_voiajorului */
+  void comis_voiajor(int n,int c[nmax][nmax],
+		 int i,int ciclu[nmax+1],int *cost)
+	/* n este nr.nodurilor;c este matricea costurilor;
+	    i este nodul de start;ciclu contine nodurile din ciclu;
+	    cost este costul ciclului  */
+  {
+	 int p[nmax];
+	 int k,v,j,vmin;
+	 int costmin;
+	 for(k=1;k<=n;k++)
+		 p[k]=0;
+	 *cost=0;
+	 p[i]=1;ciclu[1]=i;
+	 v=i; /*nodul curent */
+	 for(k=1;k<n;k++) /* se adauga pe rand n-1 muchii */
+		{
+			costmin=0x7fff;
+			/*gasirea muchiei de cost minim care are
+			nodul de origine v*/
+			for(j=1;j<=n;j++)
+			    if((p[j]==0)&&(c[v][j]<costmin))
+				  {
+					  costmin=c[v][j];
+					  vmin=j;
+				  }
+			*cost=*cost+costmin;
+			ciclu[k+1]=vmin;
+			p[vmin]=1;
+			v=vmin;
+		}
+	 ciclu[n+1]=i;
+	 *cost=*cost+c[v][i];
+ }
+ void main(void)
+ {
+  int i,j,n;
+  int cost_ciclu;
+  int ciclu[nmax+1];
+  int c[nmax][nmax];
+  printf("\nNr.nodurilor grafului = ");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+	 for(j=1;j<=n;j++)
+		c[i][j]=0x7fff;
+  printf("\nIntroduceti costurile muchiilor care au ca origine");
+  printf("\n nodul i si celalalt nod mai mare ca i;daca nu mai sunt");
+  printf("\n  astfel de noduri se introduce 0 \n");
+  for(i=1;i<=n-1;i++)
+	 {
+	  while(1)
+		 {
+			 printf("Nodul adiacent lui %d =",i);
+			 scanf("%d",&j);
+			 if(j!=0){
+				        printf("Costul muchiei (%d,%d)=",i,j);
+				        scanf("%d",&c[i][j]);
+				        c[j][i]=c[i][j];
+				  }
+			 else break;
+		 }
+	 }
+  i=1;
+  comis_voiajor(n,c,i,ciclu,&cost_ciclu);
+  printf("\nCOSTUL CICLULUI =%d\n",cost_ciclu);
+  printf("\nCICLUL=");
+  for(i=1;i<=n+1;i++)
+	 printf("%3d",ciclu[i]);
+  getch();
+ }
+
+Lucrarea de laborator nr. 12.
+
+ALGORITMI FUNDAMENTALI DE SORTARE
+
+1.Continutul lucrarii
+In lucrare sunt prezentati algoritmii de sortare prin numarare, prin inserare (directa si shellsort), prin interschimbare (metoda bulelor si quicksort), prin selectie si interclasare.
+
+2.Consideratii teoretice
+Sortarea consta in  ordonarea crescatoare sau descrescatoare a  elementelor unui vector A =(a0, a1, ..., an-1). In practica, problema se intalneste sub forma sortarii unor articole dupa cheie, cheia fiind un camp din articol.
+
+2.1.Sortarea prin numarare
+Metoda sortarii prin numarare consta in gasirea pentru fiecare  element a[i], a numarului de elemente din vector, mai mici ca el. Numerele obtinute sunt memorate intr-un vector c; elementele vectorului de sortat a, sunt initial atribuite vectorului b. Pe baza vectorului c, elementele lui b vor fi aranjate in vectorul a.
+Dezavantajul metodei consta in utilizarea a doi vectori de lucru.
+Timpul  de prelucrare este de ordinul O(n2). In programul prezentat la paragraful 2.6., functia sort_numarare reda algoritmul de mai sus.
+
+2.2. Sortarea prin inserare
+Sortarea prin inserare consta in urmatoarele:
+Fie secventa a0 < a1 < a2 ... < aj-1.
+Inserarea elementului aj in aceasta secventa consta in compararea lui aj cu aj-1, aj-2 ... pana cand se ajunge la ai < aj; se insereaza aj dupa ai, cu mentiunea ca  in prealabil elementele aj-1, aj-2, ..., ai+1 au fost deplasate spre dreapta cu o pozitie. Metoda care procedeaza intocmai se numeste inserare directa.
+Metoda inserarii binare consta in cautarea binara a locului unde trebuie inserat elementul aj, avand in vedere ca secventa a0, a1, ..., aj-1 este ordonata crescator.
+Tot din categoria inserarii face parte si metoda shell. Pentru a explica metoda se introduce notiunea de h-sortare. Numim h-sortare, sortarea prin inserare directa a urmatoarelor secvente:
+a0, ah, a2h, ....
+a1, a1+h, a1+2h, ....
+.
+.
+.
+ah, a2h, a3h, ....
+h este numit increment.
+Metoda shell consta in alegerea unui numar de k incrementi
+h1 > h2 > h3 > ... > hk = 1
+si de a face o h1 – sortare, urmata de o h2 – sortare s. a. m. d., in final o 1 – sortare.
+Performatele metodei sunt strans legate de alegerea incrementilor.
+In exemplul din paragraful 2.6., functia sort_inserare_directa reda algoritmul de inserare directa, iar functia shell_sort reda algoritmul metodei shell.
+Timpul de prelucrare in cadrul metodei de inserare directa este de ordinul O(n2), iar al metodei shell de ordinul O(n *lnn). De asemenea timpul de prelucrare in cadrul metodei de inserare prin cautare binara este de ordinul O(n *lnn).
+
+2.3.Sortarea prin interschimbare
+Sortarea prin interschimbare consta in modificari succesive de forma ai ? aj, pana cand elementele vectorului apar in ordine crescatoare.
+Din aceasta categorie fac parte metoda bulelor si metoda quicksort.
+Metoda bulelor consta in compararea ai cu ai+1; daca ordinea e buna se compara ai+1 cu ai+2; daca ordinea nu e buna se interschimba ai cu ai+1 si apoi se compara ai+1 cu ai+2. Dupa prima parcurgere a vectorului, pe ultima pozitie ajunge elementul avand valoarea cea mai mare, dupa a doua parcurgere ajunge urmatorul element s. a. m. d.
+Timpul de prelucrare este de ordinul O(n2).
+Sortarea rapida quicksort a fost creata de Hoare si foloseste metoda „Divide Et Impera”.
+Principiul metodei este urmatorul: se selecteaza un element din tablou numit pivot si se rearanjeaza vectorul in doi subvectori, astfel incat cel din stanga are toate elementele mai mici decat pivotul, iar cel din dreapta mai mare ca pivotul. Procedeul se reia in subtabloul din stanga si apoi in cel din dreapta s. a. m. d. Procedeul se termina cand se ajunge cu pivotul in extremitatea stanga si respectiv dreapta a tabloului initial.
+Timpul de prelucrare a metodei quicksort este de ordinul O(n* lnn).
+In exemplul de la paragraful 2.6., functia sort_metoda_bulelor reda algoritmul de sortari prin metoda bulelor, iar functiile quicksort si quick redau algoritmul sortarii prin metoda quicksort.
+
+2.4.Sortarea prin selectie
+Sortarea prin selectie directa consta in urmatoarele: se afla minimul aj dintre a0, a1, ..., an-1 si se aduce pe pozitia zero in vector prin interschimbarea a0 cu aj; apoi procedeul se repeta pentru  a1, a2, ..., an-1 s. a. m. d.
+Timpul de prelucrare este de ordinul O(n2).
+In exemplul de la paragraful 2.6., functia sort_selectie reda algoritmul de sortare prin metoda selectiei directe.
+ 
+2.5.Sortarea prin interclasare
+Metoda sortarii prin interclasare a fost prezentata in cadrul lucrarii nr. 10, drept exemplificare a metodei de elaborare a algoritmilor „Divide et Impera”
+
+2.6.Exemplu
+In programul de mai jos sunt implementati algoritmii de sortare prezentati in paragrafele 2.1. –2.5.
+
+#include <stdio.h>
+#include <conio.h>
+#define nmax 100
+/* ALGORITMI DE SORTARE */
+
+void citire_vector(int n,float a[nmax],float b[nmax])
+/* CITIRE ELEMENTE VECTOR */
+{
+  int i;
+  printf("\nIntroduceti elementele vectorului de sortat\n");
+  for(i=0;i<n;i++)
+    {
+      printf("a[%d]=",i);
+      scanf("%f",&a[i]);
+      b[i]=a[i];
+    }
+}
+
+void reconstituire(int n,float a[nmax],float b[nmax])
+/* RECONSTITUIREA INITIALA A VECTORULUI a */
+{
+  int i;
+  for(i=0;i<n;i++)
+    a[i]=b[i];
+}
+
+void afisare(int n,float a[nmax])
+/* AFISARE VECTOR */
+{
+  int i;
+  for(i=0;i<n;i++)
+    {
+      printf("%8.2f",a[i]);
+      if(((i+1) % 10)==0) printf("\n");
+    }
+}
+
+  void  sort_numarare(int n,float a[nmax])
+  /*  SORTAREA PRIN NUMARARE  */
+{
+  int i,j;
+  float b[nmax];
+  int c[nmax];
+  for(i=0;i<n;i++)
+    {
+      c[i]=0; /* initializare vector de numarare */
+      b[i]=a[i]; /* copiere vector a in b */
+    }
+  /* numarare */
+  for(j=1;j<n;j++)
+    for(i=0;i<=j-1;i++)
+      if(a[i]<a[j]) c[j]++;
+      else c[i]++;
+  /* rearanjare vector a */
+  for(i=0;i<n;i++)
+    a[c[i]]=b[i];
+}
+
+void sort_inserare_directa(int n,float a[nmax])
+/* SORTARE PRIN INSERARE DIRECTA */
+{
+  int i,j;
+  float x;
+  for(j=1;j<n;j++)
+     {
+	     x=a[j]; i=j-1;
+	     while((i>=0) && (x<a[i]))
+		 {
+		     a[i+1]=a[i];
+		       i=i-1;
+		   }
+             a[i+1]=x;
+	   }
+ }
+
+ void shell_sort(int n,float a[nmax])
+ /* SORTAREA PRIN METODA SHELL */
+ {
+	int i,j,incr;
+	float x;
+	incr=1;
+	while(incr<n)
+		incr=incr*3 + 1;
+	while(incr>=1)
+	  {
+		 incr=incr / 3;
+		 for(i=incr;i<n;i++)
+		       {
+			  x=a[i];j=i;
+			  while(a[j-incr]>x)
+				 {
+					a[j]=a[j-incr];
+					j=j-incr;
+					if(j<incr) break;
+				  };
+			    a[j]=x;
+		         }
+	    }
+ }
+
+ void sort_metoda_bulelor(int n,float a[nmax])
+ /* SORTAREA PRIN INTERSCHIMBARE-METODA BULELOR */
+ {
+  int i,j,gata;
+  float x;
+  j=0;
+  do{
+		gata=1;
+		j=j+1;
+		for(i=0;i<n-j;i++)
+		  if(a[i]>a[i+1]){
+				      gata=0;
+				      x=a[i];a[i]=a[i+1];a[i+1]=x;
+				  };
+        }while(gata==0);
+ }
+
+ void quick(int prim,int ultim,float a[nmax])
+ {
+	int i,j;
+	float pivot,x;
+	i=prim;j=ultim;
+	pivot=a[(prim + ultim) / 2];
+	do{
+		while(a[i]<pivot) i++;
+		while(a[j]>pivot) j--;
+		if(i<=j) {
+			     x=a[i];a[i]=a[j];a[j]=x;
+			      i++;j--;
+			 };
+	       }while(i<=j);
+        if(prim<j) quick(prim,j,a);
+        if(i<ultim) quick(i,ultim,a);
+   }
+
+   void quicksort(int n,float a[nmax])
+   /* SORTAREA  RAPIDA QUICKSORT */
+   {
+          quick(0,n-1,a);
+    }
+
+    void sort_selectie(int n,float a[nmax])
+    /* SORTAREA PRIN SELECTIE */
+    {
+	  int i,j,poz;
+	  float x;
+	  for(i=0;i<n-1;i++)
+	         {
+		  x=a[i];poz=i;
+		  for(j=i+1;j<n;j++)
+		  if(a[j]<x) {
+			          x=a[j];
+			          poz=j;
+			       }
+		  a[poz]=a[i];a[i]=x;
+		}
+         }
+
+      void main(void)
+      {
+          int i,n;
+          float a[nmax],b[nmax];
+          clrscr();
+          printf("\nIntroduceti nr.elementelor n=");
+          scanf("%d",&n);
+          citire_vector(n,a,b);
+          printf("\nVECTORUL NESORTAT\n");
+          afisare(n,a);
+          printf("\nVECTORUL SORTAT PRIN METODA NUMARARII\n");
+          sort_numarare(n,a);
+         afisare(n,a);
+         getch();
+         printf("\nVECTORUL SORTAT PRIN METODA INSERARII DIRECTE\n");
+         reconstituire(n,a,b);   /* a devine vectorul  nesortat initial */
+         sort_inserare_directa(n,a);
+         afisare(n,a);
+         getch();
+         printf("\nVECTORUL SORTAT PRIN METODA SHELL\n");
+         reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+
+          shell_sort(n,a);
+          afisare(n,a);
+          getch();
+          printf("\nVECTORUL SORTAT PRIN METODA BULELOR\n");
+          reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+          sort_metoda_bulelor(n,a);
+          afisare(n,a);
+          getch();
+          printf("\nVECTORUL SORTAT PRIN METODA QUICKSORT\n");
+          reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+          quicksort(n,a);
+          afisare(n,a);
+          getch();
+          printf("\nVECTORUL SORTAT PRIN METODA SELECTIEI DIRECTE\n");
+          reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+          sort_selectie(n,a);
+          afisare(n,a);
+          getch();
+  }

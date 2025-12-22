@@ -1,0 +1,61 @@
+#define NMAX 4
+#define INFINIT 999
+void dijkstra(int n, int sursa, int cost[][4],int distante[],int tata[])
+{int i,j,k,pas;
+int S[NMAX];
+for (i=0; i<n; i++){
+S[i]=0;
+distante[i]=cost[sursa][i];
+if (distante[i]<INFINIT) tata[i]=sursa;
+else tata[i]=0;}
+S[sursa]=1;
+tata[sursa]=0;
+distante[sursa]=0;
+for (pas=1; pas<n; pas++){
+int min=INFINIT;
+for (i=0; i<n; i++){
+if ((distante[i]<min)&&(S[i]==0))
+{
+min=distante[i];
+k=i;}}
+if (min==INFINIT) return;
+else{
+S[k]=1;
+for (j=0; j<n; j++)
+if ((S[j]==0)&&((distante[k]+cost[k][j])<distante[j]))
+{
+distante[j]=distante[k]+cost[k][j];
+tata[j]=k;}}}}
+void afisare_drum(int sursa,int n,int distante[],int tata[])
+{int k;
+for (k=0; k<n; k++)
+{if ((distante[k]!=INFINIT)&&(k!=sursa))
+{int i=k;
+do{
+printf(" %d <-",i);
+i=tata[i];
+}while(i!=0);
+printf(" ... %d - %d: costul minim este: %d",sursa,k,distante[k]);
+}
+else  printf("\nNU exista drum de la %d la %d\n",sursa,k);
+printf("\n");
+}
+}
+void main()
+{int c[4][4]=
+{
+{0,2,3,2},
+{1,0,4,2},
+{1,1,0,3},
+{5,6,1,0}
+};int n=4;
+int sursa=3;
+int i;
+int distante[20],tata[20];
+for (i=0; i<n; i++)
+{distante[i]=0;
+tata[i]=0;
+}
+dijkstra(n,sursa,c,distante,tata);
+afisare_drum(sursa,n,distante,tata);
+}

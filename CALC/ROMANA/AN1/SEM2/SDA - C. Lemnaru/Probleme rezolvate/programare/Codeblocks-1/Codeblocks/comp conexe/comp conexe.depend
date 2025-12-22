@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1302808053 source:c:\documents and settings\anca\desktop\comp conexe\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1302825883 source:c:\codeblocks\comp conexe\main.c
+	<stdio.h>
+	<conio.h>
+

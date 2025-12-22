@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1306596633 source:c:\users\anca\desktop\pb2\main.c
+	<stdio.h>
+	<stdlib.h>
+

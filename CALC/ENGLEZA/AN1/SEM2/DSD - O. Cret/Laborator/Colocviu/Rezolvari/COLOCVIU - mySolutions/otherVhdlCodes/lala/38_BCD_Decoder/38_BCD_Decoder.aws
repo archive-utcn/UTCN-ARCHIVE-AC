@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+bcd_decoder=.\BCD_Decoder\BCD_Decoder.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+bcd_decoder=1

@@ -1,0 +1,5 @@
+MESSAGE "File: D:\HDL & ISE\designshdl\counter_mod_10\counter_mod_10\src\counter_mod_10.vhd" 
+MESSAGE "Compile Entity "counter"" 
+MESSAGE "Entity `counter' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

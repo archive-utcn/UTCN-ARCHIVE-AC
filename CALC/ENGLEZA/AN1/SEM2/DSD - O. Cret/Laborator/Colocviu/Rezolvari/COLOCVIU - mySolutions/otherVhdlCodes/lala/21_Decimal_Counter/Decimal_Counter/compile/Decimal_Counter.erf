@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\21_Decimal_Counter\Decimal_Counter\src\counter.vhd" 
+MESSAGE "Compile Entity "counter"" 
+MESSAGE "Entity `counter' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

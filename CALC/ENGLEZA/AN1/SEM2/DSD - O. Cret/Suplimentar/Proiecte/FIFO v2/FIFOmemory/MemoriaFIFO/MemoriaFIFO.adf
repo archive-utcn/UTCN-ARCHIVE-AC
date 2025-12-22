@@ -1,0 +1,72 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=MemoriaFIFO
+
+[Library]
+MemoriaFIFO=.\MemoriaFIFO\MemoriaFIFO.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+MemoriaFIFO=.
+Active_lib=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=bist_d|arh_bist_D|0 control|arh_control|0 d_flipflop|d|0 divizor_de_frecventa|divizor|0 fifo|arh_fifo|0 mux2to1|arh_mux|0 pointers_ram|arh_pointers_RAM|0 ram|arh_RAM|0 status|arh_status|0 up_counter|ar_up_counter|0 up_down_counter|ar_up_down_counter|0 
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/Num_reversibil.vhd=-1
+/Bist_D.vhd=-1
+/Num.vhd=-1
+/Mux_2la1.vhd=-1
+/FIFO.vhd=-1
+/Divizor_frecventa.vhd=-1
+/Control.vhd=-1
+/Status.vhd=-1
+/Pointers_RAM.vhd=-1
+/RAM.vhd=-1
+/BCD.vhd=-1
+
+[Files.Data]
+.\src\Num_reversibil.vhd=VHDL Source Code
+.\src\Bist_D.vhd=VHDL Source Code
+.\src\Num.vhd=VHDL Source Code
+.\src\Mux_2la1.vhd=VHDL Source Code
+.\src\FIFO.vhd=VHDL Source Code
+.\src\Divizor_frecventa.vhd=VHDL Source Code
+.\src\Control.vhd=VHDL Source Code
+.\src\Status.vhd=VHDL Source Code
+.\src\Pointers_RAM.vhd=VHDL Source Code
+
+.\src\RAM.vhd=VHDL Source Code
+.\src\BCD.vhd=VHDL Source Code

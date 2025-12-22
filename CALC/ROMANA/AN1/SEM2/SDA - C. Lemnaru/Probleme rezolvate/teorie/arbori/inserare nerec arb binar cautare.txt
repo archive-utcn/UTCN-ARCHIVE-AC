@@ -1,0 +1,41 @@
+void inserare_nerecursivã (int key)
+{
+TIP_NOD *p, *q;
+int n;
+/* construcþie nod p*/
+n=sizeof (TIP_NOD);
+p=(TIP_NOD*)malloc(n);
+p->cheie=key;
+/* introducere informaþie utilã în nodul p */
+p->stg=0; p->dr=0; /* este nod funzã */
+if (rad==0) { /* arborele este vid */
+rad=p;
+return;
+}
+/* arborele nefiind vid se cautã nodul tatã pentru nodul p */
+q=rad; /* rad este rãdãcina arborelui variabilã globalã */
+for ( ; ; )
+{
+if (key<q->cheie)
+{ /* cãutarea se face în subarborele stâng */
+if (q->stg==0) { /* inserare */
+q->stg=p;
+return;
+}
+else q=q->stg;
+}
+else if (key>q->cheie)
+{ /* cãutarea se face în subarborele drept */
+if (q->dr==0) { /* inserare */
+q->dr=p;
+return;
+}
+else q=q->dr;
+}
+        else {  /* cheie dublã */
+         /* scriere mesaj */
+         free (p);
+         return;
+         }
+}
+   }

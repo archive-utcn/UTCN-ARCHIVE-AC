@@ -1,0 +1,165 @@
+entity deplasare is
+	port(clk,en,clr,back:in bit; 
+	     Sin:in bit_vector(3 downto 0); 
+	     Qa,Qb,Qc,Qd:inout bit_vector(3 downto 0));
+end deplasare;
+architecture fct_deplasare of deplasare is
+begin
+	process(en,clk,clr,Sin)
+	begin
+		if en='1' then
+			if clk='1' and clk'event then 
+			 if back='0' then  
+				 if Qd="0000" then Qa<=Sin; Qb<=Qa; Qc<=Qb; Qd<=Qc;
+				 elsif Qd/="0000" then Qa<=Qa; Qb<=Qb; Qc<=Qc; Qd<=Qd;
+			     end if;		 
+			 elsif back='1' then Qa<=Qb; Qb<=Qc; Qc<=Qd; Qd<="0000"; end if;	 
+			end if; 
+		end if; 
+		if clr='1' then  Qa<="0000"; Qb<="0000"; Qc<="0000"; Qd<="0000";end if;
+	end process;
+end fct_deplasare;	
+----------------------------------------------------------------------------------------------
+                                    --.,.,.,..,..,--
+entity but_fpga is
+	port(sw3,sw2,sw1,sw0,sel1,sel0:in bit;
+	     iesire:out bit_vector(3 downto 0);
+		 ok,bk,da,nu,y:out bit);
+end but_fpga;
+architecture fct_but_fpga of but_fpga is
+begin
+	process(sw3,sw2,sw1,sw0,sel1,sel0)
+	begin
+		if sel1='0' and sel0='0' then
+			if sw3='1' then iesire<="0000"; y<='1';
+			    elsif sw2='1' then iesire<="0001"; y<='1';
+			    elsif sw1='1' then iesire<="0010"; y<='1';
+				elsif sw0='1' then iesire<="0011"; y<='1';
+				else iesire<="0000"; y<='0';	
+			end if;
+		elsif sel1='0' and sel0='1' then 
+			if sw3='1' then iesire<="0100"; y<='1';
+			    elsif sw2='1' then iesire<="0101"; y<='1';
+			    elsif sw1='1' then iesire<="0110"; y<='1';
+				elsif sw0='1' then iesire<="0111"; y<='1';
+			    else iesire<="0000"; y<='0';
+			end if;
+		elsif sel1='1' and sel0='0' then 
+			if sw3='1' then iesire<="1000"; y<='1';
+			    elsif sw2='1' then iesire<="1001"; y<='1';
+			    elsif sw1='1' then ok<='1'; y<='0';
+				elsif sw0='1' then bk<='1'; y<='0';
+				else iesire<="0000"; y<='0'; ok<='0'; bk<='0';
+			end if;
+		elsif sel1='1' and sel0='1' then 
+			if sw3='1' then da<='1'; y<='0';
+			    elsif sw2='1' then nu<='1'; y<='0';
+				else iesire<="0000"; y<='0'; da<='0'; nu<='0';
+			end if;
+		else y<='0'; iesire<="0000";
+		end if;
+	end process;
+end architecture;
+---------------------------------------------------------------------------------------- 
+								   --.,,.,.,.,,.,--
+entity dec_7seg is
+	port(en:in bit; intrare:in bit_vector(3 downto 0); a,b,c,d,e,f,g:out bit);
+end entity;
+architecture fct_dec_7seg of dec_7seg is
+begin
+	process(intrare,en)
+	begin
+		if en='1' then
+			if intrare="0000" then a<='1'; b<='1'; c<='1'; d<='1'; e<='1'; f<='1'; g<='0';	
+			    elsif intrare="0001" then a<='0'; b<='1'; c<='1'; d<='0'; e<='0'; f<='0'; g<='0';
+				elsif intrare="0010" then a<='1'; b<='1'; c<='0'; d<='1'; e<='1'; f<='0'; g<='1';
+				elsif intrare="0011" then a<='1'; b<='1'; c<='1'; d<='1'; e<='0'; f<='0'; g<='1';
+				elsif intrare="0100" then a<='0'; b<='1'; c<='1'; d<='0'; e<='0'; f<='1'; g<='1';
+				elsif intrare="0101" then a<='1'; b<='0'; c<='1'; d<='1'; e<='0'; f<='1'; g<='1';
+				elsif intrare="0110" then a<='1'; b<='0'; c<='1'; d<='1'; e<='1'; f<='1'; g<='1';
+				elsif intrare="0111" then a<='1'; b<='1'; c<='1'; d<='0'; e<='0'; f<='0'; g<='0';
+				elsif intrare="1000" then a<='1'; b<='1'; c<='1'; d<='1'; e<='1'; f<='1'; g<='1';
+				elsif intrare="1001" then a<='1'; b<='1'; c<='1'; d<='1'; e<='0'; f<='1'; g<='1';
+				elsif intrare="1010" then a<='1'; b<='0'; c<='0'; d<='1'; e<='1'; f<='1'; g<='1';
+				else a<='0'; b<='0'; c<='0'; d<='0'; e<='0'; f<='0'; g<='0';	
+			end if;
+		elsif en='0' then a<='0'; b<='0'; c<='0'; d<='0'; e<='0'; f<='0'; g<='0';
+		end if;	
+	end process;
+end architecture;	
+---------------------------------------------------------------------------------------------------- 
+										 --,.,.,.,.,.,.--
+entity deplasare_bit is
+	port(enable,clk,reset,bk:in bit;
+	qa,qb,qc,qd:inout bit);
+end entity;
+architecture fct_deplasare_bit of deplasare_bit is
+begin
+	process(enable,clk,reset,bk,qa,qb,qc,qd)
+	begin
+		if enable='1' then
+			if clk='1' and clk'event then
+			   if bk='0' then	
+				  qa<='1'; qb<=qa; qc<=qb; qd<=qc;
+			   elsif bk='1' then
+				  qd<='0'; qc<=qd; qb<=qc; qa<=qb;
+			   end if;
+			end if;
+		end if;
+		if reset='1' then qa<='0'; qb<='0'; qc<='0'; qd<='0';
+		end if;
+	end process;
+end architecture;	
+----------------------------------><><><><><><<><<><>-----------------------------------------------
+
+entity tastaafisa is
+	port(enable,reset,sel1,sel0,sw3,sw2,sw1,sw0:in bit;
+	a3,b3,c3,d3,e3,f3,g3,a2,b2,c2,d2,e2,f2,g2,a1,b1,c1,d1,e1,f1,g1,a0,b0,c0,d0,e0,f0,g0:out bit;
+	Q:out bit_vector(15 downto 0));
+end entity;
+architecture fct_tastaafisa of tastaafisa is
+signal nr,qa,qb,qc,qd:bit_vector(3 downto 0);
+signal a,ok,da,bk,nu,y,en3,en2,en1,en0:bit;
+signal w:bit_vector(15 downto 0);
+      component dec_7seg 
+	     port(en:in bit; intrare:in bit_vector(3 downto 0); a,b,c,d,e,f,g:out bit);
+	  end component;
+	  -->>
+	  component	 but_fpga 
+	     port(sw3,sw2,sw1,sw0,sel1,sel0:in bit;
+	          iesire:out bit_vector(3 downto 0);
+		      ok,bk,da,nu,y:out bit); 
+	  end component;
+	  -->>
+	  component	deplasare 
+	     port(clk,en,clr,back:in bit; 
+	          Sin:in bit_vector(3 downto 0); 
+	          Qa,Qb,Qc,Qd:inout bit_vector(3 downto 0));
+	  end component;
+	  -->>
+	  component	deplasare_bit 
+	     port(enable,clk,reset,bk:in bit;
+		      qa,qb,qc,qd:inout bit);
+	  end component;	 
+begin
+	c_1: but_fpga port map(sw3,sw2,sw1,sw0,sel1,sel0,nr,ok,bk,da,nu,y);
+	c_2: deplasare port map(a,enable,reset,bk,nr,qa,qb,qc,qd);
+	c_3: dec_7seg port map(en3,qd,a3,b3,c3,d3,e3,f3,g3);
+	c4: dec_7seg port map(en2,qc,a2,b2,c2,d2,e2,f2,g2);
+	c5: dec_7seg port map(en1,qb,a1,b1,c1,d1,e1,f1,g1);
+	c6: dec_7seg port map(en0,qa,a0,b0,c0,d0,e0,f0,g0);
+	c7: deplasare_bit port map(enable,a,reset,bk,en0,en1,en2,en3);
+	w<=qd&qc&qb&qa;
+	Q<=w;
+	process(w,y,bk)
+	begin
+	   if w="0000000000000000" and nr="0000" then a<='0';
+		else  a<=y or bk;
+	   end if;
+	 end process;
+end architecture; 
+	
+	
+	
+	
+	

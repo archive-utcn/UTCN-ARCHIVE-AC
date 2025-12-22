@@ -1,0 +1,2812 @@
+Model {
+  Name			  "band_pass_filter_cosim"
+  Version		  6.0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.66"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Sep 24 08:40:37 2004"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "arekg"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Sep 27 09:34:50 2004"
+  ModelVersionFormat	  "1.%<AutoIncrement:66>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.0.4"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.0.4"
+	  StartTime		  "0.0"
+	  StopTime		  "0.35"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.0.4"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  ConditionalExecOptimization "on_for_testing"
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.0.4"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.0.4"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.0.4"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      ComplexToMagnitudeAngle
+      Output		      "Magnitude and angle"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      PulseType		      "Sample based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Period		      "2"
+      PulseWidth	      "1"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RealImagToComplex
+      Input		      "Real and imag"
+      ConstantPart	      "0"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      Step
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "band_pass_filter_cosim"
+    Location		    [110, 195, 1156, 846]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "[1.000000, 1.000000, 0.874510]"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "1st_Stage_FFT"
+      Ports		      [2, 2]
+      Position		      [545, 41, 645, 99]
+      BackgroundColor	      "lightBlue"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"1st_Stage_FFT"
+	Location		[21, 94, 754, 557]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Re_i"
+	  Position		  [40, 223, 70, 237]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Im_i"
+	  Position		  [40, 273, 70, 287]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "1st_Stage_FFT_HDL"
+	  Ports			  [5, 2]
+	  Position		  [345, 50, 490, 310]
+	  BackgroundColor	  "lightBlue"
+	  SourceBlock		  "aldec_ahdl/HDL Block"
+	  SourceType		  "Active-HDL Block"
+	  module_m		  "top_fft_top_fft"
+	  b_type		  "0"
+	  sample		  "1/22000"
+	  mode			  "Enabled"
+	  dbg			  "off"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [265, 65, 295, 95]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Signal Builder"
+	  Tag			  "STV Subsys"
+	  Ports			  [0, 2]
+	  Position		  [105, 104, 200, 206]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  CopyFcn		  "sigbuilder_block('copy');"
+	  DeleteFcn		  "sigbuilder_block('delete');"
+	  LoadFcn		  "sigbuilder_block('load');"
+	  ModelCloseFcn		  "sigbuilder_block('modelClose');"
+	  PreSaveFcn		  "sigbuilder_block('preSave');"
+	  StartFcn		  "sigbuilder_block('start');"
+	  StopFcn		  "sigbuilder_block('stop');"
+	  NameChangeFcn		  "sigbuilder_block('namechange');"
+	  ClipboardFcn		  "sigbuilder_block('clipboard');"
+	  OpenFcn		  "sigbuilder_block('open',[102 45 572.25 398."
+"25 ]);"
+	  CloseFcn		  "sigbuilder_block('close');"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskType		  "Sigbuilder block"
+	  MaskDescription	  "Sigbuilder GUI"
+	  MaskInitialization	  "if ~strcmp(get_param(bdroot(gcb),'Simulatio"
+"nStatus'),'stopped') tuvar = sigbuilder_block('maskInit'); end"
+	  MaskDisplay		  "plot(0,0,100,100,[10,10,40,40,10],[80,20,20"
+",80,80],[40,10],[50,50], [40,27,10],[65,72,56],[40,25,25,10],[28,28,43,43]);"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "port"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Signal Builder"
+	    Location		    [480, 85, 980, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Tag		      "STV Demux"
+	      Ports		      [1, 2]
+	      Position		      [150, 58, 160, 642]
+	      Outputs		      "2"
+	    }
+	    Block {
+	      BlockType		      FromWorkspace
+	      Name		      "FromWs"
+	      Tag		      "STV FromWs"
+	      Position		      [30, 300, 115, 350]
+	      VariableName	      "tuvar"
+	      SampleTime	      "1.1364e-005"
+	      OutputAfterFinalValue   "Holding final value"
+	      SigBuilderData	      "DataTag0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "reset"
+	      Tag		      "STV Outport"
+	      Position		      [280, 30, 300, 40]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "start"
+	      Tag		      "STV Outport"
+	      Position		      [280, 60, 300, 70]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "FromWs"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "reset"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "start"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Re_o"
+	  Position		  [655, 108, 685, 122]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Im_o"
+	  Position		  [655, 238, 685, 252]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Re_i"
+	  SrcPort		  1
+	  DstBlock		  "1st_Stage_FFT_HDL"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Im_i"
+	  SrcPort		  1
+	  DstBlock		  "1st_Stage_FFT_HDL"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "1st_Stage_FFT_HDL"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Builder"
+	  SrcPort		  2
+	  DstBlock		  "1st_Stage_FFT_HDL"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Signal Builder"
+	  SrcPort		  1
+	  DstBlock		  "1st_Stage_FFT_HDL"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "1st_Stage_FFT_HDL"
+	  SrcPort		  1
+	  DstBlock		  "Re_o"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1st_Stage_FFT_HDL"
+	  SrcPort		  2
+	  DstBlock		  "Im_o"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [278, 467]
+	}
+	Annotation {
+	  Name			  "VHDL"
+	  Position		  [419, 42]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.874510]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "1st_stage_IIR"
+      Ports		      [1, 1]
+      Position		      [120, 208, 195, 272]
+      BackgroundColor	      "green"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"1st_stage_IIR"
+	Location		[125, 105, 798, 505]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 73, 50, 87]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "1st_stage_IIR_HDL"
+	  Ports			  [8, 1]
+	  Position		  [445, 30, 520, 280]
+	  BackgroundColor	  "green"
+	  SourceBlock		  "aldec_ahdl/HDL Block"
+	  SourceType		  "Active-HDL Block"
+	  module_m		  "biquad"
+	  b_type		  "0"
+	  sample		  "1/44000"
+	  mode			  "Enabled"
+	  dbg			  "off"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [85, 65, 140, 95]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Gain			  "0.07"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "IIR_1st_io"
+	  Ports			  [2]
+	  Position		  [235, 306, 265, 339]
+	  BackgroundColor	  "cyan"
+	  Location		  [121, 246, 1137, 893]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "Input"
+	    axes2		    "Output"
+	  }
+	  TimeRange		  "0.006433823529411766"
+	  YMin			  "-0.08~-1"
+	  YMax			  "0.08~1"
+	  SaveName		  "ScopeData2"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step1"
+	  Position		  [220, 35, 250, 65]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Time			  "1/22000"
+	  SampleTime		  "1/22000"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "a11_2"
+	  Position		  [190, 125, 280, 155]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "1.4139891928/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "a12_2"
+	  Position		  [300, 155, 390, 185]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "-0.8662088054/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "b10_2"
+	  Position		  [190, 185, 280, 215]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "1/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "b11_2"
+	  Position		  [300, 215, 390, 245]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "b12_2"
+	  Position		  [190, 246, 280, 274]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "-1/2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "yout"
+	  Position		  [590, 148, 620, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    Points		    [0, 235]
+	    DstBlock		    "IIR_1st_io"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "1st_stage_IIR_HDL"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "b12_2"
+	  SrcPort		  1
+	  DstBlock		  "1st_stage_IIR_HDL"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "b10_2"
+	  SrcPort		  1
+	  DstBlock		  "1st_stage_IIR_HDL"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "a12_2"
+	  SrcPort		  1
+	  DstBlock		  "1st_stage_IIR_HDL"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "a11_2"
+	  SrcPort		  1
+	  DstBlock		  "1st_stage_IIR_HDL"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "b11_2"
+	  SrcPort		  1
+	  DstBlock		  "1st_stage_IIR_HDL"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Step1"
+	  SrcPort		  1
+	  Points		  [0, 0; 160, 0]
+	  Branch {
+	    DstBlock		    "1st_stage_IIR_HDL"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 60]
+	    DstBlock		    "1st_stage_IIR_HDL"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "1st_stage_IIR_HDL"
+	  SrcPort		  1
+	  Points		  [0, 0; 35, 0]
+	  Branch {
+	    DstBlock		    "yout"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 205; -385, 0; 0, -30]
+	    DstBlock		    "IIR_1st_io"
+	    DstPort		    2
+	  }
+	}
+	Annotation {
+	  Position		  [239, 85]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	}
+	Annotation {
+	  Name			  "Verilog"
+	  Position		  [479, 22]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.874510]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "2nd_Stage_FFT"
+      Ports		      [2, 2]
+      Position		      [545, 226, 645, 284]
+      BackgroundColor	      "lightBlue"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"2nd_Stage_FFT"
+	Location		[21, 94, 963, 583]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Re_i"
+	  Position		  [40, 223, 70, 237]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Im_i"
+	  Position		  [40, 273, 70, 287]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "2nd_Stage_FFT_HDL"
+	  Ports			  [5, 2]
+	  Position		  [345, 50, 490, 310]
+	  BackgroundColor	  "lightBlue"
+	  SourceBlock		  "aldec_ahdl/HDL Block"
+	  SourceType		  "Active-HDL Block"
+	  module_m		  "top_fft_top_fft"
+	  b_type		  "0"
+	  sample		  "1/22000"
+	  mode			  "Enabled"
+	  dbg			  "off"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [265, 65, 295, 95]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Signal Builder"
+	  Tag			  "STV Subsys"
+	  Ports			  [0, 2]
+	  Position		  [105, 104, 200, 206]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  CopyFcn		  "sigbuilder_block('copy');"
+	  DeleteFcn		  "sigbuilder_block('delete');"
+	  LoadFcn		  "sigbuilder_block('load');"
+	  ModelCloseFcn		  "sigbuilder_block('modelClose');"
+	  PreSaveFcn		  "sigbuilder_block('preSave');"
+	  StartFcn		  "sigbuilder_block('start');"
+	  StopFcn		  "sigbuilder_block('stop');"
+	  NameChangeFcn		  "sigbuilder_block('namechange');"
+	  ClipboardFcn		  "sigbuilder_block('clipboard');"
+	  OpenFcn		  "sigbuilder_block('open',[102 45 572.25 398."
+"25 ]);"
+	  CloseFcn		  "sigbuilder_block('close');"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskType		  "Sigbuilder block"
+	  MaskDescription	  "Sigbuilder GUI"
+	  MaskInitialization	  "if ~strcmp(get_param(bdroot(gcb),'Simulatio"
+"nStatus'),'stopped') tuvar = sigbuilder_block('maskInit'); end"
+	  MaskDisplay		  "plot(0,0,100,100,[10,10,40,40,10],[80,20,20"
+",80,80],[40,10],[50,50], [40,27,10],[65,72,56],[40,25,25,10],[28,28,43,43]);"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "port"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Signal Builder"
+	    Location		    [480, 85, 980, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Tag		      "STV Demux"
+	      Ports		      [1, 2]
+	      Position		      [150, 58, 160, 642]
+	      Outputs		      "2"
+	    }
+	    Block {
+	      BlockType		      FromWorkspace
+	      Name		      "FromWs"
+	      Tag		      "STV FromWs"
+	      Position		      [30, 300, 115, 350]
+	      VariableName	      "tuvar"
+	      SampleTime	      "1.1364e-005"
+	      OutputAfterFinalValue   "Holding final value"
+	      SigBuilderData	      "DataTag1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "reset"
+	      Tag		      "STV Outport"
+	      Position		      [280, 30, 300, 40]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "start"
+	      Tag		      "STV Outport"
+	      Position		      [280, 60, 300, 70]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "FromWs"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "reset"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "start"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Re_o"
+	  Position		  [655, 108, 685, 122]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Im_o"
+	  Position		  [655, 238, 685, 252]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Re_i"
+	  SrcPort		  1
+	  DstBlock		  "2nd_Stage_FFT_HDL"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Im_i"
+	  SrcPort		  1
+	  DstBlock		  "2nd_Stage_FFT_HDL"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "2nd_Stage_FFT_HDL"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Builder"
+	  SrcPort		  2
+	  DstBlock		  "2nd_Stage_FFT_HDL"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Signal Builder"
+	  SrcPort		  1
+	  DstBlock		  "2nd_Stage_FFT_HDL"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "2nd_Stage_FFT_HDL"
+	  SrcPort		  1
+	  DstBlock		  "Re_o"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "2nd_Stage_FFT_HDL"
+	  SrcPort		  2
+	  DstBlock		  "Im_o"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [278, 467]
+	}
+	Annotation {
+	  Name			  "VHDL"
+	  Position		  [419, 42]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.874510]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "2nd_stage_IIR"
+      Ports		      [1, 1]
+      Position		      [245, 208, 320, 272]
+      BackgroundColor	      "green"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"2nd_stage_IIR"
+	Location		[2, 75, 675, 495]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 73, 50, 87]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "2nd_stage_IIR_HDL"
+	  Ports			  [8, 1]
+	  Position		  [445, 30, 520, 280]
+	  BackgroundColor	  "green"
+	  SourceBlock		  "aldec_ahdl/HDL Block"
+	  SourceType		  "Active-HDL Block"
+	  module_m		  "biquad"
+	  b_type		  "0"
+	  sample		  "1/44000"
+	  mode			  "Enabled"
+	  dbg			  "off"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [85, 65, 140, 95]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Gain			  "0.05"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "IIR_2nd_io"
+	  Ports			  [2]
+	  Position		  [235, 306, 265, 339]
+	  BackgroundColor	  "cyan"
+	  Location		  [121, 246, 1137, 893]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "Input"
+	    axes2		    "Output"
+	  }
+	  TimeRange		  "0.006433823529411766"
+	  YMin			  "-0.08~-1"
+	  YMax			  "0.08~1"
+	  SaveName		  "ScopeData7"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step1"
+	  Position		  [220, 35, 250, 65]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Time			  "1/22000"
+	  SampleTime		  "1/22000"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "a11_2"
+	  Position		  [190, 125, 280, 155]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "1.4139891928/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "a12_2"
+	  Position		  [300, 155, 390, 185]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "-0.8662088054/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "b10_2"
+	  Position		  [190, 185, 280, 215]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "1/2"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "b11_2"
+	  Position		  [300, 215, 390, 245]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "b12_2"
+	  Position		  [190, 246, 280, 274]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "-1/2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "yout"
+	  Position		  [590, 148, 620, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "2nd_stage_IIR_HDL"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 235]
+	    DstBlock		    "IIR_2nd_io"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b12_2"
+	  SrcPort		  1
+	  DstBlock		  "2nd_stage_IIR_HDL"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "b10_2"
+	  SrcPort		  1
+	  DstBlock		  "2nd_stage_IIR_HDL"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "a12_2"
+	  SrcPort		  1
+	  DstBlock		  "2nd_stage_IIR_HDL"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "a11_2"
+	  SrcPort		  1
+	  DstBlock		  "2nd_stage_IIR_HDL"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "b11_2"
+	  SrcPort		  1
+	  DstBlock		  "2nd_stage_IIR_HDL"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Step1"
+	  SrcPort		  1
+	  Points		  [0, 0; 160, 0]
+	  Branch {
+	    DstBlock		    "2nd_stage_IIR_HDL"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 60]
+	    DstBlock		    "2nd_stage_IIR_HDL"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "2nd_stage_IIR_HDL"
+	  SrcPort		  1
+	  Points		  [0, 0; 35, 0]
+	  Branch {
+	    DstBlock		    "yout"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 205; -385, 0; 0, -30]
+	    DstBlock		    "IIR_2nd_io"
+	    DstPort		    2
+	  }
+	}
+	Annotation {
+	  Position		  [239, 85]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	}
+	Annotation {
+	  Name			  "Verilog"
+	  Position		  [479, 22]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.874510]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Active-HDL Co-Sim"
+      Ports		      []
+      Position		      [75, 492, 176, 573]
+      SourceBlock	      "aldec_ahdl/Active-HDL Co-Sim"
+      SourceType	      "Active-HDL Simulation Manager"
+      b_type		      "0"
+      sys_period	      "1/88000"
+      dbg		      off
+      quit_en		      off
+      gen_tb		      off
+      tb_fn		      "mlab_post_tb.log"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [15, 225, 45, 255]
+      BackgroundColor	      "[1.000000, 0.772549, 0.541176]"
+      Value		      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [470, 70, 500, 100]
+      BackgroundColor	      "[1.000000, 0.772549, 0.541176]"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain1"
+      Position		      [385, 408, 450, 442]
+      BackgroundColor	      "[1.000000, 0.772549, 0.541176]"
+      Gain		      "5000"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain2"
+      Position		      [385, 223, 450, 257]
+      BackgroundColor	      "[1.000000, 0.772549, 0.541176]"
+      Gain		      "7000"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain3"
+      Position		      [385, 38, 450, 72]
+      BackgroundColor	      "[1.000000, 0.772549, 0.541176]"
+      Gain		      "10000"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "IIR_1st_MagPh"
+      Ports		      [2]
+      Position		      [955, 40, 1000, 100]
+      BackgroundColor	      "cyan"
+      Location		      [6, 53, 1022, 710]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"Magnitude"
+	axes2			"Phase"
+      }
+      TimeRange		      "0.35"
+      YMin		      "0~-4"
+      YMax		      "80000~4"
+      SaveName		      "ScopeData8"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "IIR_1st_sp_ReIm"
+      Ports		      [2]
+      Position		      [700, 121, 730, 154]
+      BackgroundColor	      "cyan"
+      Location		      [106, 266, 1122, 923]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"Re"
+	axes2			"Im"
+      }
+      TimeRange		      "0.35"
+      YMin		      "-80000~-15000"
+      YMax		      "40000~15000"
+      SaveName		      "ScopeData9"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "IIR_2nd_MagPh"
+      Ports		      [2]
+      Position		      [955, 225, 1000, 285]
+      BackgroundColor	      "cyan"
+      Location		      [6, 53, 1022, 710]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"Magnitude"
+	axes2			"Phase"
+      }
+      TimeRange		      "0.35"
+      YMin		      "0~-4"
+      YMax		      "90000~4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "IIR_2nd_sp_ReIm"
+      Ports		      [2]
+      Position		      [700, 306, 730, 339]
+      BackgroundColor	      "cyan"
+      Location		      [106, 266, 1122, 923]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"Re"
+	axes2			"Im"
+      }
+      TimeRange		      "0.35"
+      YMin		      "-40000~-25000"
+      YMax		      "80000~25000"
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "IIR_outputs"
+      Ports		      [3]
+      Position		      [385, 546, 420, 604]
+      BackgroundColor	      "cyan"
+      Location		      [5, 47, 1285, 1000]
+      Open		      off
+      NumInputPorts	      "3"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"1st Stage Output"
+	axes2			"2nd Stage Output"
+	axes3			"Input"
+      }
+      TimeRange		      "0.004173519736842107"
+      YMin		      "-1~-1~-1"
+      YMax		      "1~1~1"
+      SaveName		      "ScopeData6"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      Name		      "Pulse\nGenerator"
+      Ports		      [0, 1]
+      Position		      [15, 128, 60, 162]
+      BackgroundColor	      "[1.000000, 0.772549, 0.541176]"
+      PulseType		      "Time based"
+      Amplitude		      "2"
+      Period		      "1/1000"
+      PulseWidth	      "50"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [65, 230, 85, 250]
+      BackgroundColor	      "[1.000000, 0.772549, 0.541176]"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "mag_comp"
+      Ports		      [3]
+      Position		      [955, 550, 1000, 610]
+      BackgroundColor	      "cyan"
+      Location		      [5, 47, 1285, 1000]
+      Open		      off
+      NumInputPorts	      "3"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"IIR 1st Stage Magnitude"
+	axes2			"IIR 2st Stage Magnitude"
+	axes3			"Pure Magnitude"
+      }
+      TimeRange		      "0.35"
+      YMin		      "0~0~0"
+      YMax		      "80000~90000~70000"
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "nyq2spec_1"
+      Ports		      [2, 2]
+      Position		      [750, 410, 835, 470]
+      BackgroundColor	      "[1.000000, 0.792157, 0.584314]"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"nyq2spec_1"
+	Location		[308, 193, 806, 493]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Re"
+	  Position		  [110, 103, 140, 117]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Im"
+	  Position		  [110, 168, 140, 182]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  ComplexToMagnitudeAngle
+	  Name			  "Complex to\nMagnitude-Angle"
+	  Ports			  [1, 2]
+	  Position		  [305, 133, 335, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Output		  "Magnitude and angle"
+	}
+	Block {
+	  BlockType		  RealImagToComplex
+	  Name			  "Real-Imag to\nComplex"
+	  Ports			  [2, 1]
+	  Position		  [205, 133, 235, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Input			  "Real and imag"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "module"
+	  Position		  [405, 103, 435, 117]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "phase"
+	  Position		  [405, 168, 435, 182]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Re"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 30]
+	  DstBlock		  "Real-Imag to\nComplex"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Real-Imag to\nComplex"
+	  SrcPort		  1
+	  DstBlock		  "Complex to\nMagnitude-Angle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Complex to\nMagnitude-Angle"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -30]
+	  DstBlock		  "module"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Im"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -20]
+	  DstBlock		  "Real-Imag to\nComplex"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Complex to\nMagnitude-Angle"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, 20]
+	  DstBlock		  "phase"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "nyq2spec_2"
+      Ports		      [2, 2]
+      Position		      [750, 225, 835, 285]
+      BackgroundColor	      "[1.000000, 0.792157, 0.584314]"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"nyq2spec_2"
+	Location		[308, 193, 806, 493]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Re"
+	  Position		  [110, 103, 140, 117]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Im"
+	  Position		  [110, 168, 140, 182]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  ComplexToMagnitudeAngle
+	  Name			  "Complex to\nMagnitude-Angle"
+	  Ports			  [1, 2]
+	  Position		  [305, 133, 335, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Output		  "Magnitude and angle"
+	}
+	Block {
+	  BlockType		  RealImagToComplex
+	  Name			  "Real-Imag to\nComplex"
+	  Ports			  [2, 1]
+	  Position		  [205, 133, 235, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Input			  "Real and imag"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "module"
+	  Position		  [405, 103, 435, 117]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "phase"
+	  Position		  [405, 168, 435, 182]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Re"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 30]
+	  DstBlock		  "Real-Imag to\nComplex"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Real-Imag to\nComplex"
+	  SrcPort		  1
+	  DstBlock		  "Complex to\nMagnitude-Angle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Complex to\nMagnitude-Angle"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -30]
+	  DstBlock		  "module"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Im"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -20]
+	  DstBlock		  "Real-Imag to\nComplex"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Complex to\nMagnitude-Angle"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, 20]
+	  DstBlock		  "phase"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "nyq2spec_3"
+      Ports		      [2, 2]
+      Position		      [750, 40, 835, 100]
+      BackgroundColor	      "[1.000000, 0.792157, 0.584314]"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"nyq2spec_3"
+	Location		[308, 193, 806, 493]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Re"
+	  Position		  [110, 103, 140, 117]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Im"
+	  Position		  [110, 168, 140, 182]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  ComplexToMagnitudeAngle
+	  Name			  "Complex to\nMagnitude-Angle"
+	  Ports			  [1, 2]
+	  Position		  [305, 133, 335, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Output		  "Magnitude and angle"
+	}
+	Block {
+	  BlockType		  RealImagToComplex
+	  Name			  "Real-Imag to\nComplex"
+	  Ports			  [2, 1]
+	  Position		  [205, 133, 235, 162]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Input			  "Real and imag"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "module"
+	  Position		  [405, 103, 435, 117]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "phase"
+	  Position		  [405, 168, 435, 182]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Re"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 30]
+	  DstBlock		  "Real-Imag to\nComplex"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Real-Imag to\nComplex"
+	  SrcPort		  1
+	  DstBlock		  "Complex to\nMagnitude-Angle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Complex to\nMagnitude-Angle"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -30]
+	  DstBlock		  "module"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Im"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -20]
+	  DstBlock		  "Real-Imag to\nComplex"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Complex to\nMagnitude-Angle"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, 20]
+	  DstBlock		  "phase"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "pure_FFT"
+      Ports		      [2, 2]
+      Position		      [545, 411, 645, 469]
+      BackgroundColor	      "lightBlue"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"pure_FFT"
+	Location		[2, 82, 944, 571]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"[1.000000, 1.000000, 0.874510]"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Re_i"
+	  Position		  [40, 223, 70, 237]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Im_i"
+	  Position		  [40, 273, 70, 287]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [265, 65, 295, 95]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Pure_FFT_HDL"
+	  Ports			  [5, 2]
+	  Position		  [345, 50, 490, 310]
+	  BackgroundColor	  "lightBlue"
+	  SourceBlock		  "aldec_ahdl/HDL Block"
+	  SourceType		  "Active-HDL Block"
+	  module_m		  "top_fft_top_fft"
+	  b_type		  "0"
+	  sample		  "1/22000"
+	  mode			  "Enabled"
+	  dbg			  "off"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Signal Builder"
+	  Tag			  "STV Subsys"
+	  Ports			  [0, 2]
+	  Position		  [105, 104, 200, 206]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  CopyFcn		  "sigbuilder_block('copy');"
+	  DeleteFcn		  "sigbuilder_block('delete');"
+	  LoadFcn		  "sigbuilder_block('load');"
+	  ModelCloseFcn		  "sigbuilder_block('modelClose');"
+	  PreSaveFcn		  "sigbuilder_block('preSave');"
+	  StartFcn		  "sigbuilder_block('start');"
+	  StopFcn		  "sigbuilder_block('stop');"
+	  NameChangeFcn		  "sigbuilder_block('namechange');"
+	  ClipboardFcn		  "sigbuilder_block('clipboard');"
+	  OpenFcn		  "sigbuilder_block('open',[102 45 572.25 398."
+"25 ]);"
+	  CloseFcn		  "sigbuilder_block('close');"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskType		  "Sigbuilder block"
+	  MaskDescription	  "Sigbuilder GUI"
+	  MaskInitialization	  "if ~strcmp(get_param(bdroot(gcb),'Simulatio"
+"nStatus'),'stopped') tuvar = sigbuilder_block('maskInit'); end"
+	  MaskDisplay		  "plot(0,0,100,100,[10,10,40,40,10],[80,20,20"
+",80,80],[40,10],[50,50], [40,27,10],[65,72,56],[40,25,25,10],[28,28,43,43]);"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "port"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Signal Builder"
+	    Location		    [480, 85, 980, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Tag		      "STV Demux"
+	      Ports		      [1, 2]
+	      Position		      [150, 58, 160, 642]
+	      Outputs		      "2"
+	    }
+	    Block {
+	      BlockType		      FromWorkspace
+	      Name		      "FromWs"
+	      Tag		      "STV FromWs"
+	      Position		      [30, 300, 115, 350]
+	      VariableName	      "tuvar"
+	      SampleTime	      "1.1364e-005"
+	      OutputAfterFinalValue   "Holding final value"
+	      SigBuilderData	      "DataTag2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "reset"
+	      Tag		      "STV Outport"
+	      Position		      [280, 30, 300, 40]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "start"
+	      Tag		      "STV Outport"
+	      Position		      [280, 60, 300, 70]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "FromWs"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "reset"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "start"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Re_o"
+	  Position		  [655, 108, 685, 122]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Im_o"
+	  Position		  [655, 238, 685, 252]
+	  BackgroundColor	  "[1.000000, 0.792157, 0.584314]"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Re_i"
+	  SrcPort		  1
+	  DstBlock		  "Pure_FFT_HDL"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Im_i"
+	  SrcPort		  1
+	  DstBlock		  "Pure_FFT_HDL"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Pure_FFT_HDL"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Builder"
+	  SrcPort		  2
+	  DstBlock		  "Pure_FFT_HDL"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Signal Builder"
+	  SrcPort		  1
+	  DstBlock		  "Pure_FFT_HDL"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Pure_FFT_HDL"
+	  SrcPort		  1
+	  DstBlock		  "Re_o"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pure_FFT_HDL"
+	  SrcPort		  2
+	  DstBlock		  "Im_o"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [278, 467]
+	}
+	Annotation {
+	  Name			  "VHDL"
+	  Position		  [419, 42]
+	  BackgroundColor	  "[1.000000, 1.000000, 0.874510]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "pure_MagPh"
+      Ports		      [2]
+      Position		      [955, 410, 1000, 470]
+      BackgroundColor	      "cyan"
+      Location		      [6, 53, 1022, 710]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"Magnitude"
+	axes2			"Phase"
+      }
+      TimeRange		      "0.35"
+      YMin		      "0~-4"
+      YMax		      "70000~4"
+      SaveName		      "ScopeData3"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "pure_sp_ReIm"
+      Ports		      [2]
+      Position		      [700, 491, 730, 524]
+      BackgroundColor	      "cyan"
+      Location		      [6, 53, 1022, 710]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"Re"
+	axes2			"Im"
+      }
+      TimeRange		      "0.35"
+      YMin		      "-60000~-25"
+      YMax		      "80000~20"
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+    }
+    Line {
+      SrcBlock		      "1st_stage_IIR"
+      SrcPort		      1
+      Points		      [0, 0; 20, 0]
+      Branch {
+	Points			[0, -185; 130, 0]
+	Branch {
+	  DstBlock		  "Gain3"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 500]
+	  DstBlock		  "IIR_outputs"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	DstBlock		"2nd_stage_IIR"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	DstBlock		"1st_stage_IIR"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 185; 225, 0]
+	Branch {
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 170]
+	  DstBlock		  "IIR_outputs"
+	  DstPort		  3
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "2nd_Stage_FFT"
+      SrcPort		      1
+      Points		      [0, 0; 30, 0]
+      Branch {
+	Points			[0, 75]
+	DstBlock		"IIR_2nd_sp_ReIm"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"nyq2spec_2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "2nd_Stage_FFT"
+      SrcPort		      2
+      Points		      [0, 0; 15, 0]
+      Branch {
+	Points			[0, 60]
+	DstBlock		"IIR_2nd_sp_ReIm"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"nyq2spec_2"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "nyq2spec_2"
+      SrcPort		      1
+      Points		      [0, 0; 60, 0]
+      Branch {
+	DstBlock		"IIR_2nd_MagPh"
+	DstPort			1
+      }
+      Branch {
+	Labels			[2, 0]
+	Points			[0, 340]
+	DstBlock		"mag_comp"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "nyq2spec_2"
+      SrcPort		      2
+      DstBlock		      "IIR_2nd_MagPh"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "pure_FFT"
+      SrcPort		      1
+      Points		      [0, 0; 30, 0]
+      Branch {
+	Points			[0, 75]
+	DstBlock		"pure_sp_ReIm"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"nyq2spec_1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "pure_FFT"
+      SrcPort		      2
+      Points		      [0, 0; 15, 0]
+      Branch {
+	Points			[0, 60]
+	DstBlock		"pure_sp_ReIm"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"nyq2spec_1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "nyq2spec_1"
+      SrcPort		      1
+      Points		      [0, 0; 45, 0]
+      Branch {
+	DstBlock		"pure_MagPh"
+	DstPort			1
+      }
+      Branch {
+	Labels			[2, 0]
+	Points			[0, 175]
+	DstBlock		"mag_comp"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "nyq2spec_1"
+      SrcPort		      2
+      DstBlock		      "pure_MagPh"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gain2"
+      SrcPort		      1
+      DstBlock		      "2nd_Stage_FFT"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gain1"
+      SrcPort		      1
+      DstBlock		      "pure_FFT"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "2nd_stage_IIR"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	DstBlock		"Gain2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 335]
+	DstBlock		"IIR_outputs"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	DstBlock		"1st_Stage_FFT"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 185]
+	Branch {
+	  DstBlock		  "2nd_Stage_FFT"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, 185]
+	  DstBlock		  "pure_FFT"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "1st_Stage_FFT"
+      SrcPort		      1
+      Points		      [0, 0; 30, 0]
+      Branch {
+	Points			[0, 75]
+	DstBlock		"IIR_1st_sp_ReIm"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"nyq2spec_3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "1st_Stage_FFT"
+      SrcPort		      2
+      Points		      [0, 0; 15, 0]
+      Branch {
+	Points			[0, 60]
+	DstBlock		"IIR_1st_sp_ReIm"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"nyq2spec_3"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "nyq2spec_3"
+      SrcPort		      1
+      Points		      [0, 0; 75, 0]
+      Branch {
+	DstBlock		"IIR_1st_MagPh"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 505]
+	DstBlock		"mag_comp"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "nyq2spec_3"
+      SrcPort		      2
+      DstBlock		      "IIR_1st_MagPh"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gain3"
+      SrcPort		      1
+      DstBlock		      "1st_Stage_FFT"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Pulse\nGenerator"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  3
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    H!    8    (     @         %    "
+"\"     $    !     0         %  0 #     $   !(    9W)I9%-E='1I;F< 8VAA;FYE;', "
+"    87AE<P          8V]M;6]N        9&%T85-E=       9&%T85-E=$ED>   #@   #   "
+"  &    \"     0         !0    @    !     @    $         $  \" &]N   .    \\ @"
+"   8    (     @         %    \"     $    \"     0         %  0 \"@    $   \""
+"\"    >$1A=&$      'E$871A      !S=&5P6       <W1E<%D      'E-:6X       !Y36%"
+"X        8V]L;W(      &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X  !A"
+";&Q81&%T80  86QL641A=&$           X   !0    !@    @    &          4    (     "
+"0    0    !          D    @              #]O[](-=HT/_V_OT@UVC0_1A===-%%ES\\. "
+"   4     8    (    !@         %    \"     $    $     0         )    (        "
+"    / _        \\#\\         @         \" #@   #@    &    \"     8         !0"
+"    @    !     0    $         \"0    @               X    X    !@    @    &  "
+"        4    (     0    $    !          D    (               .    ,     8    "
+"(    !@         %    \"                0         )          X    P    !@    @"
+"    &          4    (               !          D         #@   $@    &    \"  "
+"   8         !0    @    !     P    $         \"0   !@                        "
+"         \\#\\.    ,     8    (    !          %    \"     $    !     0       "
+"  0  $ +0    X    X    !@    @    &          4    (     0    $    !          "
+"D    (            ^#\\.    .     8    (    !          %    \"     $    %     "
+"0         0    !0   ')E<V5T    #@   #@    &    \"     8         !0    @    ! "
+"    0    $         \"0    @           #P/PX   \"     !@    @    !          4 "
+"   (     0    $    !          X   !0    !@    @    &          4    (     0   "
+" 0    !          D    @              #]O[](-=HT/_V_OT@UVC0_1A===-%%ES\\.    @"
+"     8    (     0         %    \"     $    !     0         .    4     8    ( "
+"   !@         %    \"     $    $     0         )    (            / _        "
+"\\#\\         @         \" #@   &     &    \"     8         !0    @    !    !"
+"@    $         \"0   #               /<G1[K,U#<_]R='NLS4-S_ZB5%W:,\\Z/_J)47=H"
+"SSH_1A===-%%ES\\.    8     8    (    !@         %    \"     $    &     0     "
+"    )    ,                                 #P/P       / _                    "
+"  X    X    !@    @    &          4    (     0    $    !          D    (     "
+"          .    .     8    (    !@         %    \"     $    !     0         ) "
+"   \"               #@   #     &    \"     8         !0    @               $ "
+"        \"0         .    ,     8    (    !@         %    \"                0 "
+"        )          X   !(    !@    @    &          4    (     0    ,    !    "
+"      D    8    V(%S1I3VYC\\          -B!<T:4]N8_#@   #     &    \"     0    "
+"     !0    @    !     0    $         $  ! \"T    .    .     8    (    !@     "
+"    %    \"     $    !     0         )    \"            /@_#@   #@    &    \""
+"     0         !0    @    !    !0    $         $     4   !S=&%R=     X    X  "
+"  !@    @    &          4    (     0    $    !          D    (             $ "
+".    D     8    (     0         %    \"     $    !     0         .    8     8"
+"    (    !@         %    \"     $    &     0         )    ,               ]R="
+"'NLS4-S_W)T>ZS-0W/_J)47=HSSH_^HE1=VC/.C]&%UUTT467/PX   \"0    !@    @    !   "
+"       4    (     0    $    !          X   !@    !@    @    &          4    ("
+"     0    8    !          D    P                                 / _        "
+"\\#\\                     #@   / \"   &    \"     (         !0    @    !     "
+"@    $         !0 $  L    !    -P   &-H86YN96QS    >4QI;0        !L86)E;%!O<P"
+"   &QA8F5L2       ;&%B96Q0871C:   #@   #@    &    \"     8         !0    @   "
+" !     0    $         \"0    @             0 X   !     !@    @    &          "
+"4    (     0    (    !          D    0    FIF9F9F9N;^:F9F9F9GQ/PX    P    !@ "
+"   @    $          4    (     0    (    !         !   @!43   #@   #@    &    "
+"\"     8         !0    @    !     0    $         \"0    @        P #\"G0 X   "
+" X    !@    @    &          4    (     0    $    !          D    (        < #"
+"(I4 .    .     8    (    !@         %    \"     $    !     0         )    \" "
+"           / _#@   $     &    \"     8         !0    @    !     @    $       "
+"  \"0   !    \":F9F9F9FYOYJ9F9F9F?$_#@   #     &    \"     0         !0    @ "
+"   !     @    $         $  \" %1,   .    .     8    (    !@         %    \"  "
+"   $    !     0         )    \"        %  /*= #@   #@    &    \"     8       "
+"  !0    @    !     0    $         \"0    @       \"0 #JG0 X    @ @  !@    @  "
+"  \"          4    (     0    $    !          4 !  .     0   %0   !D:7-P5&EM9"
+"0       &1I<W!-;V1E        ;6EN5&EM90        !M87A4:6UE         &%F=&5R1FEN86"
+"Q3='( <V%M<&QE5&EM90          #@   $     &    \"     8         !0    @    !  "
+"   @    $         \"0   !               $87773119<_#@   #@    &    \"     8  "
+"       !0    @    !     0    $         \"0    @           #P/PX    X    !@   "
+" @    &          4    (     0    $    !          D    (               .    . "
+"    8    (    !@         %    \"     $    !     0         )    \"    $8777311"
+"9<_#@   $     &    \"     0         !0    @    !    $     $         $    !   "
+" !(;VQD(&9I;F%L('9A;'5E#@   #@    &    \"     8         !0    @    !     0   "
+" $         \"0    @   !NL1E*SM3G/@X   \"( 0  !@    @    \"          4    (   "
+"  0    $    !          4 !  .     0   #@   !A8W1I=F5$:7-P261X '1I;65286YG90  "
+"    ;F%M90            !D:7-P;&%Y4F%N9V4   X   !     !@    @    &          4  "
+"  (     0    (    !          D    0             $        #P/PX   !     !@    "
+"@    &          4    (     0    (    !          D    0              !&%UUTT46"
+"7/PX    X    !@    @    $          4    (     0    <    !         !     '    "
+"1W)O=7 @,0 .    0     8    (    !@         %    \"     $    \"     0         "
+")    $               1A===-%%ES\\.    .     8    (    !@         %    \"     "
+"$    !     0         )    \"            / _"
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    H!    8    (     @         %    "
+"\"     $    !     0         %  0 #     $   !(    9W)I9%-E='1I;F< 8VAA;FYE;', "
+"    87AE<P          8V]M;6]N        9&%T85-E=       9&%T85-E=$ED>   #@   #   "
+"  &    \"     0         !0    @    !     @    $         $  \" &]N   .    \\ @"
+"   8    (     @         %    \"     $    \"     0         %  0 \"@    $   \""
+"\"    >$1A=&$      'E$871A      !S=&5P6       <W1E<%D      'E-:6X       !Y36%"
+"X        8V]L;W(      &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X  !A"
+";&Q81&%T80  86QL641A=&$           X   !0    !@    @    &          4    (     "
+"0    0    !          D    @              #]O[](-=HT/_V_OT@UVC0_1A===-%%ES\\. "
+"   4     8    (    !@         %    \"     $    $     0         )    (        "
+"    / _        \\#\\         @         \" #@   #@    &    \"     8         !0"
+"    @    !     0    $         \"0    @               X    X    !@    @    &  "
+"        4    (     0    $    !          D    (               .    ,     8    "
+"(    !@         %    \"                0         )          X    P    !@    @"
+"    &          4    (               !          D         #@   $@    &    \"  "
+"   8         !0    @    !     P    $         \"0   !@                        "
+"         \\#\\.    ,     8    (    !          %    \"     $    !     0       "
+"  0  $ +0    X    X    !@    @    &          4    (     0    $    !          "
+"D    (            ^#\\.    .     8    (    !          %    \"     $    %     "
+"0         0    !0   ')E<V5T    #@   #@    &    \"     8         !0    @    ! "
+"    0    $         \"0    @           #P/PX   \"     !@    @    !          4 "
+"   (     0    $    !          X   !0    !@    @    &          4    (     0   "
+" 0    !          D    @              #]O[](-=HT/_V_OT@UVC0_1A===-%%ES\\.    @"
+"     8    (     0         %    \"     $    !     0         .    4     8    ( "
+"   !@         %    \"     $    $     0         )    (            / _        "
+"\\#\\         @         \" #@   &     &    \"     8         !0    @    !    !"
+"@    $         \"0   #               /<G1[K,U#<_]R='NLS4-S_ZB5%W:,\\Z/_J)47=H"
+"SSH_1A===-%%ES\\.    8     8    (    !@         %    \"     $    &     0     "
+"    )    ,                                 #P/P       / _                    "
+"  X    X    !@    @    &          4    (     0    $    !          D    (     "
+"          .    .     8    (    !@         %    \"     $    !     0         ) "
+"   \"               #@   #     &    \"     8         !0    @               $ "
+"        \"0         .    ,     8    (    !@         %    \"                0 "
+"        )          X   !(    !@    @    &          4    (     0    ,    !    "
+"      D    8    V(%S1I3VYC\\          -B!<T:4]N8_#@   #     &    \"     0    "
+"     !0    @    !     0    $         $  ! \"T    .    .     8    (    !@     "
+"    %    \"     $    !     0         )    \"            /@_#@   #@    &    \""
+"     0         !0    @    !    !0    $         $     4   !S=&%R=     X    X  "
+"  !@    @    &          4    (     0    $    !          D    (             $ "
+".    D     8    (     0         %    \"     $    !     0         .    8     8"
+"    (    !@         %    \"     $    &     0         )    ,               ]R="
+"'NLS4-S_W)T>ZS-0W/_J)47=HSSH_^HE1=VC/.C]&%UUTT467/PX   \"0    !@    @    !   "
+"       4    (     0    $    !          X   !@    !@    @    &          4    ("
+"     0    8    !          D    P                                 / _        "
+"\\#\\                     #@   / \"   &    \"     (         !0    @    !     "
+"@    $         !0 $  L    !    -P   &-H86YN96QS    >4QI;0        !L86)E;%!O<P"
+"   &QA8F5L2       ;&%B96Q0871C:   #@   #@    &    \"     8         !0    @   "
+" !     0    $         \"0    @             0 X   !     !@    @    &          "
+"4    (     0    (    !          D    0    FIF9F9F9N;^:F9F9F9GQ/PX    P    !@ "
+"   @    $          4    (     0    (    !         !   @!43   #@   #@    &    "
+"\"     8         !0    @    !     0    $         \"0    @        P #\"G0 X   "
+" X    !@    @    &          4    (     0    $    !          D    (        < #"
+"(I4 .    .     8    (    !@         %    \"     $    !     0         )    \" "
+"           / _#@   $     &    \"     8         !0    @    !     @    $       "
+"  \"0   !    \":F9F9F9FYOYJ9F9F9F?$_#@   #     &    \"     0         !0    @ "
+"   !     @    $         $  \" %1,   .    .     8    (    !@         %    \"  "
+"   $    !     0         )    \"        %  /*= #@   #@    &    \"     8       "
+"  !0    @    !     0    $         \"0    @       \"0 #JG0 X    @ @  !@    @  "
+"  \"          4    (     0    $    !          4 !  .     0   %0   !D:7-P5&EM9"
+"0       &1I<W!-;V1E        ;6EN5&EM90        !M87A4:6UE         &%F=&5R1FEN86"
+"Q3='( <V%M<&QE5&EM90          #@   $     &    \"     8         !0    @    !  "
+"   @    $         \"0   !               $87773119<_#@   #@    &    \"     8  "
+"       !0    @    !     0    $         \"0    @           #P/PX    X    !@   "
+" @    &          4    (     0    $    !          D    (               .    . "
+"    8    (    !@         %    \"     $    !     0         )    \"    $8777311"
+"9<_#@   $     &    \"     0         !0    @    !    $     $         $    !   "
+" !(;VQD(&9I;F%L('9A;'5E#@   #@    &    \"     8         !0    @    !     0   "
+" $         \"0    @   !NL1E*SM3G/@X   \"( 0  !@    @    \"          4    (   "
+"  0    $    !          4 !  .     0   #@   !A8W1I=F5$:7-P261X '1I;65286YG90  "
+"    ;F%M90            !D:7-P;&%Y4F%N9V4   X   !     !@    @    &          4  "
+"  (     0    (    !          D    0             $        #P/PX   !     !@    "
+"@    &          4    (     0    (    !          D    0              !&%UUTT46"
+"7/PX    X    !@    @    $          4    (     0    <    !         !     '    "
+"1W)O=7 @,0 .    0     8    (    !@         %    \"     $    \"     0         "
+")    $               1A===-%%ES\\.    .     8    (    !@         %    \"     "
+"$    !     0         )    \"            / _"
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    H!    8    (     @         %    "
+"\"     $    !     0         %  0 #     $   !(    9W)I9%-E='1I;F< 8VAA;FYE;', "
+"    87AE<P          8V]M;6]N        9&%T85-E=       9&%T85-E=$ED>   #@   #   "
+"  &    \"     0         !0    @    !     @    $         $  \" &]N   .    \\ @"
+"   8    (     @         %    \"     $    \"     0         %  0 \"@    $   \""
+"\"    >$1A=&$      'E$871A      !S=&5P6       <W1E<%D      'E-:6X       !Y36%"
+"X        8V]L;W(      &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X  !A"
+";&Q81&%T80  86QL641A=&$           X   !0    !@    @    &          4    (     "
+"0    0    !          D    @              #]O[](-=HT/_V_OT@UVC0_1A===-%%ES\\. "
+"   4     8    (    !@         %    \"     $    $     0         )    (        "
+"    / _        \\#\\         @         \" #@   #@    &    \"     8         !0"
+"    @    !     0    $         \"0    @               X    X    !@    @    &  "
+"        4    (     0    $    !          D    (               .    ,     8    "
+"(    !@         %    \"                0         )          X    P    !@    @"
+"    &          4    (               !          D         #@   $@    &    \"  "
+"   8         !0    @    !     P    $         \"0   !@                        "
+"         \\#\\.    ,     8    (    !          %    \"     $    !     0       "
+"  0  $ +0    X    X    !@    @    &          4    (     0    $    !          "
+"D    (            ^#\\.    .     8    (    !          %    \"     $    %     "
+"0         0    !0   ')E<V5T    #@   #@    &    \"     8         !0    @    ! "
+"    0    $         \"0    @           #P/PX   \"     !@    @    !          4 "
+"   (     0    $    !          X   !0    !@    @    &          4    (     0   "
+" 0    !          D    @              #]O[](-=HT/_V_OT@UVC0_1A===-%%ES\\.    @"
+"     8    (     0         %    \"     $    !     0         .    4     8    ( "
+"   !@         %    \"     $    $     0         )    (            / _        "
+"\\#\\         @         \" #@   &     &    \"     8         !0    @    !    !"
+"@    $         \"0   #               /<G1[K,U#<_]R='NLS4-S_ZB5%W:,\\Z/_J)47=H"
+"SSH_1A===-%%ES\\.    8     8    (    !@         %    \"     $    &     0     "
+"    )    ,                                 #P/P       / _                    "
+"  X    X    !@    @    &          4    (     0    $    !          D    (     "
+"          .    .     8    (    !@         %    \"     $    !     0         ) "
+"   \"               #@   #     &    \"     8         !0    @               $ "
+"        \"0         .    ,     8    (    !@         %    \"                0 "
+"        )          X   !(    !@    @    &          4    (     0    ,    !    "
+"      D    8    V(%S1I3VYC\\          -B!<T:4]N8_#@   #     &    \"     0    "
+"     !0    @    !     0    $         $  ! \"T    .    .     8    (    !@     "
+"    %    \"     $    !     0         )    \"            /@_#@   #@    &    \""
+"     0         !0    @    !    !0    $         $     4   !S=&%R=     X    X  "
+"  !@    @    &          4    (     0    $    !          D    (             $ "
+".    D     8    (     0         %    \"     $    !     0         .    8     8"
+"    (    !@         %    \"     $    &     0         )    ,               ]R="
+"'NLS4-S_W)T>ZS-0W/_J)47=HSSH_^HE1=VC/.C]&%UUTT467/PX   \"0    !@    @    !   "
+"       4    (     0    $    !          X   !@    !@    @    &          4    ("
+"     0    8    !          D    P                                 / _        "
+"\\#\\                     #@   / \"   &    \"     (         !0    @    !     "
+"@    $         !0 $  L    !    -P   &-H86YN96QS    >4QI;0        !L86)E;%!O<P"
+"   &QA8F5L2       ;&%B96Q0871C:   #@   #@    &    \"     8         !0    @   "
+" !     0    $         \"0    @             0 X   !     !@    @    &          "
+"4    (     0    (    !          D    0    FIF9F9F9N;^:F9F9F9GQ/PX    P    !@ "
+"   @    $          4    (     0    (    !         !   @!43   #@   #@    &    "
+"\"     8         !0    @    !     0    $         \"0    @        P #\"G0 X   "
+" X    !@    @    &          4    (     0    $    !          D    (        < #"
+"(I4 .    .     8    (    !@         %    \"     $    !     0         )    \" "
+"           / _#@   $     &    \"     8         !0    @    !     @    $       "
+"  \"0   !    \":F9F9F9FYOYJ9F9F9F?$_#@   #     &    \"     0         !0    @ "
+"   !     @    $         $  \" %1,   .    .     8    (    !@         %    \"  "
+"   $    !     0         )    \"        %  /*= #@   #@    &    \"     8       "
+"  !0    @    !     0    $         \"0    @       \"0 #JG0 X    @ @  !@    @  "
+"  \"          4    (     0    $    !          4 !  .     0   %0   !D:7-P5&EM9"
+"0       &1I<W!-;V1E        ;6EN5&EM90        !M87A4:6UE         &%F=&5R1FEN86"
+"Q3='( <V%M<&QE5&EM90          #@   $     &    \"     8         !0    @    !  "
+"   @    $         \"0   !               $87773119<_#@   #@    &    \"     8  "
+"       !0    @    !     0    $         \"0    @           #P/PX    X    !@   "
+" @    &          4    (     0    $    !          D    (               .    . "
+"    8    (    !@         %    \"     $    !     0         )    \"    $8777311"
+"9<_#@   $     &    \"     0         !0    @    !    $     $         $    !   "
+" !(;VQD(&9I;F%L('9A;'5E#@   #@    &    \"     8         !0    @    !     0   "
+" $         \"0    @   !NL1E*SM3G/@X   \"( 0  !@    @    \"          4    (   "
+"  0    $    !          4 !  .     0   #@   !A8W1I=F5$:7-P261X '1I;65286YG90  "
+"    ;F%M90            !D:7-P;&%Y4F%N9V4   X   !     !@    @    &          4  "
+"  (     0    (    !          D    0             $        #P/PX   !     !@    "
+"@    &          4    (     0    (    !          D    0              !&%UUTT46"
+"7/PX    X    !@    @    $          4    (     0    <    !         !     '    "
+"1W)O=7 @,0 .    0     8    (    !@         %    \"     $    \"     0         "
+")    $               1A===-%%ES\\.    .     8    (    !@         %    \"     "
+"$    !     0         )    \"            / _"
+  }
+}

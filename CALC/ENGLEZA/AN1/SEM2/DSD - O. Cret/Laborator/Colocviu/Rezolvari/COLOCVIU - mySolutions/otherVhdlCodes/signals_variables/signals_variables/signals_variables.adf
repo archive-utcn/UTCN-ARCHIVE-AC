@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=signals_variables
+
+[Library]
+signals_variables=.\signals_variables.lib
+
+[$LibMap$]
+signals_variables=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/signals_varialbes.vhd=-1
+/Waveform Editor 3.awf=-1
+
+[Files.Data]
+.\src\signals_varialbes.vhd=VHDL Source Code
+.\src\Waveform Editor 3.awf=Waveform File
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=e1|arh2|0 
+ShowHide=ShowTopLevel
+Selected=

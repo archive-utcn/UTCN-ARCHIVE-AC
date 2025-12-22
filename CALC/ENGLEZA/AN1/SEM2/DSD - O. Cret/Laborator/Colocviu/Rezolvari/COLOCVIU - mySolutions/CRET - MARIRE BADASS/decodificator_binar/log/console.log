@@ -1,0 +1,9 @@
+# Compile...
+# File: D:\designshdl\CRET\decodificator_binar\src\decodificator_binar.vhd
+# Compile Entity "dec"
+# Entity `dec' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "dec"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# Design: Design "mux_gen" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

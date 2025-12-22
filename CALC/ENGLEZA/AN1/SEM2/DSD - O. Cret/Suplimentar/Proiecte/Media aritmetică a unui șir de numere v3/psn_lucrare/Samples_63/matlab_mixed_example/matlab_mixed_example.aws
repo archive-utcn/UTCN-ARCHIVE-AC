@@ -1,0 +1,17 @@
+[Version]
+Version=6.2
+[Designs]
+biquad_iir=.\biquad_iir\biquad_iir.adf
+fft=.\fft\fft.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+biquad_iir=1
+fft=1
+matlab_cosim=0
+[Settings]
+Active=biquad_iir

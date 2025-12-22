@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\FIFO_4X4\projlib.cfg"  -d "D:\designshdl\CLV_2008\FIFO_4X4\compile\"  -work FIFO_4X4 -dbg -e 100 "D:\designshdl\CLV_2008\FIFO_4X4\src\FIFO_4X4.vhd" 

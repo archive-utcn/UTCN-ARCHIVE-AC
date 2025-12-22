@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1302852717 source:c:\codeblocks\graf1\main.cpp
+	<stdio.h>
+	<stdlib.h>
+

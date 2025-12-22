@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Mon May 01 19:53:15 2017
+
+
+-------------------------------------------
+Entity          | Architecture | Library 
+-------------------------------------------
+shift_register  | arh          | rotate_seq
+-------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

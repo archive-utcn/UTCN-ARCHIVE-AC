@@ -1,0 +1,89 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+modified=71
+Current Config=compile
+
+[Configurations]
+compile=freq_meter
+
+[Library]
+freq_meter=.\freq_meter.LIB
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FAMILY=
+SYNTH_TOOL=<none>
+FLOWTOOLS=ONLY_IMPL
+IMPL_TOOL=<none>
+UseCeloxica=0
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+
+[$LibMap$]
+Active_lib=XC4000E
+xilinxun=XC4000E
+freq_meter=.
+
+[Groups]
+TestBench=1
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[ORDER]
+autorefresh=0
+macro_name=default_compile.do
+modified=1
+Synchronize=1
+
+[SYNTHESIS]
+FAMILY=
+
+[IMPLEMENTATION]
+FAMILY=
+
+[Files]
+/Readme.txt=-1
+/hex2led.vhd=-1
+/CONTROL.asf=-1
+/and2.vhd=-1
+/cnt_4b.vhd=-1
+/CNT_BCD.bde=-1
+/CNT_BCD2.bde=-1
+/freq_top.bde=-1
+/CNT1.vhd=-1
+/testbench_cnt_bcd_conf.vhd=-1
+TestBench/TestBenchPack.vhd=-1
+TestBench/testbench.vhd=-1
+TestBench/golden.vec=-1
+TestBench/stimulus.vec=-1
+TestBench/runme.do=-1
+
+[Files.Data]
+.\src\Readme.txt=Text File
+.\src\hex2led.vhd=VHDL Source Code
+.\src\CONTROL.asf=State Diagram
+.\src\and2.vhd=VHDL Source Code
+.\src\cnt_4b.vhd=VHDL Source Code
+.\src\CNT_BCD.bde=Block Diagram
+.\src\CNT_BCD2.bde=Block Diagram
+.\src\freq_top.bde=Block Diagram
+.\src\CNT1.vhd=VHDL Source Code
+.\src\testbench_cnt_bcd_conf.vhd=Configuration File
+.\src\TestBench\TestBenchPack.vhd=VHDL Test Bench
+.\src\TestBench\testbench.vhd=VHDL Test Bench
+.\src\TestBench\golden.vec=External File
+.\src\TestBench\stimulus.vec=External File
+.\src\TestBench\runme.do=Macro
+

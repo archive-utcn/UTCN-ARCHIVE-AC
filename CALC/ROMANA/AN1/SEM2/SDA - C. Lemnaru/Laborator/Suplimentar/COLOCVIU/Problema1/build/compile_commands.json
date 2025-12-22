@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/build",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/colocviu.dir/includes_C.rsp -g -Wall -o CMakeFiles/colocviu.dir/main.c.obj -c C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/main.c",
+  "file": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/main.c",
+  "output": "CMakeFiles/colocviu.dir/main.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/build/colocviu",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/vector.dir/includes_C.rsp -g -o CMakeFiles/vector.dir/vector/Vector.c.obj -c C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/vector/Vector.c",
+  "file": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/vector/Vector.c",
+  "output": "colocviu/CMakeFiles/vector.dir/vector/Vector.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/build/colocviu",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/queue.dir/includes_C.rsp -g -o CMakeFiles/queue.dir/intQueue/intQueue.c.obj -c C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/intQueue/intQueue.c",
+  "file": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/intQueue/intQueue.c",
+  "output": "colocviu/CMakeFiles/queue.dir/intQueue/intQueue.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/build/colocviu",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/array.dir/includes_C.rsp -g -o CMakeFiles/array.dir/array/array_int.c.obj -c C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/array/array_int.c",
+  "file": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/array/array_int.c",
+  "output": "colocviu/CMakeFiles/array.dir/array/array_int.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/build/colocviu",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/stack.dir/includes_C.rsp -g -o CMakeFiles/stack.dir/intStack/intStack.c.obj -c C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/intStack/intStack.c",
+  "file": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/intStack/intStack.c",
+  "output": "colocviu/CMakeFiles/stack.dir/intStack/intStack.c.obj"
+},
+{
+  "directory": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/build/colocviu",
+  "command": "C:/MinGW/bin/gcc.exe  @CMakeFiles/intGraph.dir/includes_C.rsp -g -o CMakeFiles/intGraph.dir/intGraph/intGraph.c.obj -c C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/intGraph/intGraph.c",
+  "file": "C:/Users/Alex/OneDrive/VSCode/faculta/SDA/COLOCVIU/Problema1/lib/intGraph/intGraph.c",
+  "output": "colocviu/CMakeFiles/intGraph.dir/intGraph/intGraph.c.obj"
+}
+]

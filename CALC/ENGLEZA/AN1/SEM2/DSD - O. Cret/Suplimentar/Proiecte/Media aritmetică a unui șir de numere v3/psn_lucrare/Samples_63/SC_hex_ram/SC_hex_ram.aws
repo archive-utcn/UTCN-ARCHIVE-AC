@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+SC_hex_ram=.\SC_hex_ram.adf
+[Settings]
+Active=SC_hex_ram
+[Expand]
+sc_hex_ram=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

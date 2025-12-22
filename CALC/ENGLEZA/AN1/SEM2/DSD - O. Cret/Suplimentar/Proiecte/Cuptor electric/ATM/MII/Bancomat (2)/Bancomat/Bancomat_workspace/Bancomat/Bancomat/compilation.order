@@ -1,0 +1,11 @@
+.\src\decodificator.vhd
+.\src\divizor.vhd
+.\src\memorie_ram.vhd
+.\src\mux.vhd
+.\src\mytypes.vhd
+.\src\scazator.vhd
+.\src\selector.vhd
+.\src\sistem_introducere.vhd
+.\src\sistemafisare.vhd
+.\src\unitate_comanda.vhd
+.\src\Bancomat.bde

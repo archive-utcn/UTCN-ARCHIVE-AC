@@ -1,0 +1,40 @@
+V 000044 55 1748          1498499873575 arh
+(_unit VHDL (mmux3 0 4 (arh 0 10 ))
+  (_version v33)
+  (_time 1498499873574 2017.06.26 20:57:53)
+  (_source (\./src/mux3.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1498499873497)
+    (_use )
+  )
+  (_object
+    (_type (_internal ~std_logic_vector{3~downto~0}~126 0 5 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 3)(i 0))))))
+    (_port (_internal a ~std_logic_vector{3~downto~0}~126 0 5 (_entity (_in ))))
+    (_port (_internal b ~std_logic_vector{3~downto~0}~126 0 5 (_entity (_in ))))
+    (_port (_internal c ~std_logic_vector{3~downto~0}~126 0 5 (_entity (_in ))))
+    (_port (_internal d ~std_logic_vector{3~downto~0}~126 0 5 (_entity (_in ))))
+    (_type (_internal ~std_logic_vector{1~downto~0}~12 0 6 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 1)(i 0))))))
+    (_port (_internal sel ~std_logic_vector{1~downto~0}~12 0 6 (_entity (_in ))))
+    (_type (_internal ~std_logic_vector{3~downto~0}~128 0 7 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 3)(i 0))))))
+    (_port (_internal y ~std_logic_vector{3~downto~0}~128 0 7 (_entity (_out ))))
+    (_process
+      (line__12(_architecture 0 0 12 (_process (_simple)(_target(5))(_sensitivity(4))(_read(2)(0)(1)(3)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_static
+    (2 2 )
+    (2 3 )
+    (3 2 )
+    (3 3 )
+  )
+  (_model . arh 1 -1
+  )
+)

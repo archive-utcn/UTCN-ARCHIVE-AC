@@ -1,0 +1,184 @@
+acom -reorder $DSN/src/clc.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Error: COMP96_0015: clc.vhd : (9, 19): ';' expected.
+# Error: COMP96_0019: clc.vhd : (9, 20): Keyword "end" expected.
+# Error: COMP96_0016: clc.vhd : (10, 1): Design unit declaration expected.
+# Compile Entity "clc"
+# Error: COMP96_0019: clc.vhd : (10, 15): Keyword "is" expected.
+# Error: COMP96_0019: clc.vhd : (10, 15): Keyword "end" expected.
+# Compile Architecture "arh" of Entity "clc"
+# Error: COMP96_0015: clc.vhd : (30, 5): ';' expected.
+# Error: COMP96_0015: clc.vhd : (35, 11): ';' expected.
+# Error: COMP96_0019: clc.vhd : (35, 11): Keyword "end" expected.
+# Error: COMP96_0019: clc.vhd : (36, 9): Keyword "case" expected.
+# Error: COMP96_0036: clc.vhd : (36, 11): Boolean expression expected.
+# Error: COMP96_0019: clc.vhd : (38, 4): Keyword "end" expected.
+# Error: COMP96_0015: clc.vhd : (39, 8): ';' expected.
+# Error: COMP96_0016: clc.vhd : (39, 12): Design unit declaration expected.
+# Error: COMP96_0019: clc.vhd : (41, 24): Keyword "of" expected.
+# Error: COMP96_0018: clc.vhd : (41, 24): Identifier expected.
+# Compile failure 15 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/clc.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Error: COMP96_0055: clc.vhd : (4, 9): Cannot find referenced context element.
+# Error: COMP96_0090: clc.vhd : (7, 25): Expected array type.
+# Error: COMP96_0064: clc.vhd : (7, 16): Unknown type.
+# Error: COMP96_0078: clc.vhd : (8, 8): Unknown identifier "std_logic_vectpr".
+# Error: COMP96_0064: clc.vhd : (8, 8): Unknown type.
+# Compile Architecture "arh" of Entity "clc"
+# Error: COMP96_0015: clc.vhd : (30, 5): ';' expected.
+# Error: COMP96_0015: clc.vhd : (35, 11): ';' expected.
+# Error: COMP96_0019: clc.vhd : (35, 11): Keyword "end" expected.
+# Error: COMP96_0019: clc.vhd : (36, 9): Keyword "case" expected.
+# Error: COMP96_0036: clc.vhd : (36, 11): Boolean expression expected.
+# Error: COMP96_0019: clc.vhd : (38, 4): Keyword "end" expected.
+# Error: COMP96_0015: clc.vhd : (39, 8): ';' expected.
+# Error: COMP96_0016: clc.vhd : (39, 12): Design unit declaration expected.
+# Error: COMP96_0019: clc.vhd : (41, 24): Keyword "of" expected.
+# Error: COMP96_0018: clc.vhd : (41, 24): Identifier expected.
+# Compile failure 15 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/clc.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Error: COMP96_0090: clc.vhd : (7, 25): Expected array type.
+# Error: COMP96_0064: clc.vhd : (7, 16): Unknown type.
+# Error: COMP96_0078: clc.vhd : (8, 8): Unknown identifier "std_logic_vectpr".
+# Error: COMP96_0064: clc.vhd : (8, 8): Unknown type.
+# Compile Architecture "arh" of Entity "clc"
+# Error: COMP96_0015: clc.vhd : (30, 5): ';' expected.
+# Error: COMP96_0015: clc.vhd : (35, 11): ';' expected.
+# Error: COMP96_0019: clc.vhd : (35, 11): Keyword "end" expected.
+# Error: COMP96_0019: clc.vhd : (36, 9): Keyword "case" expected.
+# Error: COMP96_0036: clc.vhd : (36, 11): Boolean expression expected.
+# Error: COMP96_0019: clc.vhd : (38, 4): Keyword "end" expected.
+# Error: COMP96_0015: clc.vhd : (39, 8): ';' expected.
+# Error: COMP96_0016: clc.vhd : (39, 12): Design unit declaration expected.
+# Error: COMP96_0019: clc.vhd : (41, 24): Keyword "of" expected.
+# Error: COMP96_0018: clc.vhd : (41, 24): Identifier expected.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/clc.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Error: COMP96_0078: clc.vhd : (8, 8): Unknown identifier "std_logic_vectpr".
+# Error: COMP96_0064: clc.vhd : (8, 8): Unknown type.
+# Compile Architecture "arh" of Entity "clc"
+# Error: COMP96_0015: clc.vhd : (30, 5): ';' expected.
+# Error: COMP96_0015: clc.vhd : (35, 11): ';' expected.
+# Error: COMP96_0019: clc.vhd : (35, 11): Keyword "end" expected.
+# Error: COMP96_0019: clc.vhd : (36, 9): Keyword "case" expected.
+# Error: COMP96_0036: clc.vhd : (36, 11): Boolean expression expected.
+# Error: COMP96_0019: clc.vhd : (38, 4): Keyword "end" expected.
+# Error: COMP96_0015: clc.vhd : (39, 8): ';' expected.
+# Error: COMP96_0016: clc.vhd : (39, 12): Design unit declaration expected.
+# Error: COMP96_0019: clc.vhd : (41, 24): Keyword "of" expected.
+# Error: COMP96_0018: clc.vhd : (41, 24): Identifier expected.
+# Compile failure 12 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/clc.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Compile Architecture "arh" of Entity "clc"
+# Error: COMP96_0015: clc.vhd : (30, 5): ';' expected.
+# Error: COMP96_0015: clc.vhd : (35, 11): ';' expected.
+# Error: COMP96_0019: clc.vhd : (35, 11): Keyword "end" expected.
+# Error: COMP96_0019: clc.vhd : (36, 9): Keyword "case" expected.
+# Error: COMP96_0036: clc.vhd : (36, 11): Boolean expression expected.
+# Error: COMP96_0019: clc.vhd : (38, 4): Keyword "end" expected.
+# Error: COMP96_0015: clc.vhd : (39, 8): ';' expected.
+# Error: COMP96_0016: clc.vhd : (39, 12): Design unit declaration expected.
+# Error: COMP96_0019: clc.vhd : (41, 24): Keyword "of" expected.
+# Error: COMP96_0018: clc.vhd : (41, 24): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/clc.vhd
+# Compile...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Entity `clc' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "clc"
+# Error: COMP96_0015: clc.vhd : (35, 11): ';' expected.
+# Error: COMP96_0019: clc.vhd : (35, 11): Keyword "end" expected.
+# Error: COMP96_0019: clc.vhd : (36, 9): Keyword "case" expected.
+# Error: COMP96_0036: clc.vhd : (36, 11): Boolean expression expected.
+# Error: COMP96_0019: clc.vhd : (38, 4): Keyword "end" expected.
+# Error: COMP96_0015: clc.vhd : (39, 8): ';' expected.
+# Error: COMP96_0016: clc.vhd : (39, 12): Design unit declaration expected.
+# Error: COMP96_0019: clc.vhd : (41, 24): Keyword "of" expected.
+# Error: COMP96_0018: clc.vhd : (41, 24): Identifier expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/clc.vhd
+# Compile...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Entity `clc' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "clc"
+# Error: COMP96_0015: clc.vhd : (35, 11): ';' expected.
+# Error: COMP96_0019: clc.vhd : (35, 11): Keyword "end" expected.
+# Error: COMP96_0019: clc.vhd : (36, 9): Keyword "case" expected.
+# Error: COMP96_0036: clc.vhd : (36, 11): Boolean expression expected.
+# Error: COMP96_0019: clc.vhd : (38, 4): Keyword "end" expected.
+# Error: COMP96_0015: clc.vhd : (39, 8): ';' expected.
+# Error: COMP96_0016: clc.vhd : (39, 12): Design unit declaration expected.
+# Error: COMP96_0019: clc.vhd : (41, 24): Keyword "of" expected.
+# Error: COMP96_0018: clc.vhd : (41, 24): Identifier expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/clc.vhd
+# Compile...
+# File: D:\designshdl\CRET\clc\src\clc.vhd
+# Compile Entity "clc"
+# Entity `clc' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "clc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  clc arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 8:41 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: clc (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: Design "mux3" has been set as active.

@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\39_Sumator_Scazator\Sumator_Scazator\src\sumator_scazator.vhd" 
+MESSAGE "Compile Entity "ss"" 
+MESSAGE "Entity `ss' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "ss"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

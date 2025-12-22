@@ -1,0 +1,6 @@
+32
+~E 1 "./compile/demultiplexor.vhd" 25 demultiplexor
+~A 1 "./compile/demultiplexor.vhd" 34 demultiplexor
+~E 1 "./compile/dm.vhd" 25 dm
+~A 1 "./compile/dm.vhd" 34 dm
+~E 0 "" 0 dmux

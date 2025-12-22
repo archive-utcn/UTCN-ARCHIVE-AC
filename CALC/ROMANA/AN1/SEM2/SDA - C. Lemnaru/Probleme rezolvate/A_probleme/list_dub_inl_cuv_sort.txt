@@ -1,0 +1,179 @@
+typedef struct tip_nod{
+
+    char cuvant[10];
+    int frecv;
+    struct tip_nod *urm;
+    struct tip_nod *pred;
+
+} LISTA;
+
+LISTA *prim, *ultim;
+
+int citesteCuvinte(int);
+void insert(LISTA *);
+LISTA *cautare(char key[10]);
+
+
+int sortare(){
+
+  LISTA *p, *q;
+  int auxf;
+  char auxc[10];
+
+
+  p = prim;
+  q = p -> urm;
+
+  while(p -> urm != 0){
+    while(q != 0){
+
+       if (q -> frecv >= p -> frecv){
+
+            strcpy(auxc, p -> cuvant);
+            auxf = p -> frecv;
+
+            strcpy(p -> cuvant, q -> cuvant);
+            p -> frecv = q -> frecv;
+
+            strcpy(q -> cuvant, auxc);
+            q -> frecv  = auxf;
+       }
+
+       q = q -> urm;
+
+    }
+
+    p = p -> urm;
+
+  }
+
+}
+
+int citesteCuvinte(int nr){
+
+  int i;
+  char cuv[10];
+  LISTA *p, *c;
+
+  for(i = 0; i < nr; i++){
+
+     printf("Cuvant: ");
+     scanf("%s", cuv);
+
+
+  // verific daca cuvantul exista
+  c = cautare(cuv);
+  if(c == 0){
+
+     p = (LISTA *)malloc(sizeof(LISTA));
+     strcpy(p -> cuvant, cuv);
+     p -> frecv = 1;
+
+     insert(p);
+
+  }
+  else {
+
+     c -> frecv = c -> frecv + 1;
+
+  }
+  }//endFor
+}
+
+
+void insert(LISTA *p){
+
+   if(prim == 0){
+
+     prim = p;
+     ultim = p;
+     p -> urm = 0;
+     p -> pred = 0;
+
+   }
+   else{
+
+     ultim -> urm = p;
+     p -> pred = ultim;
+     p -> urm = 0;
+     p -> pred = ultim;
+     ultim = p;
+
+   }
+
+}
+
+
+LISTA *cautare(char key[10]){
+
+  LISTA *p;
+
+  p = prim;
+
+  while(p != 0){
+
+      if(strcmp(p -> cuvant, key) == 0)
+         return p;
+      p = p -> urm;
+
+  }
+
+  return 0;
+
+}
+
+void afisare(LISTA **prim){
+
+  LISTA *p;
+
+  p = *prim;
+  if(p == 0){
+    printf("Lista e vida");
+    return;
+  }
+
+  while(p != 0){
+
+    printf("%s : %d \n", p -> cuvant, p -> frecv);
+    p = p -> urm;
+
+  }
+
+}
+
+void afisareInvers(LISTA **ultim){
+
+  LISTA *p;
+
+  p = *ultim;
+
+  if(p == 0){
+    printf("Lista e vida");
+    return;
+  }
+
+  while(p != 0){
+
+    printf("%s : %d \n", p -> cuvant, p -> frecv);
+    p = p -> pred;
+
+  }
+
+}
+
+int main(){
+
+  int nrCuvinte = 0;
+
+  printf("Dati nr de cuvinte: ");
+  scanf("%d", &nrCuvinte);
+
+  citesteCuvinte(nrCuvinte);
+
+  afisare(&prim);
+  printf("=================\n");
+  sortare();
+  afisare(&prim);
+  afisareInvers(&ultim);
+
+}

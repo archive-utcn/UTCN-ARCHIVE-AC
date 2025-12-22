@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\project-darabok\automat_bancar\main.ncd
+OUTFILE=F:\project-darabok\automat_bancar\main.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=F:\project-darabok\automat_bancar
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,43 @@
+typedef struct{
+int an,luna,zi;}
+data;
+typedef struct{
+char nume[40];
+data data_n;
+char adresa[40];
+}student;
+void afisare(student p[],int n)
+{int i;
+printf("Afisare studenti:\n");
+for (i=0;i<n;i++){
+printf("%-30s  %d.%02d.%02d  %s\n",p[i].nume,p[i].data_n.an,p[i].data_n.luna,p[i].data_n.zi,p[i].adresa);
+}
+}
+void sortare(student p[],int n)
+{student aux;
+int i,j,k;
+for (i=0;i<n-1;i++){
+for (j=i;j<n;j++)
+{
+if (k=strncmp(p[i].nume,p[j].nume,4)>0)
+{aux=p[i];
+p[i]=p[j];
+p[j]=aux;}}}}
+void main()
+{student st[20];
+int i,n;
+printf("Cati studenti vreti sa introduceti?\n");
+scanf("%d",&n);
+for (i=0;i<n;i++)
+{printf("Nume: ");
+scanf("%s",&st[i].nume);
+printf("Data nasterii: ");
+scanf("%d.%d.%d",&st[i].data_n.an,&st[i].data_n.luna,&st[i].data_n.zi);
+printf("Adresa: ");
+scanf("%s",&st[i].adresa);
+printf("\n");}
+afisare(st,n);
+printf("\n\nStudentii dupa sortare:\n\n");
+sortare(st,n);
+afisare(st,n);
+return 0;}

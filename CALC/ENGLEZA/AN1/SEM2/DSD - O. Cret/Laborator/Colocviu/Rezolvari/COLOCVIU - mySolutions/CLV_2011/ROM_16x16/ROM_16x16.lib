@@ -1,0 +1,13 @@
+timestamp=1495489672456
+
+[~A]
+./src/ROM_16x16.vhd~MEMORIE_ROM_16X16=0*0*325
+./src/ROM_16x16.vhd~arhMEMORIE_ROM_16x16=0*402*1092
+ModifyID=9
+Version=73
+
+[~MFT]
+0=0|0ROM_16x16.mgf|1092|0
+
+[~U]
+

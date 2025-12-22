@@ -1,0 +1,43 @@
+
+entity
+std_logic; in  ( X, Clk, Reset :  port
+std_logic );                       out Y             : 
+MealyAutomaton; end entity
+is MealyAutomaton of Behavioral architecture
+(A, B, C); is State_Type type
+CurrentState : State_Type; signal
+NextState : State_Type; signal
+begin
+(Clk, Reset) process FlipFlops:
+begin
+then (Reset = '0')  if
+CurrentState <= A;
+then Clk = '1') and (Clk'event elsif
+CurrentState <= NextState;
+end if; 
+end process
+
+CombLogic: process(CurrentState, X)
+is CurrentState case
+then (X = '1')  if A =>  when
+Y <= '0';
+NextState <= A;
+else
+Y <= '1';
+NextState <= B;
+; end if
+B => Y <= '1'; when
+then (X = '1')  if
+NextState <= C;
+else
+NextState <= B;
+; end if
+C => NextState <= A; when
+then (X = '1') if
+Y <= '0';
+else
+Y <= '1';
+; end if
+;   end case
+; end process
+Behavioral

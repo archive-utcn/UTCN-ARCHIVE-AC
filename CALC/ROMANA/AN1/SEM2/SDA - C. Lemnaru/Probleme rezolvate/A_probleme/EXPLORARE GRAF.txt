@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <conio.h>
+#include<stdlib.h>
+
+//3.3. Pentru un graf reprezentat prin matricea de adiacente, sa se implementeze algoritmii de traversare prezentati
+// în paragrafele 2.3.(explorare in largime) si  2.4.(explorare in adancime).
+
+FILE *fis;
+int a[50][50],n;
+int viz[50], viz2[50];
+
+void citire ()
+{
+    char s[20];
+    int i,j;
+        printf(" Numele fisierului= "); scanf(" %s",&s);
+        fis=fopen(s,"r");
+    if(fis==NULL)
+    {
+        printf("Nu exista fisierul");
+        exit(1);
+    }
+    fscanf(fis,"%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            fscanf(fis,"%d",&a[i][j]);
+            printf("%d",a[i][j]);
+        }
+        printf("\n");
+    }
+    fclose(fis);
+}
+
+ void BFS( int nod) // explorare in largime
+ {
+     int pi,ps,v[100],i;
+     pi=1; ps=1;
+     v[pi]=nod;
+     printf("%d",nod);
+     viz[nod]=1;
+     while(pi<=ps)
+     {
+         for(i=1;i<=n;i++)
+         if((viz[i]==0)&&(a[nod][i]==1))
+         {
+             ps++;
+             viz[i]=1;
+             printf("%d",i);
+             v[ps]=i;
+         }
+         pi++;
+         nod=v[pi];
+     }
+ }
+
+ void DFS( int nod) //explorare in adancime
+ {
+     int i;
+     viz2[nod]=1;
+     printf("%d",nod);
+     for(i=1;i<=n;i++)
+      if( (viz2[i]==0) && (a[nod][i]==1))
+       DFS(i);
+ }
+
+ int main()
+ {
+     citire();
+     printf("\n");
+     BFS(1);
+     printf("\n");
+     DFS(3);
+     return 0;
+ }

@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\reg_uni_shift\library.cfg"  -j "d:\designshdl\reg_uni_shift\sumator_scazator\projlib.cfg"  -d "d:\designshdl\reg_uni_shift\sumator_scazator\compile\"  -work sumator_scazator -dbg -e 100 "d:\designshdl\reg_uni_shift\sumator_scazator\src\sum_Scz.vhd" 

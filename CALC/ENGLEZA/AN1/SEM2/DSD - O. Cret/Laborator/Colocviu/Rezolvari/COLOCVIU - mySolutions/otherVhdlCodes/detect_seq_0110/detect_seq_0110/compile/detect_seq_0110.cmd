@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\detect_seq_0110\library.cfg"  -j "d:\designshdl\detect_seq_0110\detect_seq_0110\projlib.cfg"  -d "d:\designshdl\detect_seq_0110\detect_seq_0110\compile\"  -work detect_seq_0110 -dbg -e 100 "d:\designshdl\detect_seq_0110\detect_seq_0110\src\detect_seq_0110.vhd" 

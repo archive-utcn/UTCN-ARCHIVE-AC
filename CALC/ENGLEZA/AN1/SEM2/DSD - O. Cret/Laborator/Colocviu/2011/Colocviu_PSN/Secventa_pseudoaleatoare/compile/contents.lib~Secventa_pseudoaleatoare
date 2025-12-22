@@ -1,0 +1,7 @@
+84
+~E 1 "./src/Pseudo.vhd" 6 pseudo
+~A 1 "./src/Pseudo.vhd" 11 arh_str
+~E 1 "./src/Clock.vhd" 1 clock
+~A 1 "./src/Clock.vhd" 5 clk_clk
+~E 1 "./src/Shifter.vhd" 1 shifter
+~A 1 "./src/Shifter.vhd" 6 arh_shift

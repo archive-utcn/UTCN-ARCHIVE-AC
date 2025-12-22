@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\11_Structural_Comparator\Structural_Comparator\src\comparator.vhd" 
+MESSAGE "Compile Entity "comparator"" 
+MESSAGE "Entity `comparator' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arch" of Entity "comparator"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

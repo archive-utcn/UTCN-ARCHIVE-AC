@@ -1,0 +1,4979 @@
+(DELAYFILE
+ (SDFVERSION "2.1")
+ (DESIGN "Fpga_1")
+ (DATE "Thu Apr 22 17:50:43 1999")
+ (VENDOR "Actel")
+ (PROGRAM "Designer Series (tm) Development System, Release R3-1998 3.3.1.8. Copyright (C) 1989-1998 Actel Corp. ")
+ (VERSION "R3-1998 3.3.1.8")
+ (DIVIDER /)
+ (VOLTAGE 5.25:5.00:4.75)
+ (PROCESS "WORST")
+ (TEMPERATURE 0:25:70)
+ (TIMESCALE 100ps)
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix483)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (3:6:7))
+     (PORT G (1:3:4) (2:4:4))
+     (IOPATH D Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix211)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (4:9:11) (4:8:10))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix512)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:32))
+     (IOPATH G Q (15:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix170)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (5:11:13))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:32:37) (14:29:34))
+     (IOPATH G Q (15:32:37) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx45)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (0:0:0) (0:0:0))
+     (IOPATH D0 Y (10:21:24) (9:18:21))
+     (IOPATH D1 Y (10:21:25) (9:18:20))
+     (IOPATH D2 Y (10:21:25) (9:18:20))
+     (IOPATH D3 Y (10:21:24) (9:18:20))
+     (IOPATH S0 Y (14:29:34) (11:23:26))
+     (IOPATH S1 Y (12:26:30) (11:21:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix451)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix378)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (4:9:11))
+     (PORT G (3:6:7) (3:6:7))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_1_1)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (2:4:4))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (23:48:56) (20:40:47))
+     (IOPATH G Q (23:48:56) (20:40:47))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix95)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix288)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "AOI1B")
+  (INSTANCE u1_nx1842)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (5:10:12) (7:14:17))
+     (PORT B (2:5:5) (1:3:4))
+     (PORT C (0:0:0) (0:0:0))
+     (IOPATH A Y (14:30:35) (14:29:34))
+     (IOPATH B Y (14:30:35) (14:29:34))
+     (IOPATH C Y (13:27:32) (11:23:27))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1793)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (14:28:33) (14:29:35))
+     (PORT G (8:17:20) (7:14:17))
+     (IOPATH A Q (14:30:35) (14:28:33))
+     (IOPATH B Q (14:30:35) (14:28:33))
+     (IOPATH S Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix183)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (7:14:17) (7:14:17))
+     (IOPATH PAD Y (12:23:27) (12:24:28))
+     (IOPATH D PAD (15:31:37) (19:38:46))
+     (IOPATH E PAD (20:41:51) (35:70:83))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_6_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (3:5:6) (4:9:11))
+     (PORT CLR (0:1:1) (0:0:0))
+     (PORT CLK (0:0:0) (0:0:0))
+     (IOPATH CLR Q (12:26:30) (11:23:27))
+     (IOPATH CLK Q (12:26:30) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR3")
+  (INSTANCE u1_ix4486_nx553)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:3) (3:5:6))
+     (PORT B (6:13:15) (6:13:15))
+     (PORT C (1:2:3) (1:2:3))
+     (IOPATH A Y (22:46:54) (22:44:52))
+     (IOPATH B Y (22:44:53) (20:41:48))
+     (IOPATH C Y (21:44:52) (20:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix548)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (3:7:8))
+     (PORT G (1:3:4) (2:4:4))
+     (IOPATH D Q (15:32:37) (15:30:35))
+     (IOPATH G Q (15:32:37) (15:30:35))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix231)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (18:37:44) (13:28:33))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_159_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (2:4:4) (1:2:3))
+     (PORT S1 (7:14:17) (9:18:22))
+     (IOPATH D0 Y (12:24:28) (11:22:26))
+     (IOPATH D1 Y (12:24:29) (11:22:25))
+     (IOPATH D2 Y (12:24:29) (11:22:25))
+     (IOPATH D3 Y (12:24:28) (11:22:25))
+     (IOPATH S0 Y (16:32:38) (13:27:31))
+     (IOPATH S1 Y (14:29:34) (13:25:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR3")
+  (INSTANCE u1_ix4486_nx545)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (4:8:10) (2:4:4))
+     (PORT B (8:16:19) (6:12:14))
+     (PORT C (2:5:5) (2:5:5))
+     (IOPATH A Y (21:42:49) (18:36:43))
+     (IOPATH B Y (21:42:49) (18:36:43))
+     (IOPATH C Y (21:42:49) (18:36:43))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix305)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (8:16:19) (4:8:10))
+     (PORT G (10:20:24) (10:20:24))
+     (IOPATH D Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix195)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (15:31:37) (19:38:46))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix394)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:12:14) (3:7:8))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix71)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (4:8:9))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (11:24:27) (11:22:26))
+     (IOPATH G Q (11:24:27) (11:22:26))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_2_0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (18:38:44) (16:33:38))
+     (IOPATH G Q (18:38:44) (16:33:38))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix455)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (2:5:5))
+     (PORT G (4:8:10) (4:9:11))
+     (IOPATH D Q (12:25:29) (11:22:26))
+     (IOPATH G Q (12:25:29) (11:22:26))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix231)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:7:8) (1:2:2))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:26:30) (11:23:27))
+     (IOPATH G Q (12:26:30) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix161)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3B")
+  (INSTANCE u1_ix4486_nx541)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:3:4) (0:0:0))
+     (PORT B (3:7:8) (3:7:8))
+     (PORT C (6:12:14) (4:9:11))
+     (IOPATH A Y (19:39:45) (16:33:39))
+     (IOPATH B Y (19:39:45) (16:33:39))
+     (IOPATH C Y (18:38:44) (17:34:40))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix532)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (4:9:11))
+     (PORT G (1:2:3) (1:2:3))
+     (IOPATH D Q (15:32:37) (15:30:35))
+     (IOPATH G Q (15:32:37) (15:30:35))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix203)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:26:30) (13:25:29))
+     (IOPATH G Q (12:26:30) (13:25:29))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx46)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (0:0:0) (0:0:0))
+     (IOPATH D0 Y (10:20:23) (8:17:21))
+     (IOPATH D1 Y (10:20:24) (8:17:20))
+     (IOPATH D2 Y (10:20:24) (8:17:20))
+     (IOPATH D3 Y (10:20:23) (8:17:20))
+     (IOPATH S0 Y (14:28:33) (10:22:26))
+     (IOPATH S1 Y (12:25:29) (10:20:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix370)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:12:14) (3:7:8))
+     (PORT G (10:20:24) (10:20:24))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix528)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (0:1:1))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:32:37) (14:29:34))
+     (IOPATH G Q (15:32:37) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_0_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (1:3:4))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (22:46:54) (20:41:48))
+     (IOPATH G Q (22:46:54) (20:41:48))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix158)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix443)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:25:29))
+     (IOPATH G Q (13:28:33) (13:25:29))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR3")
+  (INSTANCE u1_ix4486_nx525)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:3:4) (3:7:8))
+     (PORT B (0:0:0) (0:1:1))
+     (PORT C (0:0:0) (0:0:0))
+     (IOPATH A Y (21:42:51) (19:39:46))
+     (IOPATH B Y (21:44:52) (21:42:50))
+     (IOPATH C Y (20:42:50) (19:37:45))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OR3A")
+  (INSTANCE u1_nx4482)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (6:12:14) (7:14:16))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT C (2:5:5) (1:3:4))
+     (IOPATH A Y (17:36:42) (16:31:38))
+     (IOPATH B Y (16:33:39) (14:28:33))
+     (IOPATH C Y (20:41:48) (16:33:39))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_161_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (3:7:8) (0:0:0))
+     (PORT S1 (5:11:13) (5:10:12))
+     (IOPATH D0 Y (13:28:33) (13:27:31))
+     (IOPATH D1 Y (13:28:33) (13:27:31))
+     (IOPATH D2 Y (13:28:33) (13:27:31))
+     (IOPATH D3 Y (13:28:33) (13:27:31))
+     (IOPATH S0 Y (13:28:33) (13:27:31))
+     (IOPATH S1 Y (13:28:33) (13:27:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix205)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (11:21:25) (10:20:24))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3")
+  (INSTANCE u2_nx107)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (4:8:9) (3:6:7))
+     (PORT B (6:11:13) (4:9:11))
+     (PORT C (2:4:4) (3:6:7))
+     (IOPATH A Y (0:0:0) (0:0:0))
+     (IOPATH B Y (0:0:0) (0:0:0))
+     (IOPATH C Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix406)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (1:3:4))
+     (PORT G (4:9:11) (4:9:11))
+     (IOPATH D Q (12:26:30) (12:24:27))
+     (IOPATH G Q (12:26:30) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix248)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (7:14:16) (6:13:15))
+     (PORT G (3:6:7) (3:6:7))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR3")
+  (INSTANCE u1_ix4486_nx557)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (8:16:19) (6:12:14))
+     (PORT B (6:12:14) (1:2:2))
+     (PORT C (1:2:3) (1:2:2))
+     (IOPATH A Y (20:41:48) (18:36:43))
+     (IOPATH B Y (20:41:48) (18:36:43))
+     (IOPATH C Y (20:41:48) (18:36:43))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix459)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (2:5:5))
+     (PORT G (2:5:5) (2:5:5))
+     (IOPATH D Q (12:26:30) (12:24:27))
+     (IOPATH G Q (12:26:30) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR2")
+  (INSTANCE u1_ix4486_nx521)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:1:1) (0:0:0))
+     (PORT B (1:2:2) (0:0:0))
+     (IOPATH A Y (19:40:47) (20:39:47))
+     (IOPATH B Y (18:38:45) (18:34:42))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix232)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:2) (0:0:0))
+     (IOPATH A Y (23:46:55) (15:31:36))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE ix219)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:2) (0:1:1))
+     (IOPATH A Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix173)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (13:25:30) (12:25:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx52)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (1:2:3) (0:1:1))
+     (IOPATH D0 Y (10:20:23) (8:17:21))
+     (IOPATH D1 Y (10:20:24) (8:17:20))
+     (IOPATH D2 Y (10:20:24) (8:17:20))
+     (IOPATH D3 Y (10:20:23) (8:17:20))
+     (IOPATH S0 Y (14:28:33) (10:22:26))
+     (IOPATH S1 Y (12:23:28) (9:20:24))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix194)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (15:31:37) (19:38:46))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix504)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (2:5:5))
+     (PORT G (7:15:18) (7:15:18))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix159)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (13:26:31) (13:26:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix182)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (7:14:17) (7:14:17))
+     (IOPATH PAD Y (13:25:29) (13:26:31))
+     (IOPATH D PAD (15:31:37) (19:38:46))
+     (IOPATH E PAD (20:41:51) (35:70:83))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix190)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (4:9:11))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_161_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (1:2:2) (1:3:4))
+     (PORT S1 (3:6:7) (5:10:12))
+     (IOPATH D0 Y (11:23:27) (10:20:24))
+     (IOPATH D1 Y (11:23:28) (10:20:23))
+     (IOPATH D2 Y (11:23:28) (10:20:23))
+     (IOPATH D3 Y (11:23:27) (10:20:23))
+     (IOPATH S0 Y (13:26:32) (11:23:27))
+     (IOPATH S1 Y (15:31:37) (12:25:29))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix187)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (7:14:17) (7:14:17))
+     (IOPATH PAD Y (12:23:27) (12:24:28))
+     (IOPATH D PAD (15:31:37) (19:38:46))
+     (IOPATH E PAD (20:41:51) (35:70:83))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix317)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (8:16:19) (4:8:10))
+     (PORT G (6:11:13) (6:11:13))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix201)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (9:18:21) (8:17:20))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix114)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (7:15:18) (6:13:15))
+     (PORT G (2:4:4) (2:5:5))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix234)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (23:46:55) (16:34:40))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_160_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (1:3:4))
+     (PORT S1 (4:8:9) (4:9:11))
+     (IOPATH D0 Y (12:24:28) (10:20:24))
+     (IOPATH D1 Y (12:24:29) (10:20:23))
+     (IOPATH D2 Y (12:24:29) (10:20:23))
+     (IOPATH D3 Y (12:24:28) (10:20:23))
+     (IOPATH S0 Y (16:32:38) (12:25:29))
+     (IOPATH S1 Y (14:27:33) (11:23:27))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix199)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (1:3:4))
+     (PORT G (2:5:5) (2:5:5))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix246)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (21:43:51) (16:33:39))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix422)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:7:8) (0:1:1))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix188)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (0:0:0) (0:0:0))
+     (IOPATH PAD Y (12:23:27) (11:23:27))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+     (IOPATH E PAD (20:42:52) (36:72:86))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_2_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (3:5:6) (4:9:11))
+     (PORT CLR (0:1:1) (0:0:0))
+     (PORT CLK (0:0:0) (0:0:0))
+     (IOPATH CLR Q (12:26:30) (11:23:27))
+     (IOPATH CLK Q (12:26:30) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix142)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (4:8:9))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_158_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (3:6:7) (1:2:2))
+     (PORT S1 (2:5:5) (1:3:4))
+     (IOPATH D0 Y (13:28:33) (13:27:31))
+     (IOPATH D1 Y (13:28:33) (13:27:31))
+     (IOPATH D2 Y (13:28:33) (13:27:31))
+     (IOPATH D3 Y (13:28:33) (13:27:31))
+     (IOPATH S0 Y (13:28:33) (13:27:31))
+     (IOPATH S1 Y (13:28:33) (13:27:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix175)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:11:13) (3:5:6))
+     (PORT G (10:20:24) (10:20:24))
+     (IOPATH D Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix540)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (3:7:8))
+     (PORT G (2:5:5) (3:5:6))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix463)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:26:30) (12:24:27))
+     (IOPATH G Q (12:26:30) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix349)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:3:4) (3:5:6))
+     (PORT G (3:5:6) (3:6:7))
+     (IOPATH D Q (15:30:35) (14:28:32))
+     (IOPATH G Q (15:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix337)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:3:4) (3:5:6))
+     (PORT G (1:2:3) (1:2:3))
+     (IOPATH D Q (15:31:36) (14:29:34))
+     (IOPATH G Q (15:31:36) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix134)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (9:18:22) (5:10:12))
+     (PORT G (2:4:4) (1:3:4))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx49)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (1:2:3) (0:1:1))
+     (IOPATH D0 Y (10:20:23) (8:17:21))
+     (IOPATH D1 Y (10:20:24) (8:17:20))
+     (IOPATH D2 Y (10:20:24) (8:17:20))
+     (IOPATH D3 Y (10:20:23) (8:17:20))
+     (IOPATH S0 Y (14:28:33) (10:22:26))
+     (IOPATH S1 Y (12:23:28) (9:20:24))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix172)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:19:22) (9:19:23))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix227)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (2:4:4))
+     (PORT G (0:1:1) (1:2:2))
+     (IOPATH D Q (12:26:30) (11:23:27))
+     (IOPATH G Q (12:26:30) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix202)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (11:22:26) (11:21:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_162_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (0:1:1))
+     (PORT S1 (4:8:9) (4:9:11))
+     (IOPATH D0 Y (12:25:29) (10:21:25))
+     (IOPATH D1 Y (12:25:30) (10:21:24))
+     (IOPATH D2 Y (12:25:30) (10:21:24))
+     (IOPATH D3 Y (12:25:29) (10:21:24))
+     (IOPATH S0 Y (16:33:39) (12:26:30))
+     (IOPATH S1 Y (14:28:34) (11:24:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix268)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:2) (3:6:7))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (15:30:35) (14:28:32))
+     (IOPATH G Q (15:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_3_0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (1:2:3))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (21:43:51) (20:40:47))
+     (IOPATH G Q (21:43:51) (20:40:47))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix196)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix122)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (1:3:4))
+     (PORT G (6:11:13) (6:11:13))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix189)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (0:0:0) (0:0:0))
+     (IOPATH PAD Y (12:23:27) (12:24:28))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+     (IOPATH E PAD (20:42:52) (36:72:86))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix177)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix487)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (3:6:7))
+     (PORT G (0:1:1) (1:2:2))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE ix230)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix520)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (2:5:5))
+     (PORT G (4:8:10) (4:9:11))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix296)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (2:4:4))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_1_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (2:5:5))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (27:55:65) (23:46:54))
+     (IOPATH G Q (27:55:65) (23:46:54))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix516)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix329)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (8:16:19) (4:8:10))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix313)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:12:14) (5:11:13))
+     (PORT G (3:6:7) (3:6:7))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix410)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (0:0:0))
+     (PORT G (6:12:14) (6:12:14))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix238)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:2) (0:0:0))
+     (IOPATH A Y (23:47:56) (16:33:39))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix398)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (12:26:30) (12:24:27))
+     (IOPATH G Q (12:26:30) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix165)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (19:38:45) (19:38:45))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_2_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (2:4:4))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (18:37:44) (17:34:40))
+     (IOPATH G Q (18:37:44) (17:34:40))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix552)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (3:7:8))
+     (PORT G (0:1:1) (1:2:2))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE ix229)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix341)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix233)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (18:37:44) (14:29:34))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix471)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (4:8:9))
+     (PORT G (4:9:11) (4:8:10))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix204)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (11:21:25) (11:21:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1829)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (1:2:2))
+     (PORT S (17:34:40) (10:21:25))
+     (PORT G (8:17:20) (7:14:17))
+     (IOPATH A Q (14:30:35) (13:27:31))
+     (IOPATH B Q (14:30:35) (13:27:31))
+     (IOPATH S Q (14:30:35) (13:27:31))
+     (IOPATH G Q (14:30:35) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_158_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (0:0:0))
+     (PORT S1 (0:0:0) (0:0:0))
+     (IOPATH D0 Y (12:25:29) (10:21:25))
+     (IOPATH D1 Y (12:25:30) (10:21:24))
+     (IOPATH D2 Y (12:25:30) (10:21:24))
+     (IOPATH D3 Y (12:25:29) (10:21:24))
+     (IOPATH S0 Y (16:33:39) (12:26:30))
+     (IOPATH S1 Y (14:28:34) (11:24:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix59)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (3:6:7))
+     (PORT G (3:6:7) (3:7:8))
+     (IOPATH D Q (11:24:27) (11:22:26))
+     (IOPATH G Q (11:24:27) (11:22:26))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix536)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (4:9:11))
+     (PORT G (4:9:11) (4:8:10))
+     (IOPATH D Q (15:30:35) (14:29:34))
+     (IOPATH G Q (15:30:35) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix333)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:27:31) (13:25:29))
+     (IOPATH G Q (13:27:31) (13:25:29))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix430)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (0:0:0))
+     (PORT G (1:2:2) (1:2:2))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_163_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (4:9:11) (5:10:12))
+     (PORT S1 (5:11:13) (5:11:13))
+     (IOPATH D0 Y (11:23:27) (10:21:25))
+     (IOPATH D1 Y (11:23:28) (10:21:24))
+     (IOPATH D2 Y (11:23:28) (10:21:24))
+     (IOPATH D3 Y (11:23:27) (10:21:24))
+     (IOPATH S0 Y (15:31:37) (12:26:30))
+     (IOPATH S1 Y (13:26:32) (11:24:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix75)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx50)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (0:0:0) (0:0:0))
+     (IOPATH D0 Y (10:20:23) (8:17:21))
+     (IOPATH D1 Y (10:20:24) (8:17:20))
+     (IOPATH D2 Y (10:20:24) (8:17:20))
+     (IOPATH D3 Y (10:20:23) (8:17:20))
+     (IOPATH S0 Y (14:28:33) (10:22:26))
+     (IOPATH S1 Y (12:25:29) (10:20:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix447)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (11:24:27) (11:23:27))
+     (IOPATH G Q (11:24:27) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix321)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (8:16:19) (4:8:10))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (11:24:27) (11:22:26))
+     (IOPATH G Q (11:24:27) (11:22:26))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix162)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (5:11:13))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix215)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (23:45:53) (25:50:60))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix560)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (1:2:2) (1:2:2))
+     (IOPATH D Q (15:32:37) (14:29:34))
+     (IOPATH G Q (15:32:37) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix475)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (3:6:7))
+     (PORT G (2:5:5) (3:5:6))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix390)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:7:8) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:25:29) (11:22:26))
+     (IOPATH G Q (12:25:29) (11:22:26))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3B")
+  (INSTANCE u1_ix4486_nx549)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (1:2:2))
+     (PORT B (6:13:15) (6:13:15))
+     (PORT C (1:3:4) (3:7:8))
+     (IOPATH A Y (20:42:50) (19:37:45))
+     (IOPATH B Y (21:42:51) (19:39:46))
+     (IOPATH C Y (23:47:56) (19:39:46))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix164)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (13:25:30) (12:25:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx47)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (1:2:3) (0:1:1))
+     (IOPATH D0 Y (10:20:23) (8:17:21))
+     (IOPATH D1 Y (10:20:24) (8:17:20))
+     (IOPATH D2 Y (10:20:24) (8:17:20))
+     (IOPATH D3 Y (10:20:23) (8:17:20))
+     (IOPATH S0 Y (14:28:33) (10:22:26))
+     (IOPATH S1 Y (12:23:28) (9:20:24))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix382)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:12:14) (3:7:8))
+     (PORT G (6:11:13) (6:11:13))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix87)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (1:3:4))
+     (PORT G (3:7:8) (4:8:9))
+     (IOPATH D Q (14:29:34) (14:28:32))
+     (IOPATH G Q (14:29:34) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix200)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (11:22:26) (11:21:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix160)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_163_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (6:13:15) (4:8:9))
+     (PORT S1 (4:8:9) (6:12:14))
+     (IOPATH D0 Y (11:23:27) (10:20:24))
+     (IOPATH D1 Y (11:23:28) (10:20:23))
+     (IOPATH D2 Y (11:23:28) (10:20:23))
+     (IOPATH D3 Y (11:23:27) (10:20:23))
+     (IOPATH S0 Y (15:31:37) (12:25:29))
+     (IOPATH S1 Y (13:28:33) (12:23:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3B")
+  (INSTANCE u1_ix4486_nx529)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:3) (2:5:5))
+     (PORT B (3:6:7) (5:11:13))
+     (PORT C (8:17:20) (5:11:13))
+     (IOPATH A Y (21:43:50) (19:38:46))
+     (IOPATH B Y (22:43:51) (19:40:47))
+     (IOPATH C Y (24:48:56) (19:40:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_161_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (1:3:4))
+     (PORT S1 (4:8:9) (4:9:11))
+     (IOPATH D0 Y (12:24:28) (10:20:24))
+     (IOPATH D1 Y (12:24:29) (10:20:23))
+     (IOPATH D2 Y (12:24:29) (10:20:23))
+     (IOPATH D3 Y (12:24:28) (10:20:23))
+     (IOPATH S0 Y (16:32:38) (12:25:29))
+     (IOPATH S1 Y (14:27:33) (11:23:27))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix479)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (4:8:9))
+     (PORT G (3:5:6) (3:6:7))
+     (IOPATH D Q (15:30:35) (14:28:32))
+     (IOPATH G Q (15:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix418)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (0:0:0))
+     (PORT G (1:3:4) (2:4:4))
+     (IOPATH D Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix280)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:2) (1:2:3))
+     (PORT G (6:12:14) (6:12:14))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix211)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:19:22) (9:19:23))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix208)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:20:24) (10:20:24))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix203)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:19:22) (9:18:22))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix63)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (3:6:7))
+     (PORT G (3:5:6) (3:5:6))
+     (IOPATH D Q (12:26:30) (12:24:27))
+     (IOPATH G Q (12:26:30) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix361)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (0:1:1))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix146)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (4:9:11) (4:9:11))
+     (IOPATH D Q (15:31:36) (14:29:34))
+     (IOPATH G Q (15:31:36) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix357)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:1:1) (1:3:4))
+     (PORT G (0:1:1) (1:2:2))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix154)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:1:1) (3:6:7))
+     (PORT G (3:7:8) (4:8:9))
+     (IOPATH D Q (15:30:35) (14:28:32))
+     (IOPATH G Q (15:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix187)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (1:2:3))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_156_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (8:17:20) (6:11:13))
+     (PORT S1 (4:8:10) (3:7:8))
+     (IOPATH D0 Y (13:28:33) (13:27:31))
+     (IOPATH D1 Y (13:28:33) (13:27:31))
+     (IOPATH D2 Y (13:28:33) (13:27:31))
+     (IOPATH D3 Y (13:28:33) (13:27:31))
+     (IOPATH S0 Y (13:28:33) (13:27:31))
+     (IOPATH S1 Y (13:28:33) (13:27:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix43)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (3:6:7))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix284)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:2) (1:2:3))
+     (PORT G (3:7:8) (4:8:9))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix467)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (4:8:9))
+     (PORT G (1:2:3) (1:2:3))
+     (IOPATH D Q (14:29:34) (14:28:33))
+     (IOPATH G Q (14:29:34) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "CLKBUF")
+  (INSTANCE ix212)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (15:31:36) (14:29:34))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix126)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (7:15:18) (6:13:15))
+     (PORT G (3:6:7) (3:7:8))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix195)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (3:6:7))
+     (PORT G (4:8:10) (4:9:11))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix240)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (9:18:22) (5:10:12))
+     (PORT G (10:20:24) (10:20:24))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix237)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (22:44:52) (16:33:39))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_158_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (3:6:7) (0:1:1))
+     (PORT S1 (0:1:1) (2:5:5))
+     (IOPATH D0 Y (11:23:27) (10:20:24))
+     (IOPATH D1 Y (11:23:28) (10:20:23))
+     (IOPATH D2 Y (11:23:28) (10:20:23))
+     (IOPATH D3 Y (11:23:27) (10:20:23))
+     (IOPATH S0 Y (15:31:37) (12:25:29))
+     (IOPATH S1 Y (13:28:33) (12:23:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1841)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (14:28:33) (14:29:35))
+     (PORT G (8:17:20) (7:14:17))
+     (IOPATH A Q (15:30:35) (14:28:32))
+     (IOPATH B Q (15:30:35) (14:28:32))
+     (IOPATH S Q (15:30:35) (14:28:32))
+     (IOPATH G Q (15:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OR2")
+  (INSTANCE ix225)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:3) (1:2:2))
+     (PORT B (3:6:7) (3:7:8))
+     (IOPATH A Y (13:26:31) (11:23:27))
+     (IOPATH B Y (17:34:40) (13:28:33))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1817)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (14:28:33) (14:29:35))
+     (PORT G (8:17:20) (7:14:17))
+     (IOPATH A Q (14:29:34) (13:27:31))
+     (IOPATH B Q (14:29:34) (13:27:31))
+     (IOPATH S Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u2_modgen_153_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (1:2:2))
+     (PORT D1 (1:2:2) (0:0:0))
+     (PORT D2 (0:1:1) (0:1:1))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (4:8:10) (3:7:8))
+     (PORT S1 (3:5:6) (3:7:8))
+     (IOPATH D0 Y (18:37:44) (16:32:37))
+     (IOPATH D1 Y (18:37:44) (16:32:37))
+     (IOPATH D2 Y (18:37:44) (16:32:37))
+     (IOPATH D3 Y (18:37:44) (16:32:37))
+     (IOPATH S0 Y (18:37:44) (16:32:37))
+     (IOPATH S1 Y (18:37:44) (16:32:37))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix252)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (9:18:22) (5:10:12))
+     (PORT G (6:11:13) (6:11:13))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_157_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (9:18:22) (6:11:13))
+     (PORT S1 (3:5:6) (4:9:11))
+     (IOPATH D0 Y (11:22:26) (10:20:24))
+     (IOPATH D1 Y (11:22:27) (10:20:23))
+     (IOPATH D2 Y (11:22:27) (10:20:23))
+     (IOPATH D3 Y (11:22:26) (10:20:23))
+     (IOPATH S0 Y (15:30:36) (12:25:29))
+     (IOPATH S1 Y (13:27:32) (12:23:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix345)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:3:4) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:30:35) (13:27:31))
+     (IOPATH G Q (14:30:35) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "AND2")
+  (INSTANCE u2_ix218_l0_l0)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (6:13:15) (5:10:12))
+     (IOPATH A Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix556)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix300)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:32))
+     (IOPATH G Q (15:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix185)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (7:14:17) (7:14:17))
+     (IOPATH PAD Y (12:23:27) (12:24:28))
+     (IOPATH D PAD (15:31:37) (19:38:46))
+     (IOPATH E PAD (20:41:51) (35:70:83))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix353)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:1:1) (1:3:4))
+     (PORT G (1:3:4) (2:4:4))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix244)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (7:14:16) (3:7:8))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix214)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:20:24) (10:20:24))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix236)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (23:46:55) (18:36:43))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_0_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (1:2:3) (3:5:6))
+     (PORT CLR (0:0:0) (0:0:0))
+     (PORT CLK (0:0:0) (0:0:0))
+     (IOPATH CLR Q (13:28:33) (13:25:29))
+     (IOPATH CLK Q (13:28:33) (13:25:29))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_156_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (5:10:12) (5:10:12))
+     (PORT S1 (9:17:21) (9:17:21))
+     (IOPATH D0 Y (11:23:27) (10:21:25))
+     (IOPATH D1 Y (11:23:28) (10:21:24))
+     (IOPATH D2 Y (11:23:28) (10:21:24))
+     (IOPATH D3 Y (11:23:27) (10:21:24))
+     (IOPATH S0 Y (15:31:37) (12:26:30))
+     (IOPATH S1 Y (13:26:32) (11:24:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix103)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (3:6:7))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:31:36) (14:28:33))
+     (IOPATH G Q (15:31:36) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix110)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (9:18:22) (5:10:12))
+     (PORT G (4:8:9) (3:7:8))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix414)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (0:0:0))
+     (PORT G (3:7:8) (4:8:9))
+     (IOPATH D Q (11:24:27) (11:23:27))
+     (IOPATH G Q (11:24:27) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix166)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (4:8:9))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (14:30:35) (13:27:31))
+     (IOPATH G Q (14:30:35) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix491)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:3) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix325)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:12:14) (5:11:13))
+     (PORT G (4:8:10) (4:9:11))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix99)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (2:5:5))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OR3B")
+  (INSTANCE ix221)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (4:8:9) (6:11:13))
+     (PORT B (5:10:12) (2:5:5))
+     (PORT C (0:1:1) (1:3:4))
+     (IOPATH A Y (16:34:40) (16:32:38))
+     (IOPATH B Y (16:34:40) (16:32:38))
+     (IOPATH C Y (16:34:40) (14:27:33))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_159_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (2:5:5))
+     (PORT S1 (6:11:13) (4:8:9))
+     (IOPATH D0 Y (11:23:27) (10:21:25))
+     (IOPATH D1 Y (11:23:28) (10:21:24))
+     (IOPATH D2 Y (11:23:28) (10:21:24))
+     (IOPATH D3 Y (11:23:27) (10:21:24))
+     (IOPATH S0 Y (13:28:33) (12:24:29))
+     (IOPATH S1 Y (15:31:37) (12:26:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix51)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (5:11:13) (2:5:5))
+     (PORT G (3:6:7) (3:6:7))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix118)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (9:18:22) (5:10:12))
+     (PORT G (3:6:7) (3:6:7))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_162_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (8:17:20) (3:6:7))
+     (PORT S1 (0:0:0) (0:0:0))
+     (IOPATH D0 Y (15:30:35) (14:28:33))
+     (IOPATH D1 Y (15:30:35) (14:28:33))
+     (IOPATH D2 Y (15:30:35) (14:28:33))
+     (IOPATH D3 Y (15:30:35) (14:28:33))
+     (IOPATH S0 Y (15:30:35) (14:28:33))
+     (IOPATH S1 Y (15:30:35) (14:28:33))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix223)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:4:4) (2:4:4))
+     (PORT G (1:3:4) (2:4:4))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DFM6A")
+  (INSTANCE u2_cnt_0_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (0:0:0))
+     (PORT S1 (3:7:8) (1:2:2))
+     (PORT CLR (1:2:3) (1:2:2))
+     (PORT CLK (0:1:1) (0:0:0))
+     (IOPATH CLR Q (18:37:44) (16:32:38))
+     (IOPATH CLK Q (18:37:44) (16:32:38))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D0 (posedge CLK) (1:3:4))
+     (HOLD D0 (posedge CLK) (0:0:0))
+     (SETUP D1 (posedge CLK) (1:3:4))
+     (HOLD D1 (posedge CLK) (0:0:0))
+     (SETUP D2 (posedge CLK) (1:3:4))
+     (HOLD D2 (posedge CLK) (0:0:0))
+     (SETUP D3 (posedge CLK) (1:3:4))
+     (HOLD D3 (posedge CLK) (0:0:0))
+     (SETUP S0 (posedge CLK) (1:3:4))
+     (HOLD S0 (posedge CLK) (0:0:0))
+     (SETUP S1 (posedge CLK) (1:3:4))
+     (HOLD S1 (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DFM6A")
+  (INSTANCE u2_cnt_2_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT S1 (2:4:4) (0:1:1))
+     (PORT CLR (1:2:3) (1:2:2))
+     (PORT CLK (0:1:1) (0:0:0))
+     (IOPATH CLR Q (17:35:41) (14:29:34))
+     (IOPATH CLK Q (17:35:41) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D0 (posedge CLK) (1:3:4))
+     (HOLD D0 (posedge CLK) (0:0:0))
+     (SETUP D1 (posedge CLK) (1:3:4))
+     (HOLD D1 (posedge CLK) (0:0:0))
+     (SETUP D2 (posedge CLK) (1:3:4))
+     (HOLD D2 (posedge CLK) (0:0:0))
+     (SETUP D3 (posedge CLK) (1:3:4))
+     (HOLD D3 (posedge CLK) (0:0:0))
+     (SETUP S0 (posedge CLK) (1:3:4))
+     (HOLD S0 (posedge CLK) (0:0:0))
+     (SETUP S1 (posedge CLK) (1:3:4))
+     (HOLD S1 (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix207)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (11:22:26) (11:21:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix184)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (7:14:17) (7:14:17))
+     (IOPATH PAD Y (12:24:28) (12:25:30))
+     (IOPATH D PAD (16:32:39) (19:39:47))
+     (IOPATH E PAD (20:41:51) (35:70:83))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix544)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (4:9:11))
+     (PORT G (3:5:6) (3:6:7))
+     (IOPATH D Q (15:31:36) (14:28:33))
+     (IOPATH G Q (15:31:36) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix130)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (7:15:18) (6:13:15))
+     (PORT G (3:5:6) (3:5:6))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix210)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:19:22) (9:19:23))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix495)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:3) (0:0:0))
+     (PORT G (1:2:2) (1:2:2))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix260)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (9:18:22) (5:10:12))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_157_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (5:10:12) (5:10:12))
+     (PORT S1 (9:17:21) (9:17:21))
+     (IOPATH D0 Y (13:25:29) (11:23:28))
+     (IOPATH D1 Y (13:25:30) (11:23:27))
+     (IOPATH D2 Y (13:25:30) (11:23:27))
+     (IOPATH D3 Y (13:25:29) (11:23:27))
+     (IOPATH S0 Y (17:33:39) (13:28:33))
+     (IOPATH S1 Y (15:28:34) (12:26:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix426)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (0:0:0))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix175)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_163_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (0:1:1))
+     (PORT S1 (0:0:0) (1:2:2))
+     (IOPATH D0 Y (12:24:28) (10:20:24))
+     (IOPATH D1 Y (12:24:29) (10:20:23))
+     (IOPATH D2 Y (12:24:29) (10:20:23))
+     (IOPATH D3 Y (12:24:28) (10:20:23))
+     (IOPATH S0 Y (16:32:38) (12:25:29))
+     (IOPATH S1 Y (14:27:33) (11:23:27))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFC1D")
+  (INSTANCE u2_reg_busy_int)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT CLR (0:1:1) (0:0:0))
+     (PORT CLK (0:0:0) (0:0:0))
+     (IOPATH CLR Q (20:42:49) (16:32:37))
+     (IOPATH CLK Q (20:42:49) (16:32:37))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge CLK) (1:3:4))
+     (HOLD D (negedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (negedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (negedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx48)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (0:0:0) (0:0:0))
+     (IOPATH D0 Y (10:21:24) (9:18:21))
+     (IOPATH D1 Y (10:21:25) (9:18:20))
+     (IOPATH D2 Y (10:21:25) (9:18:20))
+     (IOPATH D3 Y (10:21:24) (9:18:20))
+     (IOPATH S0 Y (14:29:34) (11:23:26))
+     (IOPATH S1 Y (12:26:30) (11:21:25))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "NAND2")
+  (INSTANCE u2_ix218_l0_0_l0)
+  (DELAY
+   (ABSOLUTE
+     (PORT B (0:0:0) (0:0:0))
+     (IOPATH B Y (13:29:37) (11:24:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE ix218)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (3:6:7) (0:0:0))
+     (IOPATH A Y (23:46:53) (18:37:44))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_162_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (8:17:20) (3:6:7))
+     (PORT S1 (0:0:0) (0:0:0))
+     (IOPATH D0 Y (13:28:33) (13:27:31))
+     (IOPATH D1 Y (13:28:33) (13:27:31))
+     (IOPATH D2 Y (13:28:33) (13:27:31))
+     (IOPATH D3 Y (13:28:33) (13:27:31))
+     (IOPATH S0 Y (13:28:33) (13:27:31))
+     (IOPATH S1 Y (13:28:33) (13:27:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_160_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (1:3:4))
+     (PORT S1 (4:8:9) (4:9:11))
+     (IOPATH D0 Y (12:25:29) (11:22:27))
+     (IOPATH D1 Y (12:25:30) (11:22:26))
+     (IOPATH D2 Y (12:25:30) (11:22:26))
+     (IOPATH D3 Y (12:25:29) (11:22:26))
+     (IOPATH S0 Y (16:33:39) (13:27:32))
+     (IOPATH S1 Y (14:28:34) (12:25:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "NAND2")
+  (INSTANCE ix222)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (IOPATH A Y (16:33:39) (16:33:39))
+     (IOPATH B Y (16:31:38) (14:30:35))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix138)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:2) (3:7:8))
+     (PORT G (5:10:12) (5:11:13))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix193)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (5:10:12))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix524)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (0:1:1))
+     (PORT G (2:5:5) (2:5:5))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix213)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (13:26:31) (11:23:27))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix365)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (0:1:1))
+     (PORT G (1:2:2) (1:2:2))
+     (IOPATH D Q (14:29:34) (14:28:32))
+     (IOPATH G Q (14:29:34) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix508)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix206)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (11:22:26) (11:22:26))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix264)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (7:14:16) (6:13:15))
+     (PORT G (2:4:4) (1:3:4))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR2")
+  (INSTANCE u1_ix4486_nx505)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:1:1))
+     (PORT B (0:1:1) (0:0:0))
+     (IOPATH A Y (25:51:60) (23:45:54))
+     (IOPATH B Y (26:53:62) (25:50:59))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_159_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (1:3:4))
+     (PORT S1 (9:17:21) (9:17:21))
+     (IOPATH D0 Y (12:25:29) (11:22:27))
+     (IOPATH D1 Y (12:25:30) (11:22:26))
+     (IOPATH D2 Y (12:25:30) (11:22:26))
+     (IOPATH D3 Y (12:25:29) (11:22:26))
+     (IOPATH S0 Y (16:33:39) (13:27:32))
+     (IOPATH S1 Y (14:28:34) (12:25:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3A")
+  (INSTANCE u1_ix4486_nx501)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:1:1) (1:2:2))
+     (PORT B (1:2:3) (1:2:2))
+     (PORT C (6:13:15) (4:8:10))
+     (IOPATH A Y (20:41:49) (18:36:43))
+     (IOPATH B Y (19:38:46) (16:33:38))
+     (IOPATH C Y (23:46:55) (18:38:44))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix174)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OR3A")
+  (INSTANCE ix224)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (5:10:12) (3:5:6))
+     (PORT B (1:3:4) (1:2:2))
+     (PORT C (6:12:14) (6:12:14))
+     (IOPATH A Y (16:32:37) (13:28:33))
+     (IOPATH B Y (15:31:36) (14:29:34))
+     (IOPATH C Y (15:31:36) (14:29:34))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix186)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT E (7:14:17) (7:14:17))
+     (IOPATH PAD Y (12:23:27) (12:24:28))
+     (IOPATH D PAD (16:32:39) (19:39:47))
+     (IOPATH E PAD (20:41:51) (35:70:83))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix245)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (18:36:42) (13:28:33))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_156_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (9:18:22) (6:11:13))
+     (PORT S1 (3:5:6) (4:9:11))
+     (IOPATH D0 Y (13:25:29) (11:22:27))
+     (IOPATH D1 Y (13:25:30) (11:22:26))
+     (IOPATH D2 Y (13:25:30) (11:22:26))
+     (IOPATH D3 Y (13:25:29) (11:22:26))
+     (IOPATH S0 Y (17:33:39) (13:27:32))
+     (IOPATH S1 Y (15:30:35) (13:25:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1B")
+  (INSTANCE u1_ix1847)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (8:17:20) (7:14:17))
+     (IOPATH D Q (23:48:56) (19:39:45))
+     (IOPATH G Q (23:48:56) (19:39:45))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (posedge G) (1:3:4))
+     (HOLD D (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u2_modgen_153_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (1:2:2) (0:0:0))
+     (PORT D2 (0:1:1) (0:1:1))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (4:8:10) (3:7:8))
+     (PORT S1 (3:5:6) (3:7:8))
+     (IOPATH D0 Y (16:34:40) (15:31:36))
+     (IOPATH D1 Y (16:34:40) (15:31:36))
+     (IOPATH D2 Y (16:34:40) (15:31:36))
+     (IOPATH D3 Y (16:34:40) (15:31:36))
+     (IOPATH S0 Y (16:34:40) (15:31:36))
+     (IOPATH S1 Y (16:34:40) (15:31:36))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_1_0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (2:4:4))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (23:48:57) (20:41:48))
+     (IOPATH G Q (23:48:57) (20:41:48))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix192)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (16:32:39) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_7_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (1:2:2) (0:0:0))
+     (PORT CLR (0:1:1) (0:0:0))
+     (PORT CLK (0:0:0) (0:0:0))
+     (IOPATH CLR Q (13:27:31) (13:25:29))
+     (IOPATH CLK Q (13:27:31) (13:25:29))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_158_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (9:18:22) (3:6:7))
+     (PORT S1 (9:19:22) (9:18:22))
+     (IOPATH D0 Y (15:32:37) (14:29:34))
+     (IOPATH D1 Y (15:32:37) (14:29:34))
+     (IOPATH D2 Y (15:32:37) (14:29:34))
+     (IOPATH D3 Y (15:32:37) (14:29:34))
+     (IOPATH S0 Y (15:32:37) (14:29:34))
+     (IOPATH S1 Y (15:32:37) (14:29:34))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix402)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix197)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (15:31:37) (19:38:46))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OR2")
+  (INSTANCE u2_nx160)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (3:5:6) (4:9:11))
+     (PORT B (1:3:4) (2:4:4))
+     (IOPATH A Y (0:0:0) (0:0:0))
+     (IOPATH B Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE ix220)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (5:10:12) (3:6:7))
+     (IOPATH A Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFM6A")
+  (INSTANCE u2_cnt_1_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT D1 (0:0:1) (0:1:2))
+     (PORT D2 (0:0:1) (0:1:2))
+     (PORT S0 (0:0:0) (0:0:0))
+     (PORT S1 (3:6:7) (4:8:10))
+     (PORT CLR (0:0:0) (0:0:0))
+     (PORT CLK (0:0:0) (0:0:0))
+     (IOPATH CLR Q (17:36:42) (14:29:34))
+     (IOPATH CLK Q (17:36:42) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D0 (posedge CLK) (1:3:4))
+     (HOLD D0 (posedge CLK) (0:0:0))
+     (SETUP D1 (posedge CLK) (1:3:4))
+     (HOLD D1 (posedge CLK) (0:0:0))
+     (SETUP D2 (posedge CLK) (1:3:4))
+     (HOLD D2 (posedge CLK) (0:0:0))
+     (SETUP D3 (posedge CLK) (1:3:4))
+     (HOLD D3 (posedge CLK) (0:0:0))
+     (SETUP S0 (posedge CLK) (1:3:4))
+     (HOLD S0 (posedge CLK) (0:0:0))
+     (SETUP S1 (posedge CLK) (1:3:4))
+     (HOLD S1 (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix241)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (2:4:4) (0:1:1))
+     (IOPATH A Y (17:36:42) (16:31:36))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_3_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (1:3:4))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (20:41:48) (17:34:39))
+     (IOPATH G Q (20:41:48) (17:34:39))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_157_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (9:18:22) (6:11:13))
+     (PORT S1 (3:5:6) (4:9:11))
+     (IOPATH D0 Y (11:23:27) (10:20:24))
+     (IOPATH D1 Y (11:23:28) (10:20:23))
+     (IOPATH D2 Y (11:23:28) (10:20:23))
+     (IOPATH D3 Y (11:23:27) (10:20:23))
+     (IOPATH S0 Y (15:31:37) (12:25:29))
+     (IOPATH S1 Y (13:28:33) (12:23:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix256)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (7:14:16) (6:13:15))
+     (PORT G (3:6:7) (3:7:8))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR2")
+  (INSTANCE u1_ix4486_nx497)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:1:1) (1:2:2))
+     (IOPATH A Y (19:39:45) (18:37:44))
+     (IOPATH B Y (19:37:44) (16:34:40))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix272)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix176)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OR2A")
+  (INSTANCE ix228)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (4:8:10) (5:11:13))
+     (IOPATH A Y (17:36:42) (17:33:39))
+     (IOPATH B Y (15:31:36) (13:25:29))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix207)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (1:2:3) (1:2:3))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix198)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (2:4:4))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix215)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (0:0:0))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix150)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:1:1) (3:6:7))
+     (PORT G (6:12:14) (6:12:14))
+     (IOPATH D Q (14:30:35) (13:27:31))
+     (IOPATH G Q (14:30:35) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR2")
+  (INSTANCE ix223)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (1:2:3))
+     (PORT B (4:8:9) (3:6:7))
+     (IOPATH A Y (13:28:33) (14:29:34))
+     (IOPATH B Y (12:26:31) (12:24:29))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFM3B")
+  (INSTANCE u2_reg_txd)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (0:0:0) (0:0:0))
+     (PORT CLR (1:2:3) (1:2:2))
+     (PORT CLK (1:2:2) (1:3:4))
+     (IOPATH CLR Q (13:28:33) (13:27:31))
+     (IOPATH CLK Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (negedge CLK) (1:3:4))
+     (HOLD A (negedge CLK) (0:0:0))
+     (SETUP B (negedge CLK) (1:3:4))
+     (HOLD B (negedge CLK) (0:0:0))
+     (SETUP S (negedge CLK) (1:3:4))
+     (HOLD S (negedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (negedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (negedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_0_0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:3) (1:2:2))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (21:43:51) (19:39:45))
+     (IOPATH G Q (21:43:51) (19:39:45))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix500)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (1:3:4))
+     (PORT G (10:20:24) (10:20:24))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix309)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:12:14) (5:11:13))
+     (PORT G (7:15:18) (7:15:18))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_161_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (3:7:8) (0:0:0))
+     (PORT S1 (4:9:11) (5:10:12))
+     (IOPATH D0 Y (14:30:35) (13:27:31))
+     (IOPATH D1 Y (14:30:35) (13:27:31))
+     (IOPATH D2 Y (14:30:35) (13:27:31))
+     (IOPATH D3 Y (14:30:35) (13:27:31))
+     (IOPATH S0 Y (14:30:35) (13:27:31))
+     (IOPATH S1 Y (14:30:35) (13:27:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix91)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (15:30:35) (14:28:33))
+     (IOPATH G Q (15:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE ix217)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (14:29:34) (12:26:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_3_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (4:9:11) (3:7:8))
+     (PORT CLR (1:3:4) (1:3:4))
+     (PORT CLK (1:2:2) (1:2:2))
+     (IOPATH CLR Q (12:26:30) (12:24:27))
+     (IOPATH CLK Q (12:26:30) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix219)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:2) (1:2:2))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix239)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:3) (0:0:0))
+     (IOPATH A Y (21:42:49) (16:33:39))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix242)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (24:48:56) (17:35:41))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_159_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (1:2:2) (1:3:4))
+     (PORT S1 (3:6:7) (5:10:12))
+     (IOPATH D0 Y (11:23:27) (10:20:24))
+     (IOPATH D1 Y (11:23:28) (10:20:23))
+     (IOPATH D2 Y (11:23:28) (10:20:23))
+     (IOPATH D3 Y (11:23:27) (10:20:23))
+     (IOPATH S0 Y (13:26:32) (11:23:27))
+     (IOPATH S1 Y (15:31:37) (12:25:29))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix55)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (2:5:5) (1:3:4))
+     (PORT G (6:11:13) (6:11:13))
+     (IOPATH D Q (14:29:34) (13:26:30))
+     (IOPATH G Q (14:29:34) (13:26:30))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix158)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:6:7) (2:5:5))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:29:34) (13:27:31))
+     (IOPATH G Q (14:29:34) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_5_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (4:9:11) (3:7:8))
+     (PORT CLR (1:3:4) (1:3:4))
+     (PORT CLK (1:2:2) (1:2:2))
+     (IOPATH CLR Q (13:27:31) (13:25:29))
+     (IOPATH CLK Q (13:27:31) (13:25:29))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix199)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR2")
+  (INSTANCE u1_ix4486_nx513)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:3:4) (1:3:4))
+     (PORT B (0:0:0) (0:0:0))
+     (IOPATH A Y (21:44:52) (21:42:50))
+     (IOPATH B Y (20:42:50) (19:37:45))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3")
+  (INSTANCE u2_ix218_l1_l0)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (IOPATH A Y (15:31:36) (13:27:31))
+     (IOPATH B Y (15:31:36) (13:27:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix163)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:19:22) (9:19:23))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_162_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (0:0:0) (0:1:1))
+     (PORT S1 (4:8:9) (4:9:11))
+     (IOPATH D0 Y (12:24:28) (10:20:24))
+     (IOPATH D1 Y (12:24:29) (10:20:23))
+     (IOPATH D2 Y (12:24:29) (10:20:23))
+     (IOPATH D3 Y (12:24:28) (10:20:23))
+     (IOPATH S0 Y (16:32:38) (12:25:29))
+     (IOPATH S1 Y (14:27:33) (11:23:27))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix235)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:7:8) (1:2:2))
+     (PORT G (1:2:2) (1:2:2))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix79)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (1:2:3))
+     (PORT G (4:9:11) (4:9:11))
+     (IOPATH D Q (15:30:35) (14:29:34))
+     (IOPATH G Q (15:30:35) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix374)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:7:8) (1:3:4))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1805)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (14:28:33) (14:29:35))
+     (PORT G (8:17:20) (7:14:17))
+     (IOPATH A Q (14:30:35) (13:27:31))
+     (IOPATH B Q (14:30:35) (13:27:31))
+     (IOPATH S Q (14:30:35) (13:27:31))
+     (IOPATH G Q (14:30:35) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1757)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (7:14:16) (7:14:16))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH A Q (15:31:36) (14:28:33))
+     (IOPATH B Q (15:31:36) (14:28:33))
+     (IOPATH S Q (15:31:36) (14:28:33))
+     (IOPATH G Q (15:31:36) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE ix216)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (14:29:34) (14:29:34))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix244)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:1:1))
+     (IOPATH A Y (24:49:58) (16:33:39))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3")
+  (INSTANCE u1_ix4486_nx533)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (8:17:20) (5:11:13))
+     (PORT C (1:3:4) (3:7:8))
+     (IOPATH A Y (16:33:39) (14:29:34))
+     (IOPATH B Y (19:39:46) (15:32:37))
+     (IOPATH C Y (19:39:46) (15:32:37))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix67)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (5:11:13) (2:5:5))
+     (PORT G (2:4:4) (1:3:4))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OR3B")
+  (INSTANCE u2_modgen_154_nx8)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:3) (3:7:8))
+     (PORT B (3:5:6) (4:8:10))
+     (PORT C (0:0:0) (0:0:0))
+     (IOPATH A Y (16:33:38) (14:29:34))
+     (IOPATH B Y (15:31:36) (12:24:29))
+     (IOPATH C Y (15:30:35) (11:23:27))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3A")
+  (INSTANCE u1_ix4486_nx517)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (1:2:3) (1:2:2))
+     (PORT C (6:13:15) (4:8:10))
+     (IOPATH A Y (19:37:44) (16:34:40))
+     (IOPATH B Y (17:34:40) (14:29:34))
+     (IOPATH C Y (21:42:49) (16:34:40))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OUTBUF")
+  (INSTANCE ix191)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:2) (0:0:0))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix183)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (1:2:3))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_nx51)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (12:24:29) (12:25:30))
+     (PORT S1 (1:2:3) (0:1:1))
+     (IOPATH D0 Y (10:20:23) (8:17:21))
+     (IOPATH D1 Y (10:20:24) (8:17:20))
+     (IOPATH D2 Y (10:20:24) (8:17:20))
+     (IOPATH D3 Y (10:20:23) (8:17:20))
+     (IOPATH S0 Y (14:28:33) (10:22:26))
+     (IOPATH S1 Y (12:23:28) (9:20:24))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix435)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (1:3:4))
+     (PORT G (10:20:24) (10:20:24))
+     (IOPATH D Q (12:25:29) (11:23:27))
+     (IOPATH G Q (12:25:29) (11:23:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix47)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (1:2:2))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1769)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (7:14:16) (7:14:16))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH A Q (14:30:35) (14:29:34))
+     (IOPATH B Q (14:30:35) (14:29:34))
+     (IOPATH S Q (14:30:35) (14:29:34))
+     (IOPATH G Q (14:30:35) (14:29:34))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DFC1")
+  (INSTANCE u2_reg_int)
+  (DELAY
+   (ABSOLUTE
+     (PORT CLK (0:0:0) (0:0:0))
+     (PORT CLR (0:0:0) (0:0:0))
+     (IOPATH CLK Q (15:32:37) (14:28:33))
+     (IOPATH CLR Q (28:57:67) (27:55:67))
+   )
+  )
+  (TIMINGCHECK
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+     (WIDTH  (posedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (0:0:0))
+     (RECOVERY (negedge CLR) (posedge CLK) (14:28:33))
+     (SETUP D (posedge CLK) (1:3:4))
+     (HOLD D (posedge CLK) (0:0:0))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix83)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:9) (1:3:4))
+     (PORT G (6:12:14) (6:12:14))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR3")
+  (INSTANCE u1_ix4486_nx509)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (4:8:9) (6:11:13))
+     (PORT B (0:0:0) (1:2:2))
+     (PORT C (0:0:0) (0:1:1))
+     (IOPATH A Y (22:45:52) (21:43:51))
+     (IOPATH B Y (22:43:51) (19:40:47))
+     (IOPATH C Y (21:43:50) (19:38:46))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "INBUF")
+  (INSTANCE ix209)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (10:19:22) (9:19:23))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BIBUF")
+  (INSTANCE ix162)
+  (DELAY
+   (ABSOLUTE
+     (IOPATH PAD Y (12:22:26) (11:22:26))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "AND3B")
+  (INSTANCE u1_ix4486_nx537)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:1:1) (1:2:2))
+     (PORT B (2:4:4) (3:5:6))
+     (PORT C (9:17:21) (6:12:14))
+     (IOPATH A Y (19:40:47) (19:38:45))
+     (IOPATH B Y (18:38:45) (17:33:40))
+     (IOPATH C Y (17:35:41) (15:30:36))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix439)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (3:5:6) (2:5:5))
+     (PORT G (7:15:18) (7:15:18))
+     (IOPATH D Q (12:25:29) (11:22:26))
+     (IOPATH G Q (12:25:29) (11:22:26))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_160_mi_ax_ax_2_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (3:7:8) (0:0:0))
+     (PORT S1 (5:11:13) (5:10:12))
+     (IOPATH D0 Y (13:28:33) (13:27:31))
+     (IOPATH D1 Y (13:28:33) (13:27:31))
+     (IOPATH D2 Y (13:28:33) (13:27:31))
+     (IOPATH D3 Y (13:28:33) (13:27:31))
+     (IOPATH S0 Y (13:28:33) (13:27:31))
+     (IOPATH S1 Y (13:28:33) (13:27:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix240)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (24:48:56) (16:33:39))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_156_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (7:15:18) (4:8:10))
+     (PORT S1 (7:14:17) (9:18:22))
+     (IOPATH D0 Y (12:24:28) (11:22:26))
+     (IOPATH D1 Y (12:24:29) (11:22:25))
+     (IOPATH D2 Y (12:24:29) (11:22:25))
+     (IOPATH D3 Y (12:24:28) (11:22:25))
+     (IOPATH S0 Y (16:32:38) (13:27:31))
+     (IOPATH S1 Y (14:29:34) (13:25:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "NOR2")
+  (INSTANCE ix227)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (3:5:6) (3:6:7))
+     (PORT B (0:1:1) (0:0:0))
+     (IOPATH A Y (0:0:0) (0:0:0))
+     (IOPATH B Y (0:0:0) (0:0:0))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix179)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:8:10) (3:6:7))
+     (PORT G (7:15:18) (7:15:18))
+     (IOPATH D Q (13:28:33) (13:27:31))
+     (IOPATH G Q (13:28:33) (13:27:31))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u0_lat_outp_0_1)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (1:2:3) (1:2:2))
+     (PORT G (11:22:26) (12:23:28))
+     (IOPATH D Q (24:49:58) (21:42:49))
+     (IOPATH G Q (24:49:58) (21:42:49))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE u2_ix218_aclrb)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (IOPATH A Y (24:48:56) (18:38:44))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "OBDLHS")
+  (INSTANCE u0_lat_outp_4_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT G (3:6:7) (1:3:4))
+     (PORT D (3:7:8) (4:9:11))
+     (IOPATH G PAD (19:39:47) (22:44:53))
+     (IOPATH D PAD (17:35:42) (19:39:47))
+   )
+  )
+  (TIMINGCHECK
+     (WIDTH  (posedge G) (22:44:53))
+     (SETUP D (negedge G) (2:5:5))
+     (HOLD D (negedge G) (0:0:0))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix243)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:2) (0:0:0))
+     (IOPATH A Y (17:35:41) (13:27:32))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_4_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (3:6:7) (5:10:12))
+     (PORT CLR (1:3:4) (1:3:4))
+     (PORT CLK (1:2:2) (1:2:2))
+     (IOPATH CLR Q (13:27:31) (12:24:27))
+     (IOPATH CLK Q (13:27:31) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "INV")
+  (INSTANCE u2_nx104)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (3:7:8) (1:2:2))
+     (IOPATH A Y (14:29:34) (13:27:32))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DLMA")
+  (INSTANCE u1_ix1781)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (14:28:33) (14:29:35))
+     (PORT G (8:17:20) (7:14:17))
+     (IOPATH A Q (14:30:35) (14:28:32))
+     (IOPATH B Q (14:30:35) (14:28:32))
+     (IOPATH S Q (14:30:35) (14:28:32))
+     (IOPATH G Q (14:30:35) (14:28:32))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge G) (1:3:4))
+     (HOLD A (posedge G) (0:0:0))
+     (SETUP B (posedge G) (1:3:4))
+     (HOLD B (posedge G) (0:0:0))
+     (SETUP S (posedge G) (1:3:4))
+     (HOLD S (posedge G) (0:0:0))
+     (WIDTH (negedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_160_mi_ax_ax_3_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (2:4:4) (1:2:3))
+     (PORT S1 (3:6:7) (5:10:12))
+     (IOPATH D0 Y (11:23:27) (10:20:24))
+     (IOPATH D1 Y (11:23:28) (10:20:23))
+     (IOPATH D2 Y (11:23:28) (10:20:23))
+     (IOPATH D3 Y (11:23:27) (10:20:23))
+     (IOPATH S0 Y (15:31:37) (12:25:29))
+     (IOPATH S1 Y (13:28:33) (12:23:28))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DFMB")
+  (INSTANCE u2_reg_reg_1_inst)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (PORT S (3:6:7) (5:10:12))
+     (PORT CLR (1:3:4) (1:3:4))
+     (PORT CLK (1:2:2) (1:2:2))
+     (IOPATH CLR Q (13:27:31) (13:25:29))
+     (IOPATH CLK Q (13:27:31) (13:25:29))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP A (posedge CLK) (1:3:4))
+     (HOLD A (posedge CLK) (0:0:0))
+     (SETUP B (posedge CLK) (1:3:4))
+     (HOLD B (posedge CLK) (0:0:0))
+     (SETUP S (posedge CLK) (1:3:4))
+     (HOLD S (posedge CLK) (0:0:0))
+     (WIDTH (negedge CLR) (20:41:49))
+     (HOLD CLR (posedge CLK) (6:11:13))
+     (RECOVERY (posedge CLR) (posedge CLK) (2:4:4))
+     (WIDTH  (posedge CLK) (16:32:38))
+     (WIDTH (negedge CLK) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix191)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (6:11:13) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (11:24:27) (11:22:26))
+     (IOPATH G Q (11:24:27) (11:22:26))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix292)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (3:5:6))
+     (PORT G (0:0:0) (0:0:0))
+     (IOPATH D Q (14:30:35) (14:28:33))
+     (IOPATH G Q (14:30:35) (14:28:33))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "OR2A")
+  (INSTANCE ix226)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (0:0:0) (0:0:0))
+     (PORT B (0:0:0) (0:0:0))
+     (IOPATH A Y (16:34:40) (17:34:40))
+     (IOPATH B Y (16:34:40) (15:29:35))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix386)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (4:9:11) (4:9:11))
+     (PORT G (3:6:7) (3:7:8))
+     (IOPATH D Q (13:27:31) (12:24:27))
+     (IOPATH G Q (13:27:31) (12:24:27))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+ (CELL
+  (CELLTYPE "BUFA")
+  (INSTANCE ix235)
+  (DELAY
+   (ABSOLUTE
+     (PORT A (1:2:3) (0:0:0))
+     (IOPATH A Y (18:37:44) (13:28:33))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_163_mi_ax_ax_1_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (2:4:4) (0:0:0))
+     (PORT S1 (3:5:6) (3:6:7))
+     (IOPATH D0 Y (12:25:29) (11:22:27))
+     (IOPATH D1 Y (12:25:30) (11:22:26))
+     (IOPATH D2 Y (12:25:30) (11:22:26))
+     (IOPATH D3 Y (12:25:29) (11:22:26))
+     (IOPATH S0 Y (16:33:39) (13:27:32))
+     (IOPATH S1 Y (14:28:34) (12:25:30))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "MX4")
+  (INSTANCE u1_ix4486_modgen_157_mi_ax_ax_0_a0)
+  (DELAY
+   (ABSOLUTE
+     (PORT D0 (0:0:0) (0:0:0))
+     (PORT D1 (0:0:0) (0:0:0))
+     (PORT D2 (0:0:0) (0:0:0))
+     (PORT D3 (0:0:0) (0:0:0))
+     (PORT S0 (7:15:18) (4:8:10))
+     (PORT S1 (7:14:17) (9:18:22))
+     (IOPATH D0 Y (13:26:30) (11:22:27))
+     (IOPATH D1 Y (13:26:31) (11:22:26))
+     (IOPATH D2 Y (13:26:31) (11:22:26))
+     (IOPATH D3 Y (13:26:30) (11:22:26))
+     (IOPATH S0 Y (17:34:40) (13:27:32))
+     (IOPATH S1 Y (15:31:36) (13:25:31))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "DL1")
+  (INSTANCE u1_ix4486_ix276)
+  (DELAY
+   (ABSOLUTE
+     (PORT D (0:0:0) (0:0:0))
+     (PORT G (4:9:11) (4:9:11))
+     (IOPATH D Q (15:31:36) (15:30:35))
+     (IOPATH G Q (15:31:36) (15:30:35))
+   )
+  )
+  (TIMINGCHECK
+     (SETUP D (negedge G) (1:3:4))
+     (HOLD D (negedge G) (0:0:0))
+     (WIDTH  (posedge G) (16:32:38))
+  )
+ )
+)

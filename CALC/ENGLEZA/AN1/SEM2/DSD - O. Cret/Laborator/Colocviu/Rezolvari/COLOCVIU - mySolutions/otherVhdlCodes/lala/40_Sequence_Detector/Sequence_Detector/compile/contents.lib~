@@ -1,0 +1,7 @@
+26
+~E 1 "./src/and_gate.vhd" 4 gate
+~A 1 "./src/and_gate.vhd" 9 a
+~E 1 "./src/sequence_detector.vhd" 4 detect
+~A 1 "./src/sequence_detector.vhd" 9 a
+~E 1 "./src/register.vhd" 4 r
+~A 1 "./src/register.vhd" 9 a

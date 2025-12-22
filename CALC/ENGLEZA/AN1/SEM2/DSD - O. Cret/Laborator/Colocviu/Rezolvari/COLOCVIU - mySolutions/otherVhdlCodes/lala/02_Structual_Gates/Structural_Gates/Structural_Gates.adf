@@ -1,0 +1,47 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Structural_Gates
+
+[Library]
+Structural_Gates=.\Structural_Gates.lib
+
+[$LibMap$]
+Structural_Gates=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/xor_gate.vhd=-1
+/inverter.vhd=-1
+/and_gate.vhd=-1
+/or_gate.vhd=-1
+/nxor_gate.vhd=-1
+
+[Files.Data]
+.\src\xor_gate.vhd=VHDL Source Code
+.\src\inverter.vhd=VHDL Source Code
+.\src\and_gate.vhd=VHDL Source Code
+.\src\or_gate.vhd=VHDL Source Code
+.\src\nxor_gate.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=nxor_gate|a|0  
+ShowHide=ShowTopLevel
+Selected=

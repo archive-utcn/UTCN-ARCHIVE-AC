@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+modulk_simulare_d_ff=.\modulk_simulare_d_ff\modulk_simulare_d_ff.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+modulk_simulare_d_ff=1

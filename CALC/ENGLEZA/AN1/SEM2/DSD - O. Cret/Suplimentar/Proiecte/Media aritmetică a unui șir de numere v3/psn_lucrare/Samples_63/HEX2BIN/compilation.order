@@ -1,0 +1,8 @@
+.\src\adrcnt.v
+.\src\asciidec.v
+.\src\dat_cnt.v
+.\src\h2b.v
+.\src\ihx_fsm.v
+.\src\lrc.v
+.\src\reg.v
+.\src\uut.v

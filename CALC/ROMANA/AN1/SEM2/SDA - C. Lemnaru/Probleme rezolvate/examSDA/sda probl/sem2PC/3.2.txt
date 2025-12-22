@@ -1,0 +1,49 @@
+
+3.2/laborator 1
+#include<string.h>
+#include<stdlib.h>
+
+#include<stdio.h>
+#include<conio.h>
+
+typedef struct elem
+{
+    struct elem *urm;
+    int fr;
+    char cuv[10];
+}Elem;
+
+int main()
+{
+    Elem *prim=NULL;
+    Elem *ultim=NULL;
+    int i;
+    for(i=1;i<=5;i++)
+
+    {
+        char cuv[10];
+        scanf("%s",cuv);
+        Elem *p=NULL;
+        p=(Elem*)malloc(sizeof(Elem));
+        strcpy(p->cuv,cuv);
+        p->fr=1;
+        p->urm=NULL;
+        if(ultim!=NULL)
+        {
+        ultim->urm=p;
+        }
+        else
+        {
+        prim=p;
+        ultim=p;
+        }
+    }
+        Elem *p=prim;
+        while(p!=NULL)
+        {
+            printf("%s",p->cuv);
+            p=p->urm;
+        }
+        return 0;
+}
+

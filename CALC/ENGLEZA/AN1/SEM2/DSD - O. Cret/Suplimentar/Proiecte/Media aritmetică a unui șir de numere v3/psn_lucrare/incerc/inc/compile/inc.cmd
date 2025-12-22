@@ -1,0 +1,1 @@
+-w -s "D:\ralu-poli\psn_lucrare\incerc\library.cfg"  -j "D:\ralu-poli\psn_lucrare\incerc\inc\projlib.cfg"  -d "D:\ralu-poli\psn_lucrare\incerc\inc\compile\"  -work inc -dbg -e 100 "D:\ralu-poli\psn_lucrare\incerc\inc\src\suma.vhd" 

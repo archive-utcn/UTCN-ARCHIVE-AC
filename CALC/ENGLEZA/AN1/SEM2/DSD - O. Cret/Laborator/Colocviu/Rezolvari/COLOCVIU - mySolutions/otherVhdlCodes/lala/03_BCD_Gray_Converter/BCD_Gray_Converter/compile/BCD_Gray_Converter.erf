@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\03_BCD_Gray_Converter\BCD_Gray_Converter\src\converter_TB.vhd" 
+MESSAGE "Compile Entity "tb_BCD_to_GRAY"" 
+MESSAGE "Entity `tb_BCD_to_GRAY' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ARCH" of Entity "tb_BCD_to_GRAY"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

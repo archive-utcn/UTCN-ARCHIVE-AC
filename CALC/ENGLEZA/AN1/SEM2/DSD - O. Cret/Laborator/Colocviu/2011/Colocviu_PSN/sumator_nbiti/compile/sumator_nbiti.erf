@@ -1,0 +1,6 @@
+MESSAGE "File: D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\sumator_nbiti\src\sumator_nbiti.vhd" 
+MESSAGE "Compile Entity "sumator_complet"" 
+MESSAGE "Compile Architecture "arh" of Entity "sumator_complet"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   sumator_complet" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

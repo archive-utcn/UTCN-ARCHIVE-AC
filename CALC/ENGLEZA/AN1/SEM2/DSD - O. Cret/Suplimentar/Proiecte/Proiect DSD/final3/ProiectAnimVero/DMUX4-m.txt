@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity dmux_4_enable is
+	port(sel:in std_logic_vector(3 downto 0);
+	A:out std_logic;
+	B:out std_logic;
+	C:out std_logic;
+	D:out std_logic);
+end dmux_4_enable;
+
+architecture dmux_4_enable_a of dmux_4_enable is
+begin
+	process(sel)   
+	variable q:std_logic_vector(3 downto 0);
+	begin									
+		case sel is
+			when "0001" =>q:="0001";
+			when "0010" =>q:="0010";
+			when "0100" =>q:="0100";
+			when "1000" =>q:="1000";			
+			when others=>q:="0001";
+		end case;
+		A<=q(0);
+		B<=q(1);
+		C<=q(2);
+		D<=q(3);
+		
+	end process;
+end dmux_4_enable_a;  

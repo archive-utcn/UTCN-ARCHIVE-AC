@@ -1,0 +1,114 @@
+Turbo Assembler	 Version 2.51	     11/20/09 11:18:08	    Page 1
+p1.asm
+Program	with macro usage
+
+
+      1				     ;PROGRAM EXAMPLE FOR USING	A SIMPLE MACRO
+      2
+      3	0000			     STACK   SEGMENT PARA 'stack'
+*Warning* p1.asm(4) Reserved word used as symbol: STACK
+      4	0000  40*(53 54	41 43 4B)     DB  64 DUP ('STACK')
+      5	0140			     STACK ENDS
+      6
+      7	0000			     DATA SEGMENT PARA 'DATA'
+      8	0000  07D0*(20)		     TAMP DB  2000 DUP (' ')
+      9	07D0			     DATA ENDS
+     10
+     11				     DELY MACRO	TIME
+     12				     LOCAL P1, P2 ;p1 and p2 are local labels
+     13				     PUSH DX ;saves dx and cx registers
+     14				      PUSH CX
+     15				      MOV DX, TIME  ; loads a delay in dx
+     16				     P1: MOV CX, 0FF00H;loads cx with 0FF00h
+     17					  ;counts
+     18				     P2: DEC CX	 ;;delays by decrementing cx
+     19				      JNZ P2  ;;if cx!=0 continue
+     20				      DEC DX  ;;if cx=0	decrements dx
+     21				      JNZ P1  ;;if dx!=0 loads again cx
+     22				      POP  CX  ;;if dx=0 remake	cx and dx
+     23				      POP  DX  ;;
+     24				      ENDM   ;;end macro
+     25
+     26
+     27	0000			     MYCOD SEGMENT PARA	'CODE' ;defines	code segment
+     28	0000			     PROCED PROC FAR ;procedure	with proced name
+     29				      ASSUME CS:MYCOD, ES:DATA,	DS:DATA, SS:STACK
+     30	0000  B8 0000s		      MOV AX, DATA  ;puts data segment in ax
+     31	0003  8E C0		      MOV ES, AX ;loads	es with	data segment
+     32				      ;program will clear the display writing 25*80
+     33				     ;spaces on	the screen
+     34				     ;writing those with different values in bl	the
+     35				     ;screen color will	change
+     36				     ;intir macro will maintain	this color for a time
+     37	0005  B9 0008		      MOV CX, 08H  ;loops 8 times
+     38	0008  B3 00		      MOV BL, 00H  ;sets background color
+     39	000A  BD 0000r		     LOOP1: LEA	BP, TAMP ;writes black string
+     40	000D  BA 0000		      MOV DX, 0000H  ;sets the cursor to the
+     41				     ;upper :left
+     42	0010  B4 13		      MOV AH, 19  ;writes attribute string
+     43	0012  B0 01		      MOV  AL, 1;writes	a character and	moves
+     44				     ;the cursor
+     45	0014  51		      PUSH CX	 ;saves	cx
+     46	0015  B9 07D0		      MOV CX, 07D0H   ;writes 2000 spaces
+     47	0018  CD 10		      INT 10H	 ;call 10h
+     48				      DELY 10000  ;delays 10 units
+1    49	001A  52		     PUSH DX ;saves dx and cx registers
+1    50	001B  51		      PUSH CX
+1    51	001C  BA 2710		      MOV DX, 10000  ; loads a delay in	dx
+1    52	001F  B9 FF00		     ??0000: MOV CX, 0FF00H;loads cx with 0FF00h
+1    53	0022  49		     ??0001: DEC CX  ;
+1    54	0023  75 FD		      JNZ ??0001  ;
+1    55	0025  4A		      DEC DX  ;
+1    56	0026  75 F7		      JNZ ??0000  ;
+Turbo Assembler	 Version 2.51	     11/20/09 11:18:08	    Page 2
+p1.asm
+Program	with macro usage
+
+
+1    57	0028  59		      POP  CX  ;
+1    58	0029  5A		      POP  DX  ;
+     59	002A  80 C3 10		      ADD BL, 10H  ;changes background color
+     60	002D  59		      POP CX	;restores  cx
+     61	002E  E2 DA		      LOOP LOOP1  ;loops 8 times
+     62	0030  CB		      RET   ;returns to	dos
+     63	0031			     PROCED ENDP    ;end procedure
+     64	0031			     MYCOD ENDS	  ;end code segment
+     65				      END PROCED   ;end	program
+Turbo Assembler	 Version 2.51	     11/20/09 11:18:08	    Page 3
+Symbol Table
+Program	with macro usage
+
+
+
+Symbol Name			  Type	 Value
+
+??0000				  Near	 MYCOD:001F
+??0001				  Near	 MYCOD:0022
+??DATE				  Text	 "11/20/09"
+??FILENAME			  Text	 "p1	  "
+??TIME				  Text	 "11:18:08"
+??VERSION			  Number 0205
+@CPU				  Text	 0101H
+@CURSEG				  Text	 MYCOD
+@FILENAME			  Text	 P1
+@WORDSIZE			  Text	 2
+LOOP1				  Near	 MYCOD:000A
+PROCED				  Far	 MYCOD:0000
+TAMP				  Byte	 DATA:0000
+
+Macro Name
+
+DELY
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DATA				  16  07D0 Para	  none	  DATA
+MYCOD				  16  0031 Para	  none	  CODE
+STACK				  16  0140 Para	  none	  STACK
+Turbo Assembler	 Version 2.51	     11/20/09 11:18:08	    Page 4
+Error Summary
+Program	with macro usage
+
+
+*Warning* p1.asm(4) Reserved word used as symbol: STACK
+

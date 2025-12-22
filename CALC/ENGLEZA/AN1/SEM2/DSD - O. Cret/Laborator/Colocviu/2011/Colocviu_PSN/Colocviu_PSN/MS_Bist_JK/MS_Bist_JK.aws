@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+MS_Bist_JK=MS_Bist_JK.adf
+[Settings]
+Active=MS_Bist_JK
+[Expand]
+ms_bist_jk=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

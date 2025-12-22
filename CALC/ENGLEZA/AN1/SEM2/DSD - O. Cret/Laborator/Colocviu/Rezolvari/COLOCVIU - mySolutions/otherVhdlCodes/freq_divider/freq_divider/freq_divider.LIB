@@ -1,0 +1,23 @@
+timestamp=1493507028232
+
+[clock_divider]
+A/arh=21|./src/freq_divider.vhd|10|1*3951
+B/arh=3*0
+H/arh=0*3316
+R=./src/freq_divider.vhd|5
+V=0*1508
+
+[~A]
+./src/freq_divider.vhd~Clock_Divider=0*0*258
+./src/freq_divider.vhd~arhClock_Divider=0*3561*3960
+ModifyID=25
+Version=73
+
+[~MFT]
+0=25|0freq_divider.mgf|3960|2169
+1=6|1freq_divider.mgf|3951|3951
+3=0|3freq_divider.mgf|0|0
+
+[~U]
+clock_divider=Clock_Divider 11|0*1057|0*1238
+

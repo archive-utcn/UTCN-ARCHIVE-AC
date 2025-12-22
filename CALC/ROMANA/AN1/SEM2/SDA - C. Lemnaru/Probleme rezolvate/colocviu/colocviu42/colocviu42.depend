@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1274271127 source:d:\code_blocks\colocviu42\main2.cpp
+	<conio.h>
+	<stdio.h>
+
+1274271006 source:d:\code_blocks\colocviu42\main.cpp
+	<stdio.h>
+	<conio.h>
+

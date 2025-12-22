@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=dmux_gen
+
+[Library]
+dmux_gen=.\dmux_gen.lib
+
+[$LibMap$]
+dmux_gen=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/dmux_gen.vhd=-1
+
+[Files.Data]
+.\src\dmux_gen.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\dmux_gen\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\dmux_gen\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\dmux_gen\
+Extension5=dll

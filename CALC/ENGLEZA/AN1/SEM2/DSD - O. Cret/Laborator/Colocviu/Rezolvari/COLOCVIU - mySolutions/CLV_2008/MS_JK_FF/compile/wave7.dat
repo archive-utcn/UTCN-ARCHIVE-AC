@@ -1,0 +1,159 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$S 1 1 j
+$S 5 1 k
+$S 9 1 set
+$S +4 1 reset
+$S +4 1 q
+$S +4 1 nq
+$S +4 1 "UST/clock"
+$ENDTIME 100000
+$WAVES 17
+=0 T 0
+=1 D 0 2
+=2 D 20k 1
+R 1 2 =3 D 40k 2
+$VALUES
+V 1
+U
+R 2 2 0 1
+$END
+$WAVES +8
+*0
+=4 D 0 1
+R 1 5 *2
+$VALUES
+R 2 3 1 0
+V 1
+1
+$END
+$WAVES 1
+*0
+*4
+=5 T 80k
+$VALUES
+V 3
+U
+0
+1
+$END
+$WAVES 13
+*0
+*4
+=6 T 20k
+$VALUES
+V 3
+U
+1
+0
+$END
+$WAVES +8
+*0
+*1
+*2
+R 1 2 *3
+$VALUES
+V 1
+U
+R 2 2 1 0
+$END
+$WAVES 9
+*0
+*4
+R 1 2 *6
+$VALUES
+V 4
+U
+0
+1
+0
+$END
+$WAVES 5
+*0
+*4
+=7 T 60k
+R 1 2 *6
+$VALUES
+V 1
+U
+R 2 2 0 1
+$END
+$ENDTIME 200000
+$WAVES 17
+=8 D 140k 2
+*3
+$VALUES
+V 2
+0
+1
+$END
+$WAVES +8
+=9 D 120k 1
+R 1 4 *2
+$VALUES
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 21
+*8
+*3
+$VALUES
+V 2
+1
+0
+$END
+$ENDTIME 300000
+$WAVES 17
+=10 D 220k 2
+R 1 2 *3
+$VALUES
+V 3
+0
+1
+0
+$END
+$WAVES +8
+=11 D 220k 1
+R 1 4 *2
+$VALUES
+R 2 2 1 0
+V 1
+1
+$END
+$WAVES 21
+*10
+R 1 2 *3
+$VALUES
+V 3
+1
+0
+1
+$END
+$ENDTIME 400000
+$WAVES 17
+=12 D 340k 2
+*3
+$VALUES
+V 2
+1
+0
+$END
+$WAVES +8
+=13 D 320k 1
+R 1 4 *2
+$VALUES
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 21
+*12
+*3
+$VALUES
+V 2
+0
+1
+$END
+$ENDWAVE

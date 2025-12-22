@@ -1,0 +1,606 @@
+I 000044 55 1219          1495479865519 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495479865518 2017.05.22 22:04:25)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(0)(1)(2)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1219          1495480422274 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495480422274 2017.05.22 22:13:42)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(0)(1)(2)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1219          1495480436918 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495480436918 2017.05.22 22:13:56)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(2)(1)(0)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(2)(1)(0)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1219          1495480447014 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495480447014 2017.05.22 22:14:07)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(2)(0)(1)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(2)(0)(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1219          1495480451075 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495480451075 2017.05.22 22:14:11)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(2)(0)(1)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(2)(0)(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1219          1495480459659 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495480459658 2017.05.22 22:14:19)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(0)(1)(2)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1859          1495480459777 arh
+(_unit VHDL (ms_scazator_1bit 0 20 (arh 0 23 ))
+  (_version v33)
+  (_time 1495480459776 2017.05.22 22:14:19)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495480436998)
+    (_use )
+  )
+  (_component
+    (SCAZATOR_1BIT
+      (_object
+        (_port (_internal i ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal a ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal b ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal br ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 34 (_component SCAZATOR_1BIT )
+    (_port
+      ((i)(i))
+      ((a)(a))
+      ((b)(b))
+      ((br)(br))
+      ((d)(d))
+    )
+    (_use (_entity . scazator_1bit)
+    )
+  )
+  (_object
+    (_signal (_internal i ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal a ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal b ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal br ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 35 (_process (_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1219          1495480568372 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495480568372 2017.05.22 22:16:08)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(2)(0)(1)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(2)(0)(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1859          1495480568461 arh
+(_unit VHDL (ms_scazator_1bit 0 20 (arh 0 23 ))
+  (_version v33)
+  (_time 1495480568460 2017.05.22 22:16:08)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495480436998)
+    (_use )
+  )
+  (_component
+    (SCAZATOR_1BIT
+      (_object
+        (_port (_internal i ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal a ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal b ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal br ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 34 (_component SCAZATOR_1BIT )
+    (_port
+      ((i)(i))
+      ((a)(a))
+      ((b)(b))
+      ((br)(br))
+      ((d)(d))
+    )
+    (_use (_entity . scazator_1bit)
+    )
+  )
+  (_object
+    (_signal (_internal i ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal a ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal b ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal br ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 35 (_process (_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1859          1495481333418 arh
+(_unit VHDL (ms_scazator_1bit 0 20 (arh 0 23 ))
+  (_version v33)
+  (_time 1495481333417 2017.05.22 22:28:53)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495480436998)
+    (_use )
+  )
+  (_component
+    (SCAZATOR_1BIT
+      (_object
+        (_port (_internal i ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal a ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal b ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal br ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 34 (_component SCAZATOR_1BIT )
+    (_port
+      ((i)(i))
+      ((a)(a))
+      ((b)(b))
+      ((br)(br))
+      ((d)(d))
+    )
+    (_use (_entity . scazator_1bit)
+    )
+  )
+  (_object
+    (_signal (_internal i ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal a ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal b ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal br ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 35 (_process (_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1219          1495481344230 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495481344229 2017.05.22 22:29:04)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(1)(2)(0)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(1)(2)(0)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1859          1495481344324 arh
+(_unit VHDL (ms_scazator_1bit 0 20 (arh 0 23 ))
+  (_version v33)
+  (_time 1495481344323 2017.05.22 22:29:04)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495480436998)
+    (_use )
+  )
+  (_component
+    (SCAZATOR_1BIT
+      (_object
+        (_port (_internal i ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal a ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal b ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal br ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 34 (_component SCAZATOR_1BIT )
+    (_port
+      ((i)(i))
+      ((a)(a))
+      ((b)(b))
+      ((br)(br))
+      ((d)(d))
+    )
+    (_use (_entity . scazator_1bit)
+    )
+  )
+  (_object
+    (_signal (_internal i ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal a ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal b ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal br ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 35 (_process (_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1219          1495481709944 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495481709943 2017.05.22 22:35:09)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(1)(2)(0)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(1)(2)(0)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1859          1495481710037 arh
+(_unit VHDL (ms_scazator_1bit 0 20 (arh 0 23 ))
+  (_version v33)
+  (_time 1495481710036 2017.05.22 22:35:10)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495480436998)
+    (_use )
+  )
+  (_component
+    (SCAZATOR_1BIT
+      (_object
+        (_port (_internal i ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal a ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal b ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal br ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 34 (_component SCAZATOR_1BIT )
+    (_port
+      ((i)(i))
+      ((a)(a))
+      ((b)(b))
+      ((br)(br))
+      ((d)(d))
+    )
+    (_use (_entity . scazator_1bit)
+    )
+  )
+  (_object
+    (_signal (_internal i ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal a ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal b ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal br ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 35 (_process (_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)
+V 000044 55 1219          1495481821080 arh
+(_unit VHDL (scazator_1bit 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1495481821079 2017.05.22 22:37:01)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495479865456)
+    (_use )
+  )
+  (_object
+    (_port (_internal i ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal br ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(3))(_sensitivity(1)(0)(2)))))
+      (line__12(_architecture 1 0 12 (_assignment (_simple)(_target(4))(_sensitivity(1)(0)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+V 000044 55 1859          1495481821190 arh
+(_unit VHDL (ms_scazator_1bit 0 20 (arh 0 23 ))
+  (_version v33)
+  (_time 1495481821189 2017.05.22 22:37:01)
+  (_source (\./src/MS_SCAZATOR_1BIT.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495480436998)
+    (_use )
+  )
+  (_component
+    (SCAZATOR_1BIT
+      (_object
+        (_port (_internal i ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal a ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal b ~extieee.std_logic_1164.std_logic 0 26 (_entity (_in ))))
+        (_port (_internal br ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+        (_port (_internal d ~extieee.std_logic_1164.std_logic 0 27 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation UST 0 34 (_component SCAZATOR_1BIT )
+    (_port
+      ((i)(i))
+      ((a)(a))
+      ((b)(b))
+      ((br)(br))
+      ((d)(d))
+    )
+    (_use (_entity . scazator_1bit)
+    )
+  )
+  (_object
+    (_signal (_internal i ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal a ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal b ~extieee.std_logic_1164.std_logic 0 30 (_architecture (_uni ))))
+    (_signal (_internal br ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_signal (_internal d ~extieee.std_logic_1164.std_logic 0 31 (_architecture (_uni ))))
+    (_process
+      (STIMULI(_architecture 0 0 35 (_process (_target(0)(1)(2)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 1 -1
+  )
+)

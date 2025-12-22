@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+barrel_shifter=.\Barrel_Shifter\Barrel_Shifter.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+barrel_shifter=1

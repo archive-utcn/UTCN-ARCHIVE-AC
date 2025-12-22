@@ -1,0 +1,5 @@
+MESSAGE "File: d:\designshdl\memorie_rom\memorie_rom\src\memorie_rom.vhd" 
+MESSAGE "Compile Entity "Memorie_ROM"" 
+MESSAGE "Entity `Memorie_ROM' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ArhROM" of Entity "Memorie_ROM"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

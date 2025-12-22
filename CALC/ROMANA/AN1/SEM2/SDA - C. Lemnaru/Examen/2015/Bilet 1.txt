@@ -1,0 +1,21 @@
+1. desenati modelul unei cozi ca lista dinamica simplu inlantuita. scrieti tipul nodului, daca un nod contine numele unei persoane, adresa si nr de tel. scrieti funciile de adaugare si extragere a unui nod/
+
+2. a) aratati care este structura unui arbore binar de cautare, daca ordinea inserarii nodurilor este urmatoarea:
+70, 100, 40, 50, 250, 30, 80, 200, 300, 280,90
+b) ce este un arbore binar total echilibrat? este arborele construit un arbore total echilibrat ?
+c) care este ordinea de vizitare in preordine, inordine si postordine a arborelui respectiv
+d) scrieti functia de inserare recursiva sau nerecursiva la alegere, cheia fiind un nr natural long.
+
+sda examen seria 2
+
+randu 2
+
+1. Definiti notiunile: inregistrari sinonime in TD, subgraf indus, ciclu euclidian, complexitate O(f(n))
+2. algoritmul Kruskal: rol, descriere in pseudocod, explicatii largi
+3. sortarea prin selectie: esenta, functia in C, complexitatea alg
+4. PROBLEMA (se va rezolva pe foi separate fata de teorie !)
+Se va scrie programul in C, cu comentarii largi, pentru rezolvarea urmatoarei probleme: la un foc de tabara,
+cei n copii se aseaza in cerc in jurul focului. In a doua seara, copiii se aseaza astfel incat cei care au fost vecini in
+prima seara sa nu mai fie vecini, ca sa se impreteneasca cati mai multi. determinati toate modurile de asezare a cei 
+n copii in a doua seara. Presupunem ca in prima seara au fost aranjati circular in odrinea 1, 2, 3, ...,n, 1.
+Programul va tipari numarul de ordine al solutiei gasite si modul de asezare a copiilor on cerc.

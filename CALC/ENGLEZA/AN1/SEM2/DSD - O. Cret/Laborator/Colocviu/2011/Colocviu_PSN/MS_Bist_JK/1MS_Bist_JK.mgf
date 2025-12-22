@@ -1,0 +1,670 @@
+I 000047 55 771           1305449168063 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449168064 2011.05.15 11:46:08)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code e1e7ebb2e9b7b6f6e4e6a7bbe1)
+	(_entity
+		(_time 1305449168050)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal Qs ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3)(2))(_sensitivity(0)(1))(_read(3)(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 1 -1
+	)
+)
+I 000047 55 771           1305449182637 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449182638 2011.05.15 11:46:22)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code cbc9c89e909d9cdccecc8d91cb)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal Qs ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3)(2))(_sensitivity(0)(1))(_read(3)(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 1 -1
+	)
+)
+I 000047 55 771           1305449235366 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449235367 2011.05.15 11:47:15)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code c3c59796c99594d4c6c48599c3)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal Qs ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3)(2))(_sensitivity(0)(1))(_read(3)(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 1 -1
+	)
+)
+I 000047 55 771           1305449253134 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449253135 2011.05.15 11:47:33)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 2c2f2b28767a7b3b292b6a762c)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal Qs ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3)(2))(_sensitivity(0)(1))(_read(3)(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 1 -1
+	)
+)
+I 000050 55 1179          1305449253142 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 24 ))
+	(_version v147)
+	(_time 1305449253143 2011.05.15 11:47:33)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 3c3f6d386c683e2a6d6c7e6639)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 27 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 27 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 28 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 33 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 31 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 31 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 31 (_architecture (_uni ))))
+		(_process
+			(line__34(_architecture 0 0 34 (_assignment (_simple)(_target(0)))))
+			(line__35(_architecture 1 0 35 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+I 000047 55 771           1305449403930 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449403931 2011.05.15 11:50:03)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 33643336396564243635756933)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal Qs ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3)(2))(_sensitivity(0)(1))(_read(3)(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 1 -1
+	)
+)
+I 000050 55 1179          1305449403938 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 25 ))
+	(_version v147)
+	(_time 1305449403939 2011.05.15 11:50:03)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 42151441431640541312001847)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 28 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 28 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 29 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 34 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 32 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 32 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 32 (_architecture (_uni ))))
+		(_process
+			(line__35(_architecture 0 0 35 (_assignment (_simple)(_target(0)))))
+			(line__36(_architecture 1 0 36 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+I 000047 55 771           1305449468366 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449468367 2011.05.15 11:51:08)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code efe0b9bcb0b9b8f8eae8a9b5ef)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal Qs ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3)(2))(_sensitivity(0)(1))(_read(3)(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 1 -1
+	)
+)
+I 000050 55 1179          1305449468385 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 24 ))
+	(_version v147)
+	(_time 1305449468386 2011.05.15 11:51:08)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code fef1feafa8aafce8afaebca4fb)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 27 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 27 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 28 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 33 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 31 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 31 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 31 (_architecture (_uni ))))
+		(_process
+			(line__34(_architecture 0 0 34 (_assignment (_simple)(_target(0)))))
+			(line__35(_architecture 1 0 35 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+I 000047 55 688           1305449522218 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449522219 2011.05.15 11:52:02)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 4a4b4848121c1d5d4f4e0c104a)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(2))(_sensitivity(0)(1))(_read(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 1 -1
+	)
+)
+I 000050 55 1179          1305449522225 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 23 ))
+	(_version v147)
+	(_time 1305449522226 2011.05.15 11:52:02)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 4a4b1e49181e485c1b1a08104f)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 26 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 26 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 27 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 32 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 30 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 30 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 30 (_architecture (_uni ))))
+		(_process
+			(line__33(_architecture 0 0 33 (_assignment (_simple)(_target(0)))))
+			(line__34(_architecture 1 0 34 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+I 000047 55 856           1305449596563 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449596564 2011.05.15 11:53:16)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code b8b7b8ecb9eeefafbdb8fee2b8)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni ))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3))(_sensitivity(3)))))
+			(line__14(_architecture 1 0 14 (_process (_simple)(_target(2))(_sensitivity(3)(0)(1))(_read(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 2 -1
+	)
+)
+I 000050 55 1179          1305449596569 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 27 ))
+	(_version v147)
+	(_time 1305449596570 2011.05.15 11:53:16)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code b8b7eeedb3ecbaaee9e8fae2bd)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 30 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 30 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 31 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 36 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 34 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 34 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 34 (_architecture (_uni ))))
+		(_process
+			(line__37(_architecture 0 0 37 (_assignment (_simple)(_target(0)))))
+			(line__38(_architecture 1 0 38 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+I 000047 55 864           1305449615780 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449615781 2011.05.15 11:53:35)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code bceeeae8e6eaebabb9befae6bc)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni )(_event))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3))(_sensitivity(3)))))
+			(line__14(_architecture 1 0 14 (_process (_simple)(_target(2))(_sensitivity(3)(0)(1))(_read(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 2 -1
+	)
+)
+I 000050 55 1179          1305449615786 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 29 ))
+	(_version v147)
+	(_time 1305449615787 2011.05.15 11:53:35)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code cc9ecc989c98ceda9d9c8e96c9)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 33 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 38 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_process
+			(line__39(_architecture 0 0 39 (_assignment (_simple)(_target(0)))))
+			(line__40(_architecture 1 0 40 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+I 000047 55 864           1305449770525 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449770526 2011.05.15 11:56:10)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 3d386e38606b6a2a383f7b673d)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni )(_event))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3))(_sensitivity(3)))))
+			(line__14(_architecture 1 0 14 (_process (_simple)(_target(2))(_sensitivity(3)(0)(1))(_read(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 2 -1
+	)
+)
+I 000050 55 1179          1305449770533 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 29 ))
+	(_version v147)
+	(_time 1305449770534 2011.05.15 11:56:10)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 3d3838396a693f2b6d3b7f6738)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 33 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 39 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_process
+			(line__40(_architecture 0 0 40 (_assignment (_simple)(_target(0)))))
+			(line__41(_architecture 1 0 41 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+I 000047 55 864           1305449832220 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449832221 2011.05.15 11:57:12)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 3f3b6f3a606968283a3d79653f)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni )(_event))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3))(_sensitivity(3)))))
+			(line__14(_architecture 1 0 14 (_process (_simple)(_target(2))(_sensitivity(3)(0)(1))(_read(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 2 -1
+	)
+)
+I 000050 55 1179          1305449832227 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 29 ))
+	(_version v147)
+	(_time 1305449832228 2011.05.15 11:57:12)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 3f3b393b6a6b3d296f397d653a)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 33 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 39 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_process
+			(line__40(_architecture 0 0 40 (_assignment (_simple)(_target(0)))))
+			(line__41(_architecture 1 0 41 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)
+V 000047 55 864           1305449891627 ARH_JK
+(_unit VHDL (bist_jk 0 1 (arh_jk 0 6 ))
+	(_version v147)
+	(_time 1305449891628 2011.05.15 11:58:11)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 4c4b4d4e161a1b5b494e0a164c)
+	(_entity
+		(_time 1305449168049)
+	)
+	(_object
+		(_port (_internal J ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal K ~extSTD.STANDARD.BIT 0 2 (_entity (_in ))))
+		(_port (_internal Q ~extSTD.STANDARD.BIT 0 3 (_entity (_inout ))))
+		(_signal (_internal CLK ~extSTD.STANDARD.BIT 0 7 (_architecture (_uni )(_event))))
+		(_process
+			(line__10(_architecture 0 0 10 (_process (_simple)(_target(3))(_sensitivity(3)))))
+			(line__14(_architecture 1 0 14 (_process (_simple)(_target(2))(_sensitivity(3)(0)(1))(_read(2)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_JK 2 -1
+	)
+)
+V 000050 55 1179          1305449891634 ARH_MS_JK
+(_unit VHDL (ms_jk 0 21 (arh_ms_jk 0 29 ))
+	(_version v147)
+	(_time 1305449891635 2011.05.15 11:58:11)
+	(_source (\./src/MS_JK.vhd\))
+	(_use (std(standard)))
+	(_parameters dbg)
+	(_code 4c4b1b4f1c184e5a1c4a0e1649)
+	(_entity
+		(_time 1305449157430)
+	)
+	(_component
+		(bist_jk
+			(_object
+				(_port (_internal J ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal K ~extSTD.STANDARD.BIT 0 32 (_entity (_in ))))
+				(_port (_internal Q ~extSTD.STANDARD.BIT 0 33 (_entity (_inout ))))
+			)
+		)
+	)
+	(_instantiation P 0 39 (_component bist_jk )
+		(_port
+			((J)(Sj))
+			((K)(Sk))
+			((Q)(Sq))
+		)
+		(_use (_entity . bist_jk)
+		)
+	)
+	(_object
+		(_signal (_internal Sj ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sk ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_signal (_internal Sq ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+		(_process
+			(line__40(_architecture 0 0 40 (_assignment (_simple)(_target(0)))))
+			(line__41(_architecture 1 0 41 (_assignment (_simple)(_target(1)))))
+		)
+		(_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+	)
+	(_model . ARH_MS_JK 2 -1
+	)
+)

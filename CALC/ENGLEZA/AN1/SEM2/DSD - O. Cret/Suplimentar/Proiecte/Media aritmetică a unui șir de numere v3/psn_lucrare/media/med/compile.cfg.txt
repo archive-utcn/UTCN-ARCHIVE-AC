@@ -1,0 +1,9 @@
+[View]
+Entity=reg
+Architecture=rtl
+TopLevelType=1
+[file:.\src\mmm.vhd]
+File Time Lo=-1182497746
+File Time Hi=30146450
+Enabled=1
+State=Error

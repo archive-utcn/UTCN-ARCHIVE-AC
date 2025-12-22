@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\MS_SCAZATOR_1BIT\projlib.cfg"  -d "D:\designshdl\CLV_2008\MS_SCAZATOR_1BIT\compile\"  -work MS_SCAZATOR_1BIT -dbg -e 100 "D:\designshdl\CLV_2008\MS_SCAZATOR_1BIT\src\MS_SCAZATOR_1BIT.vhd" 

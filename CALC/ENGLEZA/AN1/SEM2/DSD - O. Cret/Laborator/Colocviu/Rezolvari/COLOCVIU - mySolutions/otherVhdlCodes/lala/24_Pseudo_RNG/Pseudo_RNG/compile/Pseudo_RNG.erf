@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\24_Pseudo_RNG\Pseudo_RNG\src\rng.vhd" 
+MESSAGE "Compile Entity "rng"" 
+MESSAGE "Entity `rng' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "rng"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

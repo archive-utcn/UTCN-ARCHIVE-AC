@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\41_Barrel_Shifter\library.cfg"  -j "c:\My_Designs\41_Barrel_Shifter\Barrel_Shifter\projlib.cfg"  -d "c:\My_Designs\41_Barrel_Shifter\Barrel_Shifter\compile\"  -work Barrel_Shifter -dbg -e 100 "c:\My_Designs\41_Barrel_Shifter\Barrel_Shifter\src\barrel.vhd" 

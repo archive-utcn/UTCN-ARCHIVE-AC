@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1274029281 source:d:\code_blocks\colocviu50\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\32_Tri_State_Buffer\library.cfg"  -j "c:\My_Designs\32_Tri_State_Buffer\Tri_State_Buffer\projlib.cfg"  -d "c:\My_Designs\32_Tri_State_Buffer\Tri_State_Buffer\compile\"  -work Tri_State_Buffer -dbg -e 100 "c:\My_Designs\32_Tri_State_Buffer\Tri_State_Buffer\src\tb.vhd" 

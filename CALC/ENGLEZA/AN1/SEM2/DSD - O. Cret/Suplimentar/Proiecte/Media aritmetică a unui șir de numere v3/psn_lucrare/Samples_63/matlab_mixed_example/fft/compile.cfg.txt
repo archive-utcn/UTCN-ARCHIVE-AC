@@ -1,0 +1,81 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\compile_cfft.do]
+File Time Lo=1129916857
+File Time Hi=29664556
+[file:.\src\compile_ram.do]
+File Time Lo=1130073106
+File Time Hi=29664556
+[file:.\src\compile_all.do]
+File Time Lo=1129760608
+File Time Hi=29664556
+[file:.\src\top_fft.bde]
+File Time Lo=1130854351
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\readme.txt]
+File Time Lo=1130241399
+File Time Hi=29663810
+[file:.\src\cfft\address.vhd]
+File Time Lo=1131323098
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\blockdram.vhd]
+File Time Lo=1131479347
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\div4limit.vhd]
+File Time Lo=1132416841
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\cfft4.vhd]
+File Time Lo=1131948094
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\p2r_CordicPipe.vhd]
+File Time Lo=1133041837
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\rofactor.vhd]
+File Time Lo=1133198086
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\p2r_cordic.vhd]
+File Time Lo=1132885588
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\sc_corproc.vhd]
+File Time Lo=1133510584
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\mulfactor.vhd]
+File Time Lo=1132573090
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\cfft\cfft.vhd]
+File Time Lo=1131791845
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\RAM\ram.vhd]
+File Time Lo=1134448078
+File Time Hi=29664556
+Enabled=1
+State=Compiled
+[file:.\src\control\control.asf]
+File Time Lo=1134135580
+File Time Hi=29664556
+Enabled=1
+State=Compiled

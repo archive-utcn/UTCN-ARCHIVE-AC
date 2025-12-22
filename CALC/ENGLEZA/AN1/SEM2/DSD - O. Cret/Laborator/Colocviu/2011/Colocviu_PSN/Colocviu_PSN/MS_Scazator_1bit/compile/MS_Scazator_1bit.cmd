@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\MS_Scazator_1bit\compile"   -work MS_Scazator_1bit  -dbg -e 100 -2002 "c:\\My_Designs\\Colocviu_PSN\\MS_Scazator_1bit\\src\\MS_Scazator_1bit.vhd" 

@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\sumator_nbiti\src\sumatornbiti.vhd" 
+MESSAGE "Compile Entity "sum"" 
+MESSAGE "Entity `sum' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "sum"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

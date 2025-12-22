@@ -1,0 +1,35 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\SineGenerator.vhd]
+File Time Hi=29603067
+File Time Lo=330855864
+STATE=Compiled
+Enabled=1
+[file:.\src\CosineGenerator.vhd]
+File Time Hi=29603067
+File Time Lo=329293444
+STATE=Compiled
+Enabled=1
+[file:.\src\sawgenerator.vhd]
+File Time Hi=29603067
+File Time Lo=330699622
+STATE=Compiled
+Enabled=1
+[file:.\src\multiplier.vhd]
+File Time Hi=29603067
+File Time Lo=330074654
+STATE=Compiled
+Enabled=1
+[file:.\src\modulator.bde]
+File Time Hi=29603068
+File Time Lo=887358910
+STATE=Compiled
+Enabled=1
+[file:.\src\Modulator.tcl]
+File Time Hi=29603067
+File Time Lo=329762170
+[file:.\src\wave1.awf]
+File Time Hi=29603067
+File Time Lo=331168348

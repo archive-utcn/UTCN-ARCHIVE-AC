@@ -1,0 +1,68 @@
+[View]
+Entity=bancomat
+Architecture=arh_bancomat
+TopLevelType=1
+[file:.\src\identificare_card.vhd]
+File Time Lo=1986956800
+File Time Hi=30372950
+Enabled=1
+State=Compiled
+[file:.\src\citire_pin.vhd]
+File Time Lo=2083561210
+File Time Hi=30373048
+Enabled=1
+State=Modified
+[file:.\src\memorie_rom_pin.vhd]
+File Time Lo=2042054912
+File Time Hi=30372953
+Enabled=1
+State=Compiled
+[file:.\src\comparator_card_pin.vhd]
+File Time Lo=-1428010496
+File Time Hi=30372950
+Enabled=1
+State=Compiled
+[file:.\src\memorie_ram_sold.vhd]
+File Time Lo=-828010496
+File Time Hi=30372950
+Enabled=1
+State=Compiled
+[file:.\src\afisor.vhd]
+File Time Lo=351989504
+File Time Hi=30372951
+Enabled=1
+State=Compiled
+[file:.\src\unitate_Comanda.vhd]
+File Time Lo=-29994666
+File Time Hi=30373077
+Enabled=1
+State=Warning
+[file:.\src\demux.vhd]
+File Time Lo=-760601679
+File Time Hi=30373052
+Enabled=1
+State=Compiled
+[file:.\src\CITIRE_SUMA.vhd]
+File Time Lo=-1581015552
+File Time Hi=30373011
+Enabled=1
+State=Modified
+[file:.\src\COMP_MAI_MIC_EGAL.vhd]
+File Time Lo=-801015552
+File Time Hi=30373011
+Enabled=1
+State=Compiled
+[file:.\src\SCAZATOR.vhd]
+File Time Lo=38984448
+File Time Hi=30373012
+Enabled=1
+State=Compiled
+[file:.\src\NUMARATOR_PIN.vhd]
+File Time Lo=124017152
+File Time Hi=30373013
+Enabled=1
+State=Modified
+[file:.\src\bancomat.bde]
+File Time Lo=1481765337
+File Time Hi=30373055
+Enabled=1

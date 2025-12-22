@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1304021927 source:c:\codeblocks\algoritm_prim_2\main.c
+	<stdio.h>
+	<stdlib.h>
+

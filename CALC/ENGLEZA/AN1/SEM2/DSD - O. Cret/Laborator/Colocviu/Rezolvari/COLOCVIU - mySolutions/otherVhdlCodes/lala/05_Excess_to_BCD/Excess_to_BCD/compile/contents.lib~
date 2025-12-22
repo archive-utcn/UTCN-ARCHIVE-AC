@@ -1,0 +1,4 @@
+16
+~E 1 "./src/converter.vhd" 4 excess_to_bcd
+~E 1 "./src/converter_TB.vhd" 4 tb
+~A 1 "./src/converter_TB.vhd" 7 arch

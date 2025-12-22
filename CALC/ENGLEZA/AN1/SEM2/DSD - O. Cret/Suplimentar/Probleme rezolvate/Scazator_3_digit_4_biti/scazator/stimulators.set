@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML>
+ <document type="stimulators" version="1">
+  <set name="ASDB Stimulators" active="1">
+   <stimulator>
+    <signal_path value="/scazator_3digit/a0(0)"/>
+    <rawdescription value="KEY:KEY:Override:86/0,1:V:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a0(1)"/>
+    <rawdescription value="KEY:KEY:Override:67/0,1:C:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a0(2)"/>
+    <rawdescription value="KEY:KEY:Override:88/0,1:X:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a0(3)"/>
+    <rawdescription value="KEY:KEY:Override:90/0,1:Z:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a1(0)"/>
+    <rawdescription value="KEY:KEY:Override:70/0,1:F:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a1(1)"/>
+    <rawdescription value="KEY:KEY:Override:68/0,1:D:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a1(2)"/>
+    <rawdescription value="KEY:KEY:Override:83/0,1:S:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a1(3)"/>
+    <rawdescription value="KEY:KEY:Override:65/0,1:A:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a2(0)"/>
+    <rawdescription value="KEY:KEY:Override:52/0,1:4:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a2(1)"/>
+    <rawdescription value="KEY:KEY:Override:51/0,1:3:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a2(2)"/>
+    <rawdescription value="KEY:KEY:Override:50/0,1:2:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/a2(3)"/>
+    <rawdescription value="KEY:KEY:Override:49/0,1:1:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b0(0)"/>
+    <rawdescription value="KEY:KEY:Override:188/0,1:,:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b0(1)"/>
+    <rawdescription value="KEY:KEY:Override:77/0,1:M:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b0(2)"/>
+    <rawdescription value="KEY:KEY:Override:78/0,1:N:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b0(3)"/>
+    <rawdescription value="KEY:KEY:Override:66/0,1:B:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b1(0)"/>
+    <rawdescription value="KEY:KEY:Override:76/0,1:L:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b1(1)"/>
+    <rawdescription value="KEY:KEY:Override:75/0,1:K:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b1(2)"/>
+    <rawdescription value="KEY:KEY:Override:74/0,1:J:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b1(3)"/>
+    <rawdescription value="KEY:KEY:Override:72/0,1:H:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b2(0)"/>
+    <rawdescription value="KEY:KEY:Override:48/0,1:0:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b2(1)"/>
+    <rawdescription value="KEY:KEY:Override:57/0,1:9:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b2(2)"/>
+    <rawdescription value="KEY:KEY:Override:56/0,1:8:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/b2(3)"/>
+    <rawdescription value="KEY:KEY:Override:55/0,1:7:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/scazator_3digit/cin"/>
+    <rawdescription value="KEY:KEY:Override:71/0,1:G:0:"/>
+   </stimulator>
+  </set>
+ </document>
+</XML>

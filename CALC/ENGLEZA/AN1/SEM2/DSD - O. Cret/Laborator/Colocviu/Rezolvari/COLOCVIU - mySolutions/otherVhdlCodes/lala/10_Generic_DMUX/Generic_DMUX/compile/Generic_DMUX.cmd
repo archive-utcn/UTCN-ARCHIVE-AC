@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\10_Generic_DMUX\library.cfg"  -j "c:\My_Designs\10_Generic_DMUX\Generic_DMUX\projlib.cfg"  -d "c:\My_Designs\10_Generic_DMUX\Generic_DMUX\compile\"  -work Generic_DMUX -dbg -e 100 "c:\My_Designs\10_Generic_DMUX\Generic_DMUX\src\dmux.vhd" 

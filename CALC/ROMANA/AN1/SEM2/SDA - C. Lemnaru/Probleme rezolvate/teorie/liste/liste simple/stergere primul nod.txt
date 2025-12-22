@@ -1,0 +1,11 @@
+void stergere(tip_nod *prim,tip_nod *ultim)
+{
+TIP_NOD *p;
+if(prim!=0) {	/* lista nu este vidã */
+p=prim; prim=prim->urm;
+elib_nod(p); 
+/*eliberarea spaþiului de memorie */
+if(prim==0) ultim=0; 
+/* lista a devenit vidã */
+}
+}

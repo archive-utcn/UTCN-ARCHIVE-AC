@@ -1,0 +1,4 @@
+MESSAGE "File: D:\designshdl\CLV_2008\D_FF\src\D_FF.vhd" 
+MESSAGE "Compile Entity "D_FF"" 
+MESSAGE "Compile Architecture "arh" of Entity "D_FF"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

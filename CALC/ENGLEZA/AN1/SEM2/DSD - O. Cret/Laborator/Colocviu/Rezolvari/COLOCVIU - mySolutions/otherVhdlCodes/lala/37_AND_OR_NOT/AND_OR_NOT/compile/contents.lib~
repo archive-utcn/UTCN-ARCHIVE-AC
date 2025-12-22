@@ -1,0 +1,9 @@
+55
+~E 1 "./src/and_or_not.vhd" 4 circuit
+~A 1 "./src/and_or_not.vhd" 9 a
+~E 1 "./src/and_gate.vhd" 4 and_gate
+~A 1 "./src/and_gate.vhd" 9 a
+~E 1 "./src/inverter.vhd" 4 inverter
+~A 1 "./src/inverter.vhd" 9 a
+~E 1 "./src/and_gate.vhd" 4 or_gate
+~A 1 "./src/or_gate.vhd" 9 a

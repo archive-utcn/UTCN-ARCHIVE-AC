@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2008\REGISTRU_UNIVERSAL\src\REGISTRU_UNIVERSAL.vhd" 
+MESSAGE "Compile Entity "REGISTRU_UNIVERSAL"" 
+MESSAGE "Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

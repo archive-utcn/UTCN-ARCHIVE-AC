@@ -1,0 +1,2 @@
+$include = "$VSIMSALIBRARYCFG"
+noapte = ".\noapte\noapte.lib" 1401227619157

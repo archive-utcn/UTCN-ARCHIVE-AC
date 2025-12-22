@@ -1,0 +1,14 @@
+
+tip_nod *cautare(char key)
+{
+int k;
+tip_nod *p;
+h=f(key);
+p=HT(h);
+while(p!=0)
+  {
+		if(strcmp(key,p->cheie)==0) return p;
+		p=p->urm;
+  }
+	return 0;
+}

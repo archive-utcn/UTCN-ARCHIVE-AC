@@ -1,0 +1,200 @@
+#include <stdio.h>
+#include <conio.h>
+#define nmax 100
+/* ALGORITMI DE SORTARE */
+
+void citire_vector(int n,float a[nmax],float b[nmax])
+/* CITIRE ELEMENTE VECTOR */
+{
+  int i;
+  printf("\nIntroduceti elementele vectorului de sortat\n");
+  for(i=0;i<n;i++)
+    {
+      printf("a[%d]=",i);
+      scanf("%f",&a[i]);
+      b[i]=a[i];
+    }
+}
+
+void reconstituire(int n,float a[nmax],float b[nmax])
+/* RECONSTITUIREA INITIALA A VECTORULUI a */
+{
+  int i;
+  for(i=0;i<n;i++)
+    a[i]=b[i];
+}
+
+void afisare(int n,float a[nmax])
+/* AFISARE VECTOR */
+{
+  int i;
+  for(i=0;i<n;i++)
+    {
+      printf("%8.2f",a[i]);
+      if(((i+1) % 10)==0) printf("\n");
+    }
+}
+
+  void  sort_numarare(int n,float a[nmax])
+  /*  SORTAREA PRIN NUMARARE  */
+{
+  int i,j;
+  float b[nmax];
+  int c[nmax];
+  for(i=0;i<n;i++)
+    {
+      c[i]=0; /* initializare vector de numarare */
+      b[i]=a[i]; /* copiere vector a in b */
+    }
+  /* numarare */
+  for(j=1;j<n;j++)
+    for(i=0;i<=j-1;i++)
+      if(a[i]<a[j]) c[j]++;
+      else c[i]++;
+  /* rearanjare vector a */
+  for(i=0;i<n;i++)
+    a[c[i]]=b[i];
+}
+
+void sort_inserare_directa(int n,float a[nmax])
+/* SORTARE PRIN INSERARE DIRECTA */
+{
+  int i,j;
+  float x;
+  for(j=1;j<n;j++)
+     {
+	     x=a[j]; i=j-1;
+	     while((i>=0) && (x<a[i]))
+		 {
+		     a[i+1]=a[i];
+		       i=i-1;
+		   }
+             a[i+1]=x;
+	   }
+ }
+
+ void shell_sort(int n,float a[nmax])
+ /* SORTAREA PRIN METODA SHELL */
+ {
+	int i,j,incr;
+	float x;
+	incr=1;
+	while(incr<n)
+		incr=incr*3 + 1;
+	while(incr>=1)
+	  {
+		 incr=incr / 3;
+		 for(i=incr;i<n;i++)
+		       {
+			  x=a[i];j=i;
+			  while(a[j-incr]>x)
+				 {
+					a[j]=a[j-incr];
+					j=j-incr;
+					if(j<incr) break;
+				  };
+			    a[j]=x;
+		         }
+	    }
+ }
+
+ void sort_metoda_bulelor(int n,float a[nmax])
+ /* SORTAREA PRIN INTERSCHIMBARE-METODA BULELOR */
+ {
+  int i,j,gata;
+  float x;
+  j=0;
+  do{
+		gata=1;
+		j=j+1;
+		for(i=0;i<n-j;i++)
+		  if(a[i]>a[i+1]){
+				      gata=0;
+				      x=a[i];a[i]=a[i+1];a[i+1]=x;
+				  };
+        }while(gata==0);
+ }
+
+ void quick(int prim,int ultim,float a[nmax])
+ {
+	int i,j;
+	float pivot,x;
+	i=prim;j=ultim;
+	pivot=a[(prim + ultim) / 2];
+	do{
+		while(a[i]<pivot) i++;
+		while(a[j]>pivot) j--;
+		if(i<=j) {
+			     x=a[i];a[i]=a[j];a[j]=x;
+			      i++;j--;
+			 };
+	       }while(i<=j);
+        if(prim<j) quick(prim,j,a);
+        if(i<ultim) quick(i,ultim,a);
+   }
+
+   void quicksort(int n,float a[nmax])
+   /* SORTAREA  RAPIDA QUICKSORT */
+   {
+          quick(0,n-1,a);
+    }
+
+    void sort_selectie(int n,float a[nmax])
+    /* SORTAREA PRIN SELECTIE */
+    {
+	  int i,j,poz;
+	  float x;
+	  for(i=0;i<n-1;i++)
+	         {
+		  x=a[i];poz=i;
+		  for(j=i+1;j<n;j++)
+		  if(a[j]<x) {
+			          x=a[j];
+			          poz=j;
+			       }
+		  a[poz]=a[i];a[i]=x;
+		}
+         }
+
+      void main(void)
+      {
+          int i,n;
+          float a[nmax],b[nmax];
+          clrscr();
+          printf("\nIntroduceti nr.elementelor n=");
+          scanf("%d",&n);
+          citire_vector(n,a,b);
+          printf("\nVECTORUL NESORTAT\n");
+          afisare(n,a);
+          printf("\nVECTORUL SORTAT PRIN METODA NUMARARII\n");
+          sort_numarare(n,a);
+         afisare(n,a);
+         getch();
+         printf("\nVECTORUL SORTAT PRIN METODA INSERARII DIRECTE\n");
+         reconstituire(n,a,b);   /* a devine vectorul  nesortat initial */
+         sort_inserare_directa(n,a);
+         afisare(n,a);
+         getch();
+         printf("\nVECTORUL SORTAT PRIN METODA SHELL\n");
+         reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+
+          shell_sort(n,a);
+          afisare(n,a);
+          getch();
+          printf("\nVECTORUL SORTAT PRIN METODA BULELOR\n");
+          reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+          sort_metoda_bulelor(n,a);
+          afisare(n,a);
+          getch();
+          printf("\nVECTORUL SORTAT PRIN METODA QUICKSORT\n");
+          reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+          quicksort(n,a);
+          afisare(n,a);
+          getch();
+          printf("\nVECTORUL SORTAT PRIN METODA SELECTIEI DIRECTE\n");
+          reconstituire(n,a,b); /* a devine vectorul  nesortat initial */
+          sort_selectie(n,a);
+          afisare(n,a);
+          getch();
+  }
+

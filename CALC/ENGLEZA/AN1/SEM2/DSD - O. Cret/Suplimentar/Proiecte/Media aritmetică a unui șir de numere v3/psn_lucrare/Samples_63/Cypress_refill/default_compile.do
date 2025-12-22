@@ -1,0 +1,5 @@
+acom -dbg "$DSN/src/functional/binctr.vhd"
+acom -dbg "$DSN/src/functional/refill.vhd"
+acom -dbg "$DSN/src/functional/refill_tb.vhd"
+acom -dbg "$DSN/src/timing/refill.vhd"
+acom -dbg "$DSN/src/timing/refill_tb.vhd"

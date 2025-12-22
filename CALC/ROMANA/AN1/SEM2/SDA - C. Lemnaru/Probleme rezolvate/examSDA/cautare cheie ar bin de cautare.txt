@@ -1,0 +1,13 @@
+TIP_NOD *cautare (TIP_NOD *rad, int key)
+{
+                     TIP_NOD *p;
+                     if (rad==0) return 0; 
+                     p=rad;
+                      while (p!=0)
+     {
+      if (p->cheie==key) return p;           
+      else if (key<p->cheie) p=p->stg; 
+       else p=p->dr; 
+    }
+   return 0;
+  }

@@ -1,0 +1,6 @@
+5
+ana 12
+maria 13
+ion 22
+vasile 17
+ilie 110

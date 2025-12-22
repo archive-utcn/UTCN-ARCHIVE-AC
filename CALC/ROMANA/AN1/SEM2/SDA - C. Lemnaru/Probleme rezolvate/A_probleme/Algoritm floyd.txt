@@ -1,0 +1,6 @@
+int i,j,k,n,a[20][20];
+for(k=1;k<=n;k++)
+ for(i=1;i<=n;i++)
+  for(j=1;j<=n;j++)
+   if((i!=k) && (j!=k) && (i!=j))
+	a[i][j]=min(a[i][j], a[i][k]+a[k][j]);

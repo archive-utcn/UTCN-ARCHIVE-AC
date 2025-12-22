@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\alu_8\src\alu_8.vhd" 
+MESSAGE "Compile Entity "alu"" 
+MESSAGE "Entity `alu' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "alu"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

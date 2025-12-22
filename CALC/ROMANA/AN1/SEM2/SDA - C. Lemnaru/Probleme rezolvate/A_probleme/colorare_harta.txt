@@ -1,0 +1,67 @@
+void afisare(int nod[],int n,int z)
+{
+    int i;
+    printf("\n\nSolutia nr %d:",z);
+    for (i=0; i<n; i++)
+    {
+        printf("\nNodul: %d - culoarea: %d",i,nod[i]);
+    }
+}
+
+int verif(int k,int n,int solutie[],int adiac[][NMAX])
+{
+    int i,max=0;
+    for (i=0; i<k; i++)
+    {
+        if (adiac[k][i]==0)
+        {
+            return solutie[i];
+        }
+        else if (solutie[i]>max)
+        {
+            max=solutie[i];
+        }
+    }
+    max++;
+    return max;
+}
+
+void back_rec(int k,int n,int m,int c_f,int solutie[],int adiac[][NMAX],int z)  //c_f = culori folosite
+{
+    int j;
+    for (j=c_f; j<=m; j++)
+    {
+        solutie[k]=j;
+        if (k<=n-1)
+        {
+            if (k==n-1)
+            {
+                z++;
+                afisare(solutie,n,z);
+                getch();
+            }
+            else if (k<n-1)
+            {
+                c_f=verif(k+1,n,solutie,adiac);
+                back_rec(k+1,n,m,c_f,solutie,adiac,z);
+            }
+        }
+    }
+}
+
+
+void main()
+{
+    int n=5;        //nr noduri
+    int m=6;        //nr culori
+    int matr_adiac[5][5]= {{0,0,1,0,1},
+                           {0,0,1,1,1},
+                           {1,1,0,0,1},
+                           {0,1,0,0,1},
+                           {1,1,1,1,0}
+    };
+    int sol[n];
+    int i;
+    for (i=0; i<n; i++) sol[i]=0;
+    back_rec(0,n,m,1,sol,matr_adiac,0);
+}

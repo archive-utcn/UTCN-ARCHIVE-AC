@@ -1,0 +1,4 @@
+MESSAGE "File: d:\designshdl\counter\ram_memory\src\ram_memory.vhd" 
+MESSAGE "Compile Entity "Memorie_RAM"" 
+MESSAGE "Compile Architecture "ArhRAM" of Entity "Memorie_RAM"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

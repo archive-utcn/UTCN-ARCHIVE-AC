@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\PORTI\projlib.cfg"  -d "D:\designshdl\CRET\PORTI\compile\"  -work PORTI -dbg -e 100 "D:\designshdl\CRET\PORTI\src\PORTI.vhd" 

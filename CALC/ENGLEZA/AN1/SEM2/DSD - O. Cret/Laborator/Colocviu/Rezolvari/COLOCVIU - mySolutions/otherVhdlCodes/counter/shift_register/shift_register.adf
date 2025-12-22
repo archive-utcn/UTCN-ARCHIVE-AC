@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=shift_register
+
+[Library]
+shift_register=.\shift_register.lib
+
+[$LibMap$]
+shift_register=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=d:\designshdl\counter\shift_register\
+Extension3=mak
+Name4=Memory
+Directory4=d:\designshdl\counter\shift_register\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=d:\designshdl\counter\shift_register\
+Extension5=dll
+
+[Files]
+/shift_register.vhd=-1
+
+[Files.Data]
+.\src\shift_register.vhd=VHDL Source Code
+

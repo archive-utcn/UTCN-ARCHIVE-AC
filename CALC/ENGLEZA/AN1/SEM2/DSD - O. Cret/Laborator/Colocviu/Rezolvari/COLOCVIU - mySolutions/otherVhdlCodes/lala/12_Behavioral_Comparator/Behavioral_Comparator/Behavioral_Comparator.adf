@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Behavioral_Comparator
+
+[Library]
+Behavioral_Comparator=.\Behavioral_Comparator.lib
+
+[$LibMap$]
+Behavioral_Comparator=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/comparator.vhd=-1
+
+[Files.Data]
+.\src\comparator.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=comparator|a|0  
+ShowHide=ShowTopLevel
+Selected=

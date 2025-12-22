@@ -1,0 +1,41 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 clr
+$IN 5 1 clk
+$IN 9 1 but_sum
+$IN +4 1 but_pin
+$IN +4 1 but_card
+I 2 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 29 2 2 sel
+$SC 21 +4
+I 3 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 46 3 4 sw
+$SC 30-42/4
+$BUS IN 55 2 2 m_sel
+$SC 47 +4
+$OUT +5 1 chitanta
+I 4 "a#28#std_logic_vector(6 downto 0)1 ricd6 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT 88 4 7 display
+$SC 60-84/4
+$S +5 1 verif_card
+$S +4 1 6 0 pin
+$S +4 1 afisare
+$S +4 1 extragere
+$S +4 1 iesire
+I 5 "a#29#std_logic_vector(11 downto 0)1 ricd11 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +52 5 12 suma_sold
+$SC 109-+44/4
+I 6 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +69 6 16 value
+$SC 158-+60/4
+I 7 "i#7#integerrict-2147483648 2147483647 "
+$S +5 7 id_client
+$BUS IN +4 3 4 sw
+$SC 30-42/4
+$BUS IN 228 2 2 sel
+$SC 21 +4
+$IN 17 0 but_card
+$S 223 0 id_client
+$S 89 0 verif_card
+$ENDWAVE

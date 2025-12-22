@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1305230388 source:c:\users\anca\desktop\exxxx\main.c
+	<stdio.h>
+	<stdlib.h>
+

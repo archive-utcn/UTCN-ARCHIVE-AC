@@ -1,0 +1,9 @@
+[Inputs]
+clk
+reset
+load
+modulo
+=nr_IN[5:1]=
+[Outputs]
+=cout[5:1]=
+[BiDir]

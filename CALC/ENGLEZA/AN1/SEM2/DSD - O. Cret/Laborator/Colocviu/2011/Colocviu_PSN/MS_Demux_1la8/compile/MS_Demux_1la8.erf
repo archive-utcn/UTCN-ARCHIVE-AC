@@ -1,0 +1,6 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\MS_Demux_1la8\src\MS_Demux_1la8.vhd" 
+MESSAGE "Compile Entity "DEMUX_8la1"" 
+MESSAGE "Compile Architecture "ARH_demux" of Entity "DEMUX_8la1"" 
+MESSAGE "Compile Entity "MS_DEMUX"" 
+MESSAGE "Compile Architecture "ARH_MS_DEMUX" of Entity "MS_DEMUX"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]" 

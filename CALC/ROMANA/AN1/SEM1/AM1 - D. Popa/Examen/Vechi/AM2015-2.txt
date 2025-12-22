@@ -1,0 +1,8 @@
+1. (a): Definition: Balls in metric spaces;
+   (b): Taylor's Formula with integral form of the remainder;
+2. Maclaurin
+   (a): f(x)=1/(1+x)
+   (b): g(x)=arctan(x)
+   (c): Series for arctan(2)
+3. (a): sum de la n=0->inf din arctan(2^n/(1+2^(2n+1))=?
+   (b): lim n->inf din sum de la k=0->n 1/(2k-1) - log(n)=?

@@ -1,0 +1,4 @@
+MESSAGE "File: d:\designshdl\CLV_2008\MUX_8_LA_1_GENERIC\src\MUX_8_LA_1_GENERIC.vhd" 
+MESSAGE "Compile Entity "MUX_GENERIC"" 
+MESSAGE "Compile Architecture "arh" of Entity "MUX_GENERIC"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

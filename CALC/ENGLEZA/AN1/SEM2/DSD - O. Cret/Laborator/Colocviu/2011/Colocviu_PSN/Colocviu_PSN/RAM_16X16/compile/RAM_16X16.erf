@@ -1,0 +1,7 @@
+MESSAGE "File: C:\Users\Socaci\Desktop\New folder\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd" 
+MESSAGE "Compile Entity "RAM16x16"" 
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints, code coverage and profiler will not be available." 
+MESSAGE "Compile Architecture "ARH_COMP" of Entity "RAM16x16"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   RAM16x16" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

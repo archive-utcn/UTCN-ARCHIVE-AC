@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+VHPI_example=.\VHPI_example.adf
+[Settings]
+Active=VHPI_example
+[Browser]
+sort=order
+mode=none
+[Expand]
+vhpi_example=1
+[Order]
+order=1
+macro=

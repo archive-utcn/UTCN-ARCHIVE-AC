@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+pseudo_rng=.\Pseudo_RNG\Pseudo_RNG.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+pseudo_rng=1

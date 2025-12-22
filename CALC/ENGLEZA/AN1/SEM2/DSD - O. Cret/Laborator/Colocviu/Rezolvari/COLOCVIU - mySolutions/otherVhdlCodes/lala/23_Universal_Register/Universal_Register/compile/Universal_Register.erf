@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\23_Universal_Register\Universal_Register\src\register.vhd" 
+MESSAGE "Compile Entity "r"" 
+MESSAGE "Entity `r' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "r"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=detect_seq_0110
+
+[Library]
+detect_seq_0110=.\detect_seq_0110.lib
+
+[$LibMap$]
+detect_seq_0110=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/detect_seq_0110.vhd=-1
+/Waveform Editor 6.awf=-1
+
+[Files.Data]
+.\src\detect_seq_0110.vhd=VHDL Source Code
+.\src\Waveform Editor 6.awf=Waveform File
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=detect|arh|0   
+ShowHide=ShowTopLevel
+Selected=

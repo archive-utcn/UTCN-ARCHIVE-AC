@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+SN7485=SN7485.adf
+[Settings]
+Active=SN7485
+[Browser]
+sort=order
+mode=none
+[Expand]
+sn7485=1
+[Order]
+order=1
+macro=

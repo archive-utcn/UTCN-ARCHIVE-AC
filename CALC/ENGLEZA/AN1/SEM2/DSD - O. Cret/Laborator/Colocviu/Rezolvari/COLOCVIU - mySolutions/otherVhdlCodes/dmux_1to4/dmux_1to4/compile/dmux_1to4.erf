@@ -1,0 +1,4 @@
+MESSAGE "File: D:\designshdl\dmux_1to4\dmux_1to4\src\dmux_1to4.vhd" 
+MESSAGE "Compile Entity "dmux_n"" 
+MESSAGE "Compile Architecture "arh" of Entity "dmux_n"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

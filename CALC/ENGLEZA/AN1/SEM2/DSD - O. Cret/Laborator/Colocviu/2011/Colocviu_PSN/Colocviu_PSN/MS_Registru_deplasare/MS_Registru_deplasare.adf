@@ -1,0 +1,54 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MS_Registru_deplasare
+
+[Library]
+MS_Registru_deplasare=.\MS_Registru_deplasare.LIB
+
+[$LibMap$]
+MS_Registru_deplasare=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\Colocviu_PSN\MS_Registru_deplasare\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\Colocviu_PSN\MS_Registru_deplasare\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\Colocviu_PSN\MS_Registru_deplasare\
+Extension5=dll
+Name6=PDF
+Directory6=c:\My_Designs\Colocviu_PSN\MS_Registru_deplasare\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\My_Designs\Colocviu_PSN\MS_Registru_deplasare\
+Extension7=
+
+[Files]
+/MS_Registru_deplasare.vhd=-1
+
+[Files.Data]
+.\src\MS_Registru_deplasare.vhd=VHDL Source Code
+

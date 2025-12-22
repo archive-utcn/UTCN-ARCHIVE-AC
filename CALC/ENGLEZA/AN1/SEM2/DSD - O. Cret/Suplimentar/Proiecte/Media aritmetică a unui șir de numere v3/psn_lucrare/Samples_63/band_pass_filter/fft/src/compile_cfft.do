@@ -1,0 +1,11 @@
+acom -dbg "$DSN/src/cfft/address.vhd"
+acom -dbg "$DSN/src/cfft/blockdram.vhd"
+acom -dbg "$DSN/src/cfft/div4limit.vhd"
+acom -dbg "$DSN/src/cfft/cfft4.vhd"
+acom -dbg "$DSN/src/cfft/p2r_cordicpipe.vhd"
+acom -dbg "$DSN/src/cfft/rofactor.vhd"
+acom -dbg "$DSN/src/cfft/p2r_cordic.vhd"
+acom -dbg "$DSN/src/cfft/sc_corproc.vhd"
+acom -dbg "$DSN/src/cfft/mulfactor.vhd"
+acom -dbg "$DSN/src/cfft/cfft.vhd"
+entity cfft

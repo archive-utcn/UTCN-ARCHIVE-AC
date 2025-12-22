@@ -1,0 +1,84 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=Bancomat
+
+[Library]
+Bancomat=.\Bancomat\Bancomat.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=E:\Facultate\Logic Design\SEM II\SEM II Project\ATM\Bancomat\src
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+Bancomat=.
+Active_lib=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=subtractor|ARCH|0 
+ShowHide=ShowTopLevel
+Selected=
+SortInfo=u
+
+[Files]
+/RAM_Memory.vhd=-1
+/Subtractor.vhd=-1
+/ROM_Memory.vhd=-1
+/DMUX_Operation.vhd=-1
+/Comparator_Mic.vhd=-1
+/Card Identifier.vhd=-1
+/Receipt.vhd=-1
+/Comparator_Egal.vhd=-1
+/BCD 7.vhd=-1
+/Command_Unit.vhd=-1
+/COMP_INTEGER.vhd=-1
+/Read_PIN.vhd=-1
+/Read_SUMA.vhd=-1
+/Register.vhd=-1
+/Read_Card.vhd=-1
+/BCD.vhd=-1
+
+[Files.Data]
+.\src\RAM_Memory.vhd=VHDL Source Code
+.\src\Subtractor.vhd=VHDL Source Code
+.\src\ROM_Memory.vhd=VHDL Source Code
+.\src\DMUX_Operation.vhd=VHDL Source Code
+.\src\Comparator_Mic.vhd=VHDL Source Code
+.\src\Card Identifier.vhd=VHDL Source Code
+.\src\Receipt.vhd=VHDL Source Code
+.\src\Comparator_Egal.vhd=VHDL Source Code
+.\src\BCD 7.vhd=VHDL Source Code
+.\src\Command_Unit.vhd=VHDL Source Code
+.\src\COMP_INTEGER.vhd=VHDL Source Code
+.\src\Read_PIN.vhd=VHDL Source Code
+.\src\Read_SUMA.vhd=VHDL Source Code
+.\src\Register.vhd=VHDL Source Code
+.\src\Read_Card.vhd=VHDL Source Code
+.\src\BCD.vhd=VHDL Source Code
+

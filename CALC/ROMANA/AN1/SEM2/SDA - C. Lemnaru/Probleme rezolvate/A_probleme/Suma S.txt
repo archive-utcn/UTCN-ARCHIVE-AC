@@ -1,0 +1,76 @@
+//3.9. Se considera o multime formata din n elemente numere întregi. Sa se genereze toate submultimile acestei multimi având
+//proprietatea ca suma elementelor lor este egala cu S.
+
+#include <conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define NMAX 10
+
+void afisare(int rez[],int k)
+{
+    int i;
+    printf("\n");
+    for (i=0;i<=k;i++)
+    {
+        printf("%d ",rez[i]);
+    }
+}
+int sol_partiala(int y[],int m,int s)
+{
+    int i=0,suma=0;
+    for (i=0;i<=m;i++)
+    {
+        suma+=y[i];
+    }
+    if (suma<=s)
+    {
+        return 1;
+    }
+    return 0;
+}
+int sol_completa(int y[],int m,int s)
+{
+    int i=0,suma=0;
+    for (i=0;i<=m;i++)
+    {
+        suma+=y[i];
+    }
+    if (suma==s)
+    {
+        return 1;
+    }
+    return 0;
+}
+void backtrack(int k,int n,int s,int multime[],int rezultat[])
+{
+    int j;
+    for (j=k; j<n; j++)
+    {
+        rezultat[k]=multime[j];
+        if (sol_partiala(rezultat,k,s)==1)
+        {
+            if (sol_completa(rezultat,k,s)==1)
+            {
+                afisare(rezultat,k);
+            }
+            else if(k<n)
+            backtrack(k+1,n,s,multime,rezultat);
+        }
+    }
+}
+void main()
+{
+    int n,s,i;
+    printf("Introduceti numarul elementelor din multime: ");
+    scanf("%d",&n);
+    printf("\nIntroduceti suma S: ");
+    scanf("%d",&s);
+    int multime[n],rezultat[n];
+    for (i=0; i<n; i++)
+    {
+        printf("Elementul nr. %d: ",i);
+        scanf("%d",&multime[i]);
+        rezultat[i]=0;
+    }
+    backtrack(0,n,s,multime,rezultat);
+}

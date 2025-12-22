@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1304669809 source:c:\codeblocks\aranjamente_backtracking\main.c
+	<stdio.h>
+	<stdlib.h>
+

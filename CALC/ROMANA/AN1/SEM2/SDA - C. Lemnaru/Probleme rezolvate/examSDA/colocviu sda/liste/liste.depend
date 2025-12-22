@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1306263317 source:c:\users\oana\desktop\colocviu sda\liste\main.c
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+

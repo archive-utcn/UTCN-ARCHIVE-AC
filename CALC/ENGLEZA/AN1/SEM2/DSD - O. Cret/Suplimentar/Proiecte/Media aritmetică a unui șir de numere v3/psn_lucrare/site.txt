@@ -1,0 +1,10 @@
+site-uri de programare:
+http://www.ubm.ro/~marietag/fisiere/algorithms.html
+http://www.cwu.edu/~andonie/Cartea%20de%20algoritmi/cap8.htm
+
+
+site-uri pt psn:
+http://ftp.utcluj.ro/pub/users/calceng/SSC/Ssc06/SSC06%20fosta%2008.pdf
+http://esd.cs.ucr.edu/labs/tutorial/
+http://www.scribd.com/doc/6542285/Vhdl-Programs
+http://faculty.kfupm.edu.sa/COE/aimane/COE405/hw1sol_062.pdf

@@ -1,0 +1,5 @@
+149
+~E 1 "./src/MS_JK.vhd" 1 bist_jk
+~A 1 "./src/MS_JK.vhd" 6 arh_jk
+~E 1 "./src/MS_JK.vhd" 26 ms_jk
+~A 1 "./src/MS_JK.vhd" 29 arh_ms_jk

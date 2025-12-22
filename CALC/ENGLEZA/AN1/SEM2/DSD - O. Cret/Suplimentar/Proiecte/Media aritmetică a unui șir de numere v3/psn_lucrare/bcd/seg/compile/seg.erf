@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\bcd\seg\src\segmente.vhd" 
+MESSAGE "Compile Entity "test"" 
+MESSAGE "Compile Architecture "Behavioral" of Entity "test"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.9 [s]" 

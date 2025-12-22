@@ -1,0 +1,20 @@
+  void  sort_numarare(int n,float a[nmax])
+  /*  SORTAREA PRIN NUMARARE  */
+{
+  int i,j;
+  float b[nmax];
+  int c[nmax];
+  for(i=0;i<n;i++)
+    {
+      c[i]=0; /* initializare vector de numarare */
+      b[i]=a[i]; /* copiere vector a in b */
+    }
+  /* numarare */
+  for(j=1;j<n;j++)
+    for(i=0;i<=j-1;i++)
+      if(a[i]<a[j]) c[j]++;
+      else c[i]++;
+  /* rearanjare vector a */
+  for(i=0;i<n;i++)
+    a[c[i]]=b[i];
+}

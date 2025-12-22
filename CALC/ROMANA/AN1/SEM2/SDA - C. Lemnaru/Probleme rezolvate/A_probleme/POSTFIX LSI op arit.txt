@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Laborator 1
+//Problema 3.10 Dinamic , in timp real
+//POSTFIX
+
+//3.10. Se citeste de la tastatura o expresie postfixata corecta sintactic.
+//Sa se scrie programul de evaluare a sa. Expresia contine variabile formate dintr-o litera si operatorii binari +, -, *, /.
+
+typedef struct nod
+    {
+    int a;
+    struct  nod*urm;
+    }NOD;
+
+NOD *prim;
+
+void adaugare(int d)
+{
+    NOD *p,*q;
+    p=(NOD*)malloc(sizeof(NOD));
+    p->urm=NULL;
+    p->a=d;
+    if(prim==NULL)prim=p;
+    else
+    {
+        q=prim;
+        while(q->urm) q=q->urm;
+        q->urm=p;
+    }
+}
+
+void op(char c)
+{
+    NOD *q=prim,*t;
+    if(c=='+')
+        {
+            while(q->urm->urm) q=q->urm;
+            t=q->urm;
+            q->a+=q->urm->a;
+            q->urm=NULL;
+            free(t);
+        }
+else if(c=='*')
+        {
+            while(q->urm->urm) q=q->urm;
+            t=q->urm;
+            q->a*=q->urm->a;
+            q->urm=NULL;
+            free(t);
+        }
+else if(c=='-')
+        {
+            while(q->urm->urm) q=q->urm;
+            t=q->urm;
+            q->a-=q->urm->a;
+            q->urm=NULL;
+            free(t);
+        }
+else if(c=='/')
+        {
+            while(q->urm->urm) q=q->urm;
+            t=q->urm;
+            q->a/=q->urm->a;
+            q->urm=NULL;
+            free(t);
+        }
+}
+
+
+afisare()
+{
+    NOD *q=prim;
+    printf("\n------------------------------------------------\n");
+    while(q)
+    {
+        printf("%d ",q->a);
+        q=q->urm;
+    }
+}
+
+int main()
+{
+    char c;
+    printf("Introduceti Cifrele apoi operantii (q=Quit)\n");
+    while(c!='q')
+    {
+        c=getch();
+        if(isdigit(c))adaugare((int)c-'0');
+           else op(c);
+        afisare();
+    }
+return 0;
+}

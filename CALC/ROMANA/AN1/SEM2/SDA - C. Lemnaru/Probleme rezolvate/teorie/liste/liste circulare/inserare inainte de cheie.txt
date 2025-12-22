@@ -1,0 +1,14 @@
+void inserare(tip_nod **ptr_nod,tip_nod *p,char key)
+{
+TIP_NOD *p,*q,*q1;
+q = ptr_nod;
+do {
+q1 = q; q = q -> urm;
+if (q -> cheie = =key ) break;	/* s-a gãsit nodul */
+}
+while (q! = ptr_nod);
+?	se insereazã nodul de adresã p;
+if (q -> cheie == key) {
+q1 -> urm = p; p -> urm = q;
+}
+}

@@ -1,0 +1,133 @@
+/*3.1-lab4	Se citeste de la tastatura o expresie matematica în forma
+ postfixata, sub forma unui sir de caractere. Sa se construiasca arborele corespunzator
+acestei expresii, fiecare nod continând un operator sau un operand.*/
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct stiv
+{
+    char c;
+    struct stiv *urm;
+}STIVA;
+
+typedef struct tip_nod
+{
+    char ch;
+    struct tip_nod *stg,*dr;
+}TIP_NOD;
+FILE *f;
+void inserare (STIVA **prim, STIVA **ultim,char key)
+{
+    STIVA *p;
+    if (*prim==0)
+    {
+        p=(STIVA*)malloc(sizeof(STIVA));
+        p->c=key;
+        *prim=p;
+        *ultim=p;
+        (*ultim)->urm=0;
+    }
+    else
+    {
+        p->c=key;
+        p->urm=*prim;
+        *prim=p;
+    }
+}
+
+void elim (STIVA **prim, STIVA **ultim)
+{
+    STIVA *p;
+    if(*prim==0)
+    {
+        //lista e vida
+        return;
+    }
+    p=*prim;
+    *prim=(*prim)->urm;
+    free(p);
+    if(*prim==0)
+        *ultim=0;
+    //lista a devenit vida dupa stergerea unicului nod
+}
+TIP_NOD *rad;
+TIP_NOD*constructie()
+{
+f=fopen("arbori.txt","r");
+    char v[20];
+    int i;
+    TIP_NOD *p;
+    STIVA *prim,*ultim;
+    char op[]="+-/*";
+    char cif[]="123456789";
+    printf("dati expresia:\n");
+    fscanf(f,"%s",v);
+    for(i=0;i<strlen(v)-1;i++)
+    {
+        if(strchr(cif,v[i])==0)
+            {
+            inserare(prim,ultim,v[i]);
+            }
+        else
+        {
+            //daca e operator il punem ca radacina a arborelui
+            p->ch=v[i];
+            p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+            //in stiva pot fi cel mult 2 operanzi pe care ii adaugam in arbore
+            //stiva:last in,first out
+            p->stg->ch=ultim->c;
+            elim(prim,ultim);
+            //ultimul a devenit astfel pen-ultimul
+            p->dr->ch=ultim->c;
+            elim(prim,ultim);
+        }
+    }
+}
+void postordine(TIP_NOD *p, int nivel)
+{
+int i;
+if (p!=0){
+postordine(p->stg,nivel+1);
+postordine(p->dr,nivel+1);
+for(i=0;i<=nivel;i++) printf("  ");
+printf("%2c\n",p->ch);
+}
+}
+
+int main()
+{
+    rad=constructie();
+    /*
+    char v[20];
+    int i;
+    TIP_NOD *p;
+    STIVA *prim,*ultim;
+    char op[]="+-/*";
+    char cif[]="123456789";
+    printf("dati expresia:\n");
+    scanf("%s",v);
+    for(i=0;i<strlen(v);i++)
+    {
+        if(strchr(cif,v[i])==0)
+            {
+            inserare(prim,ultim,v[i]);
+            }
+        else
+        {
+            //daca e operator il punem ca radacina a arborelui
+            p->ch=v[i];
+            p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+            //in stiva pot fi cel mult 2 operanzi pe care ii adaugam in arbore
+            //stiva:last in,first out
+            p->stg->ch=ultim->c;
+            elim(prim,ultim);
+            //ultimul a devenit astfel pen-ultimul
+            p->dr->ch=ultim->c;
+            elim(prim,ultim);
+        }
+    }*/
+  postordine(rad,0);
+    return 0;
+}
+
+

@@ -1,0 +1,7 @@
+void stergere(tip_nod *rad)
+{
+stergere(rad->stg);
+stergere(rad->dr);
+free(rad);
+}
+}

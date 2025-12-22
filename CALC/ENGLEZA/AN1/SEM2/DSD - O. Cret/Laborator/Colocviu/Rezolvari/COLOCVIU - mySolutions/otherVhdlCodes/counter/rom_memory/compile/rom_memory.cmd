@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\counter\library.cfg"  -j "d:\designshdl\counter\rom_memory\projlib.cfg"  -d "d:\designshdl\counter\rom_memory\compile\"  -work rom_memory -dbg -e 100 -o "d:\designshdl\counter\rom_memory\src\rom_memory.vhd" 

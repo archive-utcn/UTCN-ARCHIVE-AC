@@ -1,0 +1,54 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 14.7 (P.20131013)
+   \   \         APPLICATION : C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\compxlib.exe
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    
+   \___\/\___\
+
+Release 14.7 - C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\compxlib.exe 14.7 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Processing command line ...
+Library Source Paths => 'C:/Xilinx/14.7/ISE_DS/ISE'
+Current Working Directory => 'D:\semestrul 2\final3\ProiectReclama'
+Compilation Mode = FAST
+Execute Mode = ON
+Scheduling library installation & compilation for architectures: spartan6
+
+Scheduling library installation & compilation for libraries: simprim unisim xilinxcorelib edk
+
+Signature:-
+------------------------------------------------------------------------------
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\compxlib.exe -s mti_se -l vhdl -arch spartan6 -lib unisim -lib simprim -lib xilinxcorelib -lib edk -exclude_superseded -intstyle ise 
+------------------------------------------------------------------------------
+ERROR:Compxlib - COMPXLIB[sim]: Unable to automatically find executables for simulator 'mti_se' from the following paths:
+    C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64
+   C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64
+   C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64
+   C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64
+   C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav
+   C:\Xilinx\14.7\ISE_DS\PlanAhead\bin
+   C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64
+   C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64
+   C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin
+   C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin
+   C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin
+   C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin
+   C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin
+   C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin
+   C:\Xilinx\14.7\ISE_DS\common\bin\nt64
+   C:\Xilinx\14.7\ISE_DS\common\lib\nt64
+   C:\ProgramData\Oracle\Java\javapath
+   C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+   C:\Windows\system32
+   C:\Windows
+   C:\Windows\System32\Wbem
+   C:\Windows\System32\WindowsPowerShell\v1.0\
+   C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86
+   C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64
+   C:\PROGRA~2\Aldec\ACTIVE~1.3\BIN
+   D:\bin.
+Simulator 'mti_se' is ignored.

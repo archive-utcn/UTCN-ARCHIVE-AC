@@ -1,0 +1,175 @@
+acom -reorder $DSN/src/d_ff.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Compile Architecture "arh" of Entity "d_ff"
+# Error: COMP96_0122: d_ff.vhd : (21, 2): Symbol "d" has already been declared in this region.
+# Error: COMP96_0071: d_ff.vhd : (23, 30): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: d_ff.vhd : (23, 30): Undefined type of expression.
+# Error: COMP96_0077: d_ff.vhd : (23, 30): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0280: d_ff.vhd : (23, 25): Signal assignment cannot make two assignment at the same time.
+# Error: COMP96_0071: d_ff.vhd : (25, 28): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: d_ff.vhd : (25, 28): Undefined type of expression.
+# Error: COMP96_0077: d_ff.vhd : (25, 28): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0280: d_ff.vhd : (25, 23): Signal assignment cannot make two assignment at the same time.
+# Error: COMP96_0071: d_ff.vhd : (28, 12): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: d_ff.vhd : (28, 12): Undefined type of expression.
+# Error: COMP96_0077: d_ff.vhd : (28, 12): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0280: d_ff.vhd : (28, 9): Signal assignment cannot make two assignment at the same time.
+# Top-Level unit detected
+# Entity  =>   d_ff
+# Compile failure 13 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: D:\designshdl\CRET\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Entity `d_ff' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "d_ff"
+# Error: COMP96_0122: d_ff.vhd : (21, 2): Symbol "d" has already been declared in this region.
+# Error: COMP96_0071: d_ff.vhd : (23, 30): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: d_ff.vhd : (23, 30): Undefined type of expression.
+# Error: COMP96_0077: d_ff.vhd : (23, 30): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0280: d_ff.vhd : (23, 25): Signal assignment cannot make two assignment at the same time.
+# Error: COMP96_0071: d_ff.vhd : (25, 28): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: d_ff.vhd : (25, 28): Undefined type of expression.
+# Error: COMP96_0077: d_ff.vhd : (25, 28): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0280: d_ff.vhd : (25, 23): Signal assignment cannot make two assignment at the same time.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: D:\designshdl\CRET\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Entity `d_ff' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "d_ff"
+# Error: COMP96_0071: d_ff.vhd : (23, 30): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: d_ff.vhd : (23, 30): Undefined type of expression.
+# Error: COMP96_0077: d_ff.vhd : (23, 30): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0280: d_ff.vhd : (23, 25): Signal assignment cannot make two assignment at the same time.
+# Error: COMP96_0071: d_ff.vhd : (25, 28): Operator "<=" is not defined for such operands.
+# Error: COMP96_0104: d_ff.vhd : (25, 28): Undefined type of expression.
+# Error: COMP96_0077: d_ff.vhd : (25, 28): Assignment target incompatible with right side. Expected type "std_ulogic".
+# Error: COMP96_0280: d_ff.vhd : (25, 23): Signal assignment cannot make two assignment at the same time.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: D:\designshdl\CRET\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Entity `d_ff' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "d_ff"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  d_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 3:42 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: d_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: D:\designshdl\CRET\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Entity `d_ff' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "d_ff"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  d_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 3:44 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: d_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2418 kB (elbread=1070 elab2=299 kernel=1049 sdf=0)
+# 3:44 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: d_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+# Simulation has been stopped
+# Design: Design "t_ff" has been set as active.

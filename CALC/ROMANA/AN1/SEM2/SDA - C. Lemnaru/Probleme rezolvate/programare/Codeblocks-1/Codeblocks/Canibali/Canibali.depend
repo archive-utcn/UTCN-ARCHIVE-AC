@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305271067 source:c:\codeblocks\canibali\main.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+

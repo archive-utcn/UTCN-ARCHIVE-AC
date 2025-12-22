@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+Vital_Glitch_example=.\Vital_Glitch_example.adf
+[Settings]
+Active=Vital_Glitch_example
+[Expand]
+vital_glitch_example=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

@@ -1,0 +1,61 @@
+xst -intstyle ise -ifn "D:/lift1/LIFT.xst" -ofn "D:/lift1/LIFT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+xst -intstyle ise -ifn "D:/lift1/LIFT.xst" -ofn "D:/lift1/LIFT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+xst -intstyle ise -ifn "D:/lift1/LIFT.xst" -ofn "D:/lift1/LIFT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s500e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+xst -intstyle ise -ifn "D:/lift1/LIFT.xst" -ofn "D:/lift1/LIFT.syr" 
+xst -intstyle ise -ifn "D:/lift1/LIFT.xst" -ofn "D:/lift1/LIFT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s1200e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+xst -intstyle ise -ifn "D:/lift1/LIFT.xst" -ofn "D:/lift1/LIFT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s1200e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 
+xst -intstyle ise -ifn "D:/lift1/LIFT.xst" -ofn "D:/lift1/LIFT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LIFT.ucf -p xc3s1200e-fg320-4 LIFT.ngc LIFT.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o LIFT_map.ncd LIFT.ngd LIFT.pcf 
+par -w -intstyle ise -ol high -t 1 LIFT_map.ncd LIFT.ncd LIFT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LIFT.twx LIFT.ncd -o LIFT.twr LIFT.pcf -ucf LIFT.ucf 
+bitgen -intstyle ise -f LIFT.ut LIFT.ncd 

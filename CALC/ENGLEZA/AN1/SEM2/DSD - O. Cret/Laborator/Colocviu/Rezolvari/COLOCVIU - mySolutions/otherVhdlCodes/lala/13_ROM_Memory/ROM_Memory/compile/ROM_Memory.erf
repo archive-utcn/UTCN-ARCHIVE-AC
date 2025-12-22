@@ -1,0 +1,4 @@
+MESSAGE "File: C:\My_Designs\13_ROM_Memory\ROM_Memory\src\ROM.vhd" 
+MESSAGE "Compile Entity "rom"" 
+MESSAGE "Compile Architecture "a" of Entity "rom"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

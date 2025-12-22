@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=freq_divider
+
+[Library]
+freq_divider=.\freq_divider.lib
+
+[$LibMap$]
+freq_divider=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/freq_divider.vhd=-1
+/Waveform Editor 1.awf=-1
+
+[Files.Data]
+.\src\freq_divider.vhd=VHDL Source Code
+.\src\Waveform Editor 1.awf=Waveform File
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=clock_divider|arh|0  
+ShowHide=ShowTopLevel
+Selected=

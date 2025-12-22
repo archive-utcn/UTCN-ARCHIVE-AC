@@ -1,0 +1,23 @@
+timestamp=1490448108874
+
+[memorie_rom]
+A/arhrom=A/ArhROM 21|./src/memorie_rom.vhd|10|1*5152
+B/arhrom=3*0
+H/arhrom=0*6269
+R=./src/memorie_rom.vhd|4
+V=0*923
+
+[~A]
+./src/memorie_rom.vhd~ArhROMMemorie_ROM=0*7203*8320
+./src/memorie_rom.vhd~Memorie_ROM=0*0*260
+ModifyID=19
+Version=73
+
+[~MFT]
+0=19|0memorie_rom.mgf|8320|4260
+1=4|1memorie_rom.mgf|5152|5152
+3=0|3memorie_rom.mgf|0|0
+
+[~U]
+memorie_rom=Memorie_ROM 11|0*333|0*505
+

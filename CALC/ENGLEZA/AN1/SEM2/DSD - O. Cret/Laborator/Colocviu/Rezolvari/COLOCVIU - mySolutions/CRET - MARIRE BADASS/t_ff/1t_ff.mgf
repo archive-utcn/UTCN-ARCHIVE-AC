@@ -1,0 +1,62 @@
+I 000044 55 1303          1498481389552 arh
+(_unit VHDL (t_ff 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1498481389551 2017.06.26 15:49:49)
+  (_source (\./src/t_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1498481389482)
+    (_use )
+  )
+  (_object
+    (_port (_internal set ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal t ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_signal (_internal clock ~extieee.std_logic_1164.std_logic 0 10 (_architecture (_uni ((i 3)))(_event))))
+    (_process
+      (tact(_architecture 0 0 13 (_process (_wait_for)(_target(5)))))
+      (bistabil(_architecture 1 0 21 (_process (_simple)(_target(4)(3))(_sensitivity(0)(2)(1))(_read(4)(3)(5)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+V 000044 55 1303          1498481507097 arh
+(_unit VHDL (t_ff 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1498481507096 2017.06.26 15:51:47)
+  (_source (\./src/t_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1498481389482)
+    (_use )
+  )
+  (_object
+    (_port (_internal set ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal t ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_signal (_internal clock ~extieee.std_logic_1164.std_logic 0 10 (_architecture (_uni ((i 3)))(_event))))
+    (_process
+      (tact(_architecture 0 0 13 (_process (_wait_for)(_target(5)))))
+      (bistabil(_architecture 1 0 21 (_process (_simple)(_target(4)(3))(_sensitivity(0)(1)(2)(5))(_read(4)(3)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)

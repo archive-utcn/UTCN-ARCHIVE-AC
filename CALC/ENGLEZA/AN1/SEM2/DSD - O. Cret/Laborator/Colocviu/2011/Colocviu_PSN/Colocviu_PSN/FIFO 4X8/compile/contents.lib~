@@ -1,0 +1,3 @@
+50
+~E 0 "./src/FIFO.vhd" 1 fifo
+~A 1 "./src/FIFO.vhd" 8 arh_fifo

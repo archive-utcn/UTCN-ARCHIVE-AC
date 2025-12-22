@@ -1,0 +1,6 @@
+MESSAGE "File: d:\designshdl\rotate_seq\rotate_seq\src\shift_reg.vhd" 
+MESSAGE "Compile Entity "shift_register"" 
+MESSAGE "Compile Architecture "arh" of Entity "shift_register"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   shift_register" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]" 

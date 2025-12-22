@@ -1,0 +1,24 @@
+void explorare_adancime(int s)
+/* s este nodul de pornire* /
+{
+    int vizitate[NrMaxNoduri];
+    stiva ST;
+    int NrNoduri,i,v,w;
+    for(i=0;i<NrNoduri;i++)
+    vizitate[i]=0; /*initializare vector cu zero*/
+    vizitate[s]=1; /*se incepe cu s */
+    prelucrare informatia din s;
+    introducere  s in stiva ST;
+    while(stiva ST nu este vidã)
+    {
+       v=conþinutul nodului din vârful stivei;
+       w=urmãtorul nod adiacent lui v nevizitat;
+         if(existã w)
+          {
+             vizitate[w]=1;
+             prelucreazã informaþia din w;
+             pune pe stiva ST nodul w;
+           }
+         else  pop(ST); /*  se ºterge nodul v din vârful stivei ST  */
+      } 
+}

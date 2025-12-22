@@ -1,0 +1,183 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <process.h>
+
+typedef struct arbore
+{
+    char ch;
+    struct arbore *stg,*dr;
+}ARBORE;
+
+ARBORE *rad;
+char s[100];
+int i;
+char chr;
+float valori[30];
+void expresie(ARBORE **p);
+void termen(ARBORE **p);
+
+void get(char *c)
+{
+    if(i<=strlen(s))
+    {
+        *c=s[i];
+        i++;
+    }
+    else
+    {
+        printf("Expresia nu este corecta!\n");
+        exit(1);
+    }
+}
+
+void factor(ARBORE **p)
+{
+    if(chr=='(')
+       {
+           get(&chr);
+           expresie(p);
+       }
+    else
+    {
+        *p=(ARBORE*)malloc(sizeof(ARBORE));
+        (*p)->ch=chr;(*p)->stg=0;(*p)->dr=0;
+    };
+    get(&chr);
+}
+
+void termen(ARBORE **p)
+{
+    ARBORE *q;
+    factor(p);
+    while((chr=='*')||(chr=='/'))
+    {
+        q=(ARBORE*)malloc(sizeof(ARBORE));
+        q->ch=chr;
+        q->stg=*p;
+        get(&chr);
+        factor(&(q->dr));
+        *p=q;
+    };
+}
+
+void expresie(ARBORE **p)
+{
+    ARBORE *q;
+    if((chr=='+')||(chr=='-'))
+    {
+        if(chr=='+')
+        {
+            get(&chr);
+            termen(p);
+        }
+        else
+        {
+            *p=(ARBORE*)malloc(sizeof(ARBORE));
+            (*p)->ch='#';
+            (*p)->stg=0;
+            get(&chr);
+            termen(&((*p)->dr));
+        };
+    }
+    else termen(p);
+    while((chr=='+')||(chr=='-'))
+    {
+        q=(ARBORE*)malloc(sizeof(ARBORE));
+        q->ch=chr;
+        q->stg=*p;
+        get(&chr);
+        termen(&(q->dr));
+        *p=q;
+    }
+}
+
+void prefix(ARBORE *p,ARBORE *rad)
+{
+    if(p!=0)
+    {
+        if((p->stg!=0)&&(p!=rad)) printf("(");
+        printf("%c",p->ch);
+        prefix(p->stg,rad);
+        prefix(p->dr,rad);
+        if((p->stg!=0)&&(p!=rad)) printf(")");
+    }
+}
+
+void infix(ARBORE *p,ARBORE *rad)
+{
+    if(p!=0)
+    {
+        if((p->stg!=0)&&(p!=rad)) printf("(");
+        infix(p->stg,rad);
+        printf("%c",p->ch);
+        infix(p->dr,rad);
+        if((p->stg!=0)&&(p!=rad)) printf(")");
+    }
+}
+
+void postfix(ARBORE *p,ARBORE *rad)
+{
+    if(p!=0)
+    {
+        postfix(p->stg,rad);
+        postfix(p->dr,rad);
+        printf("%c",p->ch);
+    }
+}
+
+float eval(ARBORE *p)
+{
+    float x,y;
+    if(p!=0)
+    {
+        if((p->dr==0)&&(p->stg==0))
+            return(valori[p->ch-'a']);
+        else switch(p->ch)
+        {
+            case '+':return (eval(p->stg)+eval(p->dr));
+            case '-':return (eval(p->stg)-eval(p->dr));
+            case '*':return (eval(p->stg)*eval(p->dr));
+            case '/':x=eval(p->stg);y=eval(p->dr);
+            if(y==0)
+            {
+                printf("\nImpartire la zero!");
+                exit(1);
+            }
+            else return(x/y);
+            case '#':return (-1)*eval(p->dr);
+        }
+    }
+}
+
+int main()
+{
+    int continuare;
+    rad=0;
+    printf("INTRODUCETI EXPRESIA CORECTA!\n");
+    scanf("%s",s);
+    chr=s[0];i=1;
+    expresie(&rad);
+    infix(rad,rad);
+    printf("\n");
+    prefix(rad,rad);
+    printf("\n");
+    postfix(rad,rad);
+    getch();
+    printf("\nDati valori literelor mici din expresie\n");
+    continuare=1;
+    while(continuare==1)
+    {
+        printf("\nLitera mica=");
+        fflush(stdin);
+        scanf("%c",&chr);
+        fflush(stdin);
+        printf("\nValoare=");
+        scanf("%f",&valori[chr-'a']);
+        printf("\nMai aveti litere de introdus? Da=1;Nu=0: ");
+        scanf("%d",&continuare);
+    };
+    printf("\nVALOAREA EXPRESIEI= %f\n",eval(rad));
+    getch();
+}

@@ -1,0 +1,9 @@
+# Compile...
+# File: D:\designshdl\CRET\BCD_GREY\src\BCD_GREY.vhd
+# Compile Entity "conv"
+# Entity `conv' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "conv"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Design: Design "c2421_bcd" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

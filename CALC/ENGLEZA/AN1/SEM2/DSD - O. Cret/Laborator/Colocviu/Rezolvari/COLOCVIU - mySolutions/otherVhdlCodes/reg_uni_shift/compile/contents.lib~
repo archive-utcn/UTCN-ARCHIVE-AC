@@ -1,0 +1,7 @@
+21
+~E 1 "./src/da.vhd" 8 registru
+~A 1 "./src/da.vhd" 17 comportamental
+~E 1 "./src/da.vhd" 58 generator_spa
+~A 1 "./src/da.vhd" 66 structural
+~E 1 "./src/da.vhd" 44 xor2
+~A 1 "./src/da.vhd" 49 comportamental

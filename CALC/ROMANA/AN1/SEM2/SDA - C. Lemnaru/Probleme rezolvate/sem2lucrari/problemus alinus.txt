@@ -1,0 +1,3796 @@
+//Sa se parcurga in latime si in adancime un graf neorientat
+//in aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta SI PARCURGEREA ESTE RECURSIVA
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+void citire(int &nrvf,int ***matr,int **parcurs,int **coada)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis8.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*parcurs=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*parcurs)[i]=0;
+
+	*coada=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*coada)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+	{
+		(*matr)[muc1][muc2]=1;
+		(*matr)[muc1][muc2]=1;
+	}
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void parcurgere_adancime(int **matr,int *parc,int i,int n)
+{
+	printf("%d ",i);
+	parc[i]=1;
+	for(int j=1;j<=n;j++)
+		if(matr[i][j]==1 && parc[j]==0)
+			parcurgere_adancime(matr,parc,j,n);
+}
+
+
+void parcurgere_latime(int **matr,int *parc,int ic,int *sc,int *coada,int n)
+{
+	int k;
+	if(ic<=*sc)
+	{
+		for(k=1;k<=n;k++)
+			if(matr[coada[ic]][k]==1 && parc[k]==0)
+			{
+				parc[k]=1;
+				(*sc)++;
+				coada[*sc]=k;
+			}
+		parcurgere_latime(matr,parc,ic+1,&(*sc),coada,n);
+	}
+}
+
+void main()
+{
+	clrscr();
+
+	int **a,*parcurs,*coada,n,i,j,ic=1,sc=1;
+
+	citire(n,&a,&parcurs,&coada);
+
+	printf("Parcurgerea in adancime a grafului este:\n");
+
+	parcurgere_adancime(a,parcurs,1,n);
+
+	for(i=1;i<=n;i++)
+		parcurs[i]=0;
+
+	cout<<endl;
+	printf("Parcurgerea in latime a grafului este:\n");
+
+	coada[ic]=1;
+	parcurs[1]=1;
+
+	parcurgere_latime(a,parcurs,ic,&sc,coada,n);
+
+	for(i=1;i<=n;i++)
+		cout<<coada[i]<<" ";
+	getch();
+
+}
+
+//Sa se descompuna un graf in componente tare conexe.
+//in aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta
+//voi folosi algoritmul ROY WARSHALL de determinare a matricii drumurilor
+//un graf orientat e tare conex daca pt 2 varfuri x si y exista un drum de la x la y si de la y la x (daca matricea drumurilor este toata 1)
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+
+void citire(int &nrvf,int ***matr,int **pus)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis7.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*pus=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*pus)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void Warshall(int **matr,int n)
+{
+	int i,j,k;
+	for(k=1;k<=n;k++)
+		for(i=1;i<=n;i++)
+			for(j=1;j<=n;j++)
+				if(matr[i][j]==0 && i!=k && j!=k)
+					matr[i][j]=matr[i][k]*matr[k][j];
+}
+
+void descompunere(int **matr,int &nc,int n,int i,int *pus)
+{
+
+	nc++;
+	pus[i]=1;
+
+	printf("Componenta %d este formata din: %d ",nc,i);
+
+	for(int j=1;j<=n;j++)
+		if(matr[i][j]==1 && matr[j][i]==1 && i!=j && pus[j]==0)
+		{
+			pus[j]=1;
+			printf("%d ",j);
+		}
+	printf("\n");
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	int **a,*pus,n,i,j,nc=0;
+
+	citire(n,&a,&pus);
+
+	Warshall(a,n);
+
+	for(i=1;i<=n;i++)
+		if(pus[i]==0)
+			descompunere(a,nc,n,i,pus);
+
+	getch();
+
+}
+
+
+//Sa se determine toate componentele tare conexe dintr-un graf
+//la aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+int nrc;
+
+void citire(int *nrvf,int ***matr,int **pred,int **succ)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis7.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&(*nrvf));
+
+	//se aloca dinamic tablourile si matricile necesare
+	*pred=(int *)malloc(sizeof(int)* (*nrvf+1));
+	for(i=1;i<=*nrvf;i++)
+		(*pred)[i]=0;
+	*succ=(int *)malloc(sizeof(int)* (*nrvf+1));
+	for(i=1;i<=*nrvf;i++)
+		(*succ)[i]=0;
+	*matr=(int **)malloc(sizeof(int)* (*nrvf+1));
+	for(i=1;i<=*nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)* (*nrvf+1));
+
+		for(j=1;j<=*nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void succesori(int **m,int *succ,int n,int i)
+{
+
+	succ[i]=nrc;
+
+	for(int j=1;j<=n;j++)
+		if(m[i][j]==1 && succ[j]==0)
+			succesori(m,succ,n,j);
+
+}
+
+void predecesori(int **m,int *pred,int n,int i)
+{
+
+	pred[i]=nrc;
+
+	for(int j=1;j<=n;j++)
+		if(m[j][i]==1 && pred[j]==0)
+			predecesori(m,pred,n,j);
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	int **m,n,*pred,*succ,i,j;
+
+	citire(&n,&m,&pred,&succ);
+
+	nrc=1;
+
+	for(i=1;i<=n;i++)
+		if(succ[i]==0)
+		{
+			succ[i]=nrc;
+
+			succesori(m,succ,n,i);
+			predecesori(m,pred,n,i);
+
+			for(j=1;j<=n;j++)
+				if(succ[j]!=pred[j])
+					succ[j]=pred[j]=0;
+
+			nrc++;
+		}
+
+	for(i=1;i<nrc;i++)
+	{
+		printf("Componenta %d:\n",i);
+		for(j=1;j<=n;j++)
+			if(succ[j]==i)
+				printf("%d ",j);
+		printf("\n");
+	}
+
+}
+
+/sa se afle matricea drumurilor pt un graf orientat care e reprezentat prin liste de adiacenta(Roy-Warshall)
+//in urma parcurgerii in adancime a grafului pornind de la un anumit varf (baza) vectorul s retine 1 pt toate nodurile la care s-a ajuns
+//cu alte cuvinte vectorul s retine 1pt toate nodurile pt care exista drum de la nodul de pornire la ele.Astfel se obtine o linie a matricei.
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<stdio.h>
+
+struct t_nod
+{
+	int inf;
+	t_nod *urm;
+};
+
+
+int parcurs[50],n,i,j,drumuri[50][50];
+t_nod *lista[50];
+
+void citire_graf(int &nrvf)
+{
+	char nume_fis[50]="D:\\fisiere\\fis6.txt";
+	t_nod *p;
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se citesc muchiile din fisier
+	while(fscanf(pf,"%d%d",&i,&j)!=EOF)
+	{
+		p=(t_nod *)malloc(sizeof(t_nod));
+		p->inf=j;
+		p->urm=lista[i];
+		lista[i]=p;
+	}
+	//se inchide fisierul
+	fclose(pf);
+}
+
+void parcurgere_adancime(int baza,int nod)
+{
+	t_nod *p;
+	if(baza!=nod)
+		drumuri[baza][nod]=1;
+	p=lista[nod];
+	parcurs[nod]=1;
+	while(p)
+	{
+		if(parcurs[p->inf]==0)
+			parcurgere_adancime(baza,p->inf);
+		else if(p->inf==baza)
+      	drumuri[baza][baza]=1;
+		p=p->urm;
+	}
+}
+
+void main()
+{
+	clrscr();
+
+	citire_graf(n);
+
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=n;j++)
+			parcurs[j]=0;
+		parcurgere_adancime(i,i);
+	}
+
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=n;j++)
+			cout<<drumuri[i][j]<<" ";
+		cout<<endl;
+	}
+
+	getch();
+}
+
+//Sa se verifice daca un graf orientat este conex.
+//in aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta
+//un graf orientat e conex intre oricare 2 varfuri exista un lant care le leaga
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+int nr;
+
+void citire(int &nrvf,int ***matr,int **parcurs)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis5.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*parcurs=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*parcurs)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void parcurgere(int **matr,int *parc,int i,int n)
+{
+	nr++;
+	parc[i]=1;
+	if(nr==n)
+		return;
+	for(int j=1;j<=n;j++)
+		if((matr[i][j]==1||matr[j][i]==1) && parc[j]==0 &&nr<n)
+			parcurgere(matr,parc,j,n);
+}
+
+void main()
+{
+	clrscr();
+
+	int **a,*parcurs,n,i,j;
+
+	citire(n,&a,&parcurs);
+
+	nr=0;
+
+	parcurgere(a,parcurs,1,n);
+
+	if(nr==n)
+		printf("Graf conex\n");
+	else
+		printf("Graf neconex\n");
+
+	getch();
+
+}
+
+//Sa se verifice daca un graf orientat este tare conex.
+//in aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta
+//voi folosi algoritmul ROY WARSHALL de determinare a matricii drumurilor
+//un graf orientat e tare conex daca pt 2 varfuri x si y exista un drum de la x la y si de la y la x (daca matricea drumurilor este toata 1)
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+int flag;
+
+void citire(int &nrvf,int ***matr,int **parcurs)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis4.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*parcurs=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*parcurs)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void Warshall(int **matr,int n)
+{
+	int i,j,k;
+	for(k=1;k<=n;k++)
+		for(i=1;i<=n;i++)
+			for(j=1;j<=n;j++)
+				if(matr[i][j]==0 && i!=k && j!=k)
+					matr[i][j]=matr[i][k]*matr[k][j];
+}
+
+void tare_conex(int **matr,int n)
+{
+	int i,j;
+	for(i=1;i<=n;i++)
+		for(j=1;j<=n;j++)
+			if(matr[i][j]==0)
+			{
+				flag=1;
+				return;
+			}
+}
+
+void main()
+{
+	clrscr();
+
+	int **a,*parcurs,n,i,j,nrc;
+
+	citire(n,&a,&parcurs);
+
+	Warshall(a,n);
+
+	tare_conex(a,n);
+
+	if(flag==0)
+		printf("Graf este tare conex\n");
+	else
+		printf("Graf nu este tare conex\n");
+
+	getch();
+
+}
+
+//Sa se verifice daca un graf neorientat este conex.In caz contra sa se determine toate componentele conexe.
+//in aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+void citire(int &nrvf,int ***matr,int **parcurs)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis3.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*parcurs=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*parcurs)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+	{
+		(*matr)[muc1][muc2]=1;
+		(*matr)[muc1][muc2]=1;
+	}
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void parcurgere(int **matr,int *parc,int i,int n)
+{
+	printf("%d ",i);
+	parc[i]=1;
+	for(int j=1;j<=n;j++)
+		if(matr[i][j]==1 && parc[j]==0)
+			parcurgere(matr,parc,j,n);
+}
+
+void main()
+{
+	clrscr();
+
+	int **a,*parcurs,n,i,j,nrc;
+
+	citire(n,&a,&parcurs);
+
+	nrc=0;
+
+	do
+	{
+		for(i=1;i<=n;i++)
+			if(parcurs[i]==0)
+				break;
+		if(i==n+1)
+			continue;
+		printf("Parcurgem in adancime componenta conexa cu numarul %d:\n",nrc+1);
+		parcurgere(a,parcurs,i,n);
+		printf("\n\n");
+		nrc++;
+	}
+	while(i!=n+1);
+
+	printf("\n");
+
+	if(nrc==1)
+		printf("Graf conex\n");
+	else
+		printf("Graf neconex\n");
+
+	getch();
+
+}
+
+
+
+
+
+//Sa se determine toate circuitele care se inchid in x
+//la aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+int a;
+void citire(int &nrvf,int ***matr,int **drum,int &x)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis2.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se citesc din fisier varful in care se calculeaza circuitele
+	fscanf(pf,"%d ",&x);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*drum=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*drum)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void parcurgere(int **m,int *drum,int n,int i,int y,int poz)
+{
+	if(i==y &&poz!=1)
+	{
+		printf("DRUM:");
+		for(int k=1;k<poz;k++)
+			printf("%d ",drum[k]);
+		printf("%d\n",y);
+		getch();
+		a++;
+		return;
+	}
+	for(int j=1;j<=n;j++)
+		if(m[i][j]==1)
+		{
+			m[i][j]++;
+			drum[poz]=i;
+			parcurgere(m,drum,n,j,y,poz+1);
+			m[i][j]--;
+		}
+}
+
+void main()
+{
+
+	clrscr();
+	int **m,n,*drum,x,y,i;
+	citire(n,&m,&drum,x);
+	parcurgere(m,drum,n,x,x,1);
+	printf("%d",a);
+
+}
+
+//Sa se determine toti stramosii si toti urmasii unui nod p dat din fisier in k generatii anterioare dintr-un graf citit din fisier.
+//la aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin matrice de adiacenta
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+void citire(int *nr_vf,int ***matr,int *vf_initial,int *nr_generatii)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis16.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&(*nr_vf));
+
+	//se citesc din fisier varful pentru care se afiseaza stramosii si urmasii.
+	fscanf(pf,"%d ",&(*vf_initial));
+
+	//se citeste din fisier numarul de generatii
+	fscanf(pf,"%d ",&(*nr_generatii));
+
+	*matr=(int **)malloc(sizeof(int)*(*nr_vf+1));
+	for(i=1;i<=*nr_vf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(*nr_vf+1));
+
+		for(j=1;j<=*nr_vf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void urmasii_lui_p(int **m,int n,int vf_initial,int nr_generatii,int *urmasi,int i)
+{
+	if(i==nr_generatii)
+		return;
+
+	for(int j=1;j<=n;j++)
+		if(m[vf_initial][j]==1)
+		{
+			(*urmasi)++;
+			printf("%d ",j);
+			urmasii_lui_p(m,n,j,nr_generatii,&(*urmasi),i+1);
+
+		}
+}
+
+void stramosii_lui_p(int **m,int n,int vf_initial,int nr_generatii,int *stramosi,int i)
+{
+	if(i==nr_generatii)
+		return;
+
+	for(int j=1;j<=n;j++)
+		if(m[j][vf_initial]==1)
+		{
+			(*stramosi)++;
+			printf("%d ",j);
+			stramosii_lui_p(m,n,j,nr_generatii,&(*stramosi),i+1);
+
+		}
+}
+
+void main()
+{
+
+	clrscr();
+
+	int **m,n,k,p,urmasi,stramosi;
+
+	urmasi=stramosi=0;
+
+	citire(&n,&m,&p,&k);
+
+	printf("Urmasii lui %d in %d generatii anterioare sunt :",p,k);
+
+	urmasii_lui_p(m,n,p,k,&urmasi,0);
+
+	printf("\n");
+
+	printf("Stramosii lui %d in %d generatii anterioare sunt :",p,k);
+
+	stramosii_lui_p(m,n,p,k,&stramosi,0);
+
+	getch();
+
+}
+
+/Se citesc perechi de forma (x,y) cu semnificatia ca x este fiul lui y.Se citeste in anumit varf notat cu p.
+//SA se determine cati stramosi si cati urmasi are p in k generatii anterioare precum si cati stramosi indirecti(unchi,str_unchi are).
+//la aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin perechi de muchii
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+int stramosi,stramosuti,tata_absolut;
+//int urmasi;
+
+void citire(int *nr_vf,int *nr_muchii,int *vf_initial,int *nr_generatii,int **x,int **y)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis15.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&(*nr_vf));
+
+	//se citeste din fisier nr de muchii
+	fscanf(pf,"%d",&(*nr_muchii));
+
+	//se citeste din fisier varful pentru care se calculeaza stramosii si urmasii
+	fscanf(pf,"%d ",&(*vf_initial));
+
+	//se citeste din fisier numarul de generatii
+	fscanf(pf,"%d ",&(*nr_generatii));
+
+	//se aloca dinamic tablourile si matricile necesare
+	*x=(int *)malloc(sizeof(int)*(*nr_muchii+1));
+	for(i=1;i<=*nr_muchii;i++)
+		(*x)[i]=0;
+
+	*y=(int *)malloc(sizeof(int)*(*nr_muchii+1));
+	for(i=1;i<=*nr_muchii;i++)
+		(*y)[i]=0;
+
+	//se citesc din fisier perechile de muchii
+	for(i=1;i<=*nr_muchii;i++)
+	{
+		fscanf(pf,"%d%d",&muc1,&muc2);
+		(*x)[i]=muc1;
+		(*y)[i]=muc2;
+	}
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void gasire_urmasi_p(int vf_init,int *x,int *y,int nr_generatii,int i,int m,int *urmasi)
+{
+
+	if(i==nr_generatii)
+		return;
+	else
+	{
+		for(int j=1;j<=m;j++)
+			if(x[j]==vf_init)
+			{
+				(*urmasi)++;
+				gasire_urmasi_p(y[j],x,y,nr_generatii,i+1,m,&(*urmasi));
+			}
+	}
+}
+
+void gasire_stramosi_p(int vf_init,int *x,int *y,int nr_generatii,int i,int m)
+{
+
+	if(i==nr_generatii)
+		return;
+	else
+	{
+		for(int j=1;j<=m;j++)
+			if(y[j]==vf_init)
+			{
+				stramosi++;
+				tata_absolut=x[j];
+				gasire_stramosi_p(x[j],x,y,nr_generatii,i+1,m);
+			}
+	}
+}
+
+void main()
+{
+
+	clrscr();
+	int *x,*y,k,p,n,m;
+
+	int urmasi,stramosuti;
+
+	urmasi=0;
+	stramosuti=0;
+
+	citire(&n,&m,&p,&k,&x,&y);
+
+	gasire_urmasi_p(p,x,y,k,0,m,&urmasi);
+
+	gasire_stramosi_p(p,x,y,k,0,m);
+
+	gasire_urmasi_p(tata_absolut,x,y,k-1,0,m,&stramosuti);
+
+	cout<<tata_absolut<<" ";
+
+	cout<<urmasi<<" "<<stramosi<<" "<<stramosuti;
+
+}
+
+//Se citesc perechi de forma (x,y) cu semnificatia ca exista ruta directa aeriana de la x la y. 
+//Sa se afiseze toate perechile de orase intre care exista ruta directa sau o escala.
+//numele oraselor se citesc in indici de la 1 la n.
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+#define nmax 20
+
+void citire(int &nrvf,int ***matr,int **nivel,char ***nume)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis14.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*nivel=(int *)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+		(*nivel)[i]=0;
+	*nume=(char **)malloc(sizeof(char)*(2*nrvf));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*nume)[i]=(char *)malloc(sizeof(char)*(nmax+1));
+		fscanf(pf,"%s",(*nume)[i]);
+	}
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+	{
+		(*matr)[muc1][muc2]=(*matr)[muc2][muc1]=1;
+		printf("%s %s\n",(*nume)[muc1],(*nume)[muc2]);
+	}
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void ruta_cu_o_escala(int **a,int *nivel,char **orase,int n,int niv,int i)
+{
+
+	nivel[i]=niv;
+
+	for(int j=1;j<=n;j++)
+		if(nivel[j]==0 && a[i][j]==1)
+			ruta_cu_o_escala(a,nivel,orase,n,niv+1,j);
+		else
+			if(nivel[j]-nivel[i]==2 ||nivel[i]-nivel[j]==1)
+				printf("%s-%s \n",orase[i],orase[j]);
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	int **m,n,*nivel;
+	char **oras;
+
+	citire(n,&m,&nivel,&oras);
+
+	printf("\n");
+	printf("Orasele cu o escala distanta sunt:\n");
+	printf("\n");
+	ruta_cu_o_escala(m,nivel,oras,n,1,1);
+
+	getch();
+
+}
+
+/Sa se determine multimea de cicluri independente dintr-un graf neorientat conex
+//voi codifica graful printr-o matrice de adiacenta.
+//o multime de cicluri se numeste independenta daca fiecare ciclu din multime difera de celelalte prin cel
+ putin o muchie(muchia prin care difera de celelalte trebuie sa fie aceeasi).
+//un ciclu se inchide pe o muchie de intoarcere de unde rezulta ca cate muchii de intoarcere 
+avem atatea cicluri vor fi in multimea de cicluri independente.
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+void citire(int &nrvf,int ***matr,int **nivel,int **tata)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis13.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*nivel=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*nivel)[i]=0;
+	*tata=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*tata)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=(*matr)[muc2][muc1]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void generare_cicluri_independente(int **a,int *nivel,int *tata,int n,int niv,int i)
+{
+
+	nivel[i]=niv;
+
+	for(int j=1;j<=n;j++)
+		if(nivel[j]==0 && a[i][j]==1)
+		{
+			tata[j]=i;
+			generare_cicluri_independente(a,nivel,tata,n,niv+1,j);
+		}
+		else
+			if(nivel[j]>nivel[i] &&a[i][j]==1)
+			{
+				for(int jj=j;jj!=i;jj=tata[jj])
+					printf("%d ",jj);
+				printf("%d %d\n",i,j);
+			}
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	int **m,n,*nivel,*tata;
+
+	citire(n,&m,&nivel,&tata);
+
+	generare_cicluri_independente(m,nivel,tata,n,1,1);
+
+	getch();
+
+}
+
+//Sa se determine muchiile de avansare si muchiile de intoarcere dintr-un graf neorientat conex.
+//voi codifica graful printr-o matrice de adiacenta.
+//muchia de avansare este muchia prin care se ajunge dintr-un varf parcurs anterior intr-un nou varf care se atinge 
+chiar pe muchie.
+//muchia de intoarcere este o muchie care leaga varfuri care au fost parcurse anterior prin muchii de avansare.
+//OBS:fiecare muchie de intoarcere va inchide un ciclu, restul ciclului fiind format din muchii de avansare.
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+void citire(int &nrvf,int ***matr,int **nivel)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis13.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se aloca dinamic tablourile si matricile necesare
+	*nivel=(int *)malloc(sizeof(int)*(nrvf)+1);
+	for(i=1;i<=nrvf;i++)
+		(*nivel)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			(*matr)[i][j]=0;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		(*matr)[muc1][muc2]=(*matr)[muc2][muc1]=1;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void muchii_de_avans_si_de_intoarcere(int **a,int *nivel,int n,int niv,int i)
+{
+
+	nivel[i]=niv;
+
+	for(int j=1;j<=n;j++)
+		if(nivel[j]==0 && a[i][j]==1)
+		{
+			printf("%d %d MUCHIE DE AVANSARE\n",i,j);
+			muchii_de_avans_si_de_intoarcere(a,nivel,n,niv+1,j);
+		}
+		else
+			if(nivel[j]>nivel[i] &&a[i][j]==1)
+				printf("%d %d MUCHIE DE INTOARCERE\n",i,j);
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	int **m,n,*nivel;
+
+	citire(n,&m,&nivel);
+
+	muchii_de_avans_si_de_intoarcere(m,nivel,n,1,1);
+
+	getch();
+
+}
+
+//Sa se parcurga recursiv si nerecursiv un graf in latime.
+//voi folosi codificarea cu liste dinamice
+
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+#define nmax 30
+
+typedef struct lis
+	{
+		int info;
+		struct lis *urm;
+	}lista;
+
+
+lista *prim[nmax],*ultim[nmax];
+
+void citire(int *n,int *vf,int *opt,int *ic,int *sc,int **parc,int **coada)
+{
+	FILE *pf;
+	char nume_fis[]="D:\\fisiere\\fis12.txt";
+	int muc1,muc2;
+	lista *p;
+
+	pf=fopen(nume_fis,"r");
+
+	//se citesste din fisier nr de varfuri ale grafului
+	fscanf(pf,"%d",&(*n));
+
+	//se citeste din fisier varful din graf de la care se incepe parcurgerea
+	fscanf(pf,"%d",&(*vf));
+
+	//se citeste din fiser optiunea aleasa de utilizator
+	fscanf(pf,"%d",&(*opt));
+
+	//se citesc din fisier muchiile grafului
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+	{
+		p=(lista *)malloc(sizeof(lista));
+		p->info=muc2;
+		p->urm=0;
+		if(prim[muc1]==0)
+			prim[muc1]=ultim[muc1]=p;
+		else
+		{
+			ultim[muc1]->urm=p;
+			ultim[muc1]=p;
+		}
+	}
+
+	//alocarea si initializarea cu 0 a tabloului parc
+	*parc=(int *)malloc(sizeof(int)*(*n+1));
+	for(int i=1;i<=*n;i++)
+		(*parc)[i]=0;
+
+	//alocarea initializarea cu 0 a tabloului coada
+	*coada=(int *)malloc(sizeof(int) *(*n+1));
+	for(i=1;i<=*n;i++)
+		(*coada)[i]=0;
+
+	*ic=1;
+	*sc=1;
+	(*parc)[*vf]=1;
+	(*coada)[*ic]=*vf;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void latime_nerecursiva(int ic,int *sc,int *parc,int *coada)
+{
+	lista *p;
+
+	while(ic<=*sc)
+	{
+		p=prim[coada[ic]];
+		while(p)
+		{
+			if(parc[p->info]==0)
+			{
+				parc[p->info]=1;
+				(*sc)++;
+				coada[*sc]=p->info;
+			}
+			p=p->urm;
+		}
+		ic++;
+	}
+}
+
+void latime_recursiva(int ic,int *sc,int *parc,int *coada)
+{
+	lista *p;
+
+	if(ic<=*sc)
+	{
+		p=prim[coada[ic]];
+		while(p)
+		{
+			if(parc[p->info]==0)
+			{
+				parc[p->info]=1;
+				(*sc)++;
+				coada[*sc]=p->info;
+			}
+			p=p->urm;
+		}
+		latime_recursiva(ic+1,&(*sc),parc,coada);
+
+	}
+}
+
+
+void main()
+{
+	clrscr();
+
+	int i,n,vf_initial,opt,*coada,begin_coada,end_coada,*parcurs;
+
+	citire(&n,&vf_initial,&opt,&begin_coada,&end_coada,&parcurs,&coada);
+
+	if(opt==1)
+		latime_recursiva(begin_coada,&end_coada,parcurs,coada);
+	else if(opt==2)
+		latime_nerecursiva(begin_coada,&end_coada,parcurs,coada);
+
+	for(i=1;i<=n;i++)
+		cout<<coada[i]<<" ";
+
+	getch();
+}
+
+//Algoritmul lui Prim
+
+#include <stdio.h>
+#include <conio.h>
+
+#define nmax 10
+#define MAX 0x7fff
+
+void prim(int n,int c[nmax][nmax],int muchii[nmax][2],int *cost)
+{
+	/*
+		n -numarul nodurilor;
+		c - matricea costurilor;
+		muchii-muchiile arborelui de acoperire de cost minim;
+		cost-costul arborelui de acoperire de cost minim
+	*/
+	int v[nmax];
+	/*
+		v[i]=0 daca i apartine arborelui;
+		v[i]=j daca i nu apartine arborelui.
+		j este nodul din arbore a.i.muchia (i,j) este de cost minim
+	 */
+	int i,j,k,minim;
+
+	*cost=0;
+	v[1]=0;
+	for(i=2;i<=n;i++) v[i]=1;   //arborele este ({1},{})
+
+	//determinarea celor n-1 muchii
+
+	for(i=1;i<=n-1;i++)
+	{
+		//determinarea muchiei care se adauga arborelui
+
+		minim=0x7fff;
+
+		for(k=1;k<=n;k++)
+			if(v[k]!=0)
+				if(c[k][v[k]] < minim)
+				{
+					j=k;
+					minim=c[k][v[k]];
+				}
+		muchii[i][0]=v[j];
+		muchii[i][1]=j;
+		*cost=*cost+c[j][v[j]];
+
+		//reactualizare vector v
+
+		v[j]=0;
+		for(k=1;k<=n;k++)
+			if(v[k]!=0)
+				if(c[k][v[k]]>c[k][j])
+					v[k]=j;
+	}
+}
+
+void main()
+{
+	clrscr();
+
+	int n;//nr. nodurilor
+	int c[nmax][nmax]; //matricea costurilor
+	int muchii[nmax][2];//muchiile arborelui
+	int i,j,k,cost;
+
+	printf("\nNr. nodurilor=");
+	scanf("%d",&n);
+
+	for(i=1;i<=n;i++)
+		for(j=1;j<=n;j++)
+			 c[i][j]=MAX;
+
+	//citirea costurilor(numere intregi)
+
+	for(i=1;i<n;i++)
+	{
+		do
+		{
+			printf("\nIntroduceti 0 pentru terminare sau nodul adiacent\n");
+			printf("	      cu  %2d > ca el =",i);
+			scanf("%d",&j);
+			if(j>0)
+			{
+				printf("\nCostul c[%d][%d]=",i,j);
+				scanf("%d",&c[i][j]);
+				c[j][i]=c[i][j]; //matricea este simetrica
+			}
+		}
+		while(j>0);
+	}
+
+	prim(n,c,muchii,&cost);
+	printf("\nCOSTUL ARBORELUI = %d",cost);
+	printf("\nMUCHIILE ARBORELUI  COSTUL MUCHIEI\n");
+	for(i=1;i<=n-1;i++)
+		printf("   %2d - %2d %10d\n",muchii[i][0],muchii[i][1],c[muchii[i][0]][muchii[i][1]]);
+
+	getch();
+}
+
+
+//Sa se determine drumul de cost minim precum si costul minim corespunzator dintre 2 varfuri dintr-un graf orientat dat
+//VOI FOLOSI DIJKSTRA
+//in aceasta problema voi aloca dinamic in limbajul C
+//voi folosi matricea costurilor unde voi pune max_int daca nu exista muchie directa de la i la j
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+#include<values.h>
+
+#define max 10000
+
+void citire(int &nrvf,int ***matr,int **dist,int **stiva,int **tata,int &x)
+{
+	int i,j,muc1,muc2,cost;
+	char nume_fis[50]="D:\\fisiere\\fis10.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se citeste din fisier varful de la care se doreste aflarea costului minim spre celelalte varfuri
+	fscanf(pf,"%d",&x);
+
+	//se vor aloca dinamic cele 3 tablouri si apoi matricea de costuri
+
+	*dist=(int *)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+		(*dist)[i]=0;
+	*stiva=(int *)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+		(*stiva)[i]=0;
+	*tata=(int *)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+		(*tata)[i]=0;
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			if(i==j)
+				(*matr)[i][j]=0;
+			else
+				(*matr)[i][j]=max;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d%d",&muc1,&muc2,&cost)!=EOF)
+		(*matr)[muc1][muc2]=cost;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void DIJKSTRA(int **drum,int *tata,int *distante,int *stiva,int sursa,int n)
+{
+	//initializare date
+	int i,j,pas,min,k;
+	for(i=1;i<=n;i++)
+	{
+			distante[i]=drum[sursa][i];
+			if(drum[sursa][i]<max)
+				tata[i]=sursa;
+	}
+
+	stiva[sursa]=1;
+	//distante[sursa]=0;
+	//tata[sursa]=0;
+
+	for(pas=1;pas<=n-1;pas++)
+	{
+		min=max;
+		for(j=1;j<=n;j++)
+			if(stiva[j]==0)
+				if(min>distante[j])
+				{
+					min=distante[j];
+					k=j;
+				}
+
+		if(min<max)
+		{
+			stiva[k]=1;
+
+			for(j=1;j<=n;j++)
+				if(stiva[j]==0)
+					if(distante[j]>(distante[k]+drum[k][j]))
+					{
+						distante[j]=distante[k]+drum[k][j];
+						tata[j]=k;
+					}
+		}
+	}
+}
+
+
+void afisare_drum(int n,int sursa,int *dist,int *tata,int dest)
+{
+	int *stiv,i,k,dest1=dest;
+
+	stiv=(int *)malloc(sizeof(int)*(n+1));
+
+	for(i=0;i<n;i++)
+		stiv[i]=0;
+
+	k=0;
+	stiv[k++]=dest1;
+
+	while(tata[dest1]!=sursa)
+	{
+		dest1=tata[dest1];
+		stiv[k++]=dest1;
+	}
+
+	stiv[k]=sursa;
+
+	printf("\n");
+	for(i=k;i>=0;i--)
+		printf("%d ",stiv[i]);
+	printf("%d",dist[dest]);
+	printf("\n");
+
+}
+
+void main()
+{
+	clrscr();
+
+	int **drum,n,sursa,*tata,*distante,*stiva,i;
+
+	citire(n,&drum,&distante,&stiva,&tata,sursa);
+
+	DIJKSTRA(drum,tata,distante,stiva,sursa,n);
+
+	//sursa=1;
+
+	for(i=1;i<=n;i++)
+		if(i!=sursa)
+			if(tata[i])
+				afisare_drum(n,sursa,distante,tata,i);
+			else
+			{
+				printf("\n");
+				printf("Nu exista drum de la %d la %d ",sursa,i);
+				printf("\n");
+			}
+
+	getch();
+
+}
+
+//Sa se determine drumul de cost minim precum si costul minim corespunzator dintre 2 varfuri dintr-un graf orientat dat
+//VOI FOLOSI ROY-FLOYD
+//in aceasta problema voi aloca dinamic in limbajul C
+//voi folosi matricea costurilor unde voi pune max_int daca nu exista muchie directa de la i la j
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+#include<values.h>
+
+#define max 10000
+
+void citire(int &nrvf,int ***matr,int &x,int &y)
+{
+	int i,j,muc1,muc2,cost;
+	char nume_fis[50]="D:\\fisiere\\fis9.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+
+	//se citesc din fisier varfurile pt care se doreste aflarea costului minim
+	fscanf(pf,"%d%d",&x,&y);
+
+	*matr=(int **)malloc(sizeof(int)*(nrvf+1));
+	for(i=1;i<=nrvf;i++)
+	{
+		(*matr)[i]=(int *)malloc(sizeof(int)*(nrvf+1));
+
+		for(j=1;j<=nrvf;j++)
+			if(i==j)
+				(*matr)[i][j]=0;
+			else
+				(*matr)[i][j]=max;
+	}
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d%d",&muc1,&muc2,&cost)!=EOF)
+		(*matr)[muc1][muc2]=cost;
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void ROY_FLOYD(int **matr,int n)
+{
+	int i,j,k;
+	for(k=1;k<=n;k++)
+		for(i=1;i<=n;i++)
+			for(j=1;j<=n;j++)
+				if(matr[i][j]>matr[i][k]+matr[k][j])
+					matr[i][j]=matr[i][k]+matr[k][j];
+
+}
+
+void drumulet(int **matr,int n,int i,int j)
+{
+	int k,gasit;
+
+	k=1;
+	gasit=0;
+
+	while(k<=n && gasit==0)
+	{
+		if(i!=k && j!=k && (matr[i][k]+matr[k][j])==matr[i][j])
+		{
+			drumulet(matr,n,i,k);
+			drumulet(matr,n,k,j);
+			gasit=1;
+		}
+		k++;
+	}
+	if(gasit==0)
+		printf("%d ",j);
+}
+
+void afisare_drum(int **matr,int n,int i,int j)
+{
+	if(matr[i][j]!=max)
+	{
+		printf("Drumul de cost minim %d de la %d la %d este:\n",matr[i][j],i,j);
+		printf("%d ",i);
+		drumulet(matr,n,i,j);
+	}
+	else
+		printf("Nu exista drum de la %d la %d",i,j);
+}
+
+void main()
+{
+	clrscr();
+
+	int **drum,n,vf1,vf2;
+
+	citire(n,&drum,vf1,vf2);
+
+	ROY_FLOYD(drum,n);
+
+	afisare_drum(drum,n,vf1,vf2);
+
+	getch();
+
+}
+
+//Sa se parcurga in adancime un graf neorientat
+//in aceasta problema voi aloca dinamic in limbajul C
+//graful este reprezentat prin liste de adiacenta SI PARCURGEREA ESTE ATAT RECURSIVA CAT SI NERECURSIVA
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream.h>
+
+#define nmax 30
+
+typedef struct li
+	{
+		struct li *urm;
+		int info;
+	}lis;
+
+lis *prim_lista[nmax],*ultim_lista[nmax];
+int parc[nmax];
+
+void citire(int *nrvf,int *vf_init,int *opt)
+{
+	int i,j,muc1,muc2;
+	lis *p;
+	char nume_fis[50]="D:\\fisiere\\fis12.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&(*nrvf));
+
+	//se citeste din fisier varful de la care se incepe parcurgerea
+	fscanf(pf,"%d",&(*vf_init));
+
+	//se citeste din fisier optiunea aleasa
+	fscanf(pf,"%d",&(*opt));
+
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+	{
+		p=(lis *)malloc(sizeof(lis));
+		p->info=muc2;
+		p->urm=0;
+
+		if(prim_lista[muc1]==0)
+			prim_lista[muc1]=ultim_lista[muc1]=p;
+		else
+		{
+			ultim_lista[muc1]->urm=p;
+			ultim_lista[muc1]=p;
+		}
+
+	}
+
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void introduce_in_stiva(lis **prim,lis **ultim,int nr)
+{
+	lis *p=(lis *)malloc(sizeof(char));
+	p->info=nr;
+	p->urm=0;
+
+	if(*prim==0)
+		*prim=*ultim=p;
+	else
+	{
+		(*ultim)->urm=p;
+		*ultim=p;
+	}
+}
+
+void extrage_din_stiva(lis **prim,lis **ultim)
+{
+	lis *p,*q;
+	if(*prim==0)
+		return;
+	else
+	{
+		if((*prim)->urm==0)
+		{
+			p=*prim;
+			*prim=*ultim=0;
+			free(p);
+		}
+		else
+		{
+			q=*prim;
+			p=q->urm;
+			while(p->urm)
+			{
+				q=p;
+				p=q->urm;
+			}
+			q->urm=0;
+			*ultim=q;
+			free(p);
+		}
+	}
+}
+
+void parcurgere_nerecursiva(int i)
+{
+	lis *prim_stiva=0,*ultim_stiva=0,*nod1,*nod2;
+
+	printf("%d ",i);
+	parc[i]=1;
+
+	introduce_in_stiva(&prim_stiva,&ultim_stiva,i);
+	while(prim_stiva)
+	{
+
+		nod1=ultim_stiva;
+		i=nod1->info;
+
+		nod2=prim_lista[i];
+
+		while(parc[nod2->info]==1 && nod2)
+			nod2=nod2->urm;
+
+		if(nod2)
+		{
+			printf("%d ",nod2->info);
+			parc[nod2->info]=1;
+			introduce_in_stiva(&prim_stiva,&ultim_stiva,nod2->info);
+		}
+		else
+			extrage_din_stiva(&prim_stiva,&ultim_stiva);
+	}
+
+}
+
+void parcurgere_recursiva(int i)
+{
+	printf("%d ",i);
+	lis *p=prim_lista[i];
+	while(p)
+	{
+		if(parc[p->info]==0)
+		{
+			parc[p->info]=1;
+			parcurgere_recursiva(p->info);
+		}
+		p=p->urm;
+	}
+
+}
+
+void main()
+{
+	clrscr();
+
+	int n,i,j,opt,vf_init;
+
+	citire(&n,&vf_init,&opt);
+
+	printf("Parcurgerea in adancime a grafului este:\n");
+
+	if(opt==1)
+		parcurgere_recursiva(vf_init);
+	else if(opt==2)
+		parcurgere_nerecursiva(vf_init);
+
+	getch();
+
+}
+
+
+//sa se determine toate drumurile de la x la y intr-un graf orientat
+//la aceasta problema voi aloca si voi transmite parametrii ca in C++ dar restul functiilor vor fi de C
+//graful orientat se reprezinta prin matrice de adiacenta
+
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+
+int a;
+void citire(int &nrvf,int **&matr,int **&parc,int *&drum,int &x,int &y)
+{
+	int i,j,muc1,muc2;
+	char nume_fis[50]="D:\\fisiere\\fis1.txt";
+
+	//se creeaza si se deschide fisierul
+	FILE *pf;
+	pf=fopen(nume_fis,"r");
+
+	//se citeste din fisier nr de varfuri
+	fscanf(pf,"%d",&nrvf);
+	//se citesc din fisier cele 2 varfuri intre care se vrea sa se afiseze toate drumurile
+	fscanf(pf,"%d ",&x);
+	fscanf(pf,"%d",&y);
+	//se aloca dinamic tablourile si matricile necesare
+	drum=new int[nrvf+1];
+	for(i=1;i<=nrvf;i++)
+		drum[i]=0;
+	matr=new int*[nrvf+1];
+	parc=new int*[nrvf+1];
+	for(i=1;i<=nrvf;i++)
+	{
+		matr[i]=new int[nrvf+1];
+		parc[i]=new int[nrvf+1];
+
+		for(j=1;j<=nrvf;j++)
+		{
+			matr[i][j]=0;
+			parc[i][j]=0;
+		}
+	}
+	//se citesc din fisier perechile de muchii
+	while(fscanf(pf,"%d%d",&muc1,&muc2)!=EOF)
+		matr[muc1][muc2]=1;
+	//se inchide fisierul
+	fclose(pf);
+
+}
+
+void parcurgere(int **m,int **parcurs,int *drum,int n,int i,int y,int poz)
+{
+	if(i==y)
+	{
+		printf("DRUM:");
+		for(int k=1;k<poz;k++)
+			printf("%d ",drum[k]);
+		printf("%d\n",y);
+		getch();
+		a++;
+		return;
+	}
+	for(int j=1;j<=n;j++)
+		if(m[i][j]==1 && parcurs[i][j]==0)
+		{
+			parcurs[i][j]=1;
+			drum[poz]=i;
+			parcurgere(m,parcurs,drum,n,j,y,poz+1);
+			parcurs[i][j]=0;
+		}
+}
+
+void main()
+{
+
+	clrscr();
+	int **m,n,**parcurs,*drum,x,y;
+	citire(n,m,parcurs,drum,x,y);
+	parcurgere(m,parcurs,drum,n,x,y,1);
+	printf("%d",a);
+
+}
+
+/Sa se afiseze frecventa de aparitie a cuvintelor dintr-un text utilizand o tabela de dispersie.
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define n_max 5000
+#define M 10
+
+typedef struct lista
+	{
+		struct lista *urm;
+		char nume[n_max];
+		int ap;
+	}lis;
+
+lis *ht[M];
+
+int ASCII(char nume[])
+{
+	int i,rez;
+
+	rez=0;
+
+	for(i=0;i<strlen(nume);i++)
+		rez+=nume[i];
+
+	return rez%M;
+}
+
+lis *cautare(char num[],int nr)
+{
+	int i;
+	lis *p;
+
+	p=ht[nr];
+
+	while(p)
+	{
+		if(strcmp(p->nume,num)==0)
+			return p;
+		p=p->urm;
+	}
+
+	return 0;
+
+}
+
+void inserare_creare()
+{
+	int rez,val,nr_inregistrari;
+	lis *p,*q;
+	char inreg[n_max];
+
+	nr_inregistrari=0;
+
+	cout<<"Dati nodurile care vreti sa fie inserate in tabela de dispersie:"<<endl;
+
+	while(nr_inregistrari<M)
+	{
+		cin>>inreg;
+		nr_inregistrari++;
+
+		rez=ASCII(inreg);
+
+		p=(lis *)malloc(sizeof(lis));
+		strcpy(p->nume,inreg);
+		p->ap=1;
+
+		if(ht[rez]==0)
+		{
+			ht[rez]=p;
+			p->urm=0;
+		}
+		else
+		{
+			q=cautare(p->nume,rez);
+			if(q==0)
+			{
+				p->urm=ht[rez];
+				ht[rez]=p;
+			}
+			else
+			{
+				(q->ap)++;
+				free(p);
+			}
+		}
+	}
+
+}
+
+
+void afisare_tabela_dispersie()
+{
+	lis *p;
+	int i,flag;
+
+	for(i=0;i<M;i++)
+	{
+		flag=0;
+		p=ht[i];
+		while(p)
+		{
+			cout<<p->nume<<" "<<p->ap;
+			cout<<endl;
+			p=p->urm;
+			flag=1;
+		}
+
+		if(flag)
+			cout<<endl;
+	}
+}
+
+void main()
+{
+	clrscr();
+
+	inserare_creare();
+
+	cout<<"Termenii din tabela de dispersie sunt:"<<endl;
+	afisare_tabela_dispersie();
+
+	getch();
+}
+
+//Sa se afiseze crescator identificatorii dintr-o tabela de dispersie.
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define n_max 5000
+#define M 10
+
+typedef struct lista
+	{
+		struct lista *urm;
+		char nume[n_max];
+	}lis;
+
+lis *ht[M];
+
+int ASCII(char nume[])
+{
+	int i,rez;
+
+	rez=0;
+
+	for(i=0;i<strlen(nume);i++)
+		rez+=nume[i];
+
+	return rez%M;
+}
+
+lis *cautare(char num[],int nr)
+{
+	int i;
+	lis *p;
+
+	p=ht[nr];
+
+	while(p)
+	{
+		if(strcmp(p->nume,num)==0)
+			return p;
+		p=p->urm;
+	}
+
+	return 0;
+
+}
+
+void inserare_creare()
+{
+	int rez,val,nr_inregistrari;
+	lis *p,*q;
+	char inreg[n_max];
+
+	nr_inregistrari=0;
+
+	cout<<"Dati nodurile care vreti sa fie inserate in tabela de dispersie:"<<endl;
+
+	while(nr_inregistrari<M)
+	{
+		cin>>inreg;
+		nr_inregistrari++;
+
+		rez=ASCII(inreg);
+
+		p=(lis *)malloc(sizeof(lis));
+		strcpy(p->nume,inreg);
+
+		if(ht[rez]==0)
+		{
+			ht[rez]=p;
+			p->urm=0;
+		}
+		else
+		{
+			q=cautare(p->nume,rez);
+			if(q==0)
+			{
+				p->urm=ht[rez];
+				ht[rez]=p;
+			}
+			else
+				free(p);
+		}
+	}
+
+}
+
+void sort_sort(int poz)
+{
+	int sch;
+	char aux[n_max];
+	lis *p;
+
+	strcpy(aux,"");
+	do
+	{
+		sch=0;
+		for(p=ht[poz];p->urm;p=p->urm)
+		{
+			if(strcmp(p->nume,p->urm->nume)>0)
+			{
+				strcpy(aux,p->nume);
+				strcpy(p->nume,p->urm->nume);
+				strcpy(p->urm->nume,aux);
+				strcpy(aux,"");
+				sch=1;
+
+			}
+		}
+	}
+	while(sch);
+
+}
+
+void bubble_sort()
+{
+	int i;
+	for(i=0;i<M;i++)
+		if(ht[i])
+			sort_sort(i);
+
+}
+
+void interclasare()
+{
+	int sch,i,poz;
+	char temp[n_max];
+	lis *p;
+
+	sch=1;
+
+	while(1)
+	{
+		for(i=0;i<M;i++)
+			if(ht[i])
+				if(sch==1)
+				{
+					sch=0;
+					strcpy(temp,ht[i]->nume);
+					poz=i;
+				}
+				else
+					if(strcmp(temp,ht[i]->nume)>0)
+					{
+						strcpy(temp,"");
+						strcpy(temp,ht[i]->nume);
+						poz=i;
+					}
+		if(sch==0)
+		{
+			sch=1;
+			cout<<temp<<" ";
+			p=ht[poz];
+			ht[poz]=ht[poz]->urm;
+			free(p);
+		}
+		else
+			break;
+
+	}
+}
+
+void main()
+{
+	clrscr();
+
+	inserare_creare();
+
+	bubble_sort();
+
+	cout<<"Termenii din tabela de dispersie ordonati crescator sunt:"<<endl;
+
+	interclasare();
+
+	getch();
+}
+
+/*
+	Sa se implementeze algoritmii prezentati aferenti unei tabele de dispersie.
+	Inregistrarea va contine datele aferente unui student. Cheia va fi numele studentului.
+	Scrieti in plus fata de cele prezentate o functie de stergere a unei înregistrari de cheie data.
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define n_max 5000
+#define M 5
+
+typedef struct lista
+	{
+		struct lista *urm;
+		char nume[n_max];
+	}lis;
+
+lis *ht[M];
+
+int ASCII(char nume[])
+{
+	int i,rez;
+
+	rez=0;
+
+	for(i=0;i<strlen(nume);i++)
+		rez+=nume[i];
+
+	return rez%M;
+}
+
+int cautare(char num[],int nr)
+{
+	int i;
+	lis *p;
+
+	p=ht[nr];
+
+	while(p)
+	{
+		if(strcmp(p->nume,num)==0)
+			return 0;
+		p=p->urm;
+	}
+
+	return 1;
+
+}
+
+void inserare_creare(char cuv[n_max])
+{
+	int rez,val,nr_inregistrari;
+	lis *p;
+	char inreg[n_max];
+
+	nr_inregistrari=0;
+
+	cout<<"Dati ncuvantul pe care vreti sa-l stergeti:"<<endl;
+	cin>>cuv;
+
+	cout<<"Dati nodurile care vreti sa fie inserate in tabela de dispersie:"<<endl;
+
+	while(nr_inregistrari<M)
+	{
+		cin>>inreg;
+
+		rez=ASCII(inreg);
+
+		p=(lis *)malloc(sizeof(lis));
+		strcpy(p->nume,inreg);
+
+		if(ht[rez]==0)
+		{
+			nr_inregistrari++;
+			ht[rez]=p;
+			p->urm=0;
+		}
+		else
+		{
+			val=cautare(p->nume,rez);
+			if(val==1)
+			{
+				nr_inregistrari++;
+				p->urm=ht[rez];
+				ht[rez]=p;
+			}
+			else
+				free(p);
+		}
+	}
+
+}
+
+
+void afisare_tabela_dispersie()
+{
+	lis *p;
+	int i,flag;
+
+	for(i=0;i<M;i++)
+	{
+		flag=0;
+		p=ht[i];
+		while(p)
+		{
+			cout<<p->nume<<" ";
+			p=p->urm;
+			flag=1;
+		}
+
+		if(flag)
+			cout<<endl;
+	}
+}
+
+void sterge(char cuv[n_max])
+{
+
+	int i,flag=0,rez;
+	lis *p,*q,*t;
+
+	rez=ASCII(cuv);
+
+	if(ht[rez]==0)
+		flag=0;
+	else
+	{
+		if(strcmp(ht[rez]->nume,cuv)==0)
+		{
+			q=ht[rez];
+			ht[rez]=ht[rez]->urm;
+			free(q);
+			flag=1;
+		}
+		else
+		{
+			p=ht[rez]->urm;
+			q=ht[rez];
+			while(p)
+			{
+				if(strcmp(p->nume,cuv)==0)
+				{
+					t=p;
+					q->urm=p->urm;
+					free(t);
+					flag=1;
+					break;
+				}
+				else
+				{
+					q=q->urm;
+					p=q->urm;
+				}
+			}
+		}
+	}
+
+	if(flag==0)
+		cout<<"Nu exista inregistrarea respectiva:"<<endl;
+
+
+}
+
+void main()
+{
+	clrscr();
+
+	char cuv[n_max];
+	inserare_creare(cuv);
+
+	cout<<"Termenii din tabela de dispersie sunt:"<<endl;
+	afisare_tabela_dispersie();
+
+	sterge(cuv);
+
+	cout<<"Termenii ramasi in tabela de dispersie sunt:"<<endl;
+	afisare_tabela_dispersie();
+
+	getch();
+}
+
+*
+	Se va crea o tabela fixa cu cuvintele rezervate din limbajul C.
+	Se va scrie apoi o functie de cautare binara a unui cuvant in tabela.
+	Este evident ca tabela are toate elementele distincte.
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+#define n_max 15
+#define nr_cuv 50
+
+void inserare_cuv(char tab[][n_max+1],char cuv[],int poz,int nr_cuvinte)
+{
+	int i;
+
+	for(i=nr_cuvinte;i>poz;i--)
+	{
+		strcpy(tab[i],tab[i-1]);
+		strcpy(tab[i-1],"");
+	}
+
+	strcpy(tab[poz],cuv);
+}
+
+void citire_si_creare_tabela(char tabela[][n_max+1],char term[],int &nr_term)
+{
+
+	char cuv[n_max+1];
+	int i,j,flag;
+
+	i=0;
+
+	cout<<"Dati cuvintele care vreti sa le puneti in tabela:"<<endl;
+	while(cin>>cuv)
+	{
+		if(i==0)
+			strcpy(tabela[i],cuv);
+		else if(i==1)
+		{
+			if(strcmp(tabela[i-1],cuv)<0)
+				strcpy(tabela[i],cuv);
+			else if(strcmp(tabela[i-1],cuv)>0)
+			{
+				strcpy(tabela[i],tabela[i-1]);
+				strcpy(tabela[i-1],"");
+				strcpy(tabela[i-1],cuv);
+			}
+			else
+                        	i--;
+		}
+		else
+		{
+			if(strcmp(tabela[0],cuv)>0)
+				inserare_cuv(tabela,cuv,0,i);
+			else
+			{
+
+				flag=0;
+
+				for(j=0;j<i-1;j++)
+					if(strcmp(tabela[j],cuv)<0 && strcmp(tabela[j+1],cuv)>0)
+					{
+						inserare_cuv(tabela,cuv,j+1,i);
+						flag=1;
+					}
+					else if(strcmp(tabela[j],cuv)==0||strcmp(tabela[j+1],cuv)==0)
+					{
+						flag=1;
+						i--;
+					}
+
+				if(flag==0)
+					strcpy(tabela[i],cuv);
+			}
+
+		}
+
+		i++;
+	}
+
+	cin.clear();
+
+	cout<<"Dati termenul care doriti sa fie cautat:"<<endl;
+	cin>>term;
+
+	nr_term=i;
+
+}
+
+int cautare_binara_in_tabela(char tab[][n_max+1],char cuv[],int nr_term)
+{
+	int st,dr,mijl;
+
+	st=0;
+	dr=nr_term-1;
+
+	while(st<=dr)
+	{
+		mijl=(st+dr)/2;
+		if(strcmp(tab[mijl],cuv)>0)
+			dr=mijl-1;
+		else if(strcmp(tab[mijl],cuv)<0)
+			st=mijl+1;
+		else
+			return mijl;
+	}
+
+	return -1;
+}
+
+void main()
+{
+	clrscr();
+
+	char termen[n_max+1],cuvinte_rezervate[nr_cuv][n_max+1];
+	int nr_termeni,gasit,i;
+
+	citire_si_creare_tabela(cuvinte_rezervate,termen,nr_termeni);
+
+	gasit=cautare_binara_in_tabela(cuvinte_rezervate,termen,nr_termeni);
+
+	cout<<"Tabela de valori este:"<<endl;
+	for(i=0;i<nr_termeni;i++)
+		cout<<cuvinte_rezervate[i]<<" ";
+	cout<<endl;
+
+	if(gasit==-1)
+		cout<<"Nu exista termenul respectiv in tabela";
+	else
+		cout<<"Termenul respectiv exista in tabela pe pozitia:"<<gasit;
+
+	getch();
+}
+
+/*
+
+	Sa se genereze partitiile numarului n(sa nu se repete)
+
+*/
+
+#include<iostream.h>
+#include<conio.h>
+
+#define n_max 30
+
+int S,n,sol[n_max];
+
+void scrie(int i)
+{
+
+	int j;
+
+	for(j=1;j<=i;j++)
+		cout<<sol[j]<<"+";
+	cout<<endl;
+
+}
+
+void partitii_nerecursive()
+{
+
+	int i;
+
+	i=1;
+	sol[1]=0;
+
+	while(i>=1)
+	{
+
+		while(sol[i]<n)
+		{
+
+			sol[i]++;
+			if(S-sol[i]==0)
+				scrie(i);
+			else if((S-sol[i])>0)
+			{
+
+				S-=sol[i];
+				i++;
+				sol[i]=sol[i-1]-1;
+
+			}
+
+		}
+
+		i--;
+		S+=sol[i];
+
+	}
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	int i;
+
+	cout<<"Dati n:"<<endl;
+	cin>>n;
+
+	S=n;
+
+	cout<<"Partitiile numarului n sunt:"<<endl;
+	partitii_nerecursive();
+
+	getch();
+}
+
+/*
+
+	Sa se genereze permutarile multimii {1,2,...,n}
+
+*/
+
+#include<iostream.h>
+#include<conio.h>
+
+#define n_max 30
+
+int n,sol[n_max],pus[n_max];
+
+void scrie()
+{
+
+	int i;
+
+	for(i=1;i<=n;i++)
+		cout<<sol[i]<<" ";
+	cout<<endl;
+}
+
+void permutari_nerecursive()
+{
+
+	int i;
+
+	i=1;
+	sol[1]=0;
+
+	while(i>=1)
+	{
+
+		while(sol[i]<n)
+		{
+
+			sol[i]++;
+			if(pus[sol[i]]==0)
+			{
+
+				if(i==n)
+					scrie();
+				else
+				{
+
+					pus[sol[i]]=1;
+					i++;
+					sol[i]=0;
+
+				}
+
+			}
+
+		}
+
+		i--;
+		pus[sol[i]]=0;
+
+	}
+}
+
+void main()
+{
+
+	clrscr();
+
+	cout<<"Dati n:"<<endl;
+	cin>>n;
+
+	cout<<"Permutarile cerute sunt:"<<endl;
+	permutari_nerecursive();
+
+	getch();
+}
+
+/*
+
+	Sa se genereze aranjamentele de n luate cate k ale multimii {1,2,...,n}
+
+*/
+
+#include<iostream.h>
+#include<conio.h>
+
+#define n_max 30
+
+int n,k,sol[n_max],pus[n_max];
+
+void scrie()
+{
+
+	int i;
+
+	for(i=1;i<=k;i++)
+		cout<<sol[i]<<" ";
+	cout<<endl;
+}
+
+void aranjamente_nerecursive()
+{
+
+	int i;
+
+	i=1;
+	sol[1]=0;
+
+	while(i>=1)
+	{
+
+		while(sol[i]<n)
+		{
+
+			sol[i]++;
+			if(pus[sol[i]]==0)
+			{
+
+				if(i==k)
+					scrie();
+				else
+				{
+
+					pus[sol[i]]=1;
+					i++;
+					sol[i]=0;
+
+				}
+
+			}
+
+		}
+
+		i--;
+		pus[sol[i]]=0;
+
+	}
+}
+
+void main()
+{
+
+	clrscr();
+
+	cout<<"Dati n si k:"<<endl;
+	cin>>n>>k;
+
+	cout<<"Aranjamentele cerute sunt:"<<endl;
+	aranjamente_nerecursive();
+
+	getch();
+}
+
+/*
+
+	Sa se genereze combinarile de n luate cate k ale multimii {1,2,...,n}
+
+*/
+
+#include<iostream.h>
+#include<conio.h>
+
+#define n_max 30
+
+int n,k,sol[n_max];
+
+void scrie()
+{
+
+	int i;
+
+	for(i=1;i<=k;i++)
+		cout<<sol[i]<<" ";
+	cout<<endl;
+}
+
+void combinari_nerecursive()
+{
+
+	int i;
+
+	i=1;
+	sol[1]=0;
+
+	while(i>=1)
+	{
+
+		while(sol[i]<n)
+		{
+
+			sol[i]++;
+			if(i==k)
+				scrie();
+			else
+			{
+
+				i++;
+				sol[i]=sol[i-1];
+
+			}
+
+		}
+		i--;
+
+	}
+}
+
+void main()
+{
+
+	clrscr();
+
+	cout<<"Dati n si k:"<<endl;
+	cin>>n>>k;
+
+	cout<<"Combinarile cerute sunt:"<<endl;
+	combinari_nerecursive();
+
+	getch();
+}
+
+/*
+	Un labirint este codificat printr-o matrice de n elemente ale carei culoare sunt reprezentate prin elemente egale cu 1,
+	situate in pozitii consecutive pe o aceeasi linie sau coloana, celelalte elemente fiind 0. O persoana se gaseste in pozitia (i, j)
+	din interiorul labirintului. Se cere afisarea tuturor traseelor de iesire din labirint care nu trec de mai multe ori prin acelasi loc.
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+#define n_max 30
+
+int di[]={-1,-1,-1,0,1,1,1,0,},dj[]={-1,0,1,1,1,0,-1,-1},sol[n_max][n_max],nr;
+
+void citire_initializare_matrice(int a[][n_max],int &n,int &pozi,int &pozj)
+{
+	int i,j;
+
+	printf("Dati n:\n");
+	scanf("%d",&n);
+	printf("Dati coordonatele initiale:\n");
+	scanf("%d %d",&pozi,&pozj);
+	printf("Dati matricea-labirint:\n");
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+			scanf("%d",&a[i][j]);
+}
+
+void scrie(int sol[][n_max],int n)
+{
+	int i,j;
+
+	nr++;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+			printf("%d ",sol[i][j]);
+		printf("\n");
+	}
+	printf("\n");
+	getch();
+}
+
+void parcurgere_cu_calul(int a[][n_max],int n,int i,int j,int pas)
+{
+	int inou,jnou,dir;
+
+	for(dir=0;dir<8;dir++)
+	{
+		inou=i+di[dir];
+		jnou=j+dj[dir];
+		if(inou>=0 && jnou>=0 && inou<n && jnou<n)
+			if(sol[inou][jnou]==0 && a[inou][jnou]==1)
+			{
+				sol[inou][jnou]=pas;
+				if(inou==n-1 || inou==0 ||jnou==0 ||jnou==n-1)
+					scrie(sol,n);
+				parcurgere_cu_calul(a,n,inou,jnou,pas+1);
+				sol[inou][jnou]=0;
+
+			}
+	}
+}
+
+void main()
+{
+	clrscr();
+
+	int a[n_max][n_max],n,pozi,pozj;
+
+	citire_initializare_matrice(a,n,pozi,pozj);
+
+	sol[pozi][pozj]=1;
+
+	printf("Posibilitatile de a parcurge tabla de sah cu calul pornind din pozitia 1,1 sunt:\n");
+
+	parcurgere_cu_calul(a,n,0,0,2);
+
+	printf("Exista %d solutii!",nr);
+
+	getch();
+}
+
+/*
+	Fiind date o tabla de sah de dimensiune n patrate si un cal plasat in patratul din stanga sus al tablei,
+	sa se afiseze toate posibilitatile de mutare a calului astfel incat sa treaca o singura data prin fiecare patrat al tablei.
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+#define n_max 30
+
+int di[]={-1,-2,-2,-1,1,2,2,1},dj[]={-2,-1,1,2,2,1,-1,-2},nr;
+
+void citire_initializare_matrice(int a[][n_max],int &n)
+{
+	int i,j;
+
+	printf("Dati n:\n");
+	scanf("%d",&n);
+
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+			a[i][j]=0;
+}
+
+void scrie(int a[][n_max],int n)
+{
+	int i,j;
+
+	nr++;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+			printf("%d ",a[i][j]);
+		printf("\n");
+	}
+	printf("\n");
+}
+
+void parcurgere_cu_calul(int a[][n_max],int n,int i,int j,int pas)
+{
+	int inou,jnou,dir;
+
+	for(dir=0;dir<8;dir++)
+	{
+		inou=i+di[dir];
+		jnou=j+dj[dir];
+		if(inou>=0 && jnou>=0 && inou<n && jnou<n)
+			if(a[inou][jnou]==0)
+			{
+				a[inou][jnou]=pas;
+				if(pas==n*n)
+					scrie(a,n);
+				else
+					parcurgere_cu_calul(a,n,inou,jnou,pas+1);
+				a[inou][jnou]=0;
+
+			}
+	}
+}
+
+void main()
+{
+	clrscr();
+
+	int a[n_max][n_max],n;
+
+	citire_initializare_matrice(a,n);
+
+	a[0][0]=1;
+
+	printf("Posibilitatile de a parcurge tabla de sah cu calul pornind din pozitia 1,1 sunt:\n");
+
+	parcurgere_cu_calul(a,n,0,0,2);
+
+	printf("Exista %d solutii!",nr);
+
+	getch();
+}
+
+//PB 3.3-LABORATOR 6
+
+//ENUNTUL PROBLEMEI:
+	//SA SE SCRIE MAI MULTE FUNCTII DE ORDONARE A UNUI SIR DE NUMERE INTREGI PRIN DIFERITE METODE FOLOSIND POINTERI.
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<alloc.h>
+#include<string.h>
+int *citire_alocare(int &n,char optiune[])
+{
+	int *x;
+	printf("Dati n:\n");
+	scanf("%d",&n);
+	x=(int *)malloc(sizeof(int)*n);
+	printf("Dati sirul ca nu mai am rabdare:\n");
+	for(int i=0;i<n;i++)
+		scanf("%d",(x+i));
+	printf("Ati putea sa ne spuneti si prin ce metoda doriti ca acest sir sa fie ordonat");
+	printf("\n");
+	scanf("%s",optiune);
+	return x;
+
+}
+
+int *alocare(int n)
+{
+	int *x=(int*)malloc(sizeof(int)*n);
+	return x;
+}
+
+void afisare(int *(*p)(int*,int),int *x,int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		printf("%d",p(x,n)[i]);
+		printf(" ");
+	}
+}
+void afisare_quick_sort(int *(*p)(int*,int,int),int *x,int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		printf("%d",p(x,0,n-1)[i]);
+		printf(" ");
+	}
+}
+void afisare_speciala(int *(*p)(int*,int *,int,int),int *x,int *b,int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		printf("%d",p(x,b,0,n-1)[i]);
+		printf(" ");
+	}
+}
+void afisare_speciala2(int *(*p)(int*,int*,int*,int),int *x,int *x1,int *b1,int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		printf("%d",p(x,x1,b1,n)[i]);
+		printf(" ");
+	}
+}
+int *bubble_sort(int *x,int n)
+{
+	int aux,sch,j=0;
+	do
+	{
+		sch=0;
+		j++;
+		for(int i=0;i<n-j;i++)
+			if(*(x+i)>*(x+i+1))
+			{
+				aux=*(x+i);
+				*(x+i)=*(x+i+1);
+				*(x+i+1)=aux;
+				sch=1;
+			}
+    }
+    while(sch);
+    return x;
+
+}
+int *interschimbare(int *x,int n)
+{
+	int aux;
+	for(int i=0;i<n-1;i++)
+		for(int j=i+1;j<n;j++)
+			if(*(x+i)>*(x+j))
+			{
+				aux=*(x+i);
+				*(x+i)=*(x+j);
+				*(x+j)=aux;
+			}
+	return x;
+}
+int *selectie(int *x,int n)
+{
+	int ind,aux;
+	for(int i=0;i<n-1;i++)
+	{
+		ind=i;
+		for(int j=i+1;j<n;j++)
+			if(*(x+j)<*(x+ind))
+				ind=j;
+		if(i<ind)
+		{
+			aux=*(x+i);
+			*(x+i)=*(x+ind);
+			*(x+ind)=aux;
+		}
+	}
+	return x;
+
+}
+int *insertie(int *x,int n)
+{
+	int ind,v;
+	for(int i=1;i<n;i++)
+	{
+		ind=i-1;
+		v=*(x+i);
+		while(ind>=0 && (v<x[ind]))
+		{
+			x[ind+1]=x[ind];
+			ind--;
+		}
+		x[ind+1]=v;
+	}
+	return x;
+}
+void interclasare(int *x,int *b,int st,int mijl,int dr)
+{
+	int i=st,j=mijl+1,k=st;
+	while(i<=mijl && j<=dr)
+	{
+		if(x[i]<x[j])
+			b[k++]=x[i++];
+		else
+			b[k++]=x[j++];
+	}
+	while(i<=mijl)
+		b[k++]=x[i++];
+	while(j<=dr)
+		b[k++]=x[j++];
+	for(i=st;i<=dr;i++)
+		x[i]=b[i];
+}
+
+int *div_et_impera(int *x,int *b,int st,int dr)
+{
+	int mijl;
+	if(st<dr)
+	{
+		mijl=(st+dr)/2;
+		div_et_impera(x,b,st,mijl);
+		div_et_impera(x,b,mijl+1,dr);
+		interclasare(x,b,st,mijl,dr);
+	}
+	return x;
+}
+
+int *quick_sort(int *x,int st,int dr)
+{
+	int i,j,pivot,a;
+	i=st;
+	j=dr;
+	pivot=x[(st+dr)/2];
+	do
+	{
+		while(x[i]<pivot)
+			i++;
+		while(x[j]>pivot)
+			j--;
+		if(i<=j)
+		{
+			a=x[i];
+			x[i]=x[j];
+			x[j]=a;
+			i++;
+			j--;
+		}
+	}
+	while(i<=j);
+	if(st<j)
+		quick_sort(x,st,j);
+	if(i<dr)
+		quick_sort(x,i,dr);
+	return x;
+}
+
+int *numarare(int *x,int *xx,int *b1,int n)
+{
+	int i,j,mici,aux,inc;
+	for(i=0;i<n;i++)
+	{
+		mici=0;
+		for(j=0;j<n;j++)
+			if(x[j]<x[i])
+				mici++;
+		b1[i]=mici;
+	}
+	for(i=0;i<n;i++)
+	{
+		inc=0;
+		for(j=i+1;j<n;j++)
+			if(b1[j]==b1[i])
+				b1[j]+=++inc;
+	}
+	for(i=0;i<n;i++)
+	{
+			xx[b1[i]]=x[i];
+	}
+	return xx;
+}
+void main()
+{
+	clrscr();
+	int *x,*x1,*b1,*b,n;
+	char optiune[20];
+
+	x=citire_alocare(n,optiune);
+	x1=alocare(n);
+	b1=alocare(n);
+	b=alocare(n);
+
+	if(strcmp(optiune,"bubblesort")==0)
+		afisare(bubble_sort,x,n);
+
+	else if(strcmp(optiune,"interschimbare")==0)
+		afisare(interschimbare,x,n);
+
+	else if(strcmp(optiune,"selectie")==0)
+		afisare(selectie,x,n);
+
+	else if(strcmp(optiune,"insertie")==0)
+		afisare(insertie,x,n);
+
+	else if(strcmp(optiune,"interclasare")==0)
+		afisare_speciala(div_et_impera,x,b,n);
+
+	else if(strcmp(optiune,"quicksort")==0)
+		afisare_quick_sort(quick_sort,x,n);
+
+	else if(strcmp(optiune,"numarare")==0)
+		afisare_speciala2(numarare,x,x1,b1,n);
+
+}
+
+/O problema cel putin ciudata cu arbori optimali.
+
+#include <stdio.h>
+#include <conio.h>
+#include <alloc.h>
+
+#define nmax 25
+
+typedef struct tip_nod
+	{
+		char cheie;
+		struct tip_nod *stg,*dr;
+
+	}TIP_NOD;
+
+char chei[nmax];  /* cheile c1,c2,...,cn */
+int p[nmax];/* frecventa de cautare a cheilor */
+int q[nmax]; /* frecventa de cautare intre chei */
+int r[nmax][nmax]; /* radacinile subarborilor optimali */
+
+void calcul(int nr,float *dr_med)
+{
+	/* determina structura arborelui */
+	int c[nmax][nmax];/* costul  subarborilor optimali */
+	int g[nmax][nmax]; /* greutatea arborilor */
+	int i,j,k,m,l;
+	int x,min;
+	/* calculul matricei greutate */
+	for(i=0;i<=nr;i++)
+	{
+
+		g[i][i]=q[i];
+		for(j=i+1;j<=nr;j++)
+			g[i][j]=g[i][j-1]+p[j]+q[j];
+
+	}
+	/* calculul matricei c */
+	for(i=0;i<=nr;i++)
+		c[i][i]=g[i][i];
+
+	for(i=0;i<=nr-1;i++)
+	{
+
+		j=i+1;
+		c[i][j]=c[i][i]+c[j][j]+g[i][j];
+		r[i][j]=j;
+
+	}
+	/*calcul c[i][l+i] */
+	for(l=2;l<=nr;l++)
+		for(i=0;i<=nr-l;i++)
+		{
+
+			min=32000;
+			for(k=i+1;k<=l+i;k++)
+			{
+
+				x=c[i][k-1]+c[k][l+i];
+				if(x<min)
+				{
+
+					min=x;
+					m=k;
+
+				}
+			}
+			c[i][l+i]=min+g[i][l+i];
+			r[i][l+i]=m;
+
+		}
+
+	printf("\nMATRICEA G\n");
+	for(i=0;i<=nr;i++)
+	{
+
+		for(j=i;j<=nr;j++)
+			printf("%d  ",g[i][j]);
+		printf("\n");
+
+	}
+
+	getch();
+
+	printf("\nMATRICEA C\n");
+	for(i=0;i<=nr;i++)
+	{
+
+		for(j=i;j<=nr;j++)
+			printf("%d  ",c[i][j]);
+				printf("\n");
+
+	}
+
+	getch();
+
+	printf("\nMATRICEA R\n");
+	for(i=0;i<=nr;i++)
+	{
+
+		for(j=i;j<=nr;j++)
+			printf("%d  ",r[i][j]);
+		printf("\n");
+
+	}
+
+	getch();
+	printf("c[0][nr]=%ld  g[0][nr]=%ld\n",c[0][nr],g[0][nr]);
+	getch();
+	*dr_med=c[0][nr]/(float)g[0][nr];
+
+}
+
+TIP_NOD* constr_arbore(int i,int j)
+{
+	/* construirea arborelui optimal */
+
+	int n;
+	TIP_NOD *p;
+	if (i==j)
+		p=0;
+	else
+	{
+
+		n=sizeof(TIP_NOD);
+		p=(TIP_NOD*)malloc(n);
+		p->stg=constr_arbore(i,r[i][j]-1);
+		p->cheie=chei[r[i][j]];
+		p->dr=constr_arbore(r[i][j],j);
+
+	}
+
+	return p;
+
+}
+
+void inordine(TIP_NOD *p,int nivel)
+{
+
+	 /* Afisare in inordine a arborelui */
+	 int i;
+	 if(p!=0)
+	 {
+
+		inordine(p->stg,nivel+1);
+		for(i=0;i<=nivel;i++)
+			printf("   ");
+		printf("%c\n",p->cheie);
+		inordine(p->dr,nivel+1);
+
+	 }
+
+}
+
+void main()
+{
+
+	TIP_NOD *radacina;
+	int i;
+	int n; /*n este numarul cheilor */
+	float drum_mediu;
+
+	printf("\nNumarul cheilor=");
+	scanf("%d",&n);
+
+	/*Citirea cheilor si a frecventelor de cautare a lor*/
+	for(i=1;i<=n;i++)
+	{
+
+		printf("Cheia[%d]=",i);
+		chei[i]=getche();
+		printf(" frecventa=");
+		scanf("%d",&p[i]);
+
+	}
+
+	/*Citirea frecventelor de cautare intre chei */
+	for(i=0;i<=n;i++)
+	{
+
+		printf("q[%d]=",i);
+		scanf("%d",&q[i]);
+
+	}
+
+	calcul(n,&drum_mediu);
+	printf("Drumul mediu=%6f\n",drum_mediu);
+
+	getch();
+
+	radacina=constr_arbore(0,n);
+	inordine(radacina,0);
+
+	getch();
+
+}
+
+
+/Sa se inmulteasca in mod optim n matrice
+
+#include <stdio.h>
+#include <conio.h>
+#include <alloc.h>
+#define  nmax 10
+
+typedef struct tip_nod
+	{
+		long ind1,ind2;
+		struct tip_nod *stg,*dr;
+	} TIP_NOD;
+
+void prod_matr(int n,long c[nmax][nmax],int d[nmax+1])
+{
+	int i,j,k,p,poz;
+	long min,val;
+
+	for(i=1;i<=n;i++)
+		c[i][i]=0;
+	for(p=1;p<=n-1;p++)
+		for(i=1;i<=n-p;i++)
+		{
+			j=i+p;
+			min=0x7fffffff;
+			for(k=i;k<=j-1;k++)
+			{
+				val=c[i][k]+c[k+1][j]+(long)d[i]*d[k+1]*d[j+1];
+				if(val<min)
+				{
+					min=val;
+					poz=k;
+				}
+			}
+			c[i][j]=min;
+			c[j][i]=poz;
+		}
+}
+
+TIP_NOD *constr_arbore(TIP_NOD *p,int i,int j,long c[nmax][nmax])
+{
+
+	p=(TIP_NOD *)malloc(sizeof(TIP_NOD));
+	p->ind1=i;
+	p->ind2=j;
+
+	if(i<j)
+	{
+		p->stg=constr_arbore(p->stg,i,c[j][i],c);
+		p->dr=constr_arbore(p->dr,c[j][i]+1,j,c);
+	}
+	else
+	{
+		p->stg=0;
+		p->dr=0;
+	}
+
+	return p;
+}
+
+void postordine(TIP_NOD *p,int nivel)
+{
+	int i;
+	if(p!=0)
+	{
+		postordine(p->stg,nivel+1);
+		postordine(p->dr,nivel+1);
+		for(i=0;i<=nivel;i++)
+			printf("  ");
+		printf("(%ld,%ld)\n",p->ind1,p->ind2);
+	}
+}
+
+void main()
+{
+
+	int i,j,n;
+	long c[nmax][nmax];
+	int d[nmax+1]; /* dimensiunile matricelor */
+
+	TIP_NOD *rad;
+	printf("\nIntroduceti nr.matricelor n=");
+	scanf("%d",&n);
+	printf("\nIntroduceti dimensiunile matricelor\n");
+	for(i=1;i<=n+1;i++)
+	{
+
+		printf("\nDimensiunea d[%d]=",i);
+		scanf("%d",&d[i]);
+
+	}
+
+	prod_matr(n,c,d);
+	/* Matricea c rezultata in urma calculelor */
+	printf("\nMATRICEA C\n");
+	for(i=1;i<=n;i++)
+	{
+
+		for(j=1;j<=n;j++)
+		printf("%6ld",c[i][j]);
+		printf("\n");
+
+	}
+
+	printf("\nNR.MINIM DE INMULTIRI = %ld",c[1][n]);
+	getch();
+	rad=0;
+	rad=constr_arbore(rad,1,n,c);
+	printf("\nARBORELE IN POSTORDINE\n");
+	postordine(rad,0);
+	getch();
+
+}
+
+//Sa se afle cel mai lung subsir crescator al unui sir dat de la tastatura.
+
+#include<iostream.h>
+#include<conio.h>
+
+#define n_max 30
+
+/*
+
+	l[i]=LUNGIMEA CELUI MAI LUNG SUBSIR CRESCATOR CARE INCEPE CU a[i]
+	poz[i]=POZITIA ELEMENTULUI CARE URMEAZA DUPA a[i] IN CEL MAI LUNG SUBSIR CRESCATOR
+		   CARE INCEPE CU a[i] ,DACA UN ASTFEL DE ELEMENT EXISTA, SAU -1 DACA UN ASTFEL
+		   DE ELEMENT NU EXISTA.
+
+*/
+
+
+int l[n_max],poz[n_max],a[n_max],n;
+
+void citire()
+{
+
+	int i;
+
+	cout<<"Dati numarul de elemente din sir:"<<endl;
+	cin>>n;
+
+	cout<<"Dati elementele din sir:"<<endl;
+	for(i=1;i<=n;i++)
+		cin>>a[i];
+
+
+}
+
+void subsir_dinamic()
+{
+
+	int i,j,max,poz_max;
+
+	l[n]=1;
+	poz[n]=-1;
+
+	for(i=n-1;i>0;i--)
+	{
+
+		l[i]=1;
+		poz[i]=-1;
+		for(j=i+1;j<=n;j++)
+			if(a[i]<=a[j] && l[i]<=1+l[j])
+			{
+
+				l[i]=l[j]+1;
+				poz[i]=j;
+
+			}
+	}
+
+	//afisarea solutiei
+	max=l[1];
+	poz_max=1;
+	for(i=2;i<=n;i++)
+		if(max<l[i])
+		{
+			max=l[i];
+			poz_max=i;
+		}
+	cout<<"Lungimea celui mai lung subsir crescator este:\n"<<max;
+	cout<<"\nCel mai lung subsir crescator este:\n";
+	for(i=poz_max;i!=-1;i=poz[i])
+		cout<<a[i]<<" ";
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	citire();
+
+	subsir_dinamic();
+
+	getch();
+
+}
+
+*
+
+	Problema comis voiajorului: Se da un graf neorientat G =(X,Y) in care toate nodurile sunt unite
+	intre ele printr-o muchie, careia i se asociaza un cost strict pozitiv. Se cere determinarea unui ciclu,
+	care sa inceapa dintr-un nod i, sa treaca exact o data prin toate nodurile si sa se intoarca in nodul initial.
+	Se cere ca ciclul gasit sa aiba un cost minim.
+
+*/
+
+#include <stdio.h>
+#include <conio.h>
+#define n_max 10
+
+void comis_voiajor(int n,int c[n_max][n_max],int i,int ciclu[n_max+1],int *cost)
+{
+	/*
+		n este nr.nodurilor;
+		c este matricea costurilor;
+		i este nodul de start;
+		cost este costul ciclului
+	*/
+
+	int p[n_max];
+	int k,v,j,vmin,costmin;
+
+	for(k=1;k<=n;k++)
+		p[k]=0;
+
+	*cost=0;
+
+	p[i]=1;
+	ciclu[1]=i;
+	v=i; /*nodul curent */
+
+	for(k=1;k<n;k++) /* se adauga pe rand n-1 muchii */
+	{
+
+		costmin=0x7fff;
+
+		//gasirea muchiei de cost minim care are nodul de origine v
+
+		for(j=1;j<=n;j++)
+			if((p[j]==0)&&(c[v][j]<costmin))
+			{
+				costmin=c[v][j];
+				vmin=j;
+			}
+
+		*cost=*cost+costmin;
+		ciclu[k+1]=vmin;
+		p[vmin]=1;
+		v=vmin;
+	}
+
+	ciclu[n+1]=i;
+	*cost=*cost+c[v][i];
+
+}
+
+void main()
+{
+
+	clrscr();
+
+	int i,j,n,cost_ciclu,ciclu[n_max],c[n_max][n_max];
+
+	printf("\nNr.nodurilor grafului = ");
+	scanf("%d",&n);
+
+	for(i=1;i<=n;i++)
+		for(j=1;j<=n;j++)
+			c[i][j]=0x7fff;
+
+	printf("\nIntroduceti costurile muchiilor:");
+	for(i=1;i<=n-1;i++)
+	{
+		while(1)
+		{
+
+			printf("Nodul adiacent lui %d =",i);
+			scanf("%d",&j);
+			if(j!=0)
+			{
+				printf("Costul muchiei (%d,%d)=",i,j);
+				scanf("%d",&c[i][j]);
+				c[j][i]=c[i][j];
+			}
+			else break;
+
+		 }
+	}
+
+	i=1;
+
+	comis_voiajor(n,c,i,ciclu,&cost_ciclu);
+
+	printf("\nCOSTUL CICLULUI =%d\n",cost_ciclu);
+	printf("\nCICLUL=");
+	for(i=1;i<=n+1;i++)
+		printf("%3d",ciclu[i]);
+
+	getch();
+
+}
+
+
+

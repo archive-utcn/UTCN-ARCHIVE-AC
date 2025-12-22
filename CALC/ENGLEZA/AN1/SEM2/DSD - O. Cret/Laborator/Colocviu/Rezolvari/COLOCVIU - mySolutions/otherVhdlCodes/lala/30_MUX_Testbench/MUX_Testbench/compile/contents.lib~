@@ -1,0 +1,5 @@
+20
+~E 1 "./src/mux.vhd" 4 mux
+~A 1 "./src/mux.vhd" 10 a
+~E 1 "./src/tb.vhd" 4 tb
+~A 1 "./src/tb.vhd" 7 ar

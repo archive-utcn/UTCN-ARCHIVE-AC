@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1301594177 source:c:\codeblocks\arbori_avl\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1301643223 source:c:\codeblocks\arbori_avl\main3.c
+	<stdio.h>
+	<stdlib.h>
+	"function.h"
+
+1301614193 c:\codeblocks\arbori_avl\function.h
+

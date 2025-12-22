@@ -1,0 +1,241 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.VITAL_TIMING.all;
+use IEEE.VITAL_PRIMITIVES.all;
+library PASIC;
+
+entity voice_t is
+Port (
+	addr : Out STD_LOGIC;
+	save : Out STD_LOGIC;
+	erase : Out STD_LOGIC;
+	rec : Out STD_LOGIC;
+	play : Out STD_LOGIC;
+	key_entered : In STD_LOGIC_VECTOR (3 downto 0);
+	rst : In STD_LOGIC;
+	clk : In STD_LOGIC
+);
+end voice_t;
+
+
+architecture ARCH_voice of voice_t is
+component P_AND6
+port(A,B,C,D,E,F : in std_logic; Z : out std_logic);
+end component;
+
+component P_MUX2
+port(A, B, C, D, S : in std_logic; Z : out std_logic);
+end component;
+
+component P_MUX3
+port(A, B, C, D, E, S, T : in std_logic; Z : out std_logic);
+end component;
+
+component P_BUF
+port(A : in std_logic; Z : out std_logic);
+end component;
+
+component P_FF
+port(D, C, S, R : in std_logic; Q : out std_logic);
+end component;
+
+component P_OUT
+port(A, B, E : in std_logic; Z : out std_logic);
+end component;
+
+signal VCC : std_logic := '1';
+signal GND : std_logic := '0';
+signal \IO49-IZI_\, \IO45-IZI_\, \IO43-IZI_\, \IO39-IZI_\, \Q20-QD_\, \Q20-OC_\, 
+   \Q20-MC_\, \Q20-NC_\, \Q20-FI_\, \Q20-AI_\, \P20-QD_\, \P20-OC_\, \P20-AI_\, 
+   \O20-OC_\, \O20-MC_\, \O20-NC_\, \O20-FI_\, \O20-AI_\, \Q19-QD_\, \Q19-OC_\, 
+   \Q19-MC_\, \Q19-NC_\, \Q19-FI_\, \Q19-AI_\, \P19-QD_\, \P19-MC_\, \P19-O1_\, 
+   \P19-NC_\, \P19-FI_\, \P19-AI_\, \O19-QD_\, \O19-MC_\, \O19-NC_\, \O19-FI_\, 
+   \O19-AI_\, \Q18-QD_\, \Q18-MC_\, \Q18-NC_\, \Q18-FI_\, \Q18-AI_\, \P18-QD_\, 
+   \P18-MC_\, \P18-O1_\, \P18-NC_\, \P18-AI_\, \O18-QD_\, \O18-MC_\, \O18-NC_\, 
+   \O18-FI_\, \O18-AI_\, \P17-QD_\, \P17-OC_\, \P17-AI_\, \O17-QD_\, \O17-OC_\, 
+   NET_LR8, NET_LR7, NET_LR6, NET_LR5, NET_LR4, NET_LR3, NET_LR2, NET_LR1, 
+   NET_LR0, clkz, rstz, \key_enteredzVH0(3)\, \key_enteredzVH0(2)\, 
+   \key_enteredzVH0(1)\, \key_enteredzVH0(0)\, N_15_i, N_18_i, N_27_i, N_16_i, 
+   N_61, N_60, N_59, N_54, N_51, N_49, N_48, N_47, N_45, N_44, N_41, N_40, N_39, 
+   N_38, N_37, N_36, N_35, N_34, N_33, N_32, N_31, N_30, N_19, un38, un31, un30, 
+   \current_stateVH1(2)\, \current_stateVH1(0)\, \current_stateVH1(4)\, 
+   \current_stateVH1(8)\, \current_stateVH1(9)\, \current_stateVH1(7)\, 
+   \current_stateVH1(1)\, \current_stateVH1(5)\, \current_stateVH1(6)\, 
+   \current_stateVH1(3)\ : std_logic;
+
+begin
+rstz_p_IO149QFRAG_IC : P_BUF port map ( A => rst, Z => rstz);
+key_entered_pQ1Q_IO49QFRAG_IZB : P_BUF port map ( A => \IO49-IZI_\,
+ Z => \key_enteredzVH0(1)\);
+key_entered_pQ1Q_IO49QFRAG_BZ : P_BUF port map ( A => key_entered(1),
+ Z => \IO49-IZI_\);
+current_state_pQ6Q_IO47QFRAG_BP : P_OUT port map ( A => VCC,
+ B => \current_stateVH1(6)\, E => VCC, Z => save);
+current_state_pQ7Q_IO46QFRAG_BP : P_OUT port map ( A => VCC,
+ B => \current_stateVH1(7)\, E => VCC, Z => play);
+key_entered_pQ0Q_IO45QFRAG_IZB : P_BUF port map ( A => \IO45-IZI_\,
+ Z => \key_enteredzVH0(0)\);
+key_entered_pQ0Q_IO45QFRAG_BZ : P_BUF port map ( A => key_entered(0),
+ Z => \IO45-IZI_\);
+current_state_pQ5Q_IO44QFRAG_BP : P_OUT port map ( A => VCC,
+ B => \current_stateVH1(5)\, E => VCC, Z => erase);
+key_entered_pQ2Q_IO43QFRAG_IZB : P_BUF port map ( A => \IO43-IZI_\,
+ Z => \key_enteredzVH0(2)\);
+key_entered_pQ2Q_IO43QFRAG_BZ : P_BUF port map ( A => key_entered(2),
+ Z => \IO43-IZI_\);
+current_state_pQ1Q_IO42QFRAG_BP : P_OUT port map ( A => VCC,
+ B => \current_stateVH1(1)\, E => VCC, Z => rec);
+current_state_pQ3Q_IO41QFRAG_BP : P_OUT port map ( A => VCC,
+ B => \current_stateVH1(3)\, E => VCC, Z => addr);
+key_entered_pQ3Q_IO39QFRAG_IZB : P_BUF port map ( A => \IO39-IZI_\,
+ Z => \key_enteredzVH0(3)\);
+key_entered_pQ3Q_IO39QFRAG_BZ : P_BUF port map ( A => key_entered(3),
+ Z => \IO39-IZI_\);
+clkz_p_IO34QFRAG_IC : P_BUF port map ( A => clk, Z => clkz);
+I_90_Q20QFRAG_LQ : P_FF port map ( D => \Q20-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(7)\);
+Q20QFRAG_LO : P_MUX3 port map ( A => GND, B => GND, C => GND, D => GND,
+ S => \Q20-MC_\, T => \Q20-OC_\, E => VCC, Z => \Q20-QD_\);
+Q20QFRAG_LOS : P_MUX2 port map ( A => VCC, B => GND, C => \Q20-AI_\, D => GND,
+ S => VCC, Z => \Q20-OC_\);
+Q20QFRAG_LMS : P_MUX2 port map ( A => VCC, B => GND, C => \Q20-FI_\, D => GND,
+ S => VCC, Z => \Q20-MC_\);
+Q20QFRAG_LNS : P_MUX2 port map ( A => VCC, B => GND, C => \Q20-FI_\, D => GND,
+ S => VCC, Z => \Q20-NC_\);
+Q20QFRAG_FB : P_BUF port map ( A => \Q20-FI_\, Z => NET_LR0);
+Q20QFRAG_LF : P_AND6 port map ( A => VCC, B => \current_stateVH1(7)\, C => VCC,
+ D => \current_stateVH1(6)\, E => VCC, F => \current_stateVH1(5)\,
+ Z => \Q20-FI_\);
+Q20QFRAG_LA : P_AND6 port map ( A => N_48, B => GND,
+ C => \current_stateVH1(8)\, D => GND, E => VCC, F => GND, Z => \Q20-AI_\);
+I_78_P20QFRAG_LQ : P_FF port map ( D => \P20-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(5)\);
+P20QFRAG_LO : P_MUX3 port map ( A => GND, B => GND, C => GND, D => GND,
+ S => VCC, T => \P20-OC_\, E => VCC, Z => \P20-QD_\);
+P20QFRAG_LOS : P_MUX2 port map ( A => VCC, B => GND, C => \P20-AI_\, D => GND,
+ S => VCC, Z => \P20-OC_\);
+P20QFRAG_LA : P_AND6 port map ( A => \key_enteredzVH0(1)\, B => GND,
+ C => \current_stateVH1(8)\, D => GND, E => N_16_i, F => GND, Z => \P20-AI_\);
+O20QFRAG_LOS : P_MUX2 port map ( A => VCC, B => GND, C => \O20-AI_\, D => GND,
+ S => VCC, Z => \O20-OC_\);
+O20QFRAG_LMS : P_MUX2 port map ( A => VCC, B => GND, C => \O20-FI_\, D => GND,
+ S => VCC, Z => \O20-MC_\);
+O20QFRAG_LNS : P_MUX2 port map ( A => VCC, B => GND, C => \O20-FI_\, D => GND,
+ S => VCC, Z => \O20-NC_\);
+O20QFRAG_FB : P_BUF port map ( A => \O20-FI_\, Z => N_16_i);
+O20QFRAG_LF : P_AND6 port map ( A => N_15_i, B => \key_enteredzVH0(3)\,
+ C => VCC, D => GND, E => VCC, F => GND, Z => \O20-FI_\);
+O20QFRAG_AB : P_BUF port map ( A => \O20-AI_\, Z => N_15_i);
+O20QFRAG_LA : P_AND6 port map ( A => \key_enteredzVH0(0)\,
+ B => \key_enteredzVH0(2)\, C => VCC, D => GND, E => VCC, F => GND,
+ Z => \O20-AI_\);
+I_91_Q19QFRAG_LQ : P_FF port map ( D => \Q19-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(6)\);
+Q19QFRAG_LO : P_MUX3 port map ( A => GND, B => GND, C => GND, D => GND,
+ S => \Q19-MC_\, T => \Q19-OC_\, E => VCC, Z => \Q19-QD_\);
+Q19QFRAG_LOS : P_MUX2 port map ( A => VCC, B => GND, C => \Q19-AI_\, D => GND,
+ S => VCC, Z => \Q19-OC_\);
+Q19QFRAG_LMS : P_MUX2 port map ( A => VCC, B => GND, C => \Q19-FI_\, D => GND,
+ S => VCC, Z => \Q19-MC_\);
+Q19QFRAG_LNS : P_MUX2 port map ( A => VCC, B => GND, C => \Q19-FI_\, D => GND,
+ S => VCC, Z => \Q19-NC_\);
+Q19QFRAG_FB : P_BUF port map ( A => \Q19-FI_\, Z => N_48);
+Q19QFRAG_LF : P_AND6 port map ( A => N_16_i, B => \key_enteredzVH0(1)\,
+ C => VCC, D => GND, E => VCC, F => GND, Z => \Q19-FI_\);
+Q19QFRAG_LA : P_AND6 port map ( A => N_47, B => GND,
+ C => \current_stateVH1(8)\, D => GND, E => VCC, F => GND, Z => \Q19-AI_\);
+I_89_P19QFRAG_LQ : P_FF port map ( D => \P19-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(8)\);
+P19QFRAG_LO : P_MUX3 port map ( A => VCC, B => GND, C => N_19, D => N_45,
+ S => \P19-MC_\, T => GND, E => \P19-O1_\, Z => \P19-QD_\);
+P19QFRAG_LMS : P_MUX2 port map ( A => NET_LR0, B => GND, C => \P19-FI_\,
+ D => GND, S => GND, Z => \P19-MC_\);
+P19QFRAG_NB : P_BUF port map ( A => \P19-O1_\, Z => N_45);
+P19QFRAG_LN : P_MUX2 port map ( A => N_44, B => \key_enteredzVH0(3)\,
+ C => N_44, D => GND, S => \P19-NC_\, Z => \P19-O1_\);
+P19QFRAG_LNS : P_MUX2 port map ( A => \key_enteredzVH0(0)\, B => GND,
+ C => \P19-FI_\, D => GND, S => GND, Z => \P19-NC_\);
+P19QFRAG_FB : P_BUF port map ( A => \P19-FI_\, Z => N_44);
+P19QFRAG_LF : P_AND6 port map ( A => \key_enteredzVH0(1)\,
+ B => \key_enteredzVH0(2)\, C => VCC, D => GND, E => VCC, F => GND,
+ Z => \P19-FI_\);
+P19QFRAG_AB : P_BUF port map ( A => \P19-AI_\, Z => N_47);
+P19QFRAG_LA : P_AND6 port map ( A => N_44, B => \key_enteredzVH0(3)\, C => VCC,
+ D => \key_enteredzVH0(0)\, E => VCC, F => GND, Z => \P19-AI_\);
+I_80_O19QFRAG_LQ : P_FF port map ( D => \O19-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(3)\);
+O19QFRAG_LO : P_MUX3 port map ( A => \current_stateVH1(4)\, B => N_18_i,
+ C => VCC, D => N_18_i, S => \O19-MC_\, T => GND, E => VCC, Z => \O19-QD_\);
+O19QFRAG_LMS : P_MUX2 port map ( A => \current_stateVH1(3)\, B => GND,
+ C => \O19-FI_\, D => GND, S => GND, Z => \O19-MC_\);
+O19QFRAG_LNS : P_MUX2 port map ( A => VCC, B => GND, C => \O19-FI_\, D => GND,
+ S => VCC, Z => \O19-NC_\);
+O19QFRAG_FB : P_BUF port map ( A => \O19-FI_\, Z => N_18_i);
+O19QFRAG_LF : P_AND6 port map ( A => \key_enteredzVH0(3)\, B => GND,
+ C => N_15_i, D => GND, E => \key_enteredzVH0(1)\, F => GND, Z => \O19-FI_\);
+O19QFRAG_AB : P_BUF port map ( A => \O19-AI_\, Z => N_27_i);
+O19QFRAG_LA : P_AND6 port map ( A => \key_enteredzVH0(0)\,
+ B => \key_enteredzVH0(3)\, C => \key_enteredzVH0(2)\,
+ D => \key_enteredzVH0(1)\, E => VCC, F => GND, Z => \O19-AI_\);
+I_88_Q18QFRAG_LQ : P_FF port map ( D => \Q18-QD_\, C => clkz, S => rstz,
+ R => GND, Q => \current_stateVH1(9)\);
+Q18QFRAG_LO : P_MUX3 port map ( A => NET_LR1, B => NET_LR2, C => NET_LR1,
+ D => GND, S => \Q18-MC_\, T => GND, E => VCC, Z => \Q18-QD_\);
+Q18QFRAG_LMS : P_MUX2 port map ( A => \current_stateVH1(9)\, B => GND,
+ C => \Q18-FI_\, D => GND, S => GND, Z => \Q18-MC_\);
+Q18QFRAG_LNS : P_MUX2 port map ( A => VCC, B => GND, C => \Q18-FI_\, D => GND,
+ S => VCC, Z => \Q18-NC_\);
+Q18QFRAG_FB : P_BUF port map ( A => \Q18-FI_\, Z => N_39);
+Q18QFRAG_LF : P_AND6 port map ( A => VCC, B => N_18_i, C => VCC,
+ D => \current_stateVH1(9)\, E => VCC, F => GND, Z => \Q18-FI_\);
+Q18QFRAG_AB : P_BUF port map ( A => \Q18-AI_\, Z => NET_LR1);
+Q18QFRAG_LA : P_AND6 port map ( A => VCC, B => N_48, C => VCC, D => N_47,
+ E => VCC, F => N_39, Z => \Q18-AI_\);
+I_83_P18QFRAG_LQ : P_FF port map ( D => \P18-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(0)\);
+P18QFRAG_LO : P_MUX3 port map ( A => \current_stateVH1(0)\, B => N_18_i,
+ C => VCC, D => GND, S => \P18-MC_\, T => GND, E => \P18-O1_\, Z => \P18-QD_\);
+P18QFRAG_LMS : P_MUX2 port map ( A => \current_stateVH1(1)\, B => GND,
+ C => VCC, D => GND, S => GND, Z => \P18-MC_\);
+P18QFRAG_NB : P_BUF port map ( A => \P18-O1_\, Z => N_19);
+P18QFRAG_LN : P_MUX2 port map ( A => \current_stateVH1(8)\, B => GND,
+ C => \current_stateVH1(9)\, D => GND, S => \P18-NC_\, Z => \P18-O1_\);
+P18QFRAG_LNS : P_MUX2 port map ( A => N_16_i, B => GND, C => VCC, D => GND,
+ S => GND, Z => \P18-NC_\);
+P18QFRAG_AB : P_BUF port map ( A => \P18-AI_\, Z => NET_LR2);
+P18QFRAG_LA : P_AND6 port map ( A => VCC, B => \current_stateVH1(0)\, C => VCC,
+ D => \current_stateVH1(8)\, E => VCC, F => \current_stateVH1(4)\,
+ Z => \P18-AI_\);
+I_81_O18QFRAG_LQ : P_FF port map ( D => \O18-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(2)\);
+O18QFRAG_LO : P_MUX3 port map ( A => \current_stateVH1(2)\, B => N_27_i,
+ C => VCC, D => GND, S => \O18-MC_\, T => GND, E => VCC, Z => \O18-QD_\);
+O18QFRAG_LMS : P_MUX2 port map ( A => VCC, B => GND, C => \O18-FI_\, D => GND,
+ S => VCC, Z => \O18-MC_\);
+O18QFRAG_LNS : P_MUX2 port map ( A => VCC, B => GND, C => \O18-FI_\, D => GND,
+ S => VCC, Z => \O18-NC_\);
+O18QFRAG_LF : P_AND6 port map ( A => \current_stateVH1(3)\, B => GND,
+ C => N_18_i, D => GND, E => VCC, F => GND, Z => \O18-FI_\);
+O18QFRAG_AB : P_BUF port map ( A => \O18-AI_\, Z => NET_LR6);
+O18QFRAG_LA : P_AND6 port map ( A => N_27_i, B => GND,
+ C => \current_stateVH1(2)\, D => GND, E => VCC, F => GND, Z => \O18-AI_\);
+I_79_P17QFRAG_LQ : P_FF port map ( D => \P17-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(4)\);
+P17QFRAG_LO : P_MUX3 port map ( A => GND, B => GND, C => GND, D => GND,
+ S => VCC, T => \P17-OC_\, E => VCC, Z => \P17-QD_\);
+P17QFRAG_LOS : P_MUX2 port map ( A => VCC, B => GND, C => \P17-AI_\, D => GND,
+ S => VCC, Z => \P17-OC_\);
+P17QFRAG_LA : P_AND6 port map ( A => N_47, B => GND,
+ C => \current_stateVH1(9)\, D => GND, E => VCC, F => GND, Z => \P17-AI_\);
+I_82_O17QFRAG_LQ : P_FF port map ( D => \O17-QD_\, C => clkz, S => GND,
+ R => rstz, Q => \current_stateVH1(1)\);
+O17QFRAG_LO : P_MUX3 port map ( A => GND, B => GND, C => GND, D => GND,
+ S => VCC, T => \O17-OC_\, E => VCC, Z => \O17-QD_\);
+O17QFRAG_LOS : P_MUX2 port map ( A => NET_LR6, B => GND, C => VCC, D => GND,
+ S => GND, Z => \O17-OC_\);
+end ARCH_voice;
+
+configuration CONFIG_voice of voice_t is
+for ARCH_voice
+end for;
+end CONFIG_voice;

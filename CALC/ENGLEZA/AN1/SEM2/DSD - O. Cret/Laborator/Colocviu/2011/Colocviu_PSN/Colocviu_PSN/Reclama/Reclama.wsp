@@ -1,0 +1,31 @@
+[General]
+CurrentVersion=103
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Reclama=1
+RAM_16X16=0
+Detector_secventa=0
+MS_Scazator_1bit=0
+FIFO_4X8=0
+MS_Demux_1la8=0
+jk_sincron=0
+Secventa_pseudoaleatoare=0
+MS_Buffer_ThreeState=0
+Numarator_binar_8bit_2biti=0
+MS_Bist_JK=0
+MS_Registru_deplasare=0
+Registru_universal=0
+Numarator_zecimal_sinc=0
+Built-in symbols=0
+Barrel_Shifter=0
+Sumator_Scazator_4bit=0
+BCDtoDecimal=0
+MUX_16_1=0
+BCDtoExcess3=0
+Comparator_2bit=0
+ROM_16X16=0
+MS_Numarator_2bit=0
+Numarator_binar_sincron=0
+[CACHEDOC|Aldec.Project.Generic.7|c:\My_Designs\Colocviu_PSN\Reclama\Reclama.adf|]
+Path=
+[CACHEDOC|Aldec.Project.Generic.7|D:\CTI_2\DSD\DSD_de_laIoana\DSD\COLOCVIU PSN\Colocviu_PSN\Colocviu_PSN\Reclama\Reclama.adf|]
+Path=

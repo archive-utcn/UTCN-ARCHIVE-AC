@@ -1,0 +1,16 @@
+elbread.dll ver. 1.0.5.365 Sun May 21 16:37:40 2017
+
+
+-----------------------------------------------------------------
+Entity                   | Architecture | Library              
+-----------------------------------------------------------------
+ms_sumator_complet_1bit  | arh          | MS_SUMATOR_COMPLET_1BIT
+sumator_complet_1bit     | arh          | ms_sumator_complet_1bit
+-----------------------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

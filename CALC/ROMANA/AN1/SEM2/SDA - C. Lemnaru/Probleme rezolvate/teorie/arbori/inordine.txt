@@ -1,0 +1,11 @@
+void inordine(tip_nod *p,int nivel)
+{
+int i;
+if(p!=0)
+{
+inordine(p->stg,nivel+1);
+for(i=0;i<=nivel;i++)printf(" ");
+printf("&c",p->ch);
+inordine(p->dr,nivel+1);
+}
+}

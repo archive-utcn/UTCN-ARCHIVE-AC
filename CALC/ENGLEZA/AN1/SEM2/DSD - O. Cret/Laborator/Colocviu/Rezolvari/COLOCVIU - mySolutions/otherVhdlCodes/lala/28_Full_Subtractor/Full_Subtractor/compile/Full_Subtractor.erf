@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\28_Full_Subtractor\Full_Subtractor\src\tb.vhd" 
+MESSAGE "Compile Entity "tb"" 
+MESSAGE "Compile Architecture "ar" of Entity "tb"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

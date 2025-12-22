@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\NU_SI_SAU_SI_NU_SAU_NU_COMPORTAMENTAL\projlib.cfg"  -d "d:\designshdl\CLV_2008\NU_SI_SAU_SI_NU_SAU_NU_COMPORTAMENTAL\compile\"  -work NU_SI_SAU_SI_NU_SAU_NU_COMPORTAMENTAL -dbg -e 100 "d:\designshdl\CLV_2008\NU_SI_SAU_SI_NU_SAU_NU_COMPORTAMENTAL\src\NU_SI_SAU_SI_NU_SAU_NU_COMPORTAMENTAL.vhd" 

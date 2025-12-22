@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1305233644 source:c:\users\anca\desktop\suma\main.c
+	<stdio.h>
+	<stdlib.h>
+

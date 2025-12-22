@@ -1,0 +1,4 @@
+MESSAGE "File: D:\designshdl\CRET\reg_uni\src\reg_uni.vhd" 
+MESSAGE "Compile Entity "reg"" 
+MESSAGE "Compile Architecture "arh" of Entity "reg"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

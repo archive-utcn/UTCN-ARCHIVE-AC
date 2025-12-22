@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+fifo_4x4=.\FIFO_4x4\FIFO_4x4.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+fifo_4x4=1

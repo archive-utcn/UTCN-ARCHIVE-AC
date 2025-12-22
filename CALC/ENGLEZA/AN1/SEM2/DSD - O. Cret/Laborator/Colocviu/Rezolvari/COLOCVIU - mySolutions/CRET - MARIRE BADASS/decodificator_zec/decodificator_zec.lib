@@ -1,0 +1,13 @@
+timestamp=1498478419491
+
+[~A]
+./src/decodificator_zec.vhd~arhdec_zec=0*0*562
+./src/decodificator_zec.vhd~dec_zec=0*640*882
+ModifyID=15
+Version=73
+
+[~MFT]
+0=0|0decodificator_zec.mgf|882|0
+
+[~U]
+

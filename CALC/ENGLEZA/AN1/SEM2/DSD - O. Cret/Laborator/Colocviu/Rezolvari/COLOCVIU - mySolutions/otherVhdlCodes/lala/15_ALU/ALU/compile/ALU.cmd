@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\15_ALU\library.cfg"  -j "c:\My_Designs\15_ALU\ALU\projlib.cfg"  -d "c:\My_Designs\15_ALU\ALU\compile\"  -work ALU -dbg -e 100 -o "c:\My_Designs\15_ALU\ALU\src\alu.vhd" 

@@ -1,0 +1,19 @@
+tip_nod *inserare_rec(tip_nod *rad,int key)
+{
+tip_nod *p;
+ind n;
+if(rad==0)
+{//alocare spatiu
+p->cheie=key;
+p->stg=0;p->dr=0;
+return p;
+}
+else if(key<rad->cheie)
+{rad->stg=inserare_rec(rad->stg,key);
+else if(key>rad->cheie)
+rad->dr=inserare_rec(rad->dr,key);
+else
+{//cheie dubla=>mesaj
+}
+return rad;
+}

@@ -1,0 +1,11 @@
+//antet
+{
+tip_nod *p;
+if (prim==0) printf("lista vida");
+p=ultim;
+ultim=ultim->prec;
+if (ultim==0)
+prim=0;
+else ultim->urm=0;
+free(&p);
+}

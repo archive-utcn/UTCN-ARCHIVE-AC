@@ -1,0 +1,33 @@
+timestamp=1495288069510
+
+[demux]
+A/comportamental=21|./src/dmux.vhd|28|1*0
+B/comportamental=3*0
+H/comportamental=0*3728
+R=./src/dmux.vhd|8
+V=0*5156
+
+[dmux]
+A/a=A/A 21|./src/dmux.vhd|12|1*1841
+B/a=3*1478
+H/a=0*7595
+R=./src/dmux.vhd|5
+V=0*8945
+
+[~A]
+./src/dmux.vhd~Admux=0*7672*7928
+./src/dmux.vhd~DEMUX=0*3334*3668
+./src/dmux.vhd~comportamentalDEMUX=0*3831*4116
+./src/dmux.vhd~dmux=0*7200*7536
+ModifyID=20
+Version=73
+
+[~MFT]
+0=25|0Generic_DMUX.mgf|8945|3334
+1=1|1Generic_DMUX.mgf|1841|0
+3=1|3Generic_DMUX.mgf|1478|0
+
+[~U]
+demux=DEMUX 11|0*4190|0*4412
+dmux=11|0*7988|0*8209
+

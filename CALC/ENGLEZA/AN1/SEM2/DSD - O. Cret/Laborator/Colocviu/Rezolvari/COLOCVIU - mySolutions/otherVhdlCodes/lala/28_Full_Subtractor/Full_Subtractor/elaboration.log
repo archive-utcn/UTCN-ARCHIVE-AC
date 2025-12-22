@@ -1,0 +1,16 @@
+elbread.dll ver. 1.0.5.365 Mon May 22 23:20:49 2017
+
+
+-------------------------------------------------
+Entity           | Architecture | Library      
+-------------------------------------------------
+tb               | ar           | Full_Subtractor
+full_subtractor  | a            | full_subtractor
+-------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

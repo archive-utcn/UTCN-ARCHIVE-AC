@@ -1,0 +1,31 @@
+ENTITY demo IS
+PORT (  clk, in1, reset:   IN std_logic;
+out1:   OUT std_logic);
+END demo;
+ARCHITECTURE moore OF demo IS
+TYPE  state_type IS (s0,s1,s2,s3);  -- state declaration
+SIGNAL state: state_type;
+BEGIN
+demo_process: process(clk, reset)  -- clocked process
+
+BEGIN
+IF reset=‘1’ THEN
+state<=s0;
+ELSIF clk’EVENT AND clk=‘1’ THEN
+CASE state IS
+WHEN s0=> IF in1=‘1’ THEN
+state<=s1;
+END IF;
+WHEN s1=> …… (fill the rest of the process yourself)
+END PROCESS;
+
+output_p : PROCESS (state)   -- combinational process
+BEGIN
+CASE state IS
+WHEN s0=> out1<=“0000”;
+WHEN s1=> out1<=“1001”;
+WHEN s2=> out1<=“1111”;
+WHEN s3=> out1<=“1100”;
+END CASE;
+END PROCESS;
+END moore;

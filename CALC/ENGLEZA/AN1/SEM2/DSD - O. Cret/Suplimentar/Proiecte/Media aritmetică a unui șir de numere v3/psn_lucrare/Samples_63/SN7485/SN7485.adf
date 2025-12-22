@@ -1,0 +1,96 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+modified=76
+Current Config=compile
+
+[Configurations]
+compile=SN7485
+
+[Library]
+SN7485=.\SN7485.LIB
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FAMILY=
+SYNTH_TOOL=<none>
+FLOWTOOLS=ONLY_IMPL
+IMPL_TOOL=<none>
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+UseCeloxica=0
+REFRESH_FLOW=1
+
+[$LibMap$]
+Active_lib=XC4000E
+xilinxun=XC4000E
+SN7485=.
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[SYNTHESIS]
+FAMILY=
+
+[IMPLEMENTATION]
+FAMILY=
+
+[ORDER]
+autorefresh=0
+macro_path=
+macro_name=
+modified=1
+Synchronize=1
+
+[Groups]
+external=1
+C-debug=1
+
+[Files]
+/Gates.vhd=-1
+/Fub1.bde=-1
+/Fub2.bde=-1
+/Fub3.bde=-1
+/Fub4.bde=-1
+/Fub5.bde=-1
+/Fub0.bde=-1
+/SN7485_TOP.bde=-1
+/SN7485_TOP_TB.vhd=-1
+/runme.do=-1
+/readme.txt=-1
+external/Foreign1.dlm=-1
+external/Foreign1.dll=-1
+external/stim.txt=-1
+external/Foreign1.cpp=-1
+C-debug/Initialize_c_code_debug.do=-1
+C-debug/Gdb_command_usage.do=-1
+
+[Files.Data]
+.\src\Gates.vhd=VHDL Source Code
+.\src\Fub1.bde=Block Diagram
+.\src\Fub2.bde=Block Diagram
+.\src\Fub3.bde=Block Diagram
+.\src\Fub4.bde=Block Diagram
+.\src\Fub5.bde=Block Diagram
+.\src\Fub0.bde=Block Diagram
+.\src\SN7485_TOP.bde=Block Diagram
+.\src\SN7485_TOP_TB.vhd=VHDL Test Bench
+.\src\runme.do=Macro
+.\src\readme.txt=Text File
+.\src\external\Foreign1.dlm=C/C++ Configuration
+.\src\external\Foreign1.dll=Dll File
+.\src\external\stim.txt=Text File
+.\src\external\Foreign1.cpp=C++ Source Code
+.\src\C-debug\Initialize_c_code_debug.do=Macro
+.\src\C-debug\Gdb_command_usage.do=Macro
+

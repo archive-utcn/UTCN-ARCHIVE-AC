@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2011\library.cfg"  -j "D:\designshdl\CLV_2011\ROM_16x16\projlib.cfg"  -d "D:\designshdl\CLV_2011\ROM_16x16\compile\"  -work ROM_16x16 -dbg -e 100 -o "D:\designshdl\CLV_2011\ROM_16x16\src\ROM_16x16.vhd" 

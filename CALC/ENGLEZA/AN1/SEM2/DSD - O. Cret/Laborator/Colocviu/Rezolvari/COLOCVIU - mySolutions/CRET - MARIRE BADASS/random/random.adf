@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=random
+
+[Library]
+random=.\random.lib
+
+[$LibMap$]
+random=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\random\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\random\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\random\
+Extension5=dll
+
+[Files]
+/random.vhd=-1
+
+[Files.Data]
+.\src\random.vhd=VHDL Source Code
+

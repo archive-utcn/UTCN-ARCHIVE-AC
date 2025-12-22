@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\22_Modulo_n_Counter\library.cfg"  -j "c:\My_Designs\22_Modulo_n_Counter\Modulo_n_Counter\projlib.cfg"  -d "c:\My_Designs\22_Modulo_n_Counter\Modulo_n_Counter\compile\"  -work Modulo_n_Counter -dbg -e 100 "c:\My_Designs\22_Modulo_n_Counter\Modulo_n_Counter\src\counter.vhd" 

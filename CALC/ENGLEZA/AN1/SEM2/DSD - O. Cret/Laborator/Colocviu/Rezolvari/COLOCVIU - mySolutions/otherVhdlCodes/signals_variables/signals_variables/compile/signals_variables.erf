@@ -1,0 +1,7 @@
+MESSAGE "File: d:\designshdl\signals_variables\signals_variables\src\signals_varialbes.vhd" 
+MESSAGE "Compile Entity "E1"" 
+MESSAGE "Compile Architecture "ARH1" of Entity "E1"" 
+MESSAGE "Compile Architecture "ARH2" of Entity "E1"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Entity  =>   E1" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

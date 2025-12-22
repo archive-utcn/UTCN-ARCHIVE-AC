@@ -1,0 +1,78 @@
+[e_and2]
+A/a_and2=21|./src/Gates.vhd|42|
+S/e_and2=40|0|2*0
+
+[e_and3]
+A/a_and3=21|./src/Gates.vhd|62|
+S/e_and3=40|0|2*1841
+
+[e_and4]
+A/a_and4=21|./src/Gates.vhd|82|
+S/e_and4=40|0|2*4149
+
+[e_and5]
+A/a_and5=21|./src/Gates.vhd|102|
+S/e_and5=40|0|2*6927
+
+[e_nor2]
+A/a_nor2=21|./src/Gates.vhd|223|
+S/e_nor2=40|0|2*10178
+
+[e_nor3]
+A/a_nor3=21|./src/Gates.vhd|243|
+S/e_nor3=40|0|2*12019
+
+[e_not1]
+A/a_not1=21|./src/Gates.vhd|22|
+S/e_not1=40|0|2*14367
+
+[e_or5]
+A/a_or5=21|./src/Gates.vhd|182|
+S/e_or5=40|0|2*15739
+
+[fub0]
+A/fub0=A/Fub0 24|.\src\Fub0.bde|10000|
+
+[fub1]
+A/fub1=A/Fub1 24|.\src\Fub1.bde|10000|
+
+[fub2]
+A/fub2=A/Fub2 24|.\src\Fub2.bde|10000|
+
+[fub3]
+A/fub3=A/Fub3 24|.\src\Fub3.bde|10000|
+
+[fub4]
+A/fub4=A/Fub4 24|.\src\Fub4.bde|10000|
+
+[fub5]
+A/fub5=A/Fub5 24|.\src\Fub5.bde|10000|
+
+[sn7485_top]
+A/sn7485_top=A/SN7485_TOP 24|.\src\SN7485_TOP.bde|10000|
+
+[~A]
+ModifyID=363
+Version=73
+
+[~MFT]
+0=0|0SN7485.mgf|2988|1
+2=0|2SN7485.mgf|15739|1
+
+[~U]
+e_and2=11|0*0||3
+e_and3=11|0*153||3
+e_and4=11|0*326||3
+e_and5=11|0*519||3
+e_nor2=11|0*732||3
+e_nor3=11|0*885||3
+e_not1=11|0*1058||3
+e_or5=11|0*1190||3
+fub0=Fub0 11|0*1400|
+fub1=Fub1 11|0*1667|
+fub2=Fub2 11|0*1973|
+fub3=Fub3 11|0*2217|
+fub4=Fub4 11|0*2437|
+fub5=Fub5 11|0*2633|
+sn7485_top=SN7485_TOP 11|0*2988|
+

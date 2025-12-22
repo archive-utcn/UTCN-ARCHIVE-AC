@@ -1,0 +1,71 @@
+--Arbori:-A.binar e arborele in care oricare nod are cel mult 2 descendenti:fiul stang si drept.
+-inordine(SRD);postordine(SDR);preordine(RSD);
+--Arborii binari de cãutare sunt des folosiþi pentru memorarea ºi regãsirea rapidã a unor informaþii, pe baza unei chei. Fiecare nod al arborelui trebuie sã conþinã o cheie distinctã.
+--arbore optimal, un arbore binar de cãutare care pentru anumite valori pi, qi date realizeazã un cost minim.
+
+
+Grafuri:
+Graful orientat sau digraful G =(V, E) este perechea formatã din mulþimea V de vârfuri ºi mulþimea E ? V ?V de arce. Un arc este o pereche ordonatã de vârfuri (v, w), unde v este baza arcului, iar w este vârful arcului. In alþi termeni se spune cã w este adiacent lui v.
+O cale este o succesiune de vârfuri v[1],v[2],…,v[k], astfel cã existã arcele (v[1],v[2]), (v[2],v[3]),…,(v[k-1],v[k]) în mulþimea arcelor E. Lungimea cãii este numãrul de arce din cale. Prin convenþie, calea de la un nod la el însuºi are lungimea 0.
+O cale este simplã, dacã toate vârfurile, cu excepþia primului ºi ultimului sunt distincte între ele.
+Un ciclu este o cale de la un vârf la el însuºi.
+Un graf orientat etichetat este un graf  orientat în care fiecare arc ºi /sau vârf are o etichetã asociatã, care poate fi un nume, un cost sau o valoare de un tip oarecare.
+Un graf orientat este tare conex, daca oricare ar fi vârfurile v ºi w existã o cale de la v la w ºi una de la w la v.
+Un graf G’ =(V’, E’) este subgraf al lui G daca V’? V ºi E’? E. Se spune cã subgraful indus de V’? V este G’ =(V’, E ?(V’?V’)).
+Un graf neorientat sau prescurtat graf G =(N, R) este perechea formatã din mulþimea N de noduri ºi mulþimea R de muchii. O muchie este o pereche neordonatã (v, w)=(w, v) de noduri.
+
+Tabele de dispersie:
+--Tabelul este o colecþie de elemente de acelaºi tip, identificabile prin chei. Elementele sale se mai numesc înregistrãri.
+-- Funcþia de dispersie este funcþia care transformã o cheie într-un numãr natural numit cod de dispersie: f: K -> H, unde K este mulþimea cheilor, iar H este o mulþime de numere naturale.
+--.Douã chei pentru care f(k1)=f(k2) se spune cã intrã în coliziune, iar înregistrãrile respective se numesc sinonime.
+--funcþia f de calcul a dispersiei este urmãtoarea:
+#define M…
+int f(char *key)
+{
+  int i,suma;
+  suma=0;
+  for(i=0;i<length(key);i++)
+	suma=suma+*(key+i);
+  return suma%M;
+}
+Greedy
+Dintr-o mulþime A de n elemente se cere determinarea unei submulþimi B, se menþioneazã faptul cã o datã ce un element a fost ales el rãmâne în soluþia finalã, iar dacã un element a fost exclus, el nu va mai putea fi reconsiderat pentru includere în soluþie.
+
+Divide et impera
+Metoda “Divide et Impera” constã în împãrþirea repetatã a unei probleme în douã sau mai multe probleme de acelaºi tip ºi apoi combinarea subproblemelor rezolvate, în final obþinându-se soluþia problemei iniþiale.
+
+Sortarea prin numãrare
+Metoda sortãrii prin numãrare constã în gãsirea pentru fiecare  element a[i], a numãrului de elemente din vector, mai mici ca el. Numerele obþinute sunt memorate într-un vector c; elementele vectorului de sortat a, sunt iniþial atribuite vectorului b. Pe baza vectorului c, elementele lui b vor fi aranjate în vectorul a.
+
+Sortare prin inserare
+Inserarea elementului aj în aceastã secvenþã constã în compararea lui aj cu aj-1, aj-2 ... pânã când se ajunge la ai < aj; se insereazã aj dupã ai, cu menþiunea cã  în prealabil elementele aj-1, aj-2, ..., ai+1 au fost deplasate spre dreapta cu o poziþie. Metoda care procedeazã întocmai se numeºte inserare directã.
+
+
+--h-sortare, sortarea prin inserare directã a urmãtoarelor secvenþe:
+a0, ah, a2h, ....
+a1, a1+h, a1+2h, ....
+ah, a2h, a3h, .... --h este numit increment.
+Metoda shell constã în alegerea unui numãr de k incremenþi
+h1 > h2 > h3 > ... > hk = 1
+ºi de a face o h1 – sortare, urmatã de o h2 – sortare º. a. m. d., în final o 1 – sortare.
+
+Sortare prin interschimbare
+--Sortarea prin interschimbare constã în modificãri succesive de forma ai ? aj, pânã când elementele vectorului apar în ordine crescãtoare.Din aceastã categorie fac parte metoda bulelor ºi metoda quicksort.
+
+Sortare prin selectie
+--Sortarea prin selecþie directã constã în urmãtoarele: se aflã minimul aj dintre a0, a1, ..., an-1 ºi se aduce pe poziþia zero în vector prin interschimbarea a0 cu aj; apoi procedeul se repetã pentru  a1, a2, ..., an-1 º.a.m.d.
+
+
+
+
+
+
+
+
+                       
+
+
+
+
+ 
+

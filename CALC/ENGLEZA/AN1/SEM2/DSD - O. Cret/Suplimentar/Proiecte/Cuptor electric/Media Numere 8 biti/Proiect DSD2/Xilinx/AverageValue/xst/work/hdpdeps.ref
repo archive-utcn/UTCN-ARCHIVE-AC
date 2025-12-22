@@ -1,0 +1,52 @@
+V3 29
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/Anod.vhd" 2012/05/08.01:32:54 O.87xd
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" 2012/05/08.01:33:22 O.87xd
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/Filter.vhd" 2012/05/08.17:37:02 O.87xd
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd" 2012/05/08.01:34:20 O.87xd
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/AverageValue/Xilinx/AverageValue/Register.vhd" 2012/05/08.01:34:40 O.87xd
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Anod.vhd" 2012/05/08.01:32:54 O.87xd
+EN work/AnodDevider 1336579210 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Anod.vhd" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/std_logic_arith 1325952873 \
+      PB ieee/STD_LOGIC_UNSIGNED 1325952875
+AR work/AnodDevider/Flash 1336579211 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Anod.vhd" \
+      EN work/AnodDevider 1336579210
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" 2012/05/09.18:59:58 O.87xd
+EN work/DataGenerator 1336579208 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/std_logic_arith 1325952873 \
+      PB ieee/STD_LOGIC_UNSIGNED 1325952875
+AR work/DataGenerator/Attempting2 1336579209 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd" \
+      EN work/DataGenerator 1336579208 CP FrequencyDivider
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" 2012/05/09.18:47:19 O.87xd
+EN work/Filter 1336579214 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/std_logic_arith 1325952873 \
+      PB ieee/STD_LOGIC_UNSIGNED 1325952875
+AR work/Filter/Attempting1 1336579215 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Filter.vhd" \
+      EN work/Filter 1336579214 CP FrequencyDivider CP DataGenerator CP AnodDevider \
+      CP ShiftRegister
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd" 2012/05/08.01:34:20 O.87xd
+EN work/FrequencyDivider 1336579206 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/std_logic_arith 1325952873 \
+      PB ieee/STD_LOGIC_UNSIGNED 1325952875
+AR work/FrequencyDivider/Flash 1336579207 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd" \
+      EN work/FrequencyDivider 1336579206
+FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Register.vhd" 2012/05/08.01:34:40 O.87xd
+EN work/ShiftRegister 1336579212 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Register.vhd" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/std_logic_arith 1325952873 \
+      PB ieee/STD_LOGIC_UNSIGNED 1325952875
+AR work/ShiftRegister/SRegister 1336579213 \
+      FL "C:/Documents and Settings/CORE 2 DUO/Desktop/DSD/1/AverageValue/Xilinx/AverageValue/Register.vhd" \
+      EN work/ShiftRegister 1336579212
+FL I:/AverageValue/Xilinx/AverageValue/Anod.vhd 2012/05/08.01:32:54 O.87xd
+FL I:/AverageValue/Xilinx/AverageValue/DaraGenerator.vhd 2012/05/09.01:36:34 O.87xd
+FL I:/AverageValue/Xilinx/AverageValue/Filter.vhd 2012/05/08.17:37:02 O.87xd
+FL I:/AverageValue/Xilinx/AverageValue/FrequencyDivider.vhd 2012/05/08.01:34:20 O.87xd
+FL I:/AverageValue/Xilinx/AverageValue/Register.vhd 2012/05/08.01:34:40 O.87xd

@@ -1,0 +1,43 @@
+#define nmax 10
+/* Var rec a pb damelor */
+int n; /*dimensiunea (ordinul) tablei de sah */
+int nr_solutie;
+int x[nmax];
+int FI(int k)
+{
+/*testeaza conditiile de continuare */
+int p;
+for(p=1; p<=k-1; p++)
+ if((x[k]==x[p]) | (abs(k-p) == abs(x[k]-x[p]))) return 0;
+return 1;
+}
+void back_recursiv(int k)
+{int i,j,p;
+for(j=1; j<=n; j++) {
+x[k]=j;
+if(FI(k)==1)
+{
+if(k<n) back_recursiv(k+1);
+else
+ {
+/*tiparirea solutiei */
+nr_solutie++;
+printf("\n\nSOLUTIA nr.%d\n",nr_solutie);
+for(i=1; i<=n; i++)
+{
+ printf("%c",n-i+65);
+ for(p=1; p<=n; p++)
+ if(x[i]==p) printf("|X|");
+else printf("|_|");
+printf("\n");};
+printf(" ");
+ for(i=1;i<=n;i++) printf(" %d ",i);
+getch();}}}}
+void main(void)
+{
+    printf("\nOrdinul tablei de sah n=");
+    scanf("%d",&n);
+    nr_solutie=0;
+    back_recursiv(1);
+    printf("\n\nSFARSIT\n");
+}

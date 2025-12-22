@@ -1,0 +1,182 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$S 1 1 WE
+$S 5 1 e3
+$S 9 1 IES
+$S +4 1 e4
+I 2 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 81 2 16 SUMA_INTRODUSA
+$SC 17-77/4
+$BUS S +69 2 16 DIFERENTA
+$SC 82-+60/4
+$S +5 1 ENAB
+I 3 "i#21#INTEGER range 0 to 31rict0 31 "
+$S +4 3 ADRESA
+$IN +4 1 but
+$IN +4 1 but2
+I 4 "a#28#std_logic_vector(6 downto 0)1 ricd6 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT +32 4 7 a_to_g
+$SC 163-+24/4
+$IN +5 1 clk
+$IN +4 1 clr
+$IN +4 1 s
+$S +4 1 enable
+$BUS INOUT +68 2 16 SOLD_CLIENT
+$SC 208-+60/4
+$S +5 1 E1
+$IN +4 1 but1
+$S +4 1 E2
+$S +4 1 P_INCORECT
+$S +4 1 e
+I 5 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN +12 5 2 sel
+$SC +-8 +4
+$S +5 1 Y0
+I 6 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT +20 6 4 an
+$SC 306-+12/4
+$BUS OUT +69 2 16 SUMA_RAMASA
+$SC 323-+60/4
+$OUT +5 1 card_retinut
+$BUS S +12 5 2 Y
+$SC +-8 +4
+$INOUT +5 1 card_exista
+I 7 "a#28#std_logic_vector(4 downto 0)1 ricd4 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN +24 7 5 x
+$SC 405-+16/4
+$INOUT +5 1 pin_corect
+$S +4 1 Y1
+$S +4 3 adr
+$BUS IN +4 7 5 x
+$SC 405-+16/4
+$BUS IN +18 5 2 sel
+$SC 293 +4
+$INOUT 401 0 card_exista
+$IN 155 0 but
+$INOUT 426 0 pin_corect
+$IN 155 0 but
+$IN +45 0 s
+$OUT 388 0 card_retinut
+$IN 277 0 but1
+$S +25 0 Y0
+$S 430 0 Y1
+$S 204 0 enable
+$BUS INOUT 440 2 16 SOLD_CLIENT
+$SC 208-+60/4
+$BUS OUT 441 2 16 SUMA_RAMASA
+$SC 323-+60/4
+$BUS S +59 2 16 DIFERENTA
+$SC 82-+60/4
+$S 1 0 WE
+$ENDTIME 100000
+$WAVES 1 147
+=0 T 0
+$VALUES
+V 1
+0
+$END
+$WAVES 5-77/4 +78 +4 +33-+76/4 +5-+24/4 +95 +4 +5-+20/4 +5
+*0
+$VALUES
+V 1
+U
+$END
+$WAVES 82-+60/4 302 +86 +42
+*0
+=1 D 0 1
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 163-+24/4 306-+12/4
+*0
+*1
+$VALUES
+V 2
+U
+1
+$END
+$WAVES +5-+60/4
+*0
+=2 D 0 2
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 151 434
+*0
+$VALUES
+V 1
+0
+$END
+$ENDTIME 200000
+$WAVES 277
+=3 D 100k 1
+$VALUES
+V 1
+0
+$END
+$WAVES 204
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES +-4
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES 155
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES 405
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES +4
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES +4
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES +4
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES +4
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES 297
+*3
+$VALUES
+V 1
+0
+$END
+$WAVES +-4
+*3
+$VALUES
+V 1
+0
+$END
+$ENDWAVE

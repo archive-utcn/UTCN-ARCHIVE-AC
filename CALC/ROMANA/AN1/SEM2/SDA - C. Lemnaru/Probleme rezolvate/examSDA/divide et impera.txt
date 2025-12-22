@@ -1,0 +1,14 @@
+void DIVIDE_IMPERA(int p,int q,rezultat:alfa)
+/* p, q reprezinta indicii secvenþei care se prelucreazã;
+alfa reprezintã rezultatul */
+                                 {
+int eps, m;
+rezultat beta,gama;
+if(abs(q-p)<=eps) PRELUCRARE(p,q,alfa);
+else {
+DIVIDE(p,q,m);
+DIVIDE_IMPERA(p,m,beta);
+DIVIDE_IMPERA(m+1,q,gama);
+COMBINA(beta,gama,alfa);
+                                             }
+}

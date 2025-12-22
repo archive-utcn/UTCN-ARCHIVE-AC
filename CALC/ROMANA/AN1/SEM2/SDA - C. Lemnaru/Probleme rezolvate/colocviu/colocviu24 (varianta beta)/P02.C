@@ -1,0 +1,198 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ File Name:  P02.c                                                      ~
+~                                                                        ~
+~Purpose: The knapsack problem.                                          ~
+~                                                                        ~
+~                                                                        ~
+~Student name: 6519                                                      ~
+~E-mail:       caveman0000@yhoo.com                                      ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/  
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define MAXD 20
+#define MAXL 100
+#define separators " ,\n\t"
+
+FILE *in , *out;
+float C[MAXD] , W[MAXD] , weight;
+int n;
+
+void process( int E[MAXD])
+{
+	float V[MAXD] , max;
+	int i , j;
+	for( i = 0 ; i < n ; i++)
+		V[i] = C[i] ;
+	for( i = 0 ; i < n ; i++)
+		{
+			max = V[0];
+			E[i] = 0;
+			for ( j = 1 ; j < n ; j++)
+				if( V[j] > max )
+					{
+						max = V[j];
+						E[i] = j;
+					}
+			V[E[i]] = 0; /*we compute the max of the remaining elements*/
+		}
+}
+
+void snapsackB( int E[MAXD] )
+{
+	float w = 0 , cost = 0;
+	int i=0;
+	out = fopen( "out.dat" , "w" );
+	for(  ; i < n && w < weight ; i++ )
+		{
+			if( W[E[i]] < weight - w )
+				{
+				 fprintf( out , "%d  1\n" , E[i] + 1 );
+				 cost += C[E[i]] * W[E[i]];
+				 w += W[i];
+				}
+				else
+				 {
+					 fprintf( out , "%d  %f\n" , E[i] + 1 , (weight - w) / W[E[i]]);
+					 cost += (weight - w) * C[E[i]];
+					 break;
+				 }
+		}
+	fprintf( out , "total cost: %f\n" , cost);
+	fclose( out );
+}
+
+int succesor( int stack[MAXD] , int k )
+{
+	if( k >= n || stack[k] > 0 )
+		return 0;
+	return 1;
+}
+
+int valid( int stack[MAXD] , int k )
+{
+	float w = 0 , max;
+	int i;
+	for( i = 0 ; i <= k ; i++)
+	 w += W[i] * stack[i];
+	if( w > weight )
+		return 0;
+	max = W[k+1];
+	for( i = k+1 ; i < n ; i++)
+		 if( max < W[i] )
+			 max = W[i];
+	/* compute maximum amount that can be further added*/
+	if( w + max <= weight )
+		return 0;
+	return 1;
+}
+
+int solution( int stack[MAXD] , int k , int sol[MAXD] , float *e)
+{
+	/* if a solution is found , then is compared with the best solution obtained
+		so far , and a new best situation is established , if necessary.
+	*/
+	int i;
+	float cost = 0 , w = 0;/* total cost of the new solution*/
+	if( k < n-1 )
+	 return 0;
+	for( i = 0 ; i < n ; i++ )
+		 w += W[i] * stack[i];
+	if( w != weight )
+		return 0;
+	for( i = 0 ; i < n ; i++ )
+		 cost += C[i] * stack[i];
+	if( cost > *e )
+		{
+			for( i = 0 ; i < n ; i++ )
+				sol[i] = stack[i];
+			*e = cost;
+		}
+	return 1;
+}
+
+void snapsackA( void )
+{
+	/*uses the backtracking algorithm and selects the max efficiency solution. */
+	int stack[MAXD] , sol[MAXD] , k = 0 , i , as , ev;
+	float e = 0;
+	for( i = 0 ; i < MAXD; i++)
+		stack[i] = -1;
+	while( k > -1 )
+	 {
+		do
+			{
+				if( as = succesor( stack , k ))
+					{
+					 stack[k]++;
+					 ev = valid( stack , k );
+					}
+			}while(!( !as || ev ));
+		if( as )
+				{
+					if( !solution( stack , k , sol , &e) )/*we have found a solution*/
+						k++;
+				}
+			else
+				stack[k--] = -1;
+	 }
+	out = fopen("out.dat" , "w");
+	if( e > 0 )
+		{
+			for( i = 0 ; i < n ; i++)
+				if( sol[i] == 1 )
+					fprintf( out , "%d  1\n" , i+1 );
+			fprintf( out , "total cost: %f\n" , e );
+		}
+		else
+			fprintf( out , "no solution found.\n" );
+}
+
+int main()
+{
+	int E[MAXD]; /*elem. ordered by  efficiency (= cost per unit weight)*/
+	int  i;
+	char c , *s = malloc(4);
+	in = fopen( "in.dat" , "r");
+
+	fgets( s , 4 , in );
+	c = s[0];
+	/* a - whole objects only , b - objects can be cut.*/
+
+	n = 0;
+	s = malloc( MAXL );
+	fgets( s , MAXL , in );
+	s = strtok( s , separators);
+	for( ; s != NULL ; )
+	 {
+		W[n++] = atof( s );
+		s = strtok( NULL , separators );
+	 }
+	/* read weight*/
+	s = malloc( MAXL);
+	fgets( s , MAXL, in );
+	s = strtok( s , separators);
+	for( i = 0 ; i < n ; i++ )
+		{
+			C[i] = atof( s );
+			s = strtok( NULL , separators );
+		}
+	/* read costs / unit weight */
+	s = malloc( 10 );
+	fgets( s , 10 , in );
+	weight = atof( s );
+	/* read total weight that can be loaded in the snapsack*/
+	fclose( in );
+	if( i < n )
+		return 0;
+	out = fopen( "out.dat" , "w");
+	if( c == 'a')
+		snapsackA();
+	 else
+			{
+				process( E );
+				snapsackB( E );
+			}
+	fclose( out );
+	return 1;
+}

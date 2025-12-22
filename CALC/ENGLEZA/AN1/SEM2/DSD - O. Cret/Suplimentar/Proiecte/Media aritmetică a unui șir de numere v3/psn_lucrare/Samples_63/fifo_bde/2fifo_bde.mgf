@@ -1,0 +1,1396 @@
+V 000035 40 3088 1097050312871 c4u
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050312"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,340,280)
+    FREEID 68
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CE"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,60)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(20,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    LINE 10,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((320,60),(308,66),(308,54),(320,60))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 11,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((320,60),(308,62),(308,58),(320,60))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 12,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((20,240),(20,20),(300,20),(300,240),(20,240))
+      FILL (1,(0,0,0),0)
+    }
+    TEXT 13,0,0
+    {
+      TEXT "4-Bit Up"
+      RECT (45,100,132,127)
+      ALIGN 8
+      COLOR (0,0,128)
+      FONT (10,0,0,400,0,0,0,"Arial")
+      VAR 
+    }
+    TEXT 14,0,0
+    {
+      TEXT "Counter"
+      RECT (60,140,146,167)
+      ALIGN 8
+      COLOR (0,0,128)
+      FONT (10,0,0,400,0,0,0,"Arial")
+      VAR 
+    }
+    LINE 17,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((320,60),(300,60))
+      FILL (1,(0,0,0),0)
+    }
+    RECT 18,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,320,260)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CLK"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,200)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(20,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="Q(3:0)"
+        #NUMBER="0"
+        PINTYPE="OUTPUT"
+      }
+      COORD (320,60)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(-38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 4,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,51,68,70)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 5,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,191,77,210)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 6,0,0
+    {
+      TEXT "$#NAME"
+      RECT (230,51,275,70)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 7,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((20,210),(30,200),(20,190))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 8,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((300,62),(300,58),(316,58),(316,62),(300,62))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 9,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((308,64),(320,60),(308,56))
+      FILL (1,(0,0,0),0)
+    }
+  }
+}
+V 000036 40 3561 1097050313371 c4ud
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050313"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,260,360)
+    FREEID 78
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="UP"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(20,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    LINE 10,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((240,80),(228,86),(228,74),(240,80))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 11,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((240,80),(228,82),(228,78),(240,80))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 12,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((228,84),(240,80),(228,76))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 13,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((220,82),(220,78),(236,78),(236,82),(220,82))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 14,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((20,290),(30,280),(20,270))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 15,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((20,320),(20,40),(220,40),(220,320),(20,320))
+      FILL (1,(0,0,0),0)
+    }
+    TEXT 16,0,0
+    {
+      TEXT "4-Bit"
+      RECT (50,161,99,188)
+      ALIGN 8
+      COLOR (0,0,128)
+      FONT (10,0,0,400,0,0,0,"Arial")
+      VAR 
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="DOWN"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,120)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(20,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    LINE 20,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((240,80),(220,80))
+      FILL (1,(0,0,0),0)
+    }
+    RECT 21,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,240,340)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CLK"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,280)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(20,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 4,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="Q(3:0)"
+        #NUMBER="0"
+        PINTYPE="OUTPUT"
+      }
+      COORD (240,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(-38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 5,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,67,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 6,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,111,97,130)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 7,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,271,77,290)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 8,0,0
+    {
+      TEXT "$#NAME"
+      RECT (150,71,195,90)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 4
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 9,0,0
+    {
+      TEXT "UD Cntr"
+      RECT (49,199,136,226)
+      ALIGN 8
+      COLOR (0,0,128)
+      FONT (10,0,0,400,0,0,0,"Arial")
+      VAR 
+    }
+  }
+}
+V 000037 40 2305 1097050313809 fd16d
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050313"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,260,260)
+    FREEID 56
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="D(15:0)"
+        #NUMBER="0"
+        PINTYPE="IN"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    LINE 11,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((240,80),(200,80))
+      FILL (1,(0,0,0),0)
+    }
+    RECT 12,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,240,240)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="C"
+        #NUMBER="0"
+        PINTYPE="IN"
+      }
+      COORD (0,160)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="Q(15:0)"
+        #NUMBER="0"
+        PINTYPE="OUT"
+      }
+      COORD (240,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(-38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 4,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,99,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 5,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,151,57,170)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 6,0,0
+    {
+      TEXT "$#NAME"
+      RECT (141,71,195,90)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 7,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,200),(40,40),(200,40),(200,200),(40,200))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 8,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,170),(50,160),(40,150))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 9,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((0,80),(40,80))
+      FILL (1,(0,0,0),0)
+    }
+  }
+}
+V 000036 40 2860 1097050342684 fifo
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #LANGUAGE="EDIF"
+  #MODIFIED="1097050342"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,240,200)
+  FREEID 18
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (20,0,220,200)
+  }
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,78,54)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 2
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (121,30,215,54)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 4
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,110,94)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 6
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (135,70,215,94)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,81,134)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 10
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (153,110,215,134)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 12
+  }
+  TEXT  15, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,92,174)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 14
+  }
+  TEXT  17, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (151,150,215,174)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 16
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="CLKP"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (240,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="DOP(31:0)"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="DIP(31:0)"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (240,80)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="EMPTYP"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="POPP"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (240,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="FULLP"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  14, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="PUSHP"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  16, 0, 0
+  {
+   COORD (240,160)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="LASTP"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+ }
+}
+V 000037 40 5814 1097050314356 fifod
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050314"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,340,320)
+    FREEID 122
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="DI(31:0)"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 10,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,211,77,230)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 11,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,171,79,190)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 12,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,131,89,150)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 4
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 13,0,0
+    {
+      TEXT "$#NAME"
+      RECT (209,71,275,90)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 5
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 14,0,0
+    {
+      TEXT "$#NAME"
+      RECT (236,131,275,150)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 6
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 15,0,0
+    {
+      TEXT "$#NAME"
+      RECT (220,171,275,190)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 7
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 16,0,0
+    {
+      TEXT "$#NAME"
+      RECT (235,211,275,230)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 8
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 17,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,80),(28,82),(28,78),(40,80))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 18,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((0,82),(0,78),(28,78),(28,82),(0,82))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 19,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((280,82),(280,78),(308,78),(308,82),(280,82))
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="CLK"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,220)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    LINE 20,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,80),(28,86),(28,74),(40,80))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 21,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((28,84),(40,80),(28,76))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 22,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,230),(50,220),(40,210))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 23,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((308,84),(320,80),(308,76))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 24,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((320,80),(308,86),(308,74),(320,80))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 25,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((320,80),(308,82),(308,78),(320,80))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 26,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,260),(40,40),(280,40),(280,260),(40,260))
+      FILL (1,(0,0,0),0)
+    }
+    LINE 27,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((0,80),(40,80))
+      FILL (1,(0,0,0),0)
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="POP"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,180)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    LINE 31,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((320,80),(280,80))
+      FILL (1,(0,0,0),0)
+    }
+    RECT 35,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,320,300)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 4,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="PUSH"
+        #NUMBER="0"
+        PINTYPE="INPUT"
+      }
+      COORD (0,140)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 5,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="DO(31:0)"
+        #NUMBER="0"
+        PINTYPE="OUTPUT"
+      }
+      COORD (320,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(-38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 6,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="FULL"
+        #NUMBER="0"
+        PINTYPE="OUTPUT"
+      }
+      COORD (320,140)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 7,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="EMPTY"
+        #NUMBER="0"
+        PINTYPE="OUTPUT"
+      }
+      COORD (320,180)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 8,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="LAST"
+        #NUMBER="0"
+        PINTYPE="OUTPUT"
+      }
+      COORD (320,220)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(-40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 9,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,104,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+  }
+}
+V 000039 40 3238 1097050314918 rm16x16
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050314"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,300,320)
+    FREEID 70
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="A(3:0)"
+        #NUMBER="0"
+      }
+      COORD (0,200)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 10,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,94,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 4
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 11,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,31,73,50)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 5
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 12,0,0
+    {
+      TEXT "$#NAME"
+      RECT (169,131,235,150)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 6
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 13,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,300),(40,0),(240,0),(240,300),(40,300))
+      FILL (1,(0,0,0),0)
+    }
+    RECT 14,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,280,300)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="DI(15:0)"
+        #NUMBER="0"
+      }
+      COORD (0,140)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="DPRA(3:0)"
+        #NUMBER="0"
+      }
+      COORD (0,260)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 4,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="WCLK"
+        #NUMBER="0"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 5,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="WE"
+        #NUMBER="0"
+      }
+      COORD (0,40)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 6,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="DO(15:0)"
+        #NUMBER="0"
+      }
+      COORD (280,140)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(-38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 7,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,191,89,210)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 8,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,131,104,150)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 9,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,251,123,270)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+  }
+}
+V 000039 40 3238 1097050315293 rm16x32
+SYMB0100
+HEADER
+{
+  VARIABLES
+  {
+    #LANGUAGE="EDIF"
+    #MODIFIED="1097050315"
+  }
+}
+PAGE ""
+{
+  PAGEHEADER 
+  {
+    RECT (-20,-20,340,320)
+    FREEID 70
+  }
+  BODY
+  {
+    PIN 1,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="A(3:0)"
+        #NUMBER="0"
+      }
+      COORD (0,200)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 10,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,71,94,90)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 4
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 11,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,31,73,50)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 5
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 12,0,0
+    {
+      TEXT "$#NAME"
+      RECT (209,131,275,150)
+      ALIGN 10
+      COLOR (0,0,255)
+      PARENT 6
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    LINE 13,0,0
+    {
+      OUTLINE 0,0,(0,0,128)
+      POINTS ((40,300),(40,0),(280,0),(280,300),(40,300))
+      FILL (1,(0,0,0),0)
+    }
+    RECT 14,-1,0
+    {
+      VARIABLES
+      {
+        #OUTLINE_FILLING="1"
+      }
+      OUTLINE 5,1,(0,0,0)
+      AREA (0,0,320,300)
+      FILL (1,(0,0,0),0)
+    }
+    PIN 2,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="DI(31:0)"
+        #NUMBER="0"
+      }
+      COORD (0,140)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 3,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="DPRA(3:0)"
+        #NUMBER="0"
+      }
+      COORD (0,260)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 4,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="WCLK"
+        #NUMBER="0"
+      }
+      COORD (0,80)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 5,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="IN"
+        #NAME="WE"
+        #NUMBER="0"
+      }
+      COORD (0,40)
+      LINE 1,0,0
+      {
+        OUTLINE 0,0,(0,0,128)
+        POINTS ((0,0),(40,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    PIN 6,0,0
+    {
+      VARIABLES
+      {
+        #DIRECTION="OUT"
+        #NAME="DO(31:0)"
+        #NUMBER="0"
+      }
+      COORD (320,140)
+      LINE 1,0,0
+      {
+        OUTLINE 0,3,(0,0,128)
+        POINTS ((0,0),(-38,0))
+        FILL (1,(0,0,0),0)
+      }
+    }
+    TEXT 7,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,191,89,210)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 1
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 8,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,131,104,150)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 2
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+    TEXT 9,0,0
+    {
+      TEXT "$#NAME"
+      RECT (45,251,123,270)
+      ALIGN 8
+      COLOR (0,0,255)
+      PARENT 3
+      FONT (7,0,0,400,0,0,0,"Arial")
+    }
+  }
+}

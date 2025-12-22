@@ -1,0 +1,164 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+modified=37
+Current Config=compile
+
+[Configurations]
+compile=IPCore8051
+
+[sdf.c.TESTBENCH_FOR_display]
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.TESTBENCH_FOR_keyboard]
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.TESTBENCH_FOR_pr_sr_register]
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.TESTBENCH_FOR_Latch]
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.TESTBENCH_FOR_ram]
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.TESTBENCH_FOR_A8051_exp]
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.POST_SYNTH_FOR_A8051_exp]
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.TIMING_FOR_A8051_exp]
+SdfNoWarn=0
+IVG=0
+
+[Groups]
+8051=1
+Devices=1
+Devices\TestBench=1
+TestBench=1
+
+[Library]
+IPCore8051=.\IPCore8051.LIB
+
+[$LibMap$]
+IPCore8051=.
+Active_lib=XC4000E
+xilinxun=XC4000E
+UnlinkedDesignLibrary=XC4000E
+
+[Settings]
+FLOW_TYPE=HDL
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+LANGUAGE=VHDL
+UseCeloxica=0
+FLOWTOOLS=ONLY_IMPL
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+SortInfo=u
+
+[ORDER]
+autorefresh=0
+macro_path=
+macro_name=
+modified=1
+Synchronize=1
+
+[SYNTHESIS]
+FAMILY=
+
+[IMPLEMENTATION]
+FAMILY=
+
+[Files]
+/readme.txt=-1
+/Fpga.bde=-1
+/A8051_exp.bde=-1
+/Fpga_post_synth.vhd=-1
+/Fpga_post_P&R.vhd=-1
+/Fpga.sdf=-1
+/Fpga.edf=-1
+8051/registers.vhd=-1
+8051/InternalProgramMemory.vhd=-1
+8051/Timers.VHD=-1
+8051/Console.vhd=-1
+8051/AL8051.vhd=-1
+Devices/Types.vhd=-1
+Devices/display.vhd=-1
+Devices/keyboard.vhd=-1
+Devices/pr_sr_register.vhd=-1
+Devices/ram.vhd=-1
+Devices/Latch.vhd=-1
+Devices\TestBench/display_TB.vhd=-1
+Devices\TestBench/display_TB_runtest.do=-1
+Devices\TestBench/keyboard_TB.vhd=-1
+Devices\TestBench/keyboard_TB_runtest.do=-1
+Devices\TestBench/pr_sr_register_TB.vhd=-1
+Devices\TestBench/pr_sr_register_TB_runtest.do=-1
+Devices\TestBench/ram_TB.vhd=-1
+Devices\TestBench/ram_TB_runtest.do=-1
+Devices\TestBench/Latch_TB.vhd=-1
+Devices\TestBench/Latch_TB_runtest.do=-1
+TestBench/A8051_exp_TB.vhd=-1
+TestBench/A8051_exp_TB_post_synth_cfg.vhd=-1
+TestBench/A8051_exp_TB_timing_cfg.vhd=-1
+TestBench/A8051_exp_TB_behavior.do=-1
+TestBench/A8051_exp_TB_post_synth.do=-1
+TestBench/A8051_exp_TB_timing.do=-1
+
+[Files.Data]
+.\src\readme.txt=Text File
+.\src\Fpga.bde=Block Diagram
+.\src\A8051_exp.bde=Block Diagram
+.\src\Fpga_post_synth.vhd=VHDL Source Code
+.\src\Fpga_post_P&R.vhd=VHDL Source Code
+.\src\Fpga.sdf=Sdf File
+.\src\Fpga.edf=Edif Netlist
+.\src\8051\registers.vhd=VHDL Source Code
+.\src\8051\InternalProgramMemory.vhd=VHDL Source Code
+.\src\8051\Timers.VHD=VHDL Source Code
+.\src\8051\Console.vhd=VHDL Source Code
+.\src\8051\AL8051.vhd=VHDL Source Code
+.\src\Devices\Types.vhd=VHDL Source Code
+.\src\Devices\display.vhd=VHDL Source Code
+.\src\Devices\keyboard.vhd=VHDL Source Code
+.\src\Devices\pr_sr_register.vhd=VHDL Source Code
+.\src\Devices\ram.vhd=VHDL Source Code
+.\src\Devices\Latch.vhd=VHDL Source Code
+.\src\Devices\TestBench\display_TB.vhd=VHDL Source Code
+.\src\Devices\TestBench\display_TB_runtest.do=Macro
+.\src\Devices\TestBench\keyboard_TB.vhd=VHDL Source Code
+.\src\Devices\TestBench\keyboard_TB_runtest.do=Macro
+.\src\Devices\TestBench\pr_sr_register_TB.vhd=VHDL Source Code
+.\src\Devices\TestBench\pr_sr_register_TB_runtest.do=Macro
+.\src\Devices\TestBench\ram_TB.vhd=VHDL Source Code
+.\src\Devices\TestBench\ram_TB_runtest.do=Macro
+.\src\Devices\TestBench\Latch_TB.vhd=VHDL Source Code
+.\src\Devices\TestBench\Latch_TB_runtest.do=Macro
+.\src\TestBench\A8051_exp_TB.vhd=VHDL Source Code
+.\src\TestBench\A8051_exp_TB_post_synth_cfg.vhd=VHDL Source Code
+.\src\TestBench\A8051_exp_TB_timing_cfg.vhd=VHDL Source Code
+.\src\TestBench\A8051_exp_TB_behavior.do=Macro
+.\src\TestBench\A8051_exp_TB_post_synth.do=Macro
+.\src\TestBench\A8051_exp_TB_timing.do=Macro
+

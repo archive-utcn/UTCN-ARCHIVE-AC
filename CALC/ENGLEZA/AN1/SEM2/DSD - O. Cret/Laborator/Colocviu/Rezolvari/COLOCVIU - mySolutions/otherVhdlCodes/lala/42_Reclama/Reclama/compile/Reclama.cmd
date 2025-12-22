@@ -1,0 +1,1 @@
+-w -s "C:\My_Designs\42_Reclama\library.cfg"  -j "C:\My_Designs\42_Reclama\Reclama\projlib.cfg"  -d "C:\My_Designs\42_Reclama\Reclama\compile\"  -work Reclama -dbg -e 100 "C:\My_Designs\42_Reclama\Reclama\src\reclama.vhd" 

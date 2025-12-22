@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\14_RAM_Memory\RAM_Memory\src\ram.vhd" 
+MESSAGE "Compile Entity "ram"" 
+MESSAGE "Entity `ram' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "ram"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

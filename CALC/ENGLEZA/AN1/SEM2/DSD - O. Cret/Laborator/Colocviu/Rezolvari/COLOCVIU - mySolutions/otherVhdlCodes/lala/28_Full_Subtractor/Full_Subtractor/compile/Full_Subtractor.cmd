@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\28_Full_Subtractor\library.cfg"  -j "c:\My_Designs\28_Full_Subtractor\Full_Subtractor\projlib.cfg"  -d "c:\My_Designs\28_Full_Subtractor\Full_Subtractor\compile\"  -work Full_Subtractor -dbg -e 100 "c:\My_Designs\28_Full_Subtractor\Full_Subtractor\src\tb.vhd" 

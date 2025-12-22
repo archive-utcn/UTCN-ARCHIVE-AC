@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Laborator 3
+//Liste Dublu Inlantuite
+
+//3.3. De la tastatura se citesc n cuvinte ;sa se creeze o lista dublu înlantuita, care sa contina în noduri cuvintele distincte
+//si frecventa lor de aparitie.Lista va fi ordonata alfabetic. Se vor afisa cuvintele si frecventa lor de aparitie
+//a) în ordine alfabetica crescatoare
+//b) în ordine alfabetica descrescatoare.
+
+
+typedef struct nod{
+                char c[20];
+                int i;
+                struct nod *urm,*prec;
+                } NOD;
+NOD *prim=NULL;
+
+void adaugare()
+{
+    NOD *q,*p;
+    int k=1;
+    q=prim;
+    char d[20]="";
+    printf("Introduceti un cuvant : ");gets(d);
+
+    //Verificam daca Lista este vida
+    if(prim==NULL)
+    {
+        p=(NOD*)malloc(sizeof(NOD));
+        strcpy(p->c,d);
+        p->i=1;
+        p->urm=NULL;
+        p->prec=NULL;
+        prim=p;
+    }
+
+    else
+    {
+        //Verificam Daca nu exista deja in lista
+        while(q&&k==1)
+            {
+             if(strcmp(q->c,d)==0)
+                {
+                    q->i++;k=0;
+                }
+             q=q->urm;
+            }
+
+        if(q==NULL&&k==1)
+        {
+            q=prim;
+            p=(NOD*)malloc(sizeof(NOD));
+            strcpy(p->c,d);
+            p->i=1;
+            p->urm=NULL;
+            p->prec=NULL;
+
+            if(strcmp(prim,d)==1) //Verificam daca d > prim->c si inseram inaintea lui prim
+            {
+                p->urm=prim;
+                prim->prec=p;
+                prim=p;
+                p->prec=NULL;
+            }
+            else
+            {
+                while(q->urm&&strcmp(d,q->urm->c)!=-1)
+                 q=q->urm;//Verificam daca d > q->urm->c cautare poz + inserare inainte
+                p->urm=q->urm;
+                p->prec=q;
+                q->urm=p;
+            }
+        }
+    }
+
+}
+
+void afisare()
+{
+    NOD *q=prim;
+    system("cls");
+    printf("Crescator :\n");
+    while(q->urm)
+        {
+            printf("\n%s apare de %d ori !",q->c,q->i);
+            q=q->urm;
+        }
+    printf("\n%s apare de %d ori !",q->c,q->i);
+    printf("\n\nDescrescator :");
+
+ while(q)
+        {
+            printf("\n%s apare de %d ori !",q->c,q->i);
+            q=q->prec;
+        }
+}
+
+
+int main()
+{
+char c='0';
+    while(c!='q')
+    {
+        printf("\n1-Adaugare  q-QUIT 2-Afisare  : \n");
+        c=getch();
+        switch(c)
+        {
+            case '1': { adaugare(); break; }
+            case '2': { afisare(); break; }
+        }
+     }
+}

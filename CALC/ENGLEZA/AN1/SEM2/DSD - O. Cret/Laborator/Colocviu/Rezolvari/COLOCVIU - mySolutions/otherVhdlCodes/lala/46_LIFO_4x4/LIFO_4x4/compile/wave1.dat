@@ -1,0 +1,68 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#3#bitc2 01"
+$IN 1 1 clk
+$IN 5 1 push
+$IN 9 1 pop
+$IN +4 1 rst
+$OUT +4 1 full
+$OUT +4 1 empty
+I 2 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+I 3 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 41 2 4 inp
+$SC 25-37/4
+$BUS OUT 58 2 4 outp
+$SC 42-54/4
+I 4 "i#21#INTEGER range -1 to 4rict-1 4 "
+$VARIABLE +5 4 pos
+I 5 "a#1#l1 ricd3 0 a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS VARIABLE +1 5 4 content
+$SC +2-+3 +2-+3 +2-+3 +2-+3
+$ENDTIME 100000
+$WAVES 1
+=0 T 0
+R 1 2 =1 T 50k
+$VALUES
+V 3
+0
+1
+0
+$END
+$WAVES 5-21/4
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES 42-54/4 +8-+3 +2-+3 +2-+3 +2-+3
+*0
+$VALUES
+V 1
+U
+$END
+$WAVES 25-37/4
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES 59
+*0
+$VALUES
+V 1
+0
+$END
+$ENDTIME 150000
+$WAVES 1
+=2 T 150k
+$VALUES
+V 1
+1
+$END
+$WAVES 9
+=3 D 100k 1
+$VALUES
+V 1
+1
+$END
+$ENDWAVE

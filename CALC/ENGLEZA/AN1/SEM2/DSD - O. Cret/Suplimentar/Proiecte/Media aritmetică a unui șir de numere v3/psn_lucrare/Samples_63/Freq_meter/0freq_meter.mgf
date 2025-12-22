@@ -1,0 +1,52 @@
+V 000037 11 172 1047632311474 cnt_4b
+E CNT_4B VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P CLK _in std_logic
+P RESET _in std_logic
+P ENABLE _in std_logic
+P FULL _out std_logic
+P Q _out std_logic_vector[3:0]
+X CNT_4B
+V 000038 11 259 1047632400763 cnt_bcd
+E CNT_BCD VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P CLK _in std_logic
+P GATE _in std_logic
+P RESET _in std_logic
+P BCD_A _out std_logic_vector[3:0]
+P BCD_B _out std_logic_vector[3:0]
+P BCD_C _out std_logic_vector[3:0]
+P BCD_D _out std_logic_vector[3:0]
+X CNT_BCD
+V 000038 11 175 1047632402916 control
+E control VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P F_PATTERN _in std_logic
+P RESET _in std_logic
+P START _in std_logic
+P END_RESET _out std_logic
+P GATE _out std_logic
+X control
+V 000039 11 292 1047632404468 freq_top
+E freq_top VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P F_INPUT _in std_logic
+P F_PATTERN _in std_logic
+P RESET _in std_logic
+P START _in std_logic
+P LED_A _out std_logic_vector[6:0]
+P LED_B _out std_logic_vector[6:0]
+P LED_C _out std_logic_vector[6:0]
+P LED_D _out std_logic_vector[6:0]
+X freq_top
+V 000038 11 121 1047632375757 hex2led
+E hex2led VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P HEX _in std_logic_vector[3:0]
+P LED _out std_logic_vector[6:0]
+X hex2led

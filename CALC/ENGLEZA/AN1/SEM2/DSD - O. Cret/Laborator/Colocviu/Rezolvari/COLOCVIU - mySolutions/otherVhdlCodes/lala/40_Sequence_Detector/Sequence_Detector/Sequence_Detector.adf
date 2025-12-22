@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Sequence_Detector
+
+[Library]
+Sequence_Detector=.\Sequence_Detector.lib
+
+[$LibMap$]
+Sequence_Detector=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/sequence_detector.vhd=-1
+/register.vhd=-1
+/and_gate.vhd=-1
+
+[Files.Data]
+.\src\sequence_detector.vhd=VHDL Source Code
+.\src\register.vhd=VHDL Source Code
+.\src\and_gate.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=detect|a|0 r|a|0 
+ShowHide=ShowTopLevel
+Selected=

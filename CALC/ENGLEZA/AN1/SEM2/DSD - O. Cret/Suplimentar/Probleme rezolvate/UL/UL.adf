@@ -1,0 +1,72 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=UL
+
+[Library]
+UL=.\UL.LIB
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+UL=.
+Active_lib=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\
+Extension3=mak
+Name4=Memory
+Directory4=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\
+Extension5=dll
+Name6=PDF
+Directory6=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\UL\
+Extension7=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/UL.bde=-1
+
+[Files.Data]
+.\src\UL.bde=Block Diagram
+
+[file_out:/UL.bde]
+/..\compile\UL.vhd=-1
+

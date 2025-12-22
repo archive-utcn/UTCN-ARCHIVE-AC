@@ -1,0 +1,8 @@
+-inf
+-123
+(x*(x))  (x-y*(x-y))  (7-2*(7-2)) = -3
+NUL
+x = y = 4.2 primul apel, y = 5.2 x = z = 9.4 dupa al doilea apel
+106 + 102.3 + 0.9 + 2 = 211.2
+8
+A0A0A14

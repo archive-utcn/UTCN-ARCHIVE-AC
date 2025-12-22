@@ -1,0 +1,4 @@
+vhdl work "pwm_bcd.vhd"
+vhdl work "pwm_automat.vhd"
+vhdl work "pwm_afisor.vhd"
+vhdl work "pwm_proiect.vhd"

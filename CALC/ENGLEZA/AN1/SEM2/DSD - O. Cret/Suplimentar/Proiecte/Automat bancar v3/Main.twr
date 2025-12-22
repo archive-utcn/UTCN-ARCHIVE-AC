@@ -1,0 +1,390 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Main.twx Main.ncd -o Main.twr Main.pcf -ucf Main.ucf
+
+Design file:              Main.ncd
+Physical constraint file: Main.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock suma_mii
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CNL         |    2.665(R)|      SLOW  |   -1.600(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock suma_sute
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CNL         |   -0.353(R)|      FAST  |    1.594(R)|      SLOW  |suma_sute_BUFGP   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock suma_zeci
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CNL         |   -1.029(R)|      FAST  |    2.597(R)|      SLOW  |suma_zeci_BUFGP   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+anod<0>     |        11.266(R)|      SLOW  |         5.777(R)|      FAST  |clock_BUFGP       |   0.000|
+anod<1>     |        11.258(R)|      SLOW  |         5.817(R)|      FAST  |clock_BUFGP       |   0.000|
+anod<2>     |        11.085(R)|      SLOW  |         5.644(R)|      FAST  |clock_BUFGP       |   0.000|
+anod<3>     |        11.183(R)|      SLOW  |         5.807(R)|      FAST  |clock_BUFGP       |   0.000|
+catod<0>    |        11.504(R)|      SLOW  |         5.890(R)|      FAST  |clock_BUFGP       |   0.000|
+catod<1>    |        11.719(R)|      SLOW  |         6.090(R)|      FAST  |clock_BUFGP       |   0.000|
+catod<2>    |        11.689(R)|      SLOW  |         6.026(R)|      FAST  |clock_BUFGP       |   0.000|
+catod<3>    |        11.643(R)|      SLOW  |         6.008(R)|      FAST  |clock_BUFGP       |   0.000|
+catod<4>    |        10.774(R)|      SLOW  |         5.527(R)|      FAST  |clock_BUFGP       |   0.000|
+catod<5>    |        11.501(R)|      SLOW  |         6.035(R)|      FAST  |clock_BUFGP       |   0.000|
+catod<6>    |        11.337(R)|      SLOW  |         5.834(R)|      FAST  |clock_BUFGP       |   0.000|
+ok_tranz    |        11.851(R)|      SLOW  |         6.282(R)|      FAST  |clock_BUFGP       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock confirmare to Pad
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                    | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)   | Phase  |
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+ok_tranz    |        12.084(F)|      SLOW  |         6.979(F)|      FAST  |confirmare_IBUF_BUFG|   0.000|
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+
+Clock pin<0> to Pad
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                      | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)     | Phase  |
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+chit_led    |        10.769(F)|      SLOW  |         6.192(F)|      FAST  |afis_errPin/enable_inv|   0.000|
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+
+Clock pin<1> to Pad
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                      | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)     | Phase  |
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+chit_led    |        10.189(F)|      SLOW  |         5.963(F)|      FAST  |afis_errPin/enable_inv|   0.000|
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+
+Clock pin<2> to Pad
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                      | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)     | Phase  |
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+chit_led    |        10.852(F)|      SLOW  |         6.105(F)|      FAST  |afis_errPin/enable_inv|   0.000|
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+
+Clock pin<3> to Pad
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                      | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)     | Phase  |
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+chit_led    |        11.015(F)|      SLOW  |         6.484(F)|      FAST  |afis_errPin/enable_inv|   0.000|
+------------+-----------------+------------+-----------------+------------+----------------------+--------+
+
+Clock suma_mii to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+anod<0>     |        19.343(R)|      SLOW  |         9.960(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+anod<1>     |        19.335(R)|      SLOW  |        10.000(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+anod<2>     |        19.162(R)|      SLOW  |         9.827(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+anod<3>     |        19.260(R)|      SLOW  |         9.990(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+catod<0>    |        19.581(R)|      SLOW  |        10.073(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+catod<1>    |        19.796(R)|      SLOW  |        10.273(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+catod<2>    |        19.766(R)|      SLOW  |        10.209(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+catod<3>    |        19.720(R)|      SLOW  |        10.191(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+catod<4>    |        18.851(R)|      SLOW  |         9.710(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+catod<5>    |        19.578(R)|      SLOW  |        10.218(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+catod<6>    |        19.414(R)|      SLOW  |        10.017(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+ok_tranz    |        19.928(R)|      SLOW  |        10.465(R)|      FAST  |suma_mii_BUFGP    |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock suma_sute to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+anod<0>     |        23.523(R)|      SLOW  |        12.519(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+anod<1>     |        23.515(R)|      SLOW  |        12.559(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+anod<2>     |        23.342(R)|      SLOW  |        12.386(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+anod<3>     |        23.440(R)|      SLOW  |        12.549(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+catod<0>    |        23.761(R)|      SLOW  |        12.632(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+catod<1>    |        23.976(R)|      SLOW  |        12.832(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+catod<2>    |        23.946(R)|      SLOW  |        12.768(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+catod<3>    |        23.900(R)|      SLOW  |        12.750(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+catod<4>    |        23.031(R)|      SLOW  |        12.269(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+catod<5>    |        23.758(R)|      SLOW  |        12.777(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+catod<6>    |        23.594(R)|      SLOW  |        12.576(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+ok_tranz    |        24.108(R)|      SLOW  |        13.024(R)|      FAST  |suma_sute_BUFGP   |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock suma_zeci to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+anod<0>     |        20.668(R)|      SLOW  |        11.491(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+anod<1>     |        20.660(R)|      SLOW  |        11.531(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+anod<2>     |        20.487(R)|      SLOW  |        11.358(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+anod<3>     |        20.585(R)|      SLOW  |        11.521(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+catod<0>    |        20.906(R)|      SLOW  |        11.604(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+catod<1>    |        21.121(R)|      SLOW  |        11.804(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+catod<2>    |        21.091(R)|      SLOW  |        11.740(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+catod<3>    |        21.045(R)|      SLOW  |        11.722(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+catod<4>    |        20.176(R)|      SLOW  |        11.241(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+catod<5>    |        20.903(R)|      SLOW  |        11.749(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+catod<6>    |        20.739(R)|      SLOW  |        11.548(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+ok_tranz    |        21.253(R)|      SLOW  |        11.996(R)|      FAST  |suma_zeci_BUFGP   |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    4.015|         |         |         |
+confirmare     |    5.508|   13.540|         |         |
+pin<0>         |    5.616|   13.540|         |         |
+pin<1>         |    5.036|   13.540|         |         |
+pin<2>         |    5.699|   13.540|         |         |
+pin<3>         |    5.862|   13.540|         |         |
+regim          |    4.884|   13.540|         |         |
+suma_mii       |   12.317|         |         |         |
+suma_sute      |   16.497|         |         |         |
+suma_zeci      |   13.642|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock confirmare
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.533|         |
+pin<0>         |         |         |    1.691|    1.691|
+pin<1>         |         |         |    1.111|    1.111|
+pin<2>         |         |         |    1.774|    1.774|
+pin<3>         |         |         |    1.937|    1.937|
+regim          |         |         |    1.305|    1.305|
+suma_mii       |         |         |   10.478|         |
+suma_sute      |         |         |   14.658|         |
+suma_zeci      |         |         |   11.803|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pin<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.533|         |
+confirmare     |         |         |    4.928|    4.928|
+regim          |         |         |    4.655|    4.655|
+suma_mii       |         |         |   10.478|         |
+suma_sute      |         |         |   14.658|         |
+suma_zeci      |         |         |   11.803|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pin<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.533|         |
+confirmare     |         |         |    5.194|    5.194|
+regim          |         |         |    4.921|    4.921|
+suma_mii       |         |         |   10.478|         |
+suma_sute      |         |         |   14.658|         |
+suma_zeci      |         |         |   11.803|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pin<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.533|         |
+confirmare     |         |         |    4.999|    4.999|
+regim          |         |         |    4.726|    4.726|
+suma_mii       |         |         |   10.478|         |
+suma_sute      |         |         |   14.658|         |
+suma_zeci      |         |         |   11.803|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pin<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.533|         |
+confirmare     |         |         |    4.494|    4.494|
+regim          |         |         |    4.221|    4.221|
+suma_mii       |         |         |   10.478|         |
+suma_sute      |         |         |   14.658|         |
+suma_zeci      |         |         |   11.803|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock regim
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.533|         |
+suma_mii       |         |         |   10.478|         |
+suma_sute      |         |         |   14.658|         |
+suma_zeci      |         |         |   11.803|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock suma_mii
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+suma_mii       |    1.534|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock suma_sute
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+suma_sute      |    1.319|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock suma_zeci
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+suma_zeci      |    1.381|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+chit           |chit_led       |    7.889|
+confirmare     |anod<0>        |   11.839|
+confirmare     |anod<1>        |   11.803|
+confirmare     |anod<2>        |   11.360|
+confirmare     |anod<3>        |   11.342|
+confirmare     |catod<0>       |   12.755|
+confirmare     |catod<1>       |   12.893|
+confirmare     |catod<2>       |   11.885|
+confirmare     |catod<3>       |   12.465|
+confirmare     |catod<4>       |   11.617|
+confirmare     |catod<5>       |   11.517|
+confirmare     |catod<6>       |   11.702|
+confirmare     |chit_led       |   12.559|
+confirmare     |ok_tranz       |   11.899|
+pin<0>         |anod<0>        |   11.497|
+pin<0>         |anod<1>        |   11.442|
+pin<0>         |anod<2>        |   10.919|
+pin<0>         |anod<3>        |   11.645|
+pin<0>         |catod<0>       |   11.087|
+pin<0>         |catod<1>       |   11.392|
+pin<0>         |catod<2>       |   10.823|
+pin<0>         |catod<3>       |   11.380|
+pin<0>         |catod<4>       |   11.527|
+pin<0>         |catod<5>       |   10.552|
+pin<0>         |catod<6>       |   10.820|
+pin<0>         |ok_pin         |    7.409|
+pin<0>         |ok_tranz       |   11.386|
+pin<1>         |anod<0>        |   10.917|
+pin<1>         |anod<1>        |   10.862|
+pin<1>         |anod<2>        |   10.339|
+pin<1>         |anod<3>        |   11.065|
+pin<1>         |catod<0>       |   10.507|
+pin<1>         |catod<1>       |   10.812|
+pin<1>         |catod<2>       |   10.243|
+pin<1>         |catod<3>       |   10.800|
+pin<1>         |catod<4>       |   10.947|
+pin<1>         |catod<5>       |    9.972|
+pin<1>         |catod<6>       |   10.240|
+pin<1>         |ok_pin         |    6.829|
+pin<1>         |ok_tranz       |   10.806|
+pin<2>         |anod<0>        |   11.580|
+pin<2>         |anod<1>        |   11.525|
+pin<2>         |anod<2>        |   11.002|
+pin<2>         |anod<3>        |   11.728|
+pin<2>         |catod<0>       |   11.170|
+pin<2>         |catod<1>       |   11.475|
+pin<2>         |catod<2>       |   10.906|
+pin<2>         |catod<3>       |   11.463|
+pin<2>         |catod<4>       |   11.610|
+pin<2>         |catod<5>       |   10.635|
+pin<2>         |catod<6>       |   10.903|
+pin<2>         |ok_pin         |    7.492|
+pin<2>         |ok_tranz       |   11.469|
+pin<3>         |anod<0>        |   11.743|
+pin<3>         |anod<1>        |   11.688|
+pin<3>         |anod<2>        |   11.165|
+pin<3>         |anod<3>        |   11.891|
+pin<3>         |catod<0>       |   11.333|
+pin<3>         |catod<1>       |   11.638|
+pin<3>         |catod<2>       |   11.069|
+pin<3>         |catod<3>       |   11.626|
+pin<3>         |catod<4>       |   11.773|
+pin<3>         |catod<5>       |   10.798|
+pin<3>         |catod<6>       |   11.066|
+pin<3>         |ok_pin         |    7.655|
+pin<3>         |ok_tranz       |   11.632|
+regim          |anod<0>        |   10.641|
+regim          |anod<1>        |   10.928|
+regim          |anod<2>        |   10.501|
+regim          |anod<3>        |   10.337|
+regim          |catod<0>       |   11.622|
+regim          |catod<1>       |   12.303|
+regim          |catod<2>       |   10.931|
+regim          |catod<3>       |   11.666|
+regim          |catod<4>       |   11.673|
+regim          |catod<5>       |   11.664|
+regim          |catod<6>       |   11.603|
+regim          |chit_led       |   12.286|
+regim          |ok_tranz       |   11.342|
+---------------+---------------+---------+
+
+
+Analysis completed Mon May 11 18:43:08 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 240 MB
+
+
+

@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+shift_reg=.\Shift_Reg\Shift_Reg.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+shift_reg=1

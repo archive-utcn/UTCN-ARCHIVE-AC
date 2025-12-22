@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity recunoastere_secventa is
+	generic(SECVENTA:std_logic_vector);
+	port(INTRARE,TACT:in std_logic;
+	DETECTAT:out std_logic);
+end recunoastere_secventa;
+
+architecture ARH of recunoastere_secventa is
+signal MEMORIE: std_logic_vector(SECVENTA'RANGE);
+begin	
+	--conversie bolean in tipul bit. atributele val si pos
+DETECTAT<=BIT'VAL(BOOLEAN'POS(MEMORIE=SECVENTA));
+MEMORIE:process
+begin
+if TACT='1' then
+	MEMORIE<=MEMORIE(MEMORIE'LEFT+1 to MEMORIE'RIGHT) & INTRARE;
+end if;
+wait on TACT;
+end process MEMORIE;
+end ARH;

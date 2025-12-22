@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\rotate_seq\library.cfg"  -j "d:\designshdl\rotate_seq\rotate_seq\projlib.cfg"  -d "d:\designshdl\rotate_seq\rotate_seq\compile\"  -work rotate_seq -dbg -e 100 -o "d:\designshdl\rotate_seq\rotate_seq\src\shift_reg.vhd" 

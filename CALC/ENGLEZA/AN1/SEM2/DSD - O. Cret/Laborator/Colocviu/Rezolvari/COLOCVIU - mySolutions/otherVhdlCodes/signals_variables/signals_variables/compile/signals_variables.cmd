@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\signals_variables\library.cfg"  -j "d:\designshdl\signals_variables\signals_variables\projlib.cfg"  -d "d:\designshdl\signals_variables\signals_variables\compile\"  -work signals_variables -dbg -e 100 -o "d:\designshdl\signals_variables\signals_variables\src\signals_varialbes.vhd" 

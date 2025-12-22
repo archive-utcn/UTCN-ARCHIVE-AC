@@ -1,0 +1,484 @@
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0078: num_modulo.vhd : (9, 37): Unknown identifier "ceil".
+# Error: COMP96_0078: num_modulo.vhd : (9, 43): Unknown identifier "log2".
+# Error: COMP96_0250: num_modulo.vhd : (9, 48): Resolution function cannot be used in this context.
+# Error: COMP96_0133: num_modulo.vhd : (9, 43): Cannot find object declaration.
+# Error: COMP96_0133: num_modulo.vhd : (9, 37): Cannot find object declaration.
+# Error: COMP96_0289: num_modulo.vhd : (9, 37): Prefix of index must be an array.
+# Error: COMP96_0149: num_modulo.vhd : (9, 37): Explicit type conversions are allowed between closely related types only.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (15, 63): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (20, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (24, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (25, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (25, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (27, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (27, 23): Identifier expected.
+# Compile failure 15 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0250: num_modulo.vhd : (10, 48): Resolution function cannot be used in this context.
+# Error: COMP96_0104: num_modulo.vhd : (10, 43): Undefined type of expression.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (16, 63): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (28, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (28, 23): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (10, 59): ')' expected.
+# Error: COMP96_0015: num_modulo.vhd : (10, 59): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (10, 60): Keyword "end" expected.
+# Error: COMP96_0015: num_modulo.vhd : (10, 60): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (10, 62): Design unit declaration expected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (16, 63): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (28, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (28, 23): Identifier expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0250: num_modulo.vhd : (10, 49): Resolution function cannot be used in this context.
+# Error: COMP96_0104: num_modulo.vhd : (10, 44): Undefined type of expression.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (16, 63): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (28, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (28, 23): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0250: num_modulo.vhd : (10, 49): Resolution function cannot be used in this context.
+# Error: COMP96_0104: num_modulo.vhd : (10, 44): Undefined type of expression.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (16, 63): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (28, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (28, 23): Identifier expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0016: num_modulo.vhd : (10, 61): Design unit declaration expected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (16, 63): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (28, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (28, 23): Identifier expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0016: num_modulo.vhd : (10, 61): Design unit declaration expected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (28, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (28, 23): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Error: COMP96_0016: num_modulo.vhd : (10, 61): Design unit declaration expected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (29, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (29, 23): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_modulo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (29, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (29, 23): Identifier expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (16, 76): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (29, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (29, 23): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0015: num_modulo.vhd : (16, 76): ';' expected.
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (29, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (29, 23): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (29, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (29, 23): Identifier expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Error: COMP96_0019: num_modulo.vhd : (21, 5): Keyword "then" expected.
+# Error: COMP96_0019: num_modulo.vhd : (22, 4): Keyword "end" expected.
+# Error: COMP96_0019: num_modulo.vhd : (25, 8): Keyword "process" expected.
+# Error: COMP96_0015: num_modulo.vhd : (26, 8): ';' expected.
+# Error: COMP96_0016: num_modulo.vhd : (26, 10): Design unit declaration expected.
+# Error: COMP96_0019: num_modulo.vhd : (29, 23): Keyword "of" expected.
+# Error: COMP96_0018: num_modulo.vhd : (29, 23): Identifier expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  num arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2466 kB (elbread=1070 elab2=348 kernel=1048 sdf=0)
+# 5:34 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Compile Architecture "arh" of Entity "num"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  num arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2466 kB (elbread=1070 elab2=348 kernel=1048 sdf=0)
+# 5:35 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  num arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2466 kB (elbread=1070 elab2=348 kernel=1048 sdf=0)
+# 5:35 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "counter"
+# Compile Architecture "arh" of Entity "counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  num arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2466 kB (elbread=1070 elab2=348 kernel=1048 sdf=0)
+# 5:37 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  num arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2466 kB (elbread=1070 elab2=348 kernel=1048 sdf=0)
+# 5:38 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/num_modulo.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_modulo\src\num_modulo.vhd
+# Compile Entity "num"
+# Entity `num' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "num"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  num arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2466 kB (elbread=1070 elab2=348 kernel=1048 sdf=0)
+# 5:38 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+# Simulation has been stopped
+# Design: Design "reg_uni" has been set as active.

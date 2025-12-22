@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: e:\Facultate\Logic Design\SEM II\SEM II Project\ATM\Bancomat\src\Command_Unit.vhd" 
+MESSAGE "Compile Entity "COMANDA"" 
+MESSAGE "Compile Architecture "ARCH_COMANDA" of Entity "COMANDA"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 

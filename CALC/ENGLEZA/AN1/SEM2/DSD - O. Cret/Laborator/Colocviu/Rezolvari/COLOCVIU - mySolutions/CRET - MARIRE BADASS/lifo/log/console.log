@@ -1,0 +1,144 @@
+acom -reorder $DSN/src/lifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\lifo\src\lifo.vhd
+# Error: COMP96_0010: lifo.vhd : (33, 14): Invalid literal.
+# Compile Entity "lifo"
+# Error: COMP96_0055: lifo.vhd : (4, 9): Cannot find referenced context element.
+# Compile Architecture "arh" of Entity "lifo"
+# Error: COMP96_0015: lifo.vhd : (29, 11): ';' expected.
+# Error: COMP96_0517: lifo.vhd : (33, 14): Unknown syntax error.
+# Error: COMP96_0015: lifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: lifo.vhd : (41, 8): Keyword "end" expected.
+# Error: COMP96_0019: lifo.vhd : (47, 8): Keyword "process" expected.
+# Error: COMP96_0015: lifo.vhd : (50, 8): ';' expected.
+# Error: COMP96_0016: lifo.vhd : (50, 15): Design unit declaration expected.
+# Error: COMP96_0019: lifo.vhd : (51, 24): Keyword "of" expected.
+# Error: COMP96_0018: lifo.vhd : (51, 24): Identifier expected.
+# Compile failure 11 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/lifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\lifo\src\lifo.vhd
+# Error: COMP96_0010: lifo.vhd : (33, 14): Invalid literal.
+# Compile Entity "lifo"
+# Error: COMP96_0055: lifo.vhd : (4, 9): Cannot find referenced context element.
+# Compile Architecture "arh" of Entity "lifo"
+# Error: COMP96_0015: lifo.vhd : (29, 11): ';' expected.
+# Error: COMP96_0517: lifo.vhd : (33, 14): Unknown syntax error.
+# Error: COMP96_0015: lifo.vhd : (41, 8): ';' expected.
+# Error: COMP96_0019: lifo.vhd : (41, 8): Keyword "end" expected.
+# Error: COMP96_0019: lifo.vhd : (47, 8): Keyword "process" expected.
+# Error: COMP96_0015: lifo.vhd : (50, 8): ';' expected.
+# Error: COMP96_0016: lifo.vhd : (50, 15): Design unit declaration expected.
+# Error: COMP96_0019: lifo.vhd : (51, 24): Keyword "of" expected.
+# Error: COMP96_0018: lifo.vhd : (51, 24): Identifier expected.
+# Compile failure 11 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/lifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\lifo\src\lifo.vhd
+# Error: COMP96_0010: lifo.vhd : (33, 14): Invalid literal.
+# Compile Entity "lifo"
+# Error: COMP96_0055: lifo.vhd : (4, 9): Cannot find referenced context element.
+# Compile Architecture "arh" of Entity "lifo"
+# Error: COMP96_0015: lifo.vhd : (29, 11): ';' expected.
+# Error: COMP96_0517: lifo.vhd : (33, 14): Unknown syntax error.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/lifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\lifo\src\lifo.vhd
+# Compile Entity "lifo"
+# Error: COMP96_0055: lifo.vhd : (4, 9): Cannot find referenced context element.
+# Compile Architecture "arh" of Entity "lifo"
+# Error: COMP96_0015: lifo.vhd : (29, 11): ';' expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/lifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\lifo\src\lifo.vhd
+# Compile Entity "lifo"
+# Error: COMP96_0055: lifo.vhd : (4, 9): Cannot find referenced context element.
+# Compile Architecture "arh" of Entity "lifo"
+# Error: COMP96_0056: lifo.vhd : (13, 1): Cannot find referenced entity declaration "lifo".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/lifo.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\lifo\src\lifo.vhd
+# Compile Entity "lifo"
+# Compile Architecture "arh" of Entity "lifo"
+# Error: COMP96_0077: lifo.vhd : (29, 10): Assignment target incompatible with right side. Expected type "INTEGER".
+# Top-Level unit detected
+# Entity  =>   lifo
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/lifo.vhd
+# Compile...
+# File: D:\designshdl\CRET\lifo\src\lifo.vhd
+# Compile Entity "lifo"
+# Entity `lifo' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "lifo"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  lifo arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 8:18 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: lifo (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+# Simulation has been stopped
+# Design: 8:23 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\clc\clc.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "clc" has been set as active.

@@ -1,0 +1,7 @@
+34
+~E 1 "./src/half_adder.vhd" 4 half_adder
+~A 1 "./src/half_adder.vhd" 9 arh
+~E 1 "./src/full_adder_1.vhd" 4 full_adder_1
+~A 1 "./src/full_adder_1.vhd" 9 arh
+~E 1 "./src/or_gate.vhd" 4 or_gate
+~A 1 "./src/or_gate.vhd" 9 arh

@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=reg
+
+[Library]
+reg=.\reg.lib
+
+[$LibMap$]
+reg=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+CDebugWatchList=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=random|behavioral|0  
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/secv.vhd=-1
+/Waveform Editor 1.awf=-1
+/Waveform Editor 3.awf=-1
+
+[Files.Data]
+.\src\secv.vhd=VHDL Source Code
+.\src\Waveform Editor 1.awf=Waveform File
+.\src\Waveform Editor 3.awf=Waveform File
+

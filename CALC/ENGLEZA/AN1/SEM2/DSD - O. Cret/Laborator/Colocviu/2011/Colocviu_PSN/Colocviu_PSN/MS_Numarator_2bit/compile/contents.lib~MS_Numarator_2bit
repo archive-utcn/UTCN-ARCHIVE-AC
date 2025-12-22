@@ -1,0 +1,5 @@
+53
+~E 1 "./src/MS_Counter.vhd" 29 ms_counter
+~A 1 "./src/MS_Counter.vhd" 32 arh_ms_counter
+~E 1 "./src/MS_Counter.vhd" 5 numarator_2bit
+~A 1 "./src/MS_Counter.vhd" 11 arh_counter

@@ -1,0 +1,16 @@
+elbread.dll ver. 1.0.5.365 Sun Apr 30 02:02:40 2017
+
+
+--------------------------------------------
+Entity         | Architecture | Library   
+--------------------------------------------
+clock_divider  | arh          | freq_divider
+--------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+numeric_std     | ieee
+-------------------------

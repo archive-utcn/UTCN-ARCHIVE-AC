@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-make"
+	BuildStamp="20230425-1012-Experimental"
+	Name="AlexPC"
+	Generator="ctest-3.26.1"
+	CompilerName="C:/MinGW/bin/g++.exe"
+	CompilerVersion="6.3.0"
+	OSName="Windows"
+	Hostname="AlexPC"
+	OSRelease=" Professional"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="20350"
+	TotalPhysicalMemory="16074"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2995"
+	>
+	<Testing>
+		<StartDateTime>Apr 25 13:46 GTB Summer Time</StartDateTime>
+		<StartTestTime>1682419567</StartTestTime>
+		<TestList>
+			<Test>./test1</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test1</Name>
+			<Path>.</Path>
+			<FullName>./test1</FullName>
+			<FullCommandLine>C:\Users\Alex\Documents\VSCode\faculta\SDA\proj9\build\proj9.exe</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0434948</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\Users\Alex\Documents\VSCode\faculta\SDA\proj9\build\proj9.exe</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>function test
+1 2
+1 2
+1 2
+Vertices:
+1 2 3 4 
+Edges: 3
+(1, 2) (1, 3) (1, 4) 
+
+Succes!
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Apr 25 13:46 GTB Summer Time</EndDateTime>
+		<EndTestTime>1682419567</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

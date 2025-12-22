@@ -1,0 +1,331 @@
+I 000044 55 1137          1493466999795 arh
+(_unit VHDL (and_gate 0 4 (arh 0 10 ))
+  (_version v33)
+  (_time 1493466999794 2017.04.29 14:56:39)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493466999732)
+    (_use )
+  )
+  (_object
+    (_generic (_internal input_nr ~extSTD.STANDARD.NATURAL 0 5 \3\ (_entity ((i 3)))))
+    (_type (_internal ~BIT_VECTOR{1~to~input_nr}~12 0 6 (_array ~extSTD.STANDARD.BIT ((_to (i 1)(c 1))))))
+    (_port (_internal input ~BIT_VECTOR{1~to~input_nr}~12 0 6 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 7 (_entity (_out ))))
+    (_variable (_internal temp ~extSTD.STANDARD.BIT 0 13 (_process 0 )))
+    (_process
+      (line__12(_architecture 0 0 12 (_process (_simple)(_target(1))(_sensitivity(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.NATURAL (std STANDARD NATURAL)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+    (_type (_external ~extSTD.STANDARD.BIT_VECTOR (std STANDARD BIT_VECTOR)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1137          1493467056784 arh
+(_unit VHDL (and_gate 0 4 (arh 0 10 ))
+  (_version v33)
+  (_time 1493467056783 2017.04.29 14:57:36)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493467056721)
+    (_use )
+  )
+  (_object
+    (_generic (_internal input_nr ~extSTD.STANDARD.NATURAL 0 5 \5\ (_entity ((i 5)))))
+    (_type (_internal ~BIT_VECTOR{1~to~input_nr}~12 0 6 (_array ~extSTD.STANDARD.BIT ((_to (i 1)(c 1))))))
+    (_port (_internal input ~BIT_VECTOR{1~to~input_nr}~12 0 6 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 7 (_entity (_out ))))
+    (_variable (_internal temp ~extSTD.STANDARD.BIT 0 13 (_process 0 )))
+    (_process
+      (line__12(_architecture 0 0 12 (_process (_simple)(_target(1))(_sensitivity(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.NATURAL (std STANDARD NATURAL)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+    (_type (_external ~extSTD.STANDARD.BIT_VECTOR (std STANDARD BIT_VECTOR)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1137          1493467077597 arh
+(_unit VHDL (and_gate 0 4 (arh 0 10 ))
+  (_version v33)
+  (_time 1493467077596 2017.04.29 14:57:57)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493467056721)
+    (_use )
+  )
+  (_object
+    (_generic (_internal input_nr ~extSTD.STANDARD.NATURAL 0 5 \5\ (_entity ((i 5)))))
+    (_type (_internal ~BIT_VECTOR{1~to~input_nr}~12 0 6 (_array ~extSTD.STANDARD.BIT ((_to (i 1)(c 1))))))
+    (_port (_internal input ~BIT_VECTOR{1~to~input_nr}~12 0 6 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 7 (_entity (_out ))))
+    (_variable (_internal temp ~extSTD.STANDARD.BIT 0 13 (_process 0 )))
+    (_process
+      (line__12(_architecture 0 0 12 (_process (_simple)(_target(1))(_sensitivity(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.NATURAL (std STANDARD NATURAL)))
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+    (_type (_external ~extSTD.STANDARD.BIT_VECTOR (std STANDARD BIT_VECTOR)))
+  )
+  (_model . arh 2 -1
+  )
+)
+V 000044 55 698           1493470547120 arh
+(_unit VHDL (and_gate 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493470547119 2017.04.29 15:55:47)
+  (_source (\./src/and.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470547073)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(2))(_sensitivity(0)(1)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 696           1493470618155 arh
+(_unit VHDL (or_gate 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493470618154 2017.04.29 15:56:58)
+  (_source (\./src/or.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470618093)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(2))(_sensitivity(0)(1)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 1597          1493470765412 arh
+(_unit VHDL (logic 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493470765411 2017.04.29 15:59:25)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470765365)
+    (_use )
+  )
+  (_component
+    (and_gate
+      (_object
+        (_port (_internal a ~extSTD.STANDARD.BIT 0 12 (_entity (_in ))))
+        (_port (_internal b ~extSTD.STANDARD.BIT 0 12 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 13 (_entity (_out ))))
+      )
+    )
+    (or_gate
+      (_object
+        (_port (_internal a ~extSTD.STANDARD.BIT 0 17 (_entity (_in ))))
+        (_port (_internal b ~extSTD.STANDARD.BIT 0 17 (_entity (_in ))))
+        (_port (_internal y ~extSTD.STANDARD.BIT 0 18 (_entity (_out ))))
+      )
+    )
+  )
+  (_instantiation l1 0 23 (_component and_gate )
+    (_port
+      ((a)(x0))
+      ((b)(x1))
+      ((y)(temp))
+    )
+    (_use (_entity . and_gate)
+    )
+  )
+  (_instantiation l2 0 24 (_component or_gate )
+    (_port
+      ((a)(temp))
+      ((b)(x2))
+      ((y)(y))
+    )
+    (_use (_entity . or_gate)
+    )
+  )
+  (_object
+    (_port (_internal x0 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x1 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x2 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal temp ~extSTD.STANDARD.BIT 0 21 (_architecture (_uni ))))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+)
+V 000044 55 696           1493470768615 arh
+(_unit VHDL (or_gate 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493470768614 2017.04.29 15:59:28)
+  (_source (\./src/or.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470618093)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_assignment (_simple)(_target(2))(_sensitivity(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 772           1493471032176 arh
+(_unit VHDL (logic 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493471032175 2017.04.29 16:03:52)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470765365)
+    (_use )
+  )
+  (_object
+    (_port (_internal x0 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x1 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x2 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__29(_architecture 0 0 29 (_process (_simple)(_target(3))(_sensitivity(1)(2)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 772           1493471083746 arh
+(_unit VHDL (logic 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493471083745 2017.04.29 16:04:43)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470765365)
+    (_use )
+  )
+  (_object
+    (_port (_internal x0 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x1 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x2 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__29(_architecture 0 0 29 (_process (_simple)(_target(3))(_sensitivity(2)(0)(1)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 772           1493471124357 arh
+(_unit VHDL (logic 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493471124356 2017.04.29 16:05:24)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470765365)
+    (_use )
+  )
+  (_object
+    (_port (_internal x0 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x1 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x2 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__29(_architecture 0 0 29 (_process (_simple)(_target(3))(_sensitivity(1)(2)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 1 -1
+  )
+)
+I 000044 55 950           1493471289066 arh
+(_unit VHDL (logic 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493471289065 2017.04.29 16:08:09)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470765365)
+    (_use )
+  )
+  (_object
+    (_port (_internal x0 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x1 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x2 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal temp ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+    (_process
+      (line__38(_architecture 0 0 38 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)))))
+      (line__39(_architecture 1 0 39 (_assignment (_simple)(_target(3))(_sensitivity(2)(4)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 2 -1
+  )
+)
+V 000044 55 950           1493471307926 arh
+(_unit VHDL (logic 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493471307925 2017.04.29 16:08:27)
+  (_source (\./src/and_gate.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493470765365)
+    (_use )
+  )
+  (_object
+    (_port (_internal x0 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x1 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal x2 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal temp ~extSTD.STANDARD.BIT 0 36 (_architecture (_uni ))))
+    (_process
+      (line__38(_architecture 0 0 38 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)))))
+      (line__39(_architecture 1 0 39 (_assignment (_simple)(_target(3))(_sensitivity(2)(4)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 2 -1
+  )
+)

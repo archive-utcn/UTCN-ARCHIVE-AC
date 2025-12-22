@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Facultate\Logic Design\SEM II\SEM II Project\ATM2\ATM2\COMANDA.ncd
+OUTFILE=E:\Facultate\Logic Design\SEM II\SEM II Project\ATM2\ATM2\COMANDA.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=E:\Facultate\Logic Design\SEM II\SEM II Project\ATM2\ATM2
+LICENSE=WebPack
+USER_INFO=211042708_0_0_915

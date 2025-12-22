@@ -1,0 +1,29 @@
+V 000044 55 1227          1493497648767 arh
+(_unit VHDL (mux_2la1_n 0 4 (arh 0 11 ))
+  (_version v33)
+  (_time 1493497648768 2017.04.29 23:27:28)
+  (_source (\./src/mux-2la1_n.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493497648712)
+    (_use )
+  )
+  (_object
+    (_generic (_internal n ~extSTD.STANDARD.INTEGER 0 5 \3\ (_entity ((i 3)))))
+    (_type (_internal ~BIT_VECTOR{1~to~n}~122 0 6 (_array ~extSTD.STANDARD.BIT ((_to (i 1)(c 1))))))
+    (_port (_internal i0 ~BIT_VECTOR{1~to~n}~122 0 6 (_entity (_in ))))
+    (_port (_internal i1 ~BIT_VECTOR{1~to~n}~122 0 6 (_entity (_in ))))
+    (_port (_internal sel ~extSTD.STANDARD.BIT 0 7 (_entity (_in ))))
+    (_type (_internal ~BIT_VECTOR{1~to~n}~124 0 8 (_array ~extSTD.STANDARD.BIT ((_to (i 1)(c 2))))))
+    (_port (_internal y ~BIT_VECTOR{1~to~n}~124 0 8 (_entity (_out ))))
+    (_process
+      (line__13(_architecture 0 0 13 (_process (_simple)(_target(3))(_sensitivity(0)(1)(2)))))
+    )
+    (_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+    (_type (_external ~extSTD.STANDARD.BIT_VECTOR (std STANDARD BIT_VECTOR)))
+  )
+  (_model . arh 3 -1
+  )
+)

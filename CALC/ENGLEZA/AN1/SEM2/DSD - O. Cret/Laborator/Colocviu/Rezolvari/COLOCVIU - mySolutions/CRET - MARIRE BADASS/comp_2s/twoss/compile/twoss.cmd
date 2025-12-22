@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\comp_2s\library.cfg"  -j "D:\designshdl\CRET\comp_2s\twoss\projlib.cfg"  -d "D:\designshdl\CRET\comp_2s\twoss\compile\"  -work twoss -dbg -e 100 "D:\designshdl\CRET\comp_2s\twoss\src\twoos.vhd" 

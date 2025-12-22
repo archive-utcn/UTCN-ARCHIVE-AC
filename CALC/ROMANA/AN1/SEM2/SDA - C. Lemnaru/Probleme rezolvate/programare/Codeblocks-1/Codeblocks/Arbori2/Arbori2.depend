@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1301009441 source:c:\codeblocks\arbori2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+

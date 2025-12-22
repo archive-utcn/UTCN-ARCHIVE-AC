@@ -1,0 +1,10 @@
+9
+3 6 fac curatenie
+7 9 cursuri de salsa
+10 13 biliard si bowling
+4 8 picnic
+9 12 foc de tabara
+6 9 invat la examen
+10 13 concert de jazz
+3 6 cu hamacul in parc
+8 11 la film

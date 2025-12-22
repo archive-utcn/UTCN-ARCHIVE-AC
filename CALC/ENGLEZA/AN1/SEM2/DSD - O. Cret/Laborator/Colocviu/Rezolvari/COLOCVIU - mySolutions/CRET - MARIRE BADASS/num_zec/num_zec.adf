@@ -1,0 +1,45 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=num_zec
+
+[Library]
+num_zec=.\num_zec.lib
+
+[$LibMap$]
+num_zec=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\num_zec\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\num_zec\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\num_zec\
+Extension5=dll
+
+[Files]
+/num_Zec.vhd=-1
+
+[Files.Data]
+.\src\num_Zec.vhd=VHDL Source Code
+

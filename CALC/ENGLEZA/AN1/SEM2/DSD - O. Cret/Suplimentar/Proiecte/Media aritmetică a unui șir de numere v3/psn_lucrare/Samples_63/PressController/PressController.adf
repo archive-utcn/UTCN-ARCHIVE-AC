@@ -1,0 +1,127 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+modified=30
+Current Config=compile
+
+[Configurations]
+compile=PressController
+
+[sdf.c.TESTBENCH_FOR_Press_top]
+SdfNoWarn=0
+IVG=0
+0=src\XILINX POST-P&R\presscontroller.sdf| /UUT/U101, Average, No
+
+[sdf.c.TESTBENCH_FOR_presscontroller]
+0=src\ALTERA POST-P&R\presscontroller.sdf| /UUT, Average, No
+SdfNoWarn=0
+IVG=0
+
+[sdf.c.TESTBENCH_FOR_PRESS]
+SdfNoWarn=0
+IVG=0
+0=src\XILINX POST-P&R\presscontroller.sdf| /UUT, Average, No
+
+[sdf.ea.Press_top-SCHEMATIC]
+SdfNoWarn=0
+IVG=0
+0=src\XILINX POST-P&R\presscontroller.sdf| /U101, Average, No
+1=src\ALTERA POST-P&R\presscontroller.sdf| /, Average, No
+
+[Groups]
+ALTERA POST-P&R=1
+XILINX POST-P&R=1
+
+[sdf.ea.presscontroller-\EPM7064LC44-7\]
+0=src\ALTERA POST-P&R\presscontroller.sdf| /, Average, No
+SdfNoWarn=0
+IVG=0
+
+[sdf.ea.Press-STRUCTURE]
+SdfNoWarn=0
+IVG=0
+0=src\XILINX POST-P&R\presscontroller.sdf| /, Average, No
+
+[Library]
+PressController=.\PressController.LIB
+
+[$LibMap$]
+PressController=.
+Active_lib=XC4000E
+xilinxun=XC4000E
+UnlinkedDesignLibrary=XC4000E
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+UseCeloxica=0
+
+[SYNTHESIS]
+FAMILY=
+
+[IMPLEMENTATION]
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[ORDER]
+autorefresh=0
+macro_path=
+macro_name=
+modified=1
+Synchronize=1
+
+[sdf.ea.counters-behaviour]
+SdfNoWarn=0
+IVG=0
+
+[Files]
+/Readme.txt=-1
+/counters.vhd=-1
+/automachine.asf=-1
+/press.bde=-1
+/press_top.bde=-1
+/Press_top_TB.vhd=-1
+/press_top_tb_runtest.do=-1
+ALTERA POST-P&R/presscontroller.vhd=-1
+ALTERA POST-P&R/presscontroller.sdf=-1
+ALTERA POST-P&R/presscontroller_TB_AL.vhd=-1
+ALTERA POST-P&R/presscontroller_TB_AL_runtest.do=-1
+XILINX POST-P&R/presscontroller.vhd=-1
+XILINX POST-P&R/presscontroller.sdf=-1
+XILINX POST-P&R/PRESS_TB_XI.vhd=-1
+XILINX POST-P&R/PRESS_TB_XI_runtest.do=-1
+
+[Files.Data]
+.\src\Readme.txt=Text File
+.\src\counters.vhd=VHDL Source Code
+.\src\automachine.asf=State Diagram
+.\src\press.bde=Block Diagram
+.\src\press_top.bde=Block Diagram
+.\src\Press_top_TB.vhd=VHDL Test Bench
+.\src\press_top_tb_runtest.do=Macro
+.\src\ALTERA POST-P&R\presscontroller.vhd=VHDL Source Code
+.\src\ALTERA POST-P&R\presscontroller.sdf=Sdf File
+.\src\ALTERA POST-P&R\presscontroller_TB_AL.vhd=VHDL Test Bench
+.\src\ALTERA POST-P&R\presscontroller_TB_AL_runtest.do=Macro
+.\src\XILINX POST-P&R\presscontroller.vhd=VHDL Source Code
+.\src\XILINX POST-P&R\presscontroller.sdf=Sdf File
+.\src\XILINX POST-P&R\PRESS_TB_XI.vhd=VHDL Test Bench
+.\src\XILINX POST-P&R\PRESS_TB_XI_runtest.do=Macro
+

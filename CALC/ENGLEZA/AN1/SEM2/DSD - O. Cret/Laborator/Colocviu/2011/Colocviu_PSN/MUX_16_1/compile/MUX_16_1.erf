@@ -1,0 +1,8 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\MUX_16_1\src\MUX_16la1.vhd" 
+MESSAGE "Compile Package "aritmetic"" 
+MESSAGE "Compile Package Body "aritmetic"" 
+MESSAGE "Compile Entity "mux"" 
+MESSAGE "Compile Architecture "mux" of Entity "mux"" 
+MESSAGE "Top-level unit(s) detected:" 
+MESSAGE "Entity => mux" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

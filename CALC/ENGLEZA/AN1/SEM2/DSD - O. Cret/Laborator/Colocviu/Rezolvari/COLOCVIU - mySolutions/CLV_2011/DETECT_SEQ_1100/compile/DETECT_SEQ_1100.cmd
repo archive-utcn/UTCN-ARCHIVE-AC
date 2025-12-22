@@ -1,0 +1,1 @@
+-w -s "D:\CTI2\DSD - Octavian Cret\COLOCVIU\Colocviu-Modele 2011 rezolvate\Colocviu_PSN\library.cfg"  -j "D:\designshdl\CLV_2011\DETECT_SEQ_1100\projlib.cfg"  -d "D:\designshdl\CLV_2011\DETECT_SEQ_1100\compile\"  -work DETECT_SEQ_1100 -dbg -e 100 "D:\designshdl\CLV_2011\DETECT_SEQ_1100\src\DETECT_SEQ_1100.vhd" 

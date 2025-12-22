@@ -1,0 +1,56 @@
+xst -intstyle ise -ifn "C:/Users/Dana/Desktop/MEMORIE FIFO/FIFO/fifo.xst" -ofn "C:/Users/Dana/Desktop/MEMORIE FIFO/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "fifo.ngc" fifo.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc7a100t-csg324-3 "fifo.ngc" fifo.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+xst -intstyle ise -ifn "C:/Users/Dana/Desktop/MEMORIE FIFO/FIFO/fifo.xst" -ofn "C:/Users/Dana/Desktop/MEMORIE FIFO/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 "fifo.ngc" fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+xst -intstyle ise -ifn "C:/Users/Dana/Desktop/MEMORIE FIFO/FIFO/fifo.xst" -ofn "C:/Users/Dana/Desktop/MEMORIE FIFO/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 "fifo.ngc" fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+xst -intstyle ise -ifn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.xst" -ofn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 fifo.ngc fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+xst -intstyle ise -ifn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.xst" -ofn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 fifo.ngc fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+xst -intstyle ise -ifn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.xst" -ofn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 fifo.ngc fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+xst -intstyle ise -ifn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.xst" -ofn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 fifo.ngc fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 fifo.ngc fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 fifo.ngc fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 
+xst -intstyle ise -ifn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.xst" -ofn "C:/Users/Windows/Desktop/FIFODANA/FIFO/fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fifo.ucf -p xc6slx16-csg324-3 fifo.ngc fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fifo_map.ncd fifo.ngd fifo.pcf 
+par -w -intstyle ise -ol high -mt off fifo_map.ncd fifo.ncd fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml fifo.twx fifo.ncd -o fifo.twr fifo.pcf -ucf fifo.ucf 
+bitgen -intstyle ise -f fifo.ut fifo.ncd 

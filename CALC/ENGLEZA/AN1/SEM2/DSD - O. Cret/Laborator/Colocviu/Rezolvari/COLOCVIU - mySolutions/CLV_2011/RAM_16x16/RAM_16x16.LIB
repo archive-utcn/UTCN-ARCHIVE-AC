@@ -1,0 +1,23 @@
+timestamp=1495489699728
+
+[memorie_ram_16x16]
+A/arh=21|./src/RAM_16x16.vhd|12|1*0
+B/arh=3*0
+H/arh=0*4176
+R=./src/RAM_16x16.vhd|5
+V=0*2436
+
+[~A]
+./src/RAM_16x16.vhd~MEMORIE_RAM_16X16=0*1104*1481
+./src/RAM_16x16.vhd~arhMEMORIE_RAM_16X16=0*5126*5888
+ModifyID=24
+Version=73
+
+[~MFT]
+0=12|0RAM_16x16.mgf|5888|1104
+1=0|1RAM_16x16.mgf|0|0
+3=0|3RAM_16x16.mgf|0|0
+
+[~U]
+memorie_ram_16x16=MEMORIE_RAM_16X16 11|0*1558|0*1826
+

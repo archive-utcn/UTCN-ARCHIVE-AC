@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd" 
+MESSAGE "Compile Entity "LIFO_4X4"" 
+MESSAGE "Entity `LIFO_4X4' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "LIFO_4X4"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

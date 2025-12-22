@@ -1,0 +1,16 @@
+$WAVE4
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(7 downto 0)1 ricd7 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 1 1 8 "UUT/U1/U2/DATAS"
+$SC 2-9
+$OUT +1 2 10 0 INT
+$IN +1 2 10 0 nWRS
+$IN +1 2 10 0 RESET
+$IN +1 2 10 0 TXC
+$OUT +1 2 12 0 D
+$S +1 2 10 0 BUSY_INT
+$BUS S +1 1 8 10 0 REG
+$SC +1-+7
+P 0 1-24 CS "1"
+$ENDWAVE

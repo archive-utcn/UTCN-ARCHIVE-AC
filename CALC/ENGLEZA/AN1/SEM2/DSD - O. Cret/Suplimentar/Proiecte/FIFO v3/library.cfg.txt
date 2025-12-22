@@ -1,0 +1,2 @@
+$include = "$VSIMSALIBRARYCFG"
+MemoriaFIFO = "./MemoriaFIFO/MemoriaFIFO/MemoriaFIFO.lib" 1430841088308

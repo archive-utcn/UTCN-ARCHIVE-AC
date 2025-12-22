@@ -1,0 +1,8 @@
+[COMPILESTATUS|.\src\ALU.bde]
+FileTimeLow=30481008
+Status=Error
+
+[COMPILESTATUS|.\compile\ALU.vhd]
+FileTimeLow=30481010
+Status=Error
+

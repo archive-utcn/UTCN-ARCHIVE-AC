@@ -1,0 +1,5 @@
+.\src\xor_gate.vhd
+.\src\inverter.vhd
+.\src\and_gate.vhd
+.\src\or_gate.vhd
+.\src\nxor_gate.vhd

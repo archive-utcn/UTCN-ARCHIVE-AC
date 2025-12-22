@@ -1,0 +1,2 @@
+C:/MinGW/bin/ar.exe qc libintQueue.a CMakeFiles/intQueue.dir/intQueue/intQueue.c.obj
+C:/MinGW/bin/ranlib.exe libintQueue.a

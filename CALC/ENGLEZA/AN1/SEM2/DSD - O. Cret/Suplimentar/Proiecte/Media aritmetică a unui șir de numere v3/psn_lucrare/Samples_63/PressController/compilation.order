@@ -1,0 +1,5 @@
+.\src\counters.vhd
+.\src\automachine.asf
+.\src\press.bde
+.\src\press_top.bde
+.\src\Press_top_TB.vhd

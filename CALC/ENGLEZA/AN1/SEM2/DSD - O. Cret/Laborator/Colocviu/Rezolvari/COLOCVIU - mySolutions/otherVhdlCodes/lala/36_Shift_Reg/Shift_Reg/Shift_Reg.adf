@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Shift_Reg
+
+[Library]
+Shift_Reg=.\Shift_Reg.lib
+
+[$LibMap$]
+Shift_Reg=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/shift_reg.vhd=-1
+/tb.vhd=-1
+
+[Files.Data]
+.\src\shift_reg.vhd=VHDL Source Code
+.\src\tb.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=reg|a|0 tb|a|0 
+ShowHide=ShowTopLevel
+Selected=

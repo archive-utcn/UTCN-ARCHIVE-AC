@@ -1,0 +1,90 @@
+acom -reorder $DSN/src/d_ff.vhd
+# Compile with File Reorder...
+# File: d:\designshdl\counter\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Compile Architecture "arh" of Entity "d_ff"
+# Error: COMP96_0078: d_ff.vhd : (13, 11): Unknown identifier "clock".
+# Error: COMP96_0348: d_ff.vhd : (13, 10): Name on sensitivity list must denote a signal.
+# Error: COMP96_0078: d_ff.vhd : (19, 7): Unknown identifier "clock".
+# Error: COMP96_0133: d_ff.vhd : (19, 7): Cannot find object declaration.
+# Error: COMP96_0124: d_ff.vhd : (19, 12): Illegal prefix for attribute "event".
+# Error: COMP96_0078: d_ff.vhd : (19, 23): Unknown identifier "clock".
+# Error: COMP96_0133: d_ff.vhd : (19, 23): Cannot find object declaration.
+# Error: COMP96_0104: d_ff.vhd : (19, 7): Undefined type of expression.
+# Error: COMP96_0098: d_ff.vhd : (19, 7): Boolean type expected.
+# Top-Level unit detected
+# Entity  =>   d_ff
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: d:\designshdl\counter\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Entity `d_ff' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "d_ff"
+# Error: COMP96_0078: d_ff.vhd : (13, 11): Unknown identifier "clock".
+# Error: COMP96_0348: d_ff.vhd : (13, 10): Name on sensitivity list must denote a signal.
+# Error: COMP96_0078: d_ff.vhd : (19, 7): Unknown identifier "clock".
+# Error: COMP96_0133: d_ff.vhd : (19, 7): Cannot find object declaration.
+# Error: COMP96_0124: d_ff.vhd : (19, 12): Illegal prefix for attribute "event".
+# Error: COMP96_0078: d_ff.vhd : (19, 23): Unknown identifier "clock".
+# Error: COMP96_0133: d_ff.vhd : (19, 23): Cannot find object declaration.
+# Error: COMP96_0104: d_ff.vhd : (19, 7): Undefined type of expression.
+# Error: COMP96_0098: d_ff.vhd : (19, 7): Boolean type expected.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: d:\designshdl\counter\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Compile Architecture "arh" of Entity "d_ff"
+# Error: ELAB1_0008: d_ff.vhd : (21, 9): Cannot read output : "q".
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: d:\designshdl\counter\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Entity `d_ff' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "d_ff"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom $DSN/src/d_ff.vhd
+# Compile...
+# File: d:\designshdl\counter\d_ff\src\d_ff.vhd
+# Compile Entity "d_ff"
+# Entity `d_ff' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "d_ff"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  d_ff arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2416 kB (elbread=1070 elab2=298 kernel=1048 sdf=0)
+# 1:03 AM, Sunday, April 30, 2017
+# Simulation has been initialized
+# Selected Top-Level: d_ff (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+# Simulation has been stopped
+# Design: Design "rom_memory" has been set as active.

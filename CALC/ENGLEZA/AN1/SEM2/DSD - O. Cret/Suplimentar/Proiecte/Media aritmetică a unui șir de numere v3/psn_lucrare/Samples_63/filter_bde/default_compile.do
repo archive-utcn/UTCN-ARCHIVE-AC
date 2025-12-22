@@ -1,0 +1,7 @@
+edfcomp "$DSN/src/filter.bde"
+edfcomp "$DSN/src/pfdiv.bde"
+edfcomp "$DSN/src/c2or.bde"
+edfcomp "$DSN/src/oscil.bde"
+edfcomp "$DSN/src/crv.bde"
+alog -dbg "$DSN/src/tb_verilog/filter_tb.v"
+acom -dbg "$DSN/src/tb_vhd/filter_tb.vhd"

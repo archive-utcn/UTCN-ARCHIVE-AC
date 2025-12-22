@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\and_gate\and_gate\src\and_gate.vhd" 
+MESSAGE "Compile Entity "logic"" 
+MESSAGE "Entity `logic' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "logic"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

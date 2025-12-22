@@ -1,0 +1,8 @@
+1. a. sa se defineasca notiunile de arbore binar de cautare AVL si arbore binar de cautare optimal. sa se deseneze un arbore avl
+(care sa aiba minim 10 noduri) si sa arate care este ordinea de vizitare a nodurilor in cele 3 moduri standard.
+b. sa se scrie o functie care insereaza un nod de adresa q (transmis ca parametru) dupa un nod de cheie k intr-o lista dinamica simplu inlantuita.
+2. sa se scrie un program care foloseste o stiva pentru a verifica inchiderea corecta a parantezelor intr-o expresie. expresia consta dintr-un sir
+avand maximum 80 de caractere si contine 3 tipuri de paranteze : ( ) [ ] { }. de exemplu: expresia {a[b(c)(d)]e} este corecta, iar expresia
+{a[b}] este incorecta
+3. sa se scrie o functie care returneaza inaltimea subarborelui stang hst si inaltimea subarborelui drept hdr a unui arbore binar de radacina data
+r (arborele este creat anterior)

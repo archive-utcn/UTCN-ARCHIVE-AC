@@ -1,0 +1,409 @@
+m255
+K3
+13
+cModel Technology
+dC:\MPROC
+Efulladd
+Z0 w1216418571
+Z1 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+Z2 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 dC:\PPROC
+Z4 8C:/PPROC/rlib/fulladd.vhd
+Z5 FC:/PPROC/rlib/fulladd.vhd
+l0
+L5
+VD=EkJe5=CY?KlI_1?JzQW1
+Z6 OX;C;6.3c;37
+32
+Z7 o-work work -2002 -explicit -O0
+Z8 tExplicit 1
+Abehav
+R1
+R2
+DE work fulladd D=EkJe5=CY?KlI_1?JzQW1
+l12
+L11
+V6jJOg7W70XCFATBM1hI:Y0
+R6
+32
+Z9 M2 ieee std_logic_1164
+Z10 M1 ieee numeric_std
+R7
+R8
+Emoving_avg
+Z11 w1218663300
+R1
+R2
+R3
+Z12 8C:/PPROC/rlib/moving_avg.vhd
+Z13 FC:/PPROC/rlib/moving_avg.vhd
+l0
+L5
+VOjM3MzT8?hbI_BjBl1^dl2
+R6
+32
+R7
+R8
+Acarry
+R1
+R2
+Z14 DE work moving_avg OjM3MzT8?hbI_BjBl1^dl2
+l138
+L128
+VG_Y29`TD8mc3d1]7<gUj02
+R6
+32
+R9
+R10
+R7
+R8
+Aredun
+Z15 DE work rconv 9dlj4e0H:GK4Mo8FgI7480
+R1
+R2
+R14
+l45
+L12
+VnXQ90Tm0IibcRbIY;7A=>1
+R6
+32
+R9
+R10
+R7
+R8
+Eonerconv
+Z16 w1218479261
+R1
+R2
+R3
+Z17 8C:/PPROC/rlib/onerconv.vhd
+Z18 FC:/PPROC/rlib/onerconv.vhd
+l0
+L5
+V`UHlzYLGoLZ5gn_l3hzic3
+R6
+32
+R7
+R8
+Astd
+R1
+R2
+DE work onerconv `UHlzYLGoLZ5gn_l3hzic3
+l12
+L11
+VHGCzIC9VLllHoRWUNQPCY2
+R6
+32
+R9
+R10
+R7
+R8
+Eradder
+Z19 w1216418570
+R1
+R2
+R3
+Z20 8C:/PPROC/rlib/radder.vhd
+Z21 FC:/PPROC/rlib/radder.vhd
+l0
+L5
+V=mnA9e[bmNbX_WNikhZPI2
+R6
+32
+R7
+R8
+Acased
+R1
+R2
+Z22 DE work radder =mnA9e[bmNbX_WNikhZPI2
+l39
+L38
+VGUGV0i43gfDQZQ_b4ga`73
+R6
+32
+R9
+R10
+R7
+R8
+Acombinatoire
+R1
+R2
+R22
+l19
+L11
+VSiB<3]>FV]k1DmcPM:nXK1
+R6
+32
+R9
+R10
+R7
+R8
+Eraddershift
+R19
+R1
+R2
+R3
+Z23 8C:/PPROC/rlib/raddershift.vhd
+Z24 FC:/PPROC/rlib/raddershift.vhd
+l0
+L5
+VM_Vkh;5JYo^OE0Ka4c[HT1
+R6
+32
+R7
+R8
+Acombinatoire
+R22
+R1
+R2
+Z25 DE work raddershift M_Vkh;5JYo^OE0Ka4c[HT1
+l19
+L12
+VW475@H=OfQfdTJFNBN=dI1
+R6
+32
+R9
+R10
+R7
+R8
+Eraddertree
+Z26 w1216418571
+R1
+R2
+R3
+Z27 8C:/PPROC/rlib/raddertree.vhd
+Z28 FC:/PPROC/rlib/raddertree.vhd
+l0
+L5
+VTSQzSKBa]hDIUjh=GOB7o0
+R6
+32
+R7
+R8
+Amulti
+R25
+R1
+R2
+Z29 DE work raddertree TSQzSKBa]hDIUjh=GOB7o0
+l17
+L11
+VRFRL`P1Z[6;3;WSk6]FGL1
+R6
+32
+R9
+R10
+R7
+R8
+Eraddsub
+R26
+R1
+R2
+R3
+Z30 8C:/PPROC/rlib/raddsub.vhd
+Z31 FC:/PPROC/rlib/raddsub.vhd
+l0
+L5
+VW6=eFPH;3[oNM=zI6VIb;2
+R6
+32
+R7
+R8
+Acombin
+R22
+R1
+R2
+DE work raddsub W6=eFPH;3[oNM=zI6VIb;2
+l19
+L12
+VI8][OVNoFYAJ7]zcNM^^20
+R6
+32
+R9
+R10
+R7
+R8
+Erconv
+Z32 w1219949083
+R1
+R2
+R3
+Z33 8C:/PPROC/rlib/rconv.vhd
+Z34 FC:/PPROC/rlib/rconv.vhd
+l0
+L5
+V9dlj4e0H:GK4Mo8FgI7480
+R6
+32
+R7
+R8
+Acombin3
+R1
+R2
+R15
+l186
+L184
+V_M@fkZjjO=LYki?mEieDL1
+R6
+32
+R9
+R10
+R7
+R8
+Acombin2
+R1
+R2
+R15
+l118
+L115
+V0mkHkXJm783VG?hZPN3FB0
+R6
+32
+R9
+R10
+R7
+R8
+Acombin
+R1
+R2
+R15
+l36
+L33
+Va2:OMog^MfY7MJNXGMXQI3
+R6
+32
+R9
+R10
+R7
+R8
+Acarry
+R1
+R2
+R15
+l19
+L11
+V]l=UFQR?T]g>^i9FSQ14L2
+R6
+32
+R9
+R10
+R7
+R8
+Ermul
+R26
+R1
+R2
+R3
+Z35 8C:/PPROC/rlib/rmul.vhd
+Z36 FC:/PPROC/rlib/rmul.vhd
+l0
+L5
+V8G9f_iCoi7BEJ]QA?SPJ[1
+R6
+32
+R7
+R8
+Acombin
+R29
+R1
+R2
+DE work rmul 8G9f_iCoi7BEJ]QA?SPJ[1
+l28
+L12
+V;8Q>fd]Ad2UU0I>T50iHB3
+R6
+32
+R9
+R10
+R7
+R8
+Erproc
+Z37 w1219949155
+Z38 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+R1
+R2
+R3
+Z39 8C:/PPROC/rlib/rproc.vhd
+Z40 FC:/PPROC/rlib/rproc.vhd
+l0
+L7
+VVP@E7^JV1M7SDNj8ZdOj31
+R6
+32
+R7
+R8
+Aredundant
+R15
+R22
+R38
+R1
+R2
+DE work rproc VP@E7^JV1M7SDNj8ZdOj31
+l44
+L13
+VH=oe=MYoh?W<HR1O?LP9Y1
+R6
+32
+Z41 M3 ieee std_logic_1164
+Z42 M2 ieee numeric_std
+Z43 M1 ieee std_logic_arith
+R7
+R8
+Prtype
+R1
+R2
+R19
+R3
+8C:/PPROC/rlib/rtype.vhd
+FC:/PPROC/rlib/rtype.vhd
+l0
+L5
+Vh;lDY9nhJi7Xb__<=RfeQ3
+R6
+32
+R9
+R10
+R7
+R8
+Etworconv
+Z44 w1218217102
+R1
+R2
+R3
+Z45 8C:/PPROC/rlib/tworconv.vhd
+Z46 FC:/PPROC/rlib/tworconv.vhd
+l0
+L5
+V9=m]eDE[G9RLhTl@<Ecak3
+R6
+32
+R7
+R8
+Astd
+R1
+R2
+DE work tworconv 9=m]eDE[G9RLhTl@<Ecak3
+l12
+L11
+V=^Czh`GTLWXoGV>Dj2R5Q2
+R6
+32
+R9
+R10
+R7
+R8
+Acombin
+R1
+R2
+DE work tworconv d6A_6KCVOii6>Yb:?9SOe0
+l12
+L11
+V7f07Oin3JigmRI8z9iDPl0
+R6
+32
+R9
+R10
+R7
+R8
+FC:/PPROC/rlib/2rconv.vhd
+w1216673029
+8C:/PPROC/rlib/2rconv.vhd

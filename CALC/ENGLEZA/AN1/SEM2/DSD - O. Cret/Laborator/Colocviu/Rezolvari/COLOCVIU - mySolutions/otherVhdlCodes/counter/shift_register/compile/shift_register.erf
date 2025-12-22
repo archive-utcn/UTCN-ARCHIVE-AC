@@ -1,0 +1,5 @@
+MESSAGE "File: d:\designshdl\counter\shift_register\src\shift_register.vhd" 
+MESSAGE "Compile Entity "shift_register"" 
+MESSAGE "Entity `shift_register' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "shift_register"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

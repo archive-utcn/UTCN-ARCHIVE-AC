@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1274112858 source:d:\code_blocks\back_colocviu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

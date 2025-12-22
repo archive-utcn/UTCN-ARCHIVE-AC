@@ -1,0 +1,45 @@
+acom $DSN/src/EXCESS3_BCD.vhd
+# Compile...
+# File: d:\designshdl\CLV_2008\EXCESS3_BCD\src\EXCESS3_BCD.vhd
+# Compile Entity "EXCESS3_BCD"
+# Compile Architecture "arh" of Entity "EXCESS3_BCD"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  excess3_bcd arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2416 kB (elbread=1070 elab2=298 kernel=1048 sdf=0)
+# 1:34 PM, Saturday, May 20, 2017
+# Simulation has been initialized
+# Selected Top-Level: excess3_bcd (arh)
+run 100 ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  TOP instance,  Process: line__36.
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+# Design: 1:42 PM, Saturday, May 20, 2017
+# Design: Opening design "d:\designshdl\CLV_2008\DECODIFICATOR_BCD_ZECIMAL\DECODIFICATOR_BCD_ZECIMAL.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "DECODIFICATOR_BCD_ZECIMAL" has been set as active.

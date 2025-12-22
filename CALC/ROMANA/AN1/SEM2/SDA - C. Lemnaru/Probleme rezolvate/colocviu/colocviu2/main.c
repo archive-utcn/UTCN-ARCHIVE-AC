@@ -1,0 +1,120 @@
+/*2. Elementele unei multimi M sunt notate cu litere mici din alfabet. Se citesc perechi de elemente x, y (x, y
+apartin multimii M) cu semnificatia ca elementul x precede elementul y. Sa se afiseze elementele
+multimii M într-o anumita ordine, încât pentru oricare elemente x, y cu proprietatea ca x precede pe y,
+elementul x sa fie afisat înaintea lui y.*/
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct n{
+    char x,y;
+    struct n *urm,*prec;
+}nod;
+
+nod *ultim,*prim;
+
+void creareListaVida()
+{
+    prim=NULL;
+    ultim=NULL;
+}
+
+
+nod *citireDate()
+{
+    nod *p;
+    char x,y;
+    int valid=1;
+    do
+    {
+        valid=1;
+        printf("\nx=");
+        fflush(stdin);
+        scanf("%c",&x);
+        printf("\ny=");
+        fflush(stdin);
+        scanf("%c",&y);
+        if(x>=y)
+        {
+            printf("\nReintroduceti!!!");
+            valid=0;
+        }
+    }while(!valid);
+    p=(nod*)malloc(sizeof(nod));
+    p->x=x;
+    p->y=y;
+    return p;
+}
+
+void adaugareNod()
+{
+    nod *p;
+    nod *q;
+    p=citireDate();
+    if(!prim) ///lista este momentan vida
+    {
+        prim=p;
+        prim->urm=NULL;
+        prim->prec=NULL;
+        ultim=prim;
+    }
+    else
+    {
+        q=prim;
+        while( q)
+        {
+            if(p->y<=q->x)
+            {
+                if(q==prim) ///inserare inaintea primului nod
+                {
+                    q->prec=p;
+                    p->urm=q;
+                    p->prec=NULL;
+                    prim=p;
+                    return;
+                }
+                else///inserare inaintea lui q
+                {
+                    q->prec->urm=p;
+                    p->urm=q;
+                    p->prec=q->prec;
+                    q->prec=p;
+                    return;
+                }
+            }
+            else
+            q=q->urm;
+        }
+        ///inserare dupa ultimul
+        p->urm=NULL;
+        p->prec=ultim;
+        ultim->urm=p;
+        ultim=p;
+    }
+}
+
+
+void afisareLista()
+{
+    nod *p;
+    printf("\nSecventa: \n");
+    p=prim;
+    while(p)
+    {
+        printf("%c %c ",p->x,p->y);
+        p=p->urm;
+    }
+}
+
+
+
+
+
+int main()
+{
+    int i;
+   creareListaVida();
+   for(i=0;i<3;i++)
+   adaugareNod();
+   afisareLista();
+    return 0;
+}

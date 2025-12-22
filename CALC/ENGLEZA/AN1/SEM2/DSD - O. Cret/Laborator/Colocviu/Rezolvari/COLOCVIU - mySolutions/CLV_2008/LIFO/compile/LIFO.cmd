@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\LIFO\projlib.cfg"  -d "D:\designshdl\CLV_2008\LIFO\compile\"  -work LIFO -dbg -e 100 "D:\designshdl\CLV_2008\LIFO\src\LIFO.vhd" 

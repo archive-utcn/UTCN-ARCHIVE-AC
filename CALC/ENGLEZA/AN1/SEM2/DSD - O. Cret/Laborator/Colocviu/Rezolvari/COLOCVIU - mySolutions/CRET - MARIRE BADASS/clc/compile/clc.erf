@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\clc\src\clc.vhd" 
+MESSAGE "Compile Entity "clc"" 
+MESSAGE "Entity `clc' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "clc"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

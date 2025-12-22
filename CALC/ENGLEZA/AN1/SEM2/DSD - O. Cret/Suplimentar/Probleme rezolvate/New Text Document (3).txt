@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+entity bist_d is 
+	generic (setup_time:time :=1ns; Hold_time : time:=2ns);
+	port(d,clk:in std_logic;
+	q:out std_logic);
+	begin
+		verif_setup:process(clk)
+		begin
+			if(clk='1')and(clk'event)then
+				assert(d'last_event>=setup_time)
+				report"incalcarea conditiei de timp set_up" severity error;
+			end if;
+		end process verif_setup;
+	end bist_d;
+	architecture comp of bist_d is
+		begin
+			process(clk)
+			begin
+				if(clk='1')and(clk'event)then q<=d after 10 ns;
+				end if;
+			end process;
+			end comp;

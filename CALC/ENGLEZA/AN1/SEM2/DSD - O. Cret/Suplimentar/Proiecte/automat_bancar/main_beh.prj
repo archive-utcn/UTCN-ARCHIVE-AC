@@ -1,0 +1,8 @@
+vhdl work "freq_divider.vhd"
+vhdl work "DFF.vhd"
+vhdl work "test2.vhd"
+vhdl work "memory_money.vhd"
+vhdl work "Debounce.vhd"
+vhdl work "counter_sum.vhd"
+vhdl work "C:/Users/nagyhanna007/Downloads/sevenseg.vhd"
+vhdl work "main.vhd"

@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+full_subtractor=.\Full_Subtractor\Full_Subtractor.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+full_subtractor=1

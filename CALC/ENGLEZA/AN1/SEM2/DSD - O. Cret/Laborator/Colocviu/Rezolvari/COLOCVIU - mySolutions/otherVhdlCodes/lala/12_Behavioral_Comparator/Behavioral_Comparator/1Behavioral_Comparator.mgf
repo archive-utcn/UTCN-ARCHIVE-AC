@@ -1,0 +1,54 @@
+I 000042 55 993           1495291654434 a
+(_unit VHDL (comparator 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495291654433 2017.05.20 17:47:34)
+  (_source (\./src/comparator.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495291488657)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal c ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal f2 ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal f1 ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal f0 ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_process (_simple)(_target(6)(5)(4))(_sensitivity(3)(2)(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)
+V 000042 55 993           1495291763009 a
+(_unit VHDL (comparator 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495291763008 2017.05.20 17:49:23)
+  (_source (\./src/comparator.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495291488657)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal b ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal c ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal f2 ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal f1 ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal f0 ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_process (_simple)(_target(6)(5)(4))(_sensitivity(3)(2)(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 1 -1
+  )
+)

@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\Comparator_2bit\src\Comparator_2bit.vhd" 
+MESSAGE "Compile Entity "Comparator_2bit"" 
+MESSAGE "Compile Architecture "ARH_STR" of Entity "Comparator_2bit"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

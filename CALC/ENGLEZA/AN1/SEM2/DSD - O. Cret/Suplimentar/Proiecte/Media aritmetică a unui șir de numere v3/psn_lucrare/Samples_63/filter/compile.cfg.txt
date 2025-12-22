@@ -1,0 +1,122 @@
+[View]
+Entity=testbench
+Architecture=tb_architecture
+TopLevelType=1
+[file:.\src\readme.txt]
+File Time Lo=-549419008
+File Time Hi=29644097
+State=Modified
+[file:.\src\sine_lookup_pkg.vhd]
+File Time Lo=-660702720
+File Time Hi=29620819
+Enabled=1
+State=Compiled
+SIM.POST.INCLUDED=1
+SIM.POST.INDEX=0
+SIM.TIME.INDEX=0
+SIM.TIME.INCLUDED=1
+[file:.\src\filter.vhd]
+File Time Lo=-1468691200
+File Time Hi=29639074
+Enabled=1
+State=Compiled
+[file:.\src\testbench.vhd]
+File Time Lo=-761471744
+File Time Hi=29637613
+Enabled=1
+State=Compiled
+SIM.POST.INCLUDED=1
+SIM.POST.INDEX=2
+SIM.TIME.INDEX=2
+SIM.TIME.INCLUDED=1
+[file:.\receiver\receiver.hcc]
+File Time Lo=-1796308224
+File Time Hi=29637618
+Enabled=1
+[file:.\receiver\receiver.hp]
+File Time Lo=-1539210752
+File Time Hi=29639211
+Enabled=1
+State=Compiled
+[file:.\src\top.bde]
+File Time Lo=970899200
+File Time Hi=29641050
+Enabled=1
+State=Compiled
+[file:.\src\synchronizer.vhd]
+State=Compiled
+File Time Lo=660179712
+File Time Hi=29641028
+Enabled=1
+[file:.\Celoxica\vhdl\receiver_hcc.vhd]
+File Time Lo=-1391913830
+File Time Hi=29644104
+Enabled=1
+State=Compiled
+[file:.\Celoxica\vhdl\receiver_top.vhd]
+File Time Lo=-1391913830
+File Time Hi=29644104
+Enabled=1
+State=Compiled
+[file:.\compile\top.vhd]
+Generated=TRUE
+File Time Lo=1825898670
+File Time Hi=29644105
+Enabled=1
+State=Compiled
+[file:.\src\Cosim\receiver_top_wrapper.vhd]
+State=Compiled
+File Time Lo=1223560960
+File Time Hi=29637615
+Enabled=1
+[file:.\src\runme_post-synthesis.do]
+File Time Lo=-209419008
+File Time Hi=29644097
+Enabled=1
+State=Modified
+[file:.\src\runme_functional.do]
+State=Modified
+File Time Lo=550580992
+File Time Hi=29644098
+Enabled=1
+[file:.\src\runme_cosim.do]
+State=Modified
+File Time Lo=650580992
+File Time Hi=29644098
+Enabled=1
+[file:.\src\runme_timing.do]
+File Time Lo=-1444386304
+File Time Hi=29644098
+Enabled=1
+State=Modified
+[file:.\synthesis\top.vqm]
+File Time Lo=322148670
+File Time Hi=29644105
+Enabled=0
+SIM.FUNC.INCLUDED=0
+LIB=filter_post_synthesis
+State=Compiled
+[file:.\synthesis\top.vhm]
+File Time Lo=322617420
+File Time Hi=29644105
+Enabled=1
+LIB=filter_post_synthesis
+SIM.POST.INCLUDED=1
+SIM.FUNC.INCLUDED=0
+SIM.POST.AUTO=1
+SIM.POST.INDEX=0
+State=Compiled
+[file:.\implement\simulation\custom\top.vho]
+File Time Lo=971211170
+File Time Hi=29644105
+Enabled=1
+SIM.FUNC.INCLUDED=0
+LIB=filter_timing
+State=Compiled
+SIM.TIME.AUTO=1
+SIM.TIME.INCLUDED=1
+SIM.TIME.INDEX=1
+[file:.\implement\simulation\custom\top_vhd.sdo]
+File Time Lo=971679920
+File Time Hi=29644105
+Enabled=1

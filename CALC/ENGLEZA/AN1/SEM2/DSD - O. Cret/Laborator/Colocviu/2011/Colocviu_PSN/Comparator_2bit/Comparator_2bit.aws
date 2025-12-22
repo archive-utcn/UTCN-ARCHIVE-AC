@@ -1,0 +1,14 @@
+[Version]
+Version=6.3
+[Designs]
+Comparator_2bit=Comparator_2bit.adf
+[Settings]
+Active=Comparator_2bit
+[Expand]
+comparator_2bit=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

@@ -1,0 +1,1164 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Reading design: system.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "system.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "system"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : system
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\memory.vhd" into library work
+Parsing entity <letters_ROM>.
+Parsing architecture <letters_ROM_a> of entity <letters_rom>.
+Parsing entity <anim_zero_ROM>.
+Parsing architecture <anim_zero_ROM> of entity <anim_zero_rom>.
+Parsing entity <anim_one_ROM>.
+Parsing architecture <anim_one_ROM_a> of entity <anim_one_rom>.
+Parsing entity <anim_two_ROM>.
+Parsing architecture <anim_two_ROM_a> of entity <anim_two_rom>.
+Parsing entity <anim_three_ROM>.
+Parsing architecture <anim_three_ROM> of entity <anim_three_rom>.
+Parsing entity <anim_four_ROM>.
+Parsing architecture <anim_four_ROM> of entity <anim_four_rom>.
+Parsing entity <anim_five_ROM>.
+Parsing architecture <anim_five_ROM_a> of entity <anim_five_rom>.
+Parsing entity <anim_seven_ROM>.
+Parsing architecture <anim_seven_ROM> of entity <anim_seven_rom>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\miscellaneous.vhd" into library work
+Parsing entity <mux_8>.
+Parsing architecture <mux_8_a> of entity <mux_8>.
+Parsing entity <dmux_8_enable>.
+Parsing architecture <dmux_8_enable_a> of entity <dmux_8_enable>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\displaycontroller.vhd" into library work
+Parsing entity <disp_control>.
+Parsing architecture <disp_control_a> of entity <disp_control>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\clockdividers.vhd" into library work
+Parsing entity <Hz1_Div>.
+Parsing architecture <Hz1_Div_A> of entity <hz1_div>.
+Parsing entity <kHz20_Div>.
+Parsing architecture <kHz20_Div_A> of entity <khz20_div>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation3.vhd" into library work
+Parsing entity <anim_three_counter>.
+Parsing architecture <anim_three_counter> of entity <anim_three_counter>.
+Parsing entity <anim_three>.
+Parsing architecture <anim_three> of entity <anim_three>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation2.vhd" into library work
+Parsing entity <anim_two_counter>.
+Parsing architecture <anim_two_counter_a> of entity <anim_two_counter>.
+Parsing entity <anim_two>.
+Parsing architecture <anim_two_a> of entity <anim_two>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation1.vhd" into library work
+Parsing entity <anim_one_counter>.
+Parsing architecture <anim_one_counter_a> of entity <anim_one_counter>.
+Parsing entity <anim_one>.
+Parsing architecture <anim_one_a> of entity <anim_one>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation0.vhd" into library work
+Parsing entity <anim_zero_counter>.
+Parsing architecture <anim_zero_counter> of entity <anim_zero_counter>.
+Parsing entity <anim_zero>.
+Parsing architecture <anim_zero> of entity <anim_zero>.
+Parsing VHDL file "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\system.vhd" into library work
+Parsing entity <system>.
+Parsing architecture <system_a> of entity <system>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system> (architecture <system_a>) from library <work>.
+
+Elaborating entity <Hz1_Div> (architecture <Hz1_Div_A>) from library <work>.
+
+Elaborating entity <kHz20_Div> (architecture <kHz20_Div_A>) from library <work>.
+
+Elaborating entity <disp_control> (architecture <disp_control_a>) from library <work>.
+
+Elaborating entity <letters_ROM> (architecture <letters_ROM_a>) from library <work>.
+
+Elaborating entity <dmux_8_enable> (architecture <dmux_8_enable_a>) from library <work>.
+
+Elaborating entity <mux_8> (architecture <mux_8_a>) from library <work>.
+
+Elaborating entity <anim_zero> (architecture <anim_zero>) from library <work>.
+
+Elaborating entity <anim_zero_ROM> (architecture <anim_zero_ROM>) from library <work>.
+
+Elaborating entity <anim_zero_counter> (architecture <anim_zero_counter>) from library <work>.
+
+Elaborating entity <anim_one> (architecture <anim_one_a>) from library <work>.
+
+Elaborating entity <anim_one_ROM> (architecture <anim_one_ROM_a>) from library <work>.
+
+Elaborating entity <anim_one_counter> (architecture <anim_one_counter_a>) from library <work>.
+
+Elaborating entity <anim_two> (architecture <anim_two_a>) from library <work>.
+
+Elaborating entity <anim_two_ROM> (architecture <anim_two_ROM_a>) from library <work>.
+
+Elaborating entity <anim_two_counter> (architecture <anim_two_counter_a>) from library <work>.
+
+Elaborating entity <anim_three> (architecture <anim_three>) from library <work>.
+
+Elaborating entity <anim_three_ROM> (architecture <anim_three_ROM>) from library <work>.
+
+Elaborating entity <anim_three_counter> (architecture <anim_three_counter>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation3.vhd" Line 68: state should be on the sensitivity list of the process
+WARNING:HDLCompiler:89 - "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\system.vhd" Line 115: <anim_four> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\system.vhd" Line 123: <anim_five> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\system.vhd" Line 132: <anim_sixv2> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\system.vhd" Line 140: <anim_seven> remains a black-box since it has no binding entity.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\system.vhd".
+    Summary:
+	no macro.
+Unit <system> synthesized.
+
+Synthesizing Unit <Hz1_Div>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\clockdividers.vhd".
+    Found 1-bit register for signal <New_CLK>.
+    Found 1-bit register for signal <k>.
+    Found 25-bit register for signal <count>.
+    Found 25-bit adder for signal <count[24]_GND_6_o_add_1_OUT> created at line 28.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Hz1_Div> synthesized.
+
+Synthesizing Unit <kHz20_Div>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\clockdividers.vhd".
+    Found 1-bit register for signal <New_CLK>.
+    Found 1-bit register for signal <k>.
+    Found 12-bit register for signal <count>.
+    Found 12-bit adder for signal <count[11]_GND_7_o_add_1_OUT> created at line 62.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <kHz20_Div> synthesized.
+
+Synthesizing Unit <disp_control>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\displaycontroller.vhd".
+    Found 4-bit register for signal <c>.
+    Found finite state machine <FSM_0> for signal <c>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 1110                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <disp_control> synthesized.
+
+Synthesizing Unit <letters_ROM>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\memory.vhd".
+WARNING:Xst:2999 - Signal 'mMap', unconnected in block 'letters_ROM', is tied to its initial value.
+    Found 8x8-bit single-port Read Only RAM <Mram_mMap> for signal <mMap>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <letters_ROM> synthesized.
+
+Synthesizing Unit <dmux_8_enable>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\miscellaneous.vhd".
+    Summary:
+	no macro.
+Unit <dmux_8_enable> synthesized.
+
+Synthesizing Unit <mux_8>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\miscellaneous.vhd".
+    Summary:
+	no macro.
+Unit <mux_8> synthesized.
+
+Synthesizing Unit <anim_zero>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation0.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred  30 Multiplexer(s).
+Unit <anim_zero> synthesized.
+
+Synthesizing Unit <anim_zero_ROM>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\memory.vhd".
+WARNING:Xst:2999 - Signal 'mMap', unconnected in block 'anim_zero_ROM', is tied to its initial value.
+    Found 8x12-bit single-port Read Only RAM <Mram_mMap> for signal <mMap>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <anim_zero_ROM> synthesized.
+
+Synthesizing Unit <anim_zero_counter>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation0.vhd".
+    Found 3-bit register for signal <c>.
+    Found 3-bit adder for signal <c[2]_GND_15_o_add_1_OUT> created at line 23.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <anim_zero_counter> synthesized.
+
+Synthesizing Unit <anim_one>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation1.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred  30 Multiplexer(s).
+Unit <anim_one> synthesized.
+
+Synthesizing Unit <anim_one_ROM>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\memory.vhd".
+WARNING:Xst:2999 - Signal 'mMap', unconnected in block 'anim_one_ROM', is tied to its initial value.
+    Found 8x12-bit single-port Read Only RAM <Mram_mMap> for signal <mMap>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <anim_one_ROM> synthesized.
+
+Synthesizing Unit <anim_one_counter>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation1.vhd".
+    Found 3-bit register for signal <c>.
+    Found 3-bit adder for signal <c[2]_GND_21_o_add_1_OUT> created at line 22.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <anim_one_counter> synthesized.
+
+Synthesizing Unit <anim_two>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation2.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred  30 Multiplexer(s).
+Unit <anim_two> synthesized.
+
+Synthesizing Unit <anim_two_ROM>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\memory.vhd".
+WARNING:Xst:2999 - Signal 'mMap', unconnected in block 'anim_two_ROM', is tied to its initial value.
+    Found 8x12-bit single-port Read Only RAM <Mram_mMap> for signal <mMap>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <anim_two_ROM> synthesized.
+
+Synthesizing Unit <anim_two_counter>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation2.vhd".
+    Found 3-bit register for signal <c>.
+    Found 3-bit adder for signal <c[2]_GND_27_o_add_1_OUT> created at line 22.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <anim_two_counter> synthesized.
+
+Synthesizing Unit <anim_three>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation3.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <anim_out_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred  63 Multiplexer(s).
+Unit <anim_three> synthesized.
+
+Synthesizing Unit <anim_three_ROM>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\memory.vhd".
+WARNING:Xst:2999 - Signal 'mMap', unconnected in block 'anim_three_ROM', is tied to its initial value.
+    Found 8x12-bit single-port Read Only RAM <Mram_mMap> for signal <mMap>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <anim_three_ROM> synthesized.
+
+Synthesizing Unit <anim_three_counter>.
+    Related source file is "D:\semestrul 2\VHDL\ProiectReclama\VHDL Source\animation3.vhd".
+    Found 3-bit register for signal <c>.
+    Found 3-bit adder for signal <c[2]_GND_33_o_add_1_OUT> created at line 23.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <anim_three_counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 8x12-bit single-port Read Only RAM                    : 4
+ 8x8-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 6
+ 12-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 3-bit adder                                           : 4
+# Registers                                            : 10
+ 1-bit register                                        : 4
+ 12-bit register                                       : 1
+ 25-bit register                                       : 1
+ 3-bit register                                        : 4
+# Latches                                              : 12
+ 1-bit latch                                           : 12
+# Multiplexers                                         : 159
+ 1-bit 2-to-1 multiplexer                              : 153
+ 12-bit 2-to-1 multiplexer                             : 1
+ 25-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <k> in Unit <DivFrecvAnim> is equivalent to the following FF/Latch, which will be removed : <New_CLK> 
+INFO:Xst:2261 - The FF/Latch <k> in Unit <DivFrecvDisp> is equivalent to the following FF/Latch, which will be removed : <New_CLK> 
+
+Synthesizing (advanced) Unit <Hz1_Div>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Hz1_Div> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_one_ROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mMap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <A>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <anim_one_ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_one_counter>.
+The following registers are absorbed into counter <c>: 1 register on signal <c>.
+Unit <anim_one_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_three_ROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mMap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <A>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <anim_three_ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_three_counter>.
+The following registers are absorbed into counter <c>: 1 register on signal <c>.
+Unit <anim_three_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_two_ROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mMap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <A>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <anim_two_ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_two_counter>.
+The following registers are absorbed into counter <c>: 1 register on signal <c>.
+Unit <anim_two_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_zero_ROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mMap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 12-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <A>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <anim_zero_ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <anim_zero_counter>.
+The following registers are absorbed into counter <c>: 1 register on signal <c>.
+Unit <anim_zero_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <kHz20_Div>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <kHz20_Div> synthesized (advanced).
+
+Synthesizing (advanced) Unit <letters_ROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mMap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <A>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <letters_ROM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 8x12-bit single-port distributed Read Only RAM        : 4
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 6
+ 12-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+ 3-bit up counter                                      : 4
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Multiplexers                                         : 153
+ 1-bit 2-to-1 multiplexer                              : 153
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <New_CLK> in Unit <Hz1_Div> is equivalent to the following FF/Latch, which will be removed : <k> 
+INFO:Xst:2261 - The FF/Latch <New_CLK> in Unit <kHz20_Div> is equivalent to the following FF/Latch, which will be removed : <k> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <c[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 1110  | 1110
+ 0111  | 0111
+ 1011  | 1011
+ 1101  | 1101
+-------------------
+WARNING:Xst:1710 - FF/Latch <anim_out_addr_2> (without init value) has a constant value of 0 in block <anim_zero>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <anim_out_addr_2> (without init value) has a constant value of 0 in block <anim_one>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <anim_out_addr_2> (without init value) has a constant value of 0 in block <anim_two>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <system> ...
+
+Optimizing unit <anim_one> ...
+
+Optimizing unit <anim_two> ...
+WARNING:Xst:2677 - Node <COUNT/c_1> of sequential type is unconnected in block <anim_two>.
+WARNING:Xst:2677 - Node <COUNT/c_2> of sequential type is unconnected in block <anim_two>.
+WARNING:Xst:2677 - Node <COUNT/c_1> of sequential type is unconnected in block <anim_two>.
+WARNING:Xst:2677 - Node <COUNT/c_2> of sequential type is unconnected in block <anim_two>.
+
+Optimizing unit <anim_three> ...
+INFO:Xst:2261 - The FF/Latch <Animation1/COUNT/c_0> in Unit <system> is equivalent to the following 2 FFs/Latches, which will be removed : <Animation2/COUNT/c_0> <Animation3/COUNT/c_0> 
+INFO:Xst:2261 - The FF/Latch <Animation1/COUNT/c_1> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <Animation3/COUNT/c_1> 
+INFO:Xst:2261 - The FF/Latch <Animation1/COUNT/c_2> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <Animation3/COUNT/c_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block system, actual ratio is 2.
+FlipFlop DivFrecvAnim/count_23 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 211
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 35
+#      LUT2                        : 2
+#      LUT3                        : 20
+#      LUT4                        : 5
+#      LUT5                        : 13
+#      LUT6                        : 56
+#      MUXCY                       : 35
+#      MUXF7                       : 3
+#      VCC                         : 1
+#      XORCY                       : 37
+# FlipFlops/Latches                : 56
+#      FDC                         : 42
+#      FDCE                        : 2
+#      FDP                         : 3
+#      LDC                         : 9
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 22
+#      IBUF                        : 10
+#      OBUF                        : 12
+# Others                           : 4
+#      anim_five                   : 1
+#      anim_four                   : 1
+#      anim_seven                  : 1
+#      anim_sixv2                  : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              56  out of  18224     0%  
+ Number of Slice LUTs:                  134  out of   9112     1%  
+    Number used as Logic:               134  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    137
+   Number with an unused Flip Flop:      81  out of    137    59%  
+   Number with an unused LUT:             3  out of    137     2%  
+   Number of fully used LUT-FF pairs:    53  out of    137    38%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)              | Load  |
+-----------------------------------+------------------------------------+-------+
+boardCLK                           | IBUF+BUFG                          | 40    |
+DivFrecvDisp/New_CLK               | NONE(DisplayController/c_FSM_FFd4) | 4     |
+anim_1_enbl(EnableDMUX/_n0037:O)   | NONE(*)(Animation0/anim_out_addr_1)| 2     |
+DivFrecvAnim/New_CLK               | NONE(Animation1/COUNT/c_2)         | 3     |
+anim_2_enbl(anim_2_enbl1:O)        | NONE(*)(Animation1/anim_out_addr_1)| 2     |
+anim_3_enbl(anim_3_enbl1:O)        | NONE(*)(Animation2/anim_out_addr_1)| 2     |
+anim_4_enbl(anim_4_enbl:O)         | NONE(*)(Animation3/anim_out_addr_2)| 3     |
+-----------------------------------+------------------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.264ns (Maximum Frequency: 306.363MHz)
+   Minimum input arrival time before clock: 3.239ns
+   Maximum output required time after clock: 7.632ns
+   Maximum combinational path delay: 10.748ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'boardCLK'
+  Clock period: 3.264ns (frequency: 306.363MHz)
+  Total number of paths / destination ports: 1260 / 42
+-------------------------------------------------------------------------
+Delay:               3.264ns (Levels of Logic = 24)
+  Source:            DivFrecvAnim/count_0 (FF)
+  Destination:       DivFrecvAnim/count_21 (FF)
+  Source Clock:      boardCLK rising
+  Destination Clock: boardCLK rising
+
+  Data Path: DivFrecvAnim/count_0 to DivFrecvAnim/count_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.650  DivFrecvAnim/count_0 (DivFrecvAnim/count_0)
+     INV:I->O              1   0.206   0.000  DivFrecvAnim/Mcount_count_lut<0>_INV_0 (DivFrecvAnim/Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  DivFrecvAnim/Mcount_count_cy<0> (DivFrecvAnim/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<1> (DivFrecvAnim/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<2> (DivFrecvAnim/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<3> (DivFrecvAnim/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<4> (DivFrecvAnim/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<5> (DivFrecvAnim/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<6> (DivFrecvAnim/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<7> (DivFrecvAnim/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<8> (DivFrecvAnim/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<9> (DivFrecvAnim/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<10> (DivFrecvAnim/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<11> (DivFrecvAnim/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<12> (DivFrecvAnim/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<13> (DivFrecvAnim/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<14> (DivFrecvAnim/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<15> (DivFrecvAnim/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<16> (DivFrecvAnim/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<17> (DivFrecvAnim/Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<18> (DivFrecvAnim/Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<19> (DivFrecvAnim/Mcount_count_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  DivFrecvAnim/Mcount_count_cy<20> (DivFrecvAnim/Mcount_count_cy<20>)
+     XORCY:CI->O           1   0.180   0.924  DivFrecvAnim/Mcount_count_xor<21> (Result<21>)
+     LUT6:I1->O            1   0.203   0.000  DivFrecvAnim/Mcount_count_eqn_211 (DivFrecvAnim/Mcount_count_eqn_21)
+     FDC:D                     0.102          DivFrecvAnim/count_21
+    ----------------------------------------
+    Total                      3.264ns (1.690ns logic, 1.574ns route)
+                                       (51.8% logic, 48.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DivFrecvDisp/New_CLK'
+  Clock period: 1.530ns (frequency: 653.637MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               1.530ns (Levels of Logic = 0)
+  Source:            DisplayController/c_FSM_FFd4 (FF)
+  Destination:       DisplayController/c_FSM_FFd3 (FF)
+  Source Clock:      DivFrecvDisp/New_CLK rising
+  Destination Clock: DivFrecvDisp/New_CLK rising
+
+  Data Path: DisplayController/c_FSM_FFd4 to DisplayController/c_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.447   0.981  DisplayController/c_FSM_FFd4 (DisplayController/c_FSM_FFd4)
+     FDP:D                     0.102          DisplayController/c_FSM_FFd3
+    ----------------------------------------
+    Total                      1.530ns (0.549ns logic, 0.981ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DivFrecvAnim/New_CLK'
+  Clock period: 2.266ns (frequency: 441.248MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               2.266ns (Levels of Logic = 1)
+  Source:            Animation1/COUNT/c_0 (FF)
+  Destination:       Animation1/COUNT/c_0 (FF)
+  Source Clock:      DivFrecvAnim/New_CLK rising
+  Destination Clock: DivFrecvAnim/New_CLK rising
+
+  Data Path: Animation1/COUNT/c_0 to Animation1/COUNT/c_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             13   0.447   0.932  Animation1/COUNT/c_0 (Animation1/COUNT/c_0)
+     INV:I->O              1   0.206   0.579  Animation1/COUNT/Mcount_c_xor<0>11_INV_0 (Animation1/COUNT/Mcount_c)
+     FDC:D                     0.102          Animation1/COUNT/c_0
+    ----------------------------------------
+    Total                      2.266ns (0.755ns logic, 1.511ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'boardCLK'
+  Total number of paths / destination ports: 40 / 40
+-------------------------------------------------------------------------
+Offset:              3.239ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       DivFrecvAnim/New_CLK (FF)
+  Destination Clock: boardCLK rising
+
+  Data Path: RST to DivFrecvAnim/New_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.587  RST_IBUF (RST_IBUF)
+     FDCE:CLR                  0.430          DivFrecvAnim/New_CLK
+    ----------------------------------------
+    Total                      3.239ns (1.652ns logic, 1.587ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DivFrecvDisp/New_CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.239ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       DisplayController/c_FSM_FFd4 (FF)
+  Destination Clock: DivFrecvDisp/New_CLK rising
+
+  Data Path: RST to DisplayController/c_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.587  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.430          DisplayController/c_FSM_FFd4
+    ----------------------------------------
+    Total                      3.239ns (1.652ns logic, 1.587ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'anim_1_enbl'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.239ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       Animation0/anim_out_addr_1 (LATCH)
+  Destination Clock: anim_1_enbl falling
+
+  Data Path: RST to Animation0/anim_out_addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.587  RST_IBUF (RST_IBUF)
+     LDC:CLR                   0.430          Animation0/anim_out_addr_0
+    ----------------------------------------
+    Total                      3.239ns (1.652ns logic, 1.587ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DivFrecvAnim/New_CLK'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.239ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       Animation1/COUNT/c_2 (FF)
+  Destination Clock: DivFrecvAnim/New_CLK rising
+
+  Data Path: RST to Animation1/COUNT/c_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.587  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.430          Animation1/COUNT/c_0
+    ----------------------------------------
+    Total                      3.239ns (1.652ns logic, 1.587ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'anim_2_enbl'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.239ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       Animation1/anim_out_addr_1 (LATCH)
+  Destination Clock: anim_2_enbl falling
+
+  Data Path: RST to Animation1/anim_out_addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.587  RST_IBUF (RST_IBUF)
+     LDC:CLR                   0.430          Animation1/anim_out_addr_0
+    ----------------------------------------
+    Total                      3.239ns (1.652ns logic, 1.587ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'anim_3_enbl'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.239ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       Animation2/anim_out_addr_1 (LATCH)
+  Destination Clock: anim_3_enbl falling
+
+  Data Path: RST to Animation2/anim_out_addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.587  RST_IBUF (RST_IBUF)
+     LDC:CLR                   0.430          Animation2/anim_out_addr_0
+    ----------------------------------------
+    Total                      3.239ns (1.652ns logic, 1.587ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'anim_4_enbl'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.239ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       Animation3/anim_out_addr_2 (LATCH)
+  Destination Clock: anim_4_enbl falling
+
+  Data Path: RST to Animation3/anim_out_addr_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.587  RST_IBUF (RST_IBUF)
+     LDC:CLR                   0.430          Animation3/anim_out_addr_0
+    ----------------------------------------
+    Total                      3.239ns (1.652ns logic, 1.587ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DivFrecvDisp/New_CLK'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              3.999ns (Levels of Logic = 1)
+  Source:            DisplayController/c_FSM_FFd2 (FF)
+  Destination:       DISPcontrol<2> (PAD)
+  Source Clock:      DivFrecvDisp/New_CLK rising
+
+  Data Path: DisplayController/c_FSM_FFd2 to DISPcontrol<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             15   0.447   0.981  DisplayController/c_FSM_FFd2 (DisplayController/c_FSM_FFd2)
+     OBUF:I->O                 2.571          DISPcontrol_2_OBUF (DISPcontrol<2>)
+    ----------------------------------------
+    Total                      3.999ns (3.018ns logic, 0.981ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'anim_4_enbl'
+  Total number of paths / destination ports: 18 / 7
+-------------------------------------------------------------------------
+Offset:              5.863ns (Levels of Logic = 3)
+  Source:            Animation3/anim_out_addr_1 (LATCH)
+  Destination:       DISPdata<2> (PAD)
+  Source Clock:      anim_4_enbl falling
+
+  Data Path: Animation3/anim_out_addr_1 to DISPdata<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.864  Animation3/anim_out_addr_1 (Animation3/anim_out_addr_1)
+     LUT5:I1->O            5   0.203   0.943  AddressMUX/O<1>4 (memPath<1>)
+     LUT3:I0->O            1   0.205   0.579  CharacterMemory/Mram_mMap21 (DISPdata_2_OBUF)
+     OBUF:I->O                 2.571          DISPdata_2_OBUF (DISPdata<2>)
+    ----------------------------------------
+    Total                      5.863ns (3.477ns logic, 2.386ns route)
+                                       (59.3% logic, 40.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'anim_3_enbl'
+  Total number of paths / destination ports: 11 / 6
+-------------------------------------------------------------------------
+Offset:              7.632ns (Levels of Logic = 5)
+  Source:            Animation2/anim_out_addr_1 (LATCH)
+  Destination:       DISPdata<2> (PAD)
+  Source Clock:      anim_3_enbl falling
+
+  Data Path: Animation2/anim_out_addr_1 to DISPdata<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.684  Animation2/anim_out_addr_1 (Animation2/anim_out_addr_1)
+     LUT6:I4->O            1   0.203   0.580  AddressMUX/O<1>1 (AddressMUX/O<1>)
+     LUT6:I5->O            2   0.205   0.961  AddressMUX/O<1>3 (AddressMUX/O<1>2)
+     LUT5:I0->O            5   0.203   0.943  AddressMUX/O<1>4 (memPath<1>)
+     LUT3:I0->O            1   0.205   0.579  CharacterMemory/Mram_mMap21 (DISPdata_2_OBUF)
+     OBUF:I->O                 2.571          DISPdata_2_OBUF (DISPdata<2>)
+    ----------------------------------------
+    Total                      7.632ns (3.885ns logic, 3.747ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'anim_2_enbl'
+  Total number of paths / destination ports: 11 / 6
+-------------------------------------------------------------------------
+Offset:              7.530ns (Levels of Logic = 5)
+  Source:            Animation1/anim_out_addr_1 (LATCH)
+  Destination:       DISPdata<2> (PAD)
+  Source Clock:      anim_2_enbl falling
+
+  Data Path: Animation1/anim_out_addr_1 to DISPdata<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.580  Animation1/anim_out_addr_1 (Animation1/anim_out_addr_1)
+     LUT6:I5->O            1   0.205   0.580  AddressMUX/O<1>1 (AddressMUX/O<1>)
+     LUT6:I5->O            2   0.205   0.961  AddressMUX/O<1>3 (AddressMUX/O<1>2)
+     LUT5:I0->O            5   0.203   0.943  AddressMUX/O<1>4 (memPath<1>)
+     LUT3:I0->O            1   0.205   0.579  CharacterMemory/Mram_mMap21 (DISPdata_2_OBUF)
+     OBUF:I->O                 2.571          DISPdata_2_OBUF (DISPdata<2>)
+    ----------------------------------------
+    Total                      7.530ns (3.887ns logic, 3.643ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'anim_1_enbl'
+  Total number of paths / destination ports: 11 / 6
+-------------------------------------------------------------------------
+Offset:              5.618ns (Levels of Logic = 3)
+  Source:            Animation0/anim_out_addr_1 (LATCH)
+  Destination:       DISPdata<2> (PAD)
+  Source Clock:      anim_1_enbl falling
+
+  Data Path: Animation0/anim_out_addr_1 to DISPdata<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.617  Animation0/anim_out_addr_1 (Animation0/anim_out_addr_1)
+     LUT5:I4->O            5   0.205   0.943  AddressMUX/O<1>4 (memPath<1>)
+     LUT3:I0->O            1   0.205   0.579  CharacterMemory/Mram_mMap21 (DISPdata_2_OBUF)
+     OBUF:I->O                 2.571          DISPdata_2_OBUF (DISPdata<2>)
+    ----------------------------------------
+    Total                      5.618ns (3.479ns logic, 2.139ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'boardCLK'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.130ns (Levels of Logic = 0)
+  Source:            DivFrecvAnim/New_CLK (FF)
+  Destination:       Animation5:CLK (PAD)
+  Source Clock:      boardCLK rising
+
+  Data Path: DivFrecvAnim/New_CLK to Animation5:CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.447   0.683  DivFrecvAnim/New_CLK (DivFrecvAnim/New_CLK)
+    anim_five:CLK              0.000          Animation5
+    ----------------------------------------
+    Total                      1.130ns (0.447ns logic, 0.683ns route)
+                                       (39.6% logic, 60.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1335 / 18
+-------------------------------------------------------------------------
+Delay:               10.748ns (Levels of Logic = 8)
+  Source:            CONTROL<4> (PAD)
+  Destination:       DISPdata<2> (PAD)
+
+  Data Path: CONTROL<4> to DISPdata<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.077  CONTROL_4_IBUF (CONTROL_4_IBUF)
+     LUT5:I1->O            6   0.203   0.745  AddressMUX/_n002211 (AddressMUX/_n00221)
+     LUT4:I3->O            3   0.205   1.015  anim_3_enbl1 (anim_3_enbl)
+     LUT6:I0->O            2   0.203   0.617  AddressMUX/_n0022_SW0 (N01)
+     LUT6:I5->O            3   0.205   0.755  AddressMUX/_n0022 (AddressMUX/_n0022)
+     LUT5:I3->O            5   0.203   0.943  AddressMUX/O<0>4 (memPath<0>)
+     LUT3:I0->O            1   0.205   0.579  CharacterMemory/Mram_mMap11 (DISPdata_0_OBUF)
+     OBUF:I->O                 2.571          DISPdata_0_OBUF (DISPdata<0>)
+    ----------------------------------------
+    Total                     10.748ns (5.017ns logic, 5.731ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock DivFrecvAnim/New_CLK
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DivFrecvAnim/New_CLK|    2.266|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DivFrecvDisp/New_CLK
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DivFrecvDisp/New_CLK|    1.530|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock anim_1_enbl
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DivFrecvDisp/New_CLK|         |         |    1.916|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock anim_2_enbl
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DivFrecvAnim/New_CLK|         |         |    2.039|         |
+DivFrecvDisp/New_CLK|         |         |    2.153|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock anim_3_enbl
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DivFrecvAnim/New_CLK|         |         |    1.867|         |
+DivFrecvDisp/New_CLK|         |         |    2.013|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock anim_4_enbl
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+DivFrecvAnim/New_CLK|         |         |    2.938|         |
+DivFrecvDisp/New_CLK|         |         |    2.798|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock boardCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |    3.264|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.85 secs
+ 
+--> 
+
+Total memory usage is 236160 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

@@ -1,0 +1,1 @@
+-w -s "D:\ralu-poli\psn_lucrare\media\library.cfg"  -j "D:\ralu-poli\psn_lucrare\media\med\projlib.cfg"  -d "D:\ralu-poli\psn_lucrare\media\med\compile\"  -work med -dbg -e 100 "D:\ralu-poli\psn_lucrare\media\med\src\mmm.vhd" 

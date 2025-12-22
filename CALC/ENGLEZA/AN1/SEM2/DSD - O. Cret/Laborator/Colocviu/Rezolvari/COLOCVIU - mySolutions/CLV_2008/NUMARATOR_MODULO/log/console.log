@@ -1,0 +1,108 @@
+acom $DSN/src/NUMARATOR_MODULO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\NUMARATOR_MODULO\src\NUMARATOR_MODULO.vhd
+# Compile Entity "counter"
+# Error: COMP96_0078: NUMARATOR_MODULO.vhd : (9, 36): Unknown identifier "ceil".
+# Error: COMP96_0078: NUMARATOR_MODULO.vhd : (9, 41): Unknown identifier "log2".
+# Error: COMP96_0133: NUMARATOR_MODULO.vhd : (9, 41): Cannot find object declaration.
+# Error: COMP96_0133: NUMARATOR_MODULO.vhd : (9, 36): Cannot find object declaration.
+# Error: COMP96_0289: NUMARATOR_MODULO.vhd : (9, 36): Prefix of index must be an array.
+# Error: COMP96_0149: NUMARATOR_MODULO.vhd : (9, 36): Explicit type conversions are allowed between closely related types only.
+# Compile Architecture "arh" of Entity "counter"
+# Error: COMP96_0015: NUMARATOR_MODULO.vhd : (15, 76): ';' expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/NUMARATOR_MODULO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\NUMARATOR_MODULO\src\NUMARATOR_MODULO.vhd
+# Compile Entity "counter"
+# Compile Architecture "arh" of Entity "counter"
+# Error: COMP96_0015: NUMARATOR_MODULO.vhd : (16, 76): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [s]
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/NUMARATOR_MODULO.vhd.
+# Error: ULM_0021: Architecture "a" is not up-to-date. Please, recompile file: ./src/NUMARATOR_MODULO.vhd.
+# Clearing workspace libraries...
+# Library Manager: Library "c2421_bcd" contents cleared.
+# Library Manager: Library "bcd_gray" contents cleared.
+# Library Manager: Library "alu" contents cleared.
+# Library Manager: Library "comparator_comportamental" contents cleared.
+# Library Manager: Library "codificator_zecimal_bcd" contents cleared.
+# Library Manager: Library "comparator_structural" contents cleared.
+# Library Manager: Library "comparator_data_flow" contents cleared.
+# Library Manager: Library "decodificator_bcd_zecimal" contents cleared.
+# Library Manager: Library "d_ff" contents cleared.
+# Library Manager: Library "decodificator_bcd_binar" contents cleared.
+# Library Manager: Library "excess3_bcd" contents cleared.
+# Library Manager: Library "dmux_generic_1_la_8" contents cleared.
+# Library Manager: Library "generator_pseudoaleatoare" contents cleared.
+# Library Manager: Library "fifo_4x4" contents cleared.
+# Library Manager: Library "ms_mux_4x1" contents cleared.
+# Library Manager: Library "ms_d_ff" contents cleared.
+# Library Manager: Library "memorie_ram_16x4" contents cleared.
+# Library Manager: Library "lifo" contents cleared.
+# Library Manager: Library "jk_ff" contents cleared.
+# Library Manager: Library "memorie_rom_16x4" contents cleared.
+# Library Manager: Library "ms_comparator_1bit" contents cleared.
+# Library Manager: Library "ms_jk_ff" contents cleared.
+# Library Manager: Library "ms_dmux_4x1" contents cleared.
+# Library Manager: Library "mux_8_la_1_generic" contents cleared.
+# Library Manager: Library "ms_sumator_complet_1bit" contents cleared.
+# Library Manager: Library "ms_registru" contents cleared.
+# Library Manager: Library "ms_scazator_1bit" contents cleared.
+# Library Manager: Library "ms_t_ff" contents cleared.
+# Library Manager: Library "numarator_binar" contents cleared.
+# Library Manager: Library "nu_si_sau_si_nu_sau_nu_comportamental" contents cleared.
+# Library Manager: Library "numarator_zecimal" contents cleared.
+# Library Manager: Library "numarator_modulo" contents cleared.
+# Library Manager: Library "registru_universal" contents cleared.
+# Library Manager: Library "t_ff" contents cleared.
+# Library Manager: Library "xor_nxor_structural" contents cleared.
+acom -reorder $DSN/src/NUMARATOR_MODULO.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CLV_2008\NUMARATOR_MODULO\src\NUMARATOR_MODULO.vhd
+# Compile Entity "counter"
+# Compile Architecture "arh" of Entity "counter"
+# Error: COMP96_0015: NUMARATOR_MODULO.vhd : (16, 76): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/NUMARATOR_MODULO.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\NUMARATOR_MODULO\src\NUMARATOR_MODULO.vhd
+# Compile Entity "counter"
+# Entity `counter' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "counter"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  counter arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2466 kB (elbread=1070 elab2=348 kernel=1048 sdf=0)
+# 9:54 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: counter (arh)
+# Signal rst not found in design
+# Signal clk not found in design
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# Simulation has been stopped
+# Design: Design "MS_SCAZATOR_1BIT" has been set as active.

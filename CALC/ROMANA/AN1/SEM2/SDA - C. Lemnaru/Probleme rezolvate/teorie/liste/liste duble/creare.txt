@@ -1,0 +1,16 @@
+void creare(tip_nod **prim,tip_nod **ultim)
+{
+prim=0;
+ultim=0;
+//dupa alocare spatiu:
+if(prim= =0){ /* este primul nod în listã */3
+prim = p; ultim = p;
+p -> urm = 0; p -> prec = 0;
+}
+else {	/* lista nu este vidã */
+ultim -> urm = p; p -> prec = ultim;
+p -> urm = 0; p -> prec = ultim;
+ultim = p;
+}
+
+}

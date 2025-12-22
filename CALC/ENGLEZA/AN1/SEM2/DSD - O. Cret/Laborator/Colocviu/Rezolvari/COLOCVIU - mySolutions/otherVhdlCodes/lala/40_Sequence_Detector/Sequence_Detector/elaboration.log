@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Tue May 23 20:16:25 2017
+
+
+------------------------------------------
+Entity  | Architecture | Library        
+------------------------------------------
+detect  | a            | Sequence_Detector
+r       | a            | sequence_detector
+gate    | a            | sequence_detector
+------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

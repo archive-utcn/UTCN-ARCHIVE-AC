@@ -1,0 +1,11 @@
+103
+~E 1 "./src/PORTI.vhd" 43 not_and_gate
+~A 1 "./src/PORTI.vhd" 48 arh
+~E 1 "./src/PORTI.vhd" 17 and_gate
+~A 1 "./src/PORTI.vhd" 22 arh
+~E 1 "./src/PORTI.vhd" 56 not_or_gate
+~A 1 "./src/PORTI.vhd" 61 arh
+~E 1 "./src/PORTI.vhd" 4 not_gate
+~A 1 "./src/PORTI.vhd" 9 arh
+~E 1 "./src/PORTI.vhd" 30 or_gate
+~A 1 "./src/PORTI.vhd" 35 arh

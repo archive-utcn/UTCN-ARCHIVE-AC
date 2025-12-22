@@ -1,0 +1,9 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+$ENDTIME 100000
+I 1 "a#25#BIT_VECTOR(1 to input_nr)1 rict1 5 e#3#bitc2 01"
+I 2 "e#3#bitc2 01"
+$BUS IN 21 1 5 input
+$SC 1-17/4
+$OUT +5 2 y
+$ENDWAVE

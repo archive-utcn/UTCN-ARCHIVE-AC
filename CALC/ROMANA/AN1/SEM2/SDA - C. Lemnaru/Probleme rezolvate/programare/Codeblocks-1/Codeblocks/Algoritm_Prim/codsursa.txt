@@ -1,0 +1,93 @@
+# include <stdio.h>
+# include <conio.h>
+# include <values.h>
+
+typedef struct min
+     {
+      int lin,col;
+     }min;
+
+int n,a[50][50],m[50][50];
+
+void afisare(int a[50][50],int n)
+{
+  int i,j;
+  for(i=1;i<=n;i++)
+    {
+      for(j=1;j<=n;j++)
+ printf("%6d",a[i][j]);
+      printf("\n");
+    }
+}
+
+int in(int v[50],int n,int x)
+{
+    int i;
+  for(i=1;i<=n;i++)
+    if (v[i]==x) return 1;
+  return 0;
+}
+
+min minim(int v[50],int k)
+{
+  min min0;
+  int i,j;
+  int min1=22222;
+  for(i=1;i<=k;i++)
+    for(j=1;j<=n;j++)
+      if (m[v[i]][j]<min1 && m[v[i]][j]!=0 && in(v,k,j)==0)
+           {
+              min0.lin=v[i];
+              min0.col=j;
+              min1=m[v[i]][j];
+           }
+  return min0;
+}
+
+void main(void)
+{
+  int t[50][50],vec[50],i,j,v,s,k,x,y;
+  FILE *f;
+  f=fopen("fis2.txt","r");
+  fscanf(f,"%d",&n);
+  for(i=1;i<=n;i++)
+    for(j=1;j<=n;j++)
+       fscanf(f,"%d",&a[i][j]);
+  printf("\n graful are %d noduri,matricea sa de adiacenta fiind:\n",n);
+  afisare(a,n);
+  for(i=1;i<=n;i++) m[i][i]=0;
+  for(i=1;i<n;i++)
+    for(j=i+1;j<=n;j++)
+       if (a[i][j]==1)
+       {
+ printf("\n cat este costul muchiei (%d %d)?",i,j);
+ scanf("%d",&m[i][j]);
+ m[j][i]=m[i][j];
+       }
+ else
+   {
+     m[i][j]=1000;
+     m[j][i]=1000;
+   }
+  printf("\n matricea costurilor este :\n");
+  afisare(m,n);
+  printf("introduceti un nod v (1<=v<=%d)",n);
+  scanf("%d",&v);
+  for(i=1;i<=n;i++)
+    for(j=1;j<=n;j++) t[i][j]=0;
+  k=1;vec[k]=v;
+  for(i=1;i<n;i++)
+     {
+       x=minim(vec,k).lin;
+       y=minim(vec,k).col;
+       t[x][y]=m[x][y];
+       t[y][x]=t[x][y];
+       m[x][y]=1000;
+       m[y][x]=1000;
+       k++;
+       vec[k]=y;
+     }
+  printf("arborele de cost minim rezultat este:\n");
+  afisare(t,n);
+  getch();
+}

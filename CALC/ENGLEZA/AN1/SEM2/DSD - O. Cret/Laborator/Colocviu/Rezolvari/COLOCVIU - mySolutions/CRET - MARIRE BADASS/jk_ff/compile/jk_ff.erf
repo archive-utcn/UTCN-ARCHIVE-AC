@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\jk_ff\src\jk_ff.vhd" 
+MESSAGE "Compile Entity "jk_ff"" 
+MESSAGE "Entity `jk_ff' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "jk_ff"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

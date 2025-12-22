@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int op(int* a, int n, int poz){
+	if (poz < 0 || poz >= n || a[poz] <= 1)
+		return -1;
+	for(int y=2; y*y <= a[poz]; y++){
+		if (a[poz]%y == 0){
+			int x = a[poz]/y;
+			for(int i=n; i>0; i--)
+				a[i] = a[i-1];
+			a[0] = y;
+			a[poz+1] = x;
+			return n+1;			
+		}
+	}	
+	return -1;
+}
+
+int sepoate(int* a, int n, int* b, int m){
+	int L = m - n;
+	if (L < 0)
+		return 0;
+	if (L == 0){
+		for(int i=0; i <n; i++)
+			if (a[i] != b[i])
+				return 0;
+		return 1;
+	}
+	int x[n];
+	for(int i=0; i<n; i++)
+		if (a[i] % b[i + L] == 0)
+			x[i] = a[i] / b[i+L];
+		else
+			return 0;
+	for(int i=0; i < L; i++){
+		int found = 0;
+		for(int j=0; j<n; j++){
+			if (x[j] % b[i] == 0){
+				found = 1;
+				x[j] /= b[i];
+				break;
+			}
+		}
+		if (!found)
+			return 0;
+	}
+	for(int i=0; i<n; i++)
+		if (x[i] > 1)
+			return 0;
+	return 1;
+}
+
+
+int main(){
+	int n, m;
+	scanf("%d%d", &n, &m);
+	int a[n], b[m];
+	for(int i=0; i<n; i++) 
+		scanf("%d", a+i);
+	for(int i=0; i<m; i++) 
+		scanf("%d", b+i);
+	if (sepoate(a, n, b, m))
+		puts("posibil");
+	else
+		puts("nu e posibil");
+	return 0;	
+}

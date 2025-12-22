@@ -1,0 +1,743 @@
+acom -reorder $DSN/src/random.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Error: COMP96_0015: random.vhd : (9, 38): ';' expected.
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0019: random.vhd : (17, 3): Keyword "end" expected.
+# Error: COMP96_0019: random.vhd : (19, 3): Keyword "end" expected.
+# Error: COMP96_0016: random.vhd : (19, 9): Design unit declaration expected.
+# Error: COMP96_0019: random.vhd : (28, 21): Keyword "of" expected.
+# Error: COMP96_0018: random.vhd : (28, 21): Identifier expected.
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (37, 5): Unknown identifier "otu".
+# Error: COMP96_0164: random.vhd : (37, 5): Cannot find resolution function declaration.
+# Compile Architecture "arh" of Entity "xor_g"
+# Error: COMP96_0056: random.vhd : (40, 1): Cannot find referenced entity declaration "xor_g".
+# Compile Entity "random"
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (60, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (61, 18): Keyword "end" expected.
+# Compile failure 11 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Error: COMP96_0078: random.vhd : (8, 11): Unknown identifier "std_logic_vecotr".
+# Error: COMP96_0064: random.vhd : (8, 11): Unknown type.
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0019: random.vhd : (17, 3): Keyword "end" expected.
+# Error: COMP96_0019: random.vhd : (19, 3): Keyword "end" expected.
+# Error: COMP96_0016: random.vhd : (19, 9): Design unit declaration expected.
+# Error: COMP96_0019: random.vhd : (28, 21): Keyword "of" expected.
+# Error: COMP96_0018: random.vhd : (28, 21): Identifier expected.
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (37, 5): Unknown identifier "otu".
+# Error: COMP96_0164: random.vhd : (37, 5): Cannot find resolution function declaration.
+# Compile Architecture "arh" of Entity "xor_g"
+# Error: COMP96_0056: random.vhd : (40, 1): Cannot find referenced entity declaration "xor_g".
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (60, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (61, 18): Keyword "end" expected.
+# Compile failure 12 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0019: random.vhd : (17, 3): Keyword "end" expected.
+# Error: COMP96_0019: random.vhd : (19, 3): Keyword "end" expected.
+# Error: COMP96_0016: random.vhd : (19, 9): Design unit declaration expected.
+# Error: COMP96_0019: random.vhd : (28, 21): Keyword "of" expected.
+# Error: COMP96_0018: random.vhd : (28, 21): Identifier expected.
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (37, 5): Unknown identifier "otu".
+# Error: COMP96_0164: random.vhd : (37, 5): Cannot find resolution function declaration.
+# Compile Architecture "arh" of Entity "xor_g"
+# Error: COMP96_0056: random.vhd : (40, 1): Cannot find referenced entity declaration "xor_g".
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (60, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (61, 18): Keyword "end" expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0019: random.vhd : (17, 3): Keyword "end" expected.
+# Error: COMP96_0019: random.vhd : (20, 3): Keyword "end" expected.
+# Error: COMP96_0016: random.vhd : (20, 9): Design unit declaration expected.
+# Error: COMP96_0019: random.vhd : (29, 21): Keyword "of" expected.
+# Error: COMP96_0018: random.vhd : (29, 21): Identifier expected.
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (38, 5): Unknown identifier "otu".
+# Error: COMP96_0164: random.vhd : (38, 5): Cannot find resolution function declaration.
+# Compile Architecture "arh" of Entity "xor_g"
+# Error: COMP96_0056: random.vhd : (41, 1): Cannot find referenced entity declaration "xor_g".
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (61, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (62, 18): Keyword "end" expected.
+# Compile failure 10 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0015: random.vhd : (17, 25): ';' expected.
+# Error: COMP96_0019: random.vhd : (17, 25): Keyword "end" expected.
+# Error: COMP96_0019: random.vhd : (18, 3): Keyword "end" expected.
+# Error: COMP96_0019: random.vhd : (19, 3): Keyword "end" expected.
+# Error: COMP96_0016: random.vhd : (20, 3): Design unit declaration expected.
+# Error: COMP96_0019: random.vhd : (27, 21): Keyword "of" expected.
+# Error: COMP96_0018: random.vhd : (27, 21): Identifier expected.
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (36, 5): Unknown identifier "otu".
+# Error: COMP96_0164: random.vhd : (36, 5): Cannot find resolution function declaration.
+# Compile Architecture "arh" of Entity "xor_g"
+# Error: COMP96_0056: random.vhd : (39, 1): Cannot find referenced entity declaration "xor_g".
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (59, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (60, 18): Keyword "end" expected.
+# Compile failure 12 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (36, 5): Unknown identifier "otu".
+# Error: COMP96_0164: random.vhd : (36, 5): Cannot find resolution function declaration.
+# Compile Architecture "arh" of Entity "xor_g"
+# Error: COMP96_0056: random.vhd : (39, 1): Cannot find referenced entity declaration "xor_g".
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (59, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (60, 18): Keyword "end" expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (36, 5): Unknown identifier "oout".
+# Error: COMP96_0164: random.vhd : (36, 5): Cannot find resolution function declaration.
+# Compile Architecture "arh" of Entity "xor_g"
+# Error: COMP96_0056: random.vhd : (39, 1): Cannot find referenced entity declaration "xor_g".
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (59, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (60, 18): Keyword "end" expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0015: random.vhd : (59, 38): ';' expected.
+# Error: COMP96_0019: random.vhd : (60, 18): Keyword "end" expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0078: random.vhd : (64, 5): Unknown identifier "otu".
+# Error: COMP96_0164: random.vhd : (64, 5): Cannot find resolution function declaration.
+# Error: COMP96_0066: random.vhd : (70, 6): Cannot find "xor_g" procedure declaration.
+# Error: COMP96_0066: random.vhd : (71, 6): Cannot find "reg" procedure declaration.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0066: random.vhd : (70, 6): Cannot find "xor_g" procedure declaration.
+# Error: COMP96_0066: random.vhd : (71, 6): Cannot find "reg" procedure declaration.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0078: random.vhd : (71, 25): Unknown identifier "load".
+# Error: COMP96_0078: random.vhd : (71, 40): Unknown identifier "data".
+# Error: COMP96_0078: random.vhd : (71, 45): Unknown identifier "q".
+# Error: COMP96_0133: random.vhd : (71, 25): Cannot find object declaration.
+# Error: COMP96_0133: random.vhd : (71, 40): Cannot find object declaration.
+# Error: COMP96_0133: random.vhd : (71, 45): Cannot find object declaration.
+# Error: COMP96_0104: random.vhd : (71, 25): Undefined type of expression.
+# Error: COMP96_0104: random.vhd : (71, 40): Undefined type of expression.
+# Error: COMP96_0104: random.vhd : (71, 45): Undefined type of expression.
+# Compile failure 9 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0078: random.vhd : (70, 21): Unknown identifier "y".
+# Error: COMP96_0078: random.vhd : (70, 26): Unknown identifier "y".
+# Error: COMP96_0133: random.vhd : (70, 21): Cannot find object declaration.
+# Error: COMP96_0289: random.vhd : (70, 21): Prefix of index must be an array.
+# Error: COMP96_0133: random.vhd : (70, 26): Cannot find object declaration.
+# Error: COMP96_0289: random.vhd : (70, 26): Prefix of index must be an array.
+# Error: COMP96_0104: random.vhd : (70, 21): Undefined type of expression.
+# Error: COMP96_0104: random.vhd : (70, 26): Undefined type of expression.
+# Error: COMP96_0078: random.vhd : (71, 25): Unknown identifier "load".
+# Error: COMP96_0078: random.vhd : (71, 40): Unknown identifier "data".
+# Error: COMP96_0133: random.vhd : (71, 25): Cannot find object declaration.
+# Error: COMP96_0133: random.vhd : (71, 40): Cannot find object declaration.
+# Error: COMP96_0104: random.vhd : (71, 25): Undefined type of expression.
+# Error: COMP96_0104: random.vhd : (71, 40): Undefined type of expression.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0078: random.vhd : (71, 25): Unknown identifier "load".
+# Error: COMP96_0078: random.vhd : (71, 40): Unknown identifier "data".
+# Error: COMP96_0133: random.vhd : (71, 25): Cannot find object declaration.
+# Error: COMP96_0133: random.vhd : (71, 40): Cannot find object declaration.
+# Error: COMP96_0104: random.vhd : (71, 25): Undefined type of expression.
+# Error: COMP96_0104: random.vhd : (71, 40): Undefined type of expression.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Compile Architecture "arh" of Entity "random"
+# Error: COMP96_0078: random.vhd : (72, 25): Unknown identifier "load".
+# Error: COMP96_0133: random.vhd : (72, 25): Cannot find object declaration.
+# Error: COMP96_0104: random.vhd : (72, 25): Undefined type of expression.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Compile Architecture "arh" of Entity "random"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  random arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 6:24 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Warning: ELAB1_0026: random.vhd : (71, 0): There is no default binding for component "reg".(Port "reset" is not on the entity).
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Warning: ELAB1_0026: random.vhd : (71, 0): There is no default binding for component "reg".(Port "reset" is not on the entity).
+# Error: COMP96_0100: random.vhd : (71, 34): Actual parameter type in port map does not match the port formal type "sin".
+# Compile failure 1 Errors 1 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Compile Architecture "arh" of Entity "random"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  random arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2419 kB (elbread=1070 elab2=300 kernel=1049 sdf=0)
+# 6:28 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+# Signal reset not found in design
+# Signal sin not found in design
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2419 kB (elbread=1070 elab2=300 kernel=1049 sdf=0)
+# 6:28 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+# Signal reset not found in design
+# Signal sin not found in design
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2419 kB (elbread=1070 elab2=300 kernel=1049 sdf=0)
+# 6:30 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2419 kB (elbread=1070 elab2=300 kernel=1049 sdf=0)
+# 6:31 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  random arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2419 kB (elbread=1070 elab2=300 kernel=1049 sdf=0)
+# 6:32 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Error: COMP96_0019: random.vhd : (26, 6): Keyword "if" expected.
+# Error: COMP96_0015: random.vhd : (26, 6): ';' expected.
+# Error: COMP96_0019: random.vhd : (27, 5): Keyword "process" expected.
+# Error: COMP96_0019: random.vhd : (29, 1): Keyword "end" expected.
+# Error: COMP96_0016: random.vhd : (29, 9): Design unit declaration expected.
+# Compile Entity "xor_g"
+# Error: COMP96_0078: random.vhd : (30, 5): Unknown identifier "ieee".
+# Error: COMP96_0055: random.vhd : (30, 5): Cannot find referenced context element.
+# Error: COMP96_0078: random.vhd : (31, 5): Unknown identifier "ieee".
+# Error: COMP96_0055: random.vhd : (31, 5): Cannot find referenced context element.
+# Error: COMP96_0078: random.vhd : (32, 5): Unknown identifier "ieee".
+# Error: COMP96_0055: random.vhd : (32, 5): Cannot find referenced context element.
+# Error: COMP96_0078: random.vhd : (35, 15): Unknown identifier "std_logic".
+# Error: COMP96_0064: random.vhd : (35, 15): Unknown type.
+# Error: COMP96_0078: random.vhd : (36, 9): Unknown identifier "std_logic".
+# Error: COMP96_0064: random.vhd : (36, 9): Unknown type.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Compile failure 15 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  random arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 6:33 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/random.vhd
+# Compile...
+# File: D:\designshdl\CRET\random\src\random.vhd
+# Compile Entity "reg"
+# Entity `reg' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "reg"
+# Compile Entity "xor_g"
+# Entity `xor_g' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "xor_g"
+# Compile Entity "random"
+# Entity `random' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "random"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  random arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 6:33 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=301 kernel=1049 sdf=0)
+# 6:33 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: random (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+# Simulation has been stopped
+# Design: 6:42 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\pseudoo\pseudoo.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "pseudoo" has been set as active.

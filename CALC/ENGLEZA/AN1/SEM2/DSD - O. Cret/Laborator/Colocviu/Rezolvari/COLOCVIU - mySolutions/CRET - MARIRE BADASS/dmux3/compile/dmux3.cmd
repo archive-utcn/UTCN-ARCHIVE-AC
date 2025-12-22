@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\dmux3\projlib.cfg"  -d "D:\designshdl\CRET\dmux3\compile\"  -work dmux3 -dbg -e 100 "D:\designshdl\CRET\dmux3\src\dmux3.vhd" 

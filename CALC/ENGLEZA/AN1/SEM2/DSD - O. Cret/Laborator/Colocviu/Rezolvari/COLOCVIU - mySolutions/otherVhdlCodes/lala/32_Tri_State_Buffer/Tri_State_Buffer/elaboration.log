@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Tue May 23 23:35:09 2017
+
+
+-----------------------------------------
+Entity  | Architecture | Library       
+-----------------------------------------
+tb      | a            | Tri_State_Buffer
+buf     | a            | tri_state_buffer
+-----------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

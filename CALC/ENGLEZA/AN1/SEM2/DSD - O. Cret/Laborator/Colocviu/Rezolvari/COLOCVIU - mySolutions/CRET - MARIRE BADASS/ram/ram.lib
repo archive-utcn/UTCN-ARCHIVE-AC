@@ -1,0 +1,13 @@
+timestamp=1498478419604
+
+[~A]
+./src/ram.vhd~arhram=0*0*540
+./src/ram.vhd~ram=0*600*961
+ModifyID=9
+Version=73
+
+[~MFT]
+0=0|0ram.mgf|961|0
+
+[~U]
+

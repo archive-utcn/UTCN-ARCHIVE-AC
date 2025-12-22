@@ -1,0 +1,78 @@
+//3.8.Un labirint este codificat printr-o matrice de elemente ale carui culoare sunt reprezentate prin elemente egale cu 1,
+// situate în pozitii consecutive pe o aceeasi linie sau coloana, celelalte elemente fiind '0'. O persoana se gaseste în pozitia (i, j)
+// din interiorul labirintului. Se cere afisarea tuturor traseelor de iesire din labirint care nu trec de mai multe ori prin acelasi loc.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int sol[100][2],l[10][10],m,n,i,j,lin,col;
+
+int vizitat(int k,int lin,int col)
+{
+    int v=0;
+    for(i=1;i<=k;i++)
+    if(sol[i][0]==lin && sol[i][1]==col)
+        v=1;
+    return v;
+}
+
+void tipareste(int k,int lin,int col)
+{
+    printf("Solutia este: \n");
+    for(i=1;i<=k-1;i++)
+        printf(" %d %d ",sol[i][0],sol[i][1]);
+    if(lin==0)
+        printf("Iesire prin NORD!\n");
+    else
+    if(lin==m+1)
+        printf("Iesire prin SUD!\n");
+    else
+    if(col==0)
+        printf("Iesire prin VEST!\n");
+    else
+        printf("Iesire prin EST!\n");
+}
+
+void backtracking(int k,int lin,int col)
+{
+    int i;
+    if(lin==0 || lin==m+1 || col==0 ||col==n+1)
+        tipareste(k,lin,col);
+    else
+    {
+        sol[k][0]=lin;
+        sol[k][1]=col;
+        for(i=1;i<=4;i++)
+        switch(i)
+        {
+            case 1: if(l[lin][col] & 8 && !vizitat(k,lin-1,col))
+                        backtracking(k+1,lin-1,col);
+                        break;
+            case 2: if(l[lin][col] & 4 && !vizitat(k,lin,col+1))
+                        backtracking(k+1,lin,col+1);
+                        break;
+            case 3: if(l[lin][col] & 2 && !vizitat(k,lin+1,col))
+                        backtracking(k+1,lin+1,col);
+                        break;
+            case 4: if(l[lin][col] & 1 && !vizitat(k,lin,col-1))
+                        backtracking(k+1,lin,col-1);
+                        break;
+        }
+    }
+}
+
+int main()
+{
+    printf("Dati numarul de linii ale labirintului: "); scanf("%d",&m);
+    printf("Dati numarul de coloane ale labirintului: "); scanf("%d",&n);
+    for(i=1;i<=m;i++)
+        for(j=1;j<=n;j++)
+        {
+            printf("L[%d][%d] = ",i,j); scanf("%d",&l);
+        }
+    printf("\n");
+    printf("Linia si Coloana: "); scanf("&d",&lin); scanf("%d",&col);
+        printf("\n");
+    backtracking(1,lin,col);
+    return 0;
+}

@@ -1,0 +1,4 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: No design unit found (searched libraries: excess_to_bcd, name excess_to_bcd).
+# ELBREAD: Warning: Component UUT : EXCESS_TO_BCD not bound.
+# ELBREAD: Elaboration time 0.0 [s].

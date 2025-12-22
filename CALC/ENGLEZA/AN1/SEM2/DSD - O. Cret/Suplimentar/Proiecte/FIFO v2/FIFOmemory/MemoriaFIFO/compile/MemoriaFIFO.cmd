@@ -1,0 +1,1 @@
+-w -s "c:\Users\Dana\Desktop\MEMORIE FIFO\FIFOmemory\MemoriaFIFO\library.cfg"  -j "c:\Users\Dana\Desktop\MEMORIE FIFO\FIFOmemory\MemoriaFIFO\projlib.cfg"  -d "c:\Users\Dana\Desktop\MEMORIE FIFO\FIFOmemory\MemoriaFIFO\compile"   -work MemoriaFIFO  -O3 -e 100 -2002 "c:\Users\Dana\Desktop\MEMORIE FIFO\FIFOmemory\MemoriaFIFO\src\BCD.vhd"

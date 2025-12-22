@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\Sumator_Scazator_4bit\compile"   -work Sumator_Scazator_4bit  -dbg -e 100 -2002 "c:\\My_Designs\\Colocviu_PSN\\Sumator_Scazator_4bit\\src\\Plus_minus_4.vhd" 

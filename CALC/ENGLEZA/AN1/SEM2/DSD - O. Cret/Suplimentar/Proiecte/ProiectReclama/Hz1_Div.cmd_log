@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {VHDL Source/clockdividers.vhd} -prj ProiectReclama -o Hz1_Div.spl -module Hz1_Div -template C:/Xilinx/14.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Hz1_Div.spl {D:/semestrul 2/final3/ProiectReclama/Hz1_Div.sym} 

@@ -1,0 +1,30 @@
+[crv]
+A/crv=A/CRV 25|.\src\crv.edn|7|
+S/crv=S/CRV 40|0|2*0
+
+[filter]
+A/filter=24|.\src\filter.bde|10000|
+
+[oscil]
+A/oscil=22|./src/oscil.v|1|
+P/~emb=165,384,556,698
+S/oscil=40|0|2*1585
+
+[pfdiv]
+A/pfdiv=A/PFDIV 21|./src/pfdiv.vhd|13|
+S/pfdiv=S/PFDIV 40|0|2*3275
+
+[~A]
+ModifyID=465
+Version=73
+
+[~MFT]
+0=0|0mixed_VHDL_Verilog_EDIF.mgf|1254|1
+2=0|2mixed_VHDL_Verilog_EDIF.mgf|3275|1
+
+[~U]
+crv=CRV 13|0*0||19
+filter=11|0*187|
+oscil=12|0*383||147
+pfdiv=PFDIV 11|0*1254||3
+

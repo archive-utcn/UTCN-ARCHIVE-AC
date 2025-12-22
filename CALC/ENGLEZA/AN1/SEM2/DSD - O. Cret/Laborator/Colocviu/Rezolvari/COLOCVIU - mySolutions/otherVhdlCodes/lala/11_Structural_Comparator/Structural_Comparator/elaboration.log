@@ -1,0 +1,20 @@
+elbread.dll ver. 1.0.5.365 Mon Jun 26 13:17:38 2017
+
+
+--------------------------------------------------
+Entity      | Architecture | Library            
+--------------------------------------------------
+comparator  | arch         | Structural_Comparator
+inverter    | a            | structural_comparator
+and_2       | a            | structural_comparator
+and_3       | a            | structural_comparator
+or_3        | a            | structural_comparator
+nxor_2      | a            | structural_comparator
+--------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

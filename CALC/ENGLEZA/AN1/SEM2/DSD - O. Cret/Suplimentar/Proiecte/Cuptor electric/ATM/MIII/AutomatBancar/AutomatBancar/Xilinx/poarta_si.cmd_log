@@ -1,0 +1,1 @@
+xst -ise "C:/Xilinx/1/1.ise" -intstyle ise -ifn poarta_si.xst -ofn poarta_si.syr

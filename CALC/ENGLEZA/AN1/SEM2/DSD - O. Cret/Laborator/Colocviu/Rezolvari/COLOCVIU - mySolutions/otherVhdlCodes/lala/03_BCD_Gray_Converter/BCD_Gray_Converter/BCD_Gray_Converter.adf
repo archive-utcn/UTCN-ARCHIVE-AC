@@ -1,0 +1,41 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=BCD_Gray_Converter
+
+[Library]
+BCD_Gray_Converter=.\BCD_Gray_Converter.lib
+
+[$LibMap$]
+BCD_Gray_Converter=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/converter.vhd=-1
+/converter_TB.vhd=-1
+
+[Files.Data]
+.\src\converter.vhd=VHDL Source Code
+.\src\converter_TB.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=tb_bcd_to_gray|arch|0    
+ShowHide=ShowTopLevel
+Selected=

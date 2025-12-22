@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Colocviu_PSN\library.cfg"  -j "c:\My_Designs\Colocviu_PSN\Registru_universal\projlib.cfg"  -d "c:\My_Designs\Colocviu_PSN\Registru_universal\compile"   -work Registru_universal  -dbg -e 100 -2002 "c:\\My_Designs\\Colocviu_PSN\\Registru_universal\\src\\Registru_universal.vhd" 

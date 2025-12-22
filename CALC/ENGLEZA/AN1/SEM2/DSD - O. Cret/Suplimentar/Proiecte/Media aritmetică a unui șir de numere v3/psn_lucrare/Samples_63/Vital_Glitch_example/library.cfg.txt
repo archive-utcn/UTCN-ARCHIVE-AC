@@ -1,0 +1,2 @@
+$include = "C:\PROGRA~1\Aldec\ACTIVE~1.3\vlib\"
+Vital_Glitch_example = ".\Vital_Glitch_example.lib" 1095172794754

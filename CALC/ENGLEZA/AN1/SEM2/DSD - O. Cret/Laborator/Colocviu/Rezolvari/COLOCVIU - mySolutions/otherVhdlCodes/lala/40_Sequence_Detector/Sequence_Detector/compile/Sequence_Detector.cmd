@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\40_Sequence_Detector\library.cfg"  -j "c:\My_Designs\40_Sequence_Detector\Sequence_Detector\projlib.cfg"  -d "c:\My_Designs\40_Sequence_Detector\Sequence_Detector\compile\"  -work Sequence_Detector -dbg -e 100 "c:\My_Designs\40_Sequence_Detector\Sequence_Detector\src\and_gate.vhd" 

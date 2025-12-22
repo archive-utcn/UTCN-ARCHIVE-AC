@@ -1,0 +1,87 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+modified=13
+Current Config=compile
+
+[Configurations]
+compile=filter_bde
+
+[Library]
+filter_bde=.\filter_bde.LIB
+
+[Settings]
+SYNTH_TOOL=<none>
+FLOWTOOLS=ONLY_IMPL
+IMPL_TOOL=<none>
+FLOW_TYPE=Schematic
+LANGUAGE=VHDL
+FAMILY=
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+UseCeloxica=0
+CSYNTH_TOOL=<none>
+Celoxica=0
+REFRESH_FLOW=1
+
+[$LibMap$]
+Active_lib=VIRTEX
+xilinxun=VIRTEX
+filter_bde=.
+UnlinkedDesignLibrary=VIRTEX
+DESIGNS=VIRTEX
+
+[SYNTHESIS]
+FAMILY=
+CeloxicaPath=
+
+[IMPLEMENTATION]
+FAMILY=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[ORDER]
+autorefresh=0
+macro_path=
+macro_name=
+modified=1
+Synchronize=1
+
+[Groups]
+TB_verilog=1
+TB_vhd=1
+
+[Files]
+/readme.txt=-1
+/c2or.bde=-1
+/crv.bde=-1
+/oscil.bde=-1
+/pfdiv.bde=-1
+/filter.bde=-1
+TB_verilog/filter_TB_runtest.do=-1
+TB_verilog/filter_TB.v=-1
+TB_vhd/filter_TB_runtest.do=-1
+TB_vhd/filter_TB.vhd=-1
+
+[Files.Data]
+.\src\readme.txt=Text File
+.\src\c2or.bde=Block Diagram
+.\src\crv.bde=Block Diagram
+.\src\oscil.bde=Block Diagram
+.\src\pfdiv.bde=Block Diagram
+.\src\filter.bde=Block Diagram
+.\src\TB_verilog\filter_TB_runtest.do=Macro
+.\src\TB_verilog\filter_TB.v=Verilog Source Code
+.\src\TB_vhd\filter_TB_runtest.do=Macro
+.\src\TB_vhd\filter_TB.vhd=VHDL Source Code
+

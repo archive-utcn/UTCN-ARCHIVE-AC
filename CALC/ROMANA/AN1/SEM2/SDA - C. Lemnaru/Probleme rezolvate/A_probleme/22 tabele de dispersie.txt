@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define M 127
+
+typedef struct nod
+{
+    char *cuvant;
+    int frecventa;
+    struct nod *urm ;
+    int i,suma ;
+}NOD;
+
+NOD *HT[M];
+
+int f (char *key)
+{
+    int i, suma;
+    for (i=0; i<strlen(key);i++)
+    suma =suma +  *(key + i);
+    return suma % M;
+}
+
+main ()
+{
+    NOD *p;
+    int i,j;
+    for(i=0;i<M;i++)
+    HT[i]=0;
+    while(f!=0)
+    j=0;
+    for(i=0;i<M;i++)
+
+    printf ("cuvantul : %5ls , frecventa: %d",p->cuvant,p->frecventa);
+}

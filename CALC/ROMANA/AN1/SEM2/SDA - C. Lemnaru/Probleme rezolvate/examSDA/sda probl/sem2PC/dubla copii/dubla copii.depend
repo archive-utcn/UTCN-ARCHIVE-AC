@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1305573936 source:d:\facultate\sda\dubla copii\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+

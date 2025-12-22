@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2008\NUMARATOR_ZECIMAL\src\NUMARATOR_ZECIMAL.vhd" 
+MESSAGE "Compile Entity "NUMARATOR_ZECIMAL"" 
+MESSAGE "Entity `NUMARATOR_ZECIMAL' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "NUMARATOR_ZECIMAL"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

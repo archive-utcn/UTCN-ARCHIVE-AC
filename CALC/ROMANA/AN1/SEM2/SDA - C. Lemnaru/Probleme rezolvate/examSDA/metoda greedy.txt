@@ -1,0 +1,18 @@
+#define max   ...
+GREEDY1(int A[max], int n, int B[max], int *k)
+/* A este mulþimea de n elemente date;
+B este mulþimea extrasã de k elemente */
+{
+    int x, v, i;
+ *k = 0;     /* Mulþimea B este vidã */
+for(i = 0; i<n; i++)
+{
+ALEGE (A, n, i, x);
+/* se alege elementul x dintre elementele A[i], A[i+1], ... A[n-1] ºi se aduce pe poziþia i prin interschimbare */
+POSIBIL (B, x, v);
+/* v=1 dacã x prin adãugare la B conduce la soluþie posibilã ºi 
+v=0 în caz contrar */
+                     if(v==1)  ADAUGA(B, x, *k);
+/* se adaugã x la B, k indicând numãrul de elemente din B */
+}
+ }

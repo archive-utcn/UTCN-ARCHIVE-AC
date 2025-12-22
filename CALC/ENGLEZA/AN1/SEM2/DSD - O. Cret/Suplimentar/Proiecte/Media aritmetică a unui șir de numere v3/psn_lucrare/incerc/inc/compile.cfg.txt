@@ -1,0 +1,9 @@
+[View]
+Entity=adder8
+Architecture=structural
+TopLevelType=1
+[file:.\src\suma.vhd]
+File Time Lo=-1471618384
+File Time Hi=30146453
+Enabled=1
+State=Compiled

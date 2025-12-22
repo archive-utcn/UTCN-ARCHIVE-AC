@@ -1,0 +1,5 @@
+MESSAGE "File: d:\designshdl\CLV_2008\C2421_BCD\src\C2421_BCD.vhd" 
+MESSAGE "Compile Entity "C2421_BCD"" 
+MESSAGE "Entity `C2421_BCD' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "C2421_BCD"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

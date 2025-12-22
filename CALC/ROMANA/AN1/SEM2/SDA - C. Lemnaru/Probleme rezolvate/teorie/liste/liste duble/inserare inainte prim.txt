@@ -1,0 +1,14 @@
+void inserare(tip_nod **prim,tip_nod **ultim,tip_nod *p)
+{
+p->prec=0;
+if(prim==0)
+{
+prim=p;
+ultim=p;
+p->urm=0;
+}
+else {p->urm=prim;
+prim->prec=p;
+prim=p;
+}
+}

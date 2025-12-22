@@ -1,0 +1,128 @@
+acom -reorder $DSN/src/num_bin.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_bin\src\num_bin.vhd
+# Compile Entity "num_bin"
+# Error: COMP96_0015: num_bin.vhd : (7, 2): ';' expected.
+# Compile Architecture "arh" of Entity "num_bin"
+# Error: COMP96_0015: num_bin.vhd : (19, 13): ';' expected.
+# Error: COMP96_0019: num_bin.vhd : (19, 13): Keyword "end" expected.
+# Error: COMP96_0019: num_bin.vhd : (22, 7): Keyword "process" expected.
+# Error: COMP96_0015: num_bin.vhd : (24, 7): ';' expected.
+# Error: COMP96_0016: num_bin.vhd : (24, 14): Design unit declaration expected.
+# Error: COMP96_0019: num_bin.vhd : (25, 22): Keyword "of" expected.
+# Error: COMP96_0018: num_bin.vhd : (25, 22): Identifier expected.
+# Compile failure 8 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_bin.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_bin\src\num_bin.vhd
+# Compile Entity "num_bin"
+# Error: COMP96_0015: num_bin.vhd : (7, 2): ';' expected.
+# Compile Architecture "arh" of Entity "num_bin"
+# Error: COMP96_0056: num_bin.vhd : (10, 1): Cannot find referenced entity declaration "num_bin".
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_bin.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_bin\src\num_bin.vhd
+# Compile Entity "num_bin"
+# Error: COMP96_0078: num_bin.vhd : (5, 28): Unknown identifier "std_llogic".
+# Error: COMP96_0064: num_bin.vhd : (5, 28): Unknown type.
+# Compile Architecture "arh" of Entity "num_bin"
+# Error: COMP96_0056: num_bin.vhd : (10, 1): Cannot find referenced entity declaration "num_bin".
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/num_bin.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\num_bin\src\num_bin.vhd
+# Compile Entity "num_bin"
+# Compile Architecture "arh" of Entity "num_bin"
+# Error: COMP96_0077: num_bin.vhd : (19, 10): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0071: num_bin.vhd : (19, 10): Operator "+" is not defined for such operands.
+# Error: COMP96_0104: num_bin.vhd : (19, 10): Undefined type of expression.
+# Top-Level unit detected
+# Entity  =>   num_bin
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/num_bin.vhd
+# Compile...
+# File: D:\designshdl\CRET\num_bin\src\num_bin.vhd
+# Compile Entity "num_bin"
+# Compile Architecture "arh" of Entity "num_bin"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  num_bin arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2417 kB (elbread=1070 elab2=299 kernel=1048 sdf=0)
+# 5:02 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: num_bin (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+# Simulation has been stopped
+# Design: Design "num_zec" has been set as active.

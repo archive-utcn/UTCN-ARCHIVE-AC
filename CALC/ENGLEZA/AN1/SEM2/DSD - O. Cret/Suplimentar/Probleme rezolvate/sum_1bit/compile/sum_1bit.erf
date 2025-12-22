@@ -1,0 +1,3 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available." 
+ERROR VLM_0021: "The working library "sum_1bit" not found in the installation." "c:\Users\Andrada\Desktop\Andra\4. UTCN\1st SEM\LD\Projects\TEME\sum_1bit\compile\sum_1bit.vhd" 0 0
+FAILURE "Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]" 

@@ -1,0 +1,3 @@
+31
+~E 1 "./src/RAM_16X16.vhd" 6 ram16x16
+~A 1 "./src/RAM_16X16.vhd" 13 arh_comp

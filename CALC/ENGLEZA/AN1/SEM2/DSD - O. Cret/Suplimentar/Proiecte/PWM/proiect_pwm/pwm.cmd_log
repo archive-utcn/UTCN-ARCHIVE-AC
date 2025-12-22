@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.xst" -ofn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 "pwm.ngc" pwm.ngd  
+xst -intstyle ise -ifn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.xst" -ofn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pwm.ucf -p xc3s100e-tq144-4 "pwm.ngc" pwm.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o pwm_map.ncd pwm.ngd pwm.pcf 
+par -w -intstyle ise -ol high -t 1 pwm_map.ncd pwm.ncd pwm.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pwm.twx pwm.ncd -o pwm.twr pwm.pcf -ucf pwm.ucf 
+bitgen -intstyle ise -f pwm.ut pwm.ncd 
+xst -intstyle ise -ifn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.xst" -ofn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pwm.ucf -p xc3s100e-tq144-4 "pwm.ngc" pwm.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o pwm_map.ncd pwm.ngd pwm.pcf 
+par -w -intstyle ise -ol high -t 1 pwm_map.ncd pwm.ncd pwm.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pwm.twx pwm.ncd -o pwm.twr pwm.pcf -ucf pwm.ucf 
+bitgen -intstyle ise -f pwm.ut pwm.ncd 
+xst -intstyle ise -ifn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.xst" -ofn "E:/Soft Instaled/xilinx proj/proiect_pwm/pwm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pwm.ucf -p xc3s1200e-fg320-4 "pwm.ngc" pwm.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o pwm_map.ncd pwm.ngd pwm.pcf 
+par -w -intstyle ise -ol high -t 1 pwm_map.ncd pwm.ncd pwm.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pwm.twx pwm.ncd -o pwm.twr pwm.pcf -ucf pwm.ucf 
+bitgen -intstyle ise -f pwm.ut pwm.ncd 

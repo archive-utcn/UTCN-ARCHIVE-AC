@@ -1,0 +1,51 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL	;
+ENTITY SEMAFOR IS		   
+	port(CLOCK, RESET, SENZOR1, SENZOR2: in STD_LOGIC;
+	ROSU1, ROSU2, GALBEN1, GALBEN2, VERDE1, VERDE2: out STD_LOGIC); 
+end SEMAFOR;  
+		   architecture SEMAFOR of SEMAFOR is
+type STARE_T is(ST0, ST1, ST2, ST3, ST4, ST5, ST6, ST7);
+signal  STARE, NXSTARE : STARE_T;
+begin
+	ACTUALIZARE_STARE: process(RESET,CLOCK)
+	begin
+		if (RESET='1') then
+			STARE<=ST0;
+		elsif CLOCK'EVENT and CLOCK='1' then
+			STARE<=NXSTARE;
+	   end if;  
+end process ACTUALIZARE_STARE;
+TRANSITIONS: process (STARE, SENZOR1, SENZOR2)
+begin
+	ROSU1<='0'; GALBEN1<='0'; VERDE1<='0';
+	ROSU2<='0'; GALBEN2<='0'; VERDE2<='0';
+	case STARE is
+		when ST0=>VERDE1<='1'; ROSU2<='1';
+		if SENZOR2=SENZOR1 then NXSTARE<=ST1;
+		elsif(SENZOR1='0' AND SENZOR2='1') then 
+			NXSTARE<=ST2;
+		else NXSTARE<=ST0;
+	  end if;
+WHEN ST1 => VERDE1 <='1'; ROSU2<='1';
+     NXSTARE<=ST2;
+WHEN ST2 => VERDE1 <='1'; ROSU2<='1';
+    NXSTARE<=ST3;
+WHEN ST3 => GALBEN1 <='1'; ROSU2<='1';
+    NXSTARE<=ST4;
+WHEN ST4 => ROSU1 <= '1'; VERDE2<='1';
+if (SENZOR1 = '0' and SENZOR2='0') then
+	NXSTARE<=ST5;
+ELSIF (SENZOR1='1' AND SENZOR2='0') then
+	NXSTARE<=ST6; 
+else NXSTARE<=ST4;
+	end if;
+WHEN ST5 => ROSU1 <='1'; VERDE2<='1';
+   NXSTARE<=ST6;
+WHEN ST6 => ROSU1<='1'; VERDE2 <= '1';
+   NXSTARE<=ST7;
+WHEN ST7=>ROSU1<='1'; GALBEN2<='1';
+   NXSTARE<=ST0;
+end case;
+end process	TRANSITIONS;
+end SEMAFOR;

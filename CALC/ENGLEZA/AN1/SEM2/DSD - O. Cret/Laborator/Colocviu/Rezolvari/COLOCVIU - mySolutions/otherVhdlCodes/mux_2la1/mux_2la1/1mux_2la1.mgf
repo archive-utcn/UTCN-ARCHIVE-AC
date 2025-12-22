@@ -1,0 +1,24 @@
+V 000044 55 776           1493496141555 arh
+(_unit VHDL (mux_2la1 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1493496141556 2017.04.29 23:02:21)
+  (_source (\./src/mux_2la1.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1493496131724)
+    (_use )
+  )
+  (_object
+    (_port (_internal i0 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal i1 ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal sel ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal y ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_process
+      (line__11(_architecture 0 0 11 (_process (_simple)(_target(3))(_sensitivity(1)(2)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . arh 1 -1
+  )
+)

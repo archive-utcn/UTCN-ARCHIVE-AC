@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\CLV_2008\library.cfg"  -j "d:\designshdl\CLV_2008\EXCESS3_BCD\projlib.cfg"  -d "d:\designshdl\CLV_2008\EXCESS3_BCD\compile\"  -work EXCESS3_BCD -dbg -e 100 "d:\designshdl\CLV_2008\EXCESS3_BCD\src\EXCESS3_BCD.vhd" 

@@ -1,0 +1,8 @@
+vhdl work "../../Proiect DSD/editare txt/NumbersMemory.vhd"
+vhdl work "../../Proiect DSD/editare txt/DMUX_MUX.vhd"
+vhdl work "../../Proiect DSD/editare txt/DivizorFrecventaAnimatie.vhd"
+vhdl work "../../Proiect DSD/editare txt/Animation3.vhd"
+vhdl work "../../Proiect DSD/editare txt/Animation2.vhd"
+vhdl work "../../Proiect DSD/editare txt/Animation1.vhd"
+vhdl work "../../Proiect DSD/editare txt/Animation0.vhd"
+vhdl work "MAIN.vhd"

@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+c2421_to_bcd=.\c2421_to_BCD\c2421_to_BCD.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+c2421_to_bcd=1

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1255358801 source:u:\courses\cp\lab\l02\fractions_11\main.c
+	<stdio.h>
+	<stdlib.h>
+

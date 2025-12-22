@@ -1,0 +1,25 @@
+timestamp=1446379985908
+
+[hexa]
+A/hexa=24|.\src\hexa.bde|10000|1*35170
+BinI32/hexa=3*0
+I=0*735
+I/hexa=0*18464
+M=11|0|v98|1446338222144|./compile/hexa.vhd|0*299*0xb06e422bf0038ce5fcc40728fb3526d17334f8f2|0*662*0xab32bc1a2daf049573e14469f634e0e6
+M/hexa=21|0|v98|1446379985720|./compile/hexa.vhd|0*16345*0x1558cbd8294971d37670a328510f284439a5378a|0*18383*0xb33770ff1c10522f9491560174ac8e6c
+R=./compile/hexa.vhd|25
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/hexa=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=51
+Version=73
+
+[~MFT]
+0=48|0hexa.mgf|18464|15512
+1=14|1hexa.mgf|35170|35170
+3=0|3hexa.mgf|0|0
+
+[~U]
+hexa=11|0*0|
+

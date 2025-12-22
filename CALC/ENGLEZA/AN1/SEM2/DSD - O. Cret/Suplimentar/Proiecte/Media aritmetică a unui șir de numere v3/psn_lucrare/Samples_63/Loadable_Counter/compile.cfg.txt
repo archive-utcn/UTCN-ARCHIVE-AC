@@ -1,0 +1,116 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[file:.\src\readme.txt]
+File Time Hi=29646893
+File Time Lo=215757248
+Enabled=1
+State=Modified
+[file:.\src\counter.vhd]
+File Time Hi=29639210
+File Time Lo=350723840
+STATE=Compiled
+Enabled=1
+[file:.\src\WAVES\counter_TB_header]
+File Time Hi=29639210
+File Time Lo=350723840
+Enabled=1
+[file:.\src\WAVES\counter_TB_pins.vhd]
+File Time Hi=29639210
+File Time Lo=350723840
+STATE=Compiled
+Enabled=1
+[file:.\src\WAVES\waves_objects.vhd]
+File Time Hi=29639210
+File Time Lo=350723840
+STATE=Compiled
+Enabled=1
+[file:.\src\WAVES\counter_TB_declaration.vhd]
+File Time Hi=29639210
+File Time Lo=350723840
+STATE=Compiled
+Enabled=1
+[file:.\src\WAVES\waves_generator.vhd]
+File Time Hi=29639210
+File Time Lo=350723840
+STATE=Compiled
+Enabled=1
+[file:.\src\WAVES\counter_TB.vhd]
+File Time Hi=29639210
+File Time Lo=350723840
+STATE=Compiled
+Enabled=1
+[file:.\src\WAVES\counter_TB_tim_cfg.vhd]
+File Time Hi=29646891
+File Time Lo=-1974400608
+STATE=Compiled
+Enabled=0
+[file:.\src\WAVES\Functional.vec]
+File Time Hi=29639210
+File Time Lo=350723840
+Enabled=1
+[file:.\src\WAVES\monitor_utilities.vhd]
+File Time Hi=29639210
+File Time Lo=350723840
+STATE=Compiled
+Enabled=1
+[file:.\src\WAVES\counter_TB_runtest.do]
+File Time Hi=29646892
+File Time Lo=-169797152
+Enabled=1
+State=Modified
+[file:.\src\WAVES\counter_TB_tim_runtest.do]
+State=Modified
+File Time Lo=-231786288
+File Time Hi=29646892
+Enabled=1
+[file:.\IMPLEMENT\counter_tim.vhd]
+State=
+LIB=
+File Time Lo=-1504015664
+File Time Hi=29646892
+Enabled=0
+SIM.FUNC.INCLUDED=0
+SIM.TIME.INCLUDED=1
+SIM.TIME.AUTO=1
+Syntax 87=
+Skip Entity=
+Netlist=
+[file:.\IMPLEMENT\counter_tim.sdf]
+File Time Lo=-1503815376
+File Time Hi=29646892
+Enabled=0
+[file:.\src\counter_tim.vhd]
+State=Compiled
+LIB=
+File Time Lo=-1504015664
+File Time Hi=29646892
+Syntax 87=
+Skip Entity=
+Enabled=0
+Netlist=
+SIM.FUNC.INCLUDED=0
+SIM.TIME.INCLUDED=1
+SIM.TIME.AUTO=1
+[file:.\src\counter_tim.sdf]
+File Time Lo=-1503815376
+File Time Hi=29646892
+Enabled=1

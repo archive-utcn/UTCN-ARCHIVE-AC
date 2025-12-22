@@ -1,0 +1,295 @@
+V 000041 40 1779 1097054170927 generator
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library IEEE,STD;\n"+
+"use ieee.std_logic_1164.all,STD.STANDARD.all;"
+  #LANGUAGE="VHDL"
+  #MODIFIED="1097054170"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,160,180)
+  FREEID 10
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (20,0,140,160)
+  }
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,65,54)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 2
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (84,30,135,54)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 4
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,67,94)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 6
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,94,134)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="CLK"
+    #NUMBER="0"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (160,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #NAME="Wave"
+    #NUMBER="0"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #NAME="Freq"
+    #NUMBER="0"
+    #VHDL_TYPE="INTEGER"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #NAME="Sel(1:0)"
+    #NUMBER="0"
+    #VHDL_TYPE="BIT_VECTOR"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+V 000042 40 2349 1097054185521 multiplier
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #DESCRIPTION=""
+  #FUB="1"
+  #LANGUAGE="VHDL"
+  #MODIFIED="1097054156"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,280,240)
+  FREEID 26
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (0,0,280,240)
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (214,108,267,132)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 3
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,188,46,212)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  14, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,128,46,152)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 13
+  }
+  TEXT  19, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,48,46,72)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 18
+  }
+  TEXT  24, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (128,202,152,227)
+   ALIGN 9
+   MARGINS (1,1)
+   PARENT 23
+   ORIENTATION 5
+  }
+  PIN  3, 0, 0
+  {
+   COORD (280,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #INITIAL_VALUE="0.0"
+    #LABEL="Out"
+    #MODIFIED="1"
+    #NAME="OUT1"
+    #NUMBER="1"
+    #SIDE="right"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (-10,10), (-10,-10), (0,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MODIFIED="1"
+    #NAME="IN3"
+    #NUMBER="2"
+    #SIDE="left"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  13, 0, 0
+  {
+   COORD (0,140)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MODIFIED="1"
+    #NAME="IN2"
+    #NUMBER="3"
+    #SIDE="left"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  18, 0, 0
+  {
+   COORD (0,60)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MODIFIED="1"
+    #NAME="IN1"
+    #NUMBER="4"
+    #SIDE="left"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  23, 0, 0
+  {
+   COORD (140,240)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MODIFIED="1"
+    #NAME="clk"
+    #NUMBER="5"
+    #SIDE="bottom"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-10,0), (10,0), (0,-10), (-10,0) )
+   }
+  }
+ }
+}

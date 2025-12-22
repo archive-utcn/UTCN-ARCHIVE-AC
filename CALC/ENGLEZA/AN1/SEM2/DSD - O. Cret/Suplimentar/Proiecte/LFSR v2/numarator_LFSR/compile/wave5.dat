@@ -1,0 +1,19 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "a#28#std_logic_vector(5 downto 1)1 ricd5 1 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT 21 1 5 "lfsr/cout"
+$SC 1-17/4
+$IN +5 2 6 0 lk
+$IN +4 2 5 0 reset
+$IN +4 2 5 0 load
+$IN +4 2 5 0 modulo
+$BUS IN 58 1 5 5 0 nr_IN
+$SC 38-54/4
+$BUS S 79 1 5 6 0 umarare
+$SC 59-75/4
+$S +5 2 5 0 feedback
+$S +4 2 5 0 clk_out
+$BUS VARIABLE +4 1 5 5 1 "line__32/ca"
+$SC +1-+4
+$ENDWAVE

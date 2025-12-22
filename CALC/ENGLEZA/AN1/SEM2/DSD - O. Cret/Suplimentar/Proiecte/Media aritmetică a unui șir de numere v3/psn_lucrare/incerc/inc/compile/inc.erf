@@ -1,0 +1,8 @@
+MESSAGE "File: D:\ralu-poli\psn_lucrare\incerc\inc\src\suma.vhd" 
+MESSAGE "Compile Entity "Adder8"" 
+MESSAGE "Entity `Adder8' has been skipped - no difference detected." 
+MESSAGE "Compile Entity "CLA4"" 
+MESSAGE "Entity `CLA4' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "Conc" of Entity "CLA4"" 
+MESSAGE "Compile Architecture "Structural" of Entity "Adder8"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Tue May 23 01:32:42 2017
+
+
+-------------------------------------------------------
+Entity          | Architecture | Library             
+-------------------------------------------------------
+si_sau_nu_gate  | arh          | XOR_NXOR_ANDORNOT_GATE
+and_gate        | arh          | xor_nxor_andornot_gate
+or_gate         | arh          | xor_nxor_andornot_gate
+not_gate        | arh          | xor_nxor_andornot_gate
+-------------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

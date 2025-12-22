@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\29_Comparator\library.cfg"  -j "c:\My_Designs\29_Comparator\Comparator\projlib.cfg"  -d "c:\My_Designs\29_Comparator\Comparator\compile\"  -work Comparator -dbg -e 100 "c:\My_Designs\29_Comparator\Comparator\src\tb.vhd" 

@@ -1,0 +1,8 @@
+alog -dbg "$DSN/src/adrcnt.v"
+alog -dbg "$DSN/src/asciidec.v"
+alog -dbg "$DSN/src/dat_cnt.v"
+alog -dbg "$DSN/src/h2b.v"
+alog -dbg "$DSN/src/ihx_fsm.v"
+alog -dbg "$DSN/src/lrc.v"
+alog -dbg "$DSN/src/reg.v"
+alog -dbg "$DSN/src/uut.v"

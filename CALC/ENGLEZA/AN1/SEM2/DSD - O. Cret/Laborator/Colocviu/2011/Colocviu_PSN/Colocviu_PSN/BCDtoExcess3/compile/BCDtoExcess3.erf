@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\Colocviu_PSN\BCDtoExcess3\src\Decodificator.vhd" 
+MESSAGE "Compile Entity "Convertor"" 
+MESSAGE "Compile Architecture "ARH_Struc" of Entity "Convertor"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]" 

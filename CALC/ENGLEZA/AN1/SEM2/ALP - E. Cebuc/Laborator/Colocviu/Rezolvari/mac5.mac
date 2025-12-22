@@ -1,0 +1,11 @@
+dispstr macro string ; macro for displaying a ASCII string
+         mov ah,9 ; function code
+         mov dx, offset string ; 
+         int 21h ; interrupt
+endm
+
+dispch macro		;macro for displaying a decimal digit
+	mov ah,02h	; function code
+	add dl,30h	; create ASCII code
+	int 21h
+endm

@@ -1,0 +1,54 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MS_Demux_1la8
+
+[Library]
+MS_Demux_1la8=.\MS_Demux_1la8.LIB
+
+[$LibMap$]
+MS_Demux_1la8=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=NONE
+REFRESH_FLOW=1
+FAMILY=
+IMPL_TOOL=
+SYNTH_TOOL=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=ms_demux|arh_ms_demux|0
+ShowHide=ShowTopLevel
+Selected=
+
+[Folders]
+Name3=Makefiles
+Directory3=c:\My_Designs\Colocviu_PSN\MS_Demux_1la8\
+Extension3=mak
+Name4=Memory
+Directory4=c:\My_Designs\Colocviu_PSN\MS_Demux_1la8\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=c:\My_Designs\Colocviu_PSN\MS_Demux_1la8\
+Extension5=dll
+Name6=PDF
+Directory6=c:\My_Designs\Colocviu_PSN\MS_Demux_1la8\
+Extension6=pdf
+Name7=HTML
+Directory7=c:\My_Designs\Colocviu_PSN\MS_Demux_1la8\
+Extension7=
+
+[Files]
+/MS_Demux_1la8.vhd=-1
+
+[Files.Data]
+.\src\MS_Demux_1la8.vhd=VHDL Source Code
+

@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\MS_BUFFER_TRI_STATE_8BITI\projlib.cfg"  -d "D:\designshdl\CLV_2008\MS_BUFFER_TRI_STATE_8BITI\compile\"  -work MS_BUFFER_TRI_STATE_8BITI -dbg -e 100 "D:\designshdl\CLV_2008\MS_BUFFER_TRI_STATE_8BITI\src\MS_BUFFER_TRI_STATE_8BITI.vhd" 

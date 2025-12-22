@@ -1,0 +1,18 @@
+[View]
+Entity=lfsr
+Architecture=arhitectura
+TopLevelType=1
+[file:.\src\numarator.vhd]
+File Time Lo=-417970755
+File Time Hi=30445089
+Enabled=1
+State=Compiled
+[file:.\src\divizor.vhd]
+File Time Lo=-1572555084
+File Time Hi=30444759
+Enabled=1
+State=Compiled
+[file:C:\Users\TP_LENOVO\Desktop\5 biti\Waveform Editor 3.awf]
+File Time Lo=855882105
+File Time Hi=30445090
+Enabled=1

@@ -1,0 +1,12 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#3#bitc2 01"
+$S 1 1 rst
+$S 5 1 q
+$S 9 1 nq
+$S +4 1 k
+$S +4 1 j
+$S +4 1 clk
+I 2 "e#7#booleans2 false true "
+$VARIABLE +4 2 end_sim
+$ENDWAVE

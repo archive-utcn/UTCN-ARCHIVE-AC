@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1301601234 source:c:\codeblocks\arbori_afisare_\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

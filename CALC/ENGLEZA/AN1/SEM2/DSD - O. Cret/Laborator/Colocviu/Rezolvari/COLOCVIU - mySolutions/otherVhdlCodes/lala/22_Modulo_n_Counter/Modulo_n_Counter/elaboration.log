@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.365 Thu May 25 15:29:41 2017
+
+
+------------------------------------------
+Entity   | Architecture | Library       
+------------------------------------------
+counter  | a            | Modulo_n_Counter
+------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+math_real           | ieee
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

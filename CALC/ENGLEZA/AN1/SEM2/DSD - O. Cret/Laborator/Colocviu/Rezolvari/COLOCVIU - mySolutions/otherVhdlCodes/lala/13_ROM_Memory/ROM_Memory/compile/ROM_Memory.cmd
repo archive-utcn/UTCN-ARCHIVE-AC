@@ -1,0 +1,1 @@
+-w -s "C:\My_Designs\13_ROM_Memory\library.cfg"  -j "C:\My_Designs\13_ROM_Memory\ROM_Memory\projlib.cfg"  -d "C:\My_Designs\13_ROM_Memory\ROM_Memory\compile\"  -work ROM_Memory -dbg -e 100 "C:\My_Designs\13_ROM_Memory\ROM_Memory\src\ROM.vhd" 

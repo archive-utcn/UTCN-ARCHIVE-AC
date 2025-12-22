@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+universal_register=.\Universal_Register\Universal_Register.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+universal_register=1

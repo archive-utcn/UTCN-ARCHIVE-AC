@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\43_8bit_Stuctural_Counter\library.cfg"  -j "c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\projlib.cfg"  -d "c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\compile\"  -work Structural_Counter -dbg -e 100 "c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd" 

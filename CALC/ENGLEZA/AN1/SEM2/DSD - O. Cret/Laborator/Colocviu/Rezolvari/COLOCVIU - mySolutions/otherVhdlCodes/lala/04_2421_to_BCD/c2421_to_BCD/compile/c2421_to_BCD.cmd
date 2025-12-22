@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\04_2421_to_BCD\library.cfg"  -j "c:\My_Designs\04_2421_to_BCD\c2421_to_BCD\projlib.cfg"  -d "c:\My_Designs\04_2421_to_BCD\c2421_to_BCD\compile\"  -work c2421_to_BCD -dbg -e 100 "c:\My_Designs\04_2421_to_BCD\c2421_to_BCD\src\converter_tb.vhd" 

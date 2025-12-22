@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+bancomat=.\Bancomat\Bancomat.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+bancomat=1

@@ -1,0 +1,42 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=memorie_rom2
+
+[Library]
+memorie_rom2=.\memorie_rom2.lib
+
+[$LibMap$]
+memorie_rom2=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=memorie_rom|arhrom|0       
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/memorie_rom2.vhd=-1
+/memorie_rom2.awf=-1
+
+[Files.Data]
+.\src\memorie_rom2.vhd=VHDL Source Code
+.\src\memorie_rom2.awf=Waveform File
+

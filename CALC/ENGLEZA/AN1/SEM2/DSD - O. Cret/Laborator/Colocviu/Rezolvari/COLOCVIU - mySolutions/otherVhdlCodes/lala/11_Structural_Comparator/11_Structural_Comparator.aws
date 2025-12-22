@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+structural_comparator=.\Structural_Comparator\Structural_Comparator.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+structural_comparator=1

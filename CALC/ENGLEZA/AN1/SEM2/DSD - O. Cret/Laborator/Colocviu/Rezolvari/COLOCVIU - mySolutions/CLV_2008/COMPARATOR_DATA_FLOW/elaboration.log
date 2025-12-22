@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Sat May 20 16:37:32 2017
+
+
+-----------------------------------------------------------
+Entity                | Architecture | Library           
+-----------------------------------------------------------
+comparator_data_flow  | arh          | COMPARATOR_DATA_FLOW
+-----------------------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

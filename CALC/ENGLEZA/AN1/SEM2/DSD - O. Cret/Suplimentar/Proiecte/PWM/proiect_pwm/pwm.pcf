@@ -1,0 +1,37 @@
+//! **************************************************************************
+// Written by: Map P.58f on Wed May 21 16:18:29 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "sMod" LOCATE = SITE "R17" LEVEL 1;
+COMP "btn_clr" LOCATE = SITE "B18" LEVEL 1;
+COMP "pwm_led<0>" LOCATE = SITE "P4" LEVEL 1;
+COMP "pwm_led<1>" LOCATE = SITE "E4" LEVEL 1;
+COMP "pwm_led<2>" LOCATE = SITE "P16" LEVEL 1;
+COMP "pwm_led<3>" LOCATE = SITE "E16" LEVEL 1;
+COMP "pwm_led<4>" LOCATE = SITE "K14" LEVEL 1;
+COMP "pwm_led<5>" LOCATE = SITE "K15" LEVEL 1;
+COMP "pwm_led<6>" LOCATE = SITE "J15" LEVEL 1;
+COMP "pwm_led<7>" LOCATE = SITE "J14" LEVEL 1;
+COMP "a_segment<0>" LOCATE = SITE "L18" LEVEL 1;
+COMP "a_segment<1>" LOCATE = SITE "F18" LEVEL 1;
+COMP "a_segment<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "a_segment<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "a_segment<4>" LOCATE = SITE "G14" LEVEL 1;
+COMP "a_segment<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "a_segment<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "a_anod<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "a_anod<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "a_anod<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "a_anod<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "Switch<0>" LOCATE = SITE "N17" LEVEL 1;
+COMP "Switch<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Switch<2>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Switch<3>" LOCATE = SITE "K17" LEVEL 1;
+COMP "Switch<4>" LOCATE = SITE "K18" LEVEL 1;
+COMP "Switch<5>" LOCATE = SITE "H18" LEVEL 1;
+COMP "Switch<6>" LOCATE = SITE "G18" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

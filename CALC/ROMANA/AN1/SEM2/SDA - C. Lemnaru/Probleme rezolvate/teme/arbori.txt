@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct tip_nod{
+                        int cheie;/*informatie */
+                        struct tip_nod *stg,*dr;
+                        } TIP_NOD;
+
+
+// cele 2 radacini ale arborilor de cautare
+int k = 0,v[200];
+
+void inordine(TIP_NOD *p, int nivel)
+{
+  int i;
+  if (p!=0){
+		 inordine(p->stg,nivel+1);
+		 for(i=0;i<=nivel;i++) printf("  ");
+		 printf("%2d\n",p->cheie);
+		 inordine(p->dr,nivel+1);
+	       }
+}
+
+void inserare(TIP_NOD **rad,int key)
+
+{
+  TIP_NOD *p,*q;
+  int n;
+  n=sizeof(TIP_NOD);
+  p=(TIP_NOD *)malloc(n);
+  p->cheie=key;
+  p->stg=0;p->dr=0;
+  if(*rad==0){
+		*rad=p;
+		return;
+	          }
+  q=*rad;
+  for(;;)
+	 {
+		if (key < q->cheie){
+					if(q->stg==0){
+					                          q->stg=p;
+					                           return;
+				                                   }
+		                                     else q=q->stg;
+				        }
+		else if (key > q->cheie) {
+					       if(q->dr == 0) {
+								q->dr=p;
+								return;
+							        }
+					        else q=q->dr;
+					    }
+		         else {   /* chei   egale */
+			         printf("\n Exista un nod de cheie = %d\n",key);
+					  /* eventuala prelucrare a nodului */
+			         free(p);
+			         return;
+			      }
+ }
+}
+
+void preordine(TIP_NOD *p)
+{
+  int i;
+  if (p!=0){
+
+		v[k]=p->cheie;k++;
+		 preordine(p->stg);
+		 preordine(p->dr);
+	       }
+}
+int main()
+{
+    TIP_NOD *rad1=0,*rad2=0;
+    int i,key,n,m;
+    printf("Primul arbore: \n");
+    printf("Numarul de noduri: \n");
+    scanf("%d",&n);
+
+    for (i = 1;i <= n;i++){
+        printf("Nodul [%d]",i);
+        scanf("%d",&key);
+        inserare(&rad1,key);
+    }
+
+ printf("Al doilea arbore: \n");
+ printf("NUMARUL de noduri: \n");
+ scanf("%d",&m);
+
+ for(i=1;i<=m;i++) {
+        printf("Nodul [%d]",i);scanf("%d",&key);
+        inserare(&rad2,key);
+ }
+
+//trasnformare a unui arbore in vector
+preordine(rad2);
+
+for(i=0;i<k;i++)
+    inserare(&rad1,v[i]);
+
+inordine(rad1,0);
+
+for (i=0; i<k; i++)
+//printf("%d",v[i]);
+
+    return 0;
+}

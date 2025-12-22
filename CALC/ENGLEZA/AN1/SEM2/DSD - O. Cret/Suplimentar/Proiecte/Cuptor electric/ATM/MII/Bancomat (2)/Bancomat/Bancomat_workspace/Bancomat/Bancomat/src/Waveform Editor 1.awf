@@ -1,0 +1,74 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 400000
+I 1 "a#29#std_logic_vector(19 downto 0)1 ricd19 0 e#9#std_logicc9 UX01ZWLH-"
+I 2 "e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 1 1 20 A
+$SC 2-21
+$BUS IN +1 1 20 B
+$SC +1-42
+$OUT +1 2 borrow
+$BUS OUT +1 1 20 dif
+$SC +1-64
+P 0 1-64 CS "0"
+$WAVES 2-20 +3-41
+=0 T 0
+$VALUES
+V 1
+0
+$END
+$WAVES 21
+*0
+=1 D 100k 1
+=2 D 200k 1
+$VALUES
+V 1
+0
+V 1
+1
+V 1
+0
+$END
+$WAVES 42
+*0
+*2
+$VALUES
+V 1
+0
+V 1
+1
+$END
+$WAVES +1
+*0
+=3 D 0 1
+=4 D 300k 2
+$VALUES
+V 2
+U
+0
+V 1
+1
+$END
+$WAVES +2-63
+*0
+*3
+$VALUES
+V 2
+U
+0
+$END
+$WAVES +1
+*0
+*3
+=5 D 100k 2
+*5
+$VALUES
+V 2
+U
+0
+V 1
+1
+V 1
+0
+$END
+$ENDWAVE

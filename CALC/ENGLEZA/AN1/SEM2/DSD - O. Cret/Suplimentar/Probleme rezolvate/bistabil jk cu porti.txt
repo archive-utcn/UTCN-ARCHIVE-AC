@@ -1,0 +1,40 @@
+
+
+
+entity BIST_JK is
+	port(J,K:in bit;
+	Q,NQ:buffer bit);
+end BIST_JK;
+
+architecture ARH1 of BIST_JK is
+signal S1,S2,S3,S4,CLK:bit;
+begin
+	NAND1:process(J,NQ)
+	begin
+		S1<=J nand NQ;
+	end process NAND1;
+	NAND2:process(S1,S4)
+	begin
+		S2<=S1 nand S4;
+	end process NAND2;
+	NAND3:process(S3,Q)
+	begin
+		S4<=S3 nand Q;
+	end process NAND3;
+	NOT1:process(K)
+	begin
+		S3<=not(K);
+	end process NOT1;
+	process(CLK)
+	begin
+		if CLK='1' then
+			Q<=S2;
+			NQ<=not(S2);
+		end if;
+	end process;
+end architecture ARH1;	
+
+
+
+
+		

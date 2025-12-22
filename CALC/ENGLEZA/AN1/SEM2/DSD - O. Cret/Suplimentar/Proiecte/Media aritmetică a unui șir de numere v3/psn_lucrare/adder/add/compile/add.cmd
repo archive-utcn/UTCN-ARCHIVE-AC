@@ -1,0 +1,1 @@
+-w -s "D:\ralu-poli\psn_lucrare\adder\library.cfg"  -j "D:\ralu-poli\psn_lucrare\adder\add\projlib.cfg"  -d "D:\ralu-poli\psn_lucrare\adder\add\compile\"  -work add -dbg -e 100 "D:\ralu-poli\psn_lucrare\adder\add\src\suma.vhd" 

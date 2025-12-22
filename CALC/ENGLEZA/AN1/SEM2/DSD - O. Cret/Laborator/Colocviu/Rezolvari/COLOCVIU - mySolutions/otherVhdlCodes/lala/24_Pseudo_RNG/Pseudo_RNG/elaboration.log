@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Fri May 26 12:47:20 2017
+
+
+-----------------------------------
+Entity  | Architecture | Library 
+-----------------------------------
+rng     | a            | Pseudo_RNG
+r       | a            | pseudo_rng
+gate    | a            | pseudo_rng
+-----------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

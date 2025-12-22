@@ -1,0 +1,74 @@
+//Colorarea hartilor
+
+#include<conio.h>
+#include<stdio.h>
+
+int m,j,i,n,k,ev,as,s[100],a[33][33],nr;
+
+int succesor()
+{
+    if (s[k]<m)
+    {
+        s[k]=s[k]+1;
+        return 1;
+    }
+    else
+        return 0;
+}
+
+int valid ()
+{
+
+    for(i=1;i<k;i++)
+    if((s[k]==s[i]) && (a[k][i]!=0))
+        return 0;
+    return 1;
+}
+
+void tipar ()
+{
+    int i ;
+    nr++;
+        printf("Solutia %d este: \n", nr);
+    for(i=1 ;i<=n; i++)
+        printf("%d ",s[i]);
+        printf("\n" );
+}
+
+int main()
+{
+    printf("Dati numarul de tari: " );scanf("%d",&n);
+    printf("Dati numarul de culori: " );scanf("%d",&m);
+    for(i=1;i<=n-1;i++)
+    {
+      for(j=i+1;j<=n;j++)
+        {
+         printf("a[%d][%d] = ",i,j); scanf("%d",&a[i][j]);
+         a[j][i]=a[i][j];
+         a[i][i]=0;
+         }
+    }
+    k=1;
+    nr=0;
+    s[k]=0;
+    while (k>0)
+    {
+        as=1;
+        ev=0;
+        while (as &&!ev)
+         {
+            as=succesor();
+            if(as)
+                ev=valid();
+          }
+     if(as)
+         if(k==n)
+            tipar();
+         else
+        {
+            k++;
+            s[k]=0;
+        }
+        else k--;
+    }
+}

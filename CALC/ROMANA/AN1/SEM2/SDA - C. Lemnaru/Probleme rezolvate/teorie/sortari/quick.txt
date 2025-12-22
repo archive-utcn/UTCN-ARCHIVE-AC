@@ -1,0 +1,24 @@
+ void quick(int prim,int ultim,float a[nmax])
+ {
+	int i,j;
+	float pivot,x;
+	i=prim;j=ultim;
+	pivot=a[(prim + ultim) / 2];
+	do{
+		while(a[i]<pivot) i++;
+		while(a[j]>pivot) j--;
+		if(i<=j) {
+			     x=a[i];a[i]=a[j];a[j]=x;
+			      i++;j--;
+			 };
+	       }while(i<=j);
+        if(prim<j) quick(prim,j,a);
+        if(i<ultim) quick(i,ultim,a);
+   }
+
+   void quicksort(int n,float a[nmax])
+   /* SORTAREA  RAPIDA QUICKSORT */
+   {
+          quick(0,n-1,a);
+    }
+

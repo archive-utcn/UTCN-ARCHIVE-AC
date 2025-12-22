@@ -1,0 +1,49 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=MS_BUFFER_TRI_STATE_8BITI
+
+[Library]
+MS_BUFFER_TRI_STATE_8BITI=.\MS_BUFFER_TRI_STATE_8BITI.lib
+
+[$LibMap$]
+MS_BUFFER_TRI_STATE_8BITI=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/MS_BUFFER_TRI_STATE_8BITI.vhd=-1
+
+[Files.Data]
+.\src\MS_BUFFER_TRI_STATE_8BITI.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=buffer_tri_state_8_biti|arh|0 ms_buffer_tri_state_8_biti|arh|0 
+ShowHide=ShowTopLevel
+Selected=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\MS_BUFFER_TRI_STATE_8BITI\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\MS_BUFFER_TRI_STATE_8BITI\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\MS_BUFFER_TRI_STATE_8BITI\
+Extension5=dll

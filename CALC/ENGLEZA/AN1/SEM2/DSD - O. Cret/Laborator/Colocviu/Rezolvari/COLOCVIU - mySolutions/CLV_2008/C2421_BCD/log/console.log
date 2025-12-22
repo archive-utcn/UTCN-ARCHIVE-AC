@@ -1,0 +1,67 @@
+acom $DSN/src/C2421_BCD.vhd
+# Compile...
+# File: d:\designshdl\CLV_2008\C2421_BCD\src\C2421_BCD.vhd
+# Compile Entity "C2421_BCD"
+# Entity `C2421_BCD' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "C2421_BCD"
+# Error: COMP96_0031: C2421_BCD.vhd : (34, 44): Simple expression expected.
+# Error: COMP96_0015: C2421_BCD.vhd : (34, 72): ')' expected.
+# Error: COMP96_0049: C2421_BCD.vhd : (34, 40): Syntax error in expression.
+# Error: COMP96_0031: C2421_BCD.vhd : (34, 11): Simple expression expected.
+# Error: COMP96_0015: C2421_BCD.vhd : (35, 3): ')' expected.
+# Error: COMP96_0015: C2421_BCD.vhd : (35, 4): ';' expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/C2421_BCD.vhd
+# Compile...
+# File: d:\designshdl\CLV_2008\C2421_BCD\src\C2421_BCD.vhd
+# Compile Entity "C2421_BCD"
+# Entity `C2421_BCD' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "C2421_BCD"
+# Error: COMP96_0031: C2421_BCD.vhd : (34, 45): Simple expression expected.
+# Error: COMP96_0015: C2421_BCD.vhd : (34, 73): ')' expected.
+# Error: COMP96_0015: C2421_BCD.vhd : (35, 3): ';' expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/C2421_BCD.vhd
+# Compile...
+# File: d:\designshdl\CLV_2008\C2421_BCD\src\C2421_BCD.vhd
+# Compile Entity "C2421_BCD"
+# Entity `C2421_BCD' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "C2421_BCD"
+# Error: COMP96_0078: C2421_BCD.vhd : (31, 10): Unknown identifier "C241".
+# Error: COMP96_0348: C2421_BCD.vhd : (31, 9): Name on sensitivity list must denote a signal.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/C2421_BCD.vhd
+# Compile...
+# File: d:\designshdl\CLV_2008\C2421_BCD\src\C2421_BCD.vhd
+# Compile Entity "C2421_BCD"
+# Entity `C2421_BCD' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "C2421_BCD"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  c2421_bcd arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2417 kB (elbread=1070 elab2=298 kernel=1049 sdf=0)
+# 12:52 PM, Saturday, May 20, 2017
+# Simulation has been initialized
+# Selected Top-Level: c2421_bcd (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: Design "EXCESS3_BCD" has been set as active.

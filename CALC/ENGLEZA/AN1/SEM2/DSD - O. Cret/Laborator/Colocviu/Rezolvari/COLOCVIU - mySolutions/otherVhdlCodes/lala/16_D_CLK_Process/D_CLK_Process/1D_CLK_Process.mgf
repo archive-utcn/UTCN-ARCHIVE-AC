@@ -1,0 +1,81 @@
+I 000042 55 1003          1495397058313 a
+(_unit VHDL (d 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495397058313 2017.05.21 23:04:18)
+  (_source (\./src/d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495397058224)
+    (_use )
+  )
+  (_object
+    (_port (_internal s ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal r ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal q ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal clk ~extSTD.STANDARD.BIT 0 10 (_architecture (_uni ((i 0)))(_event))))
+    (_process
+      (clock(_architecture 0 0 12 (_process (_wait_for)(_target(5))(_read(5)))))
+      (ff(_architecture 1 0 18 (_process (_simple)(_target(3))(_sensitivity(5)(2)(1)(0)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 2 -1
+  )
+)
+I 000042 55 1010          1495397099564 a
+(_unit VHDL (d 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495397099563 2017.05.21 23:04:59)
+  (_source (\./src/d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495397058224)
+    (_use )
+  )
+  (_object
+    (_port (_internal s ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal r ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal q ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal clk ~extSTD.STANDARD.BIT 0 10 (_architecture (_uni ((i 0)))(_event))))
+    (_process
+      (clock(_architecture 0 0 12 (_process (_wait_for)(_target(5))(_read(5)))))
+      (ff(_architecture 1 0 18 (_process (_simple)(_target(3))(_sensitivity(5)(1)(0))(_read(2)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 2 -1
+  )
+)
+V 000042 55 1013          1495397158304 a
+(_unit VHDL (d 0 4 (a 0 9 ))
+  (_version v33)
+  (_time 1495397158303 2017.05.21 23:05:58)
+  (_source (\./src/d_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1495397058224)
+    (_use )
+  )
+  (_object
+    (_port (_internal s ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal r ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal d ~extSTD.STANDARD.BIT 0 5 (_entity (_in ))))
+    (_port (_internal q ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extSTD.STANDARD.BIT 0 6 (_entity (_out ))))
+    (_signal (_internal clk ~extSTD.STANDARD.BIT 0 10 (_architecture (_uni ((i 0)))(_event))))
+    (_process
+      (clock(_architecture 0 0 12 (_process (_wait_for)(_target(5))(_read(5)))))
+      (ff(_architecture 1 0 18 (_process (_simple)(_target(4)(3))(_sensitivity(5)(1)(0))(_read(2)))))
+    )
+    (_type (_external ~extSTD.STANDARD.BIT (std STANDARD BIT)))
+  )
+  (_model . a 2 -1
+  )
+)

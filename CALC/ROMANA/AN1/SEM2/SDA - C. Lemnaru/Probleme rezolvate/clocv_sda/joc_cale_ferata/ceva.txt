@@ -1,0 +1,8 @@
+Intrebare 1?
+5
+Intrebare 2?
+5
+Intrebare 3?
+10
+Intrebare 4?
+15

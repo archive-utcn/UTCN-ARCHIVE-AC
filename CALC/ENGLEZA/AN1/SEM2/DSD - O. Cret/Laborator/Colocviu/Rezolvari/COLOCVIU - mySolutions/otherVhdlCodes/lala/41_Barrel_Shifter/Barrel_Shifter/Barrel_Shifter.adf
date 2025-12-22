@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Barrel_Shifter
+
+[Library]
+Barrel_Shifter=.\Barrel_Shifter.lib
+
+[$LibMap$]
+Barrel_Shifter=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/barrel.vhd=-1
+
+[Files.Data]
+.\src\barrel.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=barrel|a|0 
+ShowHide=ShowTopLevel
+Selected=

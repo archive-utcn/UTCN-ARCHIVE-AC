@@ -1,0 +1,19 @@
+elbread.dll ver. 1.0.5.365 Wed May 24 00:25:48 2017
+
+
+-------------------------------------------------------------
+Entity                 | Architecture | Library            
+-------------------------------------------------------------
+comparator_structural  | arh          | COMPARATOR_STRUCTURAL
+not_gate               | arh          | comparator_structural
+and_gate               | arh          | comparator_structural
+or_gate                | arh          | comparator_structural
+xor_gate               | arh          | comparator_structural
+-------------------------------------------------------------
+
+-------------------------
+Package         | Library
+-------------------------
+standard        | std
+std_logic_1164  | ieee
+-------------------------

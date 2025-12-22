@@ -1,0 +1,94 @@
+$WAVE4
+$RESOLUTION 1000
+$ENDTIME 400000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 clk
+$IN 2 1 reset
+$OUT 3 1 clock_out
+I 2 "i#7#integerrict-2147483648 2147483647 "
+$S 4 2 count
+$S 5 1 tmp
+P 0 1-5 CS "0"
+P 0 1 Stimulator "CLK:FRM:Override:100.000000;2;1;0;50;1:Clock:1:"
+P 0 2 Stimulator "KEY:KEY:Override:82/0,1:R:1:"
+$WAVES 1
+=0 T 0
+R 1 20 =1 T 5k
+R 1 10 =2 T 10k
+R 1 40 =3 T 2500
+R 1 2 =4 T 50k
+$VALUES
+R 2 36 0 1
+V 1
+0
+$END
+$WAVES 2
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES 3
+*0
+=5 D 0 1
+$VALUES
+V 2
+U
+0
+$END
+$WAVES 5
+*0
+$VALUES
+V 1
+0
+$END
+$WAVES 4
+*0
+=6 D 5k 1
+R 1 9 =7 D 10k 1
+=8 D 15k 1
+R 1 4 =9 D 20k 1
+=10 D 12500 1
+R 1 19 *6
+=11 D 52500 1
+$VALUES
+V 37
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+$END
+$ENDWAVE

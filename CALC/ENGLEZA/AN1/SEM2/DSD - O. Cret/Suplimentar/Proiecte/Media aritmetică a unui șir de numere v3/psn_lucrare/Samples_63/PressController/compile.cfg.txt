@@ -1,0 +1,87 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\XILINX POST-P&R process\presscontroller.vhd]
+File Time Hi=29253423
+File Time Lo=1418945792
+STATE=Compiled
+Enabled=1
+[file:.\src\XILINX POST-P&R process\presscontroller.sdf]
+File Time Hi=29253422
+File Time Lo=-1881054208
+Enabled=1
+[file:.\src\XILINX POST-P&R process\PRESS_TB_XI.vhd]
+File Time Hi=29260636
+File Time Lo=1939839744
+STATE=Compiled
+Enabled=1
+[file:.\src\XILINX POST-P&R process\PRESS_TB_XI_runtest.do]
+File Time Hi=29263256
+File Time Lo=-1209443072
+Enabled=1
+[file:.\src\Readme.txt]
+File Time Hi=29603067
+File Time Lo=354448406
+Enabled=1
+[file:.\src\counters.vhd]
+File Time Hi=29603067
+File Time Lo=352261018
+STATE=Compiled
+Enabled=1
+[file:.\src\automachine.asf]
+File Time Hi=29603067
+File Time Lo=351636050
+STATE=Compiled
+Enabled=1
+[file:.\src\press.bde]
+File Time Hi=29603068
+File Time Lo=1016727286
+STATE=Compiled
+Enabled=1
+[file:.\src\press_top.bde]
+File Time Hi=29603068
+File Time Lo=1092973382
+STATE=Compiled
+Enabled=1
+[file:.\src\Press_top_TB.vhd]
+File Time Hi=29603067
+File Time Lo=353510954
+STATE=Compiled
+Enabled=1
+[file:.\src\press_top_tb_runtest.do]
+File Time Hi=29603067
+File Time Lo=353667196
+Enabled=1
+[file:.\src\ALTERA POST-P&R\presscontroller.sdf]
+File Time Hi=29603067
+File Time Lo=355229616
+Enabled=1
+[file:.\src\ALTERA POST-P&R\presscontroller_TB_AL_runtest.do]
+File Time Hi=29603067
+File Time Lo=357260762
+Enabled=1
+[file:.\src\XILINX POST-P&R\presscontroller.sdf]
+File Time Hi=29603067
+File Time Lo=360073118
+Enabled=1
+[file:.\src\XILINX POST-P&R\PRESS_TB_XI_runtest.do]
+File Time Hi=29603067
+File Time Lo=358666940
+Enabled=1
+[file:.\src\ALTERA POST-P&R\presscontroller.vhd]
+File Time Hi=29603067
+File Time Lo=356323310
+STATE=Compiled
+[file:.\src\ALTERA POST-P&R\presscontroller_TB_AL.vhd]
+File Time Hi=29603067
+File Time Lo=356948278
+STATE=Compiled
+[file:.\src\XILINX POST-P&R\presscontroller.vhd]
+File Time Hi=29603067
+File Time Lo=361323054
+STATE=Compiled
+[file:.\src\XILINX POST-P&R\PRESS_TB_XI.vhd]
+File Time Hi=29603067
+File Time Lo=358354456
+STATE=Compiled

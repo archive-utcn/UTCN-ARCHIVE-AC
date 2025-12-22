@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available." 
+MESSAGE "File: .\UL.vhd" 
+MESSAGE "Compile Entity "UL"" 
+MESSAGE "Compile Architecture "UL" of Entity "UL"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]" 

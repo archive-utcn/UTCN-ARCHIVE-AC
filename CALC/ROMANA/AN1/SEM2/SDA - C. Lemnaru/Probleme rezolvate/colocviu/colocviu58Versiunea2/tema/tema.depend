@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1273868549 source:c:\program files\codeblocks\tema\tema\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

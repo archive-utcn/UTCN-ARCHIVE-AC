@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\reg_uni_shift\library.cfg"  -j "d:\designshdl\reg_uni_shift\projlib.cfg"  -d "d:\designshdl\reg_uni_shift\compile\"  -work reg_uni_shift -dbg -e 100 -o "d:\designshdl\reg_uni_shift\src\da.vhd" 

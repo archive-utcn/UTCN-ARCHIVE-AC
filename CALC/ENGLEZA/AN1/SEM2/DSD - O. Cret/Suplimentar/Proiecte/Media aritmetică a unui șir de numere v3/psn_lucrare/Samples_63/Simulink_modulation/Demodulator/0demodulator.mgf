@@ -1,0 +1,11 @@
+V 000046 11 247 1071749614507 top_demodulator
+E top_demodulator VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P ce _in std_logic
+P clk _in std_ulogic
+P reset _in std_ulogic
+P In1 _in std_logic_vector[30:0]
+P carrier _out std_ulogic_vector[20:0]
+P envelope _out std_ulogic_vector[20:0]
+X top_demodulator

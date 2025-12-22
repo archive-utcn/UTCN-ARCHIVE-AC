@@ -1,0 +1,688 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.37 secs
+ 
+--> Reading design: fifo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fifo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fifo"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : fifo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\RAM.vhd" into library work
+Parsing entity <RAM>.
+Parsing architecture <arh_RAM> of entity <ram>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\Num_reversibil.vhd" into library work
+Parsing entity <C4UD>.
+Parsing architecture <arh_C4UD> of entity <c4ud>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\Num.vhd" into library work
+Parsing entity <C4U>.
+Parsing architecture <arh_C4U> of entity <c4u>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\Mux_2la1.vhd" into library work
+Parsing entity <mux2to1>.
+Parsing architecture <arh_mux> of entity <mux2to1>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\Status.vhd" into library work
+Parsing entity <status>.
+Parsing architecture <arh_status> of entity <status>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\Pointers_RAM.vhd" into library work
+Parsing entity <pointers_RAM>.
+Parsing architecture <arh_pointers_RAM> of entity <pointers_ram>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\Divizor_frecventa.vhd" into library work
+Parsing entity <divizor_frecventa>.
+Parsing architecture <divizor> of entity <divizor_frecventa>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\Control.vhd" into library work
+Parsing entity <control>.
+Parsing architecture <arh_control> of entity <control>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\BCD.vhd" into library work
+Parsing entity <BCD>.
+Parsing architecture <Arh_BCD> of entity <bcd>.
+Parsing VHDL file "C:\Users\Windows\Desktop\FIFODANA\FIFO\FIFO.vhd" into library work
+Parsing entity <fifo>.
+Parsing architecture <arh_fifo> of entity <fifo>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <fifo> (architecture <arh_fifo>) from library <work>.
+
+Elaborating entity <divizor_frecventa> (architecture <divizor>) from library <work>.
+
+Elaborating entity <control> (architecture <arh_control>) from library <work>.
+
+Elaborating entity <status> (architecture <arh_status>) from library <work>.
+
+Elaborating entity <C4UD> (architecture <arh_C4UD>) from library <work>.
+
+Elaborating entity <pointers_RAM> (architecture <arh_pointers_RAM>) from library <work>.
+
+Elaborating entity <C4U> (architecture <arh_C4U>) from library <work>.
+
+Elaborating entity <mux2to1> (architecture <arh_mux>) from library <work>.
+
+Elaborating entity <RAM> (architecture <arh_RAM>) from library <work>.
+
+Elaborating entity <BCD> (architecture <Arh_BCD>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\Windows\Desktop\FIFODANA\FIFO\BCD.vhd" Line 74. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Windows\Desktop\FIFODANA\FIFO\BCD.vhd" Line 97. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fifo>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\FIFO.vhd".
+    Summary:
+	no macro.
+Unit <fifo> synthesized.
+
+Synthesizing Unit <divizor_frecventa>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\Divizor_frecventa.vhd".
+    Found 26-bit register for signal <var_CLK>.
+    Found 26-bit adder for signal <var_CLK[0]_GND_6_o_add_0_OUT> created at line 17.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+Unit <divizor_frecventa> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\Control.vhd".
+    Summary:
+	no macro.
+Unit <control> synthesized.
+
+Synthesizing Unit <status>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\Status.vhd".
+    Found 1-bit register for signal <lastV>.
+    Found 1-bit register for signal <fullV>.
+    Found 1-bit register for signal <emptyV>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <status> synthesized.
+
+Synthesizing Unit <C4UD>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\Num_reversibil.vhd".
+    Found 4-bit register for signal <v>.
+    Found 4-bit adder for signal <v[3]_GND_9_o_add_0_OUT> created at line 17.
+    Found 4-bit subtractor for signal <GND_9_o_GND_9_o_sub_2_OUT<3:0>> created at line 19.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <C4UD> synthesized.
+
+Synthesizing Unit <pointers_RAM>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\Pointers_RAM.vhd".
+    Summary:
+	no macro.
+Unit <pointers_RAM> synthesized.
+
+Synthesizing Unit <C4U>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\Num.vhd".
+    Found 4-bit register for signal <v1>.
+    Found 4-bit adder for signal <v1[3]_GND_11_o_add_0_OUT> created at line 16.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <C4U> synthesized.
+
+Synthesizing Unit <mux2to1>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\Mux_2la1.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux2to1> synthesized.
+
+Synthesizing Unit <RAM>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\RAM.vhd".
+    Found 8-bit register for signal <M<1>>.
+    Found 8-bit register for signal <M<2>>.
+    Found 8-bit register for signal <M<3>>.
+    Found 8-bit register for signal <M<4>>.
+    Found 8-bit register for signal <M<5>>.
+    Found 8-bit register for signal <M<6>>.
+    Found 8-bit register for signal <M<7>>.
+    Found 8-bit register for signal <M<8>>.
+    Found 8-bit register for signal <M<9>>.
+    Found 8-bit register for signal <M<10>>.
+    Found 8-bit register for signal <M<11>>.
+    Found 8-bit register for signal <M<12>>.
+    Found 8-bit register for signal <M<13>>.
+    Found 8-bit register for signal <M<14>>.
+    Found 8-bit register for signal <M<15>>.
+    Found 8-bit register for signal <DATAOUT>.
+    Found 8-bit register for signal <M<0>>.
+    Found 8-bit 16-to-1 multiplexer for signal <AD[3]_M[15][7]_wide_mux_16_OUT> created at line 39.
+    Summary:
+	inferred 136 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <RAM> synthesized.
+
+Synthesizing Unit <BCD>.
+    Related source file is "C:\Users\Windows\Desktop\FIFODANA\FIFO\BCD.vhd".
+    Found 16-bit register for signal <nr>.
+    Found 16-bit adder for signal <nr[15]_GND_70_o_add_0_OUT> created at line 51.
+    Found 4x4-bit Read Only RAM for signal <mux2>
+    Found 16x7-bit Read Only RAM for signal <cat>
+    Found 1-bit 4-to-1 multiplexer for signal <mux1<3>> created at line 108.
+    Found 1-bit 4-to-1 multiplexer for signal <mux1<2>> created at line 108.
+    Found 1-bit 4-to-1 multiplexer for signal <mux1<1>> created at line 108.
+    Found 1-bit 4-to-1 multiplexer for signal <mux1<0>> created at line 108.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <BCD> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 26-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 4-bit addsub                                          : 1
+# Registers                                            : 25
+ 1-bit register                                        : 3
+ 16-bit register                                       : 1
+ 26-bit register                                       : 1
+ 4-bit register                                        : 3
+ 8-bit register                                        : 17
+# Multiplexers                                         : 6
+ 1-bit 4-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <BCD>.
+The following registers are absorbed into counter <nr>: 1 register on signal <nr>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mux2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <nr>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <mux2>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cat> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <mux1>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <cat>           |          |
+    -----------------------------------------------------------------------
+Unit <BCD> synthesized (advanced).
+
+Synthesizing (advanced) Unit <C4U>.
+The following registers are absorbed into counter <v1>: 1 register on signal <v1>.
+Unit <C4U> synthesized (advanced).
+
+Synthesizing (advanced) Unit <C4UD>.
+The following registers are absorbed into counter <v>: 1 register on signal <v>.
+Unit <C4UD> synthesized (advanced).
+
+Synthesizing (advanced) Unit <divizor_frecventa>.
+The following registers are absorbed into counter <var_CLK>: 1 register on signal <var_CLK>.
+Unit <divizor_frecventa> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+ 4-bit updown counter                                  : 1
+# Registers                                            : 139
+ Flip-Flops                                            : 139
+# Multiplexers                                         : 6
+ 1-bit 4-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <RAM> ...
+
+Optimizing unit <status> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fifo, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 193
+ Flip-Flops                                            : 193
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fifo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 388
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 40
+#      LUT2                        : 15
+#      LUT3                        : 39
+#      LUT4                        : 10
+#      LUT5                        : 3
+#      LUT6                        : 168
+#      MUXCY                       : 40
+#      MUXF7                       : 16
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 42
+# FlipFlops/Latches                : 193
+#      FD                          : 47
+#      FDE                         : 146
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 10
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             193  out of  18224     1%  
+ Number of Slice LUTs:                  280  out of   9112     3%  
+    Number used as Logic:               280  out of   9112     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    288
+   Number with an unused Flip Flop:      95  out of    288    32%  
+   Number with an unused LUT:             8  out of    288     2%  
+   Number of fully used LUT-FF pairs:   185  out of    288    64%  
+   Number of unique control sets:        13
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 42    |
+divizor/var_CLK_0                  | BUFG                   | 151   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.401ns (Maximum Frequency: 294.005MHz)
+   Minimum input arrival time before clock: 4.974ns
+   Maximum output required time after clock: 6.217ns
+   Maximum combinational path delay: 7.056ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.142ns (frequency: 466.886MHz)
+  Total number of paths / destination ports: 487 / 42
+-------------------------------------------------------------------------
+Delay:               2.142ns (Levels of Logic = 27)
+  Source:            divizor/var_CLK_25 (FF)
+  Destination:       divizor/var_CLK_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: divizor/var_CLK_25 to divizor/var_CLK_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  divizor/var_CLK_25 (divizor/var_CLK_25)
+     INV:I->O              1   0.206   0.000  divizor/Mcount_var_CLK_lut<0>_INV_0 (divizor/Mcount_var_CLK_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  divizor/Mcount_var_CLK_cy<0> (divizor/Mcount_var_CLK_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<1> (divizor/Mcount_var_CLK_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<2> (divizor/Mcount_var_CLK_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<3> (divizor/Mcount_var_CLK_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<4> (divizor/Mcount_var_CLK_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<5> (divizor/Mcount_var_CLK_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<6> (divizor/Mcount_var_CLK_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<7> (divizor/Mcount_var_CLK_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<8> (divizor/Mcount_var_CLK_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<9> (divizor/Mcount_var_CLK_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<10> (divizor/Mcount_var_CLK_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<11> (divizor/Mcount_var_CLK_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<12> (divizor/Mcount_var_CLK_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<13> (divizor/Mcount_var_CLK_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<14> (divizor/Mcount_var_CLK_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<15> (divizor/Mcount_var_CLK_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<16> (divizor/Mcount_var_CLK_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<17> (divizor/Mcount_var_CLK_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<18> (divizor/Mcount_var_CLK_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<19> (divizor/Mcount_var_CLK_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<20> (divizor/Mcount_var_CLK_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<21> (divizor/Mcount_var_CLK_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<22> (divizor/Mcount_var_CLK_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  divizor/Mcount_var_CLK_cy<23> (divizor/Mcount_var_CLK_cy<23>)
+     MUXCY:CI->O           0   0.019   0.000  divizor/Mcount_var_CLK_cy<24> (divizor/Mcount_var_CLK_cy<24>)
+     XORCY:CI->O           1   0.180   0.000  divizor/Mcount_var_CLK_xor<25> (Result<25>)
+     FD:D                      0.102          divizor/var_CLK_0
+    ----------------------------------------
+    Total                      2.142ns (1.563ns logic, 0.579ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'divizor/var_CLK_0'
+  Clock period: 3.401ns (frequency: 294.005MHz)
+  Total number of paths / destination ports: 1660 / 297
+-------------------------------------------------------------------------
+Delay:               3.401ns (Levels of Logic = 4)
+  Source:            mem/U2/v1_1 (FF)
+  Destination:       mem/U3/DATAOUT_5 (FF)
+  Source Clock:      divizor/var_CLK_0 rising
+  Destination Clock: divizor/var_CLK_0 rising
+
+  Data Path: mem/U2/v1_1 to mem/U3/DATAOUT_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.447   0.987  mem/U2/v1_1 (mem/U2/v1_1)
+     LUT3:I1->O           19   0.203   1.176  mem/MUX/Mmux_Y21_3 (mem/MUX/Mmux_Y21_11)
+     LUT6:I4->O            1   0.203   0.000  mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_5 (mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_5)
+     MUXF7:I0->O           1   0.131   0.000  mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_3_f7 (mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_3_f7)
+     MUXF8:I1->O           1   0.152   0.000  mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_2_f8 (mem/U3/AD[3]_M[15][7]_wide_mux_16_OUT<0>)
+     FDE:D                     0.102          mem/U3/DATAOUT_0
+    ----------------------------------------
+    Total                      3.401ns (1.238ns logic, 2.163ns route)
+                                       (36.4% logic, 63.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'divizor/var_CLK_0'
+  Total number of paths / destination ports: 894 / 289
+-------------------------------------------------------------------------
+Offset:              4.974ns (Levels of Logic = 5)
+  Source:            push (PAD)
+  Destination:       mem/U3/DATAOUT_5 (FF)
+  Destination Clock: divizor/var_CLK_0 rising
+
+  Data Path: push to mem/U3/DATAOUT_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   1.222   1.783  push_IBUF (push_IBUF)
+     LUT3:I0->O           19   0.205   1.176  mem/MUX/Mmux_Y21_3 (mem/MUX/Mmux_Y21_11)
+     LUT6:I4->O            1   0.203   0.000  mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_5 (mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_5)
+     MUXF7:I0->O           1   0.131   0.000  mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_3_f7 (mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_3_f7)
+     MUXF8:I1->O           1   0.152   0.000  mem/U3/Mmux_AD[3]_M[15][7]_wide_mux_16_OUT_2_f8 (mem/U3/AD[3]_M[15][7]_wide_mux_16_OUT<0>)
+     FDE:D                     0.102          mem/U3/DATAOUT_0
+    ----------------------------------------
+    Total                      4.974ns (2.015ns logic, 2.959ns route)
+                                       (40.5% logic, 59.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 64 / 11
+-------------------------------------------------------------------------
+Offset:              6.217ns (Levels of Logic = 3)
+  Source:            afisare/nr_14 (FF)
+  Destination:       CAT<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: afisare/nr_14 to CAT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.194  afisare/nr_14 (afisare/nr_14)
+     LUT6:I0->O            7   0.203   1.021  afisare/Mmux_mux1<3>11 (afisare/mux1<3>)
+     LUT4:I0->O            1   0.203   0.579  afisare/Mram_cat51 (CAT_5_OBUF)
+     OBUF:I->O                 2.571          CAT_5_OBUF (CAT<5>)
+    ----------------------------------------
+    Total                      6.217ns (3.424ns logic, 2.793ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'divizor/var_CLK_0'
+  Total number of paths / destination ports: 59 / 10
+-------------------------------------------------------------------------
+Offset:              5.850ns (Levels of Logic = 3)
+  Source:            mem/U3/DATAOUT_5 (FF)
+  Destination:       CAT<6> (PAD)
+  Source Clock:      divizor/var_CLK_0 rising
+
+  Data Path: mem/U3/DATAOUT_5 to CAT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.827  mem/U3/DATAOUT_5 (mem/U3/DATAOUT_5)
+     LUT6:I2->O            7   0.203   1.021  afisare/Mmux_mux1<1>11 (afisare/mux1<1>)
+     LUT4:I0->O            1   0.203   0.579  afisare/Mram_cat61 (CAT_6_OBUF)
+     OBUF:I->O                 2.571          CAT_6_OBUF (CAT<6>)
+    ----------------------------------------
+    Total                      5.850ns (3.424ns logic, 2.426ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 56 / 7
+-------------------------------------------------------------------------
+Delay:               7.056ns (Levels of Logic = 4)
+  Source:            datain<5> (PAD)
+  Destination:       CAT<6> (PAD)
+
+  Data Path: datain<5> to CAT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.256  datain_5_IBUF (datain_5_IBUF)
+     LUT6:I3->O            7   0.205   1.021  afisare/Mmux_mux1<1>11 (afisare/mux1<1>)
+     LUT4:I0->O            1   0.203   0.579  afisare/Mram_cat61 (CAT_6_OBUF)
+     OBUF:I->O                 2.571          CAT_6_OBUF (CAT<6>)
+    ----------------------------------------
+    Total                      7.056ns (4.201ns logic, 2.855ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.142|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock divizor/var_CLK_0
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+divizor/var_CLK_0|    3.401|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.97 secs
+ 
+--> 
+
+Total memory usage is 235868 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

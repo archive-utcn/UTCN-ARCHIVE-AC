@@ -1,0 +1,57 @@
+[View]
+entity=
+architecture=
+TopLevelType=
+
+
+
+
+
+
+
+
+
+
+[file:.\src\readme.txt]
+File Time Hi=29603067
+File Time Lo=394758842
+Enabled=1
+[file:.\src\functional\Voicepkg.vhd]
+File Time Hi=29603067
+File Time Lo=396633746
+STATE=Compiled
+Enabled=1
+[file:.\src\functional\Voice.vhd]
+File Time Hi=29603067
+File Time Lo=395852536
+STATE=Compiled
+Enabled=1
+[file:.\src\functional\Voice_tb.vhd]
+File Time Hi=29603067
+File Time Lo=396165020
+STATE=Compiled
+Enabled=1
+[file:.\src\timing\Voice_t.vhq]
+File Time Hi=29603067
+File Time Lo=399446102
+STATE=Compiled
+[file:.\src\timing\Voice.sdf]
+File Time Hi=29603067
+File Time Lo=398508650
+Enabled=1
+[file:.\src\timing\Voicepkg.vhd]
+File Time Hi=29603067
+File Time Lo=400383554
+STATE=Compiled
+[file:.\src\timing\Voice_t_tb.vhd]
+File Time Hi=29603067
+File Time Lo=399914828
+STATE=Compiled
+[file:.\src\macros\Functional.do]
+File Time Hi=29603067
+File Time Lo=397258714
+Enabled=1
+[file:.\src\macros\Timing.do]
+File Time Hi=29603067
+File Time Lo=397571198
+Enabled=1

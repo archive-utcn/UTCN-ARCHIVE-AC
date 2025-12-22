@@ -1,0 +1,101 @@
+/** Construirea unui arbore total echilibrat
+    Tamas Radu
+**/
+
+#include <stdio.h>
+
+typedef struct tip_nod{
+
+    int nr;
+    struct tip_nod *st, *dr;
+
+} LISTA; // arborele e memorat intr-o lista dinamica
+
+LISTA *rad; // radacina arborelui;
+
+void preordine(LISTA *p, int nivel){
+
+    int i;
+    if(p != 0){
+
+       for(i=0; i <= nivel; i++) printf("  ");
+       printf("%2d\n", p -> nr);
+       preordine(p -> st, nivel + 1);
+       preordine(p -> dr, nivel + 1);
+
+    }
+
+}
+
+void inordine(LISTA *p, int nivel)
+{
+   int i;
+   if (p != 0){
+      inordine(p -> st, nivel + 1);
+
+      for(i = 0; i <= nivel; i++) printf("  ");
+         printf("%2d\n",p -> nr);
+
+      inordine(p -> dr, nivel + 1);
+   }
+}
+
+void postordine(LISTA *p, int nivel)
+{
+   int i;
+   if (p!=0){
+       postordine(p->st,nivel+1);
+       postordine(p->dr,nivel+1);
+       for(i=0;i<=nivel;i++) printf("  ");
+          printf("%2d\n",p->nr);
+   }
+}
+
+LISTA *constructie(int nrNoduri){
+
+  LISTA *p;
+  int n_st, n_dr;
+  int inf;
+
+  if(nrNoduri == 0)
+     return 0;
+  else{
+
+     n_st = nrNoduri / 2;
+     n_dr = nrNoduri - n_st - 1;
+
+     p = (LISTA *)malloc(sizeof(LISTA));
+     printf("\nIntroduceti info din nod in preordine");
+     scanf("%d", &(p->nr));
+
+     p -> st = constructie(n_st);
+     p -> dr = constructie(n_dr);
+
+
+  }
+  return p;
+
+}
+
+int main(){
+
+  int nrTotalNoduri;
+  printf("\nNumar total noduri: ");
+  scanf("%d", &nrTotalNoduri);
+
+  rad = constructie(nrTotalNoduri);
+
+  printf("\nVIZITAREA IN PREORDINE\n");
+  preordine(rad,0);
+  getch();
+
+  printf("\nVIZITAREA IN INORDINE\n");
+  inordine(rad,0);
+  getch();
+
+  printf("VIZITAREA IN POSTORDINE\n");
+  postordine(rad,0);
+  getch();
+
+
+}

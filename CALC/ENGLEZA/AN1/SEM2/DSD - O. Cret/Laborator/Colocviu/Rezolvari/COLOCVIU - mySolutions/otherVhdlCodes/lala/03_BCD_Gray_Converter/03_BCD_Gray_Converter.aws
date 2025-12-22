@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+bcd_gray_converter=.\BCD_Gray_Converter\BCD_Gray_Converter.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+bcd_gray_converter=1

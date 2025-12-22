@@ -1,0 +1,21 @@
+2.1	Arbori oarecare
+
+Arborele oarecare este un arbore a carui noduri au mai mult de doi descendenti.
+Un nod are urmatoarea structura:
+
+typedef struct tip_nod {
+informatie;
+int nr_fii; /*numar de fii */
+struct tip_nod *adr_fii [maxfii];
+/* adresele nodurilor fiu */
+ } TIP_NOD;
+
+
+Construirea arborelui se realizeaza astfel:
+?	pentru fiecare nod se citeste informatia utila si numarul de fii;
+?	nodurile citite în postordine si adresele sunt pastrate într-o stiva pâna când apare nodul al carui fii sunt. În acest moment adresele fiilor sunt scoase din stiva, iar adresele lor sunt trecute în nodul tata, dupa care adresa nodului tata este pusa în stiva. În final singura adresa în stiva va fi cea a radacinii, arborele fiind construit.
+Traversarea arborelui pe orizontala (nivel dupa nivel) se va face astfel:
+?	se utilizeaza o coada pentru pastrarea adreselor nodurilor ce urmeaza sa fie prelucrate;
+?	initial coada este vida;
+?	se introduce în coada adresa radacinii;
+?	se scoate pe rând din coada adresa a câte unui nod, se prelucreaza informatia din nod, iar apoi se introduc adresele fiilor nodului respectiv. Se repeta acest pas pâna când coada devine vida.

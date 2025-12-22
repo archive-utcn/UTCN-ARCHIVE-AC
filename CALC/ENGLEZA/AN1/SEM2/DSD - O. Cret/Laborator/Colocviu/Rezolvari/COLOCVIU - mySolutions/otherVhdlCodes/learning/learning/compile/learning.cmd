@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\learning\library.cfg"  -j "D:\designshdl\learning\learning\projlib.cfg"  -d "D:\designshdl\learning\learning\compile\"  -work learning -dbg -e 100 "D:\designshdl\learning\learning\src\learning.vhd" 

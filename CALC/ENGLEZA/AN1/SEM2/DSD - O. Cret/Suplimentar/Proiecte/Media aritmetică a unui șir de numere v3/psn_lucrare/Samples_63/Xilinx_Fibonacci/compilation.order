@@ -1,0 +1,6 @@
+.\src\functional\Fib.vhd
+.\src\functional\top.vhd
+.\src\timing\top_routed.vhd
+.\src\Testbench.vhd
+.\src\functional\functional_cfg.vhd
+.\src\timing\timing_cfg.vhd

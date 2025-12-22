@@ -1,0 +1,19 @@
+1005
+~E 0 "./src/afisare.vhd" 5 afis
+~A 1 "./src/afisare.vhd" 13 afisor
+~E 0 "./src/meniu.vhd" 4 banc_meniu
+~A 1 "./src/meniu.vhd" 10 meniu
+~E 0 "./src/bacomat.vhd" 4 bancomat
+~A 1 "./src/bacomat.vhd" 18 atm
+~E 0 "./src/procesare_meniu.vhd" 6 procesare
+~A 1 "./src/procesare_meniu.vhd" 16 afisare
+~E 0 "./src/read_card.vhd" 4 read_card
+~A 1 "./src/read_card.vhd" 13 rcard
+~E 0 "./src/read_pin.vhd" 4 read_pin
+~A 1 "./src/read_pin.vhd" 12 pin
+~E 0 "./src/decodificare.vhd" 8 ten_to_bcd
+~A 1 "./src/decodificare.vhd" 13 double_d
+~E 0 "./src/verif_card.vhd" 6 verificare
+~A 1 "./src/verif_card.vhd" 14 verif_card
+~E 0 "./src/verif_pin.vhd" 6 verificare_pin
+~A 1 "./src/verif_pin.vhd" 13 verif_pin

@@ -1,0 +1,23 @@
+void  explorare_largime(int s)
+/* s este nodul de pornire  */
+   {
+       int vizitate[NrMaxNoduri];
+       coada Q;
+       int i,NrNoduri,v,w;
+       for(i=0;i<NrNoduri;i++)
+            vizitate[i]=0;     /*iniþializare vector cu zero*/
+       vizitate[s]=1;/*se viziteazã  nodul s */
+       prelucreazã informaþia din s;
+       introducere nod s in coada Q;
+       while(coada Q nu este vidã)
+            {
+                extrage urmãtorul nod v din coada Q;
+                for(fiecare nod w adiacent lui v)
+                      if(nodul w nu a fost vizitat)
+                             {     
+                                  vizitate[w]=1;
+                                  prelucreazã informaþia din w;
+                                  introducere nod w în coada Q;
+                              }    
+             }
+    }

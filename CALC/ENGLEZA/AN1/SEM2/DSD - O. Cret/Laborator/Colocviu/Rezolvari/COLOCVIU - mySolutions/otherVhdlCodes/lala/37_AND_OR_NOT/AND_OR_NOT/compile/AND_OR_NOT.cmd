@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\37_AND_OR_NOT\library.cfg"  -j "c:\My_Designs\37_AND_OR_NOT\AND_OR_NOT\projlib.cfg"  -d "c:\My_Designs\37_AND_OR_NOT\AND_OR_NOT\compile\"  -work AND_OR_NOT -dbg -e 100 "c:\My_Designs\37_AND_OR_NOT\AND_OR_NOT\src\and_or_not.vhd" 

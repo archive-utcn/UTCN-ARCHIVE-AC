@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define maxV 100                               
+typedef struct graphnode{                        
+    int vertex;
+    struct graphnode *next;
+}Node;
+Node **node;                             
+Node **nodeT; 
+
+FILE *fp;
+
+void initial(int nv);                            
+void AdjList(void);                              
+void PrintAdjList(int nv);                           
+
+
+int main()
+{
+    int nv;
+
+    fp= fopen("input.txt","r");
+    fscanf(fp,"%d",&nv);
+    initial(nv);
+    CreateAdjList();
+    PrintAdjList(nv);
+
+    return 0;
+}
+
+
+
+void initial(int nv)
+{
+    int i;
+    node = new Node *[maxV];
+
+    for(i=1;i<=nv;i++){
+        node[i] = (Node *)malloc(sizeof(Node));
+        node[i]->next=NULL;
+
+
+    }
+
+}
+
+
+//CREATE ADJACENCY  LIST - 
+void CreateAdjList(void)
+{
+    int v1,v2;
+    Node *ptr;
+
+while(fscanf(fp,"%d%d",&v1,&v2)!=EOF){
+
+        ptr = (Node *)malloc(sizeof(Node));
+        ptr->vertex = v2;
+        ptr->next = node[v1]->next;    //Problem could be here
+        node[v1]->next = ptr;
+
+    }
+
+    fclose(fp);
+}
+
+
+
+
+//PRINT LIST
+void PrintAdjList(int nv)
+{
+    int i;
+    Node *ptr;
+
+    for(i=1; i<=nv; i++){
+        ptr = node[i]->next;
+        printf("    node[%2d]  ",i);
+        while(ptr != NULL){
+            printf("  -->%2d", ptr->vertex);
+            ptr=ptr->next;
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+}

@@ -1,0 +1,57 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=SCAZATOR_1BIT
+
+[Library]
+SCAZATOR_1BIT=.\SCAZATOR_1BIT.lib
+
+[$LibMap$]
+SCAZATOR_1BIT=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/SCAZATOR_1BIT.vhd=-1
+/AND_GATE.vhd=-1
+/OR_GATE.vhd=-1
+/NOT_GATE.vhd=-1
+/XOR_GATE.vhd=-1
+
+[Files.Data]
+.\src\SCAZATOR_1BIT.vhd=VHDL Source Code
+.\src\AND_GATE.vhd=VHDL Source Code
+.\src\OR_GATE.vhd=VHDL Source Code
+.\src\NOT_GATE.vhd=VHDL Source Code
+.\src\XOR_GATE.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=scazator_1bit|arh_structurala|0   
+ShowHide=ShowTopLevel
+Selected=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2010\SCAZATOR_1BIT\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2010\SCAZATOR_1BIT\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2010\SCAZATOR_1BIT\
+Extension5=dll

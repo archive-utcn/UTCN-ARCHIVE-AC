@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CLV_2008\library.cfg"  -j "D:\designshdl\CLV_2008\try_FIFO\projlib.cfg"  -d "D:\designshdl\CLV_2008\try_FIFO\compile\"  -work try_FIFO -dbg -e 100 "D:\designshdl\CLV_2008\try_FIFO\src\try_FIFO.vhd" 

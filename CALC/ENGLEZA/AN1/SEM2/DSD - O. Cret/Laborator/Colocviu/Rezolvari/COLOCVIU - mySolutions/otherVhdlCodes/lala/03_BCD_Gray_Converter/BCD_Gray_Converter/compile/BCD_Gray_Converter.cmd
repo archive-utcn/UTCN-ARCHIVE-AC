@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\03_BCD_Gray_Converter\library.cfg"  -j "c:\My_Designs\03_BCD_Gray_Converter\BCD_Gray_Converter\projlib.cfg"  -d "c:\My_Designs\03_BCD_Gray_Converter\BCD_Gray_Converter\compile\"  -work BCD_Gray_Converter -dbg -e 100 "c:\My_Designs\03_BCD_Gray_Converter\BCD_Gray_Converter\src\converter_TB.vhd" 

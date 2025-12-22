@@ -1,0 +1,51 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=memorie_rom
+
+[Library]
+memorie_rom=.\memorie_rom.lib
+
+[$LibMap$]
+memorie_rom=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/memorie_rom.vhd=-1
+/memorie_rom.awf=-1
+
+[Files.Data]
+.\src\memorie_rom.vhd=VHDL Source Code
+.\src\memorie_rom.awf=Waveform File
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=memorie_rom|arhrom|0   
+ShowHide=ShowTopLevel
+Selected=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\memorie_rom\memorie_rom\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\memorie_rom\memorie_rom\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\memorie_rom\memorie_rom\
+Extension5=dll

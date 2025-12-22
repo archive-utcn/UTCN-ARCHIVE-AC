@@ -1,0 +1,44 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=NUMARATOR_BINAR
+
+[Library]
+NUMARATOR_BINAR=.\NUMARATOR_BINAR.lib
+
+[$LibMap$]
+NUMARATOR_BINAR=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/NUMARATOR_BINAR.vhd=-1
+
+[Files.Data]
+.\src\NUMARATOR_BINAR.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2008\NUMARATOR_BINAR\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2008\NUMARATOR_BINAR\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2008\NUMARATOR_BINAR\
+Extension5=dll

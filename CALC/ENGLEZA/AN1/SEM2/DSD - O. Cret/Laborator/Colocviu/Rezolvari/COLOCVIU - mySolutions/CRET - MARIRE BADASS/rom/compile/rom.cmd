@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\rom\projlib.cfg"  -d "D:\designshdl\CRET\rom\compile\"  -work rom -dbg -e 100 "D:\designshdl\CRET\rom\src\rom.vhd" 

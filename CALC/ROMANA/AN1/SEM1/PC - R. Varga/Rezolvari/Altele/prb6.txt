@@ -1,0 +1,43 @@
+typedef struct {
+	char nume[51];
+	int h1, h2, m1, m2, s1, s2;
+}film;
+
+//implementam dupa main
+int encode(int h, int m, int s);
+void decode(int total_secunde);
+
+int main(){
+	film* v = calloc(1000, sizeof(film));
+	char linie[200];
+	
+	FILE* pf = fopen("netflix.txt", "r");
+	if (!pf)
+		return -1;
+	int i = 0;
+	while(1){
+		if (!fgets(linie, pf, 200))
+			break;
+		
+		int p1 = -1, p2 = -1;
+		int j = 0, k = 0;
+		for(int k = 0; linie[k]; k++){
+			if (linie[k] == '"'){
+				if (p1 == -1)
+					p1 = k;
+				else{
+					p2 = k;
+					sscanf(linie + k + 1, "%d:%d:%d-%d:%d:%d",
+						&v[i].h1, &v[i].m1, &v[i].s1,
+						&v[i].h2, &v[i].m2, &v[i].s2);
+					break;				
+				}
+			}
+			else{
+				if (p1 != -1)
+					v[i].nume[j++] = linie[k];
+			}
+		}
+		i++;
+	}
+}

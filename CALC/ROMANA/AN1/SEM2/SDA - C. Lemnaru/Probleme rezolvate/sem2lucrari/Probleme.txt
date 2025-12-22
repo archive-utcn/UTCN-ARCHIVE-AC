@@ -1,0 +1,2111 @@
+3.1. Pentru un graf orientat G =(V, E) si V’?V sa se gaseasca subgraful indus G’ =(V’, E’).
+Elementele din V si V’ se  citesc.
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+#include<stdio.h>
+/*problema 3.1 din laboratorul nr. 6*/
+void citire(int a[100][100],int &n)
+{
+
+fstream f("date.txt",ios::in);
+f>>n;
+int i,j;
+for(i=1;i<=n;i++)
+	for(j=1;j<=n;j++)
+   	f>>a[i][j];
+}
+
+void afisare(int a[100][100],int n)
+{
+int i,j;
+printf("\nMatricea de adiacenta este :\n");
+for(i=1;i<=n;i++)
+	{
+   printf("\n\n		");
+   for(j=1;j<=n;j++)
+   	printf("%d ",a[i][j]);
+   }
+}
+
+void subgraf(int a[100][100],int c[100][100],int n,int &m)
+	{
+   int b[100],i=1,j;
+   do
+   {
+   printf("\n\nIntroduceti nodurile care compun noul graf :\n(Pentru a incheia adaugarea nodurilor introduceti 0)");
+   scanf("%d",&b[i]);
+   i++;
+   for(j=1;j<i-1;j++)
+   	if(b[j]==b[i-1])
+   	{
+      printf("\nNodul %d a mai fost introdus !! Introduceti din nou!!",b[i-1]);
+   	i--;
+      }
+   if(b[i-1]>n){printf("\nNodul introdus nu exista !!! Introduceti din nou !");i--;}
+   }while(b[i-1]!=0);
+   m=i-2;
+
+   for(i=1;i<=m;i++)
+   	for(j=1;j<=m;j++)
+        c[i][j]=a[b[i]][b[j]];
+   }
+
+void main()
+{
+int a[100][100],c[100][100],n,m;
+citire(a,n);
+afisare(a,n);
+subgraf(a,c,n,m);
+printf("\n\n Datele pentru noul graf\n");
+afisare(c,m);
+getch();
+}
+
+
+
+L6 Prob5(sa se verifice daca graful este conex) ptru graf neorientat
+#include<stdio.h>
+#include<conio.h>
+             int a[20][20],n,m,x,y,i,j;
+             void conex();
+               void main()
+               {
+ printf("Dati nr de muchii:");
+ scanf("%d",&m);
+ printf("Dati nr de varfuri:");
+ scanf("%d",&n);
+ for(i=1;i<=n;i++)
+    for(j=1;j<=n;j++)
+      a[i][j]=0;
+ for(i=1;i<=m;i++)
+ 
+ {do{
+      printf("\n Dati muchia nr %d: ",i);
+      scanf("%d%d",&x,&y);
+     } while(x==y||x<1||x>n||y<1||y>n);
+     a[x][y]=1;
+     a[y][x]=1;
+ }
+ printf("\nMatricea de adiacenta corespunzatoare este:\n\n");
+ for(i=1;i<=n;i++)
+ {for(j=1;j<=n;j++)
+        printf("%2d",a[i][j]);
+   printf("\n");
+ }
+ conex();
+ getch();
+}
+               void conex()
+               {
+int k;k=0;
+    for(i=1;i<=n;i++)
+for (j=1;j<=n;j++)
+        if (i==j)
+        {
+            if (a[i][j]==0)
+            k++;
+                }
+            else
+        { if (a[i][j]==1)
+        k++;
+        }
+if(k==n*n)
+       printf("\nGraful este conex");
+else
+    printf("\nGraful nu este conex");
+              }
+ 
+Lab7 prob1
+// Algoritmul lui Dijkstra pe graf orientat
+
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "alloc.h"
+
+typedef struct arc { int v1, v2;
+                     int cost;
+                     arc *ant,*nx;
+                   };
+
+typedef struct antseledist { int id;
+                             antseledist *nx,*ant,*ptr;
+                           };
+
+void adauganodsol(antseledist *ante, int val, int cod)   // cod==0  recreare solutie
+{ antseledist *p,*aux=ante->ptr;                         // altfel adaugare normala
+  if (!cod)
+     { while (aux)
+             { p=aux;
+               aux=aux->nx;
+               free(p);
+             }
+       aux=new antseledist;
+       aux->id=val;
+       aux->ptr=aux->ant=ante;
+       aux->nx=NULL;
+       ante->ptr=aux;
+       ante->id=1;
+       return;
+     }
+  p=new antseledist;
+  p->id=val;
+  p->nx=ante->ptr;
+  if (p->nx)
+     p->nx->ant=p;
+  p->ptr=ante;
+  p->ant=ante;
+  ante->ptr=p;
+  ante->id++;
+}
+
+void adaugaasd(antseledist **a,int val)
+{ antseledist *p=new antseledist;
+  p->id=val;
+  p->nx=p->ant=NULL;
+  if ( !(*a) )
+     { (*a)=p;
+       return;
+     }
+  p->nx=(*a);
+  (*a)->ant=p;
+  (*a)=p;
+}
+
+
+// adaugare de muchie in lista muchiilor astfel incat lista sa fie ordonata
+// se foloseste o lista dublu inlantuita
+void adaugaordonat(arc **a,int v1, int v2, int cost)
+{ arc *p=new arc;
+  arc *au=*a;
+  p->v1=v1;
+  p->v2=v2;
+  p->cost=cost;         // se completeaza campul costului
+  p->nx=p->ant=NULL;    // acesta inca nu are succesor sau predecesor
+  if ( !(*a) )
+     { *a=p;            // daca se adauga primul elelement
+       return;          // acesta este chiar p, si se iese din functie
+     }
+  if ( (p->v2==(*a)->v2) && (p->v1==(*a)->v1) )
+     { printf("Nod existent");    //nodul de adaugat se afla in lista deja, pe prima pozitzie
+       return;                    // se iese din functzie
+     }
+  if ( (p->v1<(*a)->v1) || ( (p->v1==(*a)->v1) && (p->v2<(*a)->v2) ) )   // daca varful1 de adaugat este mai mic decat primul sau daca varful1 de adaugat este egal cu primul si daca varful2 de adaugat este mai mic decat varful2 atunci
+     { p->nx=(*a);           // noua muchie se adauga la inceput
+       (*a)->ant=p;
+       (*a)=p;
+       return;        // si se iese din functie
+     }
+  while ( (au->nx) && (p->v1>au->nx->v1) )   // se avanseaza in lista pana cand varful1 muchiei de adaugat este egal cu varful1 urmator elementului curent din lista si cat timp nu s-a terminat lista
+        au=au->nx;
+  while ( (au->nx) && (p->v1==au->nx->v1) && (p->v2>au->nx->v2) )  // se avanseaza in lista pana cand varful2 urmator elementului curent din lista este mai mare decat varful2 de adaugat si cat timp varful1 de adaugat este egal cu varfurile din lista si cat timp nu s-a terminat lista
+        au=au->nx;
+  if ( (p->v2==au->nx->v2) && (p->v1==au->nx->v1) )     // daca s-a dat peste un nod existent
+     { printf("Nod existent");                          // mesaj corespunzator
+       return;                                          // si se iese din functie
+     }
+  p->nx=au->nx;         // adaugare dupa elementul curent
+  p->ant=au;            // legaturile de rigoare intr-o lista dublu inlantzuita
+  if (au->nx)           // daca se face adaugare la sfarsit trebuie avut in vedere ca nu exista element urmator celui adaugat acuma
+     au->nx->ant=p;
+  au->nx=p;
+  return;               // si se iese din functie
+}
+
+antseledist* cautanod(antseledist *a, int i)
+{ if (i<0)
+     return NULL;
+  while (a->ant)
+        a=a->ant;
+  while (i)
+        { a=a->nx;
+          i--;
+        }
+  return a;
+}
+
+// cautare arc - indiferent unde este pointerul in lista dublu inlantuita
+
+arc* cautaarc( arc *a, int v1, int v2)
+{ int aux;
+  // daca pointerul arata spre elemente a caror prim varf este < v1
+  // mergem spre dreapta
+  while ( (a->nx) && (v1>a->v1) )
+        a=a->nx;
+  // daca pointerul arata spre elemente a caror prim varf este > v1
+  // mergem spre stanga
+  while ( (a->ant) && (v1<a->v1) )
+        a=a->ant;
+  // daca pointerul arata spre elemente a caror prim varf este v1
+  // si v2 este > varful 2 din elementul curent parcurgem spre dreapta
+  while ( (a->nx) && (v1==a->v1) && (v2>a->v2) )
+        a=a->nx;
+  // daca pointerul arata spre elemente a caror prim varf este v1
+  // si v2 este < varful 2 din elementul curent parcurgem spre stanga
+  while ( (a->ant) && (v1==a->v1) && (v2<a->v2) )
+        a=a->ant;
+  // daca elementul curent are varful1=v1 si varful2=v2
+  // se returneaza adresa elementului curent
+  if ( (a->v1==v1) && (a->v2==v2) )
+     return a;
+     else    // altfel se returneaza NULL echivalent cu inexistenta muchiei
+         return NULL;
+}
+
+antseledist* minnesel(antseledist *d)
+{ antseledist *min=new antseledist;
+  int i=0;
+  min->id=-1;
+  while (d->ant)
+        d=d->ant;
+  while (d)
+        { if ( (d->ptr->id) && ( (d->id<min->id) || (min->id==-1) ) && (d->id>0)  )
+             min=d;
+          d=d->nx;
+          i++;
+        }
+  if (min->id<0)
+     return NULL;
+  return min;
+}
+
+int index(antseledist *a)
+{ int i=0;
+  while (a->ant)
+        { i++;
+          a=a->ant;
+        }
+  return i;
+}
+
+
+void dijkstra(int noduri, arc *a, antseledist *d, antseledist *s, antseledist *ante)
+{ int j,i,k;
+  arc *aux2=NULL;
+  antseledist *min=NULL,*aux1=NULL;
+  for (j=0;j<noduri-1;j++)         // se parcurge nod cu nod
+      { min=minnesel(d);           // se cauta nodul neselectat, aflat la distantza minima de nodul sursa (nu se verifica si nodurile aflate la infinit de sursa)
+        if (min)                   // daca exista un astfel de nod (distantza intre 1 inclusiv si infinit exclusiv
+           { min->ptr->id=0;       // se selecteaza
+             k=index(min);         // se determina pozitia lui fie aceasta k in lista dinamica
+           }
+           else                    // daca nu exista nod pana la care de la sursa sa fie o distanta finita, algoritmul s-a terminat
+               return;
+        for (i=0;i<noduri;i++)      // se reactualizeaza (relaxeaza) costurile pana in acest moment
+            { aux1=cautanod(d,i);   // pentru fiecare nod se cauta distantza de la sursa pana la el, oricat ar fi
+              aux2=cautaarc(a,k,i); // se mai cauta (daca exista) arc intre nodul k si nodul curent i
+              if (aux2)             // daca exista arc adica de la k la i NU este infinit
+                 if ( (aux1->ptr->id) && ( ( aux1->id>min->id+aux2->cost ) || (aux1->id==-1) ) )  // daca nodul i este neselectat si distantza veche pana la i este mai mare decat distantza prin nodul k (a se avea in vedere ca distantza pana in nodul anterior selectat si arcul intre acesta si nodul curent nu pot fi infinit - cazuri eliminate anterior si de asemenea, din cauza notatiilor date valorii infinit=-1 sau -2, se verifica si cazul in care distanza veche nu este infinit=-1 (-2 nu ne intereseaza intrucat este distantza intre sursa si sursa))
+                    { aux1->id=min->id+aux2->cost;     // se reactualizeaza distantza pana in nodul curent
+                      adauganodsol(aux1->ptr->ptr,k,0);  // se pastraza solutzia...
+                    }
+                    else
+                        if ( (aux1->ptr->id) && ( ( aux1->id==min->id+aux2->cost ) || (aux1->id==-1) ) )  // daca nodul i este neselectat si distantza veche pana la i este mai mare decat distantza prin nodul k (a se avea in vedere ca distantza pana in nodul anterior selectat si arcul intre acesta si nodul curent nu pot fi infinit - cazuri eliminate anterior si de asemenea, din cauza notatiilor date valorii infinit=-1 sau -2, se verifica si cazul in care distanza veche nu este infinit=-1 (-2 nu ne intereseaza intrucat este distantza intre sursa si sursa))
+                             adauganodsol(aux1->ptr->ptr,k,1);  // se pastraza solutzia...
+
+            }
+      }
+}
+
+void initializari(int i, arc *a, antseledist *d, antseledist *s, antseledist *ante, int sursa)
+{ arc *arcg;
+  antseledist *aux;
+  while (i>=0)                  // parcurgere noduri
+        { aux=cautanod(d,i);    // caut distantza pana la nodul i
+          if ( ( arcg=cautaarc(a,sursa,i) ) )   // caut arc intre sursa si nodul i
+               aux->id=arcg->cost;              // daca este drum direct - in d[i] (ca lista dinamica)
+             else                   // altfel
+                 { if (i!=sursa)    // pentru nod curent diferit de sursa
+                      aux->id=-1;   // distantza este infinit codificat ca -1
+                      else              // pentru i=sursa
+                          aux->id=0;    // distantza este 0
+                 }
+          if (aux->id>0)
+             { aux->ptr->ptr->id=1;      // ante
+               aux->ptr->ptr->ptr=new antseledist;  // new ante->ptr (primul elem predecesor)
+               aux->ptr->ptr->ptr->ptr=aux->ptr->ptr->ptr->ant=aux->ptr->ptr;  // referiri la alti pointeri
+               aux->ptr->ptr->ptr->nx=NULL;   // nu este urmator
+               aux->ptr->ptr->ptr->id=sursa;  // informatia din ante->ptr
+             }
+          i--;          // se trece la nodul urmator
+        }
+  aux=cautanod(ante,sursa);     // ne pozitionam in lista nodurilor anterioare pe sursa
+  aux->id=0;                   // anteriorul sursei este -2 (tot infinit), dar codofocat diferit pentru distingere de infinitul pentru care nu este drum direct
+  aux=cautanod(s,sursa);        // ne pozitionam in lista nodurilor selectate pe sursa
+  aux->id=0;                    // selectam sursa (0=selectat; 1=neselectat)
+}
+
+
+void listmuchii(arc *a)
+{ while (a)
+        { printf("%6d%6d  ->%6d\n",a->v1,a->v2,a->cost);
+          a=a->nx;
+        }
+}
+
+void listasd(antseledist *a)
+{ while (a)
+        { printf("%4d\n",a->id);
+          a=a->nx;
+        }
+}
+
+void listante(antseledist *a)
+{ while (a)
+        { printf("\n%d: ",a->id);
+          listasd(a->ptr);
+          a=a->nx;
+        }
+}
+
+
+antseledist* cautanodante(antseledist *a, int i)
+{ if (i<0)
+     return NULL;
+  while (a->ant)
+        a=a->ant;
+  while (i)
+        { a=a->nx;
+          i--;
+        }
+  return a;
+}
+
+void refacere_rez(antseledist *ante)
+{ antseledist *aux;
+  int i;
+  while (ante)
+        { aux=ante->ptr;
+          i=0;
+          while (aux)
+                { i++;
+                  aux->ptr=ante;
+                  aux=aux->nx;
+                }
+          ante->id=i;
+          ante=ante->nx;
+        }
+}
+
+void sterge_primul_nesel(antseledist *p)
+{ while (!p->ptr)
+        p=p->nx;
+  p->ptr=NULL;
+}
+
+antseledist *cautanodnesel(antseledist *p)
+{ while (!p->ptr)
+        p=p->nx;
+  return p;
+}
+
+int drum(antseledist *ante, int *cod)
+{ int i;
+  antseledist *x,*x1;                   //   !!!!!!!  sunt probleme la functzia asta
+  if (ante->id>0)
+     { x1=cautanodnesel(ante->ptr);
+       if (!x1)
+          return 0;
+       x=cautanodante(ante,x1->id);
+       i=drum(x,cod);                   //   !!!!!!!  sunt probleme la functzia asta
+       printf("%d  ",x1->id);
+       if ( (*cod) && (ante->id>1) )
+          { sterge_primul_nesel(ante->ptr);
+            ante->id--;
+            *cod=0;
+            return 1;                   //   !!!!!!!  sunt probleme la functzia asta
+          }
+       return i;
+     }
+     else                               //   !!!!!!!  sunt probleme la functzia asta
+         { *cod=1;
+           return 0;
+         }
+}
+
+
+eliberarearce(arc **a)
+{ arc *aux;
+  while (*a)
+        { aux=*a;
+          *a=(*a)->nx;
+          delete aux;
+        }
+  *a=NULL;
+}
+
+void eliberareantseledist(antseledist **p)
+{ antseledist *aux;
+  while (*p)
+        { aux=*p;
+          *p=(*p)->nx;
+          delete aux;
+        }
+  *p=NULL;
+}
+
+void main()
+{ FILE *f;
+  int noduri,i=0,j,sursa,k;
+  int v1,v2,cost;
+  antseledist *ante=NULL,*d=NULL,*s=NULL,*aux1=NULL,*aux2=NULL;
+  arc *a=NULL;
+  if ( (f=fopen("dat\\dijk01a.dat","rt"))==NULL)
+     { printf("Error openning file\n");
+       exit(8);
+     }
+  clrscr();
+  fscanf(f,"%d%d",&noduri,&sursa);
+  if (!noduri)
+     { printf("Nu exista nici un graf\n");
+       exit(0);
+     }
+  for (;i<noduri;i++)
+      { adaugaasd(&d,-1);
+        adaugaasd(&s,1);
+        d->ptr=s;
+        adaugaasd(&ante,0);
+        s->ptr=ante;
+        ante->ptr=NULL;
+      }
+  while ( fscanf(f,"%d %d %d\n",&v1,&v2,&cost)==3 )
+        adaugaordonat(&a,v1,v2,cost);
+  fclose(f);
+  listmuchii(a);
+  printf("\n");
+  getch();
+  initializari(noduri-1,a,d,s,ante,sursa);
+  dijkstra(noduri,a,d,s,ante);
+  printf("Rezultat:\n\n");
+  for (i=0;i<noduri;i++)
+      if (sursa==i)
+         { printf("N-are rost sa mergem  de la %d la %d",sursa, sursa);
+           printf("\nCostul: nu exista\n");
+         }
+         else
+             { printf("drumul de la %d la %d este: ",sursa,i);
+               aux1=cautanodante(ante,i);
+               k=noduri;
+               while (k)
+                     { j=0;
+                       k=drum(aux1,&j);
+                       if (aux1->id>0)
+                          { printf("%d",i);
+                            printf("\nCostul: %d\n",cautanod(d,i)->id);
+                          }
+                          else
+                              { if (!(aux1->id))
+                                   printf("Drum inexistent");
+                                printf("\nCostul: nu exista\n");
+                              }
+                     }
+               refacere_rez(ante);
+               getch();
+             }
+  eliberarearce(&a);
+  eliberareantseledist(&ante);
+  eliberareantseledist(&s);
+  eliberareantseledist(&d);
+}
+
+// Problema L8_3_2.CPP
+// avem date despr studentzi shi se cere o tabela de dispersie
+// dupa numele shi prenumele studentzilor + operatzii
+
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+#include "string.h"
+
+#define M 7
+
+typedef struct list { char *nume_prenume;
+                      int grupa;
+                      list *nx;
+                    };
+
+int functzie(char *key)
+{ int suma=0,i=0;
+  while (key[i]!='\0')
+        { suma+=key[i];
+          i++;
+        }
+  return suma;
+}
+
+
+void adaugalist(list **a, int grupa, char *s)
+{ list *p=(list *) malloc(sizeof(list));
+  p->nume_prenume=(char *) malloc((strlen(s)+1)*sizeof(char));
+  strcpy(p->nume_prenume,s);
+  p->grupa=grupa;
+  p->nx=(*a);
+  *a=p;
+}
+
+void afis(list *ht[], int n)
+{ int i=0;
+  list *aux1;
+  for (;i<n;i++)
+      { aux1=ht[i];
+        while (aux1)
+              { printf("%s  - %d   ",aux1->nume_prenume,aux1->grupa);
+                aux1=aux1->nx;
+              }
+        printf("\n\n");
+      }
+}
+
+list* cauta(list *ht, char *s)
+{ list *aux1;
+  aux1=ht;
+  while ( (aux1) && (strcmp(aux1->nume_prenume,s)) )
+        aux1=aux1->nx;
+  if (!aux1)
+     return NULL;
+  return aux1;
+}
+
+void shterge(list **ht, char *s)
+{ list *aux=*ht,*aux1=aux;
+  if (!*ht)
+     { printf("\nMission failed\n");
+       return;
+     }
+  if (!strcmp((*ht)->nume_prenume,s))
+     { *ht=aux->nx;
+       free(aux);
+       printf("\nMission acomplished\n");
+       return;
+     }
+  while ( (aux1->nx) && (strcmp(aux1->nx->nume_prenume,s)) )
+        aux1=aux1->nx;
+  if (!aux1->nx)
+     { printf("\nMission failed\n");
+       return;
+     }
+  aux=aux1->nx;
+  aux1->nx=aux->nx;
+  free(aux);
+  printf("\nMission acomplished\n");
+
+}
+
+void eliberare(int n,list *ht[])
+{ int i=0;
+  list *aux;
+  for (;i<n;i++)
+      { aux=ht[i];
+        while (aux)
+              { ht[i]=aux->nx;
+                free(aux);
+                aux=ht[i];
+              }
+      }
+}
+
+void main()
+{ int n,codd,i,gr;
+  list *ht[26],*aux;
+  char aux1[15],aux2[15];
+  FILE *f;
+  clrscr();
+  if ( (f=fopen("dat\\l8_3_2.dat","rt"))==NULL)
+     { printf("Error openning file\n");
+       getch();
+       exit(8);
+     }
+  fscanf(f,"%d",&n);
+  for (i=0;i<10;i++)
+      ht[i]=NULL;
+  for (i=0;i<n;i++)
+      { fscanf(f,"%s%s%d",&aux1,aux2,&gr);
+        strcat(aux1," ");
+        strcat(aux1,aux2);
+        codd=functzie(aux1);
+        adaugalist(&ht[codd%M],gr,aux1);
+      }
+  afis(ht,M);
+  printf("\nDati numele shi prenumele studentului pe care il cautatzi: ");
+  scanf("%s%s",aux1,aux2);
+  strcat(aux1," ");
+  strcat(aux1,aux2);
+  codd=functzie(aux1);
+  aux=cauta(ht[codd%M],aux1);
+  if (aux)
+     printf("Am gasit: %s  - %d   ",aux->nume_prenume,aux->grupa);
+     else
+         printf("N-am gasit");
+
+  printf("\nDati numele shi prenumele studentului pe care il shtergem: ");
+  scanf("%s%s",aux1,aux2);
+  strcat(aux1," ");
+  strcat(aux1,aux2);
+  codd=functzie(aux1);
+  shterge(&ht[codd%M],aux1);
+  getch();
+  afis(ht,M);
+  getch();
+  eliberare(M,ht);
+  afis(ht,M);
+  getch();
+
+}
+
+/ Problema L9_3_2.CPP
+// Problema rucsacul atat cea discreta cat shi cea continua
+
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+
+void ordos(int n, float **a)
+{ int i,j;
+  int aux1,aux2;
+  for (i=0;i<n-1;i++)
+      for (j=i+1;j<n;j++)
+          if (a[i][0]/a[i][1]<a[j][0]/a[j][1])
+             { aux1=a[i][0];
+               aux2=a[i][1];
+               a[i][0]=a[j][0];
+               a[i][1]=a[j][1];
+               a[j][0]=aux1;
+               a[j][1]=aux2;
+             }
+}
+
+void main()
+{ float **b,**a,**c,g,g1;
+  int n,i,m=0;
+  FILE *f;
+  clrscr();
+  if ( (f=fopen("dat\\l9_3_2.dat","rt"))==NULL)
+     { printf("Error openning file\n");
+       getch();
+       exit(8);
+     }
+  fscanf(f,"%d",&n);
+  b=(float**) malloc(n*sizeof(float));
+  a=(float**) malloc(n*sizeof(float));
+  c=(float**) malloc(n*sizeof(float));
+  for (i=0;i<n;i++)
+      { b[i]=(float*) malloc(2*sizeof(float));
+        a[i]=(float*) malloc(2*sizeof(float));
+        c[i]=(float*) malloc(2*sizeof(float));
+        fscanf(f,"%f%f",&b[i][0],&b[i][1]);
+      }
+  fscanf(f,"%f",&g);
+  g1=g;
+  ordos(n,b);
+  for (i=0;i<n;i++)
+      printf("Obiectul de valoare %.0f si greutate %.0f \n",b[i][0], b[i][1]);
+  printf("Greutatea maxima admisa a rucsacului: %f\n",g);
+  for (i=0;i<n;i++)
+      if (b[i][1]<=g)
+         { a[m][0]=b[i][0];
+           a[m][1]=b[i][1];
+           g=g-a[i][1];
+           m++;
+         }
+  getch();
+  printf("\n\n Rezultatul problemei discrete a rucsacului\n");
+  for (i=0;i<m;i++)
+      printf("Obiectul de valoare %4.2f si greutate %.0f \n",a[i][0], a[i][1]);
+  printf(" Greutate libera %4.2f, in rucsac \n",g);
+  getch();
+  printf("\n\n*********************************************************************\n\n");
+  m=0;
+  g=g1;
+  for (i=0;i<n;i++)
+      { if (b[i][1]<=g)
+           { a[m][0]=b[i][0];
+             a[m][1]=b[i][1];
+             g=g-a[i][1];
+           }
+           else
+               { a[m][0]=g*b[i][0]/b[i][1];
+                 a[m][1]=g;
+                 g=0;
+                 i=n;
+               }
+        m++;
+      }
+  getch();
+  printf("\n\n Rezultatul problemei continue a rucsacului\n");
+  for (i=0;i<m;i++)
+      printf("Obiectul de valoare %4.2f si greutate %.0f \n",a[i][0], a[i][1]);
+  printf(" Greutate libera %4.2f, in rucsac \n",g);
+  getch();
+}
+
+/ Problema L9_3_9.CPP
+// Problema generarii de submultzimi cu proprietatea ca suma
+// elementelor este S
+
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+
+int sum(int k, int *x, int *y)
+{ int i=0,s=0;
+  for (;i<=k;i++)
+      s+=y[x[i]];
+  return s;
+}
+
+int cor(int k, int n, int S, int *x, int *y)
+{ int i=0;
+  for (;i<k;i++)
+      if (x[k]==x[i])
+         return 0;
+  if (sum(k,x,y)>S)
+     return 0;
+  if (k>n)
+     return 0;
+  if ( (k>0) && (y[x[k]]<y[x[k-1]]) )
+     return 0;
+  return 1;
+}
+
+void rez(int k, int *x, int *y)
+{ int i=0;
+  for (;i<=k;i++)
+      printf("%d\n",y[x[i]]);
+  printf("\n");
+  getch();
+}
+
+void back(int k, int *x, int *y, int S, int n)
+{ int i=0;
+  for (;i<n;i++)
+      { x[k]=i;
+        if (cor(k,n,S,x,y))
+           if (sum(k,x,y)==S)
+              rez(k,x,y);
+              else
+                  back(k+1,x,y,S,n);
+      }
+}
+
+void main()
+{ int *x,*y,S,n,i=0;
+  FILE *f;
+  clrscr();
+  if ( (f=fopen("dat\\l9_3_9a.dat","rt"))==NULL)
+     { printf("Error openning file\n");
+       getch();
+       exit(8);
+     }
+  fscanf(f,"%d",&S);
+  fscanf(f,"%d",&n);
+  x=(int *) malloc((n+1)*sizeof(int));
+  y=(int *) malloc((n+1)*sizeof(int));
+  for (;i<n;i++)
+      fscanf(f,"%d",&y[i]);
+  printf("\n\n");
+  for (i=0;i<n;i++)
+      printf("%d  ",y[i]);
+  printf("\n\n");
+  back(0,x,y,S,n);
+}
+
+3.8.Un labirint este codificat printr-o matrice de  elemente ale carui culoare sunt reprezentate prin elemente egale cu 1, situate in pozitii consecutive pe o aceeasi linie sau coloana, celelalte elemente fiind 0. O persoana se gaseste in pozitia (i, j) din interiorul labirintului. Se cere afisarea tuturor traseelor de iesire din labirint care nu trec de mai multe ori prin acelasi loc.
+
+#include<stdio.h>
+#include<conio.h>
+
+typedef struct t {char a;int frecv;struct t *urm;} caracter;
+
+void insereaza(caracter *p,char c)
+{
+caracter *q;
+q=new caracter;
+q->a=c;
+q->frecv=1;
+q->urm=p->urm;
+p->urm=q;
+}
+
+void main()
+{
+char c;
+int n;
+scanf("%d",&n);
+caracter *prim,*ultim;
+prim=new caracter;
+ultim=new caracter;
+prim->a='#';
+ultim->a='Ó';
+ultim->urm=NULL;
+prim->urm=ultim;
+
+for (int i=1;i<=n;i++) {
+			c=getche();
+			for(caracter *p=prim;p!=ultim;p=p->urm)
+							  {
+			   if (p->a==c) p->frecv++;
+			   if ((p->urm->a>c) && (p->a<c))
+				       insereaza(p,c);
+							    }
+			}
+for(caracter *p=prim+1;p!=ultim;p=p->urm) printf("\ncaracterul %c apare de %5d ori",p->a,p->frecv);
+
+}
+
+/ Runcan Mihai 14.12.2000
+/*Sa se scrie un program modularizat care citeste datele legate de studentii
+unei grupe: nume, data nasterii, adresa si Œi afiseaza Œn ordine crescatoare
+lexicografica.*/
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+struct student
+  {char nume[20];
+   char data_n[20];
+   char adresa[100];
+   }a[30];
+int n;
+void citire()
+{int i;
+ printf("Introduceti numarul de studenti din grupa:");scanf("%d",&n);
+ for(i=1;i<=n;i++)
+  {if(i==1)printf("Introduceti datele primului student:\n");
+    else printf("Introduceti datele celui de-al %d-lea student:\n",i);
+   printf("Introduceti numele studentului:");scanf("%s",&a[i].nume);
+   printf("Introduceti data nasterii a studentului studentului:");scanf("%s",&a[i].data_n);
+   printf("Introduceti adresa studentului:");scanf("%s",&a[i].adresa);}
+}
+void ordonare()
+{int i,c;student aux;
+ do
+  {c=1;
+   for(i=1;i<n;i++)
+    if(strcmp(a[i].nume,a[i+1].nume)>0){aux=a[i];a[i]=a[i+1];a[i+1]=aux;c=0;}
+  }while(c==0);
+}
+void afisare()
+{int i;
+ printf("\n\nStudentii ordonati lexicografic dupa nume sunt:\n\n");
+ for(i=1;i<=n;i++)
+  printf("Studentul :%s cu data nasterii %s si adresa %s \n",a[i].nume,a[i].data_n,a[i].adresa);
+}
+void main()
+{clrscr();
+ citire();
+ ordonare();
+ afisare();
+ getch();
+}
+
+// Runcan Mihai 14.12.2000
+/*3.1. Folosind structura pentru o data curenta an, luna, zi, sa se scrie un
+program pentru a afisa a cƒtea zi din an este si cƒte zile au mai ramas pƒna
+la sfƒrsitul anului.*/
+#include<stdio.h>
+#include<conio.h>
+struct dat
+ {int an,zi,lu;}data;
+int nr_zi()
+{int z=0,i,p=0;
+ for(i=1;i<data.lu;i++)
+  if(i<7)
+     if(i%2==1)z=z+31;else z=z+30;
+   else
+     if(i%2==1)z=z+30;else z=z+31;
+ if((data.lu>2)||((data.lu==2)&&(data.zi==29)))
+  if(((data.an%100==0)&&(data.an%400==0))||(data.an%4))p=2;
+   else p=3;
+ z=z+data.zi-p;
+ return z;
+}
+void main()
+{clrscr();
+ printf("Introduceti ziua:");scanf("%d",&data.zi);
+ printf("Introduceti luna:");scanf("%d",&data.lu);
+ printf("Introduceti anul:");scanf("%d",&data.an);
+ printf("Data introdusa este %d.%d.%d",data.zi,data.lu,data.an);
+ printf("\nEste ziua %d din an",nr_zi());
+ printf("\nAu mai ramas ");
+ if(((data.an%100==0)&&(data.an%400==0))||(data.an%4))
+    printf("%d",366-nr_zi());
+   else
+    printf("%d",365-nr_zi());
+ printf(" zile din an");
+ getch();
+}
+
+
+Sa se implementeze algoritmii prezentati aferenti unei tabele de dispersie. Inregistrarea va contine datele aferente unui student. Cheia va fi numele si prenumele studentului. Scrieti in plus
+fata de cele prezentate o functie de stergere a unei inregistrari de cheie data.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define M 7
+typedef struct tip_nod{
+    char nume[30], prenume[30];
+    struct tip_nod *urm;
+} TIP_NOD;
+
+TIP_NOD *ht[M];
+
+int fdisp(char *nume, char *prenume)
+{
+        int i, s=0;
+        for (i=0; i< strlen(nume); i++)
+            s+=*(nume+i);
+        for (i=0; i< strlen(prenume); i++)
+            s+=*(prenume+i);
+        s=s%M;
+        return s;
+}
+
+TIP_NOD* cautare (char *nume, char * prenume)
+{
+   int h=fdisp(nume, prenume);
+   TIP_NOD *p= ht[h];
+   while  (p!=0)
+   {
+        if (strcmp(nume, p->nume)==0 && strcmp(prenume, p-> prenume)==0)
+            return p;
+        else
+        p=p-> urm;
+   }
+    return 0;
+}
+void inserare (char *nume, char * prenume)
+{
+    int h;
+    h=fdisp(nume, prenume);
+    printf("\n%d\n",h);
+    TIP_NOD *p,*q;
+    p=(TIP_NOD*)malloc(sizeof (TIP_NOD));
+    strcpy(p->nume, nume);
+    strcpy(p->prenume, prenume);
+    if (ht[h]==0)
+    {
+        printf("aici %d",h);
+        ht[h]=p;
+        p->urm=0;
+    }
+    else
+    {
+            q=cautare(nume, prenume);
+            if (q==0)
+            {
+                p->urm=ht[h];
+                ht[h]=p;
+            }
+            else {
+                printf("\npersoana a mai fost introdusa\n");
+                free(p);
+            }
+
+    }
+}
+
+void listare ()
+{
+    int i=0;
+    for (i; i< M; i++)
+        {
+            printf("\ncodul  %d :",i);
+            TIP_NOD *p= ht[i];
+            while (p!=0)
+            {
+                    printf("nume %s  prenume %s",p->nume, p->prenume);
+                    p=p->urm;
+            }
+        }
+}
+
+int stergere(char *nume, char *prenume)
+{
+        TIP_NOD*p,*q;
+        int  gasit=0, h=fdisp(nume,prenume);
+        p=ht[h];
+        q=p;
+        while(p!=0 && gasit==0)
+        {
+            if (strcmp(nume, p->nume)==0 && strcmp(prenume, p-> prenume)==0)
+                gasit=1;
+            else
+            {
+                q=p;
+                p=p-> urm;
+            }
+        }
+        if (gasit)
+        {
+            if (p==ht[h])
+                ht[h]=p->urm;
+            else q->urm=p->urm;
+            free (p);
+            return 1;
+        }
+   return 0;
+}
+int main()
+{
+    TIP_NOD *p;
+    int i;
+    for (i=0;i<M;i++)
+        ht[i]=0;
+    inserare("adrian", "tirea");
+    inserare("mihai", "tirea");
+    inserare("marta", "tirea");
+    inserare("maria", "tirea");
+    inserare("samoila", "tirea");
+    inserare("marea", "tirea");
+    inserare("mihaita", "tirea");
+    inserare("sofica", "tirea");
+    inserare("geta", "tirea");
+    inserare("mihaila", "tirea");
+
+    listare();
+    p=cautare("mihai", "tirea");
+    if (p!=0)
+        {
+                printf("\n%s    %s", p-> nume, p-> prenume);
+        }
+    else printf("\nnu a fost gasit;");
+    stergere("mihai", "tirea");
+    stergere("adrian", "tirea");
+    stergere("marea", "tirea");
+    stergere("samoila", "tirea");
+    listare();
+    printf("Hello world!\n");
+    return 0;
+}
+
+Tabele de dispersie
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#define M 7
+
+int f(char key)
+{
+  int suma;
+  suma=key;
+  return suma%M;
+}
+typedef struct tip_nod {
+        char cheie;
+        int fr;
+        struct tip_nod *urm;
+        }TIP_NOD;
+        
+TIP_NOD *HT[M];  
+
+TIP_NOD* cautare(char ch)
+{
+         int gasit=0,h=f(ch);
+         TIP_NOD* q;
+         q=HT[h];
+         while (q!=0 and gasit ==0)
+         {
+               if (q->cheie==ch)
+                  gasit=1;
+               else q=q->urm;     
+         }                 
+         return q;
+}
+void inserare_ch(char ch)
+{
+     int h,i;
+     
+     h=f(ch);     
+     TIP_NOD *p,*q;
+     p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+     p->cheie=ch;
+     p->fr=1;
+     if (HT[h]==0) 
+     {
+        HT[h]=p;
+        p->urm=0;
+     }
+     else
+     {
+         q=cautare(ch);
+         if (q!=0) 
+         {         printf("\ncheie dubla");
+                   q->fr++;
+                   free(p);
+         }         
+         else
+         {//se insereaza primul!
+             	p->urm=HT[h];
+              	HT[h]=p;
+         }
+     }
+}
+
+	
+main (void)
+{
+     FILE *pf;
+     int i,h;
+     char ch;
+     TIP_NOD*p;
+     pf=fopen ("C:\\text.txt","r");
+     if (pf==0) printf("na bun");
+     for (i=0;i<M;i++)
+         HT[i]=0;     
+     printf("se citeste din fisier\n");
+     
+     while (fscanf(pf,"%c",&ch)!=EOF)
+     {
+           printf("%c",ch);      
+           inserare_ch(ch);
+     
+     }
+
+    for(i=0;i<M;i++)
+    {
+                    printf("\n");
+                    if(HT[i]!=0)
+                    {
+                     printf("\nInregistrãri avand codul de dispersie=%d\n",i);
+                     p=HT[i];
+                     while(p!=0){
+                                 printf("%c   ----   %d",p->cheie,p->fr);
+                                 p=p->urm;
+               		             }
+                     }
+   }
+
+     getch();
+}
+
+Parcurgere adincime
+#include <stdio.h>
+#include <stdlib.h>
+//VARIANTA PROPRIE!
+int a[100][100];
+// matricea grafului globala
+int  citire_graf()
+{
+    int i, j,n;
+    FILE *f;
+    f=fopen("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\parcurgere_adancime\\cost.txt","r");
+    fscanf(f,"%d",&n);
+    for (i=1;i<=n;i++)
+        for (j=1;j<=n;j++)
+        {
+            fflush(stdin);
+            fscanf(f,"%d",&(a[i][j]));
+        }
+    return n;
+}
+
+void adancime(int s, int* vizitate, int n)
+{
+    int i=0,w, control=0;
+    vizitate[s]=1;
+    printf("%d",s);
+    while (i<n)
+    {
+        i++;
+        if (a[s][i]==1 && vizitate[i]==0)
+            adancime(i,vizitate, n);
+    }
+    //if (control==1) adancime(i,vizitate, n);
+    return;
+}
+
+int main()
+{
+    int n,s=2,i;
+    n=citire_graf();
+    int vizitate[n];
+    for (i=1;i<=n;i++)
+    { vizitate[i]=0;}
+    //vizitate [s]=1;
+
+
+    adancime (s,vizitate,n);
+    printf("\n");
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int m, lungimi[100];
+//C:\Users\ady\Desktop\documente cu de toate pt scoala\an 1 sem 2 2009\SDA Ignat\greedy3.1
+void citire ()
+{
+    FILE *f;
+    int i;
+    f= fopen ("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\greedy3.1\\vectori.txt","r");
+    if (f== 0) printf("\n NULLLL ");
+    else
+    {
+        fscanf(f,"%d",&m);
+        i=0;
+        for (i=0;i<m;i++)
+        fscanf (f,"%d",&lungimi[i]);
+        fclose(f);
+        for (i=0;i<m;i++)
+        printf(" %d  ",lungimi[i]);
+    }
+}
+void interclasare(int inf, int med, int sup)
+{
+    int b[100];
+    int i=inf, j=med+1, k=inf;
+    while (i<= med && j <= sup)
+    {
+        if (lungimi[i] < lungimi[j])
+        {
+                b[k]=lungimi[i];
+                i++;
+                k++;
+        }
+        else{
+                b[k]=lungimi[j];
+                j++;
+                k++;
+        }
+    }
+    int l;
+    for (l=i;l<=med;l++) {b[k] = lungimi[l]; k++; }
+    for (l=j;l<=sup;l++) {b[k] = lungimi[l]; k++; }
+    for (l=inf;l<=sup;l++) {lungimi[l] = b[l];}
+}
+void sortare_divide_impera (int inf, int sup)
+{
+    int med;
+    if (inf < sup)
+    {
+        med= (inf + sup) /2;
+        sortare_divide_impera(inf, med);
+        sortare_divide_impera( med + 1, sup);
+        interclasare(inf, med, sup);
+    }
+}
+
+int main()
+{
+    int l;
+    FILE *f;
+    citire();
+    printf("\nHello world!\n");
+    sortare_divide_impera(0,m-1);
+    for (l=0;l<m;l++)
+        {
+             printf("  %d ",lungimi[l]);
+        }
+    f=fopen("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\greedy3.1\\vectori.txt","r+");
+    if (fseek(f,0l,2)==-1) printf("no ma bine");
+    for (l=0;l<m;l++)
+        {
+             fprintf(f,"\n %d ",lungimi[l]);
+        }
+        fclose(f);
+    printf("Hello world!\n");
+    return 0;
+}
+
+
+include <stdio.h>
+#include <stdlib.h>
+// problema rucsacului
+// indexul vectorilor va fi materialul
+int a [100], cost[100],n, gmax = 100;
+void citire ()
+{
+    int i;
+    FILE *f;
+    f=fopen("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\greedy_3.2\\materiale_cost.txt","r");
+    if (f== 0) printf("NULLLLL");
+    fscanf(f,"%d",&n);
+    for (i=0;i<n; i++)
+    {
+        fscanf(f,"%d",&a[i]);
+        fflush(stdin);
+        fscanf(f,"%d",&cost[i]);
+    }
+    printf("\n %d",n);
+    for (i=0;i<n; i++)
+        printf("\n%d,   %d", a[i], cost [i]);
+}
+
+void rucsac_materiale_bucati(int *portiune, int * luat, int *j)
+{
+    int i,exista = 1;// 0 neluat, 1 luat ,2 nu poate fi luat
+    int min;
+    int greutate = 0;
+    for (i=0;i<n;i++)   luat[i]=0;
+    while(exista != 0)
+    {
+        // caut minimul care incape
+        min =0x7fff;
+        exista = 0;
+        for (i = 0; i < n; i++)
+        {
+                if ((cost[i] < min) && (luat[i] == 0) )
+                {   min = cost[i];
+                    *j = i;
+                }
+        }
+        if (min != 0x7fff)
+        {
+            exista = 1;
+            if (((greutate) + a[*j]) <= gmax)
+                {
+                    (greutate) = (greutate) + a[*j];
+                    luat[*j] = 1;
+                }
+            else
+            {
+                    *portiune=gmax-greutate;
+                    greutate = gmax;
+                    exista=0;
+                    luat[*j]=1;
+
+            }
+
+        }
+    }
+}
+
+void rucsac_materiale_intregi(int *greutate, int * luat)
+{
+    int i,j,exista = 1;// 0 neluat, 1 luat ,2 nu poate fi luat
+    int min;
+    *greutate = 0;
+    for (i=0;i<n;i++)   luat[i]=0;
+    while(exista != 0)
+    {
+        // caut minimul care incape
+        min =0x7fff;
+        exista = 0;
+        for (i = 0; i < n; i++)
+        {
+                if ((cost[i] < min) && (luat[i] == 0) )
+                {   min = cost[i];
+                    j = i;
+                }
+        }
+        if (min != 0x7fff)
+        {
+            exista = 1;
+            if (((*greutate) + a[j]) <= gmax)
+                {
+                    (*greutate) = (*greutate) + a[j];
+                    luat[j] = 1;
+                }
+            else
+                luat[j] = 2;
+        }
+    }
+}
+
+
+int main()
+{
+    int luat[n], i, greutate,portiune,j;
+    citire();
+    rucsac_materiale_intregi(&greutate, luat);
+    for (i=0; i<n; i++)
+        if ( luat[i] == 1)
+            printf("\nmaterial  %d,  cantitate:   %d,  cost: %d",i,a[i],cost[i]);
+
+    printf("\n si cu portiuni");
+    rucsac_materiale_bucati(&portiune, luat, &j);
+    for (i=0; i<n; i++)
+        if ( luat[i] == 1 && i!=j)
+            printf("\nmaterial  %d,  cantitate:   %d,  cost: %d",i,a[i],cost[i]);
+    printf("\nmaterial  %d,  cantitate:   %d,  cost: %d",j,portiune,cost[j]);
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int s[100][2],n; // indexul este activitatea, continutul este timp initial si timp final
+int solutie[100][2]; // solutie
+void citire ()
+{
+    FILE *f;
+    int i;
+    f= fopen ("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\greedy_3.3\\activitati.txt","r");
+    if (f== 0) printf("\n NULLLL ");
+    else
+    {
+        i=0;
+        while (fscanf (f,"%d",&s[i][0])!= EOF && fscanf (f,"%d",&s[i][1])!=EOF)
+        {
+            i++;
+        }
+        n=i;
+        for (i=0;i<n;i++)
+        printf("\n%d  %d",s[i][0],s[i][1]);
+    }
+}
+
+int aleg(int i, int *t, int *x)
+{// aleg pe cea care se termina prima si nu a fost aleasa
+    int j, timp_min=0x7fff,termina_prima, exista_activitate_posibila;
+    exista_activitate_posibila=0;
+    for (j=i;j<n;j++)
+    {
+        if (s[j][1]< timp_min  && s[j][0]>=*t)
+                {
+                    exista_activitate_posibila=1;
+                    termina_prima=j;
+                    timp_min=s[termina_prima][1];
+                }
+    }
+    if (exista_activitate_posibila==1)
+    {
+        *x=termina_prima;
+        *t=s[*x][1];
+        solutie[i][0]=s[*x][0];
+        solutie[i][1]=s[*x][1];
+        int aux1, aux2;
+        aux1 = s[*x][0];
+        aux2 = s[*x][1];
+        s[*x][0]=s[i][0];
+        s[*x][1]=s[i][1];
+        s[i][0]=aux1;
+        s[i][1]=aux2;
+        return 1;
+    }
+    else return 0;
+}
+int greedy ()
+{
+    int i,x;
+    int t=0;// timpul de terminare a ultimei act alese
+    for (i=0;i<n;i++)
+    {
+            // aleg;
+            if (aleg(i, &t, &x))
+            {
+
+            }else return i;//se gata // return nr de activitati alese
+    }
+    return n;
+}
+
+int main()
+{
+    int nr,i;
+    citire();
+    nr=greedy();
+
+    printf("\n\n\n");
+    for (i=0;i<nr;i++)
+    {
+            printf("\nactivitate :   %d  ---  %d", solutie[i][0],solutie[i][1]);
+    }
+    printf("\n");
+    return 0;
+}
+
+2 noduri vedem daca exista intre ele drum
+#include <stdio.h>
+#include <stdlib.h>
+// vf graf conex. parcurgem in latime, daca se iau toate n vf atunci conex
+typedef struct tip_nod{
+    struct tip_nod *urm;
+    int nod;// coordonate
+}TIP_NOD;
+
+TIP_NOD *prim=0, *ultim=0;
+int n;
+int a[100][100];
+
+void citire_graf()
+{
+    int i, j;
+    FILE *f;
+    f=fopen("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\graf3.5conex\\graf.txt","r");
+    fscanf(f,"%d",&n);
+    for (i=0;i<n;i++)
+        for (j=0;j<n;j++)
+        {
+            fscanf(f,"%d",&(a[i][j]));
+        }
+}
+
+
+void latime (int s, int *vizitate)
+{
+    TIP_NOD *p;
+    int i,j,varf;
+    for (i=0;i<n;i++)
+        vizitate[i]=0;
+    vizitate [s]=1;
+    printf("\nnodul %d",s);
+    p=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+    if (p==0) printf("nu e loc");
+    p->nod=s;
+    p->urm=0;
+    prim=p;
+    ultim=p;
+    while (prim!=0)
+    {
+        // extrac s; extrag de la prim, bag la ultim
+            varf=prim->nod;
+
+            prim=prim->urm;
+
+            if (prim == 0) ultim=0;
+            for (i=0;i<n;i++)
+            {
+                    if (a[varf][i]==1 && vizitate[i]==0)
+                    {
+                            printf("\nnodul %d",i);
+                            vizitate[i]=1;
+                            TIP_NOD*q;
+                            q=(TIP_NOD*)malloc(sizeof(TIP_NOD));
+                            if (q!=0)
+                            {   q->nod=i;
+                                q->urm=0;
+                                if (ultim!=0)
+                                {
+                                    ultim->urm=q;
+                                }
+                                else {
+                                    prim=q;
+                                }
+                                ultim=q;
+                            }
+                            else printf("nema spatiu");
+                    }
+            }
+    }
+        for (i=0;i<n;i++)
+        if (vizitate[i]==0) printf("\nnu e conex");
+
+}
+
+int main()
+{
+    int a,b, vizitate[n];
+    printf("Hello world!\n");
+    citire_graf();
+    latime(1, vizitate);
+    printf("introduceti 2 noduri pt a testa daca este drum intre ele");
+    scanf("%d",&a);
+    scanf("%d",&b);
+    latime(a, vizitate);
+    if (vizitate[b]==1) printf("exista drum intre a si b");
+    else printf("nu e drum");
+    return 0;
+}
+
+Djikstra
+#include <stdio.h>
+#include <stdlib.h>
+#define nmax 100
+#define infinit 2000
+
+float distante[nmax];
+float cost[nmax][nmax];
+int tata[nmax];
+int s[nmax];
+
+
+int  citire_graf()
+{
+    int i, j,n;
+    FILE *f;
+    f=fopen("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\deikstra\\cost.txt","r");
+    fscanf(f,"%d",&n);
+    for (i=1;i<=n;i++)
+        for (j=1;j<=n;j++)
+        {
+            fflush(stdin);
+            fscanf(f,"%f",&(cost[i][j]));
+        }
+    return n;
+}
+
+void dijkstar (int n,int sursa)
+{
+    int i,j,pas,k,min;
+    // initializari
+    for (i=1;i<=n;i++)
+    {
+       s[i]=0;
+       distante[i]=cost[sursa][i];
+        if (distante[i]<infinit)
+                tata[i]=sursa;
+        else
+                tata[i]=0;
+    }
+    s[sursa]=1;
+    tata[sursa]=0;
+    distante[sursa]=0;
+    for (pas=1;pas<=n-1;pas++)
+    {
+        // minimul distante
+        min=infinit;
+        int control=0;
+        while (control==0)
+        {    for (j=1;j<=n;j++)
+                if (distante[j]<min && s[j]==0)
+                    {
+                    min=distante[j];
+                    control=1;
+                    k=j;
+                    }
+        }
+       if (min==infinit) return;
+       s[k]=1;
+       for (j=1;j<=n;j++)
+            if (s[j]==0 && distante[k]+cost[k][j]<distante[j])
+            {
+              distante[j]=distante[k]+cost[k][j];
+              tata[j]=k;
+
+            }
+
+    }
+}
+
+void cale(int d)
+{
+    if (d!=0)
+    {
+            cale(tata[d]);
+            printf("<--- %d", d);
+    }
+    return;
+}
+
+int main()
+{
+    int n,i,j,sursa;
+    printf("primul meu deikstra\n");
+    n=citire_graf();
+    for (i=1;i<=n;i++)
+        {
+            printf("\n");
+            for (j=1;j<=n;j++)
+            {
+                printf("%f  ",(cost[i][j]));
+            }
+        }
+    sursa=1;
+    dijkstar(n,sursa);
+    printf("\n");
+    cale(5);
+    getch();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+// tote fct de la A la B
+// sa zicem injective    !!\\// adica aranjamente de m luate cate n de pozitile vectorului b;
+int a[100], b[100],n,m;
+
+void citire ()
+{
+    FILE *f;
+    int i;
+    f= fopen ("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\backtracking3.10\\a si b.txt","r");
+    if (f== 0) printf("\n NULLLL ");
+    else
+    {
+        fscanf(f,"%d",&n);
+        for (i=0; i<n;i++) fscanf (f,"%d",&a[i]) ;
+
+        fscanf(f,"%d",&m);
+        for (i=0; i<m;i++) fscanf (f,"%d",&b[i]) ;
+
+        for (i=0;i<n;i++)
+        printf("%d  ",a[i]);
+        printf("\n");
+        for (i=0;i<m;i++)
+        printf("%d  ",b[i]);
+    }
+}
+
+int exista_valoare(int *x, int k, int *index, int *alfa)
+{
+        int j,i;
+        i=index[k]+1;
+        for (i ;i<m; i++)
+        {
+                int ales = 0;
+                for (j=0; j<k && ales == 0; j++)
+                    if (x[j]== i)
+                        {
+                            ales = 1;
+                        }
+                if (ales == 0)
+                {
+                    *alfa= i;
+                    return 1;
+                }
+        }
+        return 0;
+
+}
+// aranjamente de m cate n
+void backtracking_nerec ()
+{
+    int x[n], index[n];
+    int k=0,v,i, alfa;
+    for (i=0;i<n;i++) index[i] = -1;
+
+    while (k > -1)
+    {
+        v=0;
+        while (v==0 && exista_valoare(x,k, index, &alfa))
+        {
+                v=1;
+                x[k] = alfa;
+                index [k] = alfa;
+        }
+        if (v==0) k--;
+
+        else
+            if (k==n-1)
+            {
+                printf("\nsolutie");
+                int f;
+                for(f=0;f<n; f++)
+                    printf(" %d ", x[f]);
+                printf("\nA      B");
+                for(f=0;f<n; f++)
+                    printf("\n%d      %d", a[f], b[x[f]]);
+                printf("\n");
+            }
+            else
+            {
+                k++;
+
+                x[k]=-1;
+                index[k]=-1;
+            }
+    }
+
+}
+
+
+
+int main()
+{
+    citire();
+    backtracking_nerec();
+    printf("\n");
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int a[100][100],n;
+
+void citire ()
+{
+    FILE *f;
+    int i,j;
+    f= fopen ("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\backtr_hamiltonian_3.5\\graf.txt","r");
+    if (f== 0) printf("\n NULLLL ");
+    else
+    {
+        fscanf(f,"%d",&n);
+        for (i=0;i<n;i++)
+            for (j=0;j<n;j++)
+                fscanf(f,"%d", &a[i][j]);
+    }
+}
+
+int exista_varf (int k, int*x, int * alfa, int * luat)
+{
+    int i;
+    // caut legatura la nod x[k-1]
+
+    for (i=x[k]+1;i<n;i++)
+        //if (k!=n)
+            if (a[x[k-1]][i]!=0 && luat [i]==0)
+            {
+                luat[x[k]]=0;
+                *alfa=i;
+                return 1;
+            }
+        //else if (a[x[k-1]][0]!=0)
+          //  {
+            //    *alfa=0;
+              //  return 1;
+            //}
+    return 0;
+}
+void back ()
+{
+    int x[n+1],luat[n],v,k,alfa,i, min_cost=0x7fff;
+    for (i=0;i<n;i++) {luat [i]=0; x[i]=0;}
+    x[0] = 0;
+    luat[0] = 1;
+    k = 1;
+    while (k>0)
+    {
+        v=0;
+        while (v==0 && exista_varf(k,x,&alfa, luat))
+        {
+            x[k] = alfa;// vf care a fost ales;
+            luat[alfa] = 1;
+            v=1;
+            int h;
+                    for(h=0;h<n; h++)
+                        printf("%d",luat[h]);
+        }
+        if (v == 0)
+        {
+            luat[ x[k] ] = 0;
+            k--;
+        }
+        else if (k == n-1)
+                {
+                    printf("\n solution!!");
+                    int h,cost=0;
+                    if (a[x[k]][0]!=0)
+                        {
+                        printf("\n\ncilcu hamiltonian! se adauga si nodul 0 la sfarditul solutiei");
+                        x[n]=0;
+                        for(h=0;h<n; h++)
+                                cost = cost + a[x[h]][x[h+1]];
+
+                        if (cost<min_cost)
+                            {
+                            min_cost=cost;
+                            printf("\nun nou minim de cost %d\n", min_cost);
+                            }
+                        }
+                    for(h=0;h<n; h++)
+                    {
+                        printf("%d",x[h]);
+                    }
+
+                    printf("\n");
+
+                }
+             else {
+                k++;
+                x[k] = 0;
+
+             }
+    }
+
+}
+
+int main()
+{
+    citire();
+    printf("citit");
+    back();
+    printf("\n");
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int a[100][100], n;
+void citire ()
+{
+    FILE *f;
+    int i,j;
+    f= fopen ("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\back_labirint3.8\\labirint.txt","r");
+    if (f== 0) printf("\n NULLLL ");
+    else
+    {
+        fscanf (f,"%d",&n);
+        for (i=0;i<n;i++)
+            for (j=0;j<n;j++)
+                fscanf (f,"%d",&a[i][j]);
+        //for (i=0;i<n;i++)
+        //printf("\n %d ",a[i][j]);
+    }
+}
+void printare_matrice()
+{
+    int i,j;
+    for (i=0;i<n;i++)
+            { printf("\n");
+            for (j=0;j<n;j++)
+                printf(" %d", a[i][j]);
+            }
+}
+
+void nerec (int pos1, int pos2)
+{
+    int index[n*n],x[n*n][2],i,j,k,v, nr_sol=0;
+    for(i=0;i<n*n;i++) index[i]=-1;
+    x[0][0]=pos1;
+    x[0][1]=pos2;
+    a[pos1][pos2]=2;
+    k=1;
+    x[1][0]=n;
+    x[1][1]=n;
+    while (k>0)
+    {
+        v=0;
+        int exista=1;
+        while (v==0 && exista==1)
+        {
+                // exista val neselecatata
+                index[k]++;
+                a[x[k][0]][x[k][1]]=1;
+                int c1,c2;
+                switch (index[k])
+                {
+                    case 0 : c1= x[k-1][0];
+                             c2= x[k-1][1]-1;
+                             if (c1>=0 && c2>=0)
+                                if (a[c1][c2]==1)
+                                    {
+                                        x[k][0]=c1;
+                                        x[k][1]=c2;
+                                        a[c1][c2]=2;// luat
+                                        v=1;
+                                    }
+                            break;
+                    case 1 : c1= x[k-1][0]+1;
+                             c2= x[k-1][1];
+                             if (c1>=0 && c2>=0)
+                                if (a[c1][c2]==1)
+                                    {
+                                        x[k][0]=c1;
+                                        x[k][1]=c2;
+                                        a[c1][c2]=2;// luat
+                                        v=1;
+                                    }
+                            break;
+
+                    case 2 : c1= x[k-1][0];
+                             c2= x[k-1][1]+1;
+                             if (c1>=0 && c2>=0)
+                                if (a[c1][c2]==1)
+                                    {
+                                        x[k][0]=c1;
+                                        x[k][1]=c2;
+                                        a[c1][c2]=2;// luat
+                                        v=1;
+                                    }
+                            break;
+                    case 3 : c1= x[k-1][0]-1;
+                             c2= x[k-1][1];
+                             if (c1>=0 && c2>=0)
+                                if (a[c1][c2]==1)
+                                    {
+                                        x[k][0]=c1;
+                                        x[k][1]=c2;
+                                        a[c1][c2]=2;// luat
+                                        v=1;
+                                    }
+                            break;
+                    default : exista=0;
+                              break;
+                }
+        }
+        if  (v==0)
+            {
+                a[x[k][0]][x[k][1]]=1;
+                k--;
+
+            }
+        else if (x[k][0]== 0 || x[k][0]== n-1 ||x[k][1]== 0 ||x[k][1]== n-1)
+                {
+                    nr_sol++;
+                    printf("\nsolutie %d\n",nr_sol);
+                    int h;
+                    for (h=0;h<=k; h++)
+                        printf (" (%d, %d)  ",x[h][0],x[h][1] );
+                }
+            else {
+                k++;
+                index[k]=-1;
+                x[k][0]=n; // coord din afara matricii
+                x[k][1]=n; //
+                }
+    }
+    if (nr_sol==0) printf("\nimi pare rau esti blocat");
+
+}
+int main()
+{
+    int pos1,pos2;
+    citire();
+    printare_matrice();
+    printf("\ndin ce pozitie vrei sa scapi? \nx=     y=\n");
+    scanf("%d", &pos1);
+    printf("     ");
+    scanf("%d", &pos2);
+    nerec(pos1, pos2);
+    return 0;
+}
+
+Divide et impera
+#include <stdio.h>
+#include <stdlib.h>
+
+void citire_vector (int *a, int *n)
+{
+        FILE * f ;
+        int i;
+        f=fopen("C:\\Users\\ady\\Desktop\\documente cu de toate pt scoala\\an 1 sem 2 2009\\SDA Ignat\\3.5divide_impera\\sir.txt","r");
+        i=0;
+        if (f==0) printf("NULLLLL");
+        else
+        {
+            while (fscanf(f,"%d",&a[i])!=EOF)
+            {
+                i++;
+            }
+            *n=i;
+        }
+}
+void afisare(int *a,int n)
+{
+        int i;
+        for(i=0;i<n;i++)
+        {
+            printf(" %d ",a[i]);
+        }
+}
+
+int divide_impera (int *a, int x,int p, int q)
+{
+    int eps=1,m ,beta, gama;//rezultatul este -1 daca nu e gasit si indexul daca e gasit
+    if (abs(p-q)<1) if (x==a[p])  return p;
+                     else return -1;
+    else
+    {
+            m=(p+q)/2;
+            int g=divide_impera (a,x,p,m);
+            if (g!=-1) return g;
+            int h=divide_impera (a,x,m+1,q);
+            if (h!=-1) return h;
+            else return -1;
+    }
+}
+
+int main()
+{
+    int a[100],n,x;
+    citire_vector(a,&n);
+    afisare(a,n);
+    printf("\nce numar sa caut? :\n");
+    scanf("%d",&x);
+
+    printf(" indexul %d",divide_impera(a,x,0,n));
+
+
+    return 0;
+}
+

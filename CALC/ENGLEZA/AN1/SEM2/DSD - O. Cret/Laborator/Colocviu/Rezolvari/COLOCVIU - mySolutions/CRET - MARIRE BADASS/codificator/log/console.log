@@ -1,0 +1,9 @@
+# Compile...
+# File: D:\designshdl\CRET\codificator\src\codificator.vhd
+# Compile Entity "codificator"
+# Entity `codificator' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "codificator"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# Design: Design "decodificator_zec" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

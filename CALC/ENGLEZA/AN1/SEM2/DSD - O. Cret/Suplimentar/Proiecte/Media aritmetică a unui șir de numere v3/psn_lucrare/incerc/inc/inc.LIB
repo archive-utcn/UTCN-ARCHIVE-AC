@@ -1,0 +1,43 @@
+timestamp=1303329655224
+
+[adder]
+A/ripple_n_arch=21|./src/suma.vhd|8|1*0
+B/ripple_n_arch=3*0
+H/ripple_n_arch=0*8031
+R=./src/suma.vhd|1
+V=0*6833
+
+[adder8]
+A/structural=A/Structural 21|./src/suma.vhd|31|1*21947
+H/structural=0*29189
+R=./src/suma.vhd|1
+V=0*12889
+
+[cla4]
+A/conc=A/Conc 21|./src/suma.vhd|15|1*19270
+B/conc=3*1381
+H/conc=0*26999
+R=./src/suma.vhd|8
+V=0*17118
+
+[~A]
+./src/suma.vhd~ADDER=0*0*329
+./src/suma.vhd~Adder8=0*9884*10083
+./src/suma.vhd~CLA4=0*14088*14281
+./src/suma.vhd~ConcCLA4=0*28205*29126
+./src/suma.vhd~StructuralAdder8=0*30837*31266
+./src/suma.vhd~adder=0*5979*6183
+./src/suma.vhd~ripple_n_archadder=0*9435*9811
+ModifyID=65
+Version=73
+
+[~MFT]
+0=77|0inc.mgf|31266|18612
+1=14|1inc.mgf|21947|16738
+3=7|3inc.mgf|1381|0
+
+[~U]
+adder=11|0*6243|0*6425
+adder8=Adder8 11|0*12292|0*12478
+cla4=CLA4 11|0*16530|0*16708
+

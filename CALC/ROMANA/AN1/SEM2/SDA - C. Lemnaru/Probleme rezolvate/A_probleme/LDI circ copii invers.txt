@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Laborator 3
+//Liste Dublu Inlantuite Circulare
+//Pb 3.5 Liste circulare
+
+//3.4. Folosind o lista circulara dublu înlantuita sa se simuleze urmatorul joc: n copii, ale caror nume se citesc de la tastatura, stau în cerc.
+//Începând cu un anumit copil (numele sau se citeste), se numara copiii în sensul acelor de ceasornic.
+//Fiecare al m-lea copil (m se citeste) iese din joc.
+//Numaratoarea continua începând cu urmatorul copil din cerc. Câstiga jocul ultimul copil ramas în cerc.
+
+//3.5. Aceeasi problema ca la 3.4., dar numaratoarea se face în sens contrar cu cel al acelor de ceasornic.
+
+
+typedef struct nod
+{
+  char nume[50];
+  int i;
+  struct nod *urm,*prec;
+}NOD;
+
+void inserare(NOD **prim, char nume[])
+{
+    NOD *p=(NOD *)malloc(sizeof(NOD));
+    strcpy(p->nume,nume);
+    if(!(*prim))
+    {
+        (*prim)=p;
+        p->urm=p;
+        p->prec=p;
+    }
+    else
+    {
+        p->urm=(*prim)->urm;
+        (*prim)->urm=p;
+        p->prec=(*prim);
+        p->urm->prec=p;
+    }
+}
+
+void afisare(NOD *prim)
+{
+    NOD *p=prim;
+    if(!prim)
+    {
+        printf("\nLista este vida!\n");
+        return;
+    }
+    printf("\n");
+    printf("Citirea listei in sens trigonometric:\n");
+    do
+    {
+        printf("%s ",p->nume);
+        p=p->prec;
+    }while(p!=prim);
+    printf("\n");
+}
+
+void joc(NOD **prim,int n)
+{
+    if((*prim)==NULL)
+    {
+        printf("\nLista este vida!\n");
+        return;
+    }
+    while((*prim)->urm!=(*prim))
+    {
+        NOD *p=prim;
+        int i=0;
+        for(i=0;i<n;i++)
+        {
+            (*prim)=(*prim)->prec;
+        }
+
+    printf("\nDin joc iese copilul: %s",(*prim)->nume);
+    p=(*prim);
+    (*prim)=p->prec;
+    p->prec->urm=p->urm;
+    p->urm->prec=p->prec;
+    free(p);
+    }
+    printf("\n");
+    printf("\nCastigatorul este: %s",(*prim)->nume);
+    printf("\n");
+}
+
+int main()
+{
+    int k,n,i; NOD *prim=NULL;
+    printf("Numarul de copii citit: ");scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        char nume[50];
+        printf("\nCopilul %d: ",i+1);
+        scanf("%s",nume);
+        inserare(&prim,nume);
+    }
+
+      afisare(prim);
+      printf("\nk=");scanf("%d",&k);
+      joc(&prim,k);
+      return 0;
+}

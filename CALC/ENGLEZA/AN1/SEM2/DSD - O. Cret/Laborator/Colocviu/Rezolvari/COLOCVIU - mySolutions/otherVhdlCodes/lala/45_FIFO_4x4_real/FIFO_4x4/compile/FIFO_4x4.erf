@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\45_FIFO_4x4_real\FIFO_4x4\src\fifo.vhd" 
+MESSAGE "Compile Entity "fifo"" 
+MESSAGE "Entity `fifo' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "a" of Entity "fifo"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

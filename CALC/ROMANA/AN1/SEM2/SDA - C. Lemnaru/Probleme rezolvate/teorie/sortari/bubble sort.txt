@@ -1,0 +1,34 @@
+ void sort_metoda_bulelor(int n,float a[nmax])
+ /* SORTAREA PRIN INTERSCHIMBARE-METODA BULELOR */
+ {
+  int i,j,gata;
+  float x;
+  j=0;
+  do{
+		gata=1;
+		j=j+1;
+		for(i=0;i<n-j;i++)
+		  if(a[i]>a[i+1]){
+				      gata=0;
+				      x=a[i];a[i]=a[i+1];a[i+1]=x;
+				  };
+        }while(gata==0);
+ }
+
+ void quick(int prim,int ultim,float a[nmax])
+ {
+	int i,j;
+	float pivot,x;
+	i=prim;j=ultim;
+	pivot=a[(prim + ultim) / 2];
+	do{
+		while(a[i]<pivot) i++;
+		while(a[j]>pivot) j--;
+		if(i<=j) {
+			     x=a[i];a[i]=a[j];a[j]=x;
+			      i++;j--;
+			 };
+	       }while(i<=j);
+        if(prim<j) quick(prim,j,a);
+        if(i<ultim) quick(i,ultim,a);
+   }

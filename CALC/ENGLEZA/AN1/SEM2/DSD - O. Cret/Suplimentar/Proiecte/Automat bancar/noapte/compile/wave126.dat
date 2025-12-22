@@ -1,0 +1,36 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 clk
+$IN 5 1 clr
+$IN 9 1 but_card
+$IN +4 1 but_pin
+I 2 "a#28#std_logic_vector(1 downto 0)1 ricd1 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 25 2 2 sel
+$SC 17 +4
+I 3 "a#28#std_logic_vector(3 downto 0)1 ricd3 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 42 3 4 sw
+$SC 26-38/4
+$BUS S 59 3 4 id_client
+$SC 43-55/4
+I 4 "e#3#bitc2 01"
+$S +5 4 verif_card
+I 5 "a#28#std_logic_vector(6 downto 0)1 ricd6 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS OUT 92 5 7 display
+$SC 64-88/4
+$S +5 4 verif_pin
+$IN +4 1 but_sum
+$BUS IN +12 2 2 m_sel
+$SC +-8 +4
+$S +5 1 extragere
+$S +4 1 afisare
+$S +4 1 iesire
+I 6 "a#29#std_logic_vector(11 downto 0)1 ricd11 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +52 6 12 suma_sold
+$SC 122-+44/4
+I 7 "a#29#std_logic_vector(15 downto 0)1 ricd15 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S +69 7 16 value
+$SC 171-+60/4
+$S +5 4 ledcard
+$S +4 4 ledpin
+$ENDWAVE

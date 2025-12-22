@@ -1,0 +1,188 @@
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: Flow Manager: Not Defined
+acom -reorder -work RAM_16X16 -2002  $DSN/src/RAM_16X16.vhd
+# Compile with File Reorder...
+# File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd
+# Compile Entity "RAM16x16"
+# Compile Architecture "ARH_COMP" of Entity "RAM16x16"
+# Top-level unit(s) detected:
+# Entity => RAM16x16
+# Error: COMP96_0367: RAM_16X16.vhd : (19, 14): Improper array length. Actual length is 16. Expected length is 17.
+# Error: COMP96_0367: RAM_16X16.vhd : (21, 30): Improper array length. Actual length is 17. Expected length is 16.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -work RAM_16X16 -2002  $DSN/src/RAM_16X16.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd
+# Compile Entity "RAM16x16"
+# Compile Architecture "ARH_COMP" of Entity "RAM16x16"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]
+# Design: Design RAM_16X16 already active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  ram16x16 arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1763 kB (elbread=1023 elab2=466 kernel=273 sdf=0)
+#  7:05 PM, Wednesday, May 11, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: ram16x16 (arh_comp)
+run 100 ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 1,  TOP instance,  Process: line__16.
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1 us
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+acom -work RAM_16X16 -2002  $DSN/src/RAM_16X16.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd
+# Compile Entity "RAM16x16"
+# Error: COMP96_0015: RAM_16X16.vhd : (7, 44): ')' expected.
+# Error: COMP96_0015: RAM_16X16.vhd : (7, 44): ';' expected.
+# Error: COMP96_0019: RAM_16X16.vhd : (7, 45): Keyword "end" expected.
+# Error: COMP96_0015: RAM_16X16.vhd : (7, 45): ';' expected.
+# Error: COMP96_0016: RAM_16X16.vhd : (7, 51): Design unit declaration expected.
+# Compile Architecture "ARH_COMP" of Entity "RAM16x16"
+# Error: COMP96_0078: RAM_16X16.vhd : (20, 4): Unknown identifier "Q".
+# Error: COMP96_0133: RAM_16X16.vhd : (20, 4): Cannot find object declaration.
+# Error: COMP96_0078: RAM_16X16.vhd : (22, 30): Unknown identifier "A".
+# Error: COMP96_0133: RAM_16X16.vhd : (22, 30): Cannot find object declaration.
+# Error: COMP96_0104: RAM_16X16.vhd : (22, 30): Undefined type of expression.
+# Error: COMP96_0077: RAM_16X16.vhd : (22, 30): Assignment target incompatible with right side. Expected type "BIT_VECTOR".
+# Compile failure 11 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -work RAM_16X16 -2002  $DSN/src/RAM_16X16.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd
+# Compile Entity "RAM16x16"
+# Compile Architecture "ARH_COMP" of Entity "RAM16x16"
+# Error: COMP96_0078: RAM_16X16.vhd : (17, 17): Unknown identifier "result".
+# Error: COMP96_0348: RAM_16X16.vhd : (17, 17): Name on sensitivity list must denote a signal.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
+# ULM: Warning: ULM_0021 Architecture `arh_comp' of entity `RAM_16X16.ram16x16' is not up-to-date. Please recompile file `c:\My_Designs\Colocviu_PSN\RAM_16X16/src/RAM_16X16.vhd'.
+acom -work RAM_16X16 -2002  $DSN/src/RAM_16X16.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd
+# Compile Entity "RAM16x16"
+# Compile Architecture "ARH_COMP" of Entity "RAM16x16"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -work RAM_16X16 -2002  $DSN/src/RAM_16X16.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd
+# Compile Entity "RAM16x16"
+# Compile Architecture "ARH_COMP" of Entity "RAM16x16"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Library Manager: Library "RAM_16X16" contents cleared.
+acom -reorder -work RAM_16X16 -2002  $DSN/src/RAM_16X16.vhd
+# Compile with File Reorder...
+# File: c:\My_Designs\Colocviu_PSN\RAM_16X16\src\RAM_16X16.vhd
+# Compile Entity "RAM16x16"
+# Compile Architecture "ARH_COMP" of Entity "RAM16x16"
+# Top-level unit(s) detected:
+# Entity => RAM16x16
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  ram16x16 arh_comp
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1763 kB (elbread=1023 elab2=466 kernel=273 sdf=0)
+#  7:10 PM, Wednesday, May 11, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: ram16x16 (arh_comp)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+# Design: 9:40 PM, Wednesday, May 11, 2011
+# Design: Opening design "c:\My_Designs\Colocviu_PSN\JK_Sincron\JK_Sincron.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "JK_Sincron" has been set as active.

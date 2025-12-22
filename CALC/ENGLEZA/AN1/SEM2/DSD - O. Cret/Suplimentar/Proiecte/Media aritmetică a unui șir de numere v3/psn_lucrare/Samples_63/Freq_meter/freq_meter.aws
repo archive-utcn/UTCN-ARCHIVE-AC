@@ -1,0 +1,14 @@
+[Version]
+Version=5.2
+[Designs]
+freq_meter=freq_meter.adf
+[Settings]
+Active=freq_meter
+[Expand]
+freq_meter=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

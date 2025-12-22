@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 5
+struct nod {
+        int data;
+        struct nod *link;
+        };
+struct nod *inserarecoada(struct nod *p,int val)
+{
+    struct nod *temp;
+    if (p==NULL)
+    {
+        p=(struct nod *)malloc(sizeof(struct nod));
+        if (p==NULL)
+        {
+            printf("Nu se poate aloca!\n");
+            exit(0);
+        }
+        p->data=val;
+        p->link=NULL;
+    }
+    else
+    {
+        temp=p;
+        while(temp->link!=NULL)
+        {
+            temp=temp->link;
+        }
+        temp->link=(struct nod*)malloc(sizeof(struct nod));
+        temp=temp->link;
+        if (temp==NULL)
+        {
+            printf("NU se poate aloca!\n");
+            exit(0);
+        }
+        temp->data=val;
+        temp->link=NULL;
+    }
+    return(p);
+}
+struct nod *extragecoada(struct nod *p,int *val)
+{
+    struct nod *temp;
+    if(p==NULL)
+    {
+        printf("coada e vida.\n");
+        return(NULL);
+    }
+    *val=p->data;
+    temp=p;
+    p=p->link;
+    free(temp);
+    return(p);
+}
+void bf(int adia[][MAX],int x,int vizitat[],int n,struct nod **p)
+{
+    int y,j;
+    *p=inserarecoada(*p,x);
+    do
+    {
+        *p=extragecoada(*p,&y);
+        if (vizitat[y]==0)
+        {
+            printf("%d",y+1);
+            vizitat[y]=1;
+            for (j=0;j<n;j++)
+            if ((adia[y][j]==1)&&(vizitat[j]==0))
+                *p=inserarecoada(*p,j);
+        }
+    }
+    while ((*p)!= NULL);
+}
+void main()
+{
+    int n;
+    struct nod *inceput=NULL;
+    int i,vizitat[MAX];
+    int adia[MAX][MAX]=
+    {
+        {0,1,1,0,0},
+        {0,0,1,1,1},
+        {0,0,0,1,0},
+        {0,0,0,0,1},
+        {1,0,0,0,0},
+    };
+    n=MAX;
+    for(i=0;i<n;i++)
+    vizitat[i]=0;
+    for(i=0;i<n;i++)
+    if (vizitat[i]==0)
+        bf(adia,i,vizitat,n,&inceput);
+    printf("\n");
+}
+
+

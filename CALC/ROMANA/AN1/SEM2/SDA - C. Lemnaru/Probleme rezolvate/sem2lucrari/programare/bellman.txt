@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+ 
+struct Point{
+int *x,*c;
+};
+#define INF 1000002
+int n,m;
+int cntr[50002],cost[50002];
+Point array[50002];
+void BellmanFord()
+{
+    int k,i;
+    for(k=0;k<n;++k)
+        for(i=1;i<=n;++i)
+            for(int j=0;array[i].x[j]>-1;++j)
+                    if(cost[i]+array[i].c[j]<cost[array[i].x[j]])
+                    {
+                        cost[array[i].x[j]]=cost[i]+array[i].c[j];
+                        cntr[array[i].x[j]]=i;
+                    }
+}
+int main()
+{
+    freopen("dijkstra.in","r",stdin);
+    freopen("dijkstra.out","w",stdout);
+    scanf("%d%d",&n,&m);
+    
+    int i,a,b,c;
+    cost[1]=0;
+    for( i=2;i<=50002;++i)
+        cost[i]=INF;
+    for(i=0;i<m;++i)
+    {
+        scanf("%d%d%d",&a,&b,&c);
+        cntr[a]++;
+        //cntr[b]++;
+    }
+     
+    for(i=1;i<=n;++i)
+    {
+//      printf(">> %d\n", cntr[i]);
+        if(cntr[i])
+        {
+            array[i].x=(int *) /*malloc(cntr[i] * sizeof(int));*/  new int[cntr[i]];
+            array[i].c=(int *) /*malloc(cntr[i] * sizeof(int));*/ new int[cntr[i]];
+            array[i].x[cntr[i]]=-1;
+            cntr[i]=0;
+        }
+        array[i].x[0]=-1;
+    }
+ 
+    fseek(stdin,0,SEEK_SET);
+    scanf("%d%d",&n,&m);
+     
+    for(i=0;i<m;++i)
+    {
+        scanf("%d%d%d",&a,&b,&c);
+        array[a].x[cntr[a]]=b;
+        array[a].c[cntr[a]]=c;
+        cntr[a]++;
+    }
+ 
+/*
+    printf("n  = %d\n",n);
+    for (i = 1; i <= n; i++) {
+        printf("%d (%d) : ", i, cntr[i]);
+        int *p = array[i].x, *q = array[i].c;
+        for (; *p != -1; p++, q++)
+            printf("(%d, %d) ", *p, *q);
+        printf("\n");
+ 
+    }
+*/
+ 
+ 
+     
+    BellmanFord();
+     
+    for(i=2;i<=n;++i)
+        if(cost[i]!=INF)
+            printf("%d ",cost[i]);
+        else
+            printf("0 ");
+ 
+    return 0;
+}

@@ -1,0 +1,56 @@
+/*** 
+  Cel mai lung subsir crescator - Metoda programarii dinamice
+  
+  Autor: Tamas Radu
+***/
+
+#include <stdio.h>
+
+int main(){
+  
+  int V[10]={4,1,7,6,7}, L[10]={0};
+  int n, i, j, max, t;
+  
+  n = 5;
+  
+  L[n-1] = 1;
+  
+  for(i = n-2; i>=0; i--){
+     
+     max = 0;
+     for(j = i+1; j<n; j++){
+       if((V[j] >= V[i]) && L[j] > max) 
+          max = L[j];
+       L[i] = max + 1;    
+     }        
+  }  
+  
+  max = L[1]; t = 1;
+  
+  for(i = 0; i<n; i++)
+    if(L[i] > max){
+       max = L[i];
+       t = i;     
+    }
+  
+  for(i = 0; i<n; i++)
+    printf("%d ", V[i]);
+  printf("\n");
+  for(i = 0; i<n; i++)
+    printf("%d ", L[i]);    
+ 
+  printf("\n%d ", V[t]);
+  
+  for(i = t+1; i<n; i++){
+  
+    if((V[i] > V[t]) && (L[i] == max-1)){            
+       printf("%d ", V[i]);
+       max = max - 1;      
+    }
+  }
+  
+  getch();
+    
+  return 1;  
+}
+  

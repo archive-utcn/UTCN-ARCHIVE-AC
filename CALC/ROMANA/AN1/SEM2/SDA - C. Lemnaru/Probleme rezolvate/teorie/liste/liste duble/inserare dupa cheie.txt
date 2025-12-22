@@ -1,0 +1,10 @@
+//antet
+{
+tip_nod *q;
+//dupa alocare si cautare nod de cheie
+p -> prec = q; p -> urm = q -> urm;
+if (q -> urm != 0) q -> urm -> prec = p;
+q -> urm = p;
+if (ultim == q) ultim = p;
+
+}

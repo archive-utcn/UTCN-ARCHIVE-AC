@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj10/build",
+  "command": "C:/MinGW/bin/gcc.exe   -g -o CMakeFiles/proj10.dir/main.c.obj -c C:/Users/Alex/Documents/VSCode/faculta/SDA/proj10/main.c",
+  "file": "C:/Users/Alex/Documents/VSCode/faculta/SDA/proj10/main.c",
+  "output": "CMakeFiles/proj10.dir/main.c.obj"
+}
+]

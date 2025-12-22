@@ -1,0 +1,102 @@
+V3 51
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/AFISOR.vhd" 2014/05/23.16:53:35 P.20131013
+EN work/AFISOR 1400864357 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/AFISOR.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/AFISOR/afis 1400864358 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/AFISOR.vhd" \
+      EN work/AFISOR 1400864357 CP BCD7 CP mux16_1 CP REGISTRU
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/decod.vhd" 2014/05/22.21:01:31 P.20131013
+EN work/BCD7 1400864335 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/decod.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/BCD7/DECODIF 1400864336 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/decod.vhd" \
+      EN work/BCD7 1400864335
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/lift.vhd" 2014/05/23.16:53:35 P.20131013
+EN work/LIFT 1400864359 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/lift.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/lift/automat 1400864360 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/lift.vhd" \
+      EN work/LIFT 1400864359 CP RAM CP unit CP poarta_si CP NUMARATOR1 CP poarta_nu \
+      CP NUMARATOR_2 CP NUMARATOR3 CP NUMARATOR4 CP AFISOR
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/mux16_1.vhd" 2014/05/22.21:01:31 P.20131013
+EN work/mux16_1 1400864337 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/mux16_1.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux16_1/Mux 1400864338 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/mux16_1.vhd" \
+      EN work/mux16_1 1400864337
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator 2.vhd" 2014/05/23.16:10:45 P.20131013
+EN work/NUMARATOR_2 1400864351 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator 2.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/NUMARATOR_2/num2 1400864352 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator 2.vhd" \
+      EN work/NUMARATOR_2 1400864351
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator1.vhd" 2014/05/23.16:10:03 P.20131013
+EN work/NUMARATOR1 1400864347 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator1.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/NUMARATOR1/NUM 1400864348 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator1.vhd" \
+      EN work/NUMARATOR1 1400864347
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator3.vhd" 2014/05/23.16:11:29 P.20131013
+EN work/numarator3 1400864353 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator3.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/numarator3/num3 1400864354 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator3.vhd" \
+      EN work/numarator3 1400864353
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator4.vhd" 2014/05/23.19:58:47 P.20131013
+EN work/numarator4 1400864355 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator4.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/numarator4/num4 1400864356 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/numarator4.vhd" \
+      EN work/numarator4 1400864355
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_nu.vhd" 2014/05/22.21:01:31 P.20131013
+EN work/poarta_nu 1400864349 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_nu.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/poarta_nu/nu 1400864350 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_nu.vhd" \
+      EN work/poarta_nu 1400864349
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_si.vhd" 2014/05/22.21:01:31 P.20131013
+EN work/poarta_si 1400864345 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_si.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/poarta_si/si 1400864346 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/poarta_si.vhd" \
+      EN work/poarta_si 1400864345
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/RAM.vhd" 2014/05/23.19:54:39 P.20131013
+EN work/RAM 1400864341 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/RAM.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/RAM/RAAM 1400864342 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/RAM.vhd" \
+      EN work/RAM 1400864341
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/registru_depl.vhd" 2014/05/22.21:01:31 P.20131013
+EN work/REGISTRU 1400864339 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/registru_depl.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/REGISTRU/REG 1400864340 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/registru_depl.vhd" \
+      EN work/REGISTRU 1400864339
+FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/unit_decizie.vhd" 2014/05/23.16:18:49 P.20131013
+EN work/unit 1400864343 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/unit_decizie.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/unit/comp 1400864344 \
+      FL "C:/Users/Marcu/Desktop/documentatie lift/proiectnou/pro/src/unit_decizie.vhd" \
+      EN work/unit 1400864343

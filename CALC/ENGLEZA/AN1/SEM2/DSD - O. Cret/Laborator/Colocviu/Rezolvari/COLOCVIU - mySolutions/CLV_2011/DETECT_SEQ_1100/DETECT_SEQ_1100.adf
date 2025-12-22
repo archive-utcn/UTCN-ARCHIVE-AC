@@ -1,0 +1,49 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=DETECT_SEQ_1100
+
+[Library]
+DETECT_SEQ_1100=.\DETECT_SEQ_1100.lib
+
+[$LibMap$]
+DETECT_SEQ_1100=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/DETECT_SEQ_1100.vhd=-1
+
+[Files.Data]
+.\src\DETECT_SEQ_1100.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=detect|arh|0      
+ShowHide=ShowTopLevel
+Selected=
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CLV_2011\DETECT_SEQ_1100\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CLV_2011\DETECT_SEQ_1100\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CLV_2011\DETECT_SEQ_1100\
+Extension5=dll

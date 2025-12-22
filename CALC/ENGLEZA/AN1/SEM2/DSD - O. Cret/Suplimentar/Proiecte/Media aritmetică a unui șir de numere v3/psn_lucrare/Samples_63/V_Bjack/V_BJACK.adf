@@ -1,0 +1,90 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+modified=99
+Current Config=compile
+
+[Configurations]
+compile=V_BJACK
+
+[Library]
+V_BJACK=.\V_BJACK.LIB
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+FAMILY=
+SYNTH_TOOL=<none>
+FLOWTOOLS=ONLY_IMPL
+IMPL_TOOL=<none>
+EnableCC=1
+CCDIRECTORY=coverage
+CCHierarchy=1
+CCAllHierarchy=1
+UseCeloxica=0
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+REFRESH_FLOW=1
+
+[$LibMap$]
+Active_lib=XC4000E
+xilinxun=XC4000E
+V_BJACK=.
+
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+SortInfo=u
+
+[ORDER]
+autorefresh=0
+macro_path=
+macro_name=
+modified=1
+Synchronize=1
+
+[SYNTHESIS]
+FAMILY=
+
+[IMPLEMENTATION]
+FAMILY=
+
+[Files]
+/Readme.txt=-1
+/Gates.v=-1
+/Bin2bcd.v=-1
+/Bcd2led.v=-1
+/bjack_c.v=-1
+/Gen.v=-1
+/Johnson8.v=-1
+/Mux.v=-1
+/V_bjack.v=-1
+/Tb.v=-1
+/Functional.do=-1
+/BjackOnTclTk.tcl=-1
+/Xtrace_debug.do=-1
+/run_accelerated_waveform.do=-1
+
+[Files.Data]
+.\src\Readme.txt=Text File
+.\src\Gates.v=Verilog Source Code
+.\src\Bin2bcd.v=Verilog Source Code
+.\src\Bcd2led.v=Verilog Source Code
+.\src\bjack_c.v=Verilog Source Code
+.\src\Gen.v=Verilog Source Code
+.\src\Johnson8.v=Verilog Source Code
+.\src\Mux.v=Verilog Source Code
+.\src\V_bjack.v=Verilog Source Code
+.\src\Tb.v=Verilog Test Bench
+.\src\Functional.do=Macro
+.\src\BjackOnTclTk.tcl=Tcl Script
+.\src\Xtrace_debug.do=Macro
+.\src\run_accelerated_waveform.do=Macro
+

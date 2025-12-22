@@ -1,0 +1,11 @@
+typedef struct Tip_nod
+{
+ind cod;
+int nr_fii;
+struct tip_nod *adr fii[max_fii];
+}tip_nod;
+
+typedef struct Nod_lista{
+tip_nod *ptr;
+struct nod_lista *urm;
+}nod_lista;

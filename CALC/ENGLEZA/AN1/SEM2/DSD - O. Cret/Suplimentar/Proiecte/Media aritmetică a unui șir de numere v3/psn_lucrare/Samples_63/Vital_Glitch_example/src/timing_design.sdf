@@ -1,0 +1,19 @@
+(DELAYFILE 
+(SDFVERSION "2.1") 
+(DESIGN "simple_gate") 
+(DATE "09/14/2004 10:26:49")
+(VENDOR "Aldec") 
+(PROGRAM "MAN") 
+(VERSION "Version UNKNOWN") 
+(DIVIDER /) 
+(TIMESCALE 100ps)		   
+    (CELL 
+    (CELLTYPE "AND3") 
+    (INSTANCE AND3_0) 
+    (DELAY (ABSOLUTE
+      (IOPATH IN1 Y (30:30:30) (30:30:30)) 
+      (IOPATH IN2 Y (30:30:30) (30:30:30)) 
+      (IOPATH IN3 Y (30:30:30) (30:30:30)) )
+	)
+	)
+)

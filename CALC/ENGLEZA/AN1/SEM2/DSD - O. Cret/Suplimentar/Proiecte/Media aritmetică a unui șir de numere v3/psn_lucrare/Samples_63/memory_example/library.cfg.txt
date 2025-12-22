@@ -1,0 +1,2 @@
+$include = "C:\Program Files\Aldec\Active-HDL 6.3\vlib\"
+memory_example = ".\memory_example.LIB" 1096034591257

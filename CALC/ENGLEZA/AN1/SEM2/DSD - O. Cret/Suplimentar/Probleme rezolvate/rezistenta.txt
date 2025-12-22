@@ -1,0 +1,19 @@
+entity rez is
+	port(intrare:in bit);
+end entity;
+
+architecture rezist of rez is
+type rezistenta is range 0 to 1_000_000_000
+units ohm;
+	kohm=1000ohm;
+	mohm=1000kohm;
+end units;
+signal a,b,c:rezistenta;
+begin
+	process
+	begin
+		a<=1ohm after 10 ns;
+		b<=kohm after 20 ns;
+		c<=(a+b)after 30 ns;
+end process;
+end rezist;

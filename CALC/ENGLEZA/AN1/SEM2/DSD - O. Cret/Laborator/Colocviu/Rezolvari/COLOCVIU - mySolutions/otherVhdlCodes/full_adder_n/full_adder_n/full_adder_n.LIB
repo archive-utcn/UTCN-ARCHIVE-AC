@@ -1,0 +1,23 @@
+timestamp=1493476156717
+
+[fa_n]
+A/a=A/A 21|./src/full_adder_n.vhd|14|1*0
+B/a=3*0
+H/a=0*449
+R=./src/full_adder_n.vhd|6
+V=0*2279
+
+[~A]
+./src/full_adder_n.vhd~AFA_N=0*1055*1329
+./src/full_adder_n.vhd~FA_N=0*0*382
+ModifyID=7
+Version=73
+
+[~MFT]
+0=7|0full_adder_n.mgf|2279|0
+1=0|1full_adder_n.mgf|0|0
+3=0|3full_adder_n.mgf|0|0
+
+[~U]
+fa_n=FA_N 11|0*1397|0*1656
+

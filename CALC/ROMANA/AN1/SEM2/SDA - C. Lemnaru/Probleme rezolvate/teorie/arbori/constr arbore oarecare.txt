@@ -1,0 +1,63 @@
+tip_nod *pop(void)
+{
+tip_nod *p;
+nod_lista *q;
+if (prim==0) return 0;
+else{
+q=prim;prim=prim->urm;
+p=q->ptr;
+free(q);
+return p;
+}
+}
+
+
+int push(tip_nod *p)
+
+{
+
+nod_lista *q;
+//alocare spatiu q
+if (q==0) printf("eroare";
+else {
+q->ptr=p;q->urm=prim,prim=q;
+return 1;
+}
+}
+
+
+
+
+tip_nod*construire()
+{
+tip_nod *p;
+int n;//nr noduri totale;
+int i;
+printf("introd nr noduri");
+
+scanf("%d",&n);
+prim=0;
+while(n>0)
+{
+//alocare spatiu p;
+printf("codul nodului=");
+scanf("%d",&(p->cod));
+printf("nr fiilor nodului=");
+scanf("%d",p->nr_fii);
+i=p->nr_fii;
+while(i>0)
+{
+if((p->adr_fii[i]=pop())==0)
+{
+printf("eroare");
+}
+i=i-1;
+}
+//punere pointer p in stiva
+if (push(p)==0)
+{
+printf("eroare");
+}
+n=n-1;
+}return pop();
+}

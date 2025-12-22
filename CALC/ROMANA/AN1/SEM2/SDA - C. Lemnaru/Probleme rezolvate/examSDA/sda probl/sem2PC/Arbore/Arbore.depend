@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1305735391 source:d:\facultate\sda\arbore\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

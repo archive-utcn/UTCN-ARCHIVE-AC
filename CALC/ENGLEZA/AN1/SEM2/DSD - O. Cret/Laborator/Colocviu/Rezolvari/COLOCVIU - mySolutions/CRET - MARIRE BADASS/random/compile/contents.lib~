@@ -1,0 +1,7 @@
+291
+~E 1 "./src/random.vhd" 6 reg
+~A 1 "./src/random.vhd" 12 arh
+~E 1 "./src/random.vhd" 48 random
+~A 1 "./src/random.vhd" 56 arh
+~E 1 "./src/random.vhd" 34 xor_g
+~A 1 "./src/random.vhd" 40 arh

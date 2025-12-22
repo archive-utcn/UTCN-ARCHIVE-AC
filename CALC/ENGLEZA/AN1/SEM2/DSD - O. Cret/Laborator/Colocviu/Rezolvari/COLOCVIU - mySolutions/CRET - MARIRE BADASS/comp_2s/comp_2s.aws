@@ -1,0 +1,16 @@
+[Version]
+Version=6.3
+[Designs]
+comp_2s=comp_2s.adf
+twoss=.\twoss\twoss.adf
+[Settings]
+Active=twoss
+[Expand]
+comp_2s=1
+twoss=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

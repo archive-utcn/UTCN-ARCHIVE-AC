@@ -1,0 +1,239 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml MAIN.twx MAIN.ncd -o MAIN.twr MAIN.pcf -ucf MAIN.ucf
+
+Design file:              MAIN.ncd
+Physical constraint file: MAIN.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CONTROL<0>
+------------+------------+------------+------------+------------+-------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                   | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)  | Phase  |
+------------+------------+------------+------------+------------+-------------------+--------+
+RST         |    2.734(F)|      SLOW  |   -1.200(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |    3.659(F)|      SLOW  |   -1.963(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |    3.093(F)|      SLOW  |   -1.502(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |    3.498(F)|      SLOW  |   -1.862(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+------------+------------+------------+------------+-------------------+--------+
+
+Setup/Hold to clock CONTROL<1>
+------------+------------+------------+------------+------------+-------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                   | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)  | Phase  |
+------------+------------+------------+------------+------------+-------------------+--------+
+RST         |    3.131(F)|      SLOW  |   -1.420(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |    4.183(F)|      SLOW  |   -2.312(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |    3.490(F)|      SLOW  |   -1.722(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |    4.022(F)|      SLOW  |   -2.211(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+------------+------------+------------+------------+-------------------+--------+
+
+Setup/Hold to clock CONTROL<2>
+------------+------------+------------+------------+------------+-------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                   | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)  | Phase  |
+------------+------------+------------+------------+------------+-------------------+--------+
+RST         |    3.732(F)|      SLOW  |   -1.964(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |    4.321(F)|      SLOW  |   -2.496(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |    4.091(F)|      SLOW  |   -2.266(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |    4.160(F)|      SLOW  |   -2.395(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+------------+------------+------------+------------+-------------------+--------+
+
+Setup/Hold to clock CONTROL<3>
+------------+------------+------------+------------+------------+-------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                   | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)  | Phase  |
+------------+------------+------------+------------+------------+-------------------+--------+
+RST         |    3.851(F)|      SLOW  |   -2.040(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |    4.102(F)|      SLOW  |   -2.263(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |    4.210(F)|      SLOW  |   -2.342(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |    3.941(F)|      SLOW  |   -2.162(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+------------+------------+------------+------------+-------------------+--------+
+
+Setup/Hold to clock boardCLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    3.756(R)|      SLOW  |   -0.826(R)|      FAST  |boardCLK_BUFGP    |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CONTROL<0> to Pad
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                   | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)  | Phase  |
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+ANOD_DATA<0>|        12.981(F)|      SLOW  |         7.420(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.252(F)|      SLOW  |         6.531(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.904(F)|      SLOW  |         7.016(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.215(F)|      SLOW  |         7.303(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<1>|        13.159(F)|      SLOW  |         7.451(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.336(F)|      SLOW  |         6.619(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        12.082(F)|      SLOW  |         7.047(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.299(F)|      SLOW  |         7.391(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<2>|        13.724(F)|      SLOW  |         7.812(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.901(F)|      SLOW  |         6.980(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        12.647(F)|      SLOW  |         7.408(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.864(F)|      SLOW  |         7.752(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<5>|        13.463(F)|      SLOW  |         7.645(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.640(F)|      SLOW  |         6.813(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        12.386(F)|      SLOW  |         7.241(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.603(F)|      SLOW  |         7.585(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<6>|        13.482(F)|      SLOW  |         7.656(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.659(F)|      SLOW  |         6.824(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        12.405(F)|      SLOW  |         7.252(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.622(F)|      SLOW  |         7.596(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+
+Clock CONTROL<1> to Pad
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                   | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)  | Phase  |
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+ANOD_DATA<0>|        12.560(F)|      SLOW  |         7.215(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.696(F)|      SLOW  |         6.204(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.483(F)|      SLOW  |         6.811(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.659(F)|      SLOW  |         6.976(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<1>|        12.738(F)|      SLOW  |         7.246(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.780(F)|      SLOW  |         6.292(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.661(F)|      SLOW  |         6.842(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.743(F)|      SLOW  |         7.064(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<2>|        13.303(F)|      SLOW  |         7.607(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.345(F)|      SLOW  |         6.653(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        12.226(F)|      SLOW  |         7.203(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.308(F)|      SLOW  |         7.425(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<5>|        13.042(F)|      SLOW  |         7.440(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.084(F)|      SLOW  |         6.486(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.965(F)|      SLOW  |         7.036(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.047(F)|      SLOW  |         7.258(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<6>|        13.061(F)|      SLOW  |         7.451(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.103(F)|      SLOW  |         6.497(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.984(F)|      SLOW  |         7.047(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.066(F)|      SLOW  |         7.269(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+
+Clock CONTROL<2> to Pad
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                   | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)  | Phase  |
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+ANOD_DATA<0>|        11.954(F)|      SLOW  |         6.671(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.554(F)|      SLOW  |         6.026(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        10.877(F)|      SLOW  |         6.267(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.517(F)|      SLOW  |         6.798(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<1>|        12.132(F)|      SLOW  |         6.702(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.638(F)|      SLOW  |         6.114(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.055(F)|      SLOW  |         6.298(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.601(F)|      SLOW  |         6.886(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<2>|        12.697(F)|      SLOW  |         7.063(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.203(F)|      SLOW  |         6.475(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.620(F)|      SLOW  |         6.659(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.166(F)|      SLOW  |         7.247(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<5>|        12.436(F)|      SLOW  |         6.896(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.942(F)|      SLOW  |         6.308(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.359(F)|      SLOW  |         6.492(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.905(F)|      SLOW  |         7.080(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<6>|        12.455(F)|      SLOW  |         6.907(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.961(F)|      SLOW  |         6.319(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.378(F)|      SLOW  |         6.503(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.924(F)|      SLOW  |         7.091(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+
+Clock CONTROL<3> to Pad
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                   | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)  | Phase  |
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+ANOD_DATA<0>|        11.822(F)|      SLOW  |         6.605(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.782(F)|      SLOW  |         6.250(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        10.745(F)|      SLOW  |         6.201(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.745(F)|      SLOW  |         7.022(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<1>|        12.000(F)|      SLOW  |         6.636(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        10.866(F)|      SLOW  |         6.338(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        10.923(F)|      SLOW  |         6.232(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        11.829(F)|      SLOW  |         7.110(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<2>|        12.565(F)|      SLOW  |         6.997(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.431(F)|      SLOW  |         6.699(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.488(F)|      SLOW  |         6.593(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.394(F)|      SLOW  |         7.471(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<5>|        12.304(F)|      SLOW  |         6.830(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.170(F)|      SLOW  |         6.532(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.227(F)|      SLOW  |         6.426(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.133(F)|      SLOW  |         7.304(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+ANOD_DATA<6>|        12.323(F)|      SLOW  |         6.841(F)|      FAST  |AddressMUX/Mmux_O11|   0.000|
+            |        11.189(F)|      SLOW  |         6.543(F)|      FAST  |DMUX_MUX/Mram_q    |   0.000|
+            |        11.246(F)|      SLOW  |         6.437(F)|      FAST  |DMUX_MUX/Mram_q1   |   0.000|
+            |        12.152(F)|      SLOW  |         7.315(F)|      FAST  |DMUX_MUX/Mram_q3   |   0.000|
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+
+Clock to Setup on destination clock boardCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+boardCLK       |    3.825|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+CONTROL<0>     |ANOD_DATA<0>   |    9.309|
+CONTROL<0>     |ANOD_DATA<1>   |    9.393|
+CONTROL<0>     |ANOD_DATA<2>   |    9.958|
+CONTROL<0>     |ANOD_DATA<5>   |    9.697|
+CONTROL<0>     |ANOD_DATA<6>   |    9.716|
+CONTROL<1>     |ANOD_DATA<0>   |    9.422|
+CONTROL<1>     |ANOD_DATA<1>   |    9.571|
+CONTROL<1>     |ANOD_DATA<2>   |   10.136|
+CONTROL<1>     |ANOD_DATA<5>   |    9.875|
+CONTROL<1>     |ANOD_DATA<6>   |    9.894|
+CONTROL<2>     |ANOD_DATA<0>   |    9.478|
+CONTROL<2>     |ANOD_DATA<1>   |    9.656|
+CONTROL<2>     |ANOD_DATA<2>   |   10.221|
+CONTROL<2>     |ANOD_DATA<5>   |    9.960|
+CONTROL<2>     |ANOD_DATA<6>   |    9.979|
+CONTROL<3>     |ANOD_DATA<0>   |    9.261|
+CONTROL<3>     |ANOD_DATA<1>   |    9.439|
+CONTROL<3>     |ANOD_DATA<2>   |   10.004|
+CONTROL<3>     |ANOD_DATA<5>   |    9.743|
+CONTROL<3>     |ANOD_DATA<6>   |    9.762|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 13 10:40:44 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 132 MB
+
+
+

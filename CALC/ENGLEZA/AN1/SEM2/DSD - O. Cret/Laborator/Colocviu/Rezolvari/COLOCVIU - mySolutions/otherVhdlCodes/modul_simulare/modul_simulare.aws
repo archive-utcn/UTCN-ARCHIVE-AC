@@ -1,0 +1,16 @@
+[Version]
+Version=6.3
+[Designs]
+modul_simulare=.\modul_simulare\modul_simulare.adf
+modul_simulare_sumator=.\modul_simulare_sumator\modul_simulare_sumator.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+modul_simulare=1
+modul_simulare_sumator=1
+[Settings]
+Active=modul_simulare_sumator

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+	<TITLE>Data Acquisition sample design description</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<META name="Author" content="Mariusz Dykierek">
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../readme_files/style.css">
+</HEAD>
+
+<BODY>
+
+<H2>Data Acquisition sample design
+</H2><P>The purpose of the Data Acquisition sample design is to present benefits of SystemC Verification Library (SCV) in random stimulus generation for HDL model verification.<BR>
+The design employs transaction level modeling methods combined with weighted randomization functions provided by the SCV library.
+
+<H3>Problem description</H3>
+<P>A processing unit is gathering and analyzing data produced by 8 sensors. The sensors transmit the data over a 16 bit wide bus (fig. 1).
+
+<P CLASS="centr"><IMG SRC="../readme_files/diagram.gif" WIDTH="500" HEIGHT="350" BORDER="0" ALT="System diagram"><BR>
+Figure 1. Diagram of the data acquisition system
+
+<P>The transmission protocol uses frames that are made of 8 consecutive time slots - one for each sensor (fig. 2).
+<P CLASS="centr"><BR>
+<IMG SRC="../readme_files/frame.gif" WIDTH="444" HEIGHT="125" BORDER="0" ALT="Frame structure"><BR>
+Figure 2. Frame structure
+
+<P>A slot boundary is designated by the rising edge of bus clock. During each slot exactly one of the sensors asserts 16 bit set of data that contains a 1 bit VALID flag, a 3 bit wide sensor ID and a 12 bit data sample (fig. 3).<BR>
+<P CLASS="centr"><BR>
+<IMG SRC="../readme_files/slot.gif" WIDTH="500" HEIGHT="125" BORDER="0" ALT="Data transferred in a slot"><BR>
+Figure 3. Data transferred in a slot
+
+
+<P>Whenever a sensor has some data to transmit, it sets the VALID flag to '1' and puts the VALUE of the current sample to the bus. Each sensor is 
+independent from other sensors and may send data in its slot in any of the frames.<BR>
+It is known that on the average 2 slots out of 8 are actually containing data that should be processed. Probability distribution of valid samples in a frame provided by measurements are given in Table 1.
+
+<P CLASS="centr">TABLE 1. Probability distribution of the valid slots in a frame
+<TABLE>
+<TR>
+		<TD>Valid slots</TD>
+		<TD>Probability</TD>
+	</TR>
+	<TR>
+		<TD>0</TD>
+		<TD>0.044</TD>
+	</TR>
+	<TR>
+		<TD>1</TD>
+		<TD>0.127</TD>
+	</TR>
+	<TR>
+		<TD>2</TD>
+		<TD>0.706</TD>
+	</TR>
+	<TR>
+		<TD>3</TD>
+		<TD>0.069</TD>
+	</TR>
+	<TR>
+		<TD>4</TD>
+		<TD>0.033</TD>
+	</TR>
+	<TR>
+		<TD>5</TD>
+		<TD>0.011</TD>
+	</TR>
+	<TR>
+		<TD>6</TD>
+		<TD>0.005</TD>
+	</TR>
+	<TR>
+		<TD>7</TD>
+		<TD>0.003</TD>
+	</TR>
+	<TR>
+		<TD>8</TD>
+		<TD>0.003</TD>
+	</TR>
+</TABLE>
+
+<P CLASS="centr"><IMG SRC="../readme_files/probability.gif" WIDTH="472" HEIGHT="308" BORDER="0" ALT="Probability distribution"><BR>
+Figure 4. Diagram of the probability distribution of the valid slots in a frame
+
+<H3>Goal</H3>
+<P>The goal is to determine the depth of a first-in-first-out (FIFO) memory required on the input to the processing unit assuming that the data is read from the FIFO twice during an 8 slot frame.<BR>
+The main criteria is the data loss ratio. A FIFO depth is considered to be satisfactory, if at most one sample out of 100 is lost for each of the sensors. A sample is lost whenever an attempt to write is made when the FIFO is full.
+
+<H3>Implementation</H3>
+
+<H4>The FIFO</H4>
+<P>A fully synthesizable model of first-in-first-out memory is described in VHDL (fifo.vhd). Its depth is configurable and defined by the <I>fifo_depth</I> generic. The generic value can be defined during simulation initialization with the <I>-G </I> switch for the <I>asim</I> command. 
+
+<H4>The tester</H4>
+<P>A tester module is described using SystemC. The wrapper (tester.h, tester.cpp) provides an interface for connecting the instantiated test module (test.h and test.cpp) and the transactor (transactor.h and transactor.cpp) to the tested FIFO.
+
+<P>The transactor class, provides methods that translate function calls to certain activity of the signals. Instead of driving individual signals, the test focuses on the test plan and calls these functions to perform certain actions e.g. reset, transmit data etc.
+
+<P>The test module executes following scenario. First, the FIFO is properly initialized by calling <I>initialize()</I> method provided by the transactor. After that the actual verification process is started. For the specified number of iterations, a frame is constructed and sent to the FIFO via the bus. A number of sensors having valid data to transmit in a frame is chosen. For that purpose, an SCV smart pointer is used in conjunction with an SCV bag for shaping the probability distribution. Then, IDs of slots that will contain valid data and sample values are randomized. Once a frame is ready, the <I>send_frame()</I> transactor function is called. This function transmits the entire frame through the signal interface of the tester to the FIFO and records information on how many writes were performed and how many of them failed due to full memory. Finally, after sending the entire frame, the test calls the <I>check_loss_ratio()</I> function to verify whether the number of lost samples for each sensor does not exceed the requirement. If the loss ration is not satisfactory, the offending slots are enumerated and the test is terminated.<BR>
+
+<H4>Test environment</H4>
+<P>The test environment is assembled on a Block Diagram (test_environment.bde). It instantiates and connects the FIFO and the tester module. Additionally a configurable clock generator (clk_gen.vhd) and a divider (clk_div.vhd) are assembled on another diagram (clocks.bde). The clock frequency and division rate can be customized with the <I>clk_period</I> and <I>clk_ratio</I> generics, respectively. All these units are described in VHDL.
+
+<H3>Macro files</H3>
+<P>The sample design contains 3 DO macro files:
+<UL>
+	<LI><I>compile.do</I> &nbsp; &nbsp; &nbsp; - builds the SystemC files and adds the tester module to the library
+	<LI><I>run_fifo216.do</I> - runs the simulation with FIFO depth set to 216; shows waveforms; test fails
+	<LI><I>run_fifo217.do</I> - runs the simulation with FIFO depth set to 216; does not show waveforms (unless already open); test succeeds
+</UL>
+</BODY>
+</HTML>
+

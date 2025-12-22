@@ -1,0 +1,9 @@
+i<>.\src\read_card.vhd
+i<>.\src\verif_card.vhd
+i<>.\src\read_pin.vhd
+i<>.\src\verif_pin.vhd
+i<>.\src\meniu.vhd
+i<>.\src\afisare_sold.vhd
+i<>.\src\afisare.vhd
+i<>.\src\decodificare.vhd
+i<>.\src\bacomat.vhd

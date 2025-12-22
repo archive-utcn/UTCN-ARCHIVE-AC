@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\pseudoo\projlib.cfg"  -d "D:\designshdl\CRET\pseudoo\compile\"  -work pseudoo -dbg -e 100 "D:\designshdl\CRET\pseudoo\src\pseudoo.vhd" 

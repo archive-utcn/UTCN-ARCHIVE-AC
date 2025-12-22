@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\36_Shift_Reg\library.cfg"  -j "c:\My_Designs\36_Shift_Reg\Shift_Reg\projlib.cfg"  -d "c:\My_Designs\36_Shift_Reg\Shift_Reg\compile\"  -work Shift_Reg -dbg -e 100 "c:\My_Designs\36_Shift_Reg\Shift_Reg\src\tb.vhd" 

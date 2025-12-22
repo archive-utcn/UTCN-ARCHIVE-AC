@@ -1,0 +1,4 @@
+MESSAGE "File: c:\My_Designs\20_Binary_Counter\Binary_counter\src\counter.vhd" 
+MESSAGE "Compile Entity "counter"" 
+MESSAGE "Compile Architecture "a" of Entity "counter"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

@@ -1,0 +1,17 @@
+[View]
+Entity=sumator9
+Architecture=ar
+TopLevelType=1
+[file:.\src\suma.vhd]
+File Time Lo=150827696
+File Time Hi=30147599
+Enabled=1
+State=Compiled
+[file:.\src\Waveform Editor 1.awf]
+File Time Lo=501884524
+File Time Hi=30146456
+Enabled=1
+[file:.\src\Waveform Editor 2.awf]
+File Time Lo=1457077696
+File Time Hi=30147599
+Enabled=1

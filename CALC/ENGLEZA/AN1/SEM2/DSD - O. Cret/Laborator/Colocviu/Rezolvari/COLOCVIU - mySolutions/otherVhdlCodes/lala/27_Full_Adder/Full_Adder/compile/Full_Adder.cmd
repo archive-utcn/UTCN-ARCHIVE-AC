@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\27_Full_Adder\library.cfg"  -j "c:\My_Designs\27_Full_Adder\Full_Adder\projlib.cfg"  -d "c:\My_Designs\27_Full_Adder\Full_Adder\compile\"  -work Full_Adder -dbg -e 100 "c:\My_Designs\27_Full_Adder\Full_Adder\src\tb.vhd" 

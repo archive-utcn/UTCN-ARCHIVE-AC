@@ -1,0 +1,813 @@
+acom -reorder $DSN/src/MS_REGISTRU.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 9): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (70, 27): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (70, 31): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (77, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (77, 21): Identifier expected.
+# Top-Level unit detected
+# Entity  =>   REGISTRU_UNIVERSAL
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 9): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (75, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (75, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (77, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (77, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 9): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (74, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (74, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (76, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (76, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 9): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (74, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (74, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (76, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (76, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 9): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (72, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (72, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (74, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (74, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 10): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (72, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (72, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (74, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (74, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 10): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (73, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (73, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (75, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (75, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 10): Sequential statement expected.
+# Error: COMP96_0015: MS_REGISTRU.vhd : (74, 6): ';' expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (74, 13): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (75, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (75, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (62, 10): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (73, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (73, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (75, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (75, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0019: MS_REGISTRU.vhd : (73, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (73, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (75, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (75, 21): Identifier expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0100: MS_REGISTRU.vhd : (58, 86): Actual parameter type in port map does not match the port formal type "data".
+# Error: COMP96_0100: MS_REGISTRU.vhd : (58, 97): Actual parameter type in port map does not match the port formal type "output".
+# Error: COMP96_0207: MS_REGISTRU.vhd : (58, 0): No actual specified for local port "sin".
+# Error: COMP96_0122: MS_REGISTRU.vhd : (62, 3): Symbol "clock" has already been declared in this region.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0117: MS_REGISTRU.vhd : (54, 14): Array type for "data" is not constrained.
+# Error: COMP96_0117: MS_REGISTRU.vhd : (55, 16): Array type for "output" is not constrained.
+# Error: COMP96_0207: MS_REGISTRU.vhd : (58, 0): No actual specified for local port "sin".
+# Error: COMP96_0122: MS_REGISTRU.vhd : (62, 3): Symbol "clock" has already been declared in this region.
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 161): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 144): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 127): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 111): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 95): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 78): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 61): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 45): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 29): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 13): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 9): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Compile failure 15 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0078: MS_REGISTRU.vhd : (54, 31): Unknown identifier "n".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (54, 31): Cannot find object declaration.
+# Error: COMP96_0094: MS_REGISTRU.vhd : (54, 31): Locally static expression is required in the range definition.
+# Error: COMP96_0117: MS_REGISTRU.vhd : (55, 16): Array type for "output" is not constrained.
+# Error: COMP96_0207: MS_REGISTRU.vhd : (58, 0): No actual specified for local port "sin".
+# Error: COMP96_0122: MS_REGISTRU.vhd : (62, 3): Symbol "clock" has already been declared in this region.
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 161): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 144): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 127): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 111): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 95): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 78): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 61): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 45): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 29): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 13): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Error: COMP96_0077: MS_REGISTRU.vhd : (72, 9): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Compile failure 17 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0078: MS_REGISTRU.vhd : (54, 31): Unknown identifier "n".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (54, 31): Cannot find object declaration.
+# Error: COMP96_0094: MS_REGISTRU.vhd : (54, 31): Locally static expression is required in the range definition.
+# Error: COMP96_0078: MS_REGISTRU.vhd : (55, 34): Unknown identifier "n".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (55, 34): Cannot find object declaration.
+# Error: COMP96_0094: MS_REGISTRU.vhd : (55, 34): Locally static expression is required in the range definition.
+# Error: COMP96_0122: MS_REGISTRU.vhd : (62, 3): Symbol "clock" has already been declared in this region.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0122: MS_REGISTRU.vhd : (60, 3): Symbol "clock" has already been declared in this region.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0046: MS_REGISTRU.vhd : (60, 10): Sequential statement expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (72, 3): Keyword "end" expected.
+# Error: COMP96_0016: MS_REGISTRU.vhd : (72, 7): Design unit declaration expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (74, 21): Keyword "of" expected.
+# Error: COMP96_0018: MS_REGISTRU.vhd : (74, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0019: MS_REGISTRU.vhd : (73, 5): Keyword "process" expected.
+# Error: COMP96_0019: MS_REGISTRU.vhd : (74, 0): Keyword "end" expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 2:47 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 2:47 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0122: MS_REGISTRU.vhd : (69, 7): Symbol "clock" has already been declared in this region.
+# Error: COMP96_0367: MS_REGISTRU.vhd : (74, 24): Improper array length. Actual length is 8. Expected length is 4.
+# Error: COMP96_0367: MS_REGISTRU.vhd : (74, 12): Improper array length. Actual length is 8. Expected length is 4.
+# Error: COMP96_0078: MS_REGISTRU.vhd : (78, 4): Unknown identifier "Rreset".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (78, 4): Cannot find object declaration.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0122: MS_REGISTRU.vhd : (69, 7): Symbol "clock" has already been declared in this region.
+# Error: COMP96_0078: MS_REGISTRU.vhd : (78, 4): Unknown identifier "Rreset".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (78, 4): Cannot find object declaration.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Error: COMP96_0078: MS_REGISTRU.vhd : (78, 4): Unknown identifier "Rreset".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (78, 4): Cannot find object declaration.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 2:52 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 2:52 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Error: COMP96_0078: MS_REGISTRU.vhd : (17, 4): Unknown identifier "clock".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (17, 4): Cannot find object declaration.
+# Error: COMP96_0078: MS_REGISTRU.vhd : (19, 4): Unknown identifier "clock".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (19, 4): Cannot find object declaration.
+# Error: COMP96_0078: MS_REGISTRU.vhd : (23, 20): Unknown identifier "clock".
+# Error: COMP96_0348: MS_REGISTRU.vhd : (23, 19): Name on sensitivity list must denote a signal.
+# Error: COMP96_0078: MS_REGISTRU.vhd : (26, 6): Unknown identifier "clock".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (26, 6): Cannot find object declaration.
+# Error: COMP96_0124: MS_REGISTRU.vhd : (26, 11): Illegal prefix for attribute "event".
+# Error: COMP96_0078: MS_REGISTRU.vhd : (26, 22): Unknown identifier "clock".
+# Error: COMP96_0133: MS_REGISTRU.vhd : (26, 22): Cannot find object declaration.
+# Error: COMP96_0104: MS_REGISTRU.vhd : (26, 6): Undefined type of expression.
+# Error: COMP96_0098: MS_REGISTRU.vhd : (26, 6): Boolean type expected.
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile failure 13 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:07 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+# Signal clock not found in design
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:07 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+# Signal clock not found in design
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:08 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+# Signal clock not found in design
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:09 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:16 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:21 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:22 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:26 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:26 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/MS_REGISTRU.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_REGISTRU\src\MS_REGISTRU.vhd
+# Compile Entity "REGISTRU_UNIVERSAL"
+# Entity `REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "REGISTRU_UNIVERSAL"
+# Compile Entity "MS_REGISTRU_UNIVERSAL"
+# Entity `MS_REGISTRU_UNIVERSAL' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_REGISTRU_UNIVERSAL"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+asim -advdataflow  ms_registru_universal arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:32 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 3:32 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_registru_universal (arh)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# Simulation has been stopped
+# Design: 3:33 PM, Monday, May 22, 2017
+# Design: Opening design "D:\designshdl\CLV_2008\MS_MUX_4X1\MS_MUX_4X1.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "MS_MUX_4X1" has been set as active.

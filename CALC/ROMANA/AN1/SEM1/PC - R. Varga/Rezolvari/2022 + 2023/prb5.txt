@@ -1,0 +1,46 @@
+Observatii
+- nu este corect sa punem in aux numarul de cifre
+- vom apela cu aux = 0 si vom construi oglinditul partii din dreapta
+- orice numar divizibil cu 10 nu este palindrom, in afara de 0
+- trasari pe diferite exemple:
+
+n		aux
+123		0
+12		3
+
+
+n		aux
+12321	0
+1232	1
+123		12
+palindrom
+
+
+n		aux
+1221	0
+122		1
+12		12
+palindrom
+
+n 		aux
+1010	0
+101		0
+10		1
+nu este
+
+
+int pal(int n, int aux){
+	if (n == 0 && aux == 0)
+		return 1;
+	if (n%10 == 0 && aux == 0)
+		return 0;
+
+
+	if (aux > n)
+		return 0;
+	if (aux == n || aux == n / 10)
+		return 1;
+
+	return pal(n/10, aux*10 + n%10);
+
+}

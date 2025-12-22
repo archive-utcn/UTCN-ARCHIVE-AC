@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+typedef struct data{
+                    int an,luna,zi;
+                   }DATA_N;
+
+typedef struct NOD{
+                          int id;
+                          char nume[20];
+                          char adresa[30];
+                          char gen;
+                          DATA_N *datan;
+                          struct NOD *urm,*prec;
+                        }nod;
+nod *prim,*ultim;
+
+void inserare(nod *inreg)
+
+ {
+   int n;//dimensiunea nodului
+   nod *p,*q;
+   //gaasirea locului unde trebuie inserat
+   p=prim->urm;
+   while (strcmp(p->gen,inreg->gen)<0) p=p->urm; //comparam dupa gen
+   if (strcmp(p->gen,inreg->gen)==0) { while (strcmp(p->nume,inreg->nume)<0) p=p->urm; } //au acelasi gen si comparam dupa nume
+   else
+   {
+       //inserarea inaintea nodului p
+       n=sizeof(nod);
+       q=(nod*)malloc(n);
+       *q=*p; //continutul nodului p e mutat in q
+       p->id=inreg->id;
+       strcpy(p->nume,inreg->nume);
+       strcpy(p->adresa,inreg->adresa);
+       strcpy(p->gen,inreg->gen);
+       p->datan->an=inreg->datan->an;
+       p->datan->luna=inreg->datan->luna;
+       p->datan->zi=inreg->datan->zi;
+       p->urm=q;
+       if(p==ultim) ultim=q;
+   }
+ }
+
+ void listare(void)
+ {
+     nod *p;
+     p=prim->urm;
+     if(p==ultim){
+                    printf("\nLista este vida!");
+                    return;
+                }
+     printf("\n %30s %s\n","Nume","Gen");
+     while(p!=ultim){
+                       printf("\n %20s %d",p->nume,p->gen);
+                       p=p->urm;
+                    }
+ }
+ 
+void main(void)
+int nr;
+FILE *f;
+nod *inreg;
+f=fopen(fisier,"r");
+printf("Dati nr de inreg= ");scanf("%d",&nr);
+
+for (i=1;i<=nr;i++)
+  {
+    fgets() 
+  } 

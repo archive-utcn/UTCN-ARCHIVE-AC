@@ -1,0 +1,213 @@
+acom -reorder $DSN/src/MS_DMUX_4X1.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0019: MS_DMUX_4X1.vhd : (25, 1): Keyword "is" expected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0015: MS_DMUX_4X1.vhd : (40, 49): ';' expected.
+# Top-Level unit detected
+# Entity  =>   DMUX_GENERIC_1_LA_4
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0015: MS_DMUX_4X1.vhd : (40, 49): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0019: MS_DMUX_4X1.vhd : (24, 31): Keyword "is" expected.
+# Error: COMP96_0019: MS_DMUX_4X1.vhd : (24, 31): Keyword "end" expected.
+# Error: COMP96_0111: MS_DMUX_4X1.vhd : (24, 31): Labels do not match.
+# Error: COMP96_0015: MS_DMUX_4X1.vhd : (25, 1): ';' expected.
+# Error: COMP96_0016: MS_DMUX_4X1.vhd : (25, 5): Design unit declaration expected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0015: MS_DMUX_4X1.vhd : (40, 49): ';' expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Entity `MS_DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (36, 1): Symbol "nr_sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (38, 1): Symbol "x" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (39, 1): Symbol "sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (40, 1): Symbol "y" has already been declared in this region.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Entity `MS_DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (38, 1): Symbol "x" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (39, 1): Symbol "sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (40, 1): Symbol "y" has already been declared in this region.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Entity `MS_DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (36, 1): Symbol "nr_sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (38, 1): Symbol "x" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (39, 1): Symbol "sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (40, 1): Symbol "y" has already been declared in this region.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Entity `MS_DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (36, 1): Symbol "nr_sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (38, 1): Symbol "x" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (39, 1): Symbol "sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (40, 1): Symbol "y" has already been declared in this region.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Entity `MS_DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (36, 1): Symbol "nr_sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (38, 1): Symbol "x" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (39, 1): Symbol "sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (40, 1): Symbol "y" has already been declared in this region.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Entity `MS_DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (36, 1): Symbol "nr_sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (38, 1): Symbol "x" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (39, 1): Symbol "sel" has already been declared in this region.
+# Error: COMP96_0122: MS_DMUX_4X1.vhd : (40, 1): Symbol "y" has already been declared in this region.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/MS_DMUX_4X1.vhd
+# Compile...
+# File: D:\designshdl\CLV_2008\MS_DMUX_4X1\src\MS_DMUX_4X1.vhd
+# Compile Entity "DMUX_GENERIC_1_LA_4"
+# Entity `DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "DMUX_GENERIC_1_LA_4"
+# Compile Entity "MS_DMUX_GENERIC_1_LA_4"
+# Entity `MS_DMUX_GENERIC_1_LA_4' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "MS_DMUX_GENERIC_1_LA_4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  ms_dmux_generic_1_la_4 arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1071 elab2=301 kernel=1049 sdf=0)
+# 8:34 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_dmux_generic_1_la_4 (arh)
+run 100 ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__0,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__0,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__1,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__1,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__2,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__2,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__3,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__3,  Process: line__15.
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1071 elab2=301 kernel=1049 sdf=0)
+# 8:34 PM, Monday, May 22, 2017
+# Simulation has been initialized
+# Selected Top-Level: ms_dmux_generic_1_la_4 (arh)
+run 100 ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__0,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__0,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__1,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__1,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__2,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__2,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__3,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /UST/generate_output__3,  Process: line__15.
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: Design "NUMARATOR_MODULO" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

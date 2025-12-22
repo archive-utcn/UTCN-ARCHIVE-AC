@@ -1,0 +1,13 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#3#bitc2 01"
+$S 1 1 clk
+$S 5 1 rst
+$S 9 1 sel
+$S +4 1 din
+I 2 "a#22#BIT_VECTOR(3 downto 0)1 ricd3 0 e#3#bitc2 01"
+$BUS S 33 2 4 q
+$SC 17-29/4
+I 3 "e#7#booleans2 false true "
+$VARIABLE +5 3 end_sim
+$ENDWAVE

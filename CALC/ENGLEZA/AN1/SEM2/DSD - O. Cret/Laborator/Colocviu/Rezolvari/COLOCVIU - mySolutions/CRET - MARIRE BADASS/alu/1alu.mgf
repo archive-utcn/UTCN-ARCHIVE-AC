@@ -1,0 +1,40 @@
+V 000044 55 1496          1498478422480 arh
+(_unit VHDL (alu 0 6 (arh 0 12 ))
+  (_version v33)
+  (_time 1498478422479 2017.06.26 15:00:22)
+  (_source (\./src/aluu.vhd\))
+  (_use (std(standard))(ieee(std_logic_arith))(ieee(std_logic_unsigned))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1498478422412)
+    (_use )
+  )
+  (_object
+    (_port (_internal a ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_port (_internal b ~extieee.std_logic_1164.std_logic 0 7 (_entity (_in ))))
+    (_type (_internal ~std_logic_vector{2~downto~0}~12 0 8 (_array ~extieee.std_logic_1164.std_logic ((_downto (i 2)(i 0))))))
+    (_port (_internal sel ~std_logic_vector{2~downto~0}~12 0 8 (_entity (_in ))))
+    (_port (_internal c ~extieee.std_logic_1164.std_logic 0 9 (_entity (_out ))))
+    (_port (_internal d ~extieee.std_logic_1164.std_logic 0 9 (_entity (_out ))))
+    (_process
+      (line__14(_architecture 0 0 14 (_process (_simple)(_target(3)(4))(_sensitivity(2)(0)(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+    (_type (_external ~extieee.std_logic_1164.std_logic_vector (ieee std_logic_1164 std_logic_vector)))
+  )
+  (_static
+    (2 2 2 )
+    (2 2 3 )
+    (2 3 2 )
+    (2 3 3 )
+    (3 2 2 )
+    (3 2 3 )
+    (3 3 2 )
+  )
+  (_model . arh 1 -1
+  )
+)

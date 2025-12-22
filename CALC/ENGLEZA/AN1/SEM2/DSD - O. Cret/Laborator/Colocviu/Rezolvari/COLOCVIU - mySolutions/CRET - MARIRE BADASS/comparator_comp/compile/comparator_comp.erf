@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\comparator_comp\src\compartor_comp.vhd" 
+MESSAGE "Compile Entity "compp"" 
+MESSAGE "Entity `compp' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "compp"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

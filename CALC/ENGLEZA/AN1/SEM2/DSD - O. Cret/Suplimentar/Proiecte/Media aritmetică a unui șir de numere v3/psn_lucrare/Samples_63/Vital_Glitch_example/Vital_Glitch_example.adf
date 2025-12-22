@@ -1,0 +1,84 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Vital_Glitch_example
+
+[Library]
+Vital_Glitch_example=.\Vital_Glitch_example.lib
+
+[$LibMap$]
+Vital_Glitch_example=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+HESPrepare=0
+FLOWTOOLS=ONLY_IMPL
+CSYNTH_TOOL=<none>
+Celoxica=0
+UseCeloxica=0
+PHYSSYNTH_TOOL=<none>
+PHYSSYNTH_STATUS=NONE
+SYNTH_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+
+[IMPLEMENTATION]
+UCF=
+FAMILY=
+DEVICE=
+SPEED=
+
+[PHYS_SYNTHESIS]
+FAMILY=
+DEVICE=
+SPEED=
+
+[SYNTHESIS]
+FAMILY=
+DEVICE=
+SPEED=
+
+[sdf.ea.and3-and3vital]
+SdfNoWarn=0
+IVG=0
+
+[sdf.ea.simple_gate-simple_gate]
+0=src\timing_design.sdf| /, Average, No
+SdfNoWarn=0
+IVG=0
+
+[Files]
+/Readme.txt=-1
+/vital_model.vhd=-1
+/vital_model_components.vhd=-1
+/timing_design.vhd=-1
+/timing_design.sdf=-1
+/run_stimulators.do=-1
+
+[Files.Data]
+.\src\Readme.txt=Text File
+.\src\vital_model.vhd=VHDL Source Code
+.\src\vital_model_components.vhd=VHDL Source Code
+.\src\timing_design.vhd=VHDL Source Code
+.\src\timing_design.sdf=SDF File
+.\src\run_stimulators.do=Macro
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

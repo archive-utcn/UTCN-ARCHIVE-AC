@@ -1,0 +1,52 @@
+[View]
+Entity=
+Architecture=
+TopLevelType=
+[file:.\src\readme.txt]
+File Time Hi=29603067
+File Time Lo=222580158
+Enabled=1
+[file:.\src\adrcnt.v]
+File Time Hi=29603067
+File Time Lo=220705254
+STATE=Compiled
+Enabled=1
+[file:.\src\asciidec.v]
+File Time Hi=29603067
+File Time Lo=221017738
+STATE=Compiled
+Enabled=1
+[file:.\src\dat_cnt.v]
+File Time Hi=29603067
+File Time Lo=221330222
+STATE=Compiled
+Enabled=1
+[file:.\src\h2b.v]
+File Time Hi=29603067
+File Time Lo=221486464
+STATE=Compiled
+Enabled=1
+[file:.\src\ihx_fsm.v]
+File Time Hi=29603067
+File Time Lo=221955190
+STATE=Compiled
+Enabled=1
+[file:.\src\lrc.v]
+File Time Hi=29603067
+File Time Lo=222267674
+STATE=Compiled
+Enabled=1
+[file:.\src\reg.v]
+File Time Hi=29603067
+File Time Lo=222736400
+STATE=Compiled
+Enabled=1
+[file:.\src\uut.v]
+File Time Hi=29603067
+File Time Lo=223361368
+STATE=Compiled
+Enabled=1
+[file:.\src\run_me.do]
+File Time Hi=29603067
+File Time Lo=223048884
+Enabled=1

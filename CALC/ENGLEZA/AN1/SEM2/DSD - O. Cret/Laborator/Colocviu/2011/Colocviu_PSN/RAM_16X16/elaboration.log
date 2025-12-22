@@ -1,0 +1,18 @@
+elbread.dll ver. 1.0.5.375 Wed May 11 21:40:04 2011
+
+
+------------------------------------
+Entity    | Architecture | Library
+------------------------------------
+ram16x16  | arh_comp     | RAM_16X16
+------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+textio              | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

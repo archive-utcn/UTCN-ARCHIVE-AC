@@ -1,0 +1,49 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Structural_Comparator
+
+[Library]
+Structural_Comparator=.\Structural_Comparator.lib
+
+[$LibMap$]
+Structural_Comparator=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/comparator.vhd=-1
+/inverter.vhd=-1
+/and_2.vhd=-1
+/and_3.vhd=-1
+/or_3.vhd=-1
+/nxor_2.vhd=-1
+
+[Files.Data]
+.\src\comparator.vhd=VHDL Source Code
+.\src\inverter.vhd=VHDL Source Code
+.\src\and_2.vhd=VHDL Source Code
+.\src\and_3.vhd=VHDL Source Code
+.\src\or_3.vhd=VHDL Source Code
+.\src\nxor_2.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=comparator|arch|0   
+ShowHide=ShowTopLevel
+Selected=

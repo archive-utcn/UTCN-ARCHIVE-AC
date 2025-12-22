@@ -1,0 +1,9 @@
+#include <math.h>
+double avg(int* a, int n){
+	if (n == 0)
+		return 1;
+	if (n == 1)
+		return a[0];
+	double m = avg(a, n-1);
+	return pow( pow(m, n-1) * a[n-1], 1.0/n);
+}

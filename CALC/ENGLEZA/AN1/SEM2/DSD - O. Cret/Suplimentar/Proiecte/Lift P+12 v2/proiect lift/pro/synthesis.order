@@ -1,0 +1,14 @@
+i<>.\src\lift.vhd
+i<>.\src\RAM.vhd
+i<>.\src\poarta_si.vhd
+i<>.\src\NUMARATOR_REVERSIBIL.vhd
+i<>.\src\unit_exec.vhd
+i<>.\src\numarator 2.vhd
+i<>.\src\poarta_nu.vhd
+i<>.\src\numarator3.vhd
+i<>.\src\numarator4.vhd
+i<>.\src\divizor.vhd
+i<>.\src\registru_depl.vhd
+i<>.\src\mux16_1.vhd
+i<>.\src\decod.vhd
+i<>.\src\AFISOR.vhd

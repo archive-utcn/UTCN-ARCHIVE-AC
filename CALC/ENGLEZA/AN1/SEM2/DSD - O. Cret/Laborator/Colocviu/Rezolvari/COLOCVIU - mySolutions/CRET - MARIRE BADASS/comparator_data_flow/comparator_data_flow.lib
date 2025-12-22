@@ -1,0 +1,13 @@
+timestamp=1498478419474
+
+[~A]
+./src/comparator_data_flow.vhd~arhcomparator=0*0*324
+./src/comparator_data_flow.vhd~comparator=0*408*723
+ModifyID=15
+Version=73
+
+[~MFT]
+0=0|0comparator_data_flow.mgf|723|0
+
+[~U]
+

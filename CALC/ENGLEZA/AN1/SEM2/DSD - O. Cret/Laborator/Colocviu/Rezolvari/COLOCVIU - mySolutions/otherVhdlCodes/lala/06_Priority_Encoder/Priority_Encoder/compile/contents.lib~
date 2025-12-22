@@ -1,0 +1,5 @@
+40
+~E 1 "./src/encoder.vhd" 4 encoder
+~A 1 "./src/encoder.vhd" 9 a
+~E 1 "./src/tb.vhd" 6 tb
+~A 1 "./src/tb.vhd" 9 arch

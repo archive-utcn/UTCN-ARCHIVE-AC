@@ -1,0 +1,96 @@
+I 000044 55 1373          1498482834370 arh
+(_unit VHDL (jk_ff 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1498482834371 2017.06.26 16:13:54)
+  (_source (\./src/jk_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1498482834320)
+    (_use )
+  )
+  (_object
+    (_port (_internal set ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal j ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal k ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_signal (_internal clock ~extieee.std_logic_1164.std_logic 0 10 (_architecture (_uni ((i 3)))(_event))))
+    (_process
+      (tact(_architecture 0 0 12 (_process (_wait_for)(_target(6)))))
+      (jk_ff(_architecture 1 0 20 (_process (_simple)(_target(5)(4))(_read(5)(0)(3)(4)(2)(1)(6)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+I 000044 55 1373          1498482839080 arh
+(_unit VHDL (jk_ff 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1498482839080 2017.06.26 16:13:59)
+  (_source (\./src/jk_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1498482834320)
+    (_use )
+  )
+  (_object
+    (_port (_internal set ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal j ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal k ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_signal (_internal clock ~extieee.std_logic_1164.std_logic 0 10 (_architecture (_uni ((i 3)))(_event))))
+    (_process
+      (tact(_architecture 0 0 12 (_process (_wait_for)(_target(6)))))
+      (jk_ff(_architecture 1 0 20 (_process (_simple)(_target(4)(5))(_read(3)(4)(0)(2)(1)(5)(6)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)
+V 000044 55 1387          1498482859291 arh
+(_unit VHDL (jk_ff 0 4 (arh 0 9 ))
+  (_version v33)
+  (_time 1498482859290 2017.06.26 16:14:19)
+  (_source (\./src/jk_ff.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_parameters dbg )
+  (_entity
+    (_time 1498482834320)
+    (_use )
+  )
+  (_object
+    (_port (_internal set ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal reset ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal j ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal k ~extieee.std_logic_1164.std_logic 0 5 (_entity (_in ))))
+    (_port (_internal q ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_port (_internal nq ~extieee.std_logic_1164.std_logic 0 6 (_entity (_out ))))
+    (_signal (_internal clock ~extieee.std_logic_1164.std_logic 0 10 (_architecture (_uni ((i 3)))(_event))))
+    (_process
+      (tact(_architecture 0 0 12 (_process (_wait_for)(_target(6)))))
+      (jk_ff(_architecture 1 0 20 (_process (_simple)(_target(4)(5))(_sensitivity(2)(1)(0)(3)(6))(_read(4)(5)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . arh 2 -1
+  )
+)

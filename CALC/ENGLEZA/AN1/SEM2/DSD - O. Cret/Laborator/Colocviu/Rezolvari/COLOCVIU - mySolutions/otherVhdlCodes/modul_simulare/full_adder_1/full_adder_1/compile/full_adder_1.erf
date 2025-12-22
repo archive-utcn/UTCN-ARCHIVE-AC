@@ -1,0 +1,6 @@
+MESSAGE "File: D:\designshdl\modul_simulare\full_adder_1\full_adder_1\src\modul_simulare_sumator.vhd" 
+MESSAGE "Compile Entity "MS_SIMULATOR"" 
+MESSAGE "Entity `MS_SIMULATOR' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ARH" of Entity "MS_SIMULATOR"" 
+WARNING DAGGEN_0001: "Process without explicit or implicit wait statement - possible infinite loop." "D:\designshdl\modul_simulare\full_adder_1\full_adder_1\src\modul_simulare_sumator.vhd" 18 0
+SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time :  0.1 [s]" 

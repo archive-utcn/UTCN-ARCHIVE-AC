@@ -1,0 +1,115 @@
+acom -reorder $DSN/src/rom.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\rom\src\rom.vhd
+# Error: COMP96_0016: rom.vhd : (6, 0): Design unit declaration expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom -reorder $DSN/src/rom.vhd
+# Compile with File Reorder...
+# File: D:\designshdl\CRET\rom\src\rom.vhd
+# Compile Entity "rom"
+# Compile Architecture "arh" of Entity "rom"
+# Error: COMP96_0019: rom.vhd : (15, 21): Keyword "begin" expected.
+# Error: COMP96_0019: rom.vhd : (16, 2): Keyword "end" expected.
+# Error: COMP96_0016: rom.vhd : (16, 11): Design unit declaration expected.
+# Error: COMP96_0019: rom.vhd : (22, 21): Keyword "of" expected.
+# Error: COMP96_0018: rom.vhd : (22, 21): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/rom.vhd
+# Compile...
+# File: D:\designshdl\CRET\rom\src\rom.vhd
+# Compile Entity "rom"
+# Entity `rom' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "rom"
+# Error: COMP96_0019: rom.vhd : (23, 0): Keyword "begin" expected.
+# Error: COMP96_0019: rom.vhd : (23, 0): Keyword "end" expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/rom.vhd
+# Compile...
+# File: D:\designshdl\CRET\rom\src\rom.vhd
+# Compile Entity "rom"
+# Entity `rom' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "rom"
+# Error: COMP96_0019: rom.vhd : (17, 2): Keyword "end" expected.
+# Error: COMP96_0329: rom.vhd : (18, 2): Generate statement must have a label.
+# Error: COMP96_0019: rom.vhd : (18, 15): Keyword "generate" expected.
+# Error: COMP96_0019: rom.vhd : (19, 2): Keyword "end" expected.
+# Error: COMP96_0016: rom.vhd : (20, 3): Design unit declaration expected.
+# Error: COMP96_0019: rom.vhd : (23, 21): Keyword "of" expected.
+# Error: COMP96_0018: rom.vhd : (23, 21): Identifier expected.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/rom.vhd
+# Compile...
+# File: D:\designshdl\CRET\rom\src\rom.vhd
+# Compile Entity "rom"
+# Entity `rom' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "rom"
+# Error: COMP96_0356: rom.vhd : (16, 21): Index constraint cannot be applied to constrained type.
+# Error: COMP96_0094: rom.vhd : (16, 23): Locally static expression is required in the range definition.
+# Error: COMP96_0064: rom.vhd : (16, 14): Unknown type.
+# Error: COMP96_0289: rom.vhd : (20, 10): Prefix of index must be an array.
+# Error: COMP96_0104: rom.vhd : (20, 10): Undefined type of expression.
+# Error: COMP96_0077: rom.vhd : (20, 10): Assignment target incompatible with right side. Expected type "std_logic_vector".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/rom.vhd
+# Compile...
+# File: D:\designshdl\CRET\rom\src\rom.vhd
+# Compile Entity "rom"
+# Entity `rom' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "rom"
+# Error: COMP96_0127: rom.vhd : (16, 23): Improper aggregate length. Expected length is 16.
+# Error: COMP96_0079: rom.vhd : (16, 23): Invalid aggregate.
+# Error: COMP96_0077: rom.vhd : (16, 23): Assignment target incompatible with right side. Expected type "MATRIX".
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/rom.vhd
+# Compile...
+# File: D:\designshdl\CRET\rom\src\rom.vhd
+# Compile Entity "rom"
+# Entity `rom' has been skipped - no difference detected.
+# Compile Architecture "arh" of Entity "rom"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  rom arh
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2416 kB (elbread=1070 elab2=298 kernel=1048 sdf=0)
+# 2:11 PM, Monday, June 26, 2017
+# Simulation has been initialized
+# Selected Top-Level: rom (arh)
+run 100 ns
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  TOP instance,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  TOP instance,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  TOP instance,  Process: line__15.
+# KERNEL: WARNING: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# KERNEL: Time: 0 ps,  Iteration: 0,  TOP instance,  Process: line__15.
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# Simulation has been stopped
+# Design: 2:16 PM, Monday, June 26, 2017
+# Design: Opening design "D:\designshdl\CRET\ram\ram.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "ram" has been set as active.
+# Design Explorer: Shortcut to "D:\designshdl\CRET\CRET.aws" design added.

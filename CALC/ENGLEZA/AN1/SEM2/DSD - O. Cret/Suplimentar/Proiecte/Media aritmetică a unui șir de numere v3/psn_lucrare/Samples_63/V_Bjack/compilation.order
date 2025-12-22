@@ -1,0 +1,9 @@
+.\src\Gates.v
+.\src\Bin2bcd.v
+.\src\Bcd2led.v
+.\src\bjack_c.v
+.\src\Gen.v
+.\src\Johnson8.v
+.\src\Mux.v
+.\src\V_bjack.v
+.\src\Tb.v

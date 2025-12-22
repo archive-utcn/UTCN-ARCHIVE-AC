@@ -1,0 +1,142 @@
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: Flow Manager: Not Defined
+acom -reorder -work MS_Buffer_ThreeState -2002  $DSN/src/MS_Buffer.vhd
+# Compile with File Reorder...
+# File: c:\My_Designs\Colocviu_PSN\MS_Buffer_ThreeState\src\MS_Buffer.vhd
+# Compile Entity "Buffer_3state"
+# Compile Entity "MS_Buffer"
+# Compile Architecture "ARH_MS_Buffer" of Entity "MS_Buffer"
+# Top-level unit(s) detected:
+# Entity => MS_Buffer
+# Error: COMP96_0019: MS_Buffer.vhd : (8, 1): Keyword "end" expected.
+# Error: COMP96_0015: MS_Buffer.vhd : (8, 1): ';' expected.
+# Error: COMP96_0016: MS_Buffer.vhd : (8, 14): Design unit declaration expected.
+# Error: COMP96_0018: MS_Buffer.vhd : (18, 18): Identifier expected.
+# Warning: ELAB1_0026: MS_Buffer.vhd : (39, 0): There is no default binding for component "Buffer_3state".(No entity named "Buffer_3state" was found).
+# Compile failure 4 Errors 1 Warnings  Analysis time :  0.5 [s]
+acom -work MS_Buffer_ThreeState -2002  $DSN/src/MS_Buffer.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\MS_Buffer_ThreeState\src\MS_Buffer.vhd
+# Compile Entity "Buffer_3state"
+# Compile Architecture "ARH_Buff" of Entity "Buffer_3state"
+# Compile Entity "MS_Buffer"
+# Compile Architecture "ARH_MS_Buffer" of Entity "MS_Buffer"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# Design: Design MS_Buffer_ThreeState already active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.1 [s].
+asim -advdataflow  ms_buffer arh_ms_buffer
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1616 kB (elbread=1023 elab2=322 kernel=270 sdf=0)
+#  11:31 AM, Sunday, May 15, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: ms_buffer (arh_ms_buffer)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+asim -advdataflow  ms_buffer arh_ms_buffer
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1616 kB (elbread=1023 elab2=322 kernel=270 sdf=0)
+#  11:32 AM, Sunday, May 15, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: ms_buffer (arh_ms_buffer)
+run 20 ns
+# KERNEL: stopped at time: 20 ns
+run 20 ns
+# KERNEL: stopped at time: 40 ns
+run 20 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 80 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 120 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 140 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 160 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 180 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+asim -advdataflow  ms_buffer arh_ms_buffer
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom -work MS_Buffer_ThreeState -2002  $DSN/src/MS_Buffer.vhd
+# Compile...
+# File: c:\My_Designs\Colocviu_PSN\MS_Buffer_ThreeState\src\MS_Buffer.vhd
+# Compile Entity "Buffer_3state"
+# Compile Architecture "ARH_Buff" of Entity "Buffer_3state"
+# Compile Entity "MS_Buffer"
+# Compile Architecture "ARH_MS_Buffer" of Entity "MS_Buffer"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1616 kB (elbread=1023 elab2=322 kernel=270 sdf=0)
+#  11:33 AM, Sunday, May 15, 2011
+#  Simulation has been initialized
+#  Selected Top-Level: ms_buffer (arh_ms_buffer)
+run 20 ns
+# KERNEL: stopped at time: 20 ns
+run 20 ns
+# KERNEL: stopped at time: 40 ns
+run 20 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 80 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 20 ns
+# KERNEL: stopped at time: 120 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+# Design: 11:37 AM, Sunday, May 15, 2011
+# Design: Opening design "c:\My_Designs\Colocviu_PSN\MS_Bist_JK\MS_Bist_JK.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.1 [s].
+# Design: Design "MS_Bist_JK" has been set as active.

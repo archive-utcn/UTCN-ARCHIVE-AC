@@ -1,0 +1,5 @@
+14
+~E 1 "./src/full_adder.vhd" 4 full_adder
+~A 1 "./src/full_adder.vhd" 9 a
+~E 1 "./src/tb.vhd" 4 tb
+~A 1 "./src/tb.vhd" 7 ar

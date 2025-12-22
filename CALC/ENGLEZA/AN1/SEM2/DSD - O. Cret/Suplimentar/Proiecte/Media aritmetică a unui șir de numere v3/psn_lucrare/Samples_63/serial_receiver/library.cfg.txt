@@ -1,0 +1,3 @@
+$include = "C:\Program Files\Aldec\Active-HDL 6.3\vlib\"
+serial_receiver = ".\serial_receiver.lib" 1086345000113
+serial_receiver_post_synthesis = ".\serial_receiver_post_synthesis\serial_receiver_post_synthesis.lib" 1092998904953

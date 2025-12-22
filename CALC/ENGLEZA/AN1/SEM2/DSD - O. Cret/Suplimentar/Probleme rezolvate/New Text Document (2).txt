@@ -1,0 +1,37 @@
+entity registru is 
+	port( R,CLK,S : IN BIT;
+	INPUT: IN BIT;
+	Q : OUT BIT_VECTOR (0 TO 3));
+END REGISTRU;
+
+
+ARCHITECTURE ARH_REGISTRU OF REGISTRU IS  
+BEGIN
+  PROCESS (CLK)
+  VARIABLE X:BIT_VECTOR(0 TO 3);
+  BEGIN 
+	 if (R='1') THEN X:="0000";
+	 ELSE  
+		 IF (CLK='1') AND (CLK'EVENT)  THEN
+		       IF S='0' THEN 
+			       X:= X SLL 1;
+				   X(3):=INPUT;
+				   END IF;
+			   IF S='1' THEN
+				   X:=X SRL 1;
+				   X(0):=INPUT;
+			   END IF; 
+		 END IF;
+	 END IF;
+	 Q <= X AFTER 10 NS;  
+	 END PROCESS;
+	 
+END ARH_REGISTRU;
+			   
+		 
+		 
+
+
+
+
+

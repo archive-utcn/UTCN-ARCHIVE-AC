@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1301563819 source:c:\codeblocks\arbori_binari_de_cautare\main.c
+	<stdio.h>
+	<conio.h>
+	<malloc.h>
+

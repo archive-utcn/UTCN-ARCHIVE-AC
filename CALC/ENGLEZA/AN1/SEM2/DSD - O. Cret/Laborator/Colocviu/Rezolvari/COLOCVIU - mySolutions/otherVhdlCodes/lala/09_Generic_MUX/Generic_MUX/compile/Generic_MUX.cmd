@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\09_Generic_MUX\library.cfg"  -j "c:\My_Designs\09_Generic_MUX\Generic_MUX\projlib.cfg"  -d "c:\My_Designs\09_Generic_MUX\Generic_MUX\compile\"  -work Generic_MUX -dbg -e 100 "c:\My_Designs\09_Generic_MUX\Generic_MUX\src\mux.vhd" 

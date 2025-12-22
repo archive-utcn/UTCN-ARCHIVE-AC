@@ -1,0 +1,16 @@
+int inserare(tip nod *prim,tip_nod *ultim,tip_nod *p,char key)
+{
+tip_nod q;
+q=prim;
+while(q!=0) { 
+if(q->cheie==key) break;
+q=q->urm;
+}
+
+if (q !=)0) { /* nodul de cheie “key” are adresa q */
+p -> urm = q -> urm;
+q -> urm=p;
+if (q == ultim) ultim = p;
+}
+
+}

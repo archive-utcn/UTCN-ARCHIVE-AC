@@ -1,0 +1,19 @@
+i<>.\src\Memoria RAM.vhd
+i<>.\src\Subtractor.vhd
+i<>.\src\ROM Memory.vhd
+i<>.\src\DMUX_Operation.vhd
+i<>.\src\Sum_Comparator.vhd
+i<>.\src\Card Identifier.vhd
+i<>.\src\PIN.vhd
+i<>.\src\SUM Reader.vhd
+i<>.\src\Recipt.vhd
+i<>.\src\PIN Comparator.vhd
+i<>.\src\BCD 7.vhd
+i<>.\src\Command_Unit.vhd
+i<>.\src\COMP_INTEGER.vhd
+i<>.\src\Read_PIN.vhd
+i<>.\src\Read_SUMA.vhd
+i<>.\src\Register.vhd
+i<>.\src\Comparator_Mic.vhd
+i<>.\src\Read_Card.vhd
+i<>.\src\BCD.vhd

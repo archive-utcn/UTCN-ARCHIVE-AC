@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1414328666 source:d:\cti_i\cp_lab\lab_1\3.4\main.c
+	<stdio.h>
+	<stdlib.h>
+

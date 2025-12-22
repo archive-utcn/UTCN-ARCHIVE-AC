@@ -1,0 +1,110 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct nod
+{
+    int frec;
+    char cuv[100];
+    struct nod *urm,*prec;
+}NOD;
+
+void adaugare(NOD **prim, NOD **ultim)
+{
+    NOD *p,*q;
+    char c[100];
+    p=(NOD *)malloc(sizeof(NOD));
+    q=(NOD *)malloc(sizeof(NOD));
+
+    if (*prim==0) //lista este goala, punem primul cuvant
+    {
+        printf("Introdu cuvantul: ");
+        scanf("%s",p->cuv);
+        p->frec=1;
+
+        *prim=p;
+        *ultim=p;
+        p->urm=0;
+        p->prec=0;
+    }
+    else  //lista nu este goala
+    {
+        printf("Intrdocu cuvantul: ");
+        scanf("%s",c);
+        p=*prim;
+        while (p != 0) //((p != *ultim) || (p == *prim))
+        {
+            if (strcmp(p->cuv,c)==0)//cuvantul exista, crestem doar frecventa
+            {
+            p->frec += 1;
+            return;
+            }
+
+            if (strcmp(p->cuv,c)>0)//cuvantul este mai mic din punct de vedere alfabetic
+            {
+                strcpy(q->cuv, c);
+                q->frec = 1;
+
+                q->prec = p->prec;
+                q->urm = p;
+
+                if (p->prec == NULL)
+                    *prim = q;
+                else
+                    p->prec->urm = q;
+                p->prec = q;
+                return;
+            }
+
+            p = p->urm;
+        }
+        strcpy(q->cuv, c);
+        q->frec = 1;
+        q->prec= p;
+        q->urm = p->urm;
+        if (p->urm == NULL)
+            *ultim = q;
+        else
+            p->urm->prec = q;
+        p->urm = q;
+
+    }
+
+}//lista este ordonata alfabetic dupa fiecare apelare
+
+
+void afisare(NOD *prim)
+{
+    NOD *p;
+    p=prim;
+    while(p!=0)
+    {
+        printf("\nCuvant %s   frecventa%d\n",p->cuv,p->frec);
+        p = p->urm;
+    }
+}
+
+
+
+
+int main()
+{
+    int rsp=0;
+    NOD *prim=0, *ultim=0;
+
+
+    while(rsp!=3)
+    {
+        printf("1 ADAUGA   2 AFISARE  3 EXIT");
+        scanf("%d",&rsp);
+
+        switch(rsp)
+        {
+            case 1: adaugare(&prim,&ultim);
+            break;
+            case 2: afisare(prim);
+            break;
+        }
+    }
+    return 0;
+}

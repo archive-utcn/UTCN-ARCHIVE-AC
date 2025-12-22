@@ -1,0 +1,11 @@
+67
+~E 1 "./src/Anod.vhd" 6 AnodDevider
+~A 1 "./src/Anod.vhd" 11 Flash
+~E 1 "./src/DaraGenerator.vhd" 6 DataGenerator
+~A 1 "./src/DaraGenerator.vhd" 12 Attempting2
+~E 1 "./src/Filter.vhd" 6 Filter
+~A 1 "./src/Filter.vhd" 15 Attempting1
+~E 1 "./src/FrequencyDivider.vhd" 6 FrequencyDivider
+~A 1 "./src/FrequencyDivider.vhd" 11 Flash
+~E 1 "./src/Register.vhd" 6 ShiftRegister
+~A 1 "./src/Register.vhd" 11 SRegister

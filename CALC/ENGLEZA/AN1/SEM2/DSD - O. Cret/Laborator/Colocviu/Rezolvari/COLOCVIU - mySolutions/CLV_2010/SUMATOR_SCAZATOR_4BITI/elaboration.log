@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.365 Tue Jun 27 00:04:52 2017
+
+
+-----------------------------------------------------------
+Entity            | Architecture   | Library             
+-----------------------------------------------------------
+sumator_scazator  | comportamental | SUMATOR_SCAZATOR_4BITI
+-----------------------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

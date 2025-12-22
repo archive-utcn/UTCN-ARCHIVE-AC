@@ -1,0 +1,5 @@
+MESSAGE "File: c:\My_Designs\04_2421_to_BCD\c2421_to_BCD\src\converter_tb.vhd" 
+MESSAGE "Compile Entity "tb_c2421_to_BCD"" 
+MESSAGE "Entity `tb_c2421_to_BCD' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "ARCH" of Entity "tb_c2421_to_BCD"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

@@ -1,0 +1,8 @@
+MESSAGE "File: D:\designshdl\CLV_2008\MS_COMPARATOR_1BIT\src\MS_COMPARATOR_1BIT.vhd" 
+MESSAGE "Compile Entity "COMPARATOR_1BIT"" 
+MESSAGE "Entity `COMPARATOR_1BIT' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "COMPARATOR_1BIT"" 
+MESSAGE "Compile Entity "MS_COMPARATOR_1BIT"" 
+MESSAGE "Entity `MS_COMPARATOR_1BIT' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "MS_COMPARATOR_1BIT"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

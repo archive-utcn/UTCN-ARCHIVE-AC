@@ -1,0 +1,14 @@
+[Version]
+Version=9.1
+[Designs]
+AverageValue=AverageValue.adf
+[Settings]
+Active=AverageValue
+[Expand]
+averagevalue=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

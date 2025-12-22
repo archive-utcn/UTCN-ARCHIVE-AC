@@ -1,0 +1,1 @@
+-w -s "d:\designshdl\reg_uni_shift\library.cfg"  -j "d:\designshdl\reg_uni_shift\ual\projlib.cfg"  -d "d:\designshdl\reg_uni_shift\ual\compile\"  -work ual -dbg -e 100 -o "d:\designshdl\reg_uni_shift\ual\src\nu.vhd" 

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1301049812 source:c:\codeblocks\arbori_de_cautare\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,11 @@
+.\src\Num_reversibil.vhd
+.\src\Bist_D.vhd
+.\src\Num.vhd
+.\src\Mux_2la1.vhd
+.\src\FIFO.vhd
+.\src\Divizor_frecventa.vhd
+.\src\Control.vhd
+.\src\Status.vhd
+.\src\Pointers_RAM.vhd
+.\src\RAM.vhd
+.\src\BCD.vhd

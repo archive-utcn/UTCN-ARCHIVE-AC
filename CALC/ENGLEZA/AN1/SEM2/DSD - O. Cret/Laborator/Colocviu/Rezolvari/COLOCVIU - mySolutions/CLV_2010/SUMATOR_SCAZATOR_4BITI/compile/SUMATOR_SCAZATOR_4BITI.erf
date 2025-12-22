@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CLV_2010\SUMATOR_SCAZATOR_4BITI\src\SUMATOR_SCAZATOR_4BITI.vhd" 
+MESSAGE "Compile Entity "sumator_scazator"" 
+MESSAGE "Entity `sumator_scazator' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "comportamental" of Entity "sumator_scazator"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

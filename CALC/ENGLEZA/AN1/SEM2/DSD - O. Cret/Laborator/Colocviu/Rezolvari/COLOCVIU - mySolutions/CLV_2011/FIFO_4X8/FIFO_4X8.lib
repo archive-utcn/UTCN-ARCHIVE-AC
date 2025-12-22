@@ -1,0 +1,13 @@
+timestamp=1495489672410
+
+[~A]
+./src/FIFO_4X8.vhd~FIFO_4X8=0*0*389
+./src/FIFO_4X8.vhd~arhFIFO_4X8=0*456*1320
+ModifyID=9
+Version=73
+
+[~MFT]
+0=0|0FIFO_4X8.mgf|1320|0
+
+[~U]
+

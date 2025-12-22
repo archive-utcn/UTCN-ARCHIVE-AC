@@ -1,0 +1,5 @@
+MESSAGE "File: D:\designshdl\CRET\comparator_data_flow\src\comparator_data_flow.vhd" 
+MESSAGE "Compile Entity "comparator"" 
+MESSAGE "Entity `comparator' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "arh" of Entity "comparator"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 

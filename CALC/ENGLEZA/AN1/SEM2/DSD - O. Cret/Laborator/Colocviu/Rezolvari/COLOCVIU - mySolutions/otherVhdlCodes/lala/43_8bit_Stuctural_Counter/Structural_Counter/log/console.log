@@ -1,0 +1,720 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  counter_8 a
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 23:59, 2017年5月24日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/counter_8.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_8.vhd
+# Compile Entity "counter_8"
+# Entity `counter_8' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_8"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  counter_8 a
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 0:01, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+endsim
+# All when statements cleared.
+# Simulation has been stopped
+acom $DSN/src/counter_8.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_8.vhd
+# Compile Entity "counter_8"
+# Entity `counter_8' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_8"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  counter_8 a
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 0:02, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+run 100 ns
+# KERNEL: stopped at time: 3 us
+run 100 ns
+# KERNEL: stopped at time: 3100 ns
+run 100 ns
+# KERNEL: stopped at time: 3200 ns
+run 100 ns
+# KERNEL: stopped at time: 3300 ns
+run 100 ns
+# KERNEL: stopped at time: 3400 ns
+run 100 ns
+# KERNEL: stopped at time: 3500 ns
+run 100 ns
+# KERNEL: stopped at time: 3600 ns
+run 100 ns
+# KERNEL: stopped at time: 3700 ns
+run 100 ns
+# KERNEL: stopped at time: 3800 ns
+run 100 ns
+# KERNEL: stopped at time: 3900 ns
+run 100 ns
+# KERNEL: stopped at time: 4 us
+run 100 ns
+# KERNEL: stopped at time: 4100 ns
+run 100 ns
+# KERNEL: stopped at time: 4200 ns
+run 100 ns
+# KERNEL: stopped at time: 4300 ns
+run 100 ns
+# KERNEL: stopped at time: 4400 ns
+run 100 ns
+# KERNEL: stopped at time: 4500 ns
+run 100 ns
+# KERNEL: stopped at time: 4600 ns
+run 100 ns
+# KERNEL: stopped at time: 4700 ns
+run 100 ns
+# KERNEL: stopped at time: 4800 ns
+run 100 ns
+# KERNEL: stopped at time: 4900 ns
+run 100 ns
+# KERNEL: stopped at time: 5 us
+run 100 ns
+# KERNEL: stopped at time: 5100 ns
+run 100 ns
+# KERNEL: stopped at time: 5200 ns
+run 100 ns
+# KERNEL: stopped at time: 5300 ns
+run 100 ns
+# KERNEL: stopped at time: 5400 ns
+run 100 ns
+# KERNEL: stopped at time: 5500 ns
+run 100 ns
+# KERNEL: stopped at time: 5600 ns
+run 100 ns
+# KERNEL: stopped at time: 5700 ns
+run 100 ns
+# KERNEL: stopped at time: 5800 ns
+run 100 ns
+# KERNEL: stopped at time: 5900 ns
+run 100 ns
+# KERNEL: stopped at time: 6 us
+run 100 ns
+# KERNEL: stopped at time: 6100 ns
+run 100 ns
+# KERNEL: stopped at time: 6200 ns
+run 100 ns
+# KERNEL: stopped at time: 6300 ns
+run 100 ns
+# KERNEL: stopped at time: 6400 ns
+run 100 ns
+# KERNEL: stopped at time: 6500 ns
+run 100 ns
+# KERNEL: stopped at time: 6600 ns
+run 100 ns
+# KERNEL: stopped at time: 6700 ns
+run 100 ns
+# KERNEL: stopped at time: 6800 ns
+run 100 ns
+# KERNEL: stopped at time: 6900 ns
+run 100 ns
+# KERNEL: stopped at time: 7 us
+run 100 ns
+# KERNEL: stopped at time: 7100 ns
+run 100 ns
+# KERNEL: stopped at time: 7200 ns
+run 100 ns
+# KERNEL: stopped at time: 7300 ns
+run 100 ns
+# KERNEL: stopped at time: 7400 ns
+run 100 ns
+# KERNEL: stopped at time: 7500 ns
+run 100 ns
+# KERNEL: stopped at time: 7600 ns
+run 100 ns
+# KERNEL: stopped at time: 7700 ns
+run 100 ns
+# KERNEL: stopped at time: 7800 ns
+run 100 ns
+# KERNEL: stopped at time: 7900 ns
+run 100 ns
+# KERNEL: stopped at time: 8 us
+run 100 ns
+# KERNEL: stopped at time: 8100 ns
+run 100 ns
+# KERNEL: stopped at time: 8200 ns
+run 100 ns
+# KERNEL: stopped at time: 8300 ns
+run 100 ns
+# KERNEL: stopped at time: 8400 ns
+run 100 ns
+# KERNEL: stopped at time: 8500 ns
+run 100 ns
+# KERNEL: stopped at time: 8600 ns
+acom $DSN/src/counter_2.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd
+# Compile Entity "counter_2"
+# Entity `counter_2' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 0:05, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# Simulation has been stopped
+acom $DSN/src/counter_8.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_8.vhd
+# Compile Entity "counter_8"
+# Entity `counter_8' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_8"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+asim -advdataflow  counter_8 a
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 0:06, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+acom $DSN/src/counter_8.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_8.vhd
+# Compile Entity "counter_8"
+# Entity `counter_8' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_8"
+# Error: COMP96_0071: counter_8.vhd : (22, 20): Operator "and" is not defined for such operands.
+# Error: COMP96_0104: counter_8.vhd : (22, 13): Undefined type of expression.
+# Error: COMP96_0077: counter_8.vhd : (22, 13): Assignment target incompatible with right side. Expected type "BIT".
+# Error: COMP96_0071: counter_8.vhd : (23, 20): Operator "and" is not defined for such operands.
+# Error: COMP96_0104: counter_8.vhd : (23, 13): Undefined type of expression.
+# Error: COMP96_0077: counter_8.vhd : (23, 13): Assignment target incompatible with right side. Expected type "BIT".
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [s]
+acom $DSN/src/counter_8.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_8.vhd
+# Compile Entity "counter_8"
+# Entity `counter_8' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_8"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2422 kB (elbread=1070 elab2=303 kernel=1049 sdf=0)
+# 0:07, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+acom $DSN/src/counter_2.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd
+# Compile Entity "counter_2"
+# Compile Architecture "a" of Entity "counter_2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/counter_8.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_8.vhd
+# Compile Entity "counter_8"
+# Compile Architecture "a" of Entity "counter_8"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 0:12, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+# Signal enable not found in design
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 0:13, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+acom $DSN/src/counter_2.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd
+# Compile Entity "counter_2"
+# Entity `counter_2' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 0:13, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+acom $DSN/src/counter_2.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd
+# Compile Entity "counter_2"
+# Entity `counter_2' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 0:14, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 0:15, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 0:15, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+acom $DSN/src/counter_2.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd
+# Compile Entity "counter_2"
+# Entity `counter_2' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_2"
+# Error: COMP96_0019: counter_2.vhd : (28, 6): Keyword "if" expected.
+# Error: COMP96_0015: counter_2.vhd : (28, 6): ';' expected.
+# Error: COMP96_0019: counter_2.vhd : (29, 5): Keyword "process" expected.
+# Error: COMP96_0019: counter_2.vhd : (29, 6): Keyword "end" expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom $DSN/src/counter_2.vhd
+# Compile...
+# File: c:\My_Designs\43_8bit_Stuctural_Counter\Structural_Counter\src\counter_2.vhd
+# Compile Entity "counter_2"
+# Entity `counter_2' has been skipped - no difference detected.
+# Compile Architecture "a" of Entity "counter_2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+restart
+# All when statements cleared.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2421 kB (elbread=1070 elab2=302 kernel=1049 sdf=0)
+# 0:18, 2017年5月25日
+# Simulation has been initialized
+# Selected Top-Level: counter_8 (a)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+run 100 ns
+# KERNEL: stopped at time: 3 us
+run 100 ns
+# KERNEL: stopped at time: 3100 ns
+run 100 ns
+# KERNEL: stopped at time: 3200 ns
+run 100 ns
+# KERNEL: stopped at time: 3300 ns
+run 100 ns
+# KERNEL: stopped at time: 3400 ns
+run 100 ns
+# KERNEL: stopped at time: 3500 ns
+run 100 ns
+# KERNEL: stopped at time: 3600 ns
+endsim
+# All when statements cleared.
+# Simulation has been stopped

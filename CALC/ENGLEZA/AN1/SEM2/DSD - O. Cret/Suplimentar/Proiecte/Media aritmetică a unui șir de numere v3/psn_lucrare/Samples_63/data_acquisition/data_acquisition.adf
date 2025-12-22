@@ -1,0 +1,104 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=data_acquisition
+
+[Library]
+data_acquisition=.\data_acquisition.lib
+
+[$LibMap$]
+data_acquisition=.
+Active_lib=VIRTEX
+xilinxun=VIRTEX
+UnlinkedDesignLibrary=VIRTEX
+DESIGNS=VIRTEX
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+HESPrepare=0
+FLOWTOOLS=ONLY_IMPL
+CSYNTH_TOOL=<none>
+Celoxica=0
+UseCeloxica=0
+SYNTH_STATUS=NONE
+IMPL_STATUS=NONE
+C_SERVER_SIM=NONE
+ON_SERVERFARM_SIM=0
+C_SERVER_SYNTH=NONE
+ON_SERVERFARM_SYNTH=0
+C_SERVER_IMPL=NONE
+ON_SERVERFARM_IMPL=0
+PHYSSYNTH_TOOL=<none>
+PHYSSYNTH_STATUS=NONE
+
+[IMPLEMENTATION]
+UCF=
+FAMILY=
+DEVICE=
+SPEED=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[SYNTHESIS]
+FAMILY=
+DEVICE=
+SPEED=
+
+[Groups]
+testbench=1
+
+[Files]
+/readme.html=-1
+/compile.do=-1
+/run_fifo_216.do=-1
+/run_fifo_217.do=-1
+/clk_div.vhd=-1
+/clk_gen.vhd=-1
+/clocks.bde=-1
+/fifo.vhd=-1
+/test_environment.bde=-1
+/test_wave.awf=-1
+testbench/tester.dlm=-1
+testbench/test.cpp=-1
+testbench/test.h=-1
+testbench/tester.cpp=-1
+testbench/tester.h=-1
+testbench/transactor.cpp=-1
+testbench/transactor.h=-1
+testbench/frametypes.cpp=-1
+testbench/frametypes.h=-1
+
+[Files.Data]
+.\src\readme.html=HTML Document
+.\src\compile.do=Macro
+.\src\run_fifo_216.do=Macro
+.\src\run_fifo_217.do=Macro
+.\src\clk_div.vhd=VHDL Source Code
+.\src\clk_gen.vhd=VHDL Source Code
+.\src\clocks.bde=Block Diagram
+.\src\fifo.vhd=VHDL Source Code
+.\src\test_environment.bde=Block Diagram
+.\src\test_wave.awf=Waveform File
+.\src\testbench\tester.dlm=C/C++ Configuration
+.\src\testbench\test.cpp=C++ Source Code
+.\src\testbench\test.h=C++ Source Code
+.\src\testbench\tester.cpp=C++ Source Code
+.\src\testbench\tester.h=C++ Source Code
+.\src\testbench\transactor.cpp=C++ Source Code
+.\src\testbench\transactor.h=C++ Source Code
+.\src\testbench\frametypes.cpp=C++ Source Code
+.\src\testbench\frametypes.h=C++ Source Code
+

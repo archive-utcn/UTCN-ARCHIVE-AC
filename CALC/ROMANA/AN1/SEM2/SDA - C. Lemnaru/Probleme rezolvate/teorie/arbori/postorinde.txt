@@ -1,0 +1,10 @@
+void postordine(TIP_NOD *p, int nivel)//sdr
+{
+int i;
+if (p!=0){
+postordine(p->stg,nivel+1);
+postordine(p->dr,nivel+1);
+for(i=0;i<=nivel;i++) printf("  ");
+printf("%2d\n",p->nr);
+}
+}

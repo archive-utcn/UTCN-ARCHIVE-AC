@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1307048062 source:c:\users\oana\desktop\colocviu sda\inserarenod\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

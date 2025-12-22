@@ -1,0 +1,179 @@
+/**
+	Enunt:
+			Exista urmatorul joc: pe o linie de cale ferata se afla n vagoane unul langa altul,
+			numerotate cu valori distincte din multimea 1... n.
+			O macara poate lua k vagoane de pe linie si le poate aseza in partea dreapta, la sfarsitul sirului
+			de vagoane, care apoi prin impingere ajung din nou unul langa altul, in noua ordine creata dupa
+			operatia respectiva.
+			Dandu-se ordinea initiala a vagoanelor, se cere sa se determine (daca este posibil) numarul minim de
+			operatii pe care trebuie sa le efectueze macaraua pentru ca in final vagoanele sa se afle in
+			ordine crescatoare 1, 2, ..., n.
+
+	Date de intrare:
+			Numarul de vagoane;
+			Ordinea lor initiala;
+
+	Date de iesire:
+			Ordinea vagoanelor dupa fiecare mutare a macaralei;
+
+    Constrangeri:
+
+	Data:
+			10 mai 2010;
+
+	Autor:
+			Boleac Andrei
+
+    Solutie:
+            1) Se creeaza grupuri de vagoane ordonate exact dupa conditiile probleme (vagoane marcate cu numere consecutive);
+            2) Se creeaza o lista cu aceste grupuri si se ordoneaza crescator dupa primul element din grup;
+            3) Se muta in ordine grupurile la sfarsitul sirului pana cand nu mai exista grupuri de mutat;
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct lista
+{
+    int vagon, pozitie, lungrup;
+    struct lista *gurmator;
+}  Lista;
+
+int tren[100], lunTren;
+
+void scriepeLista(Lista **root, Lista **end, int vip, int pozitie, int lungrup)
+{
+    Lista *pointer;
+    pointer=(Lista *)malloc(sizeof(Lista));
+    pointer->vagon=vip;
+    pointer->pozitie=pozitie;
+    pointer->lungrup=lungrup;
+    pointer->gurmator=NULL;
+
+    if(*root) (*end)->gurmator=pointer;
+    else *root=pointer;
+    *end=pointer;
+}
+
+void ordoneazaLista(Lista *root)
+{
+    Lista *pointer, auxiliar;
+    int test;
+    do
+    {
+        test=0;
+        pointer=root;
+        while(pointer->gurmator)
+        {
+            if(pointer->vagon > pointer->gurmator->vagon)
+            {
+                auxiliar=*pointer;
+                pointer->vagon=pointer->gurmator->vagon;
+                pointer->pozitie=pointer->gurmator->pozitie;
+                pointer->lungrup=pointer->gurmator->lungrup;
+                pointer->gurmator->vagon=auxiliar.vagon;
+                pointer->gurmator->pozitie=auxiliar.pozitie;
+                pointer->gurmator->lungrup=auxiliar.lungrup;
+                test=1;
+            };
+            pointer=pointer->gurmator;
+        };
+    }  while(test);
+}
+
+int lanseazaMacara(Lista *root)    /// Functia simuleaza actiunile macaralei;
+{
+    while(root->pozitie < root->gurmator->pozitie ) root=root->gurmator; root=root->gurmator;
+    int pozitie, lungrup, indice, pas=1;        /// Se considera o ordine globala a grupurilor si se muta primul grup care urmeaza;
+    Lista *pointer;
+
+    while(root)
+    {
+        pozitie=root->pozitie;
+        lungrup=root->lungrup;
+
+        for( indice=0; indice< lungrup; indice++)   /// Se muta grupul dupa ultimul element din sir si locul ramas ramane gol;
+        {
+            tren[lunTren+indice]=tren[pozitie+indice];
+            tren[pozitie+indice]=0;
+        };
+        printf("\n\n  Asa arata vagoanele dupa mutarea %d\n  ", pas);
+        for(indice=0; indice< lunTren+lungrup; indice++) printf("%d ", tren[indice]);
+
+        for(indice=pozitie;indice<lungrup+lunTren-1; indice++)  /// Se restabileste sirul de vagoane;
+            tren[indice]=tren[indice+lungrup];
+
+        pointer=root->gurmator;
+        while(pointer){                                             /// E posibil ca pozitile grupurilor ramase pentru mutat sa se schimbe, se ia in calcul si acest lucru;
+            if(pointer->pozitie > pozitie) (pointer-> pozitie)-=lungrup;
+            pointer=pointer->gurmator;
+        }
+        root=root->gurmator;
+        pas++;
+    }
+
+    return pas-1;
+}
+
+int main(){
+
+    int indice, pozitie;
+    Lista *root=NULL, *end=NULL, *pointer;
+
+    printf("\n  Lungimea trenului? "); scanf("%d", &lunTren);
+    printf("\n  Ordinea initiala a vagoanelor: \n  ");
+    for ( indice=0; indice < lunTren; indice++ )                          /// Se citeste ordinea initiala a vagoanelor;
+        scanf("  %d", &tren[indice]);
+
+    pozitie=0;
+    for ( indice=1; indice <= lunTren; indice++ )                          /// Se construieste lista cu grupuri de vagoane gata ordonate;
+        if ( tren[indice-1]+1 != tren[indice] ) {
+            scriepeLista(&root, &end, tren[pozitie], pozitie, indice-pozitie);
+            pozitie=indice;
+        };
+
+    printf("\n  Se creeaza grupuri de vagoane gata ordonate: \n  ");
+    for ( indice=0; indice < lunTren; indice++ )                            /// Partea aceasta de program demonstreaza grupurile create;
+        printf("%d ", tren[indice]);
+    pointer=root;
+    printf("\n  ");
+    for ( indice=0; indice < lunTren; indice++)
+        if(pointer)
+        {
+            if( pointer->vagon == tren[indice] ){
+                printf("%d ", tren[indice]);
+                pointer=pointer->gurmator;
+            }
+        else printf("  ");
+        }
+
+
+    ordoneazaLista(root);
+
+    printf("\n\n  Aceasta este lista cu mutarile care trebuiesc executate, in ordine  \n  ");
+    pointer=root;
+    while(pointer){
+         printf("%d  %d  %d \n  ", pointer->vagon, pointer->pozitie, pointer->lungrup);
+         pointer=pointer->gurmator;
+    }
+
+    int numpasi;
+    if(root->gurmator) numpasi=lanseazaMacara(root);           /// Partea esentiala a programului, care face operatii pe "sirul de vagoane";
+                                                                                                /// Daca lista are un singur element atunci sirul de vagoane e ordonat si nu mai are sens sa se lanseze macaraua;
+
+
+    printf("\n\n  Acesta este sirul de vagoane dupa %d mutari: \n  ", numpasi);
+    for(indice=0;indice<lunTren;indice++) printf("%d  ", tren[indice]);
+
+    while(root)
+    {                                                                                          /// Se elibereaza memoria alocata;
+        pointer=root;
+        root=root->gurmator;
+        free(pointer);
+    }
+    return 0;
+}
+
+
+
+

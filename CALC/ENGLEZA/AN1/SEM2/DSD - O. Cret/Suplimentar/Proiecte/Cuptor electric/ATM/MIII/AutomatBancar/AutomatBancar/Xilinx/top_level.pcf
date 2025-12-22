@@ -1,0 +1,42 @@
+//! **************************************************************************
+// Written by: Map I.31 on Fri May 23 04:52:36 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clock" LOCATE = SITE "P54" LEVEL 1;
+COMP "suma_zeci" LOCATE = SITE "P48" LEVEL 1;
+COMP "suma_sute" LOCATE = SITE "P47" LEVEL 1;
+COMP "catod<0>" LOCATE = SITE "P83" LEVEL 1;
+COMP "catod<1>" LOCATE = SITE "P17" LEVEL 1;
+COMP "regim" LOCATE = SITE "P38" LEVEL 1;
+COMP "catod<4>" LOCATE = SITE "P23" LEVEL 1;
+COMP "ok_tranz" LOCATE = SITE "P8" LEVEL 1;
+COMP "catod<2>" LOCATE = SITE "P20" LEVEL 1;
+COMP "catod<3>" LOCATE = SITE "P21" LEVEL 1;
+COMP "suma_invalida" LOCATE = SITE "P2" LEVEL 1;
+COMP "ok_card" LOCATE = SITE "P15" LEVEL 1;
+COMP "catod<5>" LOCATE = SITE "P16" LEVEL 1;
+COMP "catod<6>" LOCATE = SITE "P25" LEVEL 1;
+COMP "pin<0>" LOCATE = SITE "P18" LEVEL 1;
+COMP "pin<1>" LOCATE = SITE "P12" LEVEL 1;
+COMP "pin<2>" LOCATE = SITE "P10" LEVEL 1;
+COMP "pin<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "CNL" LOCATE = SITE "P69" LEVEL 1;
+COMP "suma_mii" LOCATE = SITE "P41" LEVEL 1;
+COMP "chit" LOCATE = SITE "P29" LEVEL 1;
+COMP "confirmare" LOCATE = SITE "P36" LEVEL 1;
+COMP "anod<0>" LOCATE = SITE "P34" LEVEL 1;
+COMP "anod<1>" LOCATE = SITE "P33" LEVEL 1;
+COMP "anod<2>" LOCATE = SITE "P32" LEVEL 1;
+COMP "anod<3>" LOCATE = SITE "P26" LEVEL 1;
+COMP "ok_pin" LOCATE = SITE "P14" LEVEL 1;
+COMP "chit_led" LOCATE = SITE "P3" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "confirmare_BUFGP/IBUFG" BEL "confirmare_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+NET "suma_mii_BUFGP/IBUFG" BEL "suma_mii_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "suma_zeci_BUFGP/IBUFG" BEL "suma_zeci_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+NET "suma_sute_BUFGP/IBUFG" BEL "suma_sute_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+SCHEMATIC END;

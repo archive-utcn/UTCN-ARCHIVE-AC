@@ -1,0 +1,1 @@
+-w -s "D:\designshdl\CRET\library.cfg"  -j "D:\designshdl\CRET\excess3\projlib.cfg"  -d "D:\designshdl\CRET\excess3\compile\"  -work excess3 -dbg -e 100 "D:\designshdl\CRET\excess3\src\excess3.vhd" 

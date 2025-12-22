@@ -1,0 +1,10 @@
+void preordine(TIP_NOD *p, int nivel)//rsd
+{
+int i;
+if (p!=0){
+for(i=0;i<=nivel;i++) printf("  ");
+printf("%2d\n",p->nr);
+preordine(p->stg,nivel+1);
+preordine(p->dr,nivel+1);
+}
+}

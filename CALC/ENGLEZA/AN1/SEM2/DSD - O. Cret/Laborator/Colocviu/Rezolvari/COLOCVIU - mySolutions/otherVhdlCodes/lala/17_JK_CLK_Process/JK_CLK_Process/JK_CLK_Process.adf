@@ -1,0 +1,39 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=JK_CLK_Process
+
+[Library]
+JK_CLK_Process=.\JK_CLK_Process.lib
+
+[$LibMap$]
+JK_CLK_Process=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[Files]
+/jk.vhd=-1
+
+[Files.Data]
+.\src\jk.vhd=VHDL Source Code
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=jk|a|0    
+ShowHide=ShowTopLevel
+Selected=

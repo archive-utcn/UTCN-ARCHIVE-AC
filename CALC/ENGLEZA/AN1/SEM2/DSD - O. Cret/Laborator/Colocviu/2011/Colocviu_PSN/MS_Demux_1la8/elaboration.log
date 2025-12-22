@@ -1,0 +1,19 @@
+elbread.dll ver. 1.0.5.375 Sun May 15 11:19:06 2011
+
+
+------------------------------------------
+Entity      | Architecture | Library    
+------------------------------------------
+ms_demux    | arh_ms_demux | ms_demux_1la8
+demux_8la1  | arh_demux    | ms_demux_1la8
+------------------------------------------
+
+-----------------------------
+Package             | Library
+-----------------------------
+standard            | std
+textio              | std
+std_logic_1164      | ieee
+std_logic_arith     | ieee
+std_logic_unsigned  | ieee
+-----------------------------

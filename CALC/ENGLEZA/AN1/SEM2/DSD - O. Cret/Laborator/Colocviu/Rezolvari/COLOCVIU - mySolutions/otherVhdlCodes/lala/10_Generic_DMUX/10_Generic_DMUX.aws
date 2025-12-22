@@ -1,0 +1,12 @@
+[Version]
+Version=6.3
+[Designs]
+generic_dmux=.\Generic_DMUX\Generic_DMUX.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+generic_dmux=1

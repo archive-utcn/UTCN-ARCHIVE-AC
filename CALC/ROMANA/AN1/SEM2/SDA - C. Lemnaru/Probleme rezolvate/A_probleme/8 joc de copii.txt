@@ -1,0 +1,110 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct n
+{
+  char nume[20];
+  struct n *urm;
+}nod;
+
+nod *pnod;//pointer global pt acces la lista
+
+void afisare()
+{
+  //afisarea listei
+  nod *q;
+  q=pnod;
+  printf("\nJOC\n");
+  do
+  {
+    printf("\n%s",q->nume);
+    q=q->urm;
+  }
+  while (q!=pnod);
+}
+
+nod *cautare(char key[])
+{
+   //cautarea copilului cu care se incepe jocul
+    nod *p;
+    p=pnod;
+    do
+    {
+        if(strcmp(key,p->nume)==0)
+        return p;
+        p=p->urm;
+    }while(p!=pnod);
+    return NULL;
+}
+
+void stergere(nod *p,int n)
+{
+    //functia care scoate din joc fiecare al n-lea copil
+    int i;
+    nod *q,*q1;
+    q=p;
+    do
+    {
+        for(i=2;i<=n;i++)
+        {
+        //se cauta al n-lea copil
+        q1=q;
+        q=q->urm;
+        }
+        //este scos din joc, dar mai intai afisat
+        printf("\Copilul care iese afara din joc: %s",q->nume);
+        q1->urm=q->urm;
+        free(q);
+        q=q1->urm;
+    }
+    while (q!=q->urm);//jocul se termina cand mai ramane un singur copil
+    printf("\nCastigatorul este %s\n",q->nume);
+}
+
+
+int main(void)
+{
+    int i,n,m;
+    char s[20];
+    nod *q,*p;
+    //citim nr de copii
+    printf("Introduceti numarul de copii : ");
+    scanf("%d",&n);
+    pnod=NULL;//initializarea pointerului de citire
+    for(i=0;i<n;i++)
+    {
+     printf("Intoduceti numele copilului%d: ",i+1);
+     scanf("%s",s);//citirea numelui copilului
+     if (pnod==NULL)
+     {
+         pnod=(nod*)malloc(sizeof(nod));//citirea de date in primul nod
+         strcpy(pnod->nume,s); pnod->urm=pnod;
+     }
+    else
+    {
+        q=(nod*)malloc(sizeof(nod));
+        strcpy(q->nume,s);
+        q->urm=pnod->urm;
+        pnod->urm=q;
+        pnod=q;//q se adauga la lista
+    }
+    }
+    afisare();
+    do{
+        printf("\nCopilul care incepe jocul este: ");
+        scanf("%s",s);
+        p=cautare(s);
+        if(p==NULL)
+        {
+            printf("\nCopilul cu acest nume nu este gasit!!!");
+        }
+    }while(p==NULL);
+    printf("Copilul m: ");
+    fflush(stdin);
+    scanf("%d",&m);
+    stergere(p,m);
+    return 0;
+}

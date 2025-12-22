@@ -1,0 +1,50 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=comparator_data_flow
+
+[Library]
+comparator_data_flow=.\comparator_data_flow.lib
+
+[$LibMap$]
+comparator_data_flow=.
+Active_lib=
+
+[Settings]
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+FLOWTOOLS=ONLY_IMPL
+REFRESH_FLOW=1
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/comparator_data_flow.vhd=-1
+
+[Files.Data]
+.\src\comparator_data_flow.vhd=VHDL Source Code
+
+[Folders]
+Name3=Makefiles
+Directory3=D:\designshdl\CRET\comparator_data_flow\
+Extension3=mak
+Name4=Memory
+Directory4=D:\designshdl\CRET\comparator_data_flow\src
+Extension4=mem;mif;hex
+Name5=Dll Libraries
+Directory5=D:\designshdl\CRET\comparator_data_flow\
+Extension5=dll

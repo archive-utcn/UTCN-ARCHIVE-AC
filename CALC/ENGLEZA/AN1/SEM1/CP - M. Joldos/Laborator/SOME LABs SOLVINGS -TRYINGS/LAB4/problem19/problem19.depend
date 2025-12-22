@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1477691706 source:c:\users\fujitsu\desktop\lab4\problem19\main.c
+	<stdio.h>
+	<stdlib.h>
+

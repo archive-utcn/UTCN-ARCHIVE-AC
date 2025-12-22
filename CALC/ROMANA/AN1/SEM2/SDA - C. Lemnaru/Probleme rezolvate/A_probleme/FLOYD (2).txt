@@ -1,0 +1,76 @@
+//FLOYD->gasirea cailor de cost minim între oricare doua noduri ale unui graf (orientat)
+#include <stdio.h>
+#include <conio.h>
+#define NMAX 5
+//n->nr varfuri
+//A->matricea costurilor minime
+//calculul distantelor minime se face in 'n' iteratii
+//La iteratia k, A[i][j] va avea ca valoare cea mai mica distanta intre i si j pe cai care nu contin vârfuri peste k (exceptând capetele i si j)
+void floyd(int n,int COST[][NMAX],int A[][NMAX],int P[][NMAX])
+{
+    int i,j,k;
+    for (i=0; i<n; i++)
+    {
+        for (j=0; j<n; j++)
+        {
+            A[i][j]=COST[i][j];
+            P[i][j]=j;
+        }
+    }
+    for (i=0; i<n; i++) A[i][i]=0;
+
+    for (k=0; k<n; k++)
+    {
+        for (i=0; i<n; i++)
+        {
+            for (j=0; j<n; j++)
+                if (A[i][k]+A[k][j]<A[i][j])
+                {
+                    A[i][j]=A[i][k]+A[k][j];
+                    P[i][j]=k;
+                }
+                else P[i][j]=0;
+        }
+    }
+}
+//Pentru a pastra caile minime, se utilizeaza un tablou aditional P, unde P[i][j] tine acel vârf k ce a condus la distanta minima A[i][j]. Daca P[i][j]==0, atunci arcul (i, j) este calea minima între i si j.
+void cale(int i, int j,int P[][NMAX])
+{
+    int k;
+    k=P[i][j];
+    if (k!=0)
+    {
+        printf(" %d ->",i);
+        cale(i,k,P);
+        printf(" %d ->",k);
+        cale(k,j,P);
+    }
+}
+
+void main()
+{
+    int P[NMAX][NMAX],A[NMAX][NMAX];
+    int COST[NMAX][NMAX]=
+    {
+        {0,2,3,4,1},
+        {1,0,1,1,1},
+        {2,1,0,8,9},
+        {5,6,1,0,7},
+        {1,1,1,1,0}
+    };
+    int n=5;
+    int i,j;
+    floyd(n,COST,A,P);
+    for (i=0; i<n; i++)
+        for (j=0; j<n; j++)
+        {
+            printf("%d - %d: ",i,j);
+            if (P[i][j]==0) printf(" %d -> %d ... cost= %d",i,j,A[i][j]);
+            else
+            {
+                cale(i,j,P);
+                printf(" %d ... cost= %d",j,A[i][j]);
+            }
+            printf("\n");
+        }
+}

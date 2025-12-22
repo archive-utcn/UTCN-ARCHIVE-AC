@@ -1,0 +1,4 @@
+vhdl work "reclama.vhd"
+vhdl work "frequency_divider.vhd"
+vhdl work "char_generator.vhd"
+vhdl work "main.vhd"
