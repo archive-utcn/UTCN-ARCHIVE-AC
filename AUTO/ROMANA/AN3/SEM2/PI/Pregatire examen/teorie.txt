@@ -1,0 +1,16 @@
+daca factorul de subtiere tinde spre 0, avem un cerc 
+daca axa de alungire este 0, obiectul prezinta simetrie circulara
+
+proiectia pe orizontala este egala cu suma pixelilor pe linii
+proiectia pe verticala este egala cu suma pixelilor pe coloane 
+
+pentru algoritmul de urmarire a conturului avem nevoie de o imagine binara sau etichetata
+
+dilatarea umple mici goluri albe ;   eroziunea elimina mici zgomote negre
+deschiderea - eliminarea pixelilor negri mici;  inchidere - umple goluri mici
+
+o imagine intunecata va avea o medie scazuta a nivelurilor de intensitate 
+o imagine cu mult contrasst va avea o deviatie standard mare 
+
+
+
