@@ -1,0 +1,89 @@
+2 ^ 7 = 128  => avem nevoie de 7 biti pentru host , 
+ip address : 10101100.00010000.00000000.00000000
+mask :         11111111.11111111.00000000.00000000    255.255.0.0
+new mask : 11111111.11111111.11111111.10000000    255.255.255.128
+
+numar de subretele : 2 ^ 9 = 512 subretele
+numarul maxim de hosturi din fiecare subretea: 128 - 2 (nw add si broadcast) = 126 
+adresa de retea sn1 : 172.16.0.0 
+adresa de broadcast sn1 : 172.16.0.127
+
+
+adresa de host sn1 : 172.16.0.1 
+adresa de host sn1 : 172.16.0.2
+                                                  	subnet	host	
+sn2: 10101100.00010000.00000001.00000001         172.16.0
+sn
+
+sn3 : 
+
+Server0 : prima subretea
+ip : 172.16.0.1
+NM : 255.255.255.128
+Gateway: Fa0/1 Router0 : 172.16.0.2
+
+Router0 fa0/1 : prima subretea
+ip : 172.16.0.2
+NM : 255.255.255.128
+
+Router0 fa0/2 : a doua subretea
+ip : 172.16.1.129
+NM : 255.255.255.128
+
+Router1 fa0/0: a doua subretea 
+ip : 172.16.1.130
+NM : 255.255.255.128
+
+Router1 fa0/1: a treia subretea
+ip : 172.16.2.1
+NM : 255.255.255.128
+
+PC1 : a treia subretea
+ip : 172.16.2.2
+NM : 255.255.255.128
+Gateway: Router1 Fa0/1 : 172.16.2.1
+
+PC0 : a treia subretea
+ip : 172.16.2.3
+NM : 255.255.255.128
+Gateway: Router1 Fa0/1 : 172.16.2.1
+
+
+
+
+Server0 : prima subretea
+ip : 172.16.0.1
+NM : 255.255.255.128
+Gateway: Fa0/1 Router0 : 172.16.0.2
+
+Router0 fa0/1 : prima subretea
+ip : 172.16.0.2
+NM : 255.255.255.128
+
+Router0 fa0/0 : a doua subretea
+ip : 172.16.1.129
+NM : 255.255.255.128
+
+Router1 fa0/0: a doua subretea 
+ip : 172.16.1.130
+NM : 255.255.255.128
+
+Router1 fa0/1: a treia subretea
+ip : 172.16.2.1
+NM : 255.255.255.128
+
+PC1 : a treia subretea
+ip : 172.16.2.2
+NM : 255.255.255.128
+Gateway: Router1 Fa0/1 : 172.16.2.1
+
+PC0 : a treia subretea
+ip : 172.16.2.3
+NM : 255.255.255.128
+Gateway: Router1 Fa0/1 : 172.16.2.1
+
+b. 
+pe Router 0 : ip route 172.16.2.0 255.255.255.128 172.16.1.130
+
+pe Router 1 : ip route 172.16.0.0 255.255.255.128 172.16.1.129
+

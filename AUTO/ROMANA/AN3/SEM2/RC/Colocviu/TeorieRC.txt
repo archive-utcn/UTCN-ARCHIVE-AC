@@ -1,0 +1,84 @@
+1- Tipul adresei ipv6 2a03:2880:f123:83:face:b00c:0:25de 
+  R: Unicast global
+  
+2- Rolul comenzilor: 
+     Router1(config)# interface Gig0/0/1
+     R: configureaza interfata Gigabit cu portul 1 pe switch-ul 0     
+	 Router1(config-if)#ipv6 address 2002:acad:4::64 eui-64
+	 R: seteaza rute statice, eui-64 asigneaza automat partea de interfaceID, pentru a nu fi scrisa manual.
+
+3- Care e comanda care genereaza output-ul urmator?
+    R: tracert address
+
+4- Rolul comenzii: Router0(config)#ipv6 2002:acad:4::/64 2002:acad:3::2
+	R: configureaza o ruta statica catre reteaua(2002:acad:4::/64-care reprezinta
+	prefixul retelei destinatie), cu next hop-ul 2002:acad:3::2 (hop- se refera
+	la urmatorul router cel mai apropiat prin care poate trece un pachet de date).
+	
+5- Rolul comenzii tracert www.utcluj.ro (Windows)
+   R: afiseaza fiecare hop si timpul in milisecunde pentru fiecare hop de la sursa la destinatie (sursa este adresa ping, iar destinatia
+       este adresa website-ului www.utcluj.ro)
+	   
+6- Comanda care interogheaza serverul DNS pt a prelua informatii despre www.ipv6.org
+   R: nslookup www.ipv6.org
+
+7- Care este comanda Windows care afiseaza toate informatiile despre toate placile din retea?
+   R: ipconfig/all
+
+8- Rolul comenzii nslookup
+   R: folosita pt a obtine informatii despre serverele de internet   
+   
+9- Rolul comenzii ARP
+   R: Cache-ul sau tabelul ARP are lista dinamică a adreselor IP și MAC ale acelor dispozitive către care computerul dvs. a comunicat 
+   recent într-o rețea locală. Scopul menținerii unui tabel ARP este acela că atunci când doriți să comunicați cu un alt dispozitiv, dispozitivul dvs.
+   nu trebuie să trimită cererea ARP pentru adresa MAC a dispozitivului respectiv.Comenzile ARP vă ajută, de asemenea, să aflați adresa IP duplicată și 
+   intrările nevalide dintr-un tabel / cache ARP.
+   arp -a: Această comandă este utilizată pentru a afișa tabelul ARP pentru o anumită adresă IP. De asemenea, afișează toate intrările cache-ului sau tabelului ARP.  
+
+10- Unicast routing permite router-ului sa comunice in exteriorul internetului pentru dispozitive din interior.
+  
+11- show VLAN brief - afiseaza VLAN-urile ce le avem
+
+12- VLAN1- VLAN nativ(VLAN default).
+
+13- show interfaces trunk- afiseaza proturile puse in mod trunk
+
+14- ca sa mearga ping-urile dintre doua VLAN-uri trebuie create pentru toate dispozitivele (Switch-uri, routere) 
+    cu comenzile (VLAN10 exit, VLAN 20 exit)
+
+15- ca sa putem sa facem sa comunice VLAN-uri diferite (VLAN10 cu VLAN20) trebuie sa adaugam un router.
+
+16- gateway pt VLAN o sa fie router-ul
+
+17- doar cu ipv6 poti seta mai multe adrese pe aceeasi interfata.
+
+18- encapsulation dot1Q 10- "invatam" router-ul ca pe acea interfata sa astepte
+    cadre care sa aiba un format specific(cum ar fi cadre de vlan)
+19- Scrieti doua comenzi pentru testarea conectivitatii cu adrese IPv6
+    R: ping, tracert
+	
+20- Din modul Privileged mode (comanda #enable este deja folosita), scrieti secventa de comenzi/pașii 
+     necesari pentru a asigna portul Fast Ethernet 0/2 la VLAN cu numarul 4.
+    R: Switch(config)#interface fa 0/2
+       Switch(config-if)#switchport mode access
+       Switch(config-if)#switchport access vlan 4
+
+21- Care este rolul unui cablu drept? Descrieti unul dintre 
+    standardele pentru cablarea unui conector RJ-45 (standard A sau B).	   
+	R: Standard B standardul TIA / EIA 568B oferă compatibilitate inversă doar unei scheme de cablare USOC cu o singură pereche.
+   
+22-  Exercitiul cu VLAN
+     a)Switch(config)#interface fa 0/4
+       Switch(config-if)#switchport mode access
+       Switch(config-if)#switchport access vlan 22
+	   -----------------------------------
+	   Switch(config)#interface fa 0/3
+       Switch(config-if)#switchport mode access
+       Switch(config-if)#switchport access vlan 33
+	   --
+	   
+     b) switch-ul cu cea mai mica prioritate va fi radacina in protocolul spanning tree. (pt exemplu switch 4) 
+     c) Costul interfetei va fi mai mic, deoarece in loc de 3 legaturi fizice cu un anumit cost C fiecare, in retea o sa fie vazuta o
+        singura legatura logica cu costul de 3 ori mai mic decat cel al celor 3 legaturi fizice.   
+	  
+23-	 Noua viteza o sa fie de 3 ori mai mare deoarece avem 3 legaturi fizice cu viteza de 20 Mbps, adica 3 * 20Mbps= 60 Mbps. 
