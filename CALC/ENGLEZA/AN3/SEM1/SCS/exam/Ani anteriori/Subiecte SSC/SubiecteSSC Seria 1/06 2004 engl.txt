@@ -1,0 +1,51 @@
+subiectele care s-au dat la engleza...
+
+rand I
+
+1. o problema din mips
+2. 4-bit multiplier cu CSA in wallesty
+3. pagging and segmentation
+4. Memoria asociativa: tipuri, structura, diagram bloc,
+celula de baza
+5. memoria cache cu direct mapping: adresa pe 32 de biti,
+date pe 32 de biti
+6. definitii: DRAM,SRAM, sintetic bench bank, IEEE
+exception,IEEE def exception, sistolic erase
+7. FlowChart pentru add& substract floating
+
+rand II
+
+1. o problema din MIPS
+2. 4-bit multiplier la nivel de full adder-e
+3. avantaje la aplicarea CSA, higherAddic(?) la non
+distoring division+ probleme ce apar la folisire
+4. cache memory assoc.
+5. pagging
+6. definitii
+7. memory organization
+
+
+sper ca ati reusit sa va facetzi o idee despre ce s-a dat
+la examen
+
+spor la invatat,
+ADINA
+
+
+adina <adinatopa@yahoo.com> wrote: subiectul de la randul II, mai pe larg:))
+
+1. sa se calculeze MIPS pentru un calc
+2. alte metode de impartire si cum se aplica pe
+algoritmul de non-restoring division
+3. organizarea memoriei
+4. sa se implementeze o memorie cache 2-way set
+associative asa cum era in exemplul dat la curs
+5. paging
+6. array-mu;tiplication cu carry save adders si full
+adders
+7. sa se explice:
+a)SPEC CPU2000
+b)internal and external fragmentation
+c)carry lookahead adders
+d)Rambus DRAM
+e)adresare directa la memorii

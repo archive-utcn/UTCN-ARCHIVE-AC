@@ -1,0 +1,69 @@
+1. ipv6
+2. time-to-live
+3. message-switching, cable-switching, packet-switching
+4. improvements la ieee 802.3g
+5. cablu utp
+6. problema cu interfeþe
+7. problema cu ip-ul: ce clasã îi ºi structura dupã ce aplici netmask
+8. MIME
+9. Manchester dif pe un sir de biti
+
+Varianta A
+
+1. ipv6
+2. time-to-live
+3. message-switching, cable-switching, packet-switching
+4. improvements la ieee 802.3g
+5. cablu utp
+6. problema cu interfeþe
+7. problema cu ip-ul: ce clasã îi ºi structura dupã ce aplici netmask
+8. MIME
+9. Manchester dif pe un sir de biti
+
+Varianta B
+
+T1: hdlc
+T2: addressare ip, subnetmask, broadcast, trimiterea de mesaje
+T3: csma/cd
+T4: fddi topologii, tip stati,medii de transmisie
+T5: manchester differential
+T6: dns
+T7: moduri de transmisie prin Fibra Optica
+
+P1: Token ring: retia 16 Mbs token ring cu viteza de propagare 200 um/s. O interfata are o intarzaiere  egala cu o perioada de 1 bit.
+cati metri de cablu trebuie pt o retia cu o interfata
+P2: vga - motion picture 160 *120
+
+Varianta C
+
+T1. IEE 802.3 standard  - evolutie, caracteristici
+T2. Time-to-live (IP field)
+T3. IPv6
+T4. message switching vs circuit switching si apoi totul vs Packet switching
+T5. MIME protocol
+T6. Differential Manchester pe un sir dat
+T7. spread spectrum DSSS si FHSS
+T8. UTP cable characteristics + utilizari
+
+P1. Token Ring interaface (Token Ring LANs
+Solved problem:
+Considering a Token Ring network at a bit rate of 4Mbps, and a signal propagation speed of 200m/µsec, and each interfaces introducing a delay of one bit period, find the cable length equivalent with a total of 20 interfaces on that ring. One’s interface delay = One bit period: 1/(4x106) = 0.25x10-6 sec = 250nsec.
+20 interfaces delay: 20x250nsec = 5µsec.
+Propagation speed: 200m/µsec, so for 5µsec the cable equivalence is 1,000m.) 
+
+P2. ai ip si subnet si sa calculezi subnetare
+
+
+Varianta D
+
+1)network lan topology
+2)ip addresses, classes, masks, subnetting?..
+3)FHSS vs DSSS
+4)FDDI
+5)ipv6 .. 
+6)HTML si HTTP
+7)O prob cu bit stuffing
+8) ??? ..
+
+prob1 :  human voice 
+prob2 : video transmition la x fps ( just muliply all the numberes :)) 

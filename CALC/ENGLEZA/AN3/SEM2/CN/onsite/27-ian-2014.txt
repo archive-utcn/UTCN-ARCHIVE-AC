@@ -1,0 +1,15 @@
+1. Rutare
+2. Propagarea luminii in fibra optica
+3. FDDI
+4. Codificare Manchester diferential pe un sir de biti
+5. IPv4
+6. IPv6
+7. Wireless
+8. Extensiile MIME
+
+P1. Considerati o retea Token Ring la o rata de transmisie de 4Mbps, si o viteza de propagare a semnalului de 200m/microsec, fiecare interfata atasata introducand o intarziere de o perioada de bit. Gasiti lungimea de cablu echivalenta ce introduce aceeasi intarziere ca cea introdusa de o interfata. Ce efect ar avea un numar prea mare de interfete active atasate la inel ?
+P2. O sursa produce date organizate in caract de 7b. Gasiti rata de date efectiva maxima pe o linie
+ce opereaza la 64 kbps pentru:
+a) transmisie asincrona cu 2 biti de stop si 1 bit paritate
+b) transmisie sincrona cu un cadru ce contine 32b control si 128b de informatie(campul de 
+informatie contine caract pe 7b plus un bit de paritate)

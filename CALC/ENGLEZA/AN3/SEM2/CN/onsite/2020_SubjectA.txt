@@ -1,0 +1,13 @@
+-> 6 puncte de teorie
+-> 2 probleme
+
+T1 -> TCP protocol (Transmission Control Protocol)
+T2 -> IPv6
+T3 -> Sliding Windows
+T4 -> FDDI (Fiber Distributed Data Interface) MAC protocol
+T5 -> FHSS & DSSS (Frequency Hopping & Direct Sequence Spread Spectrum)
+T6 -> DNS (Domain Name System)
+
+(vezi 'Problems.pdf')
+P1 -> IPv4 address problem + assigning IPs & NMs on schema
+P2 -> IPv6 address problem (address types + symbols explanation)

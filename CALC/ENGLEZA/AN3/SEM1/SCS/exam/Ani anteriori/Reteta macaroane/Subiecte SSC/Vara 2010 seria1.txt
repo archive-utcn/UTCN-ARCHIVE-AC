@@ -1,0 +1,7 @@
+1. Tabel LRU si calcul PF (page fault).
+2. Mapare cu memorie cache
+3. Accesare directa, aleatoare si asociativa
+4. Descriere diagrame bloc si desenat pt translatarea adresei virtuale in adrese fizice
+5. Descriere multiprocesoare
+6. Descriere RISC (10 caracteristici generale)
+7. Explicat 5 chestii: matrice sistolica, tactica cel mai potrivit, SDRAM. 

@@ -1,0 +1,19 @@
+vlad_turian: sal
+vlad_turian: 8 subiecte
+vlad_turian: o sa iti zic de pe ambele randuri:
+vlad_turian: teorie:
+vlad_turian: matrici sistolice sau risc
+vlad_turian: definirea unor notiuni cum ar fi: acces direct, tlb....
+vlad_turian: diferenta dintre dram sincron si asincron
+Shanon Theorem: atata ?
+vlad_turian: schema bloc pt memorie cu bancuri multiple
+vlad_turian: cum se realizeaza tranlatarea adreselor in paginare combinata cu segmentare
+vlad_turian (23.01.2009 20:20:20):
+vlad turian: multicalculatoare
+vlad_turian: asta o fost teoria
+vlad_turian: 2 probleme:
+vlad_turian: proiectarea unei memorii cache
+vlad_turian: proiectarea unui dram 32x16 avand la dispozitie un dram 8x8
+vlad turian: iar asta ii ce am primit la ssc
+vlad turian: 6 teorii
+vlad turian: 2 probleme

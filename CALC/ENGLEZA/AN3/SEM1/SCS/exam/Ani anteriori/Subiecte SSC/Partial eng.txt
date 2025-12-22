@@ -1,0 +1,10 @@
+1. Problema performanta: 3 clase de instructiuni si 3 compilatoare si CPI pt fiecare clasa si frecventa la procesor. Sa se afle tE pt fiecare compilator.
+2. Array multiplier cu Carry Saver Adder - sa fie facut pe 5 biti
+3. Impartirea la floating point - flowchart si explicatii
+4. Explicatii - Carry Lookahead Adder, radix, ect
+
+
+1. un multiplicator de-ala in array
+2. diferite notiuni de floating point (printre care si sticky bit)
+3. Adunarea numerelor cu virgula flotanta (diagrama + explicatii)
+4. Problema performanta

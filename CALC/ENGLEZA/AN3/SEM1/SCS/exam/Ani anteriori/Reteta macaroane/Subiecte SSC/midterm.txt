@@ -1,0 +1,10 @@
+romana:
+
+1.Timpul de executie al unui program pe calculatorul A este 10 secunde.
+ Calculatorul A are un clock de 1.4 GHz. Ce frecventa are calculatorul B, 
+care ruleaza acest program in 6 secunde, si stim ca calculatorul B 
+ruleaza de 1.2 ori mai repede instructiunile.
+2.Carry Lookahead Adder pe 16 biti. Diagrama, explicatie, ecuatii.
+3.Carry Save Adder. Teorie.
+4.Nonrestoring divider. Teorie.
+5.Definitii: SPEC2006, serial adder, guard bit. 

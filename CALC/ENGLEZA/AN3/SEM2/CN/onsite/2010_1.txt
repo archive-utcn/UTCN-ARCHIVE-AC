@@ -1,0 +1,23 @@
+teorie:
+1.hdlc
+
+2.adresare io,ip class,subnetmask,broadcast, trimiterea de mesaje
+
+3.CSMA/CD
+
+4.FDDI topologi, tip statii,medii de transmise
+
+5.Manchester diferential
+
+6.DNS
+
+
+probl
+
+1.retia 16 Mbs token ring cu viteza de propagare 200 um/s.
+o interfata are o intarzaiere  egala cu o perioada de 1 bit.
+cati metri de cablu trebuie pt o retia cu o interfata
+
+
+2.Ecran cu rezolutie .. pt fiecare pixel se memoreaza ... frame/s
+sa se alfe latinea minima de banda

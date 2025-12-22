@@ -1,0 +1,16 @@
+- paginare/segmentare, TLB?
+- cache - problema
+- matrici sistolice
+- arh. flux de date
+- fifo, lru - problema
+- multicalculator
+- Ram static/dinamic
+- DDR 1/2/3/4 SDRAM
+- pipeline inmultire
+- memoria asociativa
+- procesoare matriciale
+
+partial:
+- MIPS, MFLOPS
+- Spec Cpu 2006
+- cifre de garda si rotunjire

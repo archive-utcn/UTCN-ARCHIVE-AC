@@ -1,0 +1,6 @@
+1. what is cross-over cable ? RJ-45 connections A or B
+2. 2 comenzi/metode a verifica conexiunea la un LAN
+3. problema 3.3.2 din laboratorul 6
+4. din modul USER EXEC prezentati secventa de comenzi pentru a seta o prioritate data unui port
+5. care este comanda pentru a vedea arp-ul cu cache
+6. Cum adaugi in linux un default gateway dat.

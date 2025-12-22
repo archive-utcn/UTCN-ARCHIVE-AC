@@ -1,0 +1,120 @@
+X-Apparently-To: puya_the_one@yahoo.com via 206.190.38.78; Tue, 21 Jun 2005 08:53:24 -0700
+X-Originating-IP: [216.155.201.70]
+Return-Path: <sentto-8193272-1614-1119369131-puya_the_one=yahoo.com@returns.groups.yahoo.com>
+Authentication-Results: mta163.mail.scd.yahoo.com
+  from=yahoogroups.com; domainkeys=pass (ok)
+Received: from 216.155.201.70  (HELO n5.bulk.dcn.yahoo.com) (216.155.201.70)
+  by mta163.mail.scd.yahoo.com with SMTP; Tue, 21 Jun 2005 08:53:24 -0700
+Comment: DomainKeys? See http://antispam.yahoo.com/domainkeys
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=lima; d=yahoogroups.com;
+	b=l5BJn223T+Ds1wHdKM7Sh2LUE0Q/WqpZXa2aINg1KvxCpzInfkzF8IumnclFoV0Jkq+SrQidg+3OHsBS63TCEN23IMfhy1Qd8rfUlzKelSL4uqmWeAHWXedBjj7xqGlR;
+Received: from [216.155.201.65] by n5.bulk.dcn.yahoo.com with NNFMP; 21 Jun 2005 15:52:21 -0000
+Received: from [66.218.66.58] by mailer2.bulk.dcn.yahoo.com with NNFMP; 21 Jun 2005 15:52:21 -0000
+Received: from [66.218.66.160] by mailer7.bulk.scd.yahoo.com with NNFMP; 21 Jun 2005 15:52:21 -0000
+X-Yahoo-Newman-Property: groups-email
+X-Sender: paulsoftcomm@yahoo.com
+X-Apparently-To: calculatoare2002utcn@yahoogroups.com
+Received: (qmail 14653 invoked from network); 21 Jun 2005 15:52:09 -0000
+Received: from unknown (66.218.66.172)
+  by m20.grp.scd.yahoo.com with QMQP; 21 Jun 2005 15:52:09 -0000
+Received: from unknown (HELO web50308.mail.yahoo.com) (206.190.38.62)
+  by mta4.grp.scd.yahoo.com with SMTP; 21 Jun 2005 15:52:08 -0000
+Received: (qmail 60364 invoked by uid 60001); 21 Jun 2005 15:51:06 -0000
+Received: from [212.93.140.133] by web50308.mail.yahoo.com via HTTP; Tue, 21 Jun 2005 08:51:06 PDT
+To: Computer Science <calculatoare2002utcn@yahoogroups.com>
+X-Originating-IP: 206.190.38.62
+X-eGroups-Msg-Info: 1:12:0
+From: Paul Utiu <paulsoftcomm@yahoo.com>
+X-Yahoo-Profile: paulsoftcomm
+Sender: Calculatoare2002UTCN@yahoogroups.com
+MIME-Version: 1.0
+Mailing-List: list Calculatoare2002UTCN@yahoogroups.com; contact Calculatoare2002UTCN-owner@yahoogroups.com
+Delivered-To: mailing list Calculatoare2002UTCN@yahoogroups.com
+List-Id: <Calculatoare2002UTCN.yahoogroups.com>
+Precedence: bulk
+List-Unsubscribe: <mailto:Calculatoare2002UTCN-unsubscribe@yahoogroups.com>
+Date: Tue, 21 Jun 2005 08:51:06 -0700 (PDT)
+Subject: [Calculatoare2002UTCN] sub SSC 21.06.2005
+Reply-To: Calculatoare2002UTCN@yahoogroups.com
+Content-Type: multipart/mixed;
+ boundary="0-619124687-1119369066=:59312"
+Content-Length: 1119
+
+--0-619124687-1119369066=:59312
+Content-Type: multipart/alternative;
+ boundary="XBzGUHoKLhs-PrNI6QZiyvd5CBT5modBYIUCTeC"
+
+--XBzGUHoKLhs-PrNI6QZiyvd5CBT5modBYIUCTeC
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+ 
+ 
+
+__________________________________________________
+Do You Yahoo!?
+Tired of spam?  Yahoo! Mail has the best spam protection around 
+http://mail.yahoo.com 
+--XBzGUHoKLhs-PrNI6QZiyvd5CBT5modBYIUCTeC
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<html><body>
+
+
+<tt>
+ <BR>
+ <BR>
+<BR>
+__________________________________________________<BR>
+Do You Yahoo!?<BR>
+Tired of spam?&nbsp; Yahoo! Mail has the best spam protection around <BR>
+<a href="http://mail.yahoo.com">http://mail.yahoo.com</a> </tt>
+
+
+
+
+<!-- |**|begin egp html banner|**| -->
+
+<br>
+<tt><hr width="500">
+<b>Yahoo! Groups Links</b><br>
+<ul>
+<li>To visit your group on the web, go to:<br><a href="http://groups.yahoo.com/group/Calculatoare2002UTCN/">http://groups.yahoo.com/group/Calculatoare2002UTCN/</a><br>&nbsp;
+<li>To unsubscribe from this group, send an email to:<br><a href="mailto:Calculatoare2002UTCN-unsubscribe@yahoogroups.com?subject=Unsubscribe">Calculatoare2002UTCN-unsubscribe@yahoogroups.com</a><br>&nbsp;
+<li>Your use of Yahoo! Groups is subject to the <a href="http://docs.yahoo.com/info/terms/">Yahoo! Terms of Service</a>.
+</ul>
+</tt>
+</br>
+
+<!-- |**|end egp html banner|**| -->
+
+
+</body></html>
+
+--XBzGUHoKLhs-PrNI6QZiyvd5CBT5modBYIUCTeC--
+
+--0-619124687-1119369066=:59312
+Content-Type: text/plain; name="SUB SSC 21.06.2005.txt"
+Content-Description: 3558267048-SUB SSC 21.06.2005.txt
+Content-Disposition: inline; filename="SUB SSC 21.06.2005.txt"
+
+1.procesoare matriciale
+2.principiul de functionare lamemoria asociativa.schema bloc
+3.proiectare memorie cache
+4.principiul sumatorului cu selectie
+5.inmultire a 2 numere pe 6 biti folosind arbore wallace si metoda booth.schema sumatorului cu salvarea 
+transportului folosind sumatoare elementare
+6.paginarea combinata cu segmentarea si schema pt ea
+7.parametrii memoriei DRAM
+8.caracteristicile arhitecturii RISC
+9.latenta interzisa
+10.explicarea impartirii in VM.organigrama
+11.exceptiile de la IEEE 754
+12.se dadea o secventa cu adrese de referinta si 4 cadre de paginare,trebuia sa calculezi PF utilizand
+strategia de inlocuire FIFO
+13.sa se calculeze MIPS ..se dadeau 4 seturi de instructiuni ,CPI pt fiecare si frecventa.
+--0-619124687-1119369066=:59312--
+
+
+

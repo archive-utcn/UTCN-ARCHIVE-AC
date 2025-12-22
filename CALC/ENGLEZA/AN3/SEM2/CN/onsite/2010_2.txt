@@ -1,0 +1,20 @@
+Sub tip C
+
+1. IPv6.
+2. HDLC. (High Data Link Control)
+3. Protocolul HTTP.
+4. Comparatie intre protocolul TCP si UDP.
+5. Moduri de propagare a razei luminoase prin fibra optica.
+6. Codificarea datelor folosind Manchester diferential pentru un sir dat de 8 biti. (11000111) parca :-??
+7. Metode de rutare.
+8. Standardul 802.3
+
+P1. IP: 88.6.45.199
+    Subnet mask: 255.255.255.192
+
+	a) Care este clasa IP-ul? Care este numarul subretelei pentru IP-ul dat?
+	b) Care este adresa IP-ul dupa aplicarea mastii? Cati biti are fiecare camp din structura adresei dupa aplicarea mastii?
+	c) Pe ce adresa trebuie sa faca broadcast calculatorul cu IP-ul dat?
+
+P2. Pentru un semnal de voce din domeniu 0-4000 Hz sa se calculeze rata de esantionare pentru a transmite..."corect"?
+    (Parca...) Daca dimensiunea esantionului este de 16 biti atunci care este rata de esantionare?

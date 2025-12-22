@@ -1,0 +1,82 @@
+SSC romana seria I 11 iunie 2008
+
+Au fost 12 subiecte, 1 singur rand, timp de lucru 2 ore jumatate:
+	
+	1. Un calculator executa un program in 10 s, avand frecventa ceasului 
+egala cu 1.4 GHz. Se doreste sa proiecteze un alt calc care creste performanta primului astfel incat timpul de executie scade 
+la 6 s pentru programul respectiv. Avand in vedere ca numarul ciclurilor de ceas creste cu 1.2 fata de calc precedent, sa se 
+calculeze frecventa ceasului. 
+
+	2. Multiprocesoare
+
+	3. Impartirea in VM - organigrama + explicatii
+
+	4. Arborele Wallace - explicatii
+
+	5. Comparatie intre paginare si segmentare
+
+	6. Comparatie intre memoria cu acces direct si memoria cu acces aleator
+
+	7. Sa se proiecteze o memorie cache cu mapare directa cu capacitatea de 128KB pentru un procesor cu magistrala de adrese si de date de 32 de biti. Memoria principala este adresabila la nivel de octet. Un set din memoria cache are 16 Bytes.
+
+	8. Inmultirea matriciala a doua numere pe 5 biti folosindu-se sumatoare elementare si portile necesare. Cred ca mai cerea sa fie transport secvential.
+
+	9. Un pipeline care face adunarea a n numere in VM
+
+	10. Suprapunerea ferestrelor de registre la RISC
+
+	11. Schema mem asociative + explicatii
+
+	12. Sa se explice
+		a. sumator cu selectia transportului
+		b. memorie cu interfata sincrona
+		c. localitate temporara
+		d. procesoare bazate pe logica vaga (fuzzy) 
+		e. programe sintetice de evaluare
+		f. alocarea non-preemptiva
+
+
+Solutii la cele 2 pb.:
+	1. Nu mai stiu exact daca cerinta pb era chiar cum am scrs-o mai sus, dar oricum era ceva de genul respectiv. MAi kos
+urmeaza rezolvarea mea.
+
+	Stim ca timpul de executie este:
+
+		te = Cucp * td; unde Cucp - nr de cicluri de ceas ale procesorului
+				    td - durata unui ciclu de ceas
+
+		td = 1/f - unde f frecventa, deci avem:
+
+			te = Cucp/f => f = Cucp/te (relatia 1);
+			
+			Cucp = f * te	(relatia 2);
+
+	Acum scriu relatia 1 pentru caclulatorul B:
+
+			f(B) = Cucp(B)/te(B)	(relatia 3);
+
+	Cum Cucp(B)=Cucp(A) * 1.2, folosind relatia 2 obtinem: 
+				
+			Cucp(B) = f(A) * te(A) * 1.2 (relatia 4);
+
+	Inlocuiesc relatia 4 in relatia 3 si obtin:
+			
+			f(B) = f(A) * te(A) * 1.2/te(B);
+
+	In relatia de mai sus se inlocuiesc toate cu valorile date si se obtine frecvanta de 2.8 GHz.
+
+
+
+
+	2. Pb se rezolva ca in exemplu din carte: cred ca rezultatele sunt urmatoarele:
+		- din adresa pentru marcaj se rezeva 15 biti;
+		- pentru adresa de set 13 biti;
+		- deplasament in cadrul setului 4 biti;
+		- pentru memoria de date pentru adresare este nevoie de 15 biti: cei 13 din adresarea setului si inca 2 
+cei mai semnificativi din deplasament;
+
+		- mem de marcaje avea capacitatea 8K*15;
+		- mem de date 32K*32;
+
+	
+

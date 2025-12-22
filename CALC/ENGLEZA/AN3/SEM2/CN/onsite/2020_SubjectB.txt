@@ -1,0 +1,13 @@
+-> 5 puncte de teorie
+-> 3 probleme
+
+T1 -> HTTP protocol (Hypertext Transfer Protocol)
+T2 -> TCP vs UDP (Transmission Control vs User Datagram Protocols)
+T3 -> Time-to-Live field
+T4 -> IPv6
+T5 -> CSMA/CA (?? -> CSMA/CD) (Carrier Sense Multiple Access/Collision A... - Detection)
+
+(vezi 'Problems.pdf')
+P1 -> CSMA/CD problem
+P2 -> IPv4 address problem + assigning IPs & NMs on schema
+P3 -> IPv6 address problem (address types + symbols explanation)

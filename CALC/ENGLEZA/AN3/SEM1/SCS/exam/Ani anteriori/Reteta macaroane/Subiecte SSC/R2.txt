@@ -1,0 +1,15 @@
+1. cycle time, column access time, peak bandwidth
+2. pb cu RAM: chip 8M*8 , design 16M*32
+3. associative memory cell - logic diagram + explanations
+4. segmentation: principle, comparison between segmentation and paging
+5. pb: paged virtual memory system with 40-bit virtual address and 36-bit physical
+address. page size is 16KB. assume each page table entry contains one presence bit
+and one access bit and all virtual pages are in use. what is the total size of the
+page table for each process, assuming that disk addresses are not stored in the page
+table?
+6.  data flow architecture
+7.  RISC applications
+8. 	a) dynamic memory;
+	b) cache coherency
+	c)preemptive memory allocation
+	d) overlaping register windows
