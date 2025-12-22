@@ -1,0 +1,7 @@
+proc cub() {
+   m=$1*$1*$1
+   return
+}
+print "\n\t\tx : "
+read(x)
+

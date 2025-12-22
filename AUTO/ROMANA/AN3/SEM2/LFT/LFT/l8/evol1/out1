@@ -1,0 +1,84 @@
+
+[  0]constpush
+[  1]=======>10.000000 {NUMAR}
+[  2]varpush
+[  3]=======>0.000000 {NEDEF}
+[  4]assign
+[  5]print
+[  6]STOP
+[  7]STOP
+[  8]STOP
+[  9]STOP
+[ 10]STOP
+[ 11]STOP
+[ 12]STOP
+
+Doriti executie [d/n]?
+	10
+
+[  0]constpush
+[  1]=======>10.000000 {NUMAR}
+[  2]varpush
+[  3]=======>x ==10.000000 {VAR}
+[  4]assign
+[  5]print
+[  6]constpush
+[  7]=======>10.000000 {NUMAR}
+[  8]negate
+[  9]varpush
+[ 10]=======>0.000000 {NEDEF}
+[ 11]assign
+[ 12]print
+[ 13]STOP
+[ 14]STOP
+[ 15]STOP
+[ 16]STOP
+[ 17]STOP
+[ 18]STOP
+[ 19]STOP
+
+Doriti executie [d/n]?
+	10
+	-10
+
+[  0]constpush
+[  1]=======>10.000000 {NUMAR}
+[  2]varpush
+[  3]=======>x ==10.000000 {VAR}
+[  4]assign
+[  5]print
+[  6]constpush
+[  7]=======>10.000000 {NUMAR}
+[  8]negate
+[  9]varpush
+[ 10]=======>y ==-10.000000 {VAR}
+[ 11]assign
+[ 12]print
+[ 13]varpush
+[ 14]=======>x ==10.000000 {VAR}
+[ 15]eval
+[ 16]varpush
+[ 17]=======>y ==-10.000000 {VAR}
+[ 18]eval
+[ 19]add
+
+		Apasati o tasta pentru continuare !
+
+[ 20]predf
+[ 21]=======>sin {PREDEF}
+[ 22]varpush
+[ 23]=======>0.000000 {NEDEF}
+[ 24]assign
+[ 25]print
+[ 26]STOP
+[ 27]STOP
+[ 28]STOP
+[ 29]STOP
+[ 30]STOP
+[ 31]STOP
+[ 32]STOP
+
+Doriti executie [d/n]?
+	10
+	-10
+	0

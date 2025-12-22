@@ -1,0 +1,6 @@
+print "\tIntroduceti primul numar:"
+read(x)
+print "\n\tIntroduceti al doilea numar:"  
+read(y)
+print "\n\n"
+media(x,y)

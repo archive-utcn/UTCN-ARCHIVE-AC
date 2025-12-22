@@ -1,0 +1,7 @@
+func suma() { return $1+$2 }
+
+proc media() {
+	print "\tmedia(",$1,",",$2,") = "
+	a= suma($1,$2)/2
+	print a,"\n"
+	return }
