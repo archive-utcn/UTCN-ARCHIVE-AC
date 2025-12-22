@@ -1,0 +1,96 @@
+
+Simbolul de start este : E
+
+Productiile gramaticii sint: 
+E -> T
+E -> E+T
+T -> F
+T -> T*F
+F -> i
+F -> (E)
+
+Setul neterminalelor este: 
+F , T , E , 
+
+Setul terminalelor este: 
+) , ( , i , * , + , 
+
+Starea de start stiva este : 
+Starea initiala a automatului este : q
+Setul starilor finale este : q
+Setul starilor automatului este : q
+
+Setul terminalelor automatului este: 
+) , ( , i , * , + , 
+
+Regulile automatului sint : 
+Eq -> q
+Tq -> Eq
+E+Tq -> Eq
+Fq -> Tq
+T*Fq -> Tq
+iq -> Fq
+(E)q -> Fq
+q) -> )q
+q( -> (q
+qi -> iq
+q* -> *q
+q+ -> +q
+
+Setul simbolurilor stiva este : 
+E , T , F , + , * , i , ( , ) , 
+Introduceti sirul de intrare : 
+     i              q   +i*i              Deplasare
+     F              q   +i*i              Reducere
+     T              q   +i*i              Reducere
+     E              q   +i*i              Reducere
+     E+             q   i*i               Deplasare
+     E+i            q   *i                Deplasare
+     E+F            q   *i                Reducere
+     E+T            q   *i                Reducere
+     E+E            q   *i                Reducere
+     E+E*           q   i                 Deplasare
+     E+E*i          q                     Deplasare
+     E+E*F          q                     Reducere
+     E+E*T          q                     Reducere
+     E+E*E          q                     Reducere
+     E+E*           q                     Reducere
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+     E              q   *i                Reducere
+     E*             q   i                 Deplasare
+     E*i            q                     Deplasare
+     E*F            q                     Reducere
+     E*T            q                     Reducere
+     E*E            q                     Reducere
+     E*             q                     Reducere
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+                                          Eroare
+     E+T*           q   i                 Deplasare
+     E+T*i          q                     Deplasare
+     E+T*F          q                     Reducere
+     E+T*T          q                     Reducere
+     E+T*E          q                     Reducere
+     E+T*           q                     Reducere
+                                          Eroare
+                                          Eroare
+                                          Eroare
+     E+T            q                     Reducere
+     E+E            q                     Reducere
+     E+             q                     Reducere
+                                          Eroare
+                                          Eroare
+     E              q                     Reducere
+                    q                     Reducere
+Expresie recunoscuta
+Introduceti sirul de intrare : 

@@ -1,0 +1,7 @@
+C
+C -> n    C -> nF   C -> .I
+F -> .I   F -> ES
+I -> n    I -> nX
+X -> ES
+S -> n    S -> +U   S -> -U
+U -> n

@@ -1,0 +1,57 @@
+
+Simbolul de start este : C
+
+Productiile gramaticii sint:
+C -> n
+C -> nF
+C -> .I
+F -> .I
+F -> ES
+I -> n
+I -> nX
+X -> ES
+S -> n
+S -> +U
+S -> -U
+U -> n
+
+Setul neterminalelor este: 
+U , S , X , I , F , C , 
+
+Setul terminalelor este: 
+- , + , E , . , n , 
+
+Starea de start este : C
+
+Setul terminalelor automatului este: 
+- , + , E , . , n , 
+
+Setul starilor este: 
+f , U , S , X , I , F , C , 
+
+Productiile gramaticii sint:
+Cn -> f
+Cn -> F
+C. -> I
+F. -> I
+FE -> S
+In -> f
+In -> X
+XE -> S
+Sn -> f
+S+ -> U
+S- -> U
+Un -> f
+
+Setul starilor finale : 
+f , 
+
+Tabela automatului :
+     -      +      E      .      n      
+f    0      0      0      0      0      
+U    0      0      0      0      {f}    
+S    {U}    {U}    0      0      {f}    
+X    0      0      {S}    0      0      
+I    0      0      0      0      {X,f}  
+F    0      0      {S}    {I}    0      
+C    0      0      0      {I}    {F,f}  
