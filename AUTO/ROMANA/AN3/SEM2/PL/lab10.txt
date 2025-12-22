@@ -1,0 +1,56 @@
+il_to_dl(IL, IL, DE):- var(IL),!,IL = DE.            
+%cand ajungem la variabila din lista incompleta, o punem in lista de start a listei diferenta 
+%si o unificam cu variabila de end.
+il_to_dl([H|T], [H|DS], DE):- il_to_dl(T,DS,DE).        
+%tot luam head-uri din lista incompleta si le punem in lista diferenta
+
+
+dl_to_il(LS,_,IL):- IL = LS. 
+%doar punem startul din lista diferenta in lista incompleta deoarece 
+%o lista diferenta este o lista incompleta la care doar cunoastem capatul.
+
+
+
+dl_to_il2(LS,_,_):-var(LS), !.    
+%sau varianta 2, cand nu vream sa avem pointer catre final: cand ajungem la variabila in 
+%lista Start, punem o variabila oarecare la sfarsitul listei incomplete.
+dl_to_il2([H|T],_,[H|IL]):-dl_to_il2(T,_,IL). 
+%parcurgere recursiva in care punem pe rand toate elementele din Start in lista incompleta
+
+
+dl_to_cl1(_,E):- E=[]. %smart tv
+
+dl_to_cl(L,_):- var(L), !, L=[].    
+%cand ajungem la variabila, initializam acea variabila cu []
+dl_to_cl([_|T],_):- dl_to_cl(T,_).    %parcurgem pe tail pana dam de o variabila
+
+
+cl_to_dl([],E,E):- !.            
+%cand ajungem la [] cu prima lista, punem variabila in rezultat
+cl_to_dl([H|T],E,[H|R]):- cl_to_dl(T,E,R).   
+%mutam elementele din cl in dl pana dam de o variabila
+
+
+flatten([],L,L).
+flatten([H|T], [H|RS], RE):- atomic(H), !, flatten(T,RS,RE).
+flatten([H|T], RS, RE):- flatten(H,RS1,RE1), flatten(T,RS2,RE2), 
+    					 RS = RS1, RE1 = RS2, RE = RE2.        
+%am inlocuit assert-ul din flatten-ul din laboratoarele trecute.
+%RE1 = RS2, variabila o initializam cu lista2
+
+
+%pentru a selecta doar cheile(nu nodurile) inlocuim t(K,L,R) cu K in append.
+
+even_keys(nil,L,L).    %cand avem nil, declaram lista vida prin declararea aceleiasi variabile
+even_keys(t(K,L,R),RS,RE):- 0 is mod(K,2), !, even_keys(L,RSL,REL), even_keys(R,RSR,RER), RS = RSL, REL = [t(K,L,R)|RSR], RE = RER.    % caz cand avem cheie para, parcurgem recursiv pe left si right, obtinem 2 liste diferenta la care facem append incluzand si nodul curent.
+evenkeys(t(,L,R),RS,RE):- even_keys(L,RSL,REL), even_keys(R,RSR,RER), RS = RSL, REL = RSR, RE = RER. %altfel daca nu e para, tot facem append pe liste doar ca nu includem si nodul curent.
+
+
+
+
+%exact explicatia de mai sus doar ca modificam conditia de append a cheii, si ca facem append de cheie in loc de nod.
+
+intervalkeys(nil,,_,L,L).
+interval_keys(t(K,L,R),K1,K2,RS,RE):- K > K1, K < K2, !, interval_keys(L,K1,K2,RSL,REL), interval_keys(R,K1,K2,RSR,RER), RS = RSL, REL = [K|RSR], RE = RER.
+intervalkeys(t(,L,R),K1,K2,RS,RE):- interval_keys(L,K1,K2,RSL,REL), interval_keys(R,K1,K2,RSR,RER), RS = RSL, REL = RSR, RE = RER.
+

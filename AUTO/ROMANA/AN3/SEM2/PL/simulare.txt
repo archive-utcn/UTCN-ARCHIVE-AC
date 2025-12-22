@@ -1,0 +1,8 @@
+my_flatten([], []).
+my_flatten([H|T], [H|R]):-atomic(H),!,my_flatten(T,R).
+my_flatten([H|T], ...):- my_flatten(T,R), append(H,R,RR).
+
+
+prod([], 1).
+prod([H|T], P):-atomic(H),!, prod(T,PT), P is PT*H.
+prod([H|T], PT):-prod(T,PT).

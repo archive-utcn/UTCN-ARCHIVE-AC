@@ -1,0 +1,59 @@
+:-dynamic node/1.    
+:-dynamic edge/2.
+%%:-dynamic neighbour/2.
+node(a).
+node(b).
+node(c).
+node(d).
+node(e).
+node(f).
+node(g).
+node(h).
+
+edge(a,b).
+edge(a,d).
+edge(b,a).
+edge(b,c).
+edge(b,d).
+edge(c,b).
+edge(c,d).
+edge(d,a).
+edge(d,b).
+edge(d,c).
+
+edge(e,g).
+edge(e,f).
+edge(f,e).
+edge(g,e).
+
+edge_to_neighb:- retract(node(Node)),!, process(Node,[]), edge_to_neighb.
+edge_to_neighb.
+
+process(Node,NodeList):- retract(edge(Node,Node2)),!,NodeList2 = [Node2|NodeList],process(Node,NodeList2).
+process(Node,NodeList):-assert(neighbour(Node,NodeList)).
+
+
+
+hamilton(NN, X, Path):- NN1 is NN-1, hamilton_path(NN1,X, X,[X],Path).
+
+hamilton_path(0,X,Y,Path,[Y|Path]):- edge(X,Y).
+hamilton_path(NN,X,Y,Path,RPath):-edge(X,Z),not(member(Z,Path)),
+    							  NN1 is NN-1, hamilton_path(NN1,Z,Y,[Z|Path],RPath).
+
+
+
+
+
+%%ia nodu primit ca parametru si pune toti vecinii sai intr-o lista
+si tot merg pana nu mai are vecini
+iar cand nu mai are vecini, face assert la nodu curent si la lista respectiva
+
+conditia de oprire e sa nu mai avem noduri de parcurs si avem muchie intre unde suntem si unde trebuie sa ajungem
+X unde esti acum
+Y unde trebuie sa ajungi
+Path ii calea de la X la Y, si punem si Y in fata
+
+
+daca NN nu ii 0, scoatem pe rand cate un Z, care ii vecin nodu X
+si daca B nu l-am parcurs deja atunci decrementam nr de noduri parcurse si bagam Z in pathu curent
+si in loc de X punem Z fiindca Z ii nodu curent

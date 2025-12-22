@@ -1,0 +1,41 @@
+
+
+%5. Să se scrie un predicat care primește o listă și inserează 0 înaintea fiecărui număr negativ 
+%și caracterul p după fiecare număr poztiv par.
+%?-pad_list([1, 2, -3, 4, -1, -5, 5, 8], R).
+%R = [1, 2, p, 0, -3, 4, p, 0, -1, 0, -5, 5, 8, p]
+
+pad_list(L,R):-pad_list(L,[],R). %pretty print , initializam acc la []
+pad_list([],Acc,R):- reverse(Acc,R). %verifici conditia de stop cand nu mai ai elemente in lista
+%inversam acumulatoru pt ca e forward recursive si inverseaza lista, asa ca am facut reverse
+pad_list([H|T], Acc, R):- H < 0, Acc1 = [0|Acc], Acc2 =[H|Acc1],pad_list(T, Acc2, R).
+%cazul cand H e negativ, adaugam 0 dupa el, dar facem reverse mai sus si o sa fie inainte
+%inseram 0 , apoi inseram H, deci inseram 0 dupa H, dar facem apoi reverse
+pad_list([H|T], Acc, R):- 0 is H mod 2,!, Acc1 = [H|Acc], Acc2 =['p'|Acc1], pad_list(T,Acc2,R).
+%daca nu ii negativ, ca am pus taiere de backtracking mai sus, verificam sa fie par, dupa care
+%punem numaru in acumulator, punem 'p' in fata lui, dar si aici se face ulterior reverse la rezultat
+%apelam pe tail si actualizam acumulatoru
+pad_list([H|T], Acc, R):- Acc1 = [H|Acc], pad_list(T,Acc1,R).
+%in cazul in care e pozitiv dar e impar, doar punem elementul in Acc si apelam mai departe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
