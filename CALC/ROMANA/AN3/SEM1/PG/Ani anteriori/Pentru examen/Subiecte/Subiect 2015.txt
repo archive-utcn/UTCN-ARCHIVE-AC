@@ -1,0 +1,23 @@
+1. CSG ray tracing
+2. clipping
+3. Point relative to object
+4. Phong/gourand
+5. radiosity
+6. two phase inverse mapping
+7. intersection of viewing ray with object
+8. pipeline
+9. ray tracing
+10. Shadows derived from transformations
+
+
+Subiect Adrian Octavian
+1. CSG ray tracing
+2. Hidden line surface removal (z-buffer, back face culling)
+3. MATH: Point relative to object (inside, on the surface, on the edge, on the vertex, outside)
+4. Phong/Gouraud
+5. Radiosity Algorithm
+6. two phase reverse mapping
+7. intersection of viewing ray with object
+8. gpu graphics pipeline
+9. ray tracing (1 light source, 4x4 screen, 3 levels of recursion)
+10. Shadows derived from transformations

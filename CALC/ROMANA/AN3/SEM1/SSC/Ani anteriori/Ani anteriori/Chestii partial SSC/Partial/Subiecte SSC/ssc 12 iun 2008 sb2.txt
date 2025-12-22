@@ -1,0 +1,35 @@
+1)Calculator cu 4 clase de instructiuni: A,B,C,D. MIPS=?	(0.5p)
+	
+	Instr	|	CPI	|	Frecventa
+	-----------------------------------------
+	A	|	2	|	40%
+	B	|	3	|	25%
+	C	|	3	|	25%
+	D	|	5	|	10%
+
+2)Sumator cu selectia transportului				(0.5p)
+3)Inmultire matriceala a doua numere fara semn utilizand SST-uri. Schema detaliata cu porti si SE.	(1p)
+4)Impartire cu refacerea restului partia: schema		(0.5p)
+5)Comparatie memorie 1D cu memorie 2D				(0.5p)	
+6)Memorii cu bancuri multiple					(0.5p)
+7)Proiectare memorie cache, adresare directa			(1p)
+	-capacitate: 256KB
+	-data/address bus: 32 biti
+	-dim. setului: 32B
+8)Tabele pagini: conversie adresa virtuala->reala		(0.5p)
+9)Matrici sistolice pentru inmultirea a doua matrici 3X3	(0.5p)
+10)Avantaje RISC						(0.5p)
+11)Multicalculatoare						(0.5p)
+12)Definiti:							(10X0.25)
+	-program kernel
+	-sumator cu anticiparea transportului
+	-exponent deplasat
+	-localitatea spatiala
+	-RAS precharge
+	-DDR SDRAM
+	-coerenta memoriilor cache
+	-metoda de inlocuire OPT
+	-ferestre suprapuse
+	-arh. flux de date
+
+	

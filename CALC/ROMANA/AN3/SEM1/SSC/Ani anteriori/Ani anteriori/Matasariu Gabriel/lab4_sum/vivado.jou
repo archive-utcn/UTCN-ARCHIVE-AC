@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jul  2 02:05:53 2018
+# Process ID: 10288
+# Current directory: C:/Users/Nyikita Ciprian/Desktop/Cursuri SSC/Matasariu Gabriel/lab4_sum
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10844 C:\Users\Nyikita Ciprian\Desktop\Cursuri SSC\Matasariu Gabriel\lab4_sum\lab4_sum.xpr
+# Log file: C:/Users/Nyikita Ciprian/Desktop/Cursuri SSC/Matasariu Gabriel/lab4_sum/vivado.log
+# Journal file: C:/Users/Nyikita Ciprian/Desktop/Cursuri SSC/Matasariu Gabriel/lab4_sum\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Nyikita Ciprian/Desktop/Cursuri SSC/Matasariu Gabriel/lab4_sum/lab4_sum.xpr}

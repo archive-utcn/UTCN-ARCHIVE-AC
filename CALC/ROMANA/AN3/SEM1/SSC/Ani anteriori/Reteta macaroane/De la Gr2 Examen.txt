@@ -1,0 +1,64 @@
+Subiecte examen
+
+rand 1
+1. random, direct, associative access
+2. pb cu RAM: chip 8M*8 , design 32M*8
+3. set associative cache
+4. algorithms for non-preemtive memory allocation
+5. pb: paged virtual memory system with 36-bit virtual address and
+32-bit physical address. page size is 16KB. assume each page table
+entry contains one presence bit and one access bit and all virtual
+pages are in use. what is the total size of the page table for each
+process, assuming that disk addresses are not stored in the page table?
+6. overlapping registers window
+7. array processors
+8. a) static memory; b) page mode access for DRAM; c)LRU for cache; d)
+arithmetic pipelines with feedback
+
+rand 2:
+1. cycle time, column access time, peak bandwidth
+2. pb cu RAM: chip 8M*8 , design 16M*32
+3. associative memory cell - logic diagram + explanations
+4. segmentation: principle, comparison between segmentation and paging
+5. pb: paged virtual memory system with 40-bit virtual address and
+36-bit physical address. page size is 16KB. assume each page table
+entry contains one presence bit and one access bit and all virtual
+pages are in use. what is the total size of the page table for each
+process, assuming that disk addresses are not stored in the page table?
+6. data flow architecture
+7. RISC applications
+8. a) dynamic memory; b) cache coherency c)preemptive memory
+allocation d) overlaping register windows
+
+a doua zi:
+1. Flash memories
+2. DDR2 SDRAM
+3. Associative processors - principle, advantage, operantions
+4. pb cu two-way set-associative chace memory
+5. pb cu LRU tabel, with 4 page frrame for the sequence:
+1 4 10 4 3 6 1 1 8 6 9 4 3 3 3 1
+6. Page table and translation lookaside buffers
+7. Multicomputers
+8. a) Direct acces
+b) REAd Prechange time
+c) interleaved memory
+d) externam fragmentation
+e) unatended network learning
+
+
+1. comparatie in arhitectura 1D si 2D
+2.explicati deosibirile intre DRAM asincron si sincron
+3. utilizand celula de memorie asociativa prezentata la curs
+constuieti o memorie asociativa pt 4 cuvinte a cate 2 biti
+4.sa se proiecteze o memorie asociativa cu 2 seturi; magistrala de
+date si magistrale de adrese pe 32 biti; memorie catch de capacitate
+64K, dimensiunea unui set 16 octeti; adresarea catre memoria
+principala pe octeti;
+5.paginare:princiup iu, tabela de pagini, buffer de transalatare
+6.matrici sistolice:caracater istici
+7.arhitectura flux de date
+8.Explicati: a)acces direct la memorii b)DDR3 SDRAM c)sisteme pipeline
+artimetice cu reactie inversa d)timp acces linie DRAM e)algortimul de
+alocare "cel mai nepotrivit"
+
+

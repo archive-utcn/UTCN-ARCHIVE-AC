@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed May 23 09:58:23 2018
+# Process ID: 5088
+# Current directory: D:/Student/30238/Matasariu Gabriel/lab4_sum
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1212 D:\Student\30238\Matasariu Gabriel\lab4_sum\lab4_sum.xpr
+# Log file: D:/Student/30238/Matasariu Gabriel/lab4_sum/vivado.log
+# Journal file: D:/Student/30238/Matasariu Gabriel/lab4_sum\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.xpr}
+update_compile_order -fileset sources_1
+close [ open {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Tff.vhd} w ]
+add_files {{D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Tff.vhd}}
+update_compile_order -fileset sources_1
+close [ open {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Counter.vhd} w ]
+add_files {{D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Counter.vhd}}
+update_compile_order -fileset sources_1
+file mkdir D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new
+file mkdir D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new
+file mkdir D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new
+file mkdir D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new
+file mkdir D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new
+file mkdir {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new}
+close [ open {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new/SimCounter.vhd} w ]
+add_files -fileset sim_1 {{D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new/SimCounter.vhd}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SimCounter [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {200ns} -objects [get_filesets sim_1]
+launch_simulation
+source SimCounter.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source SimCounter.tcl
+close_sim
+launch_simulation
+source SimCounter.tcl
+add_bp {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Counter.vhd} 56
+add_bp {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Counter.vhd} 58
+remove_bps -file {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Counter.vhd} -line 58
+remove_bps -file {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/Counter.vhd} -line 56
+add_bp {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new/SimCounter.vhd} 66
+remove_bps -file {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new/SimCounter.vhd} -line 66
+add_bp {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new/SimCounter.vhd} 65
+remove_bps -file {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sim_1/new/SimCounter.vhd} -line 65
+close_sim

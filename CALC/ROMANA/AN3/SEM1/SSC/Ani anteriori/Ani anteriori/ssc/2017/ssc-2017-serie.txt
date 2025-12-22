@@ -1,0 +1,26 @@
+Subiect SSC 2017:
+1. -timpul de acces la rand
+-timpul de acces la coloana
+-rata de transfer sustinuta
+2.Memoria asociativa: principiu+schema bloc explicata
+3.Problema cache mapare directa
+4.Problema LRU
+5.Arhitecturi MIMD
+6.-localitatea referintelor
+-memoria RAM dinaminca
+-buffer de translatare TLB
+-eMMC la mem flash
+
+Subiect SSC partea II
+1. - durata ciclului
+- latenta Cas
+- rata transfer varf
+2. Memoria asociativa: principiu + desen celula
+3. Problema cache mapare directa
+4. Problema FIFO
+5. Arhitecturi MIMD cu memorie partajata
+6. -acces aleatoriu
+-memora statica
+-arh. cu flux de date
+-formatul SSD
+-buffer translatare TLB

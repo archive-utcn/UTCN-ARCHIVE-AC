@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed May 30 09:35:18 2018
+# Process ID: 6880
+# Current directory: E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15628 E:\AN III\SEMESTRUL II\DIANA RUS\SSC\SSC LABORATOARE FINAL\Matasariu Gabriel\RISC\RISC.xpr
+# Log file: E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC/vivado.log
+# Journal file: E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC/RISC.xpr}
+update_compile_order -fileset sources_1

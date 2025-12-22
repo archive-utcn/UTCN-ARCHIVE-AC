@@ -1,0 +1,116 @@
+Memoria avr ii organizată pe 16 biți !!!
+
+
+Examen PMP, 26.01.2018 – Seria B Romana, R1
+
+1. microprocesorul este un cpu ce doar executa instructiuni, iar microcontrollerul are cpu dar si memorie de program si date, I/O, temporizatoare si controloeaza procese si dispozitive
+2. Câte locații adresabile are o memorie cu 13 biți de adresă?  8kb 
+3. Ce rol are registrul DDRA? configurare pini port A ca in / out 
+4. Care este efectul instrucțiunii lpm r16, Z? incarca valoarea de la adresa lui Z in registrul r16
+5. Care este rolul apelului attachInterrupt(3, fun, RISING)? pe pinul 3 (?) se ataseaza o intrerupere ce va apela procedura fun cand se trece din LOW in HIGH
+6. Care este rolul funcției millis()? returneaza nr de milisecunde de cand a pornit programul 
+7. Ce este o variabilă “volatile”? o variabila a carui valoare se pastreaza si daca se modifica in cadrul unei intreruperi (stocata in RAM) 
+8. Ce valoare trebuie scrisă în registrul OCRn pentru a genera un semnal de 100Hz in modul CTC? 77
+         OCR = 16.000.000 / 2 * 1024 * frecventa   - 1 
+9.Cum se generează un semnal PWM folosind temporizatoare? scriem valori in OCR si se compara cu TCNT 
+10. Comunicarea SPI este sincronă sau asincronă?  sincrona 
+11. Pe câți biți sunt codificare adresele la I2C?         7 biti 
+12. Care este rolul funcției serialEvent()?  de a depista daca sunt date disponibile de citit in buffer
+13. Pe câți biți este codificat rezultatul unei conversii ADC?  10 biti 
+14. Cum se calculeaza rezoluția de masurare la ADC?  Nr de volti / 1024 (2^10)
+15. Care este diferența dintre un motor DC si unul pas cu pas? DC are control mecanic iar stepper are electronic
+16. Care este dimensiunea de memorie adresabila la 8086?     1MB
+17. Se pot lega la aceeași adresă două dispozitive periferice la 8086?  DAA (dar sa fie de tipuri diferite)
+18. Unde se găsește tabela cu vectorii de întrerupere?  in memoria RAM 
+19. Care este diferența dintre transferurile DMA “fly-by” și “flow-through”? fly-by nu trec prin DMA iar flow-through trec
+20. Care este rolul semnalului EOP? End of process , face reset la valori 
+
+
+Examen PMP, 20.02.2018 – Seria B Romana, R1
+
+1.Ce tip de arhitectură are un micro-controller AVR?   arhitectura RISC 
+2.Câte locații adresabile are o memorie cu 12 biți de adresă?  4 kb
+3.Ce rol are registrul PINA?  citeste starea pinilor de intrare 
+4.Care este efectul instrucțiunii lpm r17, Z-?   incarca valoarea de la adresa lui Z in registrul r17 apoi il scade pe Z
+5. Ce este o întrerupere mascabilă?  intrerupere activata prin bitul IF   (?) sau e o intrerupere externa (toate intreruperile is mascabile)
+6. Care este rolul apelului attachInterrupt(3, fun, CHANGE)? pe pinul 3 (?) se ataseaza o intrerupere ce va apela procedura fun cand se detecteaza orice modificare 
+7. Care este rolul registrului TIMSK? activare / dezactivare intreruperi generate de temporizatoare (?)
+8. Care sunt evenimentele care pot genera întreruperi la un temporizator (timer) AVR?    Overflow, compare match, capture 
+9.De câte ori se apelează funcția loop într-un program Arduino?       1 data :)) 
+10. Ce înseamnă baud rate (la comunicare serială UART)?  rata de transfer / nr de stari transmise pe secunda
+11. Se poate apela funcția delay() în rutina de tratare a unei intreruperi?    NUUU
+12. Ce inseamnă “daisy chaining”?   implementarea metodei polling in hardware (?)
+13. Cum se numesc semnalele unei conexiuni I2C?   SCL si SDA (?)
+14. Care este rolul semnalui SS in cadrul unui transfer SPI?     selecteaza dispozitivul slave
+15. Ce este un tri-state buffer?  conector obligatoriu pentru scriere magistrala (?) 
+16. Câte linii de date sunt la 8086?                                               16 linii de date           (20 linii de adresa)
+17. Ce rol are bitul BHE la 8086?  activeaza byte-ul superior (activ pe 0)
+18. Câte canale poate sa serveasca controllerul 8237?                                        4 canale
+19. Cum se generează adresele pe 20 biți pentru un transfer DMA?  din microcontroller avem acces la bitii superiori (cu BHE, A16-19)  (???)
+la un transfer pe 16 biti : A0-A7 din 8237 si A8-15 din latch 
+20. Dați un exemplu de memorie non-volatilă.   ROM, SSD, Flash, SD
+
+
+Examen PMP, 20.01.2020 – Seria B Romana, R1 
+
+1. Câți biți de adresă are o memorie de 256KB?    18 biti 
+2. De câte ori se apelează funcția loop într-un program Arduino?    o data 
+3. Ce valoare va fi în r16 după execuția următoarelor instrucțiuni: ldi r16, 0x35; rol r16?   101011
+4. Unde este stocat rezultatul execuției instrucțiunii mul, la AVR?   r1:r0
+5. Ce valoare trebuie scrisă în registrul DDRD pentru a configura 4 pini de intrare și 4 pini de ieșire? 0x0F
+6. Care este numărul maxim de circuite care se pot conecta la o magistrală I2C?  112  
+7. Care este instrucțiunea care dezactivează intreruperile la AVR?    CLI    (noInterrupts() la arduino)
+8. intreruperile la AVR sunt mascabile (Da/Nu). Da
+9. Valoarea maximă a parametrului value, pentru funcția analogWrite() este ?     255
+10. Cum se oprește generarea de sunete la Arduino, după ce a fost apelată funcția tone()?  noTone()
+11. Ce valoare trebuie scrisă în registrul OCRn pentru a genera un semnal de 20Hz in modul CTC?  389
+12. Valoarea maximă de numărare a unui temporizator configurat în modul Fast PWM, se scrie in
+registrul OCRn (DA/NU).    NU 
+13. Se poate genera o întrerupere la terminarea unei conversii ADC la AVR (Da/Nu)?   DA
+14. La AVR, se poate genera o întrerupere la terminarea unei recepții prin SPI (Da/Nu)?  NU
+15. Ce reprezintă valoarea returnată de funcția analogRead()?  un voltaj
+16. La SPI, la fiecare perioadă de ceas un bit se transmite de la master la slave, și un bit de la slave
+la master (Da/Nu).  DA 
+17. Dacă bitul ADLAR = 0, rezultatul ADC se gasește pe biții 15:6 din registrul ADC (Da/Nu)   NU
+18. Ce circuit este necesar pentru a conecta un dispozitiv de intrare la magistrala 8086?  tri buffer state
+19. La 8086, dacă BHE# = 0 și A0 = 1, se accesează un byte superior de la adresă impară (Da/Nu).  DA
+20. Câte întreruperi poate să servească controllerul 8259?    64
+
+
+
+
+Examen PMP, 18.02.2020 – Seria B Romana, R1
+1. Câți biți de adresă are o memorie de 512KB?   19
+2. Cum trebuie declarată o variabilă globală care se folosește într-o rutină de tratare a unei
+întreruperi? volatile
+3. Ce valoare va fi în r16 după execuția următoarelor instrucțiuni: ldi r16, 0x56; lsl r16?   AC 
+4. Care este dimensiunea maximă a spațiului de memorie adresabil la AVR?     64 kb  
+5. Câte linii de adresă sunt la AVR?  16 linii de adresa      (8 linii de date)
+6. Câte linii de adresă sunt la 8086?  20 linii adresa
+7. Ce valoare trebuie scrisă în registrul PORTD pentru a activa rezistențele pull-up, daca portul D
+este de intrare?   valoarea 1
+8. Care este funcția folosită pentru a înregistra o întrerupere externă la Arduino? attachInterrupts()
+9. Ce valoare trebuie scrisă în registrul OCRn pentru a genera un semnal de 100 Hz in modul CTC
+(N=32)?    2500
+10. Care este factorul de umplere (%) al semnalului generat în modul Fast PWM, daca OCR = 51?   20%
+					OCR / 255
+11. La AVR, se poate genera o întrerupere la terminarea unei recepții prin UART (Da/Nu)?  Da 
+12. Pentru SoftwareSerial la Arduino, Pinul TX trebuie conectat la o întrerupere externă (Da/Nu) Nu
+13. Care este valoarea maximă a parametrului funcției servo.write (angle)? 180
+14. Daca valoarea citită în urma unei conversii ADC este 1000, care a fost valoarea de voltaj VIN
+(VREF=2.56V)?      2.5                          Vin = ADC * Vref / 1024
+15. Dacă bitul ADLAR = 0, rezultatul ADC se gasește pe biții 9:0 din registrul ADC (Da/Nu)? DA
+16. La o memorie DRAM, semanulul RAS este folosit pentru a memora adresa de rând (Da/Nu)    Da
+17. La o memorie DDR SDRAM, datele se citesc pe ambele fronturi de ceas (Da/Nu).     DA
+18. Există două tipuri de transfer DMA studiate. Care tip de transfer DMA este mai rapid?    Fly-by
+19. Care este dimensiunea maximă a secțiunii de memorie adresabilă de controller-ul DMA 8237
+(pentru un transfer DMA)?   64K
+20. Unde se găsește tabela cu vectorii de întrerupere? in RAM	
+
+
+
+
+
+
+
+

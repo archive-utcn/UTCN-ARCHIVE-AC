@@ -1,0 +1,117 @@
+#include <TimerOne.h>
+#include <TimerThree.h>
+#include "SevSeg.h"
+
+const int sensorTempPin = 1; 
+const int sensorHumidityPin = 2;
+const int buttonPin = 23;
+
+const float resolutionTempSensor = 0.01; 
+const float resolutionADC = 0.0025; //2.56V/1034
+
+volatile bool isActiveTempSensor = true; //if it's false, then humidity sensor will be displayed
+volatile bool flagDisplay = false;
+volatile bool flagReadSensor = false;
+
+bool sensorX = false; //false-> read Temp, true -> read Humidity
+
+float tempValue;
+float humidityValue;
+
+SevSeg sevseg;
+
+
+void setup()
+{
+	Serial.begin(9600);
+	pinMode(buttonPin, INPUT_PULLUP);
+	
+	attachInterrupt(digitalPinToInterrupt(buttonPin), selectSensorISR, RISING);
+	
+	Timer1.initialize(5*100000); //0.5 sec = 5*10^(-1)*10^6 microsecunde
+	Timer1.attachInterrupt(readSensorsISR);
+	Timer3.initialize(3*1000000); //3 sec
+	Timer3.attachInterrupt(displayISR);
+	
+	byte numDigits = 4;
+    byte digitPins[] = {10, 11, 12, 13};
+    byte segmentPins[] = {9, 2, 3, 5, 6, 8, 7, 4};
+
+    bool resistorsOnSegments = true; 
+    bool updateWithDelaysIn = true;
+    sevseg.begin(COMMON_CATHODE, numDigits, digitPins, segmentPins, resistorsOnSegments);
+    sevseg.setBrightness(90);
+}
+
+void loop()
+{
+	analogReference(INTERNAL2V56); //Vref = 2.56V 
+	
+	if(flagReadSensor == true){ //it passed 0.5 sec => we need to read the value of one of the sensors
+		readSensors();
+	}else if(flagDisplay == true){
+		display();
+	}
+}
+
+void readSensors()
+/*
+	false => read temperature
+	true => read humidity
+*/
+{
+	float readValue, voltage;
+	
+	if(sensorX == false){        
+	    readValue = analogRead(sensorTempPin);
+		voltage = readValue * resolutionADC;
+		tempValue = voltage / resolutionTempSensor;		
+	}else{                          
+		readValue = analogRead(humidityValue);
+		humidityValue = map(readValue, 0, 1023, 0, 99);
+	}
+	
+	sensorX = !sensorX; //toggle for alternative reading
+}
+
+
+void display()
+{
+	float sensor = 0;
+	if(isActiveTempSensor ==  true)
+		sensor = tempValue;
+	else
+		sensor = humidityValue;
+		
+	sevseg.setNumber(sensor, 0);
+    sevseg.refreshDisplay(); 
+}
+
+void selectSensorISR()
+/*
+	When the button is pressed, it will select which sensor to be displayed;
+	isActiveTempSensor == true => 
+	
+*/
+{
+	isActiveTempSensor = !isActiveTempSensor; //toggle
+}
+
+void readSensorsISR ()
+{
+	flagReadSensor = true;
+}
+
+void displayISR()
+{
+	flagDisplay = true;
+}
+
+
+
+
+
+
+
+
+

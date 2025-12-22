@@ -1,0 +1,29 @@
+perioada unui ciclu de ceas 
+la 8Mhz = 1000 / 8 = 125 ns
+la 16Mhz = 1000 / 16 = 62,5 ns 
+
+
+activarea unei rezistente pull up pe un pin analogic va influenta valorile citite cu analogRead
+(vor fi gresite valorile citite)
+
+de lasat spatiu intre 2 pini analogici (conectezi 1 si 3 de ex)
+
+rezolutia = referinta default (5v) / range maxim (1024)    = 0,0049 
+
+un semnal PWM se genereaza cu AnalogWrite()
+
+sei (set global interrupts)
+
+orice vrem sa conectam spre o magistrala, se pun 3 state buffer 
+
+controller intereruperi : procesorul salveaza pe stiva flagurile CS si IP
+
+one hot : o singura iesire care e activa, restul sunt pe 0 
+
+8086 are 20 linii de adresa si 16 linii de date 
+
+tabela cu vectorii de intrerupere se gaseste in memoria RAM
+se pot schimba valorile cu vectorii de intrerupere din memoria RAM 
+la adresa 0 in ram, este rutina de reset cand se porneste chipul 
+
+ADLAR = 1 , bitii superiori 

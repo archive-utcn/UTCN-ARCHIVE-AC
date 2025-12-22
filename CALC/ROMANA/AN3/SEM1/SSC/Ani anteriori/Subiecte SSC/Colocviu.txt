@@ -1,0 +1,25 @@
+Subiect nr. 4
+a) Instructiuni if incomplete
+b) Specificatia configuratiei
+c) Sa se scrie un program in MAL care inmulteste doua numere pe 8 biti prin metoda directa
+d) Sa se descrie in VHDL schema unui sumator pe 16 biti cu refacerea transportului (schema de la sfarstitul laboratorului 8..acolo la aplicatii este un exercitiu unde ii si schema
+
+subiect nr 8
+1 teorie: etapele ciclului de simulare si instructiunea if incomplet
+2 in vhdl: un impartitor fara refacerea restului partial
+
+
+subiect9:
+1 microprogramare pe orizintala si verticala- caracteristici
+2 intarzieri- transport si inertiala
+3 in vhdl imnultitor folosind metoda directa
+
+
+subiectul numarul 10:
+teorie:
+-etapele ciclului de simulare
+-automate cu decodificare in registre paralele de iesire(ce sunt +avantaje)
+
+probleme:
+-descrierea in MAL a unui impartitor fara refacerea restului partial
+-un automat de detectie a unei secvente de biti(diagrama +implementare VHDL)

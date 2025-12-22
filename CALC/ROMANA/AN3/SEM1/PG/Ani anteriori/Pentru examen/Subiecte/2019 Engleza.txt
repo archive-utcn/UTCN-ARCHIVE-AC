@@ -1,0 +1,7 @@
+1) sort first / last
+2) brep
+3) depth sort + celeletate 5 bs
+4) point to object position + ca nu stii obiectu daca e concav sau convex
+5) view space to screen space
+6) ray tracing - primeam o suprafata pe care era obiectul + 2/3 surse de lumina
+7) inverse 2phase mapping - relativ la camera parcaaa asa erau

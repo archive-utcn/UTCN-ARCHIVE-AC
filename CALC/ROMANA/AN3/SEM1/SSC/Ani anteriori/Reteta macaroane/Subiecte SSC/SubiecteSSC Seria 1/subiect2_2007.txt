@@ -1,0 +1,10 @@
+1.comparare intre paging si segmentare
+2. carry select adder (ala dinainte de adder cu salvarea transportului
+3. comenzile memeorie sdram
+4. o problema cu cache
+5. o problema in care se cerea sa calculezi mips pt 2 compilatoare (e ceva in carte)
+6. 6-bit multiplier cu carry save adders si wallace tree
+7. a. TLB, b. write-back for cache memories c. microprocessor d. ddr II sdram e. RAS precharge time f. SPEC CPU 2006
+8. data flow machines
+
+subiecte de la engleza ...cat si-o amintit cineva...(mai erau 2 da nu mia stia cu ce)

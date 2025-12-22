@@ -1,0 +1,44 @@
+marty3400: serus 
+marty3400: is aici inca
+marty3400: ti le zic?
+BUZZ!!!
+marty3400: 1. ceva problema cu evaluarea performantelor pt mai multe calc
+marty3400: cu media geometrica
+marty3400: 2. arhitectura cu flux de date
+marty3400: 
+marty3400: 3.sumator pe 32 biti facut din sumatoare pe 8 biti - metoda pe grupe de biti
+marty3400: 4.o probl cu dram
+ifigenia17: a fost nashpa probl. 1?
+BUZZ!!!
+ifigenia17: ai plecat?
+ifigenia17: k
+marty3400: sa faci o memorie de 16*4 din circuite 4*2 sau asa ceva
+marty3400: pai sincer nu cred ca am facut-o bine ca nu am folosit ceva din ec se dadea
+marty3400: asa nu cred ca era tare grea dar n-am prea citit cu media geometrica 
+marty3400: 5.caracteristici risc
+marty3400: 6.sa explici schema de la paginare+segmentare
+marty3400: 7.mai multe chestii micute de definit:
+marty3400: ce mai tin io minte:
+marty3400: timp de preincarcare ras
+marty3400: strategia de inlocuire LRU
+marty3400: numere denoramalizate
+marty3400: sumator cu salvarea transportului
+ifigenia17: mi se pare ca a fost mai nashpa ca ieri
+marty3400: mem asociativa cu comparatie
+marty3400: MIMD
+marty3400: nu
+marty3400: astea mi le amintesc
+marty3400: le-ai primit? 
+ifigenia17: da acuma le-am primit
+ifigenia17: mi se pare ca a fost mai nashpa ca ieri
+ifigenia17: ieri au fost probl. simple
+marty3400: asta nici n-o fost naspa
+marty3400: pe celalalt rand a dat ceva cu pipeline
+marty3400: si cu rambus
+marty3400: 
+marty3400: tu n-ai fost?
+ifigenia17: 
+ifigenia17: urat
+ifigenia17: eu n-am fost
+ifigenia17: felicitari pt blia 
+ifigenia17: ce note ciudate au fost

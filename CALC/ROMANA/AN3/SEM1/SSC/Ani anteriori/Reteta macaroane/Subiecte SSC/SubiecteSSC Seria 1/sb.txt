@@ -1,0 +1,227 @@
+salutare,
+
+
+asta e ce am eu de pe la cei ce au dat si de la cei de
+la romana din ani mai mari.
+
+spor la invatat!
+
+paul
+
+
+            
+____________________________________________________ 
+Yahoo! Sports 
+Rekindle the Rivalries. Sign up for Fantasy Football 
+http://football.fantasysports.yahoo.com 
+
+--------------------------------------------------------------------------------
+Yahoo! Groups Links
+
+To visit your group on the web, go to:
+http://groups.yahoo.com/group/Calculatoare2002UTCN/
+  
+To unsubscribe from this group, send an email to:
+Calculatoare2002UTCN-unsubscribe@yahoogroups.com
+  
+Your use of Yahoo! Groups is subject to the Yahoo! Terms of Service. 
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+___________________________________________________________________________________
+
+
+
+subiect 1
+
+(1)   Consideram un calculator cu o unitate de calcul in virgula mobila. Pentru un program, frecventa diferitelor tipuri de instructiuni si numarul ciclurilor de ceas pentru fiecare tip sunt prezentate in urmatorul tabel: 
+
+Tip instructiune             Frecventa                CPI
+
+Inmultire in VM                 10%                6
+Adunare in VM                   15%                4
+Impartire in VM                  5%                 20
+Instructiuni in VF              70%                2
+
+
+Frecventa ceasului este de 400 Mhz. Presupunand ca se executa 300.000.000 de instructiuni pentru acest program, determinati valoarea indicatorului MFLOPS.                                                                   ( 2p )
+
+
+(2)   Desenati si explicati organizarea operatiei de adunare pentru numere reprezentate in virgula mobila si indicati etapele algoritmului pe un exemplu.                                                       ( 3p ) 
+
+
+(3)   Prezentati comparativ organizarea 1D si 2D pentru memorii.                                         ( 3p )
+
+
+(4)   Proiectati o memorie DRAM cu capacitate de 8M * 8biti utilizand circuite integrate cu organizarea 2M * 4biti. Desenati schema bloc a memoriei.                        ( 3p )
+
+
+(5)   Proiectati o memorie cache cu seturi asociate cu doua cai, avand urmatorii parametri : capacitatea memoriei cache este de 64 KB, dimensiunea unui bloc este de 32 octeti, iar magistralele de adrese si date sunt de 32 biti. Indicati structura cuvantului de adresa, desenati schema bloc si explicati functionarea memoriei cache.                                        ( 4p )
+
+
+(6) Desenati schema pentru varianta pipeline a unui circuit de inmultire simultana pentru numere fara semn de cate 5 biti.
+
+
+(7) Explicati urmatoarele notiuni:
+a) Procesoare matriceale 
+b) Dhrystone
+c) Sinteza la nivelul transferurilor intre registre
+d) Sumator cu anticiparea transportului
+e) NaN
+f) Localitatea referintelor
+g) Prinul potrivit
+h) Diagrama starilor pentru sisteme pipeline
+
+
+
+___________________________________________________________________________________
+
+
+
+subiect 2
+
+1. Consideram un calc cu trei clase de instructiuni A, B si C, pentru care valorile CF sunt egale cu 1, 2 respectiv 3. Pp ca
+   se obtin urmatoarele numaratoare ptr. secventele generate de doua compilatoare diferite ptr acelasi program.
+       __________________________________________________ 
+                               Nr de intrari ( milioane )
+       --------------------------------------------------
+Cod generat de           A          B          C 
+       --------------------------------------------------
+        Compilator 1             5          1          1 
+       --------------------------------------------------
+        Compilator 2            10          1          1 
+       __________________________________________________
+
+   Frecventa ceasului = 400 Mhz. Care compilator genereaza un cod mai eficient din punct de vedere al indic. MIPS
+   Care din punct de vedere al timpului?                   (2p)
+
+2. Schema bloc pentru sumator 16 biti cu anticiparea transportului care utilizeaza sumaatoare de 4 biti ca elem componente.
+   Scrieti ecuatiile logicii de transport ptr acest sumator.               (3p)
+
+3. Algoritmul de impartire prin metoda SRT si exemplu                 (3p)
+
+4. Memoria cache asociativa                (3p)
+
+5. Paginarea memoriei ( fara alg de inlocuire )             (2p)
+
+6. Sistem pipeline static tabela de rezervare
+
+            Etaj       0   1   2   3   4
+           ------------------------------
+             1         x               x
+           ------------------------------
+             2             x       x     
+           ------------------------------
+             3                 x         
+           ------------------------------
+
+   a) lista latimilor de intrare
+   b) diagrama de stare
+   c) latenta medie minima                         (3p)
+
+7. Pe scurt: 
+   a) arhitectura cu flux de date
+   b) SPEC CPU 2000
+   c) diagrama y
+   d) sumator cu salvarea transp
+   e) numere denormalizate
+   f) memoria asociativa
+   g) segmentarea memoriei 
+   h) cel mai potrivit                      (8*0.5p) 
+
+
+
+___________________________________________________________________________________
+
+
+subiect 3
+
+Examen Structura Sistemelor de calcul (III. CA)
+04.09.2001
+
+
+1. Un program se executa intr-un timp de 9 s pe un calculator A, cu o frecventa a ceasului de 300 Mhz. Se doreste realizarea 
+   unui calculator B, care va executa acest program in 6 s. Este posibila o crestere substantiala a frecventei de ceas, dar 
+   aceasta crestere va afecta structura UCP, astfel incat calculatorul B va necesita un numar de cicluri de 1.2 ori mai mare 
+   decat calculatorul A pentru acest program. Care este frecventa ceasului care trebuie aleasa ?    (2p)
+
+2. Desenati schema, la nivelul sumatoarelor elementare, pentru inmultirea a doua numere de cate 6 biti utilizand sumatoare cu 
+   salvarea transportului aranjate sub forma unui arbore Wallace.      (3p)
+
+3. Pe baza algoritmului de inmultire a numerelor in virgula mobila, desenati si explicati organigrama operatiei de impartire 
+   in virgula mobila.                      (2p)
+
+4. Utilizand ca si componenta de baza un circuit de memorie cu organizarea 8 M * 8 biti, proiectati o memorie DRAM cu 
+   capacitatea de 32 M * 32 biti. Desenati schema bloc a memoriei.              (3p)
+
+5. Proiectati o memorie cache cu mapare directa avand urmatorii parametri: capacitatea memoriei cache este de 8 KB, 
+   dimensiunea unui bloc este de 8 octeti, magistrala de adrese este de 32 biti, iar magistrala de date este de 64 biti.
+   Indicati structura cuvantului de adresa si desenati schema bloc a memoriei cache.                (3p)
+
+6. Paginarea memoriei (fara algoritmii de inlocuire)                        (3p)
+
+7. Explicati urmatoarele notiuni:
+   a) matrice sostilica
+   b) diagrama Y
+   c) sinteza la nivelul transferurilor intre registre 
+   d) bit de garda
+   e) NaN
+   f) memorie cu bancuri multiple
+   g) Write-Back
+   h) buffer de translatare (TLB).                 (8*0.5p)
+
+___________________________________________________________________________________
+
+
+
+romana subiecte 1 2005:
+
+1. Multicalculatoarele
+2. Inmultire cu wallace pe 6 biti si sa detaliem carry-save adders
+3. Carry lookahead adders
+4. Caracteristici RISC
+5. Reservation table+Forbiden latency list
+6. sa proiectam ceva memorie cache cu translatie direct de 256 de k
+7. sa proiectam un dram de 16M*32 de la 8M*8
+8. Cum se accelereaza impartirea folosind carry-save adders
+9. Ceva problema daca se da CPI si tc la 2 calc care e mai rapid
+10. alocare Non-preemptive algoritmi
+11. DDR-SDRAM prezentare
+
+
+
+___________________________________________________________________________________
+
+
+romana subiecte 2 2005:
+
+arbire Walace
+..in rest nu mai am deocamdata...
+
+
+
+___________________________________________________________________________________
+
+
+
+Subiect SSC 2005
+
+1.Multicalculatoare
+2.Utilizati celula de inmultire prezentata la curs( care contine un sumator elementar si o poarta SI) pentru realizarea unui circuit combinational inmultire pentru doua numere fara semn de cate 5 biti. Desenati schema circuitului si aratati semnalele aplicate la intrarile circuitelor.
+3.Utilizati ca si componenta de baza un circuit de memorie cu oragniz. 8M x 8 biti. Proiectati o memorieDRAM cu capacitatea 16M x 32biti. Desenati schima bloc a memoriei.
+4. Paginarea memoriei
+5. Descrieti arhitectura RISC
+6.Explicati urmatoarele notiuni:
+   arhitectura cu flux de date
+   arbore Wallace
+   moduri de rotunjire specificate de IEEE 754
+   memorie cu bancuri multiple
+   strategie de inlocuire optima
+   sisteme pipeline aritmetice cu reactie inversa
+

@@ -1,0 +1,16 @@
+1. random, direct, associative access
+2. pb cu RAM: chip 8M*8 , design 32M*8
+3. set associative cache
+4. algorithms for non-preemtive memory allocation
+5. pb: paged virtual memory system with 36-bit virtual address and 32-bit physical
+address. page size is 16KB. assume each page table entry contains one presence bit
+and one access bit and all virtual pages are in use. what is the total size of the
+page table for each process, assuming that disk addresses are not stored in the page
+table?
+6. overlapping registers window
+7. array processors
+8. 	a) static memory;
+	b) page mode access for DRAM;
+	c)LRU for cache; 
+	d) arithmetic pipelines with feedback
+

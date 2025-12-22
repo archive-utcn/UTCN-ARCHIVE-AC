@@ -1,0 +1,155 @@
+--1.a. member
+member e xs = foldr (||) False (map ((==) e) xs)
+
+--1.b. true if all the elements from a list satisfy predicate p
+alll p xs = foldr (||) False (map p xs)
+
+--2.a. map function on the tree data structure
+data Tree = Leaf Int | Node Tree Tree deriving Show
+
+sumTree (Leaf x) = x
+sumTree (Node l r) = sumTree l + sumTree r 
+
+mapTree (f, (Leaf x)) = (Leaf (f x))
+mapTree (f, (Node l r)) = (Node (mapTree (f, l)) (mapTree (f, r)))
+
+--2.b. zero all negative numbers from a tree
+
+zeroOut = mapTree ((\ x -> if (x<0) then 0 else x), (Node (Leaf (-1)) (Leaf 6)))
+
+--3.a. f::String->Bool to verify that every vowel in a string is uppercase
+
+andA l = (length [x | x<-l, x == False ]) == 0
+isUpperA c = member c ['A'..'Z']
+isVowelA c = member c ['a','e','i','o','u', 'A','E','I','O','U']
+f l = andA [isUpperA x | x <- l, isVowelA x]
+
+--3.b. g::String->Bool like f, using basic functions and recursion, but not list comprehension or library functions 
+
+andAl [] = True
+andAl [x] = x
+andAl (x:xs) = if x==False then False else andAl xs
+
+check [] l = []
+check (x:xs) l | member x l = False:check xs l
+ | otherwise = check xs l
+ 
+g l = andAl (check l ['a','e','i','o','u'])
+
+
+
+--Un nou subiect
+--1.a. 
+
+--1.b. concatenate a list of lists using list comprehension
+
+flatten xss = [x | xs<-xss, x<-xs]
+
+--1.c. pairs::[a]->[b]->[(a,b)]
+
+pairs xs ys = [(x,y) | x<-xs, y<-ys] 
+
+--2.a. transform a tree to a list
+
+treeTwoList (Leaf x) = [x]
+treeTwoList (Node l r) = treeTwoList l ++ treeTwoList r
+
+--2.b. filter function on treeTwoList which returns the list of values which satisfy a predicate p
+
+filterOnList (p, [], l) = l
+filterOnList (p, h:t, l) = if p h then filterOnList (p, t, l++[h]) else filterOnList (p, t, l)
+
+myFilter (p, x) = filterOnList (p, treeTwoList x, []) 
+
+--3.a. p::[Int]->Bool which returns True is each positive number in the list is divisible by the first number in the list (given an non-empty list of numbers beginning with a non-zero number) with basic functions, list comprehension, not recursion
+
+andB l = (length [x | x<-l, x == False ]) == 0
+isDiv(a,b) = if ((a `mod` b) == 0) then True else False
+isPositive a = if a >= 0 then True else False
+fnct l = andB [isDiv (b, head l) | b <- tail l, isPositive b] 
+
+--3.b. same without list comprehension or library functions
+
+funct ([], cap) = True 
+funct (h:t, cap) = if (isPositive h) then if isDiv(h,cap) then funct (t,cap) else False else funct (t,cap)
+
+fu (x:xs) = funct (xs,x)
+
+--3.c. same with higher-order library functions, no recursion, no list comprehension
+
+pc (x:xs) = foldr (&&) True (map (\y -> y `mod` x == 0) (filter (>0) xs ))
+
+
+
+--Un alt nou subiect
+--1.c. subtractOne list comprehension
+
+subtractOne l = [x-1|x<-l]
+
+subtractOneRec [] = []
+subtractOneRec (x:xs) = (x-1):subtractOneRec xs
+
+--2.a. write the foldr on the tree data structure
+
+treeFoldr f (Node l r) = f (treeFoldr f l) (treeFoldr f r)
+treeFoldr f (Leaf x) = x 
+
+--2.b. using the foldr function write a sum function on the tree
+
+mySum copac = treeFoldr (+) copac 
+
+--3.a. sum::[Int]->Int that computes the sum of squares of the positive numbers in a list -> list comprehension, basic functions, library functions, but no recursion
+
+isPositive3 a = if a > 0 then True else False
+square x = x*x
+--suma l = foldr (+) 0 l
+calcSum l = sum [square x | x <- l, isPositive3 x]
+
+--3.b. sum2::[Int]->Int like the previous but using basic functions, recursion and not list comprehension or library functions
+
+sum2 [] = 0
+sum2 (x:xs) = if x>0 then x*x + sum2 xs else sum2 xs
+
+--3.c. sum3::[Int]->Int using higher order functions
+
+sum3 l = foldr (+) 0 (map (\y -> y*y)(filter (>0) l)) 
+
+
+
+--Ultimul nou subiect
+--1.a write a function to return the max from a list using foldr and the helper function max
+
+maxim l = foldr (max) (head l) l
+
+--1.b. write a function length to calculate the length of a list using higher order functions
+
+lengthList l = foldr (+) 0 (map (\x -> 1) l)
+
+--2.a. define the function leafs::Tree->[a]
+
+leafs (Leaf x) = [x]
+leafs (Node l r) = leafs l ++ leafs r
+
+--2.b. split::(a->Bool)->Tree->([a],[a]) the splits the leafs of a tree into 2, the ones which satisfy the predicate p and the rest
+
+split p copacel = (filterOnTree p copacel, filterOnTree (\x -> p x == False) copacel)
+
+filterOnTree pred (Node l r) = filterOnTree pred l ++ filterOnTree pred r
+filterOnTree pred (Leaf x) | pred x == True = [x]
+ | otherwise = []
+ 
+ 
+ --3.a. p::[Int]->Bool that checks that every positive number in a list is divisible by 3 using basic functions, library functions, list comprehension, but not recursion
+
+andX l = (length [x | x<-l, x == False ]) == 0
+isDivisible3 x = if x `mod` 3 == 0 then True else False
+checkDiv l = andX [isDivisible3 x | x<-l, x>0] 
+
+--3.b. same, with basic functions, recursion, but no library functions and no list comprehension
+
+checkDivRec [] = True
+checkDivRec (x:xs) = if (x `mod` 3 == 0) then if (x > 0) then checkDivRec xs else False else checkDivRec xs
+
+--3.c. same, using higher order functions
+
+checkHigh l = foldr (&&) True (map (\x -> x `mod` 3 == 0) (filter (>0) l))

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed May 30 09:35:18 2018
+# Process ID: 6880
+# Current directory: E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15628 E:\AN III\SEMESTRUL II\DIANA RUS\SSC\SSC LABORATOARE FINAL\Matasariu Gabriel\RISC\RISC.xpr
+# Log file: E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC/vivado.log
+# Journal file: E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC/RISC.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/AN III/SEMESTRUL II/DIANA RUS/SSC/SSC LABORATOARE FINAL/Matasariu Gabriel/RISC'
+INFO: [Project 1-313] Project file moved from 'D:/Student/30238/Matasariu Gabriel/RISC' since last save.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys4_ddr:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/InstalledAPPS/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:08 . Memory (MB): peak = 772.715 ; gain = 45.043
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 30 11:56:23 2018...

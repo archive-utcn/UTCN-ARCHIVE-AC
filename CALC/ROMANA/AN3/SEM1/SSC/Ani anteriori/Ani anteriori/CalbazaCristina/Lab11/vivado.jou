@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed May 23 12:35:33 2018
+# Process ID: 1624
+# Current directory: D:/Student/30238/CalbazaCristina/Lab11
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1828 D:\Student\30238\CalbazaCristina\Lab11\Lab11.xpr
+# Log file: D:/Student/30238/CalbazaCristina/Lab11/vivado.log
+# Journal file: D:/Student/30238/CalbazaCristina/Lab11\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Student/30238/CalbazaCristina/Lab11/Lab11.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source SELMUXC.tcl
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+source SELMUXC.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+source SELMUXC.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+add_files -fileset constrs_1 -norecurse D:/Student/30238/CalbazaCristina/Lab11/Lab11.srcs/sources_1/new/Nexys4DDR_Master.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_sim
+launch_simulation
+source SELMUXC.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_sim

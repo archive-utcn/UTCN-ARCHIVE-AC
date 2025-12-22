@@ -1,0 +1,37 @@
+typedef struct elem {
+	int info;
+	struct elem* next;
+} ELEM, *LIST; 
+
+LIST qsd (LIST ys, es){
+	if (ys == NULL){
+		return ys;}
+	else
+	{
+		
+
+
+
+
+
+public abstract class E {
+}
+public class Enil extends E {
+}
+public class En extends E {
+private int x;
+}
+public class Es extends E {
+private E y;
+private E [] list;
+}
+public class Eb extends E {
+private E a;
+private E b;
+}
+
+public class Main {
+    static ArrayList<Integer> efun (E m, ArrayList<Integer> ys){
+        if(a instanceof Enil){
+            return ys;
+        }

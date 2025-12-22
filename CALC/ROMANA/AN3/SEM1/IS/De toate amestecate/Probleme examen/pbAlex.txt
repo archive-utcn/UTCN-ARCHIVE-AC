@@ -1,0 +1,103 @@
+public class Mnil extends M{
+}
+
+
+public class Mb extends M{
+    M m1;
+    Integer n;
+    M m2;
+
+    public Mb(M lr, Integer n, M r) {
+        super();
+    }
+}
+
+
+import java.util.ArrayList;
+
+public class Ms extends M{
+    Integer n;
+    ArrayList<M> ms;
+}
+
+
+public abstract class M {
+}
+
+
+public class Ma extends M{
+    M m;
+}
+
+
+
+import java.util.ArrayList;
+
+public class Main {
+
+    static ArrayList<Integer> fm (M m, ArrayList<Integer> ys){
+        if(m instanceof Mnil){
+            return ys;
+        }
+        if(m instanceof Ms){
+            int n = ((Ms) m).n;
+            ArrayList<M> ms = ((Ms) m).ms;
+            ArrayList<Integer> fmsResponse = fms(ms, ys);
+            fmsResponse.add(0, n);
+            return fmsResponse;
+        }
+        if(m instanceof Ma){
+            Ma ma = ((Ma) m).ma;
+            return fm(ma, ys);
+        }
+        if(m instanceof Mb) {
+            Integer n = ((Mb) m).n;
+            M r = ((Mb) m).m2;
+
+            if (((Mb) m).m1 instanceof Mnil) {
+                ArrayList<Integer> toReturn = fm(r, ys);
+                toReturn.add(0, n);
+                return toReturn;
+            }
+            if (((Mb) m).m1 instanceof Ms) {
+                Integer ln = ((Ms) ((Mb) m).m1).n;
+                ArrayList<M> lms = ((Ms) ((Mb) m).m1).ms;
+
+                ArrayList<Integer> secondArgument = fm(r,ys);
+                secondArgument.add(0,n);
+
+                ArrayList<Integer> toReturn = fms(lms, secondArgument);
+                toReturn.add(0,ln);
+                return toReturn;
+            }
+            if(((Mb) m).m1 instanceof Ma){
+                M ma = ((Ma) ((Mb) m).m1).m;
+                ArrayList<Integer> secondArgument = fm(r,ys);
+                secondArgument.add(0,n);
+                return fm(m,secondArgument);
+            }
+            if(((Mb) m).m1 instanceof Mb){
+                M ll = ((Mb) ((Mb) m).m1).m1;
+                Integer ln = ((Mb) ((Mb) m).m1).n;
+                M lr = ((Mb) ((Mb) m).m1).m2;
+
+                Mb newMb = new Mb(lr,n,r);
+
+                Mb secondNewMb = new Mb(ll, ln, newMb);
+
+                fm(secondNewMb, ys);
+            }
+        }
+        return null;
+    }
+
+    static ArrayList<Integer> fms( ArrayList<M> ms, ArrayList<Integer> ys){
+
+        if(ms.isEmpty()){
+            return ys;
+        }
+        M m = ms.get(0);
+        ms.remove(0);
+        return fm(m, fms(ms, ys));
+    }
+}

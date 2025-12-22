@@ -1,0 +1,650 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Apr  4 09:52:04 2018
+# Process ID: 916
+# Current directory: D:/Student/30238/Matasariu Gabriel/lab5_booth
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5112 D:\Student\30238\Matasariu Gabriel\lab5_booth\lab5_booth.xpr
+# Log file: D:/Student/30238/Matasariu Gabriel/lab5_booth/vivado.log
+# Journal file: D:/Student/30238/Matasariu Gabriel/lab5_booth\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+close [ open {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/boothnexys.vhd} w ]
+add_files {{D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/boothnexys.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+import_files -norecurse {{D:/Student/30238/Matasariu Gabriel/displ7seg.vhd}}
+update_compile_order -fileset sources_1
+file mkdir D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/constrs_1
+add_files -fileset constrs_1 -norecurse {{D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/constrs_1/imports/lab4_sum/Nexys4DDR_Master.xdc}}
+import_files -fileset constrs_1 {{D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/constrs_1/imports/lab4_sum/Nexys4DDR_Master.xdc}}
+set_property strategy Flow_RuntimeOptimized [get_runs synth_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/boothnexys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/mulbooth.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/imports/lab5_booth/sumbooth.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/boothnexys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/mulbooth.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/imports/lab5_booth/sumbooth.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_runs synth_1 -jobs 2
+[Wed Apr  4 10:02:41 2018] Launched synth_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Wed Apr  4 10:03:27 2018] Launched impl_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr  4 10:04:39 2018] Launched impl_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696646A
+set_property PROGRAM.FILE {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/boothnexys.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/boothnexys.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr  4 10:14:39 2018] Launched synth_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/synth_1/runme.log
+[Wed Apr  4 10:14:39 2018] Launched impl_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/boothnexys.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd} w ]
+add_files -fileset sim_1 {{D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {200ns} -objects [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/boothnexys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/imports/lab5_booth/controlunit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/mulbooth.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/imports/lab5_booth/sumbooth.vhd:]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/imports/lab5_booth/controlunit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity controlunit
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/imports/lab5_booth/sumbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sumbooth
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/mulbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mulbooth
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/imports/Matasariu Gabriel/displ7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity displ7seg
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/boothnexys.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity boothnexys
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbooth
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 16 elements ; expected 8 [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd:74]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbooth in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/mulbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mulbooth
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sources_1/new/boothnexys.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity boothnexys
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbooth
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 16 elements ; expected 8 [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd:74]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbooth in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292696646A
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 16 elements ; expected 8 [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd:74]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbooth in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 16 elements ; expected 8 [D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd:74]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbooth in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbooth
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture controlunit of entity xil_defaultlib.controlunit [\controlunit(n=8)\]
+Compiling architecture fdn of entity xil_defaultlib.fdn [\fdn(n=8)\]
+Compiling architecture srrn of entity xil_defaultlib.srrn [\srrn(n=8)\]
+Compiling architecture fd of entity xil_defaultlib.fd [fd_default]
+Compiling architecture sumbooth of entity xil_defaultlib.sumbooth [\sumbooth(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.mulbooth [\mulbooth(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.displ7seg [displ7seg_default]
+Compiling architecture boothnexys of entity xil_defaultlib.boothnexys [boothnexys_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbooth
+Built simulation snapshot testbooth_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source D:/Student/30238/Matasariu -notrace
+couldn't read file "D:/Student/30238/Matasariu": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr  4 10:34:09 2018...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbooth_behav -key {Behavioral:sim_1:Functional:testbooth} -tclbatch {testbooth.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source testbooth.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 200ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbooth_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 200ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1528.543 ; gain = 15.066
+run 100 ns
+run 100 ns
+set_property -name {xsim.simulate.runtime} -value {10ns} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbooth
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture controlunit of entity xil_defaultlib.controlunit [\controlunit(n=8)\]
+Compiling architecture fdn of entity xil_defaultlib.fdn [\fdn(n=8)\]
+Compiling architecture srrn of entity xil_defaultlib.srrn [\srrn(n=8)\]
+Compiling architecture fd of entity xil_defaultlib.fd [fd_default]
+Compiling architecture sumbooth of entity xil_defaultlib.sumbooth [\sumbooth(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.mulbooth [\mulbooth(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.displ7seg [displ7seg_default]
+Compiling architecture boothnexys of entity xil_defaultlib.boothnexys [boothnexys_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbooth
+Built simulation snapshot testbooth_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbooth_behav -key {Behavioral:sim_1:Functional:testbooth} -tclbatch {testbooth.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source testbooth.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbooth_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbooth_behav -key {Behavioral:sim_1:Functional:testbooth} -tclbatch {testbooth.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source testbooth.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbooth_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.srcs/sim_1/new/testbooth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbooth
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture controlunit of entity xil_defaultlib.controlunit [\controlunit(n=8)\]
+Compiling architecture fdn of entity xil_defaultlib.fdn [\fdn(n=8)\]
+Compiling architecture srrn of entity xil_defaultlib.srrn [\srrn(n=8)\]
+Compiling architecture fd of entity xil_defaultlib.fd [fd_default]
+Compiling architecture sumbooth of entity xil_defaultlib.sumbooth [\sumbooth(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.mulbooth [\mulbooth(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.displ7seg [displ7seg_default]
+Compiling architecture boothnexys of entity xil_defaultlib.boothnexys [boothnexys_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbooth
+Built simulation snapshot testbooth_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbooth_behav -key {Behavioral:sim_1:Functional:testbooth} -tclbatch {testbooth.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source testbooth.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbooth_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10ns
+run 10 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr  4 10:42:06 2018] Launched synth_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/synth_1/runme.log
+[Wed Apr  4 10:42:07 2018] Launched impl_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696646A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/boothnexys.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbooth_behav -key {Behavioral:sim_1:Functional:testbooth} -tclbatch {testbooth.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source testbooth.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbooth_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbooth' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbooth_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 175e12bfb281445e9be4d1a7eae0e7b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbooth_behav xil_defaultlib.testbooth -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbooth_behav -key {Behavioral:sim_1:Functional:testbooth} -tclbatch {testbooth.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source testbooth.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbooth_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Apr  4 10:54:52 2018] Launched synth_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/synth_1/runme.log
+[Wed Apr  4 10:54:52 2018] Launched impl_1...
+Run output will be captured here: D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/runme.log
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/boothnexys.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Student/30238/Matasariu Gabriel/lab5_booth/lab5_booth.runs/impl_1/boothnexys.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292696646A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696646A
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  4 11:47:56 2018...

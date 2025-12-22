@@ -1,0 +1,100 @@
+#include <Wire.h>
+#include <TimerOne.h>
+
+const int buttonPin1 = 8;
+const int buttonPin2 = 9;
+
+const int addressSlave = 116; //0x74
+const int addressRegister = 116; //0x20
+
+volatile int counter = 1;
+volatile int timeCounter;
+volatile bool flagTimer = false;
+
+
+void setup()
+{
+	Serial.begin(9600);
+	Wire.begin();                                    
+	
+	pinMode(buttonPin1, input);
+	pinMode(buttonPin2, input);
+	
+	Timer1.initialize(1000000);  //timer-ul va declansa intreruperi la 1 secunda = 1000000 microSecunde
+	Timer1.attachInterrupt(timerISR);
+	
+	attachInterrupt(digitalPinToInterrupt(buttonPin1), incrementCounter, RISING);
+	attachInterrupt(digitalPinToInterrupt(buttonPin2), decrementCounter, RISING);
+}
+
+void loop
+/* If a button is pressed(increment/decrement), we need to reset the interruption time
+   corresponding to the process of reading the distance value from the digitalDistanceSensor;
+   
+   We are not doing this operation in the ISR methods, because we are not 100% sure that it will
+   work properly(it's unsafe to use functions when you have no idea about their implementation)
+*/
+{
+	if(flagTimer == true){
+		readDistanceFromSensor();
+		flagTimer = false;
+	}
+}
+
+void incrementCounter()
+{
+	if(counter < 10){
+		counter++;
+	}
+}
+
+void decrementCounter()
+{
+	if(counter > 0){
+		counter--;
+	}
+}
+
+void timerISR()
+{
+	timeCounter++;
+	if(timeCounter >= counter)
+		{
+			timeCounter = 0;
+			flagTimer = true;
+		}
+}
+
+void readDistanceFromSensor()
+{
+  //start the communication with the slave
+  //send the address of the register
+  //that you want to read
+  Wire.beginTransmission(addressSlave); 
+  Wire.write(addressRegister);
+  Wire.endTransmission();
+  
+  //request 1 byte from the slave
+  //at address addressSlave
+  Wire.requestFrom(address, 1);
+
+  while(Wire.available() == 0);
+  readDistanceValue = Wire.read(); 
+  
+  Serial.print("The distance is: ");
+  Serial.println(readDistanceValue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

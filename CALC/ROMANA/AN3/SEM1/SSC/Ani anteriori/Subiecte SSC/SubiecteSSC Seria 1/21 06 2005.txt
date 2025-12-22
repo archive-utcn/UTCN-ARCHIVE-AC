@@ -1,0 +1,40 @@
+
+
+
+__________________________________________________
+Do You Yahoo!?
+Tired of spam?  Yahoo! Mail has the best spam protection around 
+http://mail.yahoo.com 
+
+--------------------------------------------------------------------------------
+Yahoo! Groups Links
+
+To visit your group on the web, go to:
+http://groups.yahoo.com/group/Calculatoare2002UTCN/
+  
+To unsubscribe from this group, send an email to:
+Calculatoare2002UTCN-unsubscribe@yahoogroups.com
+  
+Your use of Yahoo! Groups is subject to the Yahoo! Terms of Service. 
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+1.procesoare matriciale
+2.principiul de functionare lamemoria asociativa.schema bloc
+3.proiectare memorie cache
+4.principiul sumatorului cu selectie
+5.inmultire a 2 numere pe 6 biti folosind arbore wallace si metoda booth.schema sumatorului cu salvarea 
+transportului folosind sumatoare elementare
+6.paginarea combinata cu segmentarea si schema pt ea
+7.parametrii memoriei DRAM
+8.caracteristicile arhitecturii RISC
+9.latenta interzisa
+10.explicarea impartirii in VM.organigrama
+11.exceptiile de la IEEE 754
+12.se dadea o secventa cu adrese de referinta si 4 cadre de paginare,trebuia sa calculezi PF utilizand
+strategia de inlocuire FIFO
+13.sa se calculeze MIPS ..se dadeau 4 seturi de instructiuni ,CPI pt fiecare si frecventa

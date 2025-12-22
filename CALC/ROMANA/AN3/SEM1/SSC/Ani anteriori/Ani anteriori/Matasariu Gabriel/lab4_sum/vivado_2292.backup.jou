@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Mar 28 09:58:22 2018
+# Process ID: 2292
+# Current directory: D:/Student/30238/Matasariu Gabriel/lab4_sum
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent964 D:\Student\30238\Matasariu Gabriel\lab4_sum\lab4_sum.xpr
+# Log file: D:/Student/30238/Matasariu Gabriel/lab4_sum/vivado.log
+# Journal file: D:/Student/30238/Matasariu Gabriel/lab4_sum\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.xpr}
+update_compile_order -fileset sources_1
+close [ open {D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/mulnexys.vhd} w ]
+add_files {{D:/Student/30238/Matasariu Gabriel/lab4_sum/lab4_sum.srcs/sources_1/new/mulnexys.vhd}}
+update_compile_order -fileset sources_1

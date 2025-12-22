@@ -1,0 +1,15 @@
+Banescu Sebi: Razvan Lar: ok deci virtual address = page index + displacement
+Razvan Lar: page size = 16KB => displacement e pe 14 biti
+Razvan Lar: si atunci page index e pe 22 biti
+Banescu Sebi: k, go on
+Razvan Lar: no si pt fiecare intrare din page table is 2 biti - presence + access si
+		restu page frame index
+Razvan Lar: deci trebuie sa stim cat e page frame index
+Razvan Lar: dar phys address = page frame index + displacement
+Razvan Lar: deci page frame index = 32 - 14 = 18
+Razvan Lar: deci avem 2^22 intrari in page table fiecare de cate 18 + 2 biti
+Razvan Lar: si sper ca aia inseamna 10 mb
+Razvan Lar: deci 2^23 * 10 biti
+Banescu Sebi: dap
+Razvan Lar: adica 2^20 * 10 bytes
+Razvan Lar: adica 10 MB

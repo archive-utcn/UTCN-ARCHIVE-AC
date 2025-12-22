@@ -1,0 +1,16 @@
+Salut!
+La SSC pe "frontul" care s-a desfasurat astazi in sala 356 fatza in fatza cu profesorul.. .aproape 1:1....deoarece am fost doar 6 din 60 , subiectul unic (care ni s-a dat) suna cam asa:
+1. O problema de calcul cu MIPS pt un 2secvente de cod
+2. O problema cu inmultireacu refacerea restului, varianta optimizata: organigrama, schema, exemplu
+3. Proiectare unitate de memorie asociativa de 4 cuvinte pe 2 biti cu celule de memorie asoc prezentate la curs
+4. Arhitecturi cu flux de date
+5. Paginarea combinata cu segmentarea
+6. Sumatorul cu selectia transportului
+7. Problema: sumatorul cu anticiparea transportului, numere de 16 biti, folosind blocuri de 4 biti, ecuatiile logicii de transport
+8. Adresare directa, aleatoare si asociativa
+9. ....
+10. Explicati pe scurt: Memorie SDRAM, TLB, cifre de garda si rotunjire, LRU, ...inca ceva nu maitin minte
+
+Cam astea.... nu imi aduc aminte tot ce o fost...dar cam asa sunau.
+In principiu, daca ai citit cartea, si stii un pic te-ai scos. Nu stiu cum corecteaza.. ..maine o sa vad.
+Bafta! ;)

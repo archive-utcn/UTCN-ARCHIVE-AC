@@ -1,0 +1,17 @@
+Subiect SSC partea II
+1. - durata ciclului
+- latenta Cas
+- rata transfer varf
+2. Memoria asociativa: principiu + desen celula
+3. Problema cache mapare directa
+4. Problema FIFO
+5. Arhitecturi MIMD cu memorie partajata
+6. -acces aleatoriu
+-memora statica
+-arh. cu flux de date
+-formatul SSD
+-buffer translatare TLB
+
+durata... O ora si jumatate partea 2, doua ore si jumatate tot
+
+http://cs-gw.utcluj.ro/~srazvan/si/1617/SI.html

@@ -1,0 +1,29 @@
+2.
+memorii de cascadat
+8Mb pe 8 biti
+si trebuia facuta 32 Mb cu 16 biti
+
+4.
+ceva problema cu pages in care se dadea memoria virtuala pe 36 biti (adresa)
+memoria normala pe 32 biti
+un page ocupa 16 kB - care e page table size
+
+3.
+discutie despre set associative maping pentru cache memories
+
+5.
+alg de non preemtive memory allocation
+
+7.
+4 intrebari scurte
+
+static memory
+arithmetic pipeline with feedback
+array processors
+LRU
+
++2 subiecte de teorie
+
+random/direct si associative memory addressing
+
+a fost si ceva din RISC

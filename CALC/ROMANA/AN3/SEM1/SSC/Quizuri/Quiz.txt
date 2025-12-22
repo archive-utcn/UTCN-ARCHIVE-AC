@@ -1,0 +1,19 @@
+Test0 - timp de raspsuns , GHZ , MFLOPS
+Test1 - SPEC CPU2017, viteza SPEC, media geometrica a timpilor de executie
+Test2 - impartire refacere rest partial, inmultire baza superioara, inmultire matriceala
+Test3 - Memorii dinamice, RAM 512 M x 16 biti, acces asociativ, preincarcare memorie
+Test4 - LRDIMM, latenta semnal CAS, memorii interfata sincrona, putere DDR4 SDRAM
+Test5 - uzura memorii flash, NAND flash, scriere flash, NOR flash
+Test6 - Arhitectura RISC, ARM, extensie virtualizare ARM, arhitecturile risc avantaje
+Test7 - Arhitecturi sistolice, Arhitecturi vectoriale, SIMD, paralelism de date
+Test8 - Google TPU v2 v3, MIMD, Microsoft Brainwave, MIMD cu memorie partajata
+--------------------------------------------------------------------------------------------------------------------------------
+Seria A 
+
+Test 0 - Timpul UCP, indicatorul MIPS, indicatori, 
+Test 1 - Dhrystone, metrica de performanta, media geometrica a timpilor de executie
+Test 3 - preincarcare memorie, accesul direct la memorie, memoriile statice, hbm2 HBME 
+Test 4 - formatul SD, Arhitectura NOR, arhictectura NAND, stergerea unei celule flash, 
+Test 5 - ARM Neon, arhitecturile RISC, ARM Thumb, principiu RISC
+Test 6 - Arhitecturile sistolice, arhitecturile SIMD, arhitecturile vectoriale, arh paralelism functional
+Test 7 - Microsoft Catapult v2, arhitecturile MIMD, arh cu transmitere de mesaje, Cloud TPU v3

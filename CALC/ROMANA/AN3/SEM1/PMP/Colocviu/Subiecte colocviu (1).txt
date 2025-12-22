@@ -1,0 +1,68 @@
+1) Sa se proiecteze un sistem de racire care functioneaza in urmatorul fel:
+Pe baza unui senzor de temperatura, se va modifica viteza unui motor de curent continuu in functie de diferenta de temperatura dorita.
+La inceput, se va seta o temperatura de referinta prin consola seriala (motorul nu trebuie sa functioneze pana cand nu este setata acea temperatura), moment in care viteza motorului va deveni direct proportionala cu diferenta dintre temperatura masurata si cea setata.
+Hint: folositi functia "map" pentru liniarizarea valorilor, nu trebuie ceva exact
+
+2) Sa se proiecteze un sistem de afisare in urmatoarea maniera:
+Vor exista 2 dispozitive: unul care primeste modul de functionare, si unul care va realiza funcionalitatile.
+Primul dispozitiv va primi doua mesaje, fie "Activare1", fie "Activare2", de unde vor rezulta doua moduri de functionare.
+Cel de-al doilea dispozitiv va functionare in 2 moduri: 
+	1 - se va realiza o animatie cu 6 led-uri conectate la pinii 8-13 (hint: DDRB este portul de activare) 
+	2 - se va afisa pe un ecran LCD numele vostru pe prima linie, iar pe a2-a un timer la cate o secunda
+Observatii: i)de fiecare data cand se primeste Activare2 de catre primul dispozitiv, timer-ul trebuie sa se reinitializeze, dar prima linie trebuie sa se vada constant, fara a flicarii
+			ii)un singur mod trebuie sa fie activ la un moment dat
+Hint: folositi scanf pentru parsare
+
+3) Sa se proiecteze un sistem de parcare inteligent astfel:
+Sistemul va masura distanta furnizata de catre un senzor si va compara cu o valoare initiala, trimisa de voi prin serial sub forma "Distanta:X". Partea de achizitie a distantei va fi facuta pe un dispozitiv care va trimite valoarea catre un alt dispozitiv (fie UART, fie I2C). Cel de-al doilea dispozitiv va avea conectat un LCD pentru afisare ("Distanta" pe prima linie, valoarea pe a2-a) si un buzzer.
+In momentul in care distanta masurata de catre senzor este mai mica decat distanta setata de catre voi, buzzerul va emite un sunet in acest sens. Cu cat distanta scade, cu atat buzzer-ul isi va schimba sunetul (frecventa mai inalta sau mai joasa).
+Hint: puteti folosi valori de ordinul zecilor si sa scalati astfel incat sa se distinga putin
+	#define NOTE_B0 31
+	#define NOTE_C1 33
+	#define NOTE_CS1 35
+	#define NOTE_D1 37
+	#define NOTE_DS1 39
+	#define NOTE_E1 41
+	#define NOTE_F1 44
+
+4) Sa se proiecteze un sistem de iluminare inteligent astfel:
+Sistemul va consta din 2 dispozitive, unul master si unul slave. Primul dispozitiv va avea conectat un senzor de lumina prin care va masura si va trimite celui de-al doilea dispozitiv, care va afisa pe un LCD pe prima linie "Intensitate", iar pe a doua linie valoarea. 
+In momentul in care senzorul de lumina va detecta o valoare mica (aproape de minim sau minim), o animatie cu 6 led-uri conectate la pinii 8-13 se va porni, si un motor servo va incepe sa se roteasca +-60 de grade. (hint: DDRB este portul de activare pentru pinii 8-13) 
+
+5) Sa se proiecteze un counter astfel:
+Se va seta o valoare initiala prin Serial in domeniul 0-9. Folosind un Timer la o secunda, acea valoarea va descreste, in timp ce programul principal va afisa in mod continuu cifra pe display. In momentul in care se va ajunge la valoarea 0, masterul va trimite un mesaj sub forma "ack!" slave-ului, care va activa un buzzer pentru 2 secunde.
+Dispozitivul master va avea si un buton care, in cazul in care el este apasat, va reinitializa counter-ul cu valoarea trimisa.
+Observatii:
+	i) cat timp nu este initializat counterul, va fi activat pe afisor doar segmentul "-"
+Hint: folositi array-ul SSDLUT din lab 2
+
+6) Sa se proiecteze un sistem de control al motoarelor astfel:
+Vor exista 2 dispozitive: unul care va gestiona viteza si modificarile asupra ei, si unul care va da control celor 2 motoare.
+Dispozitivul master va contine 3 butoane prin intermediul carora se va gestiona viteza motoarelor (aceeasi viteza pe ambele motoare): un buton de incrementare, un buton de decrementare si un buton de stop. 
+Viteza se va comunica intre cele 2 dispozitive prin serial, sub forma "!Viteza:X!".
+Primul dispozitiv va mai contine un senzor de distanta (sonar), iar in momentul in care acesta citeste sub o valoare de referinta, motoarele nu vor functiona.
+Observatii:
+	i) valoarea de referinta se va trimite prin serial, sub forma "!Ref:X!"
+	ii) cat timp nu este setata o valoare de referinta, motoarele nu trebuie sa functioneze indiferent de starea butoanelor
+
+7) Sa se proiecteze un ventilator care functioneaza astfel:
+Ventilatorul va consta din un dispozitiv arduino, un motor dc, un senzor de temperatura si un lcd.
+El va avea urmatoarele moduri de folosire:
+	1) Va contine 3 viteze: -1 (maxim inapoi), 0 (stop), 1(maxim inainte)
+	2) Va contine un mod autonom: pe baza valorii citite de la senzor (20 valoare de prag), motorul va functiona
+direct proportional cu diferenta dintre valori 
+Se va observa pe LCD in mod continuu pe ce mod suntem astfel: pe prima linie va aparea textul "Mod", pe a2-a linie "-1,0,1,a".
+Controlul modurilor si schimbarea acestora va fi efectuata prin serial, trimitind modurile sub forma: "Activare:mod".
+Hint: folositi functia map
+
+8) Sa se proiecteze un sistem de afisare in urmatoarea maniera:
+Vor exista 2 dispozitive: unul care primeste modul de functionare, si unul care va realiza funcionalitatile.
+Primul dispozitiv va contine 2 butoane de comutare pentru cele 2 moduri de funtionare prezente.
+Cel de-al doilea dispozitiv va primi doua mesaje, fie "Mod1", fie "Mod2", in functie de butonul care a fost apasat.
+Cel de-al doilea dispozitiv va functiona in 2 moduri: 
+	1 - se va realiza o animatie cu 6 led-uri conectate la pinii 8-13 (hint: DDRB este portul de activare) 
+	2 - se va afisa pe un ecran LCD numele vostru pe prima linie, iar pe a2-a un timer la cate o secunda
+Observatii: i)de fiecare data cand se primeste Mod2 de catre al doilea dispozitiv, timer-ul trebuie sa se reinitializeze, dar prima linie trebuie sa se vada constant, fara a flicarii
+			ii)un singur mod trebuie sa fie activ la un moment dat
+			iii)primul dispozitiv nu trebuie sa trimita mesaje catre al doilea cat timp nu a primit mesajul "!init!" prin serial
+Hint: folositi scanf pentru parsare

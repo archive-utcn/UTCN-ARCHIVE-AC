@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May  3 14:10:02 2018
+# Process ID: 4144
+# Current directory: D:/Student/30238/Matasariu Gabriel/lab7_spi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3444 D:\Student\30238\Matasariu Gabriel\lab7_spi\lab7_spi.xpr
+# Log file: D:/Student/30238/Matasariu Gabriel/lab7_spi/vivado.log
+# Journal file: D:/Student/30238/Matasariu Gabriel/lab7_spi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Student/30238/Matasariu Gabriel/lab7_spi/lab7_spi.xpr}
+update_compile_order -fileset sources_1

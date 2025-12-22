@@ -1,0 +1,20 @@
+Screenshot 1594 - equivalence classes ECs 
+Screenshot 1597 - proces unificat ( >1 iteratie)
+Screenshot 1598 - dicotomie tip instanta din UML
+Screenshot 1599 - relatia universatate are mai multe departamente
+Screenshot 1600 - efecte laterale pentru module
+Screenshot 1601 - cerinte non-functionale
+Screenshot 1602 - practici Programare Extrema 
+Screenshot 1604 - Incremental testing
+Screenshot 1605 - you develop a new (generalization / specialization)
+Screenshot 1606 - a use case should : 
+Screenshot 1607 - communication link (occuring UML)
+Screenshot 1622 - diagrama comunicare, coeziune de comunicare, cuplarea de marca, efecte laterale
+Screenshot 1623 - singleton / proxy , asigura o interfata  unificata; defineste o interfata simplificata 
+Screenshot 1625 - paradigme cu faza de modificare a cerintelor, UP arhitectura sistem se dezvolta
+	             - UP caracteristici distinctive, un caz de utilizare descrie, produce un rezultat observabil...
+	             -  forme de testare -> activitatea de validare software 
+Screenshot 1626 - vocabular UML diagrame (instantaneu), proiectarea prin contract,  CFG (ciclomatic)
+Screenshot 1627 - diagrama de activitate, cuplarea externa, ordonare tipuri de coeziune
+Screenshot 1628 - tehnica testare cai,   graf CFG (orientat cu 1 - 1 ) , toate muchiile CFG 
+Screenshot 1630 - pentru a reduce necesitatea de a crea obiecte se poate utiliza

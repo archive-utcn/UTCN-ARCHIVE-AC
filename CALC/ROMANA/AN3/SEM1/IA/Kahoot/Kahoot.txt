@@ -1,0 +1,72 @@
+Kahoot ! 
+
+1.Daca toate actiunile au cost egal, uniform cost se comprta la fel cu : BFS 
+2.Uniform cost se compota la fel cu A* cu h(n) = 0  : Adevarat 
+3. A* expandeaza toate nodurile cu f(n) < h*(n) (unde h*(n) - costul solutiei optime) : Da
+4. A* nu expandeaza niciun nod cu f(n) > h*(n) : Adevarat 
+5. Poza (A*) 
+6. Poza (A*) - un nod expandat tot timpul se adauga in explored
+7. Un nod explorat nu se mai adauga in frontiera 
+8. A* graph search 
+9. A* graph search nu gaseste solutia optima : euristica nu e consistenta h(B)-h(A) > cost(BA)
+10. Euristica admisibila (sa ne ferim de sume) : dist. pana la cea mai apropiata / departata
+11.Pacman 
+---------------------------------
+12. Pacman cut-off decizie influentata
+restu sunt chiar usoare
+--------------------------------------
+13.Local beam search : pastreaza cele mai bune k stari 
+14.functie f(x,y) definita pe RxR, gasiti minimul. Individul va fi : doua numere reale 
+tot 14 : GA (algoritmul genetic-cautare locala) contine ca individ o posibila solutie
+15.GA : individul, 14 incaperi - un sir de 14 biti (1 exctinctor / camera) 
+16. Algoritmii genetici selecteaza pentru generatia urmatoare N cei mai bun indivizi conform functiei de fitness : FALS 
+17.Daca aspira o zona curata, uneori o murdareste. Pozitia se cunoaste, atat a aspiratorului cat si a mizeriei : MEDIU NEDETERMINIST
+18.Daca aspira o zona murdara, uneori aspira si zona adiacenta; daca aspira o zona curata, uneori o murdareste : Results (4, Left) este o singura stare
+19.Pentru probleme in mediu Nedeterminist complet observabil, solutia este un plan contingent (poate include IF) : TRUE 
+20. OBSERVABILITATE PARTIALA : iti trebuie senzori ca sa poti construi o solutie !
+21. Aspirator fara senzori, 2 pozitii, actiuni deterministe, solutie : Left, Suck, Right, Suck
+------------------------------------------------------
+22. Breeze, Pit 
+23. Modele ??? 
+24. Pit 
+25. KB, entainment 
+26. P1,1 V P3,1 
+27. Demonstratia prin REZOLUTIE este un algoritm de inferenta : COMPLET si SOUND 
+28. a->b , b->c      :    a->c   (dar nu si c)
+29. Rezolutie 
+30. KB 
+31. -craciun V bradImpodobit  : Daca e craciun , bradul e impodobit 
+--------------------------------------
+32. In CSP starile sunt reprezentate : de un set de perechi variabile / valori, 
+33. In algoritmul de cautare pt CSP, verificarea respectarii constrangerilor se face : de fiecare data cand se alege o valoare pt o variabila 
+34. backtracking search (fara euristici)
+35. backtracking search  + MRV 
+36. backtracking + forward checking 
+37. backtracking + forward + MRV 
+38. backtracking + AC-3 
+39. localsearch + min-conflicts 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+oricare ar fi  nu se foloseste cu operatia si 
+E exista, nu se foloseste cu => 
+
+Un assignment care nu violeaza nicio constrangere se numeste
+consistent
+Un assignment in care toate variabilele au o valoare asociata se
+numeste complet
+Un assignment complet si consistent este solutia pt CSP.
+
+

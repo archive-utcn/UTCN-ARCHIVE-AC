@@ -1,0 +1,12 @@
+ceva pb cu CLK frequency de 2.4GHz..
+Ca sunt 2 compilere(C1 & C2) si 3 instruction seturi(A, B, C).
+si 2 procese cu:
+primul: 5 mil Instructions A, 2 mil B, 2 mil C
+al doilea: 10 mil ins. A, 2 mil B si 2 mil C
+Se cerea calcularea compilatorului mai rapid cu mips si apoi cu timpul de executie.
+
+Binary-Coded Decimal Adder
+
+Array multiplier pt 2 numere pe 5 biti
+
+definitii: Wallace tree, SPEC CPU 2006

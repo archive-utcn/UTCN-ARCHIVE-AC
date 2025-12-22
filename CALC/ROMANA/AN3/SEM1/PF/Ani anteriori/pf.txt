@@ -1,0 +1,123 @@
+fun	map f nil		= nil 
+|	map f (h::t)		= (f h)::map f t;
+
+fun	reduce f b nil		= b
+|	reduce f b (h::t)	= f(h,reduce f b t);
+
+fun	filter f nil		= nil
+|	filter f (h::t)	= if f h then h::filter f t
+				 else filter f t;
+
+fun	member x nil 		= false
+|	member x (h::t)	= x=h orelse member x t;
+
+fun	zip f nil nil		= nil
+|	zip f (h::t) (i::s)	= f(h,i)::zip f t s;
+
+fun	fst(a,_)		= a;	
+
+fun	snd(_,b)		= b;
+
+fun	flatten nil = nil
+|	flatten (h::t) = h @ flatten t;
+
+val routeList35 = ["Zorilor", "Spital de Recuperare S", "Observatorului S", "Gheorghe Doja", "Piata Cipariu N", "Piata Avram Iancu", "Sora", "Central", "Closca", "Piata Garii S", "Traian", "IP Voitesti", "Opera", "Silviu Dragomir", "Observatorului N", "Spital de Recuperare N", "Gheorghe Dima"];
+
+val busRoute35 = (35, routeList35);
+
+val routeList25 = ["Primaverii", "Piata Avram Iancu", "Memorandumului N", "Minerva", "Izlazului", "Calea Manastur", "Agronomia", "Calea Motilor", "Memorandumului S", "Victoria", "Regionala CFR", "Biserica Sf Petru", "Piata Marasti", "Maresal C Prezan", "Dorobantilor", "Campus Universitar V", "Iulius Mall V", "Valeriu Bologa", "Borsec N", "Bistritei", "Septimiu Albini ", "Piata Cipariu N",  "Spitalul de Copii", "Fabrica de Bere", "Gradini Manastur", "Ion Mester", "Peana"];
+
+val busRoute25 = (25, routeList25);
+
+val routeList6 = ["Primaverii", "Minerva", "Izlazului", "Calea Manastur", "Agronomia", "Calea Motilor", "Momerandumului S", "Victoria", "Regionala CFR", "Biserica Sf Petru", "Piata Marasti", "Maresal C Prezan", "Siretului", "Expo Transilvania", "Aurel Vlaicu", "Arte Plastice", "Crinului", "Somes", "Constanta", "Memorandumului N", "Spitalul de Copii", "Fabrica de Bere", "Gradini Manastur", "Ion Mester", "Peana"];
+
+val busRoute6 = (6, routeList6);
+
+val routeList21 = ["Piata Mihai Viteazul V", "Opera", "Piata Cipariu S", "Piata Agarbiceanu V", "Becas V", "Fagului", "Trifoiului N", "Vitacom N", "Complex Tempus N", "Centrul Medical", "Drum Faget", "Dacia Service", "Complexit", "Complex Tempus S", "Vitacom", "Trifoiului S", "Becas E", "Drapelului E", "Piata Agarbiceanu E", "Andrei Muresanu", "Piata Cipariu N", "Piata Avram Iancu", "Piata Mihai Viteazul"];
+
+val busRoute21 = (21, routeList21);
+
+val routeList43 = ["Vivo", "Colina", "Primaverii", "Minerva", "Izlazului", "Frunzisului V", "Varianta Zorilor", "Zorilor", "Spitalul de Recuperare S", "Observatorului N", "Spitalul de Recuperare N", "Gheorghe Dima", "Frunzisului", "Cocosul de Aur", "Peana", "Garbau", "Bucium", "Nodul N N"];
+
+val busRoute43 = (43, routeList43);
+
+val stops = [busRoute35, busRoute25, busRoute6, busRoute21, busRoute43];
+
+fun numbersFrom p = map fst (filter ((member p)o snd) stops);
+
+fun placesTo n = flatten(map snd (filter((fn x=>x=n)o fst) stops));
+
+fun busToTake a b = map fst (filter ((member b)o snd) (filter ((member a)o snd) stops));
+
+fun inList (a, []) = false
+  | inList (a, (h::t)) = if a = h then true else inList (a, t);
+
+fun inters ([],[]) = []
+  | inters (a,[]) = []
+  | inters ([],b) = []
+  | inters ((h::t),(b)) = if inList (h,t) then inters (t,b) else if inList (h,b) then h::inters (t,b) else inters (t,b);
+
+fun intersection nil y = nil
+| intersection (x::t) y = if member x y then x::intersection t y else intersection t y;
+
+fun getStations [] = []
+| getStations (h::t) = placesTo (fst h) @ getStations t;
+
+fun change [] (y::ys) (z::zs) yl zl = []
+| change (x::xs) (y::ys) (z::zs) yl zl =
+	if member x (snd y) then
+		if member x (snd z) then
+			let val a = ((fst y), x, (fst z))
+				in a::change xs yl zl yl zl
+			end
+		else 
+			change (x::xs) (y::ys) zs yl zl
+	else 
+		if member x (snd z) then
+			change (x::xs) ys (z::zs) yl zl
+		else 
+			change (x::xs) ys zs yl zl;
+
+fun busThroughA a l [] = []
+| busThroughA a l (s::stops) = 
+	if not (member (fst s) l) andalso member a (snd s) then
+		s::busThroughA a l stops
+	else
+		busThroughA a l stops;
+
+fun oneChange a b = 
+	let
+		val noChangeList = busToTake a b
+		val busesThroughA = busThroughA a noChangeList stops
+		val busesThroughB = busThroughA b noChangeList stops
+		val stationsA = getStations busesThroughA
+		val stationsB = getStations busesThroughB
+		val intersect = intersection stationsA stationsB
+	in
+		change intersect busesThroughA busesThroughB busesThroughA busesThroughB
+	end;
+
+fun removeDups nil = nil
+| removeDups (h::t) = 
+		if (member h t)=true then 
+			removeDups t 
+		else 
+			h::removeDups t;
+
+fun demonstrate [] (y::ys) yl stops = true
+| demonstrate (x::xs) [] yl stops = demonstrate xs yl yl stops
+| demonstrate (x::xs) (y::ys) yl stops = 
+	if intersection (numbersFrom x) (numbersFrom y) = [] andalso x <>y then 
+		false
+	else
+		demonstrate (x::xs) ys yl stops;
+
+fun busConjecture stops = 
+	let
+		val busStations = getStations stops
+		val elimDup = removeDups busStations
+	in
+		demonstrate elimDup elimDup elimDup stops
+	end;
+
+

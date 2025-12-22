@@ -1,0 +1,56 @@
+1.Timpul de executie al unui program pe calculatorul A este 10 secunde.
+ Calculatorul A are un clock de 1.4 GHz. Ce frecventa are calculatorul B, 
+care ruleaza acest program in 6 secunde, si stim ca calculatorul B 
+ruleaza de 1.2 ori mai repede instructiunile.
+2.Carry Lookahead Adder pe 16 biti. Diagrama, explicatie, ecuatii.
+3.Carry Save Adder. Teorie.
+4.Nonrestoring divider. Teorie.
+5.Definitii: SPEC2006, serial adder, guard bit.
+
+
+Cuprins1
+1.Normalizarea timpilor de exec
+2.Whetstone+Dhrystone
+3.Programe nucleu(kernel)
+4.SPEC89,92
+5.SPEC CPU2006
+6.Legea lui Amdahl
+7.SE+propagare+atnticipare
+8.Selectia+salvarea
+9.Serial+zecimal
+10.Tehnica Booth
+11.Inmultirea baza sup+matr
+12.Arborele Wallace+pipeline
+13.Impartirea fara
+14.NaN+cifra
+15.Moduri rotunjire+exceptii
+16.Formate de baza
+
+Cuprins2
+1.Localitatea referintelor
+2.Metode de acces
+3.Memorarea dinamica
+4.Organizarea1D+2D
+5.Parametrii mem DRAM
+6.Categorii de mem DRAM
+7.DDR SDRAM
+8.Memorii flash(NOR,NAND)
+9.Memoria cu unitati multiple
+10.Memoria asociativa+cache
+11.Strategia write-back-through
+12.Tipuri de mapare(asoc,dir+)
+13.Strategii inlocuire(LFU,LRU)
+14.Paginarea
+15.Segmentarea
+16.Paginarea+segmentarea+VS
+17.Strategii de inlocuire(FIFO,LRU)
+18.Tipuri si nivele de paralelism
+19.Taxonomia Flynn+extinsa
+20.Arhitecturi vectoriale
+21.Arhitecturi SIMD
+22.Arhitecturi sistolice
+23.Arhitecturi MIMD
+24.Arhitecturi fire executie multiple
+25.RISC
+26.RISC VS CISC
+
