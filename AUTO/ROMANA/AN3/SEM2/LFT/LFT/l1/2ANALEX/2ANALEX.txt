@@ -1,0 +1,610 @@
+
+
+
+
+
+                         Lucrarea nr. 2
+
+                        ANALIZOR LEXICAL C  
+
+
+
+
+     1. Scopul lucrarii
+
+	- studiul analizorului lexical pentru limbajul C
+	- analiza modului de functionare a analizorului prin exemple practice
+
+
+
+	2. Notiuni teoretice 
+     
+	Analiza lexicala converteste un program sursa dintr-un sir de caractere 
+intr-o secventa de simboluri semnificative din punct de vedere semantic. Aceste 
+simboluri, care sint iesirea analizorului lexical, constituie un limbaj 
+intermediar.
+     Analizorul lexical mai are functiile de contorizare linii, generare 
+listing, eliminare spatii sau comentarii.
+     Gramatica limbajului sursa, G, poate fi partitionata in subgramatici, G0, G1, 
+G2, ... Gramaticile G1, G2, ..., descriu structura simbolurilor fundamentale: constantele, 
+identificatorii (utilizator) si delimitatorii (cuvinte cheie, caractere speciale 
+sau combinatii de caractere speciale). Gramatica G0 descrie structura limbajului 
+in functie de simbolurile fundamentale.
+     Structura si reprezentarea simbolurilor fundamentale poate fi modificata 
+fara a afecta puterea limbajului.
+     Interactiunea dintre analizorul lexical si analizorul sintactic se face 
+prin intermediul unui fisier de "lexeme". Lexemul este entitatea extrasa de 
+analizorul lexical, furnizata analizorului sintactic.
+	Programele prezentate sint fragmente din compilatorul C, cu mici 
+completari facute in scopul afisarii ilustrative a operatiilor ce se executa. Se 
+pot remarca extragerea/recunoasterea constantelor numerice octale, zecimale si 
+hexazecimale, a delimitatorilor si a identificatorilor, conform specificatiilor 
+cunoscute pentru limbajul C. Identificatorii pot fi cuvinte cheie sau variabile 
+utilizator. Acestea din urma trebuie sa inceapa cu o litera, dupa care pot urma 
+litere sau cifre. Atentie, se retin doar primele 8 caractere, deci doua 
+variabile utilizator cu nume diferite in program, dar avind primele 8 caractere 
+identice, vor fi confundate, considerate una si aceeasi! 
+	Simbolurile se pastreaza intr-o tabela de dispersie inchisa. 
+	Cuvintele cheie sint date in tabloul "tabcc" din fisierul "ident.c".
+	Pachetul de programe cuprinde:
+	- "lex.h" - definirile globale
+	- "lex.c" - programul principal
+	- "afisare.h" - codul adaugat pentru vizualizarea executiei
+	- "lexem.c" - functia ce depune in variabila globala <valc> valoarea 
+calculata pentru lexemul gasit si returneaza codul acestuia
+	- "numar.c" - functia ce efectueaza citirea si recunoasterea constantelor 
+numerice
+	- "car.c" - tabelul corespunzator codurilor ASCII si functiile auxiliare 
+	- "ident.c" - functiile de lucru cu tabela de simboluri
+
+
+	3. Desfasurarea lucrarii
+	3.1. Se vor analiza programele pe baza testelor prezentate in sectiunea 5 
+a lucrarii.
+	3.2. Se vor descrie prin expresii regulate constantele, delimitatorii si 
+simbolurile acceptate.
+	3.3. Se va determina functia de dispersie folosita.
+
+
+	4. Intrebari si dezvoltari
+	4.1. Sa se propuna si sa se ruleze un fisier complet de testare.
+	4.2. Sa se implementeze o functie de afisare a tabelei de simboluri.
+	4.3. Sa se implementeze un exemplu in care dimensiunea tabelei de 
+simboluri sa fie redusa, de exemplu 40, si sa se analizeze problema umplerii 
+tabelei de dispersie.
+	4.4. Sa se analizeze efectele ce apar daca se retin primele 4, respectiv 
+12 caractere pentru fiecare simbol. Este 8 alegerea optima ?
+	4.5. Sa se puna in discutie eventuale imbunatatiri.
+
+
+	5. Programe
+
+FISIERUL: lex.h
+#include <stdio.h>
+#include <process.h>
+#define 	MAXINT 077777		/* cel mai mare intreg pozitiv */
+#define 	MAXUINT 0177777		/* cel mai mare intreg fara semn */
+#define 	NCPS 8				/* nr. caractere per simbol */
+#define 	DDISP 400			/* nr. intrari in tab. de dispersie */
+#define 	NCPC 2				/* nr. caractere per cuvint */
+typedef struct tabdisp { char semd;		/* semafoare */
+ 			 char nume[NCPS];  /* nume ASCII */
+} TABDISP;
+/* operatori */
+#define EOFC	0			
+#define SEMI	1			#define LSHIFT	46
+#define LBRACE	2			#define AND	47
+#define RBRACE	3			#define OR	48
+#define LBRACK	4			#define EXOR	49
+#define RBRACK	5			#define ARROW	50
+#define LPARN	6			#define LOGAND	53
+#define RPARN	7			#define LOGOR	54
+#define COLON	8			#define EQUAL	60
+#define COMMA	9			#define NEQUAL	61
+#define KEYW	19			#define LESSEQ	62
+#define NAME	20			#define LESS 	63
+#define CON	21			#define GREATEQ	64
+#define STRING  22			#define GREAT	65
+#define FCON	23			#define ASPLUS	70
+#define LCON 	25			#define ASMINUS 71
+#define SIZEOF	91			#define ASTIMES	72
+#define INCBEF	30			#define ASDIV	73
+#define DECBEF	31			#define ASMOD	74
+#define EXCLA	34			#define ASRSH	75
+#define COMPL	38			#define ASLSH	76
+#define DOT	39			#define ASSAND	77
+#define PLUS	40			#define ASOR	78
+#define MINUS	41			#define ASXOR	79
+#define TIMES	42			#define ASSIGN	80
+#define DIVIDE	43			#define QUEST	90
+#define MOD	44			#define MAX	93
+#define RSHIFT	45			#define MIN	95
+/*  tipuri */			
+#define INT	0			#define STRUCT	4
+#define CHAR	1			#define LONG	6
+#define FLOAT	2			#define UNSIGN	7
+#define DOUBLE	3			#define UNION	8
+
+/*  clase de memorie */			/*  caractere */
+#define TYPEDEF	9			#define BSLASH	117
+#define AUTO	11			#define SHARP	118
+#define EXTERN	12			#define INSERT	119
+#define STATIC	13			#define PERIOD	120
+#define REG	13			#define SQUOTE	121
+/*  cuvinte cheie */			#define DQUOTE	122
+#define GOTO	20			#define LETTER	123
+#define RETURN	21			#define DIGIT	124
+#define IF	22			#define NEWLN	125
+#define WHILE	23			#define SPACE	126
+#define ELSE	24			#define UNKN	127
+#define SWITCH	25
+#define CASE	26
+#define BREAK	27
+#define CONTIN	28
+#define DO 	29
+#define DEFAULT	30
+#define FOR	31
+#define ENUM	32
+/* semafoare tabel de simboluri */
+#define FKEYW	04
+extern char tabc[], tamplex[], tampnum[], numefis[];
+extern TABDISP tabdisp[], *lexc;
+extern int lexascuns, cascuns, eof, linie, valc, nerori, disputil;
+extern long valcl;
+
+
+FISIERUL: lex.c
+#include "lex.h"
+
+extern void inidisp(), eroare(char *s, char *p);
+extern int lexem();
+
+void main(int argc, char *argv[])
+{  	register int l, n;
+   	if(argc>1) 
+		if(freopen(argv[1], "r", stdin) == NULL) {
+ 		   eroare("Nu pot deschide fisierul %s (ca intrare)",argv[1]);
+ 		   exit(1);
+      	}
+   	if(argc>2)
+      	if(freopen(argv[2], "w", stdout) == NULL) {
+ 		   eroare("Nu pot deschide fisierul %s (ca iesire)",argv[2]);
+ 		   exit(1);
+      	}
+   	inidisp();
+   	while( (l=lexem()) != 0 ) {
+      	printf(" %d", l);  n++;
+      	switch(l) {
+      	case CON   :  printf("CON(%o)", valc);break;
+      	case LCON  :  printf("LCON(%ld)", valc);break;
+      	case FCON  :  printf("FCON(%s)", tampnum);break;
+      	case STRING:  printf("STRING");
+    				  putchar('('); punesir(); putchar(')'); break;
+      	case NAME  :  printf("NAME(%s)", lexc->nume);break;
+      	case KEYW  :  printf("KEYW(%s:%d)", tamplex, valc);break;
+      	}
+      	putchar('\n');
+}   	}
+
+punesir() { register c;   while( (c = mapcar('"')) >= 0) ;    return; }
+
+
+FISIERUL: afisare.h
+#define afis(cc,c) cc=c;if(cc=='\n') cc=' ';printf("<%c>",cc)
+#define afis1	 cc=c;if(cc=='\n') cc=' ';if(ub) ub=0;else printf("<%c>",cc)
+
+
+FISIERUL: lexem.c
+#include "lex.h"
+#include "afisare.h"
+
+extern void eroare(char *s, char *p);
+extern int ident();
+
+lexem()
+{     register c;   register char *ps;   char ccc,cc;   register liniet;
+      if(lexascuns >= 0) { c = lexascuns;  lexascuns = -1;  return(c); }
+      if(cascuns) { c = cascuns;  cascuns = 0;  }
+      else if(eof)  return(EOFC);
+ 	else  { c=getchar();  afis(cc,c);  }
+bucla:
+	if(c==EOF) {  eof++;  return(EOFC);  }
+      switch(tabc[c]) {
+	case SHARP :if( (c=lexem()) != CON ) {
+				eroare("# ilegal",NULL);
+				return(c);
+   			}
+   			liniet = valc;
+   			while( tabc[cascuns] == SPACE )  {
+      			cascuns=getchar();
+				afis(cc,cascuns);
+   			}
+   			if(cascuns=='"') {
+      			ps=numefis;
+      			while( (c=mapcar('"')) >= 0 )  *ps++ = c;
+      			*ps++ = 0;
+      			cascuns = getchar();
+				afis(cc,cascuns);
+      			}
+   			if(cascuns != '\n' ) {
+      			eroare("# ilegal",NULL);
+      			while( (ccc=getchar()) != '\n' && eof==0) {
+ 					afis(cc,ccc);
+      			}
+   			}
+   			cascuns=0;
+   			linie=liniet;
+   			return( lexem() );
+	case INSERT:c=getchar();  /* ignora*/
+			afis(cc,c);
+   			goto bucla;
+      case NEWLN :linie++;
+      case SPACE :c=getchar(); afis(cc,c); goto bucla;
+      case PLUS  :return( urmator(c, PLUS, INCBEF) );
+      case MINUS :return( urmator(c,urmator('>', MINUS, ARROW), DECBEF) );
+      case ASSIGN:c=carurm(); cascuns=0;
+   			if( c == '=' ) return(EQUAL);
+   			if( c == ' ' ) return(ASSIGN);
+   			if( c == '<' || c == '>' ) {
+      			if( carurm() != c ) { 	lexascuns=tabc[c];
+                    					return(ASSIGN);
+      		     }cascuns=0;
+      			return( c == '<' ? ASLSH : ASRSH );
+   			}
+   			if( tabc[c] >= PLUS && tabc[c] <= EXOR ) {
+      		   if( carurm() != ' ' && (c=='-' || c=='&' || c=='*') ) {
+     				eroare("Avertisment: presupus %c=", c);
+     				nerori--;
+      		  }c = tabc[c];
+      		   return(c+ASPLUS-PLUS);
+   		     }cascuns = c;
+   			return(ASSIGN);
+      case LESS  :if( urmator(c, 0, 1) ) return(LSHIFT);
+   			return( urmator('=', LESS, LESSEQ) );
+      case GREAT :if( urmator(c, 0, 1) ) return(RSHIFT);
+   			return( urmator('=', GREAT, GREATEQ) );
+      case EXCLA :return( urmator('=', EXCLA, NEQUAL) );
+      case BSLASH:if( urmator('/', 0, 1) ) return(MAX);
+   			goto necunoscut;
+      case DIVIDE:if( urmator('\\', 0, 1) ) return(MIN);
+   			if( urmator('*', 1, 0) ) return(DIVIDE);
+   			while( (c=carurm()) != EOFC ) {
+      			       cascuns=0;
+      			       if( c=='*' ) {
+ 					if( carurm() == '/' ) {
+    						cascuns=0;	  c=getchar(); 
+						afis(cc,c);	  goto bucla;
+ 			}	}	}
+   			eof++;
+   			eroare("Comentariu neterminat",NULL);
+   			return(0);
+      case PERIOD:
+      case DIGIT :cascuns=c;  return( numar() );
+      case DQUOTE:return(STRING);
+      case SQUOTE:return( constc() );
+      case LETTER:ps=tamplex;
+		  while(tabc[c]==LETTER || tabc[c]==DIGIT)  {
+      			if(ps < tamplex+NCPS)  *ps++ = c;
+      			c=getchar(); 
+				afis(cc,c);
+   		  }
+		  while(ps < tamplex+NCPS)  *ps++ = '\0';
+   		  cascuns=c;
+   		  if( (c=ident())==KEYW && valc==SIZEOF ) c=SIZEOF;
+   		  return(c);
+      case AND   :return( urmator('&', AND, LOGAND) );
+      case OR    :return( urmator('|', OR, LOGOR) );
+      case UNKN  :
+      necunoscut :eroare("Caracter necunoscut",NULL);
+   			c=getchar();   
+			afis(cc,c);   
+			goto bucla;
+      }
+	return(tabc[c]);
+}
+
+int urmator(char c, int a, int b)
+{  	if ( carurm() != c ) return(a);
+   	cascuns = 0;
+   	return(b);
+}
+
+int constc()
+{  	register int c, cc;
+   	register char *pcc;
+   	char creal;
+   	valc=0;  
+	pcc=&valc;  cc=0;
+   	while( (c=mapcar('\'')) >= 0 ) 
+		if(cc++ < NCPC)  *pcc++ = c;
+   	if(cc>NCPC)  eroare("Constanta caracter lunga",NULL);
+   	if(cc==1) { creal=valc;  valc=creal; }
+   	return(CON);
+}
+
+int mapcar(int ac)
+{  	register int cc, a, c, n;
+	static mascuns;
+	c=ac;
+	if(a=mascuns)  mascuns=0;
+	else  { a=getchar(); afis(cc,a); }
+bucla:
+	if(a==c)  return(-1);
+	switch(a) {
+	case '\n' :
+	case '\0' : eroare("Sir neterminat",NULL);
+    			cascuns=a;
+    			return(-1);
+	case '\\' : a=getchar(); 
+			afis(cc,a);
+    			switch( a ) {
+    			case 't' : return('\t');
+    			case 'n' : return('\n');
+    			case 'b' : return('\b');
+    			case 'f' : return('\f');
+    			case '0' : case '1' : case '2' : case '3' :
+    			case '4' : case '5' : case '6' : case '7' :
+       				n=0;  c=0;
+       				while( ++c<=3 && '0'<=a && a<='7' ) {
+  						n<<=3;  
+						n += a-'0';
+  						a=getchar(); 
+						afis(cc,a);
+       				}
+       				mascuns=a;
+       				return(n);
+    			case 'r'  : return('\r');
+    			case '\n' : linie++;
+					a=getchar();
+					afis(cc,a);
+					goto bucla;
+    			}
+	}
+	return(a);
+}
+
+
+FISIERUL: numar.c
+#include "lex.h"
+#include "afisare.h"
+extern char carurm();
+extern void eroare(char *s, char *p);
+
+numar()
+{  	register char *pn;   register c, baza;
+   	int ub, maxcifre, expvazut, lexem, ncifre;
+   	char *sintn;   char cc;
+   	ub=1;   sintn = "Sintaxa numar";
+   	valcl=0;  baza=10;  maxcifre=0;  ncifre=0;
+   	pn=tampnum;  lexem=CON;  expvazut=0;
+   	if( (c=carurm()) == '0' )  baza=8;
+   	for( ; ; c=getchar() )  {
+      	afis1;
+      	*pn++ = c;
+      	if( tabc[c]==DIGIT  || (baza==16) && ('a'<=c&&c<='f' || 			
+						'A'<=c&&c<='F') )  {
+			if(baza==8)  valcl <<=3;
+			else if(baza==10) valcl=((valcl<<2) + valcl)<<1;
+			else  valcl <<= 4;   /* baza == 16*/
+			if(tabc[c]==DIGIT)  c -= '0';
+			else if(c>='a')  c -= 'a' - 10;   /* c=c-'a'+10 */
+			else  c -= 'A' - 10;
+			valcl += c;
+			ncifre++;
+			if(c>maxcifre)  maxcifre = c;
+			continue;
+      	}
+      	if(c=='.') {
+ 			if(baza==16 || lexem==FCON)  eroare(sintn,NULL);
+ 			lexem=FCON;  baza=10;  continue;
+      	}
+      	if(ncifre==0) {  lexem=DOT;  break;  }
+      	if( (c=='e'||c=='E') && expvazut==0 )  {
+ 			expvazut++;  lexem=FCON;
+ 			if(baza==16 || maxcifre>=10)  eroare(sintn,NULL);
+ 			baza=10;
+ 			*pn++ = c = getchar();
+ 			afis(cc,c);
+ 			if( c!='+' && c!='-' && tabc[c]!=DIGIT)  break;
+      	}
+      	else if(c=='x' || c=='X') {
+      		if(baza!=8 || valcl!=0 || lexem!=CON) eroare(sintn,NULL);
+      		baza=16;
+            }
+		else if( (c=='l' || c=='L') && lexem==CON) {
+      			c = getchar();  afis(cc,c);
+      			lexem=LCON;     break;
+            }
+		else  break;
+      }
+	cascuns=c;
+   	if(maxcifre>=baza) eroare(sintn,NULL);
+   	if(lexem==FCON)  { pn[-1] = 0;  valc=pn-tampnum;  return(FCON); }
+   	if(lexem==CON && (valcl<0||valcl>MAXINT&&baza==10||(valcl>>1)>MAXINT) )
+      		lexem = LCON;
+   	valc=valcl;
+   	return(lexem);	
+}
+
+
+FISIERUL: car.c
+#include "lex.h"
+#include "afisare.h"
+char numefis[64], tamplex[NCPS+2], tampnum[64];
+TABDISP tabdisp[DDISP], *lexc;
+int lexascuns = -1, cascuns, eof, linie, valc, nerori, disputil;
+long valcl;
+
+int carurm()
+{  	register cc,c;
+   	if( (c = cascuns) == 0 )  {  c=getchar();  afis(cc,c); }
+   	if( c=='\t' || c=='\f' )  c=' ';
+   	else if(c=='\n')  linie++;
+   	cascuns=c;
+   	return(c);	
+}
+
+void eroare(char *s, char *p)
+{  	nerori++;
+   	fprintf(stderr, "       LINIA %d: ", linie);
+   	fprintf(stderr, s, p);  fprintf(stderr, "\n");
+   	return; 
+}
+
+char tabc[]= {
+EOFC,	  INSERT, UNKN,	UNKN,	  UNKN,   UNKN,   UNKN,   UNKN,
+UNKN,	  SPACE,  NEWLN,	SPACE,  SPACE,  UNKN,   UNKN,   UNKN,
+UNKN,	  UNKN,   UNKN,	UNKN,	  UNKN,   UNKN,   UNKN,   UNKN,
+UNKN,	  UNKN,   UNKN,	UNKN,	  UNKN,   UNKN,   UNKN,   UNKN,
+SPACE,  EXCLA,  DQUOTE,	SHARP,  UNKN,   MOD,    AND,    SQUOTE,
+LPARN,  RPARN,  TIMES,	PLUS,	  COMMA,  MINUS,  PERIOD, DIVIDE,
+DIGIT,  DIGIT,  DIGIT,	DIGIT,  DIGIT,  DIGIT,  DIGIT,  DIGIT,
+DIGIT,  DIGIT,  COLON,	SEMI,	  LESS,   ASSIGN, GREAT,  QUEST,
+UNKN,	  LETTER, LETTER,	LETTER, LETTER, LETTER, LETTER, LETTER,
+LETTER, LETTER, LETTER,	LETTER, LETTER, LETTER, LETTER, LETTER,
+LETTER, LETTER, LETTER,	LETTER, LETTER, LETTER, LETTER, LETTER,
+LETTER, LETTER, LETTER,	LBRACK, BSLASH, RBRACK, EXOR,   LETTER,
+UNKN,	 LETTER,  LETTER,	LETTER, LETTER, LETTER, LETTER, LETTER,
+LETTER, LETTER, LETTER,	LETTER, LETTER, LETTER, LETTER, LETTER,
+LETTER, LETTER, LETTER,	LETTER, LETTER, LETTER, LETTER, LETTER,
+LETTER, LETTER, LETTER,	LBRACE, OR,	    RBRACE, COMPL,  UNKN };
+
+
+FISIERUL: ident.c
+
+#include "lex.h"
+
+struct tabcc {	char *numecc;
+			int valcc;
+} tabcc[] = {		"int",INT,			"char",CHAR,	"float",FLOAT,	
+	"double",DOUBLE,		"struct",STRUCT,	
+"long",LONG, 		"unsigned",UNSIGN,	"union",UNION,		"short",INT,	
+	"auto",AUTO,		"extern",EXTERN,
+"static",STATIC,		"register",REG,		"goto",GOTO,	"return",RETURN,	
+	"if",IF,			"while",WHILE,	"else",ELSE,	
+	"switch",SWITCH,		"case",CASE,		"break",BREAK,	
+	"continue",CONTIN,	"do",DO,			"default",DEFAULT,	"for",FOR,	
+		"sizeof",SIZEOF,		"typedef",TYPEDEF,	"enum",ENUM,		0,0,};
+
+inidisp()
+{  	register struct tabcc *p;  register char *ps;   register i;
+   	disputil=0;
+   	for( p=tabcc; ps=p->numecc; p++ )  { i=0;  disputil++;
+							 while( *ps )  i += *ps++;
+							 tabdisp[i%DDISP].semd = FKEYW;
+     }return;  }
+
+ident()
+{  	int idisp;
+   	register struct tabdisp *p;  register char *pl, *pn;
+   	idisp=0;   pl=tamplex;
+   	while( pl < tamplex+NCPS )  idisp += *pl++&0177;
+   	p = &tabdisp[idisp%DDISP];
+   	if( p->semd&FKEYW )  if( cautcc() )  return(KEYW);
+   	while( *(pn = p->nume) ) {
+      	       for( pl=tamplex; pl<tamplex+NCPS; )
+ 			if( *pn++ != *pl++ )  goto nu;  // coliziune
+      	       lexc = p;
+      	       return(NAME);
+nu:   	       if( ++p >= &tabdisp[DDISP] )  p = tabdisp;
+   	}
+   	if( ++disputil >= DDISP )  {
+      	    eroare("Depasire tabel de dispersie",NULL);
+      	    exit(1);
+     	}
+     	pl=tamplex;
+   	for( pn=p->nume; pl<tamplex+NCPS; )  *pn++ = *pl++;
+   	lexc = p;
+   	return(NAME);
+}
+
+cautcc()
+{  	register struct tabcc *p; register char *p1, *p2;
+   	for( p=tabcc; p2=p->numecc; p++ )  {
+      	     p1 = tamplex;
+      	     while( *p1 == *p2++ )
+ 			if( *p1++ == '\0' ) { 	valc = p->valcc;
+    						return(1);
+ 	}	        }
+   	return(0);
+}
+
+FISIERUL: test1
+073		0.75		.75		.075		0.075
+073.5		079.5
+073.5E2  ;  073E2  ;  	073EA1
+73.5e-27	77e+072	77e-+2
+
+FISIERUL: rez1
+<0><7><3><> 			21CON(valc=73)
+<0><.><7><5><> 			23FCON(tampnum=0.75)
+<.><7><5><> 			23FCON(tampnum=.75)
+<.><0><7><5><> 			23FCON(tampnum=.075)
+<0><.><0><7><5>< > 		23FCON(tampnum=0.075)
+<0><7><3><.><5><> 		23FCON(tampnum=073.5)
+<0><7><9><.><5>< > 		23FCON(tampnum=079.5)
+<0><7><3><.><5><E><2>< > 	23FCON(tampnum=073.5E2)
+< ><;> 1
+< >< ><0><7><3><E><2>< > 	23FCON(tampnum=073E2)
+< ><;> 1
+< >< ><0><7><3><E><A> 		23FCON(tampnum=073E)
+ 123
+<1>< > 				21CON(valc=1)
+<7><3><.><5><e><-><2><7><> 	23FCON(tampnum=73.5e-27)
+<7><7><e><+><0><7><2><> 	23FCON(tampnum=77e+072)
+<><7><7><e><-><+> 		23FCON(tampnum=77e-)
+ 40
+<2>< > 				21CON(valc=2)
+<?>
+
+FISIERUL: test2
+77.5L		77l
+0777777777	0x7ae1	0xffEfFFFFFFFFFFFF
+
+FISIERUL: rez2
+<7><7><.><5><L> 				23FCON(tampnum=77.5)
+ 123
+<><><7><7><l>< > 				25LCON(valcl=77)
+<0><7><7><7><7><7><7><7><7><7><> 	25LCON(valcl=134217727)
+<0><x><7><a><e><1><> 			21CON(valc=75341)
+<0><x><f><f><E><f><F><F><F><F><F><F><F><F><F><F><F><F>< > 25LCON(valcl=-1)
+<?>
+
+FISIERUL: testerr
+079		0x7af.5
+73.5.2
+75e=
+77..5		77.5f
+
+FISIERUL: test3
+sizeof, union; while
+x1  x.3
+var_stg	var-dr
+y/7		x1
+variabila100	variabil
+m7	M7		variabileDeStare
+
+FISIERUL: rez3
+<s><i><z><e><o><f><,> 91
+ 9
+< ><u><n><i><o><n><;> 	19KEYW(union:8)
+ 1
+< ><w><h><i><l><e>< > 	19KEYW(while:23)
+<x><1>< > 			20NAME(x1)
+< ><x><.> 			20NAME(x)
+ 120
+<3> 124
+< ><v><a><r><_><s><t><g><> 			20NAME(var_stg)
+<><v><a><r><-> 					20NAME(var)
+ 41
+<d><r>< > 						20NAME(dr)
+<y></> 						20NAME(y)
+ 43
+<7> 124
+<><><x><1>< > 					20NAME(x1)
+<v><a><r><i><a><b><i><l><a><1><0><0><> 	20NAME(variabil)
+<><v><a><r><i><a><b><i><l>< > 		20NAME(variabil)
+<m><7><> 						20NAME(m7)
+<M><7><> 						20NAME(M7)
+<v><a><r><i><a><b><i><l><e><D><e><S><t><a><r><e>< > 20NAME(variabil)
+<?>
