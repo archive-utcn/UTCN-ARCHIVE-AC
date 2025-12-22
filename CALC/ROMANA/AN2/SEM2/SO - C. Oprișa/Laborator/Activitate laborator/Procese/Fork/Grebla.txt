@@ -1,0 +1,59 @@
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+int main(){
+	pid_t pid;
+	pid=fork();
+	if(pid<0){
+		printf("Error in creating child process\n");
+		exit(-1);
+	}
+	if(pid>0){ //parent code
+		printf("Parent process waiting for child to finish...\n");
+		wait(NULL);
+		printf("Parent process finishes...\n");
+	}
+// execl example of code
+	else{
+		int ret; // needed for de return code of the exec family command
+		ret = execl ("/bin/ls", "ls", "-1", (char *)0);
+	}
+/*
+// execle example of code
+        else{
+                int ret; // needed for de return code of the exec family command
+		char *env[] = { "HOME=~/", "LOGNAME=horea", (char *)0 };
+                ret = execl ("/bin/ls", "ls", "-1", (char *)0,env);
+		exit(0);
+
+// execlp example of code
+        else{
+                int ret; // needed for de return code of the exec family command
+                ret = execlp ("ls", "ls", "-1", (char *)0);
+	}
+
+// execv example of code
+        else{
+                int ret; // needed for de return code of the exec family command
+                char *cmd[] = { "ls", "-l", (char *)0 };
+		ret = execv ("/bin/ls", cmd);
+        }
+
+// execve example of code
+        else{
+                int ret; // needed for de return code of the exec family command
+                char *cmd[] = { "ls", "-l", (char *)0 };
+		char *env[] = { "HOME=/usr/home", "LOGNAME=home", (char *)0 };
+                ret = execve ("/bin/ls", cmd, env);
+        }
+// execvp example of code
+        else{
+                int ret; // needed for de return code of the exec family command
+                char *cmd[] = { "ls", "-l", (char *)0 };
+                ret = execvp ("ls", cmd);
+	}
+*/
+	return 0;
+}

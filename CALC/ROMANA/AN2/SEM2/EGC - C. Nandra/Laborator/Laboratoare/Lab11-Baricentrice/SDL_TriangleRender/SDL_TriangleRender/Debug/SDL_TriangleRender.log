@@ -1,0 +1,7 @@
+﻿  rasterization.cpp
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab11\SDL_TriangleRender\SDL_TriangleRender\rasterization.cpp(49,51): warning C4244: 'argument': conversion from 'float' to 'Uint8', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab11\SDL_TriangleRender\SDL_TriangleRender\rasterization.cpp(49,44): warning C4244: 'argument': conversion from 'float' to 'Uint8', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab11\SDL_TriangleRender\SDL_TriangleRender\rasterization.cpp(49,39): warning C4244: 'argument': conversion from 'float' to 'Uint8', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab11\SDL_TriangleRender\SDL_TriangleRender\rasterization.cpp(50,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab11\SDL_TriangleRender\SDL_TriangleRender\rasterization.cpp(50,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  SDL_TriangleRender.vcxproj -> D:\CTI\An 2\Sem. II\GAC\Lab\Lab11\SDL_TriangleRender\Debug\SDL_TriangleRender.exe

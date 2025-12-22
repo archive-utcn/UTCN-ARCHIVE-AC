@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu May 19 16:42:42 2016
+# Process ID: 3844
+# Log file: G:/_AN2_SEM2/CA/Laboratory/project_1/vivado.log
+# Journal file: G:/_AN2_SEM2/CA/Laboratory/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {G:\_AN2_SEM2\CA\Laboratory\project_1\project_1.xpr}
+update_compile_order -fileset sources_1
+import_files -norecurse {G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/UC.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/ssdisplay.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/mpgnew.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/ID.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/MPG.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/SSD.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/MEM.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/IF.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/EX.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/new/test_env.vhd}
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1
+import_files -norecurse {G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/Bloc_Registri.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/Instruction_Fetch.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/bloc_Registrii.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/I_decode.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/afisor.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/U_MEM.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/MPG.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/U_control.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/MIPS16.vhd G:/_AN2_SEM2/CA/Laboratory/project_1/project_1.srcs/sources_1/imports/new/U_EX.vhd}
+update_compile_order -fileset sources_1

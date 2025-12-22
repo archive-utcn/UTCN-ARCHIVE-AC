@@ -1,0 +1,124 @@
+
+
+
+
+# (2) Calculati numarul de adrese ale clientilor din Bucuresti
+
+# (4) Calculati numarul de preturi deosebite dintre toate articolele
+
+# (6) Care este pretul maxim al articolelor; care este cantitatea maxima de articole dintr-o comanda
+
+# (8) Care este pretul minim al articolelor al caror nume incepe cu 'p' ?
+
+#(10) Cate articole au cel mai mare pret ? Dar cel mai mic pret ?
+
+#(12) Care este initiala clientului cu ultimul nume, in ordine alfabetica ?
+
+#(14) Care este pretul total al comenzii cu numarul 3 ?
+
+#(16) Calculati pretul mediu al comenzilor. Calculati pretul mediu al comenzilor, neponderat.
+
+#(18) Listati orasele care apar in adrese; Listati orasele care apar in adresele clientilor, cu numarul corespunzator de adrese distincte;
+
+#(20) (GROUP BY dupa mai multe coloane) Listati comenzile, cu pretul articolelor si cantitatea.
+
+#(22) Listati numarul de comenzi din anul 2008
+ste 100 lei.
+
+
+#(2)
+SELECT count(*)
+FROM adresa
+WHERE oras = 'Bucuresti';
+
+
+
+#(4)
+SELECT COUNT(*)
+FROM articol;
+SELECT COUNT(pret)
+FROM articol;
+SELECT COUNT(DISTINCT pret)
+FROM articol;
+
+
+#(6)
+SELECT MAX(pret)
+FROM articol;
+SELECT MAX(cantitate)
+FROM comanda_articol;
+
+
+#(8)
+SELECT MIN(pret)
+FROM articol
+WHERE SUBSTRING(descriere, 1, 1) = 'p';
+
+
+#(10)
+SELECT COUNT(*)
+FROM articol
+WHERE pret = 
+	(SELECT MAX(pret) FROM articol);
+
+SELECT COUNT(*)
+FROM articol
+WHERE pret = 
+	(SELECT MIN(pret) FROM articol);
+
+
+
+#(12)
+SELECT SUBSTRING(MAX(denumire), 1, 1)
+FROM client;
+
+
+#(14)
+SELECT SUM( pret  *  cantitate)
+FROM comanda_articol, articol, comanda
+WHERE comanda_articol.articol_id = articol.id
+AND comanda_articol.comanda_id = comanda.id
+AND comanda.id = 3;
+
+SELECT pret, cantitate, descriere, ( pret  *  cantitate)
+FROM comanda_articol, articol, comanda
+WHERE comanda_articol.articol_id = articol.id
+AND comanda_articol.comanda_id = comanda.id
+AND comanda.id = 3;
+
+
+#(16)
+SELECT AVG(pret * cantitate)
+FROM   comanda_articol, articol
+WHERE comanda_articol.articol_id = articol.id;
+
+SELECT AVG(DISTINCT (pret * cantitate))
+FROM   comanda_articol, articol
+WHERE comanda_articol.articol_id = articol.id;
+
+
+
+#(18)
+SELECT oras 
+FROM adresa
+GROUP BY oras;
+
+SELECT oras, count(*)
+FROM adresa
+GROUP BY oras;
+
+#(20)
+SELECT pret, cantitate
+FROM articol, comanda_articol
+WHERE articol.id = comanda_articol.articol_id
+GROUP BY pret, cantitate;
+
+#
+#(22)
+SELECT YEAR(data) AS 'An', COUNT(*) AS 'Numar de comenzi'
+FROM comanda
+GROUP BY YEAR(data)
+HAVING An = '2008';
+
+
+

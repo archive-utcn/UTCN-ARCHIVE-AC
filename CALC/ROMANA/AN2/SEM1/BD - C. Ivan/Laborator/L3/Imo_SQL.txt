@@ -1,0 +1,257 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+
+
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Branch`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Branch` (
+  `branchNo` INT NULL ,
+  `ngrStaffNo` INT NULL ,
+  `Telephone_telNo` INT NOT NULL ,
+  `Branchcol` VARCHAR(45) NULL ,
+  PRIMARY KEY (`branchNo`, `Telephone_telNo`) ,
+  INDEX `fk_Branch_Telephone1_idx` () ,
+  CONSTRAINT `mrgStaffNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Manager` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Staff`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Staff` (
+  `staffNo` INT NOT NULL ,
+  `supervisorStaffNo` INT NULL ,
+  `branchNo` INT NULL ,
+  `Staff_staffNo` INT NOT NULL ,
+  PRIMARY KEY (`staffNo`, `Staff_staffNo`) ,
+  INDEX `branchNo_idx` () ,
+  INDEX `fk_Staff_Staff1_idx` (`Staff_staffNo` ASC) ,
+  CONSTRAINT `branchNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Branch` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Staff_Staff1`
+    FOREIGN KEY (`Staff_staffNo` )
+    REFERENCES `mydb`.`Staff` (`staffNo` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Manager`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Manager` (
+  `staffNo` INT NOT NULL ,
+  `Branch_branchNo` INT NOT NULL ,
+  `Branch_Telephone_telNo` INT NOT NULL ,
+  PRIMARY KEY (`staffNo`, `Branch_branchNo`, `Branch_Telephone_telNo`) ,
+  INDEX `staffNo_idx` () ,
+  INDEX `fk_Manager_Branch1_idx` (`Branch_branchNo` ASC, `Branch_Telephone_telNo` ASC) ,
+  CONSTRAINT `staffNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Staff` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Manager_Branch1`
+    FOREIGN KEY (`Branch_branchNo` , `Branch_Telephone_telNo` )
+    REFERENCES `mydb`.`Branch` (`branchNo` , `Telephone_telNo` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Telephone`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Telephone` (
+  `telNo` INT NOT NULL ,
+  `branchNo` INT NULL ,
+  PRIMARY KEY (`telNo`) ,
+  INDEX `branchNo_idx` () ,
+  CONSTRAINT `branchNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Branch` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Client`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Client` (
+  `clientNo` INT NOT NULL ,
+  PRIMARY KEY (`clientNo`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Registration`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Registration` (
+  `clientNo` INT NOT NULL ,
+  `staffNo` INT NULL ,
+  `branchNo` INT NULL ,
+  PRIMARY KEY (`clientNo`) ,
+  INDEX `clientNo_idx` () ,
+  INDEX `branchNo_idx` () ,
+  INDEX `staffNo_idx` () ,
+  CONSTRAINT `clientNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Client` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `branchNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Branch` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `staffNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Staff` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`PrivateOwner`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`PrivateOwner` (
+  `ownerNo` INT NOT NULL ,
+  PRIMARY KEY (`ownerNo`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`BusinessOwner`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`BusinessOwner` (
+  `ownerNo` INT NOT NULL ,
+  PRIMARY KEY (`ownerNo`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`PropertyForRent`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`PropertyForRent` (
+  `propertyNo` INT NOT NULL ,
+  `ownerNo` INT NULL ,
+  `staffNo` INT NULL ,
+  `branchNo` VARCHAR(45) NULL ,
+  `PropertyForRentcol` VARCHAR(45) NULL ,
+  PRIMARY KEY (`propertyNo`) ,
+  INDEX `ownerNo_idx` () ,
+  INDEX `ownerNo_idx1` () ,
+  INDEX `staffNo_idx` () ,
+  CONSTRAINT `ownerNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`PrivateOwner` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ownerNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`BusinessOwner` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `staffNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Staff` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Lease`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Lease` (
+  `leaseNo` INT NOT NULL ,
+  `clientNo` INT NULL ,
+  `propertyNo` INT NULL ,
+  `Leasecol` VARCHAR(45) NULL ,
+  PRIMARY KEY (`leaseNo`) ,
+  CONSTRAINT `clientNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Client` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `propertyNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`PropertyForRent` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Viewing`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Viewing` (
+  `propertyNo` INT NOT NULL ,
+  `clientNo` INT NULL ,
+  PRIMARY KEY (`propertyNo`) ,
+  INDEX `clientNo_idx` () ,
+  INDEX `propertyNo_idx` () ,
+  CONSTRAINT `clientNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Client` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `propertyNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`PropertyForRent` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Newspaper`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Newspaper` (
+  `newspaperName` INT NOT NULL ,
+  PRIMARY KEY (`newspaperName`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `m`Advert`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mydb`.`Advert` (
+  `propertyNo` INT NOT NULL ,
+  `newspaperName` VARCHAR(45) NOT NULL ,
+  `dateAdvert` DATE NOT NULL ,
+  PRIMARY KEY (`propertyNo`, `dateAdvert`, `newspaperName`) ,
+  INDEX `propertyNo_idx` () ,
+  INDEX `dateAdvert_idx` () ,
+  CONSTRAINT `propertyNo`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`PropertyForRent` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `dateAdvert`
+    FOREIGN KEY ()
+    REFERENCES `mydb`.`Newspaper` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

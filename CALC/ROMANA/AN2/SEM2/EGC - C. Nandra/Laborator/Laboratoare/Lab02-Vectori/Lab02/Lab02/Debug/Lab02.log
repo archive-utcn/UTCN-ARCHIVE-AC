@@ -1,0 +1,20 @@
+﻿  testTransform.cpp
+  transform.cpp
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(64,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(65,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(67,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(68,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(168,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(169,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(172,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(173,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(184,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(186,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(192,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(194,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(205,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(206,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(209,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Lab02\transform.cpp(210,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  Lab02.vcxproj -> D:\CTI\An 2\Sem. II\GAC\Lab\Lab02\Lab02\Debug\Lab02.exe

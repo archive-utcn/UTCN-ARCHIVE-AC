@@ -1,0 +1,41 @@
+//9. Se da un sir de numere x1, x2, ..., xn. Sa se calculeze 
+//sumele partiale x1, x1+x2, x1+x2+x3, ..., x1+x2+...+xn, 
+//folosind cate un proces pentru fiecare suma partiala.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <wait.h>
+
+int main()
+{
+int sir[10];
+int n,i;
+int pid;
+printf("Dati lungimea sirului: ");
+scanf("%d",&n);
+printf("Dati elementele sirului: \n");
+for(i=0;i<n;i++)
+ scanf("%d",&sir[i]);
+printf("revin in 5 secunde :-)\n");
+for(i=0;i<n;i++)
+ {
+ pid=fork();
+ if(pid<0)
+  printf("Eroare la fork!");
+ if(pid==0) //suntem in fiu
+  {
+  int suma=0;
+  for(int k=0;k<=i;k++)
+   suma=suma+sir[k];
+  printf("Suma partiala %d=",i+1);
+  printf("%d\n",suma);
+  exit(1);
+  }
+ else 
+  wait(0);
+ }
+printf("Am terminat!\n");
+}

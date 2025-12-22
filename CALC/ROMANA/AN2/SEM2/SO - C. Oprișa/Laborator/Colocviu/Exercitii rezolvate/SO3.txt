@@ -1,0 +1,114 @@
+//foldere//directoare
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+crieti un program care primeste ca argument ın linia de comand ̆a calea spre un folder,
+numele unui fisier si un string. Programul va cauta recursiv ın folder fisierele cu numele
+datce contin string-ul primit ca al treilea argument.*/
+
+void search_files(const char *folder, const char *filename, const char *string) {//int fd pt pipe
+    DIR *dir;
+    struct dirent *entry;
+    struct stat statbuf;
+    char path[512];
+
+    dir = opendir(folder);
+    if (dir == NULL) {
+        perror("Could not open directory");
+        return;
+    }
+
+    while ((entry = readdir(dir)) != NULL) {
+        if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
+            snprintf(path, 512, "%s/%s", folder, entry->d_name);
+            lstat(path, &statbuf);//nerecursiv avem if==0 {
+
+            if (S_ISDIR(statbuf.st_mode)) {
+                // Recursively search subdirectories
+                search_files(path, filename, string);
+            } else if (S_ISREG(statbuf.st_mode)) {
+                if (strcmp(entry->d_name, filename) == 0) {
+		    printf("%s\n", entry->d_name);//afiseaza numele fisierelor
+			/*//trimitem la un alt program pipe
+                    write(fd, entry->d_name, strlen(entry->d_name));
+                    char x='!';
+                    write(fd, &x, sizeof(char));
+			*/
+                    if (fork() == 0) {
+                        // Child process
+                        execl("/bin/grep", "grep", string, path, NULL); 
+			//execlp("/bin/wc", "wc", "-l", filePath, NULL);//nr linie 
+                        perror("execl failed");
+                        exit(1);
+                    } else {
+                        // Parent process
+                        wait(NULL);
+                    }
+		//}
+                }
+            }
+        }
+    }
+
+    closedir(dir);
+}
+
+int main(int argc, char **argv) {
+    if (argc < 4) {
+        printf("Usage: %s <folder> <filename> <string>\n", argv[0]);
+        return 1;
+    }
+
+    const char *folder = argv[1];
+    const char *filename = argv[2];
+    const char *string = argv[3];
+
+    search_files(folder, filename, string);
+
+    return 0;
+}
+
+/* 5
+inverseaza doua fisiere
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char ** argv){
+    int fd1=-1;
+    int fd2=-1;
+    fd1=open(argv[1], O_RDWR);
+    fd2=open(argv[2], O_RDWR);
+    char buff1[1];
+    char buff2[1];
+
+    while(read(fd1, buff1, 1)){
+        read(fd2, buff2, 1);
+        lseek(fd1, -1, SEEK_CUR);
+        lseek(fd2, -1, SEEK_CUR);
+        write(fd1, buff2, 1);
+        write(fd2, buff1, 1);
+    }
+/*inlocuim toate aparitiile lui s1 in s2
+ while(read(fd, buff, strlen(argv[2]))==strlen(argv[2])){
+         if(strncmp(buff, argv[2], strlen(argv[2]))==0){
+             lseek(fd, -strlen(argv[2]), SEEK_CUR);
+             write(fd, argv[3], strlen(argv[2]));
+         }
+         else{
+             lseek(fd, (-strlen(argv[2])+1), SEEK_CUR);
+         }
+    }
+*/
+
+    return 0;
+}

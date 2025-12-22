@@ -1,0 +1,41 @@
+[aimspice]
+[description]
+284
+Trigger Schmidt cu porti CMOS
+.subckt si-nu 1 3 2
+m1 2 1 0 0 trnmos
+m2 2 1 3 3 trpmos
+.model trnmos nmos vto=3
+.model trpmos pmos vto=-3
+.ends
+vcc 15 0 12
+x1 p 15 13 si-nu
+x2 13 15 e si-nu
+r1 i p 5.1e3
+r2 p e 24e3
+vi i 0 dc 5 pulse(0.2 11.8 1e-4 1e-4 1e-4 0.2e-3 0.6e-3)
+
+[options]
+1
+Itl4 10e1
+[dc]
+1
+vi
+12
+0
+-0.01
+[tran]
+1e-6
+0.6e-3
+X
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 0 15
+2
+v(e)
+v(i)
+[end]

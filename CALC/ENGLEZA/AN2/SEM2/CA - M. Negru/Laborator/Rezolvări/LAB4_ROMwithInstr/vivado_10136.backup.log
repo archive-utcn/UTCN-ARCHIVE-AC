@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Apr 07 01:06:45 2016
+# Process ID: 8764
+# Log file: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/vivado.log
+# Journal file: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {G:\_AN2_SEM2\CA\Laboratory\LAB4_ROMwithInstr\LAB4_ROMwithInstr.xpr}
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/0.9/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/1.0/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+Scanning sources...
+Finished scanning sources
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 834.152 ; gain = 50.648
+reset_run impl_1
+launch_runs impl_1
+[Thu Apr 07 01:24:21 2016] Launched synth_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/synth_1/runme.log
+[Thu Apr 07 01:24:22 2016] Launched impl_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Couldn't access process for termination
+
+launch_runs impl_1
+[Thu Apr 07 01:27:16 2016] Launched synth_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/synth_1/runme.log
+[Thu Apr 07 01:27:16 2016] Launched impl_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Thu Apr 07 01:28:08 2016] Launched synth_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/synth_1/runme.log
+[Thu Apr 07 01:28:08 2016] Launched impl_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Thu Apr 07 01:30:10 2016] Launched synth_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/synth_1/runme.log
+[Thu Apr 07 01:30:10 2016] Launched impl_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 07 01:36:40 2016...

@@ -1,0 +1,41 @@
+//5. Fie P un proces ce determina cmmdc a doua numere. Folosind  o structura 
+//adecvata de astfel de procese sa se scrie un program ce determina cmmdc a N numere date.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <wait.h>
+
+int main()
+{
+int n1,n2;
+int pid;
+int r=1;
+int a,b;
+printf("Dati primul numar: ");
+scanf("%d",&n1);
+printf("Dati al doilea numar: ");
+scanf("%d",&n2);
+printf("asteptati pana calculam!\n");
+pid=fork();
+if(pid<0)
+ printf("Eroare la fork!");
+if(pid==0) //suntem in fiu
+ {
+ a=n1;
+ b=n2;
+ while(r>0)
+  {
+  r=a/b;
+  a=b;
+  b=r;
+  }
+ printf("CMMDC= %d\n",a);
+ exit(0);
+ }
+else //suntem in parinte
+ wait(0);
+printf("Gata!\n");
+}

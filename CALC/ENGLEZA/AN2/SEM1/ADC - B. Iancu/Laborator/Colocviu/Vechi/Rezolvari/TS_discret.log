@@ -1,0 +1,71 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *             Student Version 3.8           *
+                 *                                           *
+                 *********************************************
+
+	Date: Tue May 06 13:50:55 2003
+	Circuit File: C:\Ali\labs\L8\TS_discret.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  Trigger Schmitt cu componente discrete
+     2:  R1 1 2 20
+     3:  R2 1 out 20
+     4:  R3 2 3 400
+     5:  R4 3 0 200
+     6:  Re 4 0 10
+     7:  Q1 2 in 4 tr1
+     8:  Q2 out 3 4 tr1
+     9:  .model tr1 npn TR = 1e-5 TF = 1e-5
+    10:  
+    11:  Vcc 1 0 DC 10
+    12:  Vin in 0 DC 5 sin(5 3 1 0 0)
+    13:  *Vin in 0 dc 5 pulse(1 9 0 .2 .2 .5 1)
+    14:  .tran 1e-3 2 0 1e-3
+
+***************************  Device Parameters  ***************************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-3
+	Final time .......... : 2
+	Display start time .. : 0
+	Maximum step size ... : 1e-3
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+	RelTol:      0.1
+	Trtol:       .7
+	Itl4:        25
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 4721
+	Number of iterations for transient analysis....: 4588
+	Total number of timepoints.....................: 2031
+	Number of timepoints accepted..................: 2024
+	Number of timepoints rejected..................: 7
+	Total analysis time (sec)......................: 2.64
+	Transient analysis time (sec)..................: 2.58
+	Time spent in device loading (sec).............: 1.38
+	Time spent in L-U decomposition (sec)..........: 0.06
+	Time spent in matrix solving (sec).............: 0.39
+	Time spent in transient L-U decomposition (sec): 0.06
+	Time spent in transient matrix solving (sec)...: 0.33
+
+***************************  Kernel Messages  *****************************
+
+Circuit: Trigger Schmitt cu componente discrete
+
+

@@ -1,0 +1,46 @@
+#clock source
+NET "clk"		LOC = "p54"; 
+
+#buttons
+NET "btn<0>"	LOC = "p69"; 
+NET "btn<1>"	LOC = "p48"; 
+NET "btn<2>"	LOC = "p47"; 
+NET "btn<3>"	LOC = "p41"; 
+
+#switches
+NET "sw<0>"		LOC = "p38";
+NET "sw<1>"		LOC = "p36";
+NET "sw<2>"		LOC = "p29";
+NET "sw<3>"		LOC = "p24";
+NET "sw<4>"		LOC = "p18";
+NET "sw<5>"		LOC = "p12";
+NET "sw<6>"		LOC = "p10";
+NET "sw<7>"		LOC = "p6";
+
+#leds
+NET "led<0>"	LOC = "p15";
+NET "led<1>"	LOC = "p14";
+NET "led<2>"	LOC = "p8";
+NET "led<3>"	LOC = "p7";
+NET "led<4>"	LOC = "p5";
+NET "led<5>"	LOC = "p4";
+NET "led<6>"	LOC = "p3";
+NET "led<7>"	LOC = "p2";
+
+#anods
+NET "an<0>"		LOC = "p34";  
+NET "an<1>"		LOC = "p33"; 
+NET "an<2>"		LOC = "p32"; 
+NET "an<3>"		LOC = "p26"; 
+
+#cathods
+NET "cat<0>"	LOC = "p25"; 
+NET "cat<1>"	LOC = "p16"; 
+NET "cat<2>"	LOC = "p23"; 
+NET "cat<3>"	LOC = "p21"; 
+NET "cat<4>"	LOC = "p20"; 
+NET "cat<5>"	LOC = "p17"; 
+NET "cat<6>"	LOC = "p83"; 
+
+#decimal point
+NET "dp"		LOC = "p22"; 

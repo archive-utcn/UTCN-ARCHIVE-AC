@@ -1,0 +1,291 @@
+/*
+
+Vivado v2014.2 (64-bit)
+SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+Process ID: 5988
+
+Current time: 	4/7/16 7:09:33 PM
+Time zone: 	Eastern European Time (Europe/Athens)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+
+Java version: 	1.7.0_40 64-bit
+Java home: 	C:/Xilinx/Vivado/2014.2/tps/win64/jre
+
+User name: 	iulia
+User directory: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Gui allocated memory:	122 mb
+Gui max memory:		3,066 mb
+Engine allocated memory: 370 mb
+
+*/
+
+// TclEventType: START_GUI
+// HColorUtils.generateUniqueColorPalette (num colors: 55) elapsed time: 2.3s
+// TclEventType: START_PROGRESS_DIALOG
+// co:P (cg:JFrame):  Opening project 'G:\_AN2_SEM2\CA\Laboratory\LAB4_ROMwithInstr\LAB4_ROMwithInstr.xpr' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: open_project {G:\_AN2_SEM2\CA\Laboratory\LAB4_ROMwithInstr\LAB4_ROMwithInstr.xpr} 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 54 mb (+53773kb) [00:00:20]
+// [Engine Memory]: 390 mb (+257325kb) [00:00:20]
+// [GUI Memory]: 78 mb (+25540kb) [00:00:24]
+// [Engine Memory]: 407 mb (+17666kb) [00:00:24]
+// [Engine Memory]: 473 mb (+69783kb) [00:00:46]
+// Tcl Message: open_project {G:\_AN2_SEM2\CA\Laboratory\LAB4_ROMwithInstr\LAB4_ROMwithInstr.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// HMemoryUtils.trashcanNow. Engine heap size: 473 MB. GUI used memory: 28 MB. Current time: 4/7/16 7:10:23 PM
+// Tcl Message: open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 819.434 ; gain = 21.430 
+// TclEventType: STOP_PROGRESS_DIALOG
+dismissDialog("Opening project 'G:\\_AN2_SEM2\\CA\\Laboratory\\LAB4_ROMwithInstr\\LAB4_ROMwithInstr.xpr'"); // co:P (cg:JFrame)
+// a:a (cg:JFrame): Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, a:a)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 493 MB. GUI used memory: 28 MB. Current time: 4/7/16 7:11:25 PM
+// [Engine Memory]: 493 mb (+21168kb) [00:02:10]
+// Elapsed time: 95 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 24, true); // w:X (v:w, cg:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// 'x' command handler elapsed time: 16 seconds
+// [Engine Memory]: 497 mb (+4050kb) [00:03:06]
+// Tcl Message: open_hw 
+// Tcl Message: open_hw: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 857.078 ; gain = 0.000 
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 500 mb (+2826kb) [00:03:28]
+// N:an (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 49 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, N:an)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// co:P (cg:JFrame):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 559 MB. GUI used memory: 30 MB. Current time: 4/7/16 7:13:16 PM
+// [Engine Memory]: 559 mb (+62029kb) [00:04:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 579 MB. GUI used memory: 30 MB. Current time: 4/7/16 7:13:36 PM
+// [Engine Memory]: 683 mb (+130297kb) [00:04:31]
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 688 MB. GUI used memory: 30 MB. Current time: 4/7/16 7:13:51 PM
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 702 mb (+19562kb) [00:04:35]
+// Xgd.load filename: C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_floorplan.xgd elapsed time: 1.4s
+// [Engine Memory]: 798 mb (+100507kb) [00:04:37]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi.loadEngineXgd elapsed time: 2.6s
+// [Engine Memory]: 816 mb (+18878kb) [00:04:38]
+// Xgd.load filename: C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a35t/xc7a35t.xgd; ZipEntry: xc7a35t_detail.xgd elapsed time: 2.7s
+// [GUI Memory]: 81 mb (+2906kb) [00:04:39]
+// [GUI Memory]: 82 mb (+1789kb) [00:04:39]
+// [GUI Memory]: 84 mb (+1789kb) [00:04:39]
+// [GUI Memory]: 86 mb (+1862kb) [00:04:39]
+// [Engine Memory]: 816 mb (+253kb) [00:04:39]
+// [GUI Memory]: 87 mb (+1491kb) [00:04:39]
+// [Engine Memory]: 816 mb (+139kb) [00:04:39]
+// [GUI Memory]: 89 mb (+1491kb) [00:04:39]
+// [GUI Memory]: 90 mb (+1491kb) [00:04:40]
+// [GUI Memory]: 92 mb (+1492kb) [00:04:40]
+// [GUI Memory]: 93 mb (+1192kb) [00:04:40]
+// [GUI Memory]: 94 mb (+1491kb) [00:04:40]
+// [GUI Memory]: 96 mb (+2387kb) [00:04:40]
+// [GUI Memory]: 98 mb (+1193kb) [00:04:40]
+// [GUI Memory]: 98 mb (+596kb) [00:04:40]
+// [GUI Memory]: 99 mb (+894kb) [00:04:40]
+// [Engine Memory]: 817 mb (+204kb) [00:04:40]
+// [GUI Memory]: 100 mb (+894kb) [00:04:40]
+// [GUI Memory]: 100 mb (+596kb) [00:04:40]
+// [GUI Memory]: 101 mb (+894kb) [00:04:40]
+// [GUI Memory]: 102 mb (+894kb) [00:04:40]
+// [GUI Memory]: 103 mb (+894kb) [00:04:40]
+// [Engine Memory]: 819 mb (+2826kb) [00:04:40]
+// [Engine Memory]: 820 mb (+331kb) [00:04:40]
+// [Engine Memory]: 820 mb (+655kb) [00:04:40]
+// [Engine Memory]: 821 mb (+512kb) [00:04:40]
+// [Engine Memory]: 821 mb (+286kb) [00:04:40]
+// [Engine Memory]: 822 mb (+745kb) [00:04:41]
+// [Engine Memory]: 822 mb (+315kb) [00:04:41]
+// [Engine Memory]: 823 mb (+1572kb) [00:04:41]
+// [Engine Memory]: 824 mb (+135kb) [00:04:41]
+// [Engine Memory]: 824 mb (+368kb) [00:04:41]
+// Device: addNotify
+// [Engine Memory]: 824 mb (+573kb) [00:04:47]
+// [Engine Memory]: 826 mb (+2097kb) [00:04:49]
+// [Engine Memory]: 829 mb (+2580kb) [00:04:49]
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2014.2 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 1046.055 ; gain = 1.164 
+// Tcl Message: Restoring placement. Restored 124 out of 124 XDEF sites from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary:   A total of 6 instances were transformed.   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances  
+// HMemoryUtils.trashcanNow. Engine heap size: 829 MB. GUI used memory: 61 MB. Current time: 4/7/16 7:14:08 PM
+// Tcl Message: open_run: Time (s): cpu = 00:00:47 ; elapsed = 00:01:10 . Memory (MB): peak = 1194.121 ; gain = 335.695 
+// ExpRunCommands.openImplResults elapsed time: 71.5s
+// [Engine Memory]: 849 mb (+20680kb) [00:04:52]
+// [Engine Memory]: 857 mb (+9129kb) [00:04:53]
+// 'dg' command handler elapsed time: 73 seconds
+// [Engine Memory]: 857 mb (+114kb) [00:04:53]
+// [Engine Memory]: 857 mb (+4kb) [00:04:53]
+// [GUI Memory]: 105 mb (+2047kb) [00:04:53]
+// Device view-level: 0.0
+// [GUI Memory]: 107 mb (+1834kb) [00:04:53]
+// [GUI Memory]: 107 mb (+731kb) [00:04:53]
+// [GUI Memory]: 108 mb (+731kb) [00:04:54]
+// Elapsed time: 75 seconds
+dismissDialog("Open Implemented Design"); // co:P (cg:JFrame)
+// [Engine Memory]: 859 mb (+1445kb) [00:04:55]
+// [Engine Memory]: 861 mb (+2215kb) [00:04:55]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 19, false); // w:X (v:w, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// [Engine Memory]: 873 mb (+12140kb) [00:05:00]
+// co:P (cg:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_COMPLETED_IMPLEMENTATION_RUN_EXISTS_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, P:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// co:P (cg:JFrame):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Apr 07 19:14:23 2016] Launched impl_1... Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/LAB4_ROMwithInstr/LAB4_ROMwithInstr.runs/impl_1/runme.log 
+// 'g' command handler elapsed time: 5 seconds
+// [Engine Memory]: 874 mb (+1835kb) [00:05:05]
+// [Engine Memory]: 875 mb (+708kb) [00:05:05]
+// [Engine Memory]: 875 mb (+167kb) [00:05:06]
+dismissDialog("Starting Design Runs"); // co:P (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 876 MB. GUI used memory: 60 MB. Current time: 4/7/16 7:14:25 PM
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Open Target]", 34, false); // w:X (v:w, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+// [Engine Memory]: 876 mb (+1339kb) [00:05:07]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Open Target]", 34, false); // w:X (v:w, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD, "Open New Target..."); // ab:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD
+// V:g (cg:JFrame): Open New Hardware Target: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, V:g)
+// [Engine Memory]: 882 mb (+6148kb) [00:05:15]
+// co:P (V:g):  Open Server : addNotify
+// [Engine Memory]: 890 mb (+8589kb) [00:05:16]
+// HMemoryUtils.trashcanNow. Engine heap size: 947 MB. GUI used memory: 65 MB. Current time: 4/7/16 7:14:46 PM
+// RouteApi.initDelayMediator elapsed time: 45s
+// [Engine Memory]: 1,224 mb (+350052kb) [00:05:36]
+// [Engine Memory]: 1,227 mb (+3284kb) [00:06:01]
+// TclEventType: RUN_STEP_COMPLETED
+// az:a (cg:JFrame): Launch Run Critical Messages: addNotify
+// [Engine Memory]: 1,230 mb (+2551kb) [00:06:52]
+// Elapsed time: 179 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, az:a)
+// Elapsed time: 26 seconds
+dismissDialog("Launch Run Critical Messages"); // az:a (cg:JFrame)
+// [Engine Memory]: 1,233 mb (+2846kb) [00:09:34]
+// Elapsed time: 74 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, co:P)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED

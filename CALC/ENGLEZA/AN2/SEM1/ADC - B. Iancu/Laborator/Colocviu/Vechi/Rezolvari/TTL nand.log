@@ -1,0 +1,82 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *             Student Version 5.0          *
+                 *                                           *
+                 *********************************************
+
+	Date: Mon Jan 28 12:20:35 2008
+	Circuit File: D:\school stuff\an II\ADC\Circuite\TTL nand.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  TTL logic NAND
+     2:  .subckt nand a b c vcc out
+     3:  q11 2 1 a tr
+     4:  q12 2 1 b tr
+     5:  q2 3 2 4 tr
+     6:  q3 5 3 6 tr
+     7:  q4 out 4 0 tr
+     8:  R1 vcc 1 4k
+     9:  R2 vcc 3 1.6K
+    10:  R3 4 0 1K
+    11:  R4 vcc 5 130
+    12:  D 6 out Diode
+    13:  D1 0 b Diode
+    14:  D2 0 a Diode
+    15:  .ends
+    16:  .Model Diode D tt=5e-9
+    17:  .Model tr npn tr = 5e-9 tf=8e-9
+    18:  x1 a b c vcc out nand
+    19:  va a 0 dc 5 pulse( 0 5 0 1e-10 1e-10 0.2e-6 0.4e-6 )
+    20:  vb b 0 dc 5	!pulse( 0 5 0 1e-10 1e-10 0.2e-6 0.9e-6 )
+    21:  vc  vcc 0 dc 5
+    22:  d1 1 out dioda
+    23:  d2 1 2 dioda
+    24:  d3 2 3 dioda
+    25:  d4 3 0 dioda
+    26:  R1 vcc 1 2K
+    27:  .model dioda d tt = 1e-10
+    28:  cp out 0 15p
+    29:  .tran 1e-10 0.9e-6
+
+***************************  Device Parameters  ***************************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-10
+	Final time .......... : 0.9e-6
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 1669
+	Number of iterations for transient analysis....: 1634
+	Total number of timepoints.....................: 392
+	Number of timepoints accepted..................: 299
+	Number of timepoints rejected..................: 93
+	Total analysis time (sec)......................: 0.141
+	Transient analysis time (sec)..................: 0.141
+	Time spent in device loading (sec).............: 0.048
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: TTL logic NAND
+
+

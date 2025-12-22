@@ -1,0 +1,96 @@
+//                            Laborator 8 - procese 
+//5. Se dau doua siruri de numere reale, stocate in doua fisiere binare. Sa se 
+//calculeze suma vectorilor (suma element cu element) si sa se scrie intr-un al 
+//treilea fisier. Se va folosi cate un proces pentru fiecare element. 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#define max 100
+int fis1;
+int fis2;
+int fis3;
+int sir1[max];
+int sir2[max];
+int sir3[max];
+int n1,n2,n3;
+
+void citeste();
+
+void citeste()
+{
+  int i=0;
+  int l=1;
+  int f[2];
+  fis1=open("fis1.txt",O_RDWR|O_CREAT, 0666);
+  fis3=open("fis3.txt",O_RDWR|O_CREAT, 0666);
+  while (l>0)
+  {
+    l=read(fis1,&sir1[i],sizeof(int));
+    i++;  
+  }
+  n1=i-1;
+  i=0;
+  l=1;
+  close(fis1);
+  fis2=open("fis2.txt",O_RDWR|O_CREAT, 0666);
+  while (l>0)
+  {
+    l=read(fis2,&sir2[i],sizeof(int));
+    i++;  
+  }
+  n2=i-1;
+  if (n1>n2)
+  {
+    for (i=n2-1;i<n1;i++)
+    sir2[i]=0;
+    n2=n1;
+  }    
+  if (n2>n1)
+  {
+    for (i=n1-1;i<n2;i++)
+    sir1[i]=0;
+    n1=n2;
+  }    
+  for (i=0;i<n1;i++)
+  printf("%d ",sir1[i]);
+  printf("\n");
+  for (i=0;i<n2;i++)
+  printf("%d ",sir2[i]);
+  printf("\n");
+  pipe(f);
+  for (i=0;i<n1;i++)
+  { 
+    if (fork()==0)
+    {
+      close(f[0]);//inchidem citirea
+      sir1[i]=sir1[i]+sir2[i];
+      write(f[1],&sir1[i],sizeof(int));//scriem sir1[i] in zona pipe
+      close(f[1]);
+      exit(0);    
+    }
+    wait(0);
+  }
+  close(f[1]);
+  for (i=0;i<n1;i++)
+  {
+    read(f[0],&sir1[i],sizeof(int));
+    printf("%d ",sir1[i]);
+    write(fis3,&sir1[i],sizeof(int));
+  }
+  printf("\n");
+  close(f[0]);
+  close(fis3);
+  close(fis2);
+}
+int main(void)
+{
+  citeste();
+}
+
+//programul citeste dintr-un fisier binar fis1.txt si fis2.txt cate un sir de numere intregi,
+//aceste siruri le depune in vectorii sir1 respectiv sir2 
+//sirul mai scurt este completat cu 0 dupa care deschizande cate un proces pentru fiecare element al vectorului unde se face
+//adunarea element cu element depunandu-se rezultatul intr-un pipe
+//la urma se afiseaza rezultatul si se depune intr-un fisier binar fis3.txt

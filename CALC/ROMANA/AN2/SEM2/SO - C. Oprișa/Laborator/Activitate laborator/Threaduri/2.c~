@@ -1,0 +1,14 @@
+#include <pthread.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+void *work(void *x) {
+  char *s = (char *)x;
+  char *cmd;
+  cmd = malloc(10 + stren(s));
+  sprintf(cmd, "./script.sh %s", s);
+}
+
+int main(int argc, char *argv[]) {
+  int n = argc - 1;
+  pthread

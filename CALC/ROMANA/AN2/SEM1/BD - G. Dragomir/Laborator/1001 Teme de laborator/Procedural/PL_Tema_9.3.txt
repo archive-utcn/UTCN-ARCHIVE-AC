@@ -1,0 +1,72 @@
+Practice 9.3
+
+Vocabulary
+
+- DBA_* TABLES
+- ALL_TABLES
+- Data Dictionary
+- USER_* TABLES
+
+Try it/Solve it
+
+1.
+
+c, d
+
+2.
+
+- USER_* ->contine informatii despre tabelele proprii 
+- ALL_* ->contine informatii despre tabelele asupra carora iti este permis accesul
+- DBA_* ->contine informatii despre tot ce se afla in baza de date, indiferent de detinatorul acesteia
+
+3.
+
+select object_name, object_type, status
+from USER_OBJECTS
+order by object_type;
+
+4.
+
+select object_name, object_type, status, owner
+from ALL_OBJECTS
+order by object_type;
+
+5.
+
+DICT este versiunea scurta pt DICIONARY.
+Este un super-view care afiseaza toate tabelele corespunzatoare Dictionary-ului.
+Poate fi folosit pt a afisa numele si descrierile tabelelor pt un subgrup de tabele din Dictionary.
+
+6.
+
+SELECT table_name
+FROM dict
+WHERE table_name like 'users%view';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

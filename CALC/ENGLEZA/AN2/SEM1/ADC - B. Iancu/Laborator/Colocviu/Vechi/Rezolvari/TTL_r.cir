@@ -1,0 +1,40 @@
+[aimspice]
+[description]
+512
+L3 - fig 3.2 - seria TTL rapida
+r1 3 1 2.8k
+r2 3 4 760
+r3 5 0 470
+r4 3 7 58
+r5 6 0 4k
+q11 2 1 ina tranz
+q12 2 1 inb tranz
+q2 4 2 5 tranz
+q3 out 5 0 tranz
+q4 7 6 out tranz
+q5 7 4 6 tranz
+d1 0 ina dioda
+d2 0 inb dioda
+.model dioda D TT=1e-9
+.model tranz npn TR=1e-9 TF=1e-9
+* pun si o sursa de alimentare, Vcc
+Vcc 3 0 DC 5
+*pentru analiza functiei de transfer in cc aplic sursa la intrare intre 0-5,
+*si o intrare o tin in "1" logic
+vin1 ina 0 DC 5 PULSE(0 5 0 0 0 .1e-3 .2e-3)
+vin2 inb 0 DC 5
+[dc]
+1
+vin1
+0
+5
+.1
+[ana]
+1 1
+1
+1 1
+1 1 0 5
+2
+vin1
+v(out)
+[end]

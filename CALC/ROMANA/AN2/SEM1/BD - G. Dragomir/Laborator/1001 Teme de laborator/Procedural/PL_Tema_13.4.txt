@@ -1,0 +1,31 @@
+Vocabulary:
+1.DDL triggers
+2.Mutating table
+3.CALL statement
+4.Database Event triggers
+
+Try It/Solve It:
+1.On DATABASE fires the trigger for DDL on all schemas in the database.
+On SCHEMA fires the trigger only for DDL on objects in your own schema.
+
+3. A si C
+
+4.
+CREATE OR REPLACE TRIGGER nume
+BEFORE INSERT on nume
+CALL statement
+
+Pentru a apela un stored procedure ne trebuie CALL STATEMENTS,fara ; la final si nu dupa nu trebuie sa punem END; la final
+5.CREATE OR REPLACE TRIGGER emp_update_salary
+before update on employees_dup
+FOR EACH ROW
+declare
+v_max_salary number(6,2);
+BEGIN
+If (:new.salary!=:old.salary)then
+select max(salary) into v_max_salary from employees_dup;
+dbms_output.put_line('Max salary'||v_max_salary);
+end if;
+END;
+
+6.Da eroare,tabela se modifica,iar trigger ul s ar putea sa nu observe.

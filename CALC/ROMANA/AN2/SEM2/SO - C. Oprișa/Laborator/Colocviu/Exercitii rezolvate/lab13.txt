@@ -1,0 +1,399 @@
+/*1
+) Scriet, i un program care creeaza un proces fiu si comunic˘a cu el printr-un pipe anonim
+(eng. nameless pipe). P˘arintele va deschide un fis, ier binar, ˆıl va citi octet cu octet s, i va
+transmite doar cifrele (octet, ii a c˘aror valoare reprezint˘a codul ASCII al unei cifre) c˘atre
+copil, prin pipe. La terminarea fis, ierului, se va transmite pe pipe un octet cu valoarea 0.
+Procesul copil va primi cifrele care vin pe pipe s, i va afis,a pe ecran doar cifrele pare. La
+primirea valorii 0 (nu a cifrei ‘0’), se va ˆınchide.
+*/
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+
+
+int main(void)
+{
+    int fd[2];
+    char x;
+    int fd_file=-1;
+    char buff;
+    if(pipe(fd) != 0) {
+        perror("Could not create pipe");
+        return 1;
+    }
+
+    if(fork() != 0) {
+        //parent
+        close(fd[0]); //no use for read end
+        fd_file=open("binar.txt", O_RDONLY);
+        if(fd_file==-1){
+            printf("nu s-a putut deschide\n");
+        }
+        while(read(fd_file, &buff, 1)){
+            if(buff>'0' && buff<'9'){
+                write(fd[1], &buff, sizeof(buff));
+                printf("Parent: wrote %c to pipe\n", buff);
+            }
+        }
+        buff=0;
+        write(fd[1], &buff, sizeof(buff));
+        printf("Parent: wrote %c to pipe\n", buff);
+        close(fd[1]);
+        wait(NULL);
+    } else {
+        //child
+        close(fd[1]); //no use for write end
+        
+        while(read(fd[0], &x, sizeof(x))){
+            if(x%2==0 && x!=0){
+                printf("Child: read %c from pipe\n", x);
+            }
+            if(x==0){
+                break; 
+            }
+
+            
+        }
+        
+
+        close(fd[0]);
+    }
+
+    return 0;
+}
+
+/*) 2 Scriet, i un program care primes, te ˆın linia de comand˘a mai multe cuvinte s, i creeaz˘a cˆate
+un thread pentru procesarea fiec˘arui cuvˆant. Thread-urile vor num˘ara cˆate vocale cont, ine
+cuvˆantul primit s, i vor aduna valoarea obt, inut˘a la o variabil˘a global˘a vowelCount. Thread-ul
+principal va as, tepta dup˘a thread-urile create s, i va afis,a variabila. Accesul thread-urilor la
+variabil˘a trebuie sincronizat.
+*/
+#include <stdio.h>
+#include <unistd.h>
+#include <pthread.h>
+
+#define NR_THREADS 4
+
+typedef struct {
+    int id;
+    pthread_mutex_t *lock;
+    pthread_cond_t *cond;
+    char string1[100];
+} TH_STRUCT;
+int vowelCount=0;
+void *thread_function(void *arg)
+{
+    TH_STRUCT *s = (TH_STRUCT*)arg;
+    int i=0;
+    while(s->string1[i]!='\0'){
+        if(s->string1[i]=='a' ||s->string1[i]=='e' ||s->string1[i]=='i' ||s->string1[i]=='o' ||s->string1[i]=='u'){
+            pthread_mutex_lock(s->lock);
+            vowelCount++;
+            pthread_mutex_unlock(s->lock);
+        }
+        i++;
+    }
+    
+    return NULL;
+}
+
+int main(int argc, char **argv)
+{
+    int i;
+   
+    pthread_t tids[argc];
+   
+    TH_STRUCT params[argc];
+    pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+    pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+
+    if(pthread_mutex_init(&lock, NULL) != 0) {
+        perror("error initializing the mutex");
+        return 1;
+    }
+   
+    for(i=1; i<argc; i++) {
+        params[i].id = i;
+        params[i].lock = &lock;
+        params[i].cond = &cond;
+        int k=0;
+        while(argv[i][k]!='\0'){
+            params[i].string1[k]=argv[i][k];
+            k++;
+        }
+        pthread_create(&tids[i], NULL, thread_function, &params[i]);
+    }
+    for(i=1; i<argc; i++) {
+        pthread_join(tids[i], NULL);
+    }
+    printf("%d\n", vowelCount);
+    pthread_mutex_destroy(&lock);
+
+    return 0;
+}
+
+/* 4
+ Scriet, i un program care primes, te ca argumente ˆın linia de comand˘a calea spre un fis, ier
+s, i dou˘a string-uri s1 s, i s2 de aceeas, i lungime. Programul va ˆınlocui toate aparit, iile lui s1 din
+fis, ierul dat cu s2. Se va lucra direct pe fis, ier, nu se va construi un fis, ier destinat, ie.
+*/
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char ** argv){
+    int fd=-1;
+    char buff[100];
+    fd = open(argv[1], O_RDWR);
+
+    while(read(fd, buff, strlen(argv[2]))==strlen(argv[2])){
+         if(strncmp(buff, argv[2], strlen(argv[2]))==0){
+             lseek(fd, -strlen(argv[2]), SEEK_CUR);
+             write(fd, argv[3], strlen(argv[2]));
+         }
+         else{
+             lseek(fd, (-strlen(argv[2])+1), SEEK_CUR);
+         }
+    }
+    return 0;
+}
+
+/* 5
+Scriet, i un program care primes, te ca argumente ˆın linia de comand˘a c˘aile spre dou˘a
+fis, iere obis,nuite, care se presupun a fi de aceeas, i dimensiune s, i inverseaz˘a cont, inutul acestora.
+Astfel, dac˘a init, ial f1 cont, ine 1234567 s, i f2 cont, ine abcdefg, dup˘a rularea programului f1
+va cont, ine abcdefg, iar f2 cont, ine 1234567. Pentru punctaj maxim nu se vor folosi fis, iere
+auxiliare s, i se va presupune c˘a fis, ierele pot fi oricˆat de mari, deci cont, inutul acestora nu se
+poate citi ˆın ˆıntregime ˆın memorie.
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char ** argv){
+    int fd1=-1;
+    int fd2=-1;
+    fd1=open(argv[1], O_RDWR);
+    fd2=open(argv[2], O_RDWR);
+    char buff1[1];
+    char buff2[1];
+
+    while(read(fd1, buff1, 1)){
+        read(fd2, buff2, 1);
+        lseek(fd1, -1, SEEK_CUR);
+        lseek(fd2, -1, SEEK_CUR);
+        write(fd1, buff2, 1);
+        write(fd2, buff1, 1);
+    }
+
+    return 0;
+}
+*/
+
+/* 6
+Un num˘ar perfect este un num˘ar natural, egal cu suma divizorilor s˘ai, diferit, i de el
+ˆınsus, i (ex. 6 = 1 + 2 + 3). Scriet, i un program care afis,eaz˘a toate numerele perfecte din
+intervalul [1 . . . N], folosind M thread-uri. N s, i M se primesc ca argumente ˆın linia de
+comand˘a.*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <pthread.h>
+
+#define SIZE_ARRAY 1000
+#define NR_THREADS 1000
+
+typedef struct {
+    int from;
+    int to;
+    pthread_mutex_t *lock;
+} TH_STRUCT;
+
+int arr[1000];
+int iterator=0;
+void *thread_fn_max(void *param)
+{
+    TH_STRUCT *s = (TH_STRUCT*)param;
+    int i, max;
+    for(i=s->from; i<=s->to; i++){
+        //facem suma divizorilor
+        int suma=0;
+        for(int j=1;j<i;j++){
+            if(i%j==0){
+                suma+=j;
+            }
+        }
+        
+        if(suma==i){
+            pthread_mutex_lock(s->lock);
+            arr[iterator]=i;
+            iterator++;
+            pthread_mutex_unlock(s->lock);
+        }
+        
+    }
+    return (void*)(long)max;
+}
+
+int main(int argc, char ** argv)
+{
+ 
+    pthread_t tid[NR_THREADS];
+    TH_STRUCT params[NR_THREADS];
+    int i;
+    int n;
+    sscanf(argv[1], "%d", &n);
+    pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+    
+    srand(time(NULL));
+
+    for(i=0; i<NR_THREADS; i++){
+        params[i].lock = &lock;
+         if(i == 0){
+            params[i].from = 1;
+        }else{
+            params[i].from = params[i-1].to + 1;
+        }
+        params[i].to = params[i].from + n/ NR_THREADS - 1;
+        if(i <n % NR_THREADS){
+            params[i].to++;
+        }
+        
+
+        pthread_create(&tid[i], NULL, thread_fn_max, &params[i]);
+    }
+    for(i=0; i<NR_THREADS; i++){
+        pthread_join(tid[i], NULL);
+    }
+    for(int i =0;i<iterator;i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+ 
+    
+    return 0;
+}
+
+/*) 7
+ Scriet, i dou˘a programe p1.c s, i p2.c care comunic˘a printr-un pipe cu nume. p1 va
+parcurge un folder (nerecursiv) s, i va transmite prin pipe numele fis, ierelor din acesta (nu s, i a
+subfolderelor). p2 va afis,a pe ecran doar numele de fis, iere (dintre cele primite) care ˆıncep cu
+o cifr˘a.*/
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <string.h>
+
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+void listRec(const char *path, int fd)
+{
+    DIR *dir = NULL;
+    struct dirent *entry = NULL;
+    char fullPath[512];
+    struct stat statbuf;
+    
+
+    dir = opendir(path);
+    if(dir == NULL) {
+        perror("Could not open directory");
+        return;
+    }
+    while((entry = readdir(dir)) != NULL) {
+        if(strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
+        
+            snprintf(fullPath, 512, "%s/%s", path, entry->d_name);
+            if(lstat(fullPath, &statbuf) == 0) {
+                if(S_ISREG(statbuf.st_mode)){
+                    printf("%s\n", entry->d_name);
+                    write(fd, entry->d_name, strlen(entry->d_name));
+                    char x='!';
+                    write(fd, &x, sizeof(char));
+                }
+                
+                
+            }
+            
+        }
+    }
+    closedir(dir);
+}
+
+int main(int argc, char **argv)
+{
+    int fd=-1;
+    if(argc != 2) {
+        fprintf(stderr, "Usage: %s <dir_name>\n", argv[0]);
+        return 1;
+    }
+    mkfifo("fifo", 0600);
+    fd = open("fifo", O_WRONLY);
+    listRec(argv[1], fd);
+    
+    close(fd);
+    unlink("fifo");
+    
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+#define FIFO_NAME "fifo"
+
+int main(void)
+{
+    int fd = -1;
+    char x[500];
+    char string[800];
+    //open, read and close fifo
+    fd = open(FIFO_NAME, O_RDONLY);
+    if(fd == -1) {
+        perror("Could not open FIFO for reading");
+        return 1;
+    }
+   
+    read(fd, &x, 100*sizeof(char));
+    printf("The read value is: %s\n", x);
+  
+    int i=0;
+    int k=0;
+    while(i<100){
+    k=0;
+    while(x[i]!='!' &&i<100){
+        string[k]=x[i];
+        
+        k++;
+        i++;
+    }
+    
+    string[k]=0;
+    if(string[0]<='9'&& string[9]>'0'){
+    printf("%s\n", string);
+    }
+    i++;
+    }
+    close(fd);
+
+    return 0;
+}

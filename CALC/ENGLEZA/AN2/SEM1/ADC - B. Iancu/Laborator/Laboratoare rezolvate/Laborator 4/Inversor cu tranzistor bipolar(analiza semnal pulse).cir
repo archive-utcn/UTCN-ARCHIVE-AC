@@ -1,0 +1,37 @@
+[aimspice]
+[description]
+478
+Inversor cu tranzistor bipolar(analiza semnal pulse)
+R1 in 1 1k
+Rb 1 eb 7k
+Rc out ec 1k
+C1 in 1 15p
+
+C2 0 out 1p
+!*Acest condensator este pus ca sa corecteze iesirea inversorului
+
+Q out 1 0 Tranzistor
+.Model Tranzistor NPN tr=5e-9 tf=8e-9
+
+Vin in 0 pulse(0 5 0 1e-9 1e-9 1e-7 2e-7)
+Vec ec 0 DC 5
+Veb eb 0 DC -1
+
+!*Vin=0V => tranzistorul Q e blocat => Vout=Vec=5V(de la sursa)
+!*Vin=5V => transiztorul Q e saturat => Vce=0.2V => Vout=0.2V(e considerat 0 logic)
+
+[tran]
+1e-9
+5e-7
+X
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 0 6
+2
+v(in)
+v(out)
+[end]

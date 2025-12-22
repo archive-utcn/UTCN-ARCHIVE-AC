@@ -1,0 +1,38 @@
+[aimspice]
+[description]
+338
+Poarta TTL Putere Redusa
+Q11 2 1 A Tranz
+Q12 2 1 B Tranz
+R1 vcc 1 40k
+R2 vcc 3 20k
+R3 0 4 12k
+R4 vcc 5 500
+D1 0 A Dioda
+D2 0 B Dioda
+D3 6 out Dioda
+Q2 3 2 4 Tranz
+Q3 5 3 6 Tranz 
+Q4 out 4 0 Tranz
+.model Tranz NPN tr=1e-4 tf=1e-4
+.model Dioda D
+VCC vcc 0 DC 5
+VA A 0 DC 5
+VB B 0 DC 5 PULSE (0 5 0 1e-10 1e-10 1e-6 2e-6)
+	
+[dc]
+1
+VB
+0
+5
+0.1
+[ana]
+1 1
+0
+1 1
+1 1 0 5
+3
+v(a)
+v(b)
+v(out)
+[end]

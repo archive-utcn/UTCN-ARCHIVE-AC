@@ -1,0 +1,152 @@
+9.1
+
+
+Vocabulary
+
+- Stored function
+
+Try It / Solve It
+
+1.
+- accepta parametri de intrare
+- returneaza exact o valoare
+- trebuie sa existe un return
+- a se evita in functii DML, DDL, COMMIT, ROLLBACK sau alterarea variabilelor globale.
+
+2.
+CREATE FUNCTION full_name
+(p_f_name VARCHAR2,
+ p_l_name VARCHAR2)
+ RETURN VARCHAR2 IS v_full_name varchar2(80);
+BEGIN
+ v_full_name := p_l_name || ', ' || p_f_name;
+ RETURN v_full_name;
+END;
+
+A.
+DECLARE
+ v_res varchar2(80);
+BEGIN
+ v_res := full_name('Tudorel', 'Popa');
+ DBMS_OUTPUT.PUT_LINE(v_res);
+END;
+
+B.
+BEGIN
+ DBMS_OUTPUT.PUT_LINE(full_name('Tudorel', 'Popa'));
+END;
+
+C.
+SELECT first_name, last_name, full_name(first_name, last_name)
+FROM employees
+WHERE department_id=50;
+
+3.
+CREATE FUNCTION func_divide
+(p_num1 NUMBER,
+ p_num2 NUMBER)
+ RETURN NUMBER IS v_divide NUMBER;
+BEGIN
+ v_divide := ROUND(p_num1/p_num2, 2);
+ RETURN v_divide;
+END;
+
+A.
+BEGIN
+ DBMS_OUTPUT.PUT_LINE(func_divide(50, 2));
+END;
+BEGIN
+ DBMS_OUTPUT.PUT_LINE(func_divide(25, 3));
+END;
+
+B.
+ORA-01476: divisor is equal to zero
+
+C.
+CREATE OR REPLACE FUNCTION func_divide
+(p_num1 NUMBER,
+ p_num2 NUMBER)
+ RETURN NUMBER IS v_divide NUMBER;
+BEGIN
+ v_divide := ROUND(p_num1/p_num2, 2);
+ RETURN v_divide;
+EXCEPTION
+WHEN ZERO_DIVIDE THEN RETURN(0);
+END;
+
+D.
+0
+
+4.
+- Intr-o functie nu putem utiliza instructiuni DML(insert, delete, update), iar in proceduri se poate.
+- Functia poate fi chemata printr-o interogatie sql, pe cand procedurile nu pot.
+- Functiile trebuie sa contina clauza RETURN in header-ul functiei, pe cand procedurile nu contin.
+- Functiile trebuie sa returneze exact o valoare, iar procedurile pot returna una, mai multe sau nici o valoare.
+
+5.
+A.
+functia si procedurile returneaza acelasi lucru
+
+B.
+O procedura care returneaza o singura valoare, in cazul nostru numele tarii returnat, este mai indicat sa se rescrie sub forma de functie. Un alt avantaj este ca functia respectiva se poate folosi ca o functie single row si se poate invoca si in clauza Select.
+
+C.
+get_country_name_proc(v_country_id, v_country_name); -- Call 1 - e valid
+v_country_name := get_country_name_func(v_country_id); -- Call 2 - e valid
+v_country_name := get_country_name_proc(v_country_id); -- Call 3 - Nu e valid nu se executa astfel procedurile
+Call 4 -> NU e valid pt ca procedurile nu pot fi chemate intr-un select
+Call 5 -> e valid pt ca functiile nu pot fi chemate intr-un select
+
+6.
+- Functiile pot fi invocate ca parte a expresiilor PL/SQL - pastram valoarea functiei intr-o variablia decalarata intr-un anonymous block
+- Functiile pot fi invocate ca parametru unui alt subprogram.
+- Functiile pot fi invocate ca orice functie single-row intr-un sql statement.
+
+
+7.
+CREATE FUNCTION reverse_string(p_sir VARCHAR2)
+RETURN VARCHAR2
+IS i int;
+v_character CHAR;
+result VARCHAR2(50) := ‘’;
+BEGIN
+result := NULL;
+i := LENGTH(p_sir);
+LOOP
+result := result || SUBSTR(p_sir, i, 1);
+i := i - 1;
+EXIT WHEN i = 0;
+END LOOP;
+return result;
+END;
+
+8.
+realizeaza inversarea stringului din tabelele respective
+
+SELECT last_name, reverse_string(last_name)
+FROM employees; 
+
+Abel 		lebA
+Davies 		seivaD
+De Haan 	naaH eD
+Ernst 		tsnrE
+Fay		 yaF
+Gietz 		zteiG
+Grant 		tnarG
+Hartstein 	nietstraH
+Higgins 	sniggiH
+Hunold 		dlonuH
+
+SELECT country_name, reverse_string(country_name)
+FROM wf_countries; 
+
+Canada		 adanaC
+Republic of Costa Rica 		aciR atsoC fo cilbupeR
+Republic of Cape Verde 		edreV epaC fo cilbupeR
+Greenland 			dnalneerG
+Dominican Republic		 cilbupeR nacinimoD
+State of Eritrea 		aertirE fo etatS
+Federal Democratic Republic of Ethiopia  	aipoihtE fo cilbupeR citarcomeD laredeF
+The Holy See (State of the Vatican City) 	)ytiC nacitaV eht fo etatS( eeS yloH ehT
+Kingdom of Spain 		niapS fo modgniK
+Republic of San Marino 		oniraM naS fo cilbupeR

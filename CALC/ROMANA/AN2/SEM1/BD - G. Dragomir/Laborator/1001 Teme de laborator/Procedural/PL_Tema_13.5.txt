@@ -1,0 +1,33 @@
+Try it/ Solve it:
+1.SELECT tigger_name, tiggering_event, tigger_type, table_name
+FROM USER_TRIGGERS;
+
+2.ALTER TRIGGER emp_audit_trigg DISABLE;
+ New status is DISABLED.
+
+3.SELECT trigger_body
+FROM USER_TRIGGERS
+WHERE trigger_name='EMP_AUDIT_TRIGG';
+
+BEGIN
+IF INSERTING THEN
+INSERT INTO audit_table (action, employee_id) VALUES
+('Inserted', :OLD.employee_id);
+ELSE IF DELETING THEN
+INSERT INTO audit_table (action, employee_id) VALUES
+('Deleted', :OLD.employee_id);
+END IF;
+END;
+
+4.DROP TRIGGER EMP_AUDIT_TRIGG;
+
+5.CREATE OR REPLACE PROCEDURE enable_proc IS
+ CURSOR enable_cur IS
+ SELECT trigger_name
+ FROM USER_TRIGGERS
+ WHERE trigger_status='DISABLED';
+BEGIN
+ FOR v_enable IN enable_cur LOOP
+ ALTER TRIGGER v_enable.trigger_name ENABLE;
+ END LOOP;
+END;

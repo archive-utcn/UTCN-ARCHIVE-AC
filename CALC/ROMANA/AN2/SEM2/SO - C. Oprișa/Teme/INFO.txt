@@ -1,0 +1,5 @@
+﻿Am pus temele pe care le-am primit eu anul trecut ca să vedeți un model. Vă sugerez să nu bâlbâiți laboratorul deoarece se strânge foarte multă materie și rezolvarea temelor ia destul de mult timp (1 săptămână până la 2 săptămâni dacă lucrezi 2-3 ore în fiecare zi)
+
+Pentru rezolvarea lor trebuie să vă puneți Linux. Am scris undeva prin folderul de SO cum să vă puneți Dual Boot sau mașină virtuală.
+
+Nu trebuie să știți Python pentru a rula testele. Doar scrieți în terminal(după ce ați navigat în folderul corespunzător): python tester.py.

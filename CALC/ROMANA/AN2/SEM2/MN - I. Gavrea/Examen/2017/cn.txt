@@ -1,0 +1,49 @@
+Biletul 3:
+1.Teorema de medie a diferentei divizate (Cauchy)
+2.Monotonia si convexitatea functiei lui Bernstein
+3.integrala de la a la b din f(x)*Pn(x) unde Pn(x)=xla n ... este polinomul lui Legendre
+
+Biletul 5:
+1. Problema interpolarii. Formula lui Aitken.
+2. Ordinul de complexitate a lui Newton (sau ceva de genul ...cursul 6)
+3. Integrala de la A la B din dinozaur, mai mic sau egal cu alt dinozaur.
+
+1.Interpolarea in varianta Newton
+2.Metoda Newton Fourier
+3.Integrala de la A la B din dinozaur, mai mic sau egal cu alt dinozaur. Demonstratie.
+
+1) Proprietatea de extrem pentru splinuri cubice
+2)Teorema Popoviciu-Bohman-Korovkin
+3) Fie (semn rezistenta) se include in R_la_puterea_d o multime compacta, f apartine C(semn rezistenta). Aratati ca exista un sir de polinoame (R_la_putere_n)_jos_linga_paranteza_n>=1 , astfel ca lim_n_tinde_la infinit de || f- Pn||jos_aici_semn_infinit = 0
+
+Biletul 3
+1. Formula Trapezelor
+2. Metoda Runge - Kutta de ordinul 3
+3. Sa se arate ca Ln = Bn o Bn, n - natural, unde Bn este operatorul lui Bernestein este un operator de aproximare pe C[0,1]. Pastreaza Ln convexitatea?
+
+
+Biletul 2
+1. Popoviciu - Bohman - Vorovkin
+2. Proprietatea extremala a functiilor spline cubice
+3. (cine stie aici sa completeze)
+
+
+Biletul 1
+1. Metoda lui Newton
+2. Modulul de continuitate
+3. Prima problema din lista care ne-a dat-o!
+(Sa se arate ca polinomul lui Lagrange..poate fi scris sub forma...)
+
+
+Biletul 5
+1. Metoda Coardei
+2. Polinomul lui Hermite pe noduri duble
+3. Aratati ca multimea tuturor polinoamelor trigonometrice e densa in spatiul
+functiilor continue, periodice de perioada 2pi!
+
+
+Biletul 4
+1. Scrierea unui polinom in baza Bernstein
+Algoritmul Casteljau
+2. Teorema de media la diferente divizate
+3. Splinul de ord 1 poate fi scris sub forma(si aici trebuie completat)

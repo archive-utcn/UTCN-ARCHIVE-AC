@@ -1,0 +1,71 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *             Student Version 5.2          *
+                 *                                           *
+                 *********************************************
+
+	Date: Sun Jan 04 17:46:39 2009
+	Circuit File: D:\AN 2 Calculatoare\CAN\Rezolvari\Lab3\Stabilizator_Zenner.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  Redresor cu filtru
+     2:  D1 1 2 dioda	
+     3:  D2 0 1 dioda
+     4:  D3 0 3 dioda
+     5:  D4 3 2 dioda
+     6:  .MODEL dioda D
+     7:  Dz 0 2 diodaz
+     8:  .MODEL diodaz D
+     9:  C1 2 0 3mf
+    10:  R1 2 0 100
+    11:  Vin 3 1 SIN(0 10 50 0 0)
+    12:  .tran 1e-6 1e-3 0 1e-6
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-6
+	Final time .......... : 1e-3
+	Display start time .. : 0
+	Maximum step size ... : 1e-6
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 2024
+	Number of iterations for transient analysis....: 2014
+	Total number of timepoints.....................: 1008
+	Number of timepoints accepted..................: 1008
+	Number of timepoints rejected..................: 0
+	Total analysis time (sec)......................: 0.094
+	Transient analysis time (sec)..................: 0.094
+	Time spent in device loading (sec).............: 0
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: Redresor cu filtru
+
+Warning: vin: no DC value, transient time 0 value used
+

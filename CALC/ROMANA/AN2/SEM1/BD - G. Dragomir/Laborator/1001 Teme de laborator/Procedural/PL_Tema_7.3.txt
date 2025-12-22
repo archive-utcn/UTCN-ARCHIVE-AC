@@ -1,0 +1,100 @@
+Practice 7.3
+
+Vocabulary
+1-RAISE_APPLICATION_ERROR
+2-RAISE
+3-user-defined errors
+
+Try It/Solve It 
+	1.DECLARE
+no_rows_updated EXCEPTION;
+BEGIN
+UPDATE excep_emps
+SET salary=10000
+WHERE department_id=20;
+IF SQL%NOTFOUND THEN 
+RAISE no_rows_updated;
+END IF;
+EXCEPTION
+WHEN no_rows_updated THEN
+DBMS_OUTPUT.PUT_LINE('Nu exista departamentul.');
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('ERROR');
+END;
+	2.DECLARE
+no_rows_updated EXCEPTION;
+BEGIN
+UPDATE excep_emps
+SET salary=10000
+WHERE department_id=40;
+IF SQL%NOTFOUND THEN 
+RAISE no_rows_updated;
+END IF;
+EXCEPTION
+WHEN no_rows_updated THEN
+RAISE_APPLICATION_ERROR(-20202,'Nu exista departamentul.');
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('ERROR');
+END;
+	3. DECLARE
+no_rows_updated EXCEPTION;
+BEGIN
+UPDATE excep_emps
+SET salary=10000
+WHERE department_id=40;
+IF SQL%NOTFOUND THEN 
+RAISE_APPLICATION_ERROR(-20202,'NU EXISTA DEPARTAMENTUL');
+END IF;
+END;
+	4. 
+	a) There are 0 employees
+	0 employees were deleted
+	b) DECLARE
+v_dept_id excep_emps.department_id%TYPE;
+v_count NUMBER;
+e_no_emps_in_dept EXCEPTION;
+e_no_rows_deleted EXCEPTION;
+BEGIN
+v_dept_id := 40;
+SELECT COUNT(*) INTO v_count
+FROM excep_emps
+WHERE department_id = v_dept_id;
+IF v_count = 0 THEN
+RAISE e_no_emps_in_dept;
+END IF;
+DBMS_OUTPUT.PUT_LINE('There are ' || v_count || ' employees');
+DELETE FROM excep_emps
+WHERE department_id = v_dept_id;
+IF SQL%NOTFOUND THEN -- or IF SQL%ROWCOUNT = 0 THEN
+RAISE e_no_rows_deleted;
+END IF;
+DBMS_OUTPUT.PUT_LINE(SQL%ROWCOUNT ||' employees were deleted');
+ROLLBACK;
+EXCEPTION
+WHEN e_no_emps_in_dept THEN
+DBMS_OUTPUT.PUT_LINE('Nu sunt angajati.');
+WHEN e_no_rows_deleted THEN
+DBMS_OUTPUT.PUT_LINE('Nu s-au eliminat angajati.');
+END;
+	c) DECLARE
+v_dept_id excep_emps.department_id%TYPE;
+v_count NUMBER;
+e_no_emps_in_dept EXCEPTION;
+e_no_rows_deleted EXCEPTION;
+BEGIN
+v_dept_id := 20;
+SELECT COUNT(*) INTO v_count
+FROM excep_emps
+WHERE department_id = v_dept_id;
+IF v_count = 0 THEN
+RAISE_APPLICATION_ERROR(-20203,'NU SUNT ANGAJATI');
+END IF;
+DBMS_OUTPUT.PUT_LINE('There are ' || v_count || ' employees');
+DELETE FROM excep_emps
+WHERE department_id = v_dept_id;
+IF SQL%NOTFOUND THEN
+RAISE_APPLICATION_ERROR(-20204,'NU S-A STERS NICIUN ANGAJAT');
+END IF;
+DBMS_OUTPUT.PUT_LINE(SQL%ROWCOUNT ||' employees were deleted');
+ROLLBACK; 
+END;

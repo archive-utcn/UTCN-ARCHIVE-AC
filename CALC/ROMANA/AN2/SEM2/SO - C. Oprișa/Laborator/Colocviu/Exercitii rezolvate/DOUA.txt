@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include<stdlib.h>
+#include <wait.h>
+#include <pthread.h>
+#include <string.h>
+#include <semaphore.h>
+#include <sys/mman.h>
+#include <dirent.h>
+
+int main(int argc, char ** argv)
+{
+    char *folder = argv[1];
+
+    int fd[2];
+    pipe(fd);
+
+    if(fork()!=0)
+    {
+        close(fd[0]);
+        DIR *dir =NULL;
+        struct dirent *entry = NULL;
+        struct stat statbuf;
+        dir=opendir(folder);
+        char path[512]={0};
+        while((entry=readdir(dir))!=NULL)
+        {
+            if(strcmp(entry->d_name,".")!=0 && strcmp(entry->d_name,"..")!=0)
+            {
+                snprintf(path,512,"%s/%s",folder,entry->d_name);
+                lstat(path,&statbuf);
+                if(S_ISREG(statbuf.st_mode))
+                {
+                    int n = strlen(entry->d_name);
+                    int size = (int)statbuf.st_size;
+                    //printf("Parintele scrie: %d %s %d\n",n,entry->d_name,size);
+                    write(fd[1],&n,sizeof(n));
+write(fd[1],entry->d_name,n);
+                    write(fd[1],&size,sizeof(int));
+                }
+            }
+        }
+        int n=-1;
+        write(fd[1],&n,sizeof(n));
+        wait(NULL);
+        closedir(dir);
+        close(fd[1]);
+    }
+    else
+    {
+        close(fd[1]);
+        int n;
+        char name[512]={0};
+        int size=0;
+        read(fd[0],&n,sizeof(int));
+        while(n!=-1)
+        {
+            read(fd[0],&name,n);
+            name[n]=0;
+            read(fd[0],&size,sizeof(size));
+            printf("%s %d\n",name,size);
+            read(fd[0],&n,sizeof(n));
+        }
+        close(fd[0]);
+    }
+}

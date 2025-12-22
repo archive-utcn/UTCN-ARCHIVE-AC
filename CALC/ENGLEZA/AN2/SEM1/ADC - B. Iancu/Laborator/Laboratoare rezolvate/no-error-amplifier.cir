@@ -1,0 +1,44 @@
+[aimspice]
+[description]
+327
+REACTION REGULATOR WITH NO ERROR AMPLIFIER
+D1 in1 out diode1
+D2 0 in1 diode1
+D3 0 in2 diode1
+D4 in2 out diode1
+.model diode1 d tt=1e-9
+r1 out1 0 100
+c1 out 0 1e-3
+
+dz 0 z diode2
+r2 out z 220
+q1 out z out1 transistor
+.model transistor npn tr=5e-9 tf=8e-9
+.model diode2 d bv=5.7
+VIN IN1 IN2 DC 5 SIN (0 10 50 0 0)
+
+[tran]
+1e-9
+5e-2
+X
+X
+0
+[ana]
+4 2
+0
+1 1
+1 1 -2 10
+5
+v(in1)
+v(out)
+v(in2)
+v(out1)
+v(z)
+0
+1 1
+1 1 -2 10
+3
+v(in1)
+v(out)
+v(in2)
+[end]

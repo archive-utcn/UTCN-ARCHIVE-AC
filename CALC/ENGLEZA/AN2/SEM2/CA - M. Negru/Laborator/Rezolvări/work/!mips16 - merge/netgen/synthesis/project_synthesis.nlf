@@ -1,0 +1,20 @@
+Release 8.2i - netgen I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim project.ngc project_synthesis.v  
+
+Reading design 'project.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file
+'C:\Users\Platon\Documents\University\an2_sem2\CA\laboratory\work\MIPS16\netgen\
+synthesis\project_synthesis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 111492 kilobytes

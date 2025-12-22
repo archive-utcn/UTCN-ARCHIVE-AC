@@ -1,0 +1,273 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+criet, i un program care primes, te ca argument ˆın linia de comand ̆a calea spre un folder,
+numele unui fis, ier s, i un string. Programul va c ̆auta recursiv ˆın folder fis, ierele cu numele
+dat, ce cont, in string-ul primit ca al treilea argument.*/
+
+void search_files(const char *folder, const char *filename, const char *string) {
+    DIR *dir;
+    struct dirent *entry;
+    struct stat statbuf;
+    char path[512];
+
+    dir = opendir(folder);
+    if (dir == NULL) {
+        perror("Could not open directory");
+        return;
+    }
+
+    while ((entry = readdir(dir)) != NULL) {
+        if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0) {
+            snprintf(path, sizeof(path), "%s/%s", folder, entry->d_name);
+            lstat(path, &statbuf);
+
+            if (S_ISDIR(statbuf.st_mode)) {
+                // Recursively search subdirectories
+                search_files(path, filename, string);
+            } else if (S_ISREG(statbuf.st_mode)) {
+                if (strcmp(entry->d_name, filename) == 0) {
+                    if (fork() == 0) {
+                        // Child process
+                        execl("/bin/grep", "grep", string, path, NULL);
+                        perror("execl failed");
+                        exit(1);
+                    } else {
+                        // Parent process
+                        wait(NULL);
+                    }
+                }
+            }
+        }
+    }
+
+    closedir(dir);
+}
+
+int main(int argc, char **argv) {
+    if (argc < 4) {
+        printf("Usage: %s <folder> <filename> <string>\n", argv[0]);
+        return 1;
+    }
+
+    const char *folder = argv[1];
+    const char *filename = argv[2];
+    const char *string = argv[3];
+
+    search_files(folder, filename, string);
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include<stdlib.h>
+#include <wait.h>
+#include <pthread.h>
+#include <string.h>
+#include <semaphore.h>
+#include <sys/mman.h>
+#include <dirent.h>
+/*
+Scrieti un program care primeste un string si un folder ca argumente din linia de comanda.
+ Programul va cauta acel string in toate fisierele existente si apol va printa pe ecran liniile in care a fost gasit.
+*/
+
+int main(int argc, char **argv)
+{
+    char *string = argv[1];
+    char *folder = argv[2];
+
+        DIR *dir=NULL;
+        struct dirent *entry=NULL;
+        struct stat statbuf;
+        dir=opendir(folder);
+        if(dir == NULL) {
+        perror("Could not open directory");
+        return 1;
+    	}
+        while((entry=readdir(dir))!=NULL)
+        {
+            if(strcmp(entry->d_name,".")!=0 && strcmp(entry->d_name,"..")!=0)
+            {
+            
+                char path[512]={0};
+                snprintf(path,512,"%s/%s",folder,entry->d_name);
+                lstat(path,&statbuf);
+                if(S_ISREG(statbuf.st_mode))
+                {
+                printf("daaaa");
+                    if(fork()==0)
+                        execl("/bin/grep","grep",string,path,NULL);//cauta sirul in//de fisiere
+                    else
+                        wait(NULL);
+                }
+            }
+        }
+        return 0;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Scrieti un program care
+• primeste numele unui director ca parametru in linia de comandã si verifica dacã acesta existã si este intr-adevar un director
+• parcurge nerecursiv directorul, afisând numele tuturor fisierelor din acesta (doar fisiere, nu si subdirectoare)
+• pentru fiecare fisier, se va afisa numárul linilor din el, cu ajutorul comenzi wc -1, folosind fork0 si exec
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int listDir(const char* path)
+{
+DIR* dir=NULL;
+struct dirent* entry=NULL;
+char filePath[512];
+struct stat statbuf;
+dir=opendir(path);
+if(dir == NULL) {
+        perror("Could not open directory");
+        return -1;
+    }
+while((entry=readdir(dir))!=NULL)
+{
+if(strcmp(entry->d_name,".")!=0 && strcmp(entry->d_name,"..")!=0)
+            {
+	snprintf(filePath,512,"%s/%s",path,entry->d_name);
+	if(lstat(filePath, &statbuf) == 0)
+	 {
+           if (S_ISREG(statbuf.st_mode) && !S_ISDIR(statbuf.st_mode))//afisare fisiere, nu si directoare
+            {
+                printf("%s\n", entry->d_name);
+                if (fork() == 0) {
+        		// Child process
+      		  execlp("/bin/wc", "wc", "-l", filePath, NULL);
+    		} else {
+     		   // Parent process
+      		  wait(NULL);  
+ 	        }
+        } 
+        }
+        else 
+        {
+            printf("[err] ");
+        }
+        }
+}
+}
+
+int main(int argc, char **argv)
+{
+if(argc != 2) {
+        fprintf(stderr, "Usage: %s <dir_name>\n", argv[0]);
+        return 1;
+    }
+    if(listDir(argv[1]) == 0) {
+        printf("The directory was listed successfully.\n");
+    } else {
+        printf("The were some erorrs listing the directory.\n");
+    }
+return 0;
+}
+/*
+Scrieti un program care primeste din linia de comanda calea catre un director si apoi N string-uri.
+ Programul va returna toate fisierele din cel director care contin oricare din acele string-uri urmat
+ de string-ul gasit in acel fisier. Pentru punctaj maxim se va deschide cate un thread pentru fiecare 
+fisier.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <pthread.h>
+
+#define MAX_PATH_LENGTH 512
+#define MAX_STRING_LENGTH 256
+#define MAX_FILES 100
+
+typedef struct {
+    char file_path[MAX_PATH_LENGTH];
+    char search_string[MAX_STRING_LENGTH];
+} ThreadParams;
+
+void* search_file(void* arg) {
+    ThreadParams* params = (ThreadParams*)arg;
+
+    FILE* file = fopen(params->file_path, "r");
+    if (file == NULL) {
+        perror("Eroare la deschiderea fișierului");
+        pthread_exit(NULL);
+    }
+
+    char line[MAX_STRING_LENGTH];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        if (strstr(line, params->search_string) != NULL) {
+            printf("%s: %s", params->file_path, line);
+            break;
+        }
+    }
+
+    fclose(file);
+    pthread_exit(NULL);
+}
+
+int main(int argc, char* argv[]) {
+    if (argc < 3) {
+        printf("Argumente insuficiente. Utilizare: ./program director string1 string2 ... stringN\n");
+        return 1;
+    }
+
+     char* directory = argv[1];
+    int numSearchStrings = argc - 2;
+    char** searchStrings = &argv[2];
+
+    DIR* dir = opendir(directory);
+    if (dir == NULL) {
+        fprintf(stderr, "Could not open directory: %s\n", directory);
+        return 1;
+    }
+
+    struct dirent* entry;
+    while ((entry = readdir(dir)) != NULL) {
+        if (entry->d_type == DT_REG) {  // Check if it's a regular file
+            char filename[MAX_FILENAME_LENGTH];
+            snprintf(filename, sizeof(filename), "%s/%s", directory, entry->d_name);
+
+            pthread_t thread;
+            ThreadArgs* args = malloc(sizeof(ThreadArgs));
+            strcpy(args->filename, filename);
+
+            for (int i = 0; i < numSearchStrings; i++) {
+                strcpy(args->searchString, searchStrings[i]);
+                pthread_create(&thread, NULL, searchFile, (void*) args);
+                pthread_join(thread, NULL);
+            }
+
+            free(args);
+        }
+    }
+
+    closedir(dir);
+    return 0;
+
+    return 0;
+}
+

@@ -1,0 +1,29 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Platon/Documents/University/an2_sem2/CA/tema1/mpg.vhd" in Library work.
+Architecture behavioral of Entity mpg is up to date.
+Compiling vhdl file "C:/Users/Platon/Documents/University/an2_sem2/CA/tema1/reg_file.vhd" in Library work.
+Architecture behavioral of Entity reg_file is up to date.
+Compiling vhdl file "C:/Users/Platon/Documents/University/an2_sem2/CA/tema1/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Platon/Documents/University/an2_sem2/CA/tema1/display.vhd" in Library work.
+Architecture behavioral of Entity display is up to date.
+Compiling vhdl file "C:/Users/Platon/Documents/University/an2_sem2/CA/tema1/project.vhd" in Library work.
+Architecture behavioral of Entity project is up to date.
+CPU : 0.13 / 0.28 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 161320 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

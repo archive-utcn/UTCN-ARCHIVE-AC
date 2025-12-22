@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.embed.swing.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="453.0" prefWidth="607.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Profil">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="598.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="25.0" prefHeight="391.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" fillHeight="false" layoutX="14.0" layoutY="35.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox layoutX="14.0" layoutY="35.0" prefHeight="316.0" prefWidth="136.0" spacing="2.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="55.0" text="Nume " />
+                                          <TextField fx:id="numeTextBox" prefHeight="25.0" prefWidth="107.0" />
+                                          <Label text="Prenume" />
+                                          <TextField fx:id="prenumeTextBox" prefHeight="25.0" prefWidth="108.0" />
+                                          <Label text="CNP" />
+                                          <TextField fx:id="cnpTextBox" prefHeight="25.0" prefWidth="108.0" />
+                                          <Label text="Data nasterii" />
+                                          <DatePicker fx:id="dataNastereDatePicker" />
+                                          <Label text="Sex" />
+                                          <ChoiceBox fx:id="sexChoiceBox" prefHeight="25.0" prefWidth="137.0" />
+                                          <Label text="Grupa Sanguina" />
+                                          <ChoiceBox fx:id="grupaSanguinaChoiceBox" prefHeight="25.0" prefWidth="136.0" />
+                                          <Button fx:id="saveButton" mnemonicParsing="false" onAction="#salveazaSetari" text="Salveaza">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#logOut" text="Log out" />
+                                       </children>
+                                    </VBox>
+                                    <ImageView fx:id="keepCalmImage" fitHeight="354.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                     </padding>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Cantitate">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="598.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="391.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <Pane layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <AreaChart fx:id="statisticaAreaChart" layoutX="205.0" layoutY="12.0" prefHeight="338.0" prefWidth="370.0" title="Cantitate De Sange Donat">
+                                            <xAxis>
+                                              <NumberAxis label="Pachet Donat" side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis label="Cantitate" side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                          <ToggleButton fx:id="doneazaButton" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#doneazaSange" prefHeight="31.0" prefWidth="98.0" text="Doneaza" />
+                                          <ProgressIndicator fx:id="cantitateProgressIndicator" layoutX="14.0" layoutY="136.0" prefHeight="212.0" prefWidth="188.0" progress="0.0" />
+                                          <Label fx:id="timer" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="75.0" style="-fx-background-color: #000000; -fx-border-width: 3; -fx-border-color: grey;" text="00.00" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="15.0" right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <ToggleButton fx:id="bestDonareButton" layoutX="115.0" layoutY="26.0" mnemonicParsing="false" onAction="#bestDonare" prefHeight="31.0" prefWidth="98.0" text="Best Day!" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                     </padding>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Alergii si Boli Venerice">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="598.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="25.0" prefHeight="391.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="14.0" layoutY="35.0" prefHeight="391.0" prefWidth="607.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ScrollPane hbarPolicy="NEVER" prefViewportHeight="356.0" prefViewportWidth="284.0">
+                                       <content>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#salveazaAlergii" prefHeight="25.0" prefWidth="273.0" text="Salveaza Alergii" />
+                                                <Button mnemonicParsing="false" onAction="#stergereAlergii" prefHeight="25.0" prefWidth="273.0" text="Stergere Alergii" />
+                                                <Label prefHeight="18.0" prefWidth="40.0" text="Alergii" />
+                                                <Button mnemonicParsing="false" onAction="#adaugaAlergie" text="Adauga Alergie" />
+                                                <VBox fx:id="alergii" spacing="5.0">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane hbarPolicy="NEVER" prefHeight="356.0" prefViewportHeight="356.0" prefViewportWidth="277.0" prefWidth="286.0">
+                                       <content>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#salveazaBoliVenerice" prefHeight="25.0" prefWidth="273.0" text="Salveaza Boli " />
+                                                <Button mnemonicParsing="false" onAction="#stergereBoli" prefHeight="25.0" prefWidth="273.0" text="Stergere Boli" />
+                                                <Label text="Boli Venerice" />
+                                                <Button mnemonicParsing="false" onAction="#adaugaBoalaVenerica" text="Adauga Boli Venerice" />
+                                                <VBox fx:id="boliVenerice" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                     </padding>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

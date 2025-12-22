@@ -1,0 +1,79 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *             Student Version 5.2          *
+                 *                                           *
+                 *********************************************
+
+	Date: Fri Nov 20 14:25:05 2015
+	Circuit File: D:\CTI2-1\ADC\TTLfig21.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  TTL fig2.1
+     2:  R1 CC 1 4K
+     3:  R2 CC 2 1.6K
+     4:  R4 CC 3 130
+     5:  R3 5 0 1K
+     6:  
+     7:  .MODEL DIODE D TT=1E-9
+     8:  .MODEL TRANZ NPN TR=5E-9 TF=8E-9
+     9:  D1 0 A DIODE
+    10:  D2 0 B DIODE
+    11:  D 6 4 DIODE
+    12:  
+    13:  Q1A 7 1 A TRANZ
+    14:  Q1B 7 1 B TRANZ
+    15:  Q2 2 7 5 TRANZ
+    16:  Q3 3 2 6 TRANZ
+    17:  Q4 4 5 0 TRANZ
+    18:  
+    19:  VCC CC O DC 5
+    20:  VA A 0 DC 5
+    21:  VB B 0 DC 5  PULSE(0 5 0 1E-9 1E-9 1E-7 2E-7)
+    22:  .tran 1e-10 5e-7
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-10
+	Final time .......... : 5e-7
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 554
+	Number of iterations for transient analysis....: 407
+	Total number of timepoints.....................: 129
+	Number of timepoints accepted..................: 124
+	Number of timepoints rejected..................: 5
+	Total analysis time (sec)......................: 0.04
+	Transient analysis time (sec)..................: 0.036
+	Time spent in device loading (sec).............: 0.007
+	Time spent in L-U decomposition (sec)..........: 0.002
+	Time spent in matrix reordering (sec)..........: 0.001
+	Time spent in matrix solving (sec).............: 0.002
+	Time spent in transient L-U decomposition (sec): 0.002
+	Time spent in transient matrix solving (sec)...: 0.001
+
+***************************  Kernel Messages  *****************************
+
+Circuit: TTL fig2.1
+
+Warning: Node o has less than two connections
+

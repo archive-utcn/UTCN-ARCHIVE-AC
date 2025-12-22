@@ -1,0 +1,218 @@
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+netgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim project.ngc project_synthesis.v
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+netgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim project.ngc project_synthesis.v
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+netgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim project.ngc project_synthesis.v
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+netgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim project.ngc project_synthesis.v
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "project.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+netgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim project.ngc project_synthesis.v
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd
+xst -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -ifn project.xst -ofn project.syr
+ngdbuild -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -dd _ngo -nt timestamp -uc "mips16.ucf" -p xc3s100e-tq144-4 "project.ngc" project.ngd
+map -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o project_map.ncd project.ngd project.pcf
+par -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -w -intstyle ise -ol std -t 1 project_map.ncd project.ncd project.pcf
+trce -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -e 3 -l 3 -s 4 -xml project project.ncd -o project.twr project.pcf -ucf mips16.ucf
+bitgen -ise "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.ise" -intstyle ise -f project.ut project.ncd

@@ -1,0 +1,42 @@
+[aimspice]
+[description]
+484
+Laborator SI-NU NMOS 2 pentru care grila este legata la vgg si 
+*substratul la iesire
+.subckt si-nu a b vdd vgg vo
+m2 vdd vgg vo vo tranzistornmos2 l=50e-6 w=1e-6
+.model tranzistornmos2 nmos vto=4
+m1a vo a 1 1 tranzistornmos1 l=1e-6 w=1e-6
+m1b 1 b 0 0 tranzistornmos1 l=1e-6 w=1e-6
+.model tranzistornmos1 nmos vto=3
+.ends
+x1 a b vdd vgg o si-nu
+vgg vgg 0 18.8
+vdd vdd 0 14.8
+va a 0 dc 15 pulse(0.2 14.8 0 1e-2 1e-2 1 2)
+vb b 0 dc 15 pulse(0.2 14.8 0 1e-2 1e-2 1.9 4)
+
+ 
+[options]
+1
+Itl4 10e1
+[dc]
+1
+va
+0
+15
+1
+[tran]
+1e-3
+4
+X
+X
+0
+[ana]
+1 1
+0
+1 1
+1 1 0 5
+1
+v(o)
+[end]

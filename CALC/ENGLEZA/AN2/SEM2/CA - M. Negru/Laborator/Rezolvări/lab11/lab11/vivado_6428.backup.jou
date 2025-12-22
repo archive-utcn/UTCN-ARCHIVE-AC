@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Tue May 24 02:07:19 2016
+# Process ID: 6428
+# Current directory: C:/Users/mogad/Desktop/lab11
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15484 C:\Users\mogad\Desktop\lab11\lab11.xpr
+# Log file: C:/Users/mogad/Desktop/lab11/vivado.log
+# Journal file: C:/Users/mogad/Desktop/lab11\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mogad/Desktop/lab11/lab11.xpr

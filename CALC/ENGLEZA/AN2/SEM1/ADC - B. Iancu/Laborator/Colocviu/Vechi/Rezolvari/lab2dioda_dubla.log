@@ -1,0 +1,67 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *             Student Version 5.2          *
+                 *                                           *
+                 *********************************************
+
+	Date: Wed Oct 29 17:28:56 2008
+	Circuit File: E:\Faculta\An2\CAN Peculea\lab2dioda_dubla.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  dioda laborator 2
+     2:  D1 1 2 dio
+     3:  D2 0 1 dio
+     4:  D3 0 3 dio
+     5:  D4 3 2 dio
+     6:  .MODEL dio d
+     7:  RL 0 2 100
+     8:  Vin 1 3 sin(0 5 2k 0 0)
+     9:  
+    10:  .tran 1e-3 5e-3
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-3
+	Final time .......... : 5e-3
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 371
+	Number of iterations for transient analysis....: 364
+	Total number of timepoints.....................: 61
+	Number of timepoints accepted..................: 60
+	Number of timepoints rejected..................: 1
+	Total analysis time (sec)......................: 0.047
+	Transient analysis time (sec)..................: 0.031
+	Time spent in device loading (sec).............: 0
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: dioda laborator 2
+
+Warning: vin: no DC value, transient time 0 value used
+

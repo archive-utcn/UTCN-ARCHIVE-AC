@@ -1,0 +1,43 @@
+//6. Fie Pi procesul ce determina frecventa de aparitie a  literei "i" 
+//intr-un text dat. Sa se scrie un program care afiseaza o statistica 
+//relativ la frecventa de  aparitie a fiecarei litere.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main()
+{
+char sir1[]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+char *sir2[200];
+int i,j,c=0;
+int pid;
+char t;
+
+printf("dati textul:\n");
+scanf("%s",&sir2);
+
+for(i=0;i<26;i++)
+ {
+ pid=fork();
+ if(pid<0)
+  printf("Eroare la FORK!");
+ if(pid==0)
+  {
+  j=0;
+  while(sir2[j]!="")
+   {
+   t=sir2[j];
+   if(t==sir1[i])
+    c++;
+   j++;
+   }
+  printf("%c apare de %d\n",sir1[i],c);
+  }
+ if(pid>0)
+  {
+  wait(0);
+  exit(1);
+  }
+ }
+}

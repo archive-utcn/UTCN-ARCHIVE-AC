@@ -1,0 +1,7 @@
+1.diagramele de activitate concepte si exemple
+2.tehnici downcasting
+3 interfete si clase abstracte
+4 interfete si coliziuni de nume
+5. metoda equals(sablon de cod)
+6. DP factory        
+7.tehnici de performanta legate de verificarea argumentelor metodelor

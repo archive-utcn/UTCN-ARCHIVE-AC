@@ -1,0 +1,20 @@
+11.2
+Vocabulary
+1. UTL_FILE package
+2. DBMS_OUTPUT package
+3. UTL_MAIL package
+
+Try it / Solve it
+1. IN ORACLE DOCS
+2. DECLARE 
+   DBA_OBJECTS;
+3. The command line will display, and statement will be processed.
+6. UTL_FILE is an Oracle supplied package which is used for file operations (read and write) in conjunction with the underlying operating system.
+   UTL_FILE works for both server and client machine systems.
+7. A. Errot at line 3: PLS-00103: Encountered the symbol "UTL_FILE" when expecting one of the following:
+      := . ( @ % ;
+      The symbol ":=" was substituted for "UTL_FILE" to continue
+8. INVALID_PATH
+   INVALID_MODE
+   READ_ERROR
+   WRITE_ERROR

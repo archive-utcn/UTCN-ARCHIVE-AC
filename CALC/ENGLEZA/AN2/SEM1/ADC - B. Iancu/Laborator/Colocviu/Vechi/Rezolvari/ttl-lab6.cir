@@ -1,0 +1,57 @@
+[aimspice]
+[description]
+422
+TTL 2.7
+.subckt nand a b vcc o
+q11 2 1 a tr
+q12 2 1 b tr
+q2 3 2 4 tr
+q3 5 3 6 tr
+q4 o 4 0 tr
+d3 6 o di
+d1 0 b di
+d2 0 a di
+r1 vcc 1 4k
+r2 vcc 3 1.6k
+r3 4 0 1k
+r4 vcc 5 130
+.ends
+.model tr npn tr=5e-9 tf=8e-9
+.model di d tt=5e-9
+x1 a b vcc o nand
+va a 0 dc 5 pulse(0 5 0 1e-10 1e-10 0.2e-6 0.4e-6)
+vb b 0 dc 5
+vcc vcc 0 5
+r1 vcc 1 400
+d1 1 2 di
+d2 2 3 di
+d3 3 0 di
+d4 1 o di
+c1 o 0 15p
+
+
+
+
+
+
+[dc]
+1
+va
+0
+5
+0.01
+[tran]
+1e-10
+0.5e-6
+X
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 0 5
+2
+v(a)
+v(o)
+[end]

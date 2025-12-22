@@ -1,0 +1,31 @@
+Design Route Status
+                                               :      # nets :
+   ------------------------------------------- : ----------- :
+   # of logical nets.......................... :         121 :
+       # of nets not needing routing.......... :          59 :
+           # of internally routed nets........ :          59 :
+       # of routable nets..................... :          62 :
+           # of fully routed nets............. :          54 :
+       # of nets with routing errors.......... :           8 :
+           # of nets with some unrouted pins.. :           8 :
+   ------------------------------------------- : ----------- :
+
+
+Nets with Routing Errors:
+  led_OBUF[0]
+    Unrouted Pin: tmp_reg[0]/Q
+  led_OBUF[1]
+    Unrouted Pin: tmp_reg[1]/Q
+  led_OBUF[2]
+    Unrouted Pin: tmp_reg[2]/Q
+  led_OBUF[3]
+    Unrouted Pin: tmp_reg[3]/Q
+  led_OBUF[4]
+    Unrouted Pin: tmp_reg[4]/Q
+  led_OBUF[5]
+    Unrouted Pin: tmp_reg[5]/Q
+  led_OBUF[6]
+    Unrouted Pin: tmp_reg[6]/Q
+  led_OBUF[7]
+    Unrouted Pin: tmp_reg[7]/Q
+

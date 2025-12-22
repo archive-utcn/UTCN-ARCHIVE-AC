@@ -1,0 +1,248 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.7.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 11 Noi 2014 la 09:52
+-- Server version: 5.6.20
+-- PHP Version: 5.5.15
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `vanzari`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `beneficiar`
+--
+
+CREATE TABLE IF NOT EXISTS `beneficiar` (
+  `Cod_B` int(11) NOT NULL,
+  `Nume` varchar(255) NOT NULL,
+  `Oras` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Salvarea datelor din tabel `beneficiar`
+--
+
+INSERT INTO `beneficiar` (`Cod_B`, `Nume`, `Oras`) VALUES
+(1, 'Serv SIM', 'Sibiu'),
+(2, 'ARIPA Light', 'Covasna'),
+(3, 'E Agricultura', 'Caras-Severin'),
+(4, 'NET IT', 'Olt'),
+(5, 'Fier CTC', 'Galati'),
+(6, 'RAF ALI', 'Neamt'),
+(7, 'FIRENZE', 'Bacau'),
+(8, 'Quinta Essenta', 'Arad'),
+(9, 'Swietelsky Construct', 'Braila'),
+(10, 'IRIDEX GROUP SI', 'Harghita');
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `cereri`
+--
+
+CREATE TABLE IF NOT EXISTS `cereri` (
+  `Cod_B` int(11) NOT NULL,
+  `Cod_P` int(11) NOT NULL,
+  `Pret` int(11) NOT NULL,
+  `Cantitate` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Salvarea datelor din tabel `cereri`
+--
+
+INSERT INTO `cereri` (`Cod_B`, `Cod_P`, `Pret`, `Cantitate`) VALUES
+(3, 3, 300, 12),
+(3, 5, 300, 20),
+(6, 2, 300, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `furnizor`
+--
+
+CREATE TABLE IF NOT EXISTS `furnizor` (
+  `Cod_F` int(11) NOT NULL,
+  `Nume` varchar(255) NOT NULL,
+  `Oras` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Salvarea datelor din tabel `furnizor`
+--
+
+INSERT INTO `furnizor` (`Cod_F`, `Nume`, `Oras`) VALUES
+(1, 'Dacia Service', 'Cluj'),
+(2, 'Mercury Lighting', 'Suceava'),
+(3, 'Agromec AG', 'Targu Mures'),
+(4, 'Computer Sharing', 'Bucuresti'),
+(5, 'Metal Brasov', 'Brasov'),
+(6, 'Interfrig', 'Prahova'),
+(7, 'Leoni Wiring', 'Vaslui'),
+(8, 'Remedia', 'Alba Iulia'),
+(9, 'Constructii Feroviare', 'Dambovita'),
+(10, 'Sidor Construct', 'Iasi');
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `oferte`
+--
+
+CREATE TABLE IF NOT EXISTS `oferte` (
+  `Cod_F` int(11) NOT NULL,
+  `Cod_P` int(11) NOT NULL,
+  `Pret` int(11) NOT NULL,
+  `Cantitate` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Salvarea datelor din tabel `oferte`
+--
+
+INSERT INTO `oferte` (`Cod_F`, `Cod_P`, `Pret`, `Cantitate`) VALUES
+(3, 2, 250, 10),
+(8, 5, 400, 15);
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `produs`
+--
+
+CREATE TABLE IF NOT EXISTS `produs` (
+  `Cod_P` int(11) NOT NULL,
+  `uM` varchar(40) NOT NULL,
+  `Nume` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Salvarea datelor din tabel `produs`
+--
+
+INSERT INTO `produs` (`Cod_P`, `uM`, `Nume`) VALUES
+(1, 'bucata', 'Bujie'),
+(2, 'bucata', 'Placa video'),
+(3, 'kg', 'Fertilizator'),
+(4, 'kg', 'Cuie'),
+(5, 'kg', 'Cauciuc'),
+(6, 'kg', 'Sulf'),
+(7, 'bucata', 'Electrozi'),
+(8, 'kg', 'Cupru'),
+(9, 'bucata', 'Procesor Intel'),
+(10, 'litri', 'Freon');
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `tranzactii`
+--
+
+CREATE TABLE IF NOT EXISTS `tranzactii` (
+  `Cod_T` int(11) NOT NULL,
+  `Cod_F` int(11) NOT NULL,
+  `Cod_P` int(11) NOT NULL,
+  `Cod_B` int(11) NOT NULL,
+  `Pret` int(11) NOT NULL,
+  `Cantitate` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Salvarea datelor din tabel `tranzactii`
+--
+
+INSERT INTO `tranzactii` (`Cod_T`, `Cod_F`, `Cod_P`, `Cod_B`, `Pret`, `Cantitate`) VALUES
+(1, 5, 8, 1, 250, 15),
+(2, 1, 1, 6, 700, 25),
+(3, 2, 6, 8, 2200, 10),
+(4, 7, 7, 10, 500, 10),
+(5, 5, 4, 9, 1800, 35),
+(6, 4, 2, 4, 3, 1900),
+(7, 9, 8, 5, 4500, 16),
+(8, 10, 10, 7, 1000, 50),
+(9, 3, 5, 2, 2700, 5);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `beneficiar`
+--
+ALTER TABLE `beneficiar`
+ ADD PRIMARY KEY (`Cod_B`);
+
+--
+-- Indexes for table `cereri`
+--
+ALTER TABLE `cereri`
+ ADD PRIMARY KEY (`Cod_B`,`Cod_P`), ADD KEY `Cod_P` (`Cod_P`);
+
+--
+-- Indexes for table `furnizor`
+--
+ALTER TABLE `furnizor`
+ ADD PRIMARY KEY (`Cod_F`);
+
+--
+-- Indexes for table `oferte`
+--
+ALTER TABLE `oferte`
+ ADD PRIMARY KEY (`Cod_F`,`Cod_P`), ADD KEY `Cod_P` (`Cod_P`);
+
+--
+-- Indexes for table `produs`
+--
+ALTER TABLE `produs`
+ ADD PRIMARY KEY (`Cod_P`);
+
+--
+-- Indexes for table `tranzactii`
+--
+ALTER TABLE `tranzactii`
+ ADD PRIMARY KEY (`Cod_T`,`Cod_F`,`Cod_P`,`Cod_B`), ADD KEY `Cod_F` (`Cod_F`), ADD KEY `Cod_P` (`Cod_P`), ADD KEY `Cod_B` (`Cod_B`);
+
+--
+-- Restrictii pentru tabele sterse
+--
+
+--
+-- Restrictii pentru tabele `cereri`
+--
+ALTER TABLE `cereri`
+ADD CONSTRAINT `cereri_ibfk_1` FOREIGN KEY (`Cod_B`) REFERENCES `beneficiar` (`Cod_B`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `cereri_ibfk_2` FOREIGN KEY (`Cod_P`) REFERENCES `produs` (`Cod_P`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Restrictii pentru tabele `oferte`
+--
+ALTER TABLE `oferte`
+ADD CONSTRAINT `oferte_ibfk_1` FOREIGN KEY (`Cod_F`) REFERENCES `furnizor` (`Cod_F`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `oferte_ibfk_2` FOREIGN KEY (`Cod_P`) REFERENCES `cereri` (`Cod_P`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Restrictii pentru tabele `tranzactii`
+--
+ALTER TABLE `tranzactii`
+ADD CONSTRAINT `tranzactii_ibfk_1` FOREIGN KEY (`Cod_F`) REFERENCES `furnizor` (`Cod_F`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `tranzactii_ibfk_2` FOREIGN KEY (`Cod_P`) REFERENCES `produs` (`Cod_P`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `tranzactii_ibfk_3` FOREIGN KEY (`Cod_B`) REFERENCES `beneficiar` (`Cod_B`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

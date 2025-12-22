@@ -1,0 +1,39 @@
+//7. Se da un sir de numere. Sa se calculeze suma cuburilor 
+//acestor numere, astfel incat cubul fiecarui element al 
+//sirului sa fie calculat de cate un proces.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main()
+{
+int n,i;
+int pid;
+int sir[100];
+int cub;
+
+printf("Dati n=");
+scanf("%d",&n);
+printf("Dati elementele sirului:");
+for(i=0;i<n;i++)
+ scanf("%d",&sir[i]);
+
+for(i=0;i<n;i++)
+ {
+ pid=fork();
+ if(pid<0)
+  printf("Eroare la FORK!");
+ if(pid==0)
+  {
+  cub=sir[i]*sir[i]*sir[i];
+  printf("%d la cub=",sir[i]);
+  printf("%d\n",cub);
+  }
+ if(pid>0)
+  {
+  wait(0);
+  exit(1);
+  }
+ }
+}

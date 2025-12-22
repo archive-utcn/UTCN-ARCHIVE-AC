@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1461193517">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="PWROPT-DCP" Name="test_env_pwropt.dcp"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="test_env_drc_opted.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="test_env_timing_summary_routed.pb"/>
+  <File Type="PA-TCL" Name="test_env.tcl"/>
+  <File Type="OPT-DCP" Name="test_env_opt.dcp"/>
+  <File Type="PWROPT-DRC" Name="test_env_drc_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="test_env_placed.dcp"/>
+  <File Type="PLACE-IO" Name="test_env_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="test_env_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="test_env_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="test_env_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="test_env_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="test_env_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="test_env_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="test_env_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="test_env_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="test_env_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="test_env_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="test_env_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="test_env_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="test_env_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="test_env_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="test_env_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="test_env_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="test_env_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="test_env_incremental_reuse_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="test_env_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="test_env_timing_summary_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="test_env.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="test_env_timing_summary_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="test_env.bit"/>
+  <File Type="BG-BIN" Name="test_env.bin"/>
+  <File Type="BITSTR-MSK" Name="test_env.msk"/>
+  <File Type="BITSTR-RBT" Name="test_env.rbt"/>
+  <File Type="BITSTR-NKY" Name="test_env.nky"/>
+  <File Type="BITSTR-BMM" Name="test_env_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="test_env.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="test_env.sysdef"/>
+  <File Type="BG-BGN" Name="test_env.bgn"/>
+  <File Type="BG-DRC" Name="test_env.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/lab02/constraints1.xdc">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab02/constraints1.xdc"/>
+        <Attr Name="ImportTime" Val="1456391720"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/lab02/constraints1.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

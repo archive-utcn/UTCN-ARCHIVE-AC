@@ -1,0 +1,53 @@
+5.5
+
+Vocabulary
+1. FOR UPDATE
+2. NOWAIT
+
+Try it / Solve it
+1. DECLARE
+   CURSOR empcur(p_sal NUMBER) IS  SELECT employee_id, department_id, salary FROM employees WHERE salary < p_sal 
+   FOR UPDATE NOWAIT;
+   v_emp_rec empcur%ROWTYPE;
+   BEGIN
+   FOR v_emp_rec IN empcur(5000)
+   LOOP
+   INSERT INTO proposed_raises(date_proposed, date_approved, employee_id, department_id, original_salary, proposed_new_salary ) 
+   VALUES(SYSDATE, NULL, v_emp_rec.employee_id, v_emp_rec.department_id, v_emp_rec.salary, v_emp_rec.salary*1.05 );
+   END LOOP;
+   COMMIT;
+   END;
+2. SELECT * FROM proposed_raises;
+   DELETE FROM proposed_raises;
+3. 
+	a. DECLARE
+       CURSOR empcur IS 
+       SELECT date_approved FROM proposed_raises FOR UPDATE NOWAIT;
+       v_emp_rec empcur%ROWTYPE;
+       BEGIN
+       OPEN empcur;
+       LOOP
+       FETCH empcur INTO v_emp_rec;
+       EXIT WHEN empcur%NOTFOUND;
+       UPDATE proposed_raises SET date_approved =SYSDATE
+       WHERE CURRENT OF empcur;
+       END LOOP;
+       CLOSE empcur;
+       COMMIT;
+       END; 
+	   
+	b. DECLARE
+       CURSOR empcur IS 
+       SELECT date_approved FROM proposed_raises WHERE department_id = 50 FOR UPDATE NOWAIT;
+       v_emp_rec empcur%ROWTYPE;
+       BEGIN
+       OPEN empcur;
+       LOOP
+       FETCH empcur INTO v_emp_rec;
+       EXIT WHEN empcur%NOTFOUND;
+       DELETE FROM proposed_raises 
+       WHERE CURRENT OF empcur;
+       END LOOP;
+       CLOSE empcur;
+       COMMIT;
+       END;

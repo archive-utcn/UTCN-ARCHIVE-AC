@@ -1,0 +1,175 @@
+scrieti un program care primeste la linia de comanda mai multe cuvinte si creeaza cate un thread pentru 
+procesarea fiecarui cuvant. Threadurile vor calcula cate vocale contine cuvantul primit si vor aduna valoarea
+ obtinuta la o in variabila globala maxDigitSum. Threadul principal va astepta dupa threadurile create si va 
+afisa variabila.Accesul la aceasta variabila trebuie sincronizat.
+*/
+/*#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <pthread.h>
+#define NR_THREADS 8
+#define MAX_NUMBERS 100
+
+/*struct ThreadArgs {
+    int start;
+    int end;
+    int count;
+};
+
+pthread_mutex_t mutex;
+int vowelsCount = 0;
+//int sursa[MAX_NUMBERS];
+//int destinatie[MAX_NUMBERS]
+//int i=0;
+
+void* count_vowels(void* arg) {
+// struct ThreadArgs* args = (struct ThreadArgs*)arg;//pt echitate
+  //  int start = args->start;
+    //int end = args->end;
+
+    char* word = (char*)arg;//int n=*((int*)argv)
+    //unsigned int secunde=(unsigned int)n;
+    //sleep(secunde);
+    int count = 0;
+
+    // Calculează numărul de vocale din cuvânt
+    for (int i = 0; i < strlen(word); i++) {//i=start;i<end;
+        char ch = word[i];
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            {
+             pthread_mutex_lock(&mutex);
+              vowelsCount ++;
+	     //destinatie[i++]=element;
+             pthread_mutex_unlock(&mutex);
+            }
+        }
+    }
+
+    pthread_exit(NULL);
+}
+
+int main(int argc, char* argv[]) {
+    if (argc <= 1) {
+        printf("Nu s-au furnizat argumente.\n");
+        return 1;
+    }
+
+    int n= argc - 1;//int n=1000;
+    pthread_t* threads = (pthread_t*)malloc((argv-1) * sizeof(pthread_t));//threads[NR_THREADS]
+     //struct ThreadArgs thread_args[num_threads];
+    // Citirea numerelor de la linia de comandă
+    for (int i = 1; i < n;i++) {
+        sursa[i - 1] = atoi(argv[i]);
+    }
+    pthread_mutex_init(&mutex, NULL);
+     //int chunk_size = n / num_threads;
+    //int start = 1;
+    //int end = chunk_size;
+    // Crearea și executarea thread-urilor
+    for (int i = 0; i < numCount; i++) {
+	// thread_args[i].start = start;
+        //thread_args[i].end = end;
+        pthread_create(&threads[i], NULL, count_vowels, (void*)argv[i + 1]);//pt numere  (void*)&numbers[i]
+	 start = end + 1;
+        end += chunk_size;
+        if (i == num_threads - 2)
+            end = n;   
+ }
+
+    // Așteptarea finalizării tuturor thread-urilor
+    for (int i = 0; i < numCount; i++) {
+        pthread_join(threads[i], NULL);
+    }
+
+    pthread_mutex_destroy(&mutex);
+
+    printf("Numărul total de vocale: %d\n", vowelsCount);
+
+    free(threads);
+
+    return 0;
+}*/
+
+Scrieti un program care primeste din linia de comanda calea catre un director si apoi N string-uri.
+ Programul va returna toate fisierele din cel director care contin oricare din acele string-uri urmat
+ de string-ul gasit in acel fisier. Pentru punctaj maxim se va deschide cate un thread pentru fiecare 
+fisier.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <pthread.h>
+
+#define MAX_PATH_LENGTH 512
+#define MAX_STRING_LENGTH 256
+#define MAX_FILES 100
+
+typedef struct {
+    char file_path[MAX_PATH_LENGTH];
+    char search_string[MAX_STRING_LENGTH];
+} ThreadParams;
+
+void* search_file(void* arg) {
+    ThreadParams* params = (ThreadParams*)arg;
+
+    FILE* file = fopen(params->file_path, "r");
+    if (file == NULL) {
+        perror("Eroare la deschiderea fișierului");
+        pthread_exit(NULL);
+    }
+
+    char line[MAX_STRING_LENGTH];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        if (strstr(line, params->search_string) != NULL) {
+            printf("%s: %s", params->file_path, line);
+            break;
+        }
+    }
+
+    fclose(file);
+    pthread_exit(NULL);
+}
+
+int main(int argc, char* argv[]) {
+    if (argc < 3) {
+        printf("Argumente insuficiente. Utilizare: ./program director string1 string2 ... stringN\n");
+        return 1;
+    }
+
+     char* directory = argv[1];
+    int numSearchStrings = argc - 2;
+    char** searchStrings = &argv[2];
+
+    DIR* dir = opendir(directory);
+    if (dir == NULL) {
+        fprintf(stderr, "Could not open directory: %s\n", directory);
+        return 1;
+    }
+
+    struct dirent* entry;
+    while ((entry = readdir(dir)) != NULL) {
+        if (entry->d_type == DT_REG) {  // Check if it's a regular file
+            char filename[MAX_FILENAME_LENGTH];
+            snprintf(filename, sizeof(filename), "%s/%s", directory, entry->d_name);
+
+            pthread_t thread;
+            ThreadArgs* args = malloc(sizeof(ThreadArgs));
+            strcpy(args->filename, filename);
+
+            for (int i = 0; i < numSearchStrings; i++) {
+                strcpy(args->searchString, searchStrings[i]);
+                pthread_create(&thread, NULL, searchFile, (void*) args);
+                pthread_join(thread, NULL);
+            }
+
+            free(args);
+        }
+    }
+
+    closedir(dir);
+    return 0;
+
+    return 0;
+}
+

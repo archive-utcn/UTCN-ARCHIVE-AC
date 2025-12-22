@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu May 19 16:16:39 2016
+# Process ID: 6204
+# Log file: D:/mipshazard/vivado.log
+# Journal file: D:/mipshazard\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:\mipshazard\mipshazard.xpr}

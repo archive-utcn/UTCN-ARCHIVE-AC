@@ -1,0 +1,308 @@
+ Scrieti doua programe p1.c si p2.c care comunica printr-un pipe cu nume. p1 va
+parcurge un folder (nerecursiv) s, i va transmite prin pipe numele fis, ierelor din acesta (nu s, i a
+subfolderelor). p2 va afis,a pe ecran doar numele de fis, iere (dintre cele primite) care ˆıncep cu
+o cifr˘a.*/
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <string.h>
+
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+//p1
+int main(int argc, char **argv)
+{
+    int fd=-1;
+    if(argc != 2) {
+        fprintf(stderr, "Usage: %s <dir_name>\n", argv[0]);
+        return 1;
+    }
+    mkfifo("fifo", 0600);
+    fd = open("fifo", O_WRONLY);
+    listRec(argv[1], fd);
+    
+    close(fd);
+    unlink("fifo");
+    
+    return 0;
+}
+//p2
+#define FIFO_NAME "fifo"
+
+int main(void)
+{
+    int fd = -1;
+    char x[500];
+    char string[800];
+    //open, read and close fifo
+    fd = open(FIFO_NAME, O_RDONLY);
+    if(fd == -1) {
+        perror("Could not open FIFO for reading");
+        return 1;
+    }
+   
+    read(fd, &x, 100*sizeof(char));
+    printf("The read value is: %s\n", x);
+  
+    int i=0;
+    int k=0;
+    while(i<100){
+    k=0;
+    while(x[i]!='!' &&i<100){
+        string[k]=x[i];
+        
+        k++;
+        i++;
+    }
+    
+    string[k]=0;
+    if(string[0]<='9'&& string[9]>'0'){
+    printf("%s\n", string);
+    }
+    i++;
+    }
+    close(fd);
+
+    return 0;
+}
+
+
+scrie un program care  creeaza un proces fiu si comunica cu el printr-un pipe numit R3. parintele va parcurge un folder(nerecursiv)
+si va transmite prin pipe numele fisierelorr din acesta(nu si din subfoldere). procesul copil va afisa pe ecran doar numele de fisier
+care incep cu o vocala
+
+scrieti un program care creeaza un proces fiu si comunica cu el printr-un pipe anonim.parintele va deschide un fisier binar,
+il va citi octet cu octet si va transmite doar cifrele catre copil prin pipe. la terminarea fisierului se va transmite pe pipe un
+octet cu valoarea 0.procesul copil va primi cifrele care vin pe pipe si va afisa pe ecran doar cifrele pare. la primirea valorii 0 
+se va inchide .
+
+Scrieti un program care primeste din linia de comanda un director. Programul va deschide cu apelul de sistem fork un copil si 
+printr-un pipe anonim va transmite numele fiecarui fisier si marimea lu urmand
+ca procesul copil sa printeze pe ecran aceste date.
+
+*//*scrieti un program
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <dirent.h>
+#include <string.h>
+
+#define PIPE_NAME "R3"
+
+int is_vowel(char c) {
+    return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+}
+
+int main(int argc, char* argv[]) {
+    // Crearea pipe-ului
+    int pipefd[2];
+    if (pipe(pipefd) == -1) {
+        perror("Eroare la crearea pipe-ului");
+        return 1;
+    }
+
+    pid_t child_pid = fork();
+
+    if (child_pid < 0) {
+        perror("Eroare la crearea procesului fiu");
+        return 1;
+    }
+
+    if (child_pid == 0) {
+        // Procesul fiu
+
+        close(pipefd[1]); // Fiul nu scrie in pipe
+
+        char filename[256];//char digit;
+        int nbytes;//size
+
+        printf("Fisierele care incep cu o vocala:\n");
+
+        while ((nbytes = read(pipefd[0], filename, sizeof(filename))) > 0) { &difit, sizeof(char) , &size
+            filename[nbytes-1] = '\0'; // Eliminam caracterul newline
+
+            if (is_vowel(filename[0]))//&& (digit-'O')&2==0
+                printf("%s\n", filename);
+		
+        }
+	/*
+	while (read(pipefd[0], &size, sizeof(int)) > 0) {
+            read(pipefd[0], filename, size);
+
+            printf("Nume fisier: %s\n", filename);
+        }
+	*/
+
+        close(pipefd[0]); // Inchidem capatul de citire al pipe-ului in fiu
+
+        exit(0);
+    } else {
+        // Procesul parinte
+
+        close(pipefd[0]); // Parintele nu citeste din pipe
+
+        DIR* dir;
+        struct dirent* entry;
+
+        if ((dir = opendir(argv[1])) == NULL) {
+            perror("Eroare la deschiderea directorului");
+            return 1;
+        }
+	/*
+	 int fd = open(argv[1], O_RDONLY);
+	*/
+
+        while ((entry = readdir(dir)) != NULL) {
+            if (entry->d_type == DT_REG) { // Doar fisiere regulate (nu directoare)
+                if (write(pipefd[1], entry->d_name, strlen(entry->d_name) + 1) == -1) {
+                    perror("Eroare la scrierea in pipe");
+                    return 1;
+                }
+		/*
+		 int size = strlen(entry->d_name) + 1;
+                write(pipefd[1], &size, sizeof(int));
+                write(pipefd[1], entry->d_name, size); //3
+		*/
+            }
+        }
+	/*
+	
+	while ((nbytes = read(fd, &digit, sizeof(char))) > 0) {
+            if (is_digit(digit)) {
+                if (write(pipefd[1], &digit, sizeof(char)) == -1) {
+                    perror("Eroare la scrierea in pipe");
+                    return 1;
+                }
+            }
+	*/
+
+        closedir(dir); // Inchidem directorul
+
+        close(pipefd[1]); // Inchidem capatul de scriere al pipe-ului in parinte
+
+        // Asteptam ca fiul sa se termine
+        wait(NULL);
+    }
+
+    return 0;
+
+
+
+se da ierarhia de procese: p1 are copil pe p2, p2 are copil pe p3. P1 citeste un sir de cuvinte din argumentele din linia de 
+comanda si le trimite printr-un pipe la P2. P2 calculeaza cate vocale sunt in fiecare cuvant si trimite rezultatele la P3 printr-un 
+pipe.
+p3 Insumeaza toate numerele primite de la p2 si afiseaza  rezultatul final la lesirea standardul 
+
+/**/#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <string.h>
+
+#define READ_END 0
+#define WRITE_END 1
+
+int main(int argc, char* argv[]) {
+    // Crearea pipe-urilor
+    int pipe_p1_p2[2];
+    int pipe_p2_p3[2];
+
+    if (pipe(pipe_p1_p2) == -1 || pipe(pipe_p2_p3) == -1) {
+        perror("Eroare la crearea pipe-urilor");
+        return 1;
+    }
+
+    pid_t p1_pid, p2_pid, p3_pid;
+
+    // Crearea procesului P2
+    p1_pid = fork();
+
+    if (p1_pid < 0) {
+        perror("Eroare la crearea procesului P2");
+        return 1;
+    }
+
+    if (p1_pid == 0) {
+        // Procesul P2
+
+        close(pipe_p1_p2[WRITE_END]); // P2 nu scrie în pipe_p1_p2
+
+        close(pipe_p2_p3[READ_END]); // P2 nu citește din pipe_p2_p3
+
+        char word[256];
+        int vowel_count;
+
+        while (read(pipe_p1_p2[READ_END], word, sizeof(word)) > 0) {
+            vowel_count = count_vowels(word);
+
+            write(pipe_p2_p3[WRITE_END], &vowel_count, sizeof(int));
+        }
+
+        close(pipe_p1_p2[READ_END]); // Închidem capătul de citire al pipe-ului pipe_p1_p2 în P2
+
+        close(pipe_p2_p3[WRITE_END]); // Închidem capătul de scriere al pipe-ului pipe_p2_p3 în P2
+
+        exit(0);
+    }
+
+    // Crearea procesului P3
+    p2_pid = fork();
+
+    if (p2_pid < 0) {
+        perror("Eroare la crearea procesului P3");
+        return 1;
+    }
+
+    if (p2_pid == 0) {
+        // Procesul P3
+
+        close(pipe_p1_p2[READ_END]); // P3 nu citește din pipe_p1_p2
+
+        close(pipe_p2_p3[WRITE_END]); // P3 nu scrie în pipe_p2_p3
+
+        int vowel_count;
+        int sum = 0;
+
+        while (read(pipe_p2_p3[READ_END], &vowel_count, sizeof(int)) > 0) {
+            sum += vowel_count;
+        }
+
+        printf("Suma numerelor primite de la P2: %d\n", sum);
+
+        close(pipe_p1_p2[WRITE_END]); // Închidem capătul de scriere al pipe-ului pipe_p1_p2 în P3
+
+        close(pipe_p2_p3[READ_END]); // Închidem capătul de citire al pipe-ului pipe_p2_p3 în P3
+
+        exit(0);
+    }
+
+    // Procesul P1
+
+    close(pipe_p1_p2[READ_END]); // P1 nu citește din pipe_p1_p2
+
+    close(pipe_p2_p3[READ_END]); // P1 nu citește din pipe_p2_p3
+
+    close(pipe_p2_p3[WRITE_END]); // P1 nu scrie în pipe_p2_p3
+
+    char** words = &argv[1];
+    int num_words = argc - 1;
+
+    for (int i = 0; i < num_words; i++) {
+        write(pipe_p1_p2[WRITE_END], words[i], strlen(words[i]) + 1);
+    }
+
+    close(pipe_p1_p2[WRITE_END]); // Închidem capătul de scriere al pipe-ului pipe_p1_p2 în P1
+
+    // Așteptăm ca P2 și P3 să se termine
+    wait(NULL);
+    wait(NULL);
+
+    return 0;
+}

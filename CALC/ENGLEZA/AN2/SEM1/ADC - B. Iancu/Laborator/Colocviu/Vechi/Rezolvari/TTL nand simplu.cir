@@ -1,0 +1,44 @@
+[aimspice]
+[description]
+366
+Untitled circuit
+q11 2 1 a tr
+q12 2 1 b tr
+q2 3 2 4 tr
+q3 5 3 6 tr
+q4 out 4 0 tr
+R1 vcc 1 4k
+R2 vcc 3 1.6K
+R3 4 0 1K
+R4 vcc 5 130
+D 6 out Diode
+D1 0 b Diode
+D2 0 a Diode
+.Model Diode D tt=5e-9
+.Model tr npn tr = 5e-9 tf=8e-9
+va a 0 dc 5 pulse( 0 5 0 1e-10 1e-10 0.2e-6 0.4e-6 )
+vb b 0 dc 5	!pulse( 0 5 0 1e-10 1e-10 0.2e-6 0.9e-6 )
+vin  vcc 0 dc 5
+
+[dc]
+1
+va
+0
+5
+0.1
+[tran]
+1e-10
+0.5e-6
+X
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 -2 7
+3
+v(a)
+v(b)
+v(out)
+[end]

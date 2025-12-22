@@ -1,0 +1,126 @@
+Practice8-2
+
+Vocabulary 
+
+1-Parameters
+2-Argument
+3-Actual Parameters
+4-Formal parameter
+
+Try It / Solve It
+
+1. Parameters are used to pass values that may vary into a subprogram.They make procedures more flexible; a procedure can be created once and then executed many times with different values for the parameters.
+
+2.
+A.
+CREATE OR REPLACE PROCEDURE get_country_info
+(p_country_id IN wf_countries.country_id%TYPE)
+IS
+v_country_name wf_countries.country_name%TYPE;
+v_capitol wf_countries.capitol%TYPE;
+BEGIN
+SELECT country_name, capitol
+INTO v_country_name, v_capitol
+FROM wf_countries
+WHERE country_id = p_country_id;
+DBMS_OUTPUT.PUT_LINE('The country name is '||v_country_name||' and the capital city is '||v_capitol);
+END;
+
+B. 
+BEGIN
+get_country_info(90);
+END;
+
+C.
+BEGIN
+get_country_info(95);
+END;
+
+ORA-01403: no data found
+
+D.
+CREATE OR REPLACE PROCEDURE get_country_info
+(p_country_id IN wf_countries.country_id%TYPE)
+IS
+v_country_name wf_countries.country_name%TYPE;
+v_capitol wf_countries.capitol%TYPE;
+BEGIN
+SELECT country_name, capitol
+INTO v_country_name, v_capitol
+FROM wf_countries
+WHERE country_id = p_country_id;
+DBMS_OUTPUT.PUT_LINE('The country name is '||v_country_name||' and the capital city is '||v_capitol);
+EXCEPTION
+ WHEN NO_DATA_FOUND THEN
+ DBMS_OUTPUT.PUT_LINE('No data found!');
+END;
+
+BEGIN
+get_country_info(95);
+END;
+
+No data found!
+
+3.
+Formal Parameters is variable that are declared in the parameter list of a subprogram specification.
+Actual Parameters is variable that are sent to the parameter list of a called subprogram.
+
+4. 
+A. 
+CREATE OR REPLACE PROCEDURE get_number_of_countries
+(p_region_id IN wf_countries.region_id%TYPE, p_highest_elevation IN wf_countries.highest_elevation%TYPE)
+IS
+v_number NUMBER(6,0) := 0;
+BEGIN
+SELECT count(*)
+into v_number
+FROM wf_countries
+WHERE p_highest_elevation > highest_elevation AND p_region_id <> region_id ;
+DBMS_OUTPUT.PUT_LINE('The number of countries is '||v_number);
+END;
+
+B.
+BEGIN
+get_number_of_countries(5,2000);
+END;
+
+The number of countries is 116
+
+C.
+Describe get_number_of_countries
+P_REGION_ID	IN	NUMBER
+P_HIGHEST_ELEVATION	IN	NUMBER
+
+D.
+CREATE OR REPLACE PROCEDURE get_number_of_countries
+(p_region_id IN wf_countries.region_id%TYPE, p_highest_elevation IN wf_countries.highest_elevation%TYPE,p_char char)
+IS
+v_number NUMBER(6,0) := 0;
+BEGIN
+SELECT count(*)
+into v_number
+FROM wf_countries
+WHERE p_highest_elevation > highest_elevation AND p_region_id <> region_id AND country_name LIKE 'char%';
+DBMS_OUTPUT.PUT_LINE('The number of countries is '||v_number);
+END;
+
+P_REGION_ID	IN	NUMBER
+P_HIGHEST_ELEVATION	IN	NUMBER
+P_CHAR	IN	CHAR
+
+E.
+DECLARE
+V_REGION_ID NUMBER:=5;
+V_ELEVATION NUMBER:=2000;
+V_LETTER CHAR:='B';
+BEGIN
+get_number_of_countries(V_REGION_ID,V_ELEVATION,V_LETTER);
+END;
+
+F.
+ORA-06502: PL/SQL: numeric or value error: character to number conversion error
+
+
+
+
+

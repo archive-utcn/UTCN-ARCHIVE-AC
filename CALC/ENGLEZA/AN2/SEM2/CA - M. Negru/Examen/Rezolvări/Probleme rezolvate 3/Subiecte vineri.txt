@@ -1,0 +1,35 @@
+ 1. Sa se proiecteze o unitate ALU pt operatiile A+B, A-B, IncrA, PassA, A+4, ShiftLeftA, folosind un SINGUR SUMATOR. Schema, semnale etc.
+
+2. Sa se implementeze instructiunile IF, BEQ, LW, JAL pe MIPS Single-Cycle. Diagrame, RTL, scheme, semnale, cai de date si toate alea.
+
+3. Handshaking in 4 faze. Master FSM transmitter, Slave FSM receiver. Sa se proiecteze un Master FSM trans cu 1 FF/stare. Scheme si toate alea --- avion dupa parerea mea, ca nici n-am citit asa ceva.
+
+4. AMAT de la cache-uri. Expresie, explicatie, metode de imbunatatire. 
+
+5. Calculul adresei in memoriile virtuale. Structura si functionarea unei celule CAM. --- al doilea avion, nici n-am stiut ca exista asta in curs, ce stiam de la CAN din primul semetru numa' ...
+
+ subiectul G
+G1 Desenati un bloc de registre de 4x8 biti, cu 2 citiri,1 scriere intr un ciclu, bazat pe bistabile de tip D-FF. Prezentati si explicati cerintele fata de blocul de registre in masinile Single Cycle, 'Pipelined.
+G2 Pt functia f=a*x-b*y+c; surse si rezultat in memorie, prezentati secv de instr coresp. masinilor 0,1,2,3 adrese.
+G3 Prezentati SRAM si DRAM.Comparati interfetele si diagramele de timp.
+G4 Desenati caile de date Multy Cycle (MUX) pt IF, ADDI,SW,JR. mentionati semnalele de comanda. RTL . Durata acces memorie = 2 cilcuri
+G5 Prezentati si comparati metodele de redenumire a reg tip Tomasulo (P6) si MIPS
+
+Subiectul H
+
+1. Sa se proiecteze o unitate ALU pt operatiile A+B, A-B, IncrA, PassA, A+4, ShiftLeftA, folosind un SINGUR SUMATOR. Schema, semnale etc.
+
+2. Sa se implementeze instructiunile IF, BEQ, LW, JAL pe MIPS Single-Cycle. Diagrame, RTL, scheme, semnale, cai de date si toate alea.
+
+3. Handshaking in 4 faze. Master FSM transmitter, Slave FSM receiver. Sa se proiecteze un Master FSM trans cu 1 FF/stare. Scheme si toate alea --- avion dupa parerea mea, ca nici n-am citit asa ceva.
+
+4. AMAT de la cache-uri. Expresie, explicatie, metode de imbunatatire. 
+
+5. Calculul adresei in memoriile virtuale. Structura si functionarea unei celule CAM. --- al doilea avion, nici n-am stiut ca exista asta in curs, ce stiam de la CAN din primul semetru numa' ...
+
+ E
+1.diagrama pipeline in care sa ii scrii o secventa de instructiuni si sa rezolvi hazardul LOOP
+2.ASAP ,ALAP iti dadea ceva asemanator cu ce in curs ec de grradul 2 + inca ceva si apoi sa i le compari din punct de vedere a vitezei ,productivitatii,etc.Si sa ii faci in pipeline
+3.politici de scrie in cache (scheme si altceva)
+4.mips cu 3 magistrale ,instructiunea FIND(daca e cautare de valoare si vrei sa faci cautare in memorie, cel mai simplu ar fi pur si simplu sa faci cu CAM)
+5.comparatie intre predictorii GaP si Gshare

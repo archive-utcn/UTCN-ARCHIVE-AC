@@ -1,0 +1,31 @@
+[aimspice]
+[description]
+386
+Redresor dubla alternanta in punte
+D1 1 2 Dioda
+D2 3 2 Dioda
+D3 0 3 Dioda
+D4 0 1 Dioda
+.Model Dioda D
+R1 2 0 100
+Vin 1 3 sin(0 10 1k 0 0)
+!*Pentru alternantele pozitive sunt deschise diodele D1 si D3
+!*Pentru alternantele negative sunt deschise diodele D2 si D4
+!*In acest fel, la iesire se va obtine doar tensiune pozitiva
+!*Utilizare: folosirea intregii cantitati de curent
+[tran]
+1e-9
+6e-3
+0
+0.0000001
+0
+[ana]
+4 1
+0
+1 1
+1 1 -2 10
+3
+v(1)
+v(2)
+v(3)
+[end]

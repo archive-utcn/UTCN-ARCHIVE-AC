@@ -1,0 +1,37 @@
+Section 13-3
+
+Vocabulary
+
+compound trigger
+instead of trigger
+conditional predicate
+old new statements
+dml row trigger
+
+Try it
+
+2. CREATE OR REPLACE TRIGGER emp_audit_trigg
+AFTER INSERT ON employees
+BEGIN
+INSERT INTO audit_table (action)
+VALUES ('Inserting);
+END;
+
+3. CREATE OR RAPLACE TRIGGER emp_audit_trigg
+before DELETE OR INSERT ON employees_dup
+FOR EACH ROW
+BEGIN
+INSERT INTO audit_table (action, emp_id)
+VALUES ('Deleted',;old.employees_id);
+END;
+
+4. CREATE OR REPLACE TRIGGER emp_vu
+INSTEAD OF INSERT ON employees e
+BEGIN
+   UPDATE dept_count 
+   ON DELETING
+   count_emps := count_emps - 1;
+   ON INSERTING
+   count_emps := count_emps + 1;
+   WHERE dept_id = e.dept_id;
+END;

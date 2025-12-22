@@ -1,0 +1,85 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *             Student Version 5.5          *
+                 *                                           *
+                 *********************************************
+
+	Date: Thu Jan 14 10:00:29 2010
+	Circuit File: D:\cursuri\An II sem I\ADC\AIM\ttl-high speed.cir
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  TTL 2.7
+     2:  .subckt nand a b vcc o
+     3:  q11 2 1 a tr
+     4:  q12 2 1 b tr
+     5:  q2 3 2 4 tr
+     6:  q3 o 4 0 tr
+     7:  q4 5 6 o tr
+     8:  q5 5 3 6 tr
+     9:  d1 0 b di
+    10:  d2 0 a di
+    11:  r1 vcc 1 2.8k
+    12:  r2 vcc 3 760
+    13:  r3 4 0 470	
+    14:  r4 vcc 5 58
+    15:  r5 6 0 4k
+    16:  .ends
+    17:  .model tr npn tr=5e-9 tf=8e-9
+    18:  .model di d tt=5e-9
+    19:  x1 a b vcc o nand
+    20:  va a 0 dc 5 pulse(0 5 0 1e-10 1e-10 0.2e-6 0.4e-6)
+    21:  vb b 0 dc 5
+    22:  vcc vcc 0 5
+    23:  r1 vcc 1 400
+    24:  d1 1 2 di
+    25:  d2 2 3 di
+    26:  d3 3 0 di
+    27:  d4 1 o di
+    28:  c1 o 0 15p
+    29:  .tran 1e-10 0.5e-6
+
+***************************  Model Parameters  ****************************
+
+
+***************  Device Parameters (Only for .op analysis)  ***************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-10
+	Final time .......... : 0.5e-6
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 1307
+	Number of iterations for transient analysis....: 1271
+	Total number of timepoints.....................: 297
+	Number of timepoints accepted..................: 223
+	Number of timepoints rejected..................: 74
+	Total analysis time (sec)......................: 0.073
+	Transient analysis time (sec)..................: 0.07
+	Time spent in device loading (sec).............: 0.034
+	Time spent in L-U decomposition (sec)..........: 0.002
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0
+	Time spent in transient L-U decomposition (sec): 0.002
+	Time spent in transient matrix solving (sec)...: 0
+
+***************************  Kernel Messages  *****************************
+
+Circuit: TTL 2.7
+
+

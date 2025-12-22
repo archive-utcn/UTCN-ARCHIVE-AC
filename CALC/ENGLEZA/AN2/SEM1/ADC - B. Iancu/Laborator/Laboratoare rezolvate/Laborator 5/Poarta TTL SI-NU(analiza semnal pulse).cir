@@ -1,0 +1,52 @@
+[aimspice]
+[description]
+975
+Poarta TTL SI-NU(analiza semnal pulse)
+R1 1 c 4k
+R2 2 c 1.6k
+R3 3 c 130
+R4 6 0 1k
+
+C out 0 1p
+!*Acest condensator atenueaza variatia semnalului de iesire la TR
+
+Q1A 4 1 a Tranzistor
+Q1B 4 1 b Tranzistor
+Q2 2 4 6 Tranzistor
+Q3 3 2 5 Tranzistor
+Q4 out 6 0 Tranzistor
+.Model Tranzistor NPN tr=5e-9 tf=8e-9
+!*Q1 e tranzistor multi-emitor
+
+D1 0 a Dioda
+D2 0 b Dioda
+D 5 out Dioda
+.Model Dioda D tt=5e-9
+!*Diodele D1 si D2 nu permit variatii de tensiune pe intrare
+!*Dioda D nu permite lasa Q3 si Q4 sa comute simultan
+
+Va a 0 pulse(0 5 0 1e-9 1e-9 1e-7 2e-7)
+Vb b 0 DC 5
+Vcc c 0 DC 5
+
+!*A/B=0 => Va/Vb=0V => Q1 saturat => jonc.CEQ1=0.2V => Q2 blocat(nu poate fi deschis de tensiune mica) => Q4 blocat
+!*Q3 e alimentat de la Vcc(deschis) => Vout=4V(1V se pierde pe R,D si Q)
+
+!*A=B=1 => Va=Vb=5V => in baza la Q1 avem 5V => regiune activa inversa intre Q1 si Q2 => Q2 deschis => Q4 deschis
+!*Q3 este blocat(tensiunea mica nu-l deschide) => Vout=0,2V
+[tran]
+1e-9
+5e-7
+X
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 -1 6
+3
+v(out)
+v(a)
+v(b)
+[end]

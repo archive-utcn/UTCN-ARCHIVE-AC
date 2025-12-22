@@ -1,0 +1,9 @@
+LINE 1: This is a test file for the OS lab about the command interpreter.
+LINE 2: This file is a TEXT file.
+LINE 3: It contains some number of text line.
+LINE 4: A text file is a file consisting in printable character.
+LINE 5: Each character is represented on a byte.
+LINE 6: The text-files also contain the special character called "new line" ("\n"), whose byte code is 10.
+LINE 7: Text file is one of the file format the user can define for his use.
+Text word is at the begining of this line.  (LINE 8)
+LINE 9: This line ends in word text.

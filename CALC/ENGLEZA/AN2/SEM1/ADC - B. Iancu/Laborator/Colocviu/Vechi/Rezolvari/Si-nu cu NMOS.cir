@@ -1,0 +1,29 @@
+[aimspice]
+[description]
+217
+SI-Nu cu Nmos
+M3 DD GG OUT OUT MOS3 L=25 W=1
+.MODEL MOS3 NMOS VT0=2.5
+M2 OUT IN2 N N MOS2 L=1 W=1
+.MODEL MOS2 NMOS VTO = 1.5
+M1 N IN1 0 0 MOS2 L=1 W=1
+VA IN2 0 DC 5
+VB IN1 0 DC 5
+VGG GG 0 DC 7.5
+VFF DD 0 DC 5
+[tran]
+1E-9
+5e-7
+1e-5
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 0 5
+3
+v(out)
+v(in2)
+v(in1)
+[end]

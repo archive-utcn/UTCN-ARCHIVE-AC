@@ -1,0 +1,90 @@
+Biletul 3:
+1.Teorema de medie a diferentei divizate (Cauchy)
+2.Monotonia si convexitatea functiei lui Bernstein
+3.integrala de la a la b din f(x)*Pn(x) unde Pn(x)=xla n ... este polinomul lui Legendre
+
+Biletul 5:
+1. Problema interpolarii. Formula lui Aitken.
+2. Ordinul de complexitate a lui Newton (sau ceva de genul ...cursul 6)
+3. Integrala de la A la B din dinozaur, mai mic sau egal cu alt dinozaur.
+
+1.Interpolarea in varianta Newton
+2.Metoda Newton Fourier
+3.Integrala de la A la B din dinozaur, mai mic sau egal cu alt dinozaur. Demonstratie.
+
+Biletul B4 :
+
+1) Proprietatea de extrem pentru splinuri cubice
+2)Teorema Popoviciu-Bohman-Korovkin
+3) Fie (semn rezistenta) se include in R_la_puterea_d o multime compacta, f apartine C(semn rezistenta). Aratati ca exista un sir de polinoame (R_la_putere_n)_jos_linga_paranteza_n>=1 , astfel ca lim_n_tinde_la infinit de || f- Pn||jos_aici_semn_infinit = 0
+
+Cateva subiecte din ce s-a dat la partialul de pe 27.11.2010
+
+Biletul 3
+1. Formula Trapezelor
+2. Metoda Runge - Kutta de ordinul 3
+3. Sa se arate ca Ln = Bn o Bn, n - natural, unde Bn este operatorul lui Bernestein este un operator de aproximare pe C[0,1]. Pastreaza Ln convexitatea?
+
+
+Biletul 2
+1. Popoviciu - Bohman - Vorovkin
+2. Proprietatea extremala a functiilor spline cubice
+3. (cine stie aici sa completeze)
+
+
+Biletul 1
+1. Metoda lui Newton
+2. Modulul de continuitate
+3. Prima problema din lista care ne-a dat-o! 
+(Sa se arate ca polinomul lui Lagrange..poate fi scris sub forma...)
+
+
+Biletul 5
+1. Metoda Coardei
+2. Polinomul lui Hermite pe noduri duble
+3. Aratati ca multimea tuturor polinoamelor trigonometrice e densa in spatiul 
+functiilor continue, periodice de perioada 2pi!
+
+
+Biletul 4
+1. Scrierea unui polinom in baza Bernstein
+Algoritmul Casteljau
+2. Teorema de media la diferente divizate
+3. Splinul de ord 1 poate fi scris sub forma(si aici trebuie completat)
+
+
+
+
+examen
+
+Biletul B1:
+1)Conditia necesara si suficienta ca sistemul X=BX+b sa aiba solutie unica si metoda aproximarilor succesive sa convearga.
+2)a)Sa se arate ca ||x||infinit(jos)<=||x||2(jos)<=radical(n)||x||infinit
+b)Daca Aapartine la Mn,n(C) sa se arate ca |Trace A|<=n r(A), r(A)-raza spectrala
+
+Biletul 3
+1. Metoda lui Jacobi.
+2. Fie A din Mn,n(R) si B=A(AT). E adevarat ca Trace B >=r(B)? (AT=transpusa matr A)
+
+
+Biletul 2
+1. Teorema lui Ostrowski
+2. Fie A=[aij], i,j=1,n astfel incat aii=1/4, ai,i-1=-1/4, ai,i+1=1/4 si in rest aij=0. Si B=[bij], ii,j=1,n astfel incat bii=3/4, bi,i-1=1/4, bi,i+1=i/4 si in rest bij=0. Sa se arate ca B este inversabila si sa se gasesasca o norma astfel incat ||B|| <= 4.
+
+B4
+
+1. Operatorul lui Bernstein pastreaza monotonia si convexitatea
+2. Matricea de interpolare corespunzatoare functiei  este nesingularea
+3. Polinoame ortogonale
+4. Se considera P(x)= x^4 +Kx^(k-1) +1 , K<=n .Sa se scrie in baza bernstein
+5. Sa se calculeze [0,1,2,...,n; X^n / (x^2)+1 ]
+Last edited by Tomnatic.Andrei on Wed Jan 19, 2011 11:11 am, edited 1 time in total.
+
+
+
+Bilet 6.
+1. Proprietati extremale pt spline cubice.
+2. Metode multipas pt ec diferentiale
+3. Metoda coardei
+4. Ecuatia 32x^5+x-1=0 rezolvata cu metoda aproximarilor succesive, si ceva cu rezultat cu 3 zecimale exacte.
+5. O diferenta divizata:

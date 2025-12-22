@@ -1,0 +1,57 @@
+[aimspice]
+[description]
+764
+cmos trans gate bis
+.subckt trans in a out vdd vss
+Mp out na in vdd pmos_t L=1U W=1U
+Mn in a out vss nmos_t L=1U W=1U
+X1 a na vdd vss inverter
+.ends
+
+.subckt inverter in out vdd vss
+Mp out in vdd vdd pmos_t L=1U W=1U
+Mn out in vss vss nmos_t L=1U W=1U
+.ends
+
+.Model pmos_t PMOS VTO=-1.5
+.Model nmos_t NMOS VTO=1.5
+
+X1 in1 a out vdd vss trans
+X2 in2 b out vdd vss trans
+X3 out na 1 vdd vss trans
+X4 1 nb vss vdd vss trans
+X5 a na vdd vss inverter
+X6 b nb vdd vss inverter
+
+Vdd vdd 0 DC 5
+Vss vss 0 DC 0
+
+Vin1 in1 0 DC 5
+Vin2 in2 0 DC 5
+Va a 0 Pulse(0, 5, 0, 1e-10, 1e-10, 1e-9, 2e-9)
+Vb b 0 Pulse(0, 5, 0, 1e-10, 1e-10, 2e-9, 4e-9)
+!Vna na 0 Pulse(5, 0, 0, 1e-10, 1e-10, 1e-9, 2e-9)
+!Vnb nb 0 Pulse(5, 0, 0, 1e-10, 1e-10, 2e-9, 4e-9)
+
+[dc]
+1
+Va
+0
+5
+0.1
+[tran]
+1e-11
+5e-9
+X
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 0 6
+3
+v(out)
+v(a)
+v(b)
+[end]

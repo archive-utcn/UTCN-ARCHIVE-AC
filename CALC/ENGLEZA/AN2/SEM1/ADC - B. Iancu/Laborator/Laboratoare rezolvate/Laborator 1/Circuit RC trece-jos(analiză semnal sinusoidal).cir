@@ -1,0 +1,30 @@
+[aimspice]
+[description]
+197
+Circuit RC trece-jos(analizã semnal sinusoidal)
+C1 out 0 470u
+!* 470u = 470 micro
+R1 in out 1k
+Vin in 0 sin(0 5 20 0 0)
+!* Se observa atenuarea semnalului de iesire pentru o frecventa mai mica
+[dc]
+1
+Vin
+0
+5
+6e-3
+[tran]
+1e+3
+600e-3
+X
+X
+0
+[ana]
+4 1
+0
+1 1
+1 1 -6 6
+2
+v(out)
+v(in)
+[end]

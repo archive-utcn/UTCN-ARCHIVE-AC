@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ $# -eg 0 ]; then
+    echo -1
+fi
+wc -l $1"

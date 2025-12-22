@@ -1,0 +1,28 @@
+[aimspice]
+[description]
+209
+Stabilizator parametric cu dioda Zenner
+D1 1 2 Dioda
+D2 0 1 Dioda
+D3 0 3 Dioda
+D4 3 2 Dioda
+Vin 1 0 sin(0 10 50 0 0)
+C 2 0 1m
+R 2 0 100
+Dz 0 2 Diodez
+.Model Dioda D TT = 1e-6
+.Model Diodez D BV = 6.8
+[tran]
+1e-9
+60e-3
+0
+1e-5
+0
+[ana]
+4 1
+0
+1 1
+1 1 8.13241E-029 10
+1
+v(2)
+[end]

@@ -1,0 +1,42 @@
+[aimspice]
+[description]
+251
+Trigger Schmitt cu componente discrete
+R1 1 2 20
+R2 1 out 20
+R3 2 3 400
+R4 3 0 200
+Re 4 0 10
+Q1 2 in 4 tr1
+Q2 out 3 4 tr1
+.model tr1 npn TR = 1e-5 TF = 1e-5
+
+Vcc 1 0 DC 10
+Vin in 0 DC 5 sin(5 3 1 0 0)
+*Vin in 0 dc 5 pulse(1 9 0 .2 .2 .5 1)
+[options]
+3
+RelTol 0.1
+Trtol .7
+Itl4 25
+[dc]
+1
+Vin
+10
+0
+-.1
+[tran]
+1e-3
+2
+0
+1e-3
+0
+[ana]
+4 1
+1
+1 1
+1 1 2 10
+2
+v(out)
+v(in)
+[end]

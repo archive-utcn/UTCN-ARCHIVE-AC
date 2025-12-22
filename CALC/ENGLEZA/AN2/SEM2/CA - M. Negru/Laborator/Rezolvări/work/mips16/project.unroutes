@@ -1,0 +1,17 @@
+Release 8.2i - par I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+Wed May 15 19:28:17 2013
+
+There are 0 unrouted networks: 
+
+
+There are 7 sourceless or loadless networks: 
+
+   btn<0>_IBUF
+   btn<1>_IBUF
+   btn<2>_IBUF
+   sw<4>_IBUF
+   sw<5>_IBUF
+   sw<6>_IBUF
+   sw<7>_IBUF

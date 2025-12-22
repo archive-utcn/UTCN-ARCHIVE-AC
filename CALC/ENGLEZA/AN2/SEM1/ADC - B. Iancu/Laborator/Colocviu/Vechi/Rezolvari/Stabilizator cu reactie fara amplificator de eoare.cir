@@ -1,0 +1,35 @@
+[aimspice]
+[description]
+311
+Stabilizator cu reactie fara amplificator de eoare
+d1 1 outr dioda
+d2 0 1 dioda
+d3 0 3 dioda
+d4 3 outr dioda 
+d5 0 vz zener
+c1 outr 0 1m
+rb outr vz 220
+rs out 0 100
+q1 outr vz out tranzistor
+vin 1 3 sin(0 10 50 0 0)
+.model zener d bv=5.6
+.model dioda d tt=1e-9
+.model tranzistor npn tr=1e-9 tf=1e-9
+[tran]
+1e-6
+4e-2
+X
+X
+0
+[ana]
+4 1
+1
+1 1
+1 1 -2 10
+5
+v(1)
+v(outr)
+v(3)
+v(vz)
+v(out)
+[end]

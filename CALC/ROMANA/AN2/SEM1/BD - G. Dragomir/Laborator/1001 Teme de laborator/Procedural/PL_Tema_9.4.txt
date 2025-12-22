@@ -1,0 +1,25 @@
+user_source
+user_objects
+all_source
+
+1.
+C.Nu va reuși, deoarece cheia principală trebuie să fie unică
+D.CREATE OR REPLACE PROCEDURE add_my_dept
+(p_dept_id IN VARCHAR2, p_dept_name IN VARCHAR2) IS BEGIN
+INSERT INTO my_depts (department_id, department_name)
+VALUES (p_dept_id, p_dept_name);
+EXCEPTION
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('Primary Key must be unique');
+END add_my_dept
+E.Se va tipari exceptia
+H.Va iesi din exceptia procedurii outer_proc pentru ca nu este nici o exceptie in add_my_debt
+
+
+
+
+2.SELECT object_name FROM user_objects WHERE object_type='PROCEDURE';
+
+3.-
+
+4.SELECT text FROM USER_SOURCE WHERE name='ADD_MY_DEPT'ORDER BY line;

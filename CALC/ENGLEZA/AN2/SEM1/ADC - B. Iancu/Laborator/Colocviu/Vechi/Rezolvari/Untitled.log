@@ -1,0 +1,83 @@
+
+                 *********************************************
+                 *                                           *
+                 *             A I M - S p i c e             *
+                 *                                           *
+                 *             Student Version 5.0          *
+                 *                                           *
+                 *********************************************
+
+	Date: Thu Jan 17 18:11:08 2008
+	Circuit File: Untitled
+	Analysis: Transient
+
+**************************  Circuit Description  **************************
+
+     1:  ttl nand
+     2:  .subckt nand a b vcc out
+     3:  Q1a 2 1 a Tran
+     4:  Q1b 2 1 b Tran
+     5:  Q2 3 2 4 Tran
+     6:  Q3 5 3 6 Tran
+     7:  Q4 out 4 0 Tran
+     8:  D1 0 a Diode
+     9:  D2 0 b Diode
+    10:  D 6 out Diode
+    11:  R1 vcc 1 4K
+    12:  R2 vcc 3 1.6K
+    13:  R3 4 0 1K
+    14:  R4 vcc 5 130
+    15:  .ends
+    16:  .Model Tran NPN tr=5e-9 tf=8e-9
+    17:  x1 a b vcc out nand
+    18:  D1 1 out Diode
+    19:  D2 1 2 Diode
+    20:  D3 2 3 Diode
+    21:  D4 3 0 Diode
+    22:  R1 vcc 0 10
+    23:  Cp out 0 15p
+    24:  .Model Diode D tt=5e-9
+    25:  Vcc vcc 0 dc 5
+    26:  Va a 0 DC 5
+    27:  Vb b 0 DC 0 Pulse( 0 5 0 1e-10 1e-10 0.2e-6 0.4e-6 )
+    28:   
+    29:  
+    30:  .tran 1e-8 5e-7
+
+***************************  Device Parameters  ***************************
+
+
+
+**************************  Analysis Parameters  **************************
+
+	Stepsize ............ : 1e-8
+	Final time .......... : 5e-7
+	Use Initial Conditions: Off
+
+
+
+**************  Options (Only those different from default)  **************
+
+
+
+*************************  Simulation Statistics  *************************
+
+	Total number of iterations.....................: 986
+	Number of iterations for transient analysis....: 948
+	Total number of timepoints.....................: 224
+	Number of timepoints accepted..................: 182
+	Number of timepoints rejected..................: 42
+	Total analysis time (sec)......................: 0.094
+	Transient analysis time (sec)..................: 0.094
+	Time spent in device loading (sec).............: 0.032
+	Time spent in L-U decomposition (sec)..........: 0
+	Time spent in matrix reordering (sec)..........: 0
+	Time spent in matrix solving (sec).............: 0.015
+	Time spent in transient L-U decomposition (sec): 0
+	Time spent in transient matrix solving (sec)...: 0.015
+
+***************************  Kernel Messages  *****************************
+
+Circuit: ttl nand
+
+

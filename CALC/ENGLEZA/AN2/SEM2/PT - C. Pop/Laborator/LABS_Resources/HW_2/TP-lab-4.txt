@@ -1,0 +1,52 @@
+tema 2 
+
+abstractizare: customer si coada, aggregation intre ele
+
+customer: arrival time, service time
+constructor, gettere, settere, toSring()(arivaltime virgula service time)!!!!!!!!!!!!
+
+toString(): return Customer(id, arrival, service)
+
+
+COada
+List(customer)
+Fifo
+enque
+deque
+
+
+trebuie sa creem simularea efectiva
+
+Simulare implementeaza BussinesLogic
+
+simularea tre sa mearga in timp real(un client chiar tre sa astepte 10 sec sa fie servit)
+
+1.extinzi clasa Thread
+2.implementezi runnable
+
+tutorial: tutorial de la Cave of Programming java multi threading de la partea 1
+
+GUI tre sa afisez simularea in timp real (in fiecare secunda) tre sa afisezi TOSting() din customer si din coada
+
+INPUT
+
+NR CLIENT: 100
+nr COZI: 3
+ArrivalTime: minim 3s maxim 50s (pt fiecare client random intre aceste valori)
+Service TIme: random intre 1s-6s pt fiecare
+APASA BUTONUL START SIMULARE -> incepe sa mearga timpul simularii de la 0
+la fiecare moment afisal starea modelului
+
+q1 Customer(1,0,6), (2, 0,2)
+
+q2Customer -
+q3 (3, 0,3)
+cand service time trece clientul e scos din coada
+
+selectarea cozii in care punem clientii o facem cum vrem
+
+log of events: fiecare actiune la cat s-a intamplat
+
+NICIODATA NU TE APUCI SA SCRII COD FARA O GANDIRE SI UN DESIGN
+
+lucram in timpi intregi

@@ -1,0 +1,252 @@
+
+/**
+ * Write a description of class Joc here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Joc
+{
+    public static void main(){
+    Tabla sah=new Tabla();
+    while(!sah.gameOver()){
+    sah.view();
+    sah.moveHorse();
+    if(!sah.gameOver())sah.moveT();
+    }
+    sah.view();
+    }
+}
+
+
+
+/**
+ * Write a description of class Tabla here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+
+import java.util.*;
+public class Tabla extends Pozitie
+{
+    private boolean gameO=false;
+    public  int mutariCal=0;
+    public Tabla(){
+        super();
+        gameO=false;
+    }
+
+    public void setPozitii(int []x)
+    {
+        super.pozitii=x;
+    }
+
+    public boolean validMove(int[] x){
+        boolean ok=false;
+        try{
+            ok=true;
+            for(int i=0;i<4;i++)
+                if((x[i]<0)||(x[i]>7)) ok=false;
+        }
+        catch(ArrayIndexOutOfBoundsException e){System.out.println("Error array index!");}
+       System.out.println(ok);
+        return ok;
+    }
+
+    public boolean moveHorse(){
+        boolean ok=true;
+        mutariCal++;
+        int[] ret=citesteComanda();
+        ok=validMove(ret);
+        if(ok){
+            System.out.println("Mutam calul de la " +(ret[0])+" "+(ret[1])+" la "+(ret[2])+" "+(ret[3])+"!");
+            int cx=ret[2];
+            int cy=ret[3];
+            int [] aux=citestePozitie();
+            if(((cx==aux[2])&&(cy==aux[3]))||((cx==aux[4])&&(cy==aux[5]))){
+                System.out.println("Bravo calutule ai castigat dupa "+mutariCal+" mutari!");
+                gameO=true;
+            }
+            aux[0]=cx;
+            aux[1]=cy;
+            setPozitii(aux);
+        }
+
+        return ok;
+    }
+
+    public void moveT()
+    {
+        Random r=new Random();
+        int[] aux;
+        //prima tura
+        do{
+            int c=r.nextInt(2);//sa vedem cum mutam tura, pe linie -0 sau coloana -1
+            int d=r.nextInt(8);
+            aux=new int[]{pozitii[2], pozitii[3],pozitii[2],pozitii[3]};
+            aux[2+c]=d;
+        }while (!validMove(aux));
+        pozitii[2]=aux[2];
+        pozitii[3]=aux[3];
+        if((pozitii[0]==pozitii[2])&&(pozitii[1]==pozitii[3])){
+            System.out.println("Calul a murit dupa "+mutariCal+" pasi!");
+            gameO=true;
+            pozitii[0]=9;
+            pozitii[1]=9;
+        }
+        //a doua tura
+        do{
+            int c=r.nextInt(2);//sa vedem cum mutam tura, pe linie -0 sau coloana -1
+            int d=r.nextInt(8);
+            aux=new int[]{pozitii[4], pozitii[5],pozitii[4],pozitii[5]};
+            aux[2+c]=d;
+        }while (!validMove(aux));
+        pozitii[4]=aux[2];
+        pozitii[5]=aux[3];
+        if((pozitii[0]==pozitii[4])&&(pozitii[1]==pozitii[5])){
+            System.out.println("Calul a murit dupa "+mutariCal+" pasi!");
+            gameO=true;
+            pozitii[0]=9;
+            pozitii[1]=9;
+        }
+    }
+
+    public void view()
+    {
+        boolean ok;
+        for(int i=0;i<8;i++){
+            for(int j=0;j<8;j++)
+            {
+                ok=true;
+                for(int k=0;k<6;k=k+2)
+                    if((i==pozitii[k])&&(j==pozitii[k+1])){
+                        if(ok){
+                            if(k==0) System.out.print("L");
+                            else System.out.print("T");
+                        }
+                        ok=false;
+                }
+                if((ok)&&((i+j)%2==0))System.out.print("#");
+                else System.out.print(' ');
+            }
+            System.out.println();
+        }
+
+    }
+
+
+    public boolean gameOver(){
+        return gameO;
+    }
+}
+
+
+
+
+
+
+/**
+ * Write a description of class Pozitie here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+import java.util.*;
+
+public class Pozitie
+{
+    protected int[] pozitii=new int[6];
+    public Pozitie()
+    {
+        pozitii=IOClass.citireFisier();
+    }
+
+    
+
+    public int[] citestePozitie(){
+        return pozitii;
+    }
+
+
+    public int[] citesteComanda()
+    {
+        int ret[]=new int[4];
+        String line="";
+        Scanner in=new Scanner(System.in);
+        System.out.println("Dati numarul mautarii dupa cele posibile pe tabla de sah, de la 1 la 8!");
+        int move=in.nextInt();
+        int x=0, y=0;
+        switch(move){
+            case 1: x=-1; y=-2;
+            break;
+            case 2: x=-2; y=-1;
+            break;
+            case 3: x=-2; y=1;
+            break;
+            case 4: x=-1; y=2;
+            break;
+            case 5: x=1; y=2;
+            break;
+            case 6: x=2; y=1;
+            break;
+            case 7: x=2; y=-1;
+            break;
+            case 8: x=1; y=-2;
+            break;
+            case 9: System.exit(0);
+            break;
+            default: x=0; y=0;
+            break;
+        }
+        ret[0]=pozitii[0];
+        ret[1]=pozitii[1];
+        ret[2]=ret[0]+x;
+        ret[3]=ret[1]+y;
+        return ret;
+    }
+}
+
+
+
+
+
+
+/**
+ * Write a description of class IOClass here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+import java.io.*;
+public class IOClass
+{
+    public static int[] citireFisier(){
+        BufferedReader in=null;
+        int[] ret=new int[6];
+        String line="Ca1 Ca1 Ca1";
+        try{
+            in=new BufferedReader(new FileReader("cal_tura.txt"));
+           
+            line=in.readLine();
+        }catch(IOException e){System.out.println("File not open for input!");}
+        finally{
+            try{
+                if(in!=null)in.close();
+            }catch(IOException e2){System.out.println("Error closing file!");}
+        }
+        ret[1]=line.charAt(1)-'a';
+        ret[0]=line.charAt(2)-'1';
+        ret[3]=line.charAt(5)-'a';
+        ret[2]=line.charAt(6)-'1';
+        ret[5]=line.charAt(9)-'a';
+        ret[4]=line.charAt(10)-'1';
+        for(int i=0;i<6;i++)
+        System.out.println(ret[i]);
+        return ret;
+    }
+    public static void main()
+    {
+     citireFisier();
+    }
+}

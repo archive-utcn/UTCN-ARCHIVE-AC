@@ -1,0 +1,16 @@
+AR project behavioral C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/project.vhd sub00/vhpl15 1368635272
+AR display behavioral C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/display.vhd sub00/vhpl13 1368635270
+EN instr_f NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/instr_f.vhd sub00/vhpl02 1368635259
+EN display NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/display.vhd sub00/vhpl12 1368635269
+AR alu behavioral C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/arith_logic.vhd sub00/vhpl09 1368635266
+AR mpg behavioral C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/monopulse.vhd sub00/vhpl01 1368635258
+AR control behavioral C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/control.vhd sub00/vhpl05 1368635262
+AR instr_f behavioral C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/instr_f.vhd sub00/vhpl03 1368635260
+AR ram syn C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/memo_ram.vhd sub00/vhpl11 1368635268
+EN mpg NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/monopulse.vhd sub00/vhpl00 1368635257
+EN reg_file NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/reg_file.vhd sub00/vhpl06 1368635263
+EN project NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/project.vhd sub00/vhpl14 1368635271
+AR reg_file behavioral C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/reg_file.vhd sub00/vhpl07 1368635264
+EN control NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/control.vhd sub00/vhpl04 1368635261
+EN ram NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/memo_ram.vhd sub00/vhpl10 1368635267
+EN alu NULL C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/arith_logic.vhd sub00/vhpl08 1368635265

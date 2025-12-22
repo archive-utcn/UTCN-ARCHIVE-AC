@@ -1,0 +1,21 @@
+﻿  EGC_Lab5.cpp
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(137,42): warning C4305: '+=': truncation from 'double' to 'float'
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(141,42): warning C4305: '-=': truncation from 'double' to 'float'
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(143,45): warning C4305: '=': truncation from 'double' to 'float'
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(181,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(181,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(181,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(181,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(182,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(182,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(182,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(182,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(183,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(183,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(183,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(183,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(184,68): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(184,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(184,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\EGC_Lab5\EGC_Lab5.cpp(184,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  EGC_Lab5.vcxproj -> D:\CTI\An 2\Sem. II\GAC\Lab\Lab05\EGC_Lab5\Debug\EGC_Lab5.exe

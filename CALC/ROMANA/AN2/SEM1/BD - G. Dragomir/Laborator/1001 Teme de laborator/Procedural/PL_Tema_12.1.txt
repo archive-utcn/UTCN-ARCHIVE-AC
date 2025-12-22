@@ -1,0 +1,87 @@
+Vocabulary
+
+1-NATIVE DYNAMIC SQL
+
+2-EXECUTE IMMEDIATE
+
+
+Try it/Solve it
+
+
+1)
+Parse-verifica sintaxele,existenta obiectelor,privilegile
+
+Bind-obtine valorile reale ale variabilelelor la care se face refernita in statement
+
+Execute-statement-ul se executa
+
+
+2)
+-este mai usor de utilizat
+
+-necesita mai putin cod
+
+-se executa mai repede
+
+
+3)
+CREATE OR REPLACE PROCEDURE disp_data(p_table_name VARCHAR2) IS
+
+v_dept_id NUMBER(4);
+
+BEGIN
+
+EXECUTE IMMEDIATE 'SELECT department_id FROM '
+|| p_table_name
+|| '
+ WHERE manager_id = 205'
+
+INTO v_dept_id;
+
+DBMS_OUTPUT.PUT_LINE('The department ID is: '|| v_dept_id);
+
+EXCEPTION
+
+WHEN NO_DATA_FOUND THEN
+
+DBMS_OUTPUT.PUT_LINE('There are no rows for this table
+/ manager ID combination');
+
+WHEN TOO_MANY_ROWS THEN
+
+DBMS_OUTPUT.PUT_LINE('There are too many rows for this table
+/ manager ID combination.');
+
+END;
+
+
+
+4)
+create or replace procedure how_many_rows(p_table_name Varchar2) is
+
+v_count Number(4);
+
+begin
+
+execute immediate 'select count(*) from' || p_table_name into v_count;
+
+DBMS_OUTPUT.PUT_LINE('tabelul '|| p_table_name || 'are' || v_count || 'linii');
+
+end;
+
+
+
+
+5)
+CREATE OR REPLACE PRORCEDURE delete_rows(p_name VARCHAR2) IS
+ 
+v_cont NUMBER;
+ 
+BEGIN 
+
+EXECUTE IMMEDIATE 'DELETE FROM ' || p_name; 
+v_cont := SQL%ROWCOUNT;
+ 
+DBMS_OUTPUT.PUT_LINE('Se eliminaron ' || ' ' || v_cont || ' ' || 'filas de ' || ' ' || p_name);
+
+end;

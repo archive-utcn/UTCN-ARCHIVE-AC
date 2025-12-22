@@ -1,0 +1,126 @@
+
+
+
+# (1) Calculati numarul de comenzi
+
+# (3) Calculati numarul de orase diferite din toate adresele
+
+# (5) Calculati numarul de orase din toate adresele al caror nume incepe cu litere diferite
+
+# (7) Care este pretul minim al articolelor; care e cantitatea minima de articole dintr-o comanda
+
+# (9) Care este pretul maxim al articolelor din comanda numarul 3 ?
+
+#(11) Care este diferenta intre cel mai mare si mai mic pret (in bani) ?
+
+#(13) Care este suma preturilor articolelor ?
+
+#(15) Calculati pretul mediu al articolelor. Calculati pretul mediu al articolelor, neponderat.
+
+#(17) Calculati varianta preturilor articolelor; calculati deviatia standard a preturilor articolelor.
+
+#(19) Listati numarul de comenzi pentru fiecare client, cu suma totala si media valorii comenzilor.
+
+#(21) (GROUP BY expresii) Listati numarul de comenzi pe fiecare an
+
+#(23) Listati numarul de comenzi pentru fiecare client, cu suma totala si media valorii comenzilor, avand suma totala peste 100 lei.
+
+#(1)
+SELECT count(*)
+FROM  comanda;
+
+
+#(3)
+SELECT COUNT(oras)
+FROM adresa;
+
+SELECT COUNT(DISTINCT oras)
+FROM adresa;
+
+
+
+#(5)
+SELECT DISTINCT SUBSTRING(oras,1,1)
+FROM adresa;
+SELECT COUNT(DISTINCT SUBSTRING(oras, 1, 1))
+FROM adresa;
+
+
+#(7)
+SELECT MIN(pret)
+FROM articol;
+SELECT MIN(cantitate)
+FROM comanda_articol;
+
+
+
+
+#(9)
+SELECT MAX(pret)
+FROM articol, comanda_articol
+WHERE comanda_articol.comanda_id = 3
+AND comanda_articol.articol_id = articol.id;
+
+SELECT descriere, pret, cantitate
+FROM articol, comanda_articol
+WHERE comanda_articol.comanda_id = 3
+AND comanda_articol.articol_id = articol.id;
+
+
+#(11)
+SELECT MAX(pret) - MIN(pret)
+FROM articol;
+
+
+
+#(13)
+SELECT SUM(pret)
+FROM articol;
+
+
+
+#(15)
+SELECT AVG(pret)
+FROM articol;
+
+SELECT AVG(DISTINCT pret)
+FROM articol;
+
+
+
+#(17)
+SELECT SQRT(VARIANCE(pret)), VARIANCE(pret)
+FROM articol;
+
+
+#(19)
+SELECT denumire AS Client, COUNT(DISTINCT comanda.id) 
+AS 'Numar comenzi', 
+SUM(pret * cantitate) AS 'Comenzi totale', 
+AVG(pret * cantitate) AS 'Valoare medie comenzi'
+FROM  client, comanda, comanda_articol, articol
+WHERE client.id = comanda.client_id
+AND   comanda.id = comanda_articol.comanda_id
+AND   comanda_articol.articol_id = articol.id
+GROUP BY client.id;
+
+
+#(21)
+SELECT YEAR(data) AS 'An', COUNT(*) AS 'Numar de comenzi'
+FROM comanda
+GROUP BY YEAR(data);
+
+
+
+#(23)
+SELECT denumire AS Client, COUNT(DISTINCT comanda.id) 
+AS 'Numar comenzi', 
+SUM(pret * cantitate) AS 'Comenzi totale', 
+AVG(pret * cantitate) AS 'Valoare medie comenzi'
+FROM  client, comanda, comanda_articol, articol
+WHERE client.id = comanda.client_id
+AND   comanda.id = comanda_articol.comanda_id
+AND   comanda_articol.articol_id = articol.id
+GROUP BY client.id 
+HAVING SUM(pret * cantitate) > 100;
+

@@ -1,0 +1,42 @@
+[aimspice]
+[description]
+656
+POARTA SAU-CMOS declarata ca subcircuit
+*sunt puse tranzistoarele in schema echivalenta - se tine cont de faptul ca intrarile
+*la fiecare poarta de transmisie este in "1" logic!!!!
+*Se face apel de subcircuit pentru simulare
+
+.SUBCKT sau_cmos	INA	INB	OUT	ALIM	MASA
+m11	out	a1	alim	alim	mos1
+m12	out	ina	alim	masa	mos2
+m21	out	b1	alim	alim	mos1
+m22	out	inb	alim	masa	mos2
+*urmeaza cele 2 inversoare din comanda
+m13	alim	ina	a1	alim	mos1
+m14	a1	ina	masa	masa	mos2
+m23	alim	inb	b1	alim	mos1
+m24	b1	inb	masa	masa	mos2
+.model mos1 PMOS
+.model mos2 NMOS
+Rout	out	masa	50k
+.ends
+
+x1	in1	0	out	a1	0	sau_cmos
+vin	in1	0	DC 15
+
+Valim	a1	0	DC 15
+[dc]
+1
+vin
+0
+15
+.1
+[ana]
+1 1
+0
+1 1
+1 1 0 15
+2
+vin
+v(out)
+[end]

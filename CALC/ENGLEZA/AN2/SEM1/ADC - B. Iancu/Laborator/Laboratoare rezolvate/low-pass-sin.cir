@@ -1,0 +1,24 @@
+[aimspice]
+[description]
+136
+RC LOW PASS CIRCUIT
+R1 in out 1k
+C1 out 0 470n
+!Vin in 0 DC 5 PULSE (0 5 0 1e-9 1e-9 0.5e-3 1e-3)
+Vin in 0 DC 5 sin (0 10 1e3 0 0)
+
+[dc]
+1
+Vin
+0
+5
+1
+[tran]
+1e-9
+5e-3
+X
+X
+0
+[ana]
+4 0
+[end]

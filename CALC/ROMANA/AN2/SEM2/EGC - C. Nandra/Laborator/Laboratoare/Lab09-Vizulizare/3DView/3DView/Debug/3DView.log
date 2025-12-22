@@ -1,0 +1,6 @@
+﻿  projection.cpp
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab09\3DView\3DView\projection.cpp(17,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab09\3DView\3DView\projection.cpp(18,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab09\3DView\3DView\projection.cpp(19,48): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CTI\An 2\Sem. II\GAC\Lab\Lab09\3DView\3DView\projection.cpp(20,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  3DView.vcxproj -> D:\CTI\An 2\Sem. II\GAC\Lab\Lab09\3DView\Debug\3DView.exe

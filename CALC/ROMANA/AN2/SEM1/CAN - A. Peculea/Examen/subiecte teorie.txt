@@ -1,0 +1,4 @@
+Memorii REPROM
+Triggere Schmitt cu TTL
+CAN paralel
+CAM

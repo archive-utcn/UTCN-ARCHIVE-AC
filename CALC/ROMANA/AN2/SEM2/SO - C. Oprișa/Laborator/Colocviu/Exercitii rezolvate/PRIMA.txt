@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include<stdlib.h>
+#include <wait.h>
+#include <pthread.h>
+#include <string.h>
+#include <semaphore.h>
+#include <sys/mman.h>
+#include <dirent.h>
+
+
+int main(int argc, char **argv)
+{
+    char *string = argv[1];
+    char *folder = argv[2];
+
+        DIR *dir=NULL;
+        struct dirent *entry=NULL;
+        struct stat statbuf;
+        dir=opendir(folder);
+        while((entry=readdir(dir))!=NULL)
+        {
+            if(strcmp(entry->d_name,".")!=0 && strcmp(entry->d_name,"..")!=0)
+            {
+                char path[512]={0};
+                snprintf(path,512,"%s/%s",folder,entry->d_name);
+                lstat(path,&statbuf);
+                if(S_ISREG(statbuf.st_mode))
+                {
+                    if(fork()==0)
+                        execl("/bin/grep","grep",string,path,NULL);
+                    else
+                        wait(NULL);
+                }
+            }
+        }
+
+    return 0;
+}

@@ -1,0 +1,913 @@
+Sunt prezentate cinci exemple de utilizare procese Unix.
+Exemplele sunt scrise in limbajul C.
+
+Primul exemplu ilustreaza legaturile dintre un proces
+parinte si un fiu al lui creat prin fork.
+
+Al doilea exemplu prezinta diferite aspecte legate de 
+utilizarea apelurilor exec.
+
+Ultimele trei exemple rezolva trei probleme specifice in care se
+folosesc combinatii de apeluri sistem fork, exec, wait, exit, system
+
+
+Exemplul 1, utilizari fork.
+---------------------------
+
+1. Sursa fork1.c:
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+    int p;
+    p=fork();
+    if (p == -1) {perror("fork imposibil!"); exit(1);}    
+    if (p == 0) { 
+        printf("Fiu: pid=%d, ppid=%d\n", getpid(), getppid());
+    } else { 
+        printf("Parinte: pid=%d ppid=%d\n", getpid(), getppid());
+        //wait(0); 
+        printf("Terminat fiul\n");      
+    }
+}
+
+Rulare fork1 fara wait (este comentat):
+
+Parinte: pid=2704 ppid=2197
+Terminat fiul
+Fiu: pid=2705, ppid=2704
+
+Rulare fork1 cu wait:
+
+Parinte: pid=2715 ppid=2197
+Fiu: pid=2716, ppid=2715
+Terminat fiul
+
+Cauza: mesajul de terminare a fiului este dat de catre procesul
+parinte. In absenta lui wait, este posibil ca parintele sa
+primeasca controlul inaintea fiului si sa afiseze mesajul inainte
+ca fiul sa isi afiseze mesajul lui. Daca wait apare, atunci
+parintele asteapta efectiv terminarea fiului inainte de a
+afisa mesajul de terminare.
+
+2. Sursa fork2.c :
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+    int p;
+    printf("Parinte: pid=%d, ppid=%d\n", getpid(), getppid());
+    p=fork();
+    if(p==-1){perror("fork imposibil!"); exit(1);} 
+    if(p==0){
+        printf("Fiu: pid=%d, ppid=%d\n", getpid(), getppid());
+        //exit(2);
+    }        
+    printf("pid=%d, ppid=%d\n", getpid(), getppid());
+}
+
+Rulare fork2 fara exit(2) (este comentat):
+
+Parinte: pid=2743, ppid=2197
+pid=2743, ppid=2197
+Fiu: pid=2744, ppid=2743
+pid=2744, ppid=2743
+
+Rulare fork2 cu exit(2):
+
+Parinte: pid=2755, ppid=2197
+pid=2755, ppid=2197
+Fiu: pid=2756, ppid=2755
+
+Cauza: ultimul print din sursa apartine atat parintelui cat
+si fiului. Din cauza lui exit(2), in fiu nu se mai executa
+acest ultim print.
+
+3. Sursa fork3.c:
+#include <stdio.h>
+#include <stdlib.h>
+main() {
+    int p, i;
+    p=fork();
+    if (p == -1) {perror("fork imposibil!"); exit(1);}    
+    if (p == 0) { 
+        for (i=0; i<10; i++)
+            printf("%d. Fiu: pid=%d, ppid=%d\n", i, getpid(), getppid());
+    } else { 
+        for (i=0; i<10; i++)
+            printf("%d. Parinte: pid=%d ppid=%d\n", i, getpid(), getppid());
+    }
+}
+
+Rezultatul rularii:
+
+0. Parinte: pid=2708 ppid=1768
+1. Parinte: pid=2708 ppid=1768
+2. Parinte: pid=2708 ppid=1768
+0. Fiu: pid=2715, ppid=2708
+3. Parinte: pid=2708 ppid=1768
+1. Fiu: pid=2715, ppid=2708
+4. Parinte: pid=2708 ppid=1768
+2. Fiu: pid=2715, ppid=2708
+5. Parinte: pid=2708 ppid=1768
+3. Fiu: pid=2715, ppid=2708
+6. Parinte: pid=2708 ppid=1768
+4. Fiu: pid=2715, ppid=2708
+7. Parinte: pid=2708 ppid=1768
+5. Fiu: pid=2715, ppid=2708
+8. Parinte: pid=2708 ppid=1768
+6. Fiu: pid=2715, ppid=2708
+9. Parinte: pid=2708 ppid=1768
+7. Fiu: pid=2715, ppid=2708
+8. Fiu: pid=2715, ppid=2708
+9. Fiu: pid=2715, ppid=2708
+
+Cauza: amestecarea iesirilor fiului cu ale parintelui in
+executia de mai sus este doar una dintre multele posibile.
+Daca se ruleaza de mai multe ori, se vor observa de fiecare
+data alte (posibile) amestecari. Totul depinde de care
+dintre cele doua procese obtine primul accesul.
+
+Exemplul 2: utilizari simple execl, execlp, execv:
+--------------------------------------------------
+
+Urmatoarele trei programe, desi diferite, au acelasi efect.
+Toate trei folosesc o comanda de tip exec, spre a lansa din ea: 
+
+ls -l
+
+Cele trei surse, din care pe moment se vor ignora comentariile, sunt:
+                          
+Sursa execl.c:
+#include<stdio.h>
+#include<unistd.h>
+main() {
+    printf("Urmeaza rezultatul executiei comenzii ls:\n");
+    execl("/bin/ls", "/bin/ls", "-l", NULL);
+    //execl("/bin/ls","/bin/ls","-l","execl.c", "fork1.c", "xx", NULL);
+    //execl("/bin/ls","/bin/ls","-l","*.c", NULL);
+    printf("Aici nu se ajunge decat in urma unei erori exec\n");
+}
+
+Sursa execlp.c:
+#include<stdio.h>
+#include<unistd.h>
+main() {
+    printf("Urmeaza rezultatul executiei comenzii ls:\n");
+    execlp("ls", "ls", "-l", NULL) == -1;
+    printf("Aici nu se ajunge decat in urma unei erori exec\n");
+//    if (execlp("ls","ls","-l",NULL) == -1) {
+//      printf("Aici nu se ajunge decat in urma unei erori exec\n");
+//      perror("Aici se impune un mesaj explicativ; sistemul raspunde");
+//    }
+}
+
+Sursa execv.c:
+#include<stdio.h>
+#include<unistd.h>
+main() {
+    char* argv[3];
+    argv[0] = "/bin/ls";
+    argv[1] = "-l";
+    argv[2] = NULL;
+    printf("Urmeaza rezultatul executiei comenzii ls:\n");
+    execv("/bin/ls",argv);
+    printf("Aici nu se ajunge decat in urma unei erori exec\n");
+}
+ 
+Efectul oricaruia dintre programele de mai sus este:
+
+Urmeaza rezultatul executiei comenzii ls:
+total 184
+-rwxr-xr-x 1 florin florin 7176 2011-03-17 16:47 a.out
+-rwxrwxrwx 1 florin florin  340 2011-03-17 16:43 execl.c
+-rwxrwxrwx 1 florin florin  404 2011-03-17 16:43 execlp.c
+-rwxrwxrwx 1 florin florin  370 2011-03-17 16:43 execv.c
+-rwxrwxrwx 1 florin florin  364 2011-03-17 15:45 fork1.c
+-rw-r--r-- 1 florin florin  353 2011-03-17 16:06 fork2.c
+-rw-r--r-- 1 florin florin  386 2011-03-17 16:10 fork3.c
+
+1.
+Primul program foloseste execl. De aceea comanda se specifica
+cu calea completa /bin/ls. Urmeaza lista argumentelor din
+linia de comanda (de aceea apare dublarea primului argument).
+
+Al doilea foloseste execlp, deci comanda este cautata in 
+directoarele din PATH, de aceea se specifica doar ls.
+
+Al treilea foloseste execv. La fel ca primul, specifica
+calea absoluta. Acest program pregateste in prelabil un 
+tablou cu trei pointeri la stringuri in care se pun cele
+doua argumente ale liniei de comanda si pointerul NULL
+ce marcheaza sfarsitul tabloului. Compilatorul in mod
+automat aloca spatiu de memorie pentru fiecare constanta
+string. In urma atribuirilor a[0] = --- si a[1] = ---
+se atribuie adresele stringurilor respective.
+Daca este cazul, un astfel de tablou se poate aloca dinamic
+in zona heap (prin malloc), dupa care se va initializa cu
+valorile corespunzatoare prin metodele specifice limbajului C.
+
+2. 
+Se poate observa, in urma rularilor, ca nu se va afisa textul
+din cel de-al doilea printf, indiferent de programul lansat.
+Este suficient sa se schimbe primul argument al exec, din
+ls in xxxx spre exemplu, si se va obtine:
+
+Urmeaza rezultatul executiei comenzii ls:
+Aici nu se ajunge decat in urma unei erori exec
+
+3. 
+In spiritul obsevatiei de la 2, din dorinta de a prezenta
+programele cat mai simple, am "incalcat" o regula de aur
+in programarea C: 
+"Sa se testeze de fiecare data rezultatul intors de o 
+functie C sau de un apel sistem!"
+In consecinta, fiecare apel exec ar trebui sa se faca asa 
+cum apare in comentariile de la execlp.c:
+
+    if (execlp("ls","ls","-l",NULL) == -1) {
+        printf("Aici nu se ajunge decat in urma unei erori exec\n");
+        perror("Aici se impune un mesaj explicativ; sistemul raspunde");
+    }
+
+Vezi si man exec. 
+Inlocuind un apel exec cu o secventa de tipul de mai sus si 
+inlocuind ls cu xxxx se obtine:
+
+Aici nu se ajunge decat in urma unei erori exec
+Aici se impune un mesaj explicativ; sistemul raspunde: No such file or directory
+
+4.
+In sursa execl.c apar doua apeluri execl comentate. Inlocuind 
+pe rand apelul execl cu unul din cele comentate, se va obtine:
+
+Urmeaza rezultatul executiei comenzii ls:
+
+/bin/ls: cannot access xx: No such file or directory
+-rwxrwxrwx 1 florin florin 340 2011-03-17 17:39 execl.c
+-rwxrwxrwx 1 florin florin 364 2011-03-17 15:45 fork1.c
+
+Urmeaza rezultatul executiei comenzii ls:
+/bin/ls: cannot access *.c: No such file or directory
+
+In primul caz se obtine efectul lansarii comenzii:
+
+ls -l execl.c fork1.c xx
+
+iar fisierul xx nu exista in directorul curent.
+
+In cazul al doilea este vorba de comanda:
+
+ls -l *.c
+
+care insa nu este interpretata asa cum ne-am astepta!
+-----------------------------------------------------
+De ce? Din cauza faptului ca specificarea *.c reprezinta
+o specificare generica de fisier, dar numai shell "stie"
+acest lucru si el (shell) inlocuieste aceasta specificare,
+in cadrul uneia dintre etapele de tratare a liniei de comanda.
+La fel stau lucrurile cu evaluarea variabilelor de mediu,
+${---}, inlocuirea dintre apostroafele inverse ` --- `,
+redirectarea I/O standard etc. 
+Aceste procesari, specifice shell, NU sunt tratate de catre exec
+Daca este necesar, aceste procesari trebuie facute
+in programul C inainte de apelul exec!
+In schimb, apelurile system le trateaza: testati system("ls -l *.c")
+
+Exemplul 3: Cate perechi de numere nenule au suma numar par?
+-----------------------------------------------------
+
+Problema este trivial de simpla, insa potrivita pentru a 
+exemplifica utilizarea fork, wait si exit.
+
+Enuntul problemei: Se dau la linia de comanda n perechi de
+numere intregi. Programul va crea n procese fii, fiecare 
+primind doua argumente consecutive din linia de comanda.
+Oricare dintre fii intoarce codul de retur:
+    0 daca perechea are suma para, 
+    1 daca suma este impara,
+    2 daca unul dintre argumente este nul sau nenumeric.
+Parintele asteapta terminarea fiilor si va afisa rezultatul.
+
+Sursa paritate.c este:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/wait.h>
+main(int argc, char* argv[]) {
+    int pare = 0, impare = 0, nenum = 0, i, n1, n2;
+    for (i = 1; i < argc-1; i += 2) {
+        if (fork() == 0) {
+            n1 = atoi(argv[i]);   // atoi intoarce 0
+            n2 = atoi(argv[i+1]); // si la nenumeric 
+            if (n1 == 0 || n2 == 0) exit(2);
+            if ((n1 + n2) % 2 == 0) exit(0);
+            else                    exit(1);
+            // Aici se termina fiecare fiu 
+        }
+    }
+    // Parintele asteapta terminarile fiilor
+    for (i = 1; i < argc-1; i += 2) {
+        wait(&n1);
+        switch (WEXITSTATUS(n1)) {
+            case 0: pare++;break;
+            case 1: impare++;break;
+            default: nenum++;
+        }
+    }    
+    printf("Pare %d, impare %d, nenumerice %d\n",pare, impare, nenum);
+}
+
+La terminare, fiecare fiu intoarce codul de retur corespunzator.
+Parintele primeste in intregul n1 o configuratie de biti
+intre care se afla si valoarea codului de retur. 
+Functia (de fapt macroul) WEXITSTATUS extrage valoarea codului.
+
+Exemplul 4: Un program care compileaza si ruleaza alt program.
+--------------------------------------------------------------
+
+Exemplul care urmeaza are acelasi efect ca si scriptul sh:
+#!/bin/sh
+if gcc -o ceva $1
+then ./ceva
+else echo "erori de compilare"
+fi
+
+Noi nu il vom implementa in sh, ci vom folosi un program C.
+
+Sursa compilerun.c a acestuia este:
+#include<stdio.h>
+#include<unistd.h>
+#include<string.h>
+#include <sys/wait.h>
+main(int argc, char* argv[]) {
+    char com[200];
+    strcpy(com, "gcc -o ceva "); // fabricat comanda
+    strcat(com, argv[1]);
+    if (WEXITSTATUS(system(com)) == 0)
+        execl("./ceva","./ceva", NULL);
+    printf("Erori de compilare\n");
+}
+
+Compilarea lui se face 
+
+gcc -o comprun compilerun.c
+
+Executia se face, de exemplu, prin 
+
+./comprun fork1.c
+
+Ca efect, daca compilarea sursei argument (fork1.c) este corecta,
+atunci compilatorul gcc creeaza fisierul ceva si intoarce 
+cod de retur o, dupa ceva este lansat prin execl.
+Daca esueaza compilarea, se va tipari doar mesajul.
+
+
+Exemplul 5: Prelucrarea simultana a mai multor fisiere text.
+------------------------------------------------------------
+
+Dorim sa transformam un fisier text intr-un alt fisier text,
+cu acelasi continut, dar in care toate cuvintele din el sa
+inceapa cu litera mare. 
+Un astfel de program va fi apelat:
+
+capitalizare fisierintrare fisieriesire
+ 
+Ne propunem sa prelucram simultan mai multe astfel de fisiere.
+De aceea vom creea un proces master, care primeste la linia
+de comanda numele fisierelor al caror continut va fi capitalizat:
+
+master fisier1 fisier2 - - - fisiern
+
+Rezultatul va consta din fisierele:
+fisier1.CAPIT, fisier2.CAPIT, - - - fisiern.CAPIT
+
+Procesul master va crea n procese fii, iar fiecare fiu i va lansa
+prin execl programul:
+capitalizare fisi fisi.CAPIT
+ 
+Sursa capitalizare.c este:
+#include<stdio.h>
+#include<string.h>
+#define MAXLINIE 100
+main(int argc, char* argv[]) {
+    FILE *fi, *fo;
+    char linie[MAXLINIE], *p;
+    fi = fopen(argv[1], "r");
+    fo = fopen(argv[2], "w");
+    if (fi == NULL && fo == NULL) exit(1);
+    for ( ; ; ) {
+        p = fgets(linie, MAXLINIE, fi);
+        linie[MAXLINIE-1] = '\0';
+        if (p == NULL) break;
+        for (p = linie; ; ) {
+            p = strstr(p, " ");
+            if (p == NULL) break;
+            p++;
+            if (*p == '\n') break;
+            *p = toupper(*p);
+        }
+        fprintf(fo, "%s", linie);
+    }
+    fclose(fo);
+    fclose(fi);
+}
+
+Programul primeste la linia de comanda numele celor 
+doua fisiere. Se deschid aceste fisiere si se citeste 
+fisierul de intrare linie cu linie.
+Cu ajutorul pointerului p, se parcurge linia curenta si 
+se cauta pe rand cate un spatiu, dar care sa nu fie 
+ultimul caracter din linie. Urmatorul caracter este
+apoi transformat in litera mare (toupper face aceasta
+transformare numai daca caracterul este efectiv o
+litera mica).
+
+Sursa master.c este:
+#include<stdio.h>
+#include<unistd.h>
+#include<string.h>
+main(int argc, char* argv[]) {
+    int i;
+    char nume[200];
+    for (i=1; argv[i]; i++) {
+        if (fork() == 0) { // un fiu pentru un fisier de capitalizat
+            strcpy(nume, argv[i]);
+            strcat(nume, ".CAPIT"); // fabricat numele iesirii
+            // incarcat programul de capitalizare
+            execl("capitalizare","capitalizare",argv[i], nume, 0);
+        }
+    }
+    printf("Lansat simultan %d procese de capitalizare\n",i-1);
+}
+
+Se parcurg argumentele liniei de comanda si pentru fiecare
+dintre ele se creeaza un proces fiu.
+In tabloul nume se construieste numele fisierului de iesire.
+Apoi se incarca programul capitalizare cu cele doua nume
+de fisiere date "la linia de comanda".
+
+Cele doua programe se compileaza:
+
+gcc -o capitalizare capitalizare.c
+gcc -o master master.c
+
+Lansarea se face:
+
+./master fis1 fis2 - - - fisn
+
+Enuntul problemei pentru acest laborator incepe cu:
+
+"Se cere un server si unul sau mai multi clienti"
+
+Pentru comunicarea prin pipe sau FIFO se va si se va 
+adapta corespunzator enuntul, considerand:
+
+"Se cere un server si un client"
+
+Sunt trei motive pentru care facem aceasta simplificare:
+
+    1. Un canal pipe si FIFO este potrivit pentru comunicarea
+intre doua procese, insa este dificil de folosit pentru
+comunicarea intre mai mult de doua procese.
+
+    2. Oferim studentilor interesati posibilitati de
+generalizare a solutiei pentru doi sau mai multi clienti:
+ - fie prin gestionarea de server a cate unui canal separat
+pentru cereri de la fiecare client, 
+ - fie prin folosirea unui instrument (semafor, blocare de 
+fisier etc.) de acces exclusiv al unui client la canal,
+
+    3. Aceeasi problema va constitui tema pentru un alt
+laborator, unde se vor cere efectiv mai multi clienti. Din
+acest motiv, rezolvarea problemei trebuie abordata modular.
+Astfel, partile de comunicare din cod sa fie (pe cat posibil)
+separate de partile specifice din businessul problemei.
+Astfel, parti din solutie pot fi folosite la solutionarea
+problemei prin alte tipuri de canale de comunicare.
+
+In cele ce urmeaza este prezentata o problema, rezolvata 
+folosind comunicarea prin pipe, prin FIFO si prin popen.
+
+Solutia este implementata in limbajul C.
+
+Exemplu: lista limitata de fisiere cu nume de anumita forma.
+------------------------------------------------------------
+
+Enuntul problemei este:
+Se cere un server si un client. Clientul trimite serverului
+un intreg l si un string s. Serverul ii intoarce clientului
+lista a maximum l fisiere din directorul lui curent, ale
+caror nume se termina cu stringul s.
+
+Vom descrie implementarea separat pe functionalitati. Pentru 
+fiecare functionalitate am intocmit o sursa separata.
+
+Mai intai vom construi doua functii cu acelasi rol, acela de
+a furniza lista numelor de fisiere:
+
+Mesaj *dir(int l, char *s)
+       ---
+Mesaj *dirPopen(int l, char *s)
+       --------
+       
+Vom descrie mai intai tipul de date Mesaj. El va diferi de
+la un tip de canal la altul, insa pentru functiile de mai
+sus aceasta diferenta nu le va influenta raspunsurile.
+
+Structura Mesaj este:
+
+      /--PLUS--\ /------------- MAXS --------------\
+|lung|          |s                                  |
+|----|----------|xxxxxxxxxxxxxxxxxxxxxxxxxxxx|------|
+     |                                       | 
+      \ -------------- lung ----------------/
+
+lung este un intreg ce contine lungimea efectiva a 
+continutului mesajului. 
+Zona de PLUS octeti contine cativa intregi, depinde de 
+tipul canalului pe care se comunica.
+s este un tablou de maximum MAXS caractere, aflat in partea
+finala a mesalului.
+Evident, in functie de natura problemei utilizatorul poate
+sa isi defineasca suprapuneri convenabile (union) in Mesaj.
+ 
+Sursa dir.c contine functiile dir si dirPopen. Aceste functii
+      -----                   ---    --------
+sunt independente de tipul canalului de comunicatie:
+
+Mesaj *dir(int l, char *s) {
+    static Mesaj resp;  
+    DIR *dirp;
+    struct dirent *d;
+    char *p, *q, *n;
+    int i;
+    p = resp.s;
+    resp.lung = 0;
+    dirp = opendir (".");
+    for (i=0; i<l; ) {
+        d = readdir (dirp);
+        if (d == NULL) break;
+        n = d->d_name;
+        if (strlen(n) < strlen(s)) continue;
+        if (strcmp(n+strlen(n)-strlen(s), s) != 0) continue;
+        if (resp.lung+strlen(n)+1 > MAXS) break;
+        i++;
+        strcpy(p, n);
+        resp.lung += strlen(n)+1;
+        p += strlen(n)+1;
+    }
+    closedir (dirp);
+    resp.lung += PLUS;
+    return &resp;
+}
+
+Mesaj *dirPopen(int l, char *s) {
+    static Mesaj resp;  
+    FILE *fin;
+    char n[MAXL], *p, *q, comanda[MAXL];
+    int i;
+    strcpy(comanda, "ls -1 *");
+    strcat(comanda, s);
+    fin = popen(comanda, "r");
+    p = resp.s;
+    resp.lung = 0;
+    for (i=0; i<l; ) {
+        q = fgets(n, MAXL, fin);
+        if (q == NULL) break;
+        n[strlen(n)-1] = '\0';
+        if (resp.lung+strlen(n)+1 > MAXS) break;
+        i++;
+        strcpy(p, n);
+        resp.lung += strlen(n)+1;
+        p += strlen(n)+1;
+    }
+    pclose (fin);
+    resp.lung += PLUS;
+    return &resp;
+}
+
+Ambele functii primesc intregul l si stringul s precizati
+in enuntul problemei "lista a maximum l nume de fisiere 
+din directorul curent al caror nume se termina cu s".
+Ambele functi intorc un pointer la un Mesaj care contine 
+lista numelor. 
+Mesajul contine in s succesiunea de stringuri 
+(conventie C) cu numele fisierelor raspuns,
+iar lung suma lungimilor acestor stringuri (plus zerourile 
+terminale), plus PLUS.
+
+Functia dir obtine raspunsul folosind apelurile sistem
+opendir, readdir, closedir si structurile DIR*, struct dirent.
+
+Functia dirPopen obtine raspunsul folosind apelul sistem
+popen. Cu acesta se apeleaza popen("ls -1 *.c"), daca stringul
+s este .c. Functia dirPopen capteaza iesirea standard
+a acestui apel popen, de unde extrage primele l linii.
+(Din executii se poate observa ca cele doua nu intorc neaparat
+numele acelorasi fisiere!).
+
+Pentru comunicarea prin pipe si prin FIFO structura mesajului
+este descrisa in sursa mesaj.h:
+                       -------
+#define MAXS 10000
+#define MAXL 1000
+
+typedef struct {
+    int lung;
+    int i;
+    char s[MAXS];
+} Mesaj;
+#define PLUS (sizeof(int))
+
+Citirea / scrierea unui Mesaj la comunicarea prin pipe sau
+FIFO se face in doua etape:
+    1. Se scrie / citeste lung.
+    2. Se fac scrieri / citiri repetate, pana cand sunt 
+       schimbati toti octetii continutului mesajului.
+       
+De ce a fost necesara o astfel de abordare?
+Din cauza functionarii apelurilor sistem read si write.
+Aceste apeluri sunt atomice, insa nu asigura schimbul
+numarului total de octeti solicitati (al treilea argument
+al apelurilor read si write). Aceste apeluri intorc, la
+sfarsit, numarul de octeti efectiv schimbati.
+Din aceasta cauza este dificila comunicarea prin pipe sau
+FIFO intre mai mult de doua procese: procesele care citesc
+nu stiu de la ce procese cititoare isi preia octetii!
+
+Pentru implementarea schimbului de mesaje sunt folosite
+functiile Read, Write, ReadMes, WriteMes.
+          ----  -----  -------  --------
+Primele doua aplica repetat apeluri read, write
+pana la schimbarea a exact n octeti, n parametru de intrare.
+ReadMes si WriteMes schimba mai intai lungimea continutului, 
+dupa care cere schimbul complet al acestuia.
+
+Cele patru functii sunt prezentate in sursa ReadWrite.c
+                                            -----------
+void Read(int f, char *t, int n) {
+  char *p;
+  int i, c;
+  for (p=t, c=n; ; ) {
+    i = read(f, p, c);
+    if (i == c) return;
+    c -= i;
+    p += i;
+  }
+}
+
+void Write(int f, char *t, int n) {
+  char *p;
+  int i, c;
+  for (p=t, c=n; c; ) {
+    i = write(f, p, c);
+    if (i == c) return;
+    c -= i;
+    p += i;
+  }
+}
+
+Mesaj *ReadMes(int canal) {
+    static Mesaj mesaj;
+    read(canal, (char*)&mesaj.lung, sizeof(int));
+    Read(canal, (char*)&mesaj+sizeof(int), mesaj.lung);
+    return &mesaj;
+}
+
+void WriteMes(int canal, Mesaj *pm) {
+    write(canal, (char*)pm, sizeof(int));
+    Write(canal, (char*)pm+sizeof(int), pm->lung);
+}
+
+Actiunea principala a serverului este dirijata de functia
+
+void parinte(int in, in out)
+     -------
+
+Parametrii sunt handle ale canalelor prin care citeste mesaje
+de la clienti, respectiv scrie raspunsurile spre clienti.
+Dupa caz, aceste handle pot fi descriptori pipe, descriptori
+FIFO, sau, cum vom vedea in laboratoarele viitoare, 
+descriptori de memorie partajata sau de cozi de mesaje. 
+Actiunea acestei functii este simpla: citeste in mod repetat
+cate un mesaj de la un client, apeleaza dir (sau dirPopen),
+dupa care scrie in mesaj raspunsul pentru client.
+
+Sursa parinte.c este:
+      ---------
+void parinte(int in, int out) {
+    Mesaj *pm;
+    for ( ; ; ) {
+        pm = ReadMes(in);
+        //pm = dirPopen(pm->i, pm->s);
+        pm = dir(pm->i, pm->s);
+        WriteMes(out, pm);
+    }
+}
+
+
+Actiunea principala a clientului este dirijata de functia
+
+void fiu(int in, in out)
+     ---
+
+La fel ca la server, parametrii sunt handle ale canalelor 
+prin care citeste mesaje de la server, respectiv scrie 
+cereri catre server.
+Dupa caz, aceste handle pot fi descriptori pipe, descriptori
+FIFO, sau, cum vom vedea in laboratoarele viitoare, 
+descriptori de memorie partajata sau de cozi de mesaje. 
+Clientul citeste in mod repetat de la intrarea standard
+cate un numar l si un string s.
+Dupa fiecare citire prepara un mesaj, pe care il trimite
+la server.
+Apoi citeste mesajul de raspuns primit de la server si il
+listeaza pe iesirea standard.
+
+Sursa fiu.c descrie actiunea clientului:
+      -----
+void fiu(int in, int out) {
+    Mesaj *pm, mesaj;
+    char *pc,linie[MAXL];
+    int i;
+    for ( ; ; ) {
+        printf("Dati: numar|sufix: ");
+        pc = (char*)fgets(linie, MAXL, stdin);
+        if (pc == NULL) break;
+        linie[strlen(linie)-1] = '\0';
+        pc = strstr(linie, "|");
+        if (pc == NULL) continue;
+        mesaj.i = atoi(linie);
+        strcpy(mesaj.s, pc+1);
+        mesaj.lung = PLUS + strlen(mesaj.s) + 1;
+        
+        WriteMes(out, &mesaj); 
+        
+        pm = ReadMes(in);
+
+        pc = pm->s;
+        printf("%d\n",pm->lung);
+        for (i = PLUS; i < pm->lung; ) {
+            printf("%d %s\n", i, pc);
+            i += strlen(pc) + 1;
+            pc += strlen(pc) + 1;
+        }
+    }
+}
+
+In sfarsit, vom prezenta programele principale. 
+
+Prima varianta implementeaza comunicarea prin pipe si este
+descrisa in sursa pipe.c:
+                  -------
+#include <dirent.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "mesaj.h"
+#include "ReadWrite.c"
+#include "dir.c"
+#include "parinte.c"
+#include "fiu.c"
+main() {
+    int fp[2], pf[2], pid;
+    // Doua pipe, fp: fiu->parinte, pf: parinte->fiu
+    if (pipe(fp) < 0 || pipe(pf) < 0) exit(1);
+    pid = fork();
+    if (pid < 0) exit(2);
+    if (pid > 0) { // Codul serverului (parintelui)
+        fclose(stdin);
+        fclose(stdout);
+        close(fp[1]);
+        close(pf[0]);
+        parinte(fp[0], pf[1]);
+    } else { // Codul clientului (fiului)
+        close(fp[0]);
+        close(pf[1]);
+        fiu(pf[0], fp[1]);
+        close(pf[0]);
+        close(fp[1]);
+    }
+}
+
+De remarcat faptul ca atat la server cat si la client sunt
+inchise toate fisierele care nu sunt necesare. Prin aceasta
+se reduce consumul global de resurse (fisiere deschise),
+precum si securizeaza respectarea directiei de transmitere.
+
+Varianta a doua implementeaza comunicarea prin FIFO.
+
+Mai intai sunt creeate in directorul curent doua FIFO-uri:
+
+$ mkfifo fifo1
+$ mkfifo fifo2
+
+Inainte de aceasta, daca aceste FIFO-uri deja exista, ele se
+sterg cu:
+
+$ rm fifo1
+$ rm fifo2
+
+Deoarece si clientul si serverul sunt ai aceluiasi user, am
+preferat ca cele doua FIFO-uri sa se afle in directorul curent. 
+Daca cele doua procese apartin la useri diferiti, atunci 
+este convenabil ca FIFO-urile sa fie /tmp/fifo1 si /tmp/fifo2.
+
+Sursa serverului este fifos.c:
+                      --------
+#include <dirent.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include "mesaj.h"
+#include "ReadWrite.c"
+#include "dir.c"
+#include "parinte.c"
+main() {
+    int f1, f2;
+    fclose(stdin);
+    fclose(stdout);
+    f1 = open("fifo1", O_WRONLY);
+    f2 = open("fifo2", O_RDONLY);
+    parinte(f2, f1);
+}
+
+Sursa clientului este fifoc.c:
+                      -------
+#include <string.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include "mesaj.h"
+#include "ReadWrite.c"
+#include "fiu.c"
+main() {
+    int f1, f2;
+    f1 = open("fifo1", O_RDONLY);
+    f2 = open("fifo2", O_WRONLY);
+    fiu(f1, f2);
+    close(f1);
+    close(f2);
+}
+
+Iata cateva executii cu popen sau fara, cu pipe sau FIFO
+     ---------------
+
+florin@florin-laptop:~/probleme/UPipe-H$ #dir
+florin@florin-laptop:~/probleme/UPipe-H$ gcc pipe.c
+florin@florin-laptop:~/probleme/UPipe-H$ ./a.out
+Dati: numar|sufix: 5|.c
+47
+4 fiu.c
+10 ReadWrite.c
+22 parinte.c
+32 fifos.c
+40 pipe.c
+Dati: numar|sufix: ^C
+florin@florin-laptop:~/probleme/UPipe-H$ #dirPopen
+florin@florin-laptop:~/probleme/UPipe-H$ gcc pipe.c
+florin@florin-laptop:~/probleme/UPipe-H$ ./a.out
+Dati: numar|sufix: 5|.c
+43
+4 fifoc.c
+12 fifos.c
+20 fiu.c
+26 parinte.c
+36 pipe.c
+Dati: numar|sufix: ^C
+florin@florin-laptop:~/probleme/UPipe-H$ mkfifo fifo1
+florin@florin-laptop:~/probleme/UPipe-H$ mkfifo fifo2
+florin@florin-laptop:~/probleme/UPipe-H$ #dirPopen
+florin@florin-laptop:~/probleme/UPipe-H$ gcc -o s fifos.c
+florin@florin-laptop:~/probleme/UPipe-H$ gcc -o c fifoc.c
+florin@florin-laptop:~/probleme/UPipe-H$ ./s&
+[1] 2066
+florin@florin-laptop:~/probleme/UPipe-H$ ./c
+Dati: numar|sufix: 5|.c
+43
+4 fifoc.c
+12 fifos.c
+20 fiu.c
+26 parinte.c
+36 pipe.c
+Dati: numar|sufix: ^C     
+florin@florin-laptop:~/probleme/UPipe-H$ #dir
+florin@florin-laptop:~/probleme/UPipe-H$ kill 2066
+florin@florin-laptop:~/probleme/UPipe-H$ rm fifo1
+[1]+  Terminated              ./s
+florin@florin-laptop:~/probleme/UPipe-H$ rm fifo2
+florin@florin-laptop:~/probleme/UPipe-H$ mkfifo fifo1
+florin@florin-laptop:~/probleme/UPipe-H$ mkfifo fifo2
+florin@florin-laptop:~/probleme/UPipe-H$ gcc -o s fifos.c
+florin@florin-laptop:~/probleme/UPipe-H$ gcc -o c fifoc.c
+florin@florin-laptop:~/probleme/UPipe-H$ ./s&
+[1] 2142
+florin@florin-laptop:~/probleme/UPipe-H$ ./c
+Dati: numar|sufix: 5|.c
+47
+4 fiu.c
+10 ReadWrite.c
+22 parinte.c
+32 fifos.c
+40 pipe.c
+Dati: numar|sufix: 

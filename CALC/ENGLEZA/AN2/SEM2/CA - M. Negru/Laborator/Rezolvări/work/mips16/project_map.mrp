@@ -1,0 +1,207 @@
+Release 8.2i Map I.31
+Xilinx Mapping Report File for Design 'project'
+
+Design Information
+------------------
+Command Line   : C:\Xilinx\bin\nt\map.exe -ise
+C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/MIPS16.i
+se -intstyle ise -p xc3s100e-tq144-4 -cm area -pr b -k 4 -c 100 -o
+project_map.ncd project.ngd project.pcf 
+Target Device  : xc3s100e
+Target Package : tq144
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.34.32.1 $
+Mapped Date    : Wed May 15 19:27:59 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    9
+Logic Utilization:
+  Number of Slice Flip Flops:          42 out of   1,920    2%
+  Number of 4 input LUTs:             217 out of   1,920   11%
+Logic Distribution:
+  Number of occupied Slices:                          180 out of     960   18%
+    Number of Slices containing only related logic:     180 out of     180  100%
+    Number of Slices containing unrelated logic:          0 out of     180    0%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:            345 out of   1,920   17%
+  Number used as logic:                217
+  Number used as a route-thru:          32
+  Number used for Dual Port RAMs:       96
+    (Two LUTs used per Dual Port RAM)
+  Number of bonded IOBs:               33 out of     108   30%
+    IOB Flip Flops:                     1
+  Number of Block RAMs:                1 out of       4   25%
+  Number of GCLKs:                     2 out of      24    8%
+
+Total equivalent gate count for design:  73,659
+Additional JTAG gate count for IOBs:  1,584
+Peak Memory Usage:  207 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network btn<2>_IBUF has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 54
+   more times for the following (max. 5 shown):
+   btn<1>_IBUF,
+   btn<0>_IBUF,
+   sw<7>_IBUF,
+   sw<6>_IBUF,
+   sw<5>_IBUF
+   To see the details of these warning messages, please use the -detail switch.
+WARNING:PhysDesignRules:367 - The signal <btn<0>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <btn<1>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <btn<2>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<4>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<5>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<6>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<7>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:535 - The following Virtex BUFG(s) is/are being retargetted to
+   Virtex2 BUFGMUX(s) with input tied to I0 and Select pin tied to constant 0:
+   BUFGP symbol "clk_BUFGP" (output signal=clk_BUFGP),
+   BUFG symbol "step<3>_BUFG" (output signal=step<3>)
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs in the
+   schematic.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | IOB Type         | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IBUF/IFD  |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay     |
++-----------------------------------------------------------------------------------------------------------------------------------------+
+| an<0>                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| an<1>                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| an<2>                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| an<3>                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| btn<0>                             | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| btn<1>                             | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| btn<2>                             | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| btn<3>                             | IBUF             | INPUT     | LVCMOS25    |          |      | IFF1         |          | 0 / 2     |
+| cat<0>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| cat<1>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| cat<2>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| cat<3>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| cat<4>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| cat<5>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| cat<6>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| clk                                | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| dp                                 | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0     |
+| sw<0>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| sw<1>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| sw<2>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| sw<3>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| sw<4>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| sw<5>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| sw<6>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
+| sw<7>                              | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0     |
++-----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings

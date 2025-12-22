@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4
+# SW Build 1071353 on Tue Nov 18 18:06:20 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Feb 25 19:10:14 2016
+# Process ID: 3888
+# Log file: D:/Student/Grupa_30425/Student_Somfelean_Iulia_Maria/test_env/test_env.runs/impl_1/test_env.vdi
+# Journal file: D:/Student/Grupa_30425/Student_Somfelean_Iulia_Maria/test_env/test_env.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source test_env.tcl -notrace

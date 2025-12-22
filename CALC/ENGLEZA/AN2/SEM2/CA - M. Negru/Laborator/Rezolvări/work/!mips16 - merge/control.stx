@@ -1,0 +1,23 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.14 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3215 - Unit work/control is now defined in a different file: was C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/control.vhd, now is C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/!MIPS16 - merge/control.vhd
+WARNING:HDLParsers:3215 - Unit work/control/Behavioral is now defined in a different file: was C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/MIPS16/control.vhd, now is C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/!MIPS16 - merge/control.vhd
+Compiling vhdl file "C:/Users/Platon/Documents/University/an2_sem2/CA/laboratory/work/!MIPS16 - merge/control.vhd" in Library work.
+Architecture behavioral of Entity control is up to date.
+CPU : 0.17 / 0.31 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 160488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Mar 10 18:58:27 2016
+# Process ID: 116
+# Log file: G:/_AN2_SEM2/CA/Laboratory/Lab3 - Copy/vivado.log
+# Journal file: G:/_AN2_SEM2/CA/Laboratory/Lab3 - Copy\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {G:\_AN2_SEM2\CA\Laboratory\Lab3 - Copy\Lab3.xpr}
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/0.9/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/1.0/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+INFO: [Project 1-313] Project file moved from 'G:/_AN2_SEM2/CA/Laboratory/Lab3' since last save.
+Scanning sources...
+Finished scanning sources
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:07 . Memory (MB): peak = 873.773 ; gain = 87.563
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+[Thu Mar 10 19:51:54 2016] Launched synth_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/Lab3 - Copy/Lab3.runs/synth_1/runme.log
+[Thu Mar 10 19:51:54 2016] Launched impl_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/Lab3 - Copy/Lab3.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Thu Mar 10 19:54:11 2016] Launched impl_1...
+Run output will be captured here: G:/_AN2_SEM2/CA/Laboratory/Lab3 - Copy/Lab3.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/artix7/xc7a35t/cpg236/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/artix7/ConfigModes.xml
+Parsing XDC File [G:/_AN2_SEM2/CA/Laboratory/Lab3 - Copy/.Xil/Vivado-116-DESKTOP-P7FB0P1/dcp/RegisterFile.xdc]
+Finished Parsing XDC File [G:/_AN2_SEM2/CA/Laboratory/Lab3 - Copy/.Xil/Vivado-116-DESKTOP-P7FB0P1/dcp/RegisterFile.xdc]
+Reading XDEF placement.
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1072.516 ; gain = 0.000
+Restoring placement.
+Restored 69 out of 69 XDEF sites from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+open_run: Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 1212.508 ; gain = 311.438
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 10 19:55:45 2016...

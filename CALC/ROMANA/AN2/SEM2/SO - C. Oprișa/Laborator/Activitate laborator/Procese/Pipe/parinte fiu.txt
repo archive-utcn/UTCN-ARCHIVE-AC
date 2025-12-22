@@ -1,0 +1,61 @@
+/*
+ * Parintele trimite procesului fiu prin pipe numele unui fisier,
+ * iar procesul fiu va returna catre parinte primele 10 caractere
+ * din fisierul text solicitat.
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+
+int main()
+{
+	int fd[2];
+	FILE* fp;
+	pid_t childpid;
+	char string[50];
+	char ch;
+	char readbuffer[50];
+	
+
+
+	pipe(fd);
+	
+
+	if ((childpid = fork()) == -1)
+	{
+		perror("fork");
+		exit(1);
+	}
+
+	
+	if (childpid == 0) 			//child
+	{
+		close(fd[1]);
+		read(fd[0], readbuffer, sizeof(readbuffer));
+		
+		fp = fopen(readbuffer, "r");
+		int i;
+		for (i=0;i<=9;i++)
+		{
+			ch = fgetc(fp);
+			printf("%c",ch);
+		}		
+		fclose(fp);
+	}
+	else 			  			//parent
+	{
+		printf("Dati calea fisierului: ");
+		gets(string);
+		close(fd[0]);
+		write(fd[1], string, strlen(string)+1);
+	}
+	printf("\n");
+	return 0;
+}

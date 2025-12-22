@@ -1,0 +1,27 @@
+[aimspice]
+[description]
+141
+Redresor cu filtru
+D1 1 2 dioda	
+D2 0 1 dioda
+D3 0 3 dioda
+D4 3 2 dioda
+.MODEL dioda D
+C1 2 0 3mf
+R1 2 0 100
+Vin 3 1 SIN(0 10 50 0 0)
+[dc]
+1
+Vin
+0
+1e-3
+1e-6
+[tran]
+1e-6
+1e-3
+0
+1e-6
+0
+[ana]
+4 0
+[end]
