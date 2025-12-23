@@ -1,0 +1,44 @@
+poi la teorie au fost 35 de intrebari
+cam 15 min
+au fost intrebari de completat cu spatii
+si cu Yes/No
+
+si ce fel de intrebari?
+nu stiu..la ce sa ma uit?:))
+
+
+majoritatea intrebarilor au fost din chestiile alea mai basic de criptografie si de programare paralela... gen principalele doua clasificari la problemele paralele sau ceva de genul
+au fost si chestii de OpenMP
+gen daca ii implicit/explicit
+au fost si intrebari din povesti :)) De genul... Care a fost singurul algoritm care nu a fost spart in timpul celui de al doilea razboi mondial :))
+ceva intebare de genul cina a fost cel caruia se datoreaza programarea seriala sau ceva de genul
+ideea ii ca acolo raspunsul era Von Newman
+ca arhitectura lui asa permite executarea instructiunilor
+si acelasi gen de intrebare era si pentru executia paralela
+tot asa sa zicem numele tipului
+da acolo nu mai stiam :))
+si au mai fost intrebari de astea... cum se numeste stiinta care se ocupa cu ascunderea mesajelor
+stiinta care se ocupa cu decriptarea
+ceva intrebare capcana gen dupa fork care proces executa urmatoarea instructiune primul
+si a scris in paranteza dupa intrebare (parintele sau copilul?" dar doar ca sa ne induca in eroare :))
+trebuia completat in spatiu :))
+mna si chestii de genul la intrebari
+nu prea mai imi vin acuma in minte
+la probleme
+au fost 5
+prima problema cu sorting network chestii basic
+size, depth, ii sau nu sorting network, de ce ii sau nu
+a doua si a treia au fost doi algoritmi de criptare
+affine cipher
+si Myszkowski Transposition
+a patra a fost cu RSA
+iti dadea N
+si sa ii zici nr max de biti necesari pentru criptare pentru fiecare grup
+sau ceva de genul
+si sa ii determini p si q
+si problema 5 a fost o problema cu fork
+dadea o functie cu parametru
+recursiva
+si in functie de parametru si de cum se apela fork-ul
+sa zici cate procese se creau
+si iti dadea 4 apeluri alea functiei
