@@ -1,0 +1,5 @@
+FA-intrebari
+
+This is the preorder of a BST (Binary Search Tree): 5, 4, 2, 3, 7. The lowest level where the tree is NOT a PBT is at key
+For an exponential running time algorithm solving a given problem of size greater than 100 the approach would be:
+This is the preorder of a BST (Binary Search Tree): 8, 4, 2, 6, 10. The tree is NOT a PBT because of the tree rooted at:
